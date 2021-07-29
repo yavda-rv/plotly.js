@@ -256,6 +256,12 @@ func.defaultConfig = {
         }
     },
 
+    customHeaders: (isBundleTest && basename(testFileGlob) === 'no_eval') ? [{
+        match: '\\.html',
+        name: 'Content-Security-Policy',
+        value: 'script-src \'self\' \'unsafe-inline\' \'unsafe-eval\'; worker-src blob:;'
+    }] : [],
+
     browserify: {
         transform: [pathToStrictD3, pathToShortcutPath],
         extensions: ['.js'],
