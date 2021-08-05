@@ -10,21 +10,71 @@ var lineAttrs = scatterAttrs.line;
 module.exports = {
     mode: scatterAttrs.mode,
 
-    re: {
+    r: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
-        description: 'Sets the real coordinates'
+        description: 'Sets the radial coordinates'
     },
 
-    im: {
+    theta: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
-        description: 'Sets the imaginary coordinates'
+        description: 'Sets the angular coordinates'
+    },
+
+    r0: {
+        valType: 'any',
+        dflt: 0,
+        editType: 'calc+clearAxisTypes',
+        description: [
+            'Alternate to `r`.',
+            'Builds a linear space of r coordinates.',
+            'Use with `dr`',
+            'where `r0` is the starting coordinate and `dr` the step.'
+        ].join(' ')
+    },
+    dr: {
+        valType: 'number',
+        dflt: 1,
+        editType: 'calc',
+        description: 'Sets the r coordinate step.'
+    },
+
+    theta0: {
+        valType: 'any',
+        dflt: 0,
+        editType: 'calc+clearAxisTypes',
+        description: [
+            'Alternate to `theta`.',
+            'Builds a linear space of theta coordinates.',
+            'Use with `dtheta`',
+            'where `theta0` is the starting coordinate and `dtheta` the step.'
+        ].join(' ')
+    },
+    dtheta: {
+        valType: 'number',
+        editType: 'calc',
+        description: [
+            'Sets the theta coordinate step.',
+            'By default, the `dtheta` step equals the subplot\'s period divided',
+            'by the length of the `r` coordinates.'
+        ].join(' ')
+    },
+
+    thetaunit: {
+        valType: 'enumerated',
+        values: ['radians', 'degrees', 'gradians'],
+        dflt: 'degrees',
+        editType: 'calc+clearAxisTypes',
+        description: [
+            'Sets the unit of input *theta* values.',
+            'Has an effect only when on *linear* angular axes.'
+        ].join(' ')
     },
 
     text: scatterAttrs.text,
     texttemplate: texttemplateAttrs({editType: 'plot'}, {
-        keys: ['re', 'im', 'text']
+        keys: ['r', 'theta', 'text']
     }),
     hovertext: scatterAttrs.hovertext,
 
@@ -69,7 +119,7 @@ module.exports = {
     // error_y
 
     hoverinfo: extendFlat({}, baseAttrs.hoverinfo, {
-        flags: ['re', 'im', 'text', 'name']
+        flags: ['r', 'theta', 'text', 'name']
     }),
     hoveron: scatterAttrs.hoveron,
     hovertemplate: hovertemplateAttrs(),

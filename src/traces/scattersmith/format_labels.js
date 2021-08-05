@@ -14,22 +14,19 @@ module.exports = function formatLabels(cdi, trace, fullLayout) {
     // TODO we should consider moving the texttemplate formatting logic to the plot step
     if(!subplot) {
         subplot = fullLayout[trace.subplot];
-        radialAxis = subplot.realaxis;
-        angularAxis = subplot.imaginaryaxis;
+        radialAxis = subplot.radialaxis;
+        angularAxis = subplot.angularaxis;
     } else {
         radialAxis = subplot.radialAxis;
         angularAxis = subplot.angularAxis;
     }
 
-    var rVal = radialAxis.c2l(cdi.re);
+    var rVal = radialAxis.c2l(cdi.r);
     labels.rLabel = Axes.tickText(radialAxis, rVal, true).text;
 
     // N.B here the ° sign is part of the formatted value for thetaunit:'degrees'
-    var thetaVal = angularAxis.thetaunit === 'degrees' ? Lib.rad2deg(cdi.im) : cdi.im;
+    var thetaVal = angularAxis.thetaunit === 'degrees' ? Lib.rad2deg(cdi.theta) : cdi.theta;
     labels.thetaLabel = Axes.tickText(angularAxis, thetaVal, true).text;
-
-    // labels.reLabel = Axes.tickText(radialAxis, cdi.re, true).text;
-    // labels.imLabel = Axes.tickText(radialAxis, cdi.im, true).text;
 
     return labels;
 };
