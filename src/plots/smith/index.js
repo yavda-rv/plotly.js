@@ -3,7 +3,7 @@
 var getSubplotCalcData = require('../get_data').getSubplotCalcData;
 var counterRegex = require('../../lib').counterRegex;
 
-var createPolar = require('./smith');
+var createSmith = require('./smith');
 var constants = require('./constants');
 
 var attr = constants.attr;
@@ -17,9 +17,9 @@ attributes[attr] = {
     editType: 'calc',
     description: [
         'Sets a reference between this trace\'s data coordinates and',
-        'a polar subplot.',
-        'If *polar* (the default value), the data refer to `layout.polar`.',
-        'If *polar2*, the data refer to `layout.polar2`, and so on.'
+        'a smith subplot.',
+        'If *smith* (the default value), the data refer to `layout.smith`.',
+        'If *smith2*, the data refer to `layout.smith2`, and so on.'
     ].join(' ')
 };
 
@@ -34,7 +34,7 @@ function plot(gd) {
         var subplot = fullLayout[id]._subplot;
 
         if(!subplot) {
-            subplot = createPolar(gd, id);
+            subplot = createSmith(gd, id);
             fullLayout[id]._subplot = subplot;
         }
 
