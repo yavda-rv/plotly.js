@@ -17,7 +17,6 @@ function startsWithLowerCase(v) {
 }
 
 var pathToPlotlyIndex = path.join(pathToLib, 'index.js');
-var pathToPlotlyStrict = path.join(pathToLib, 'index-strict.js');
 var mainIndex = fs.readFileSync(pathToPlotlyIndex, 'utf-8');
 var allTraces = fs.readdirSync(path.join(pathToSrc, 'traces'))
     .filter(startsWithLowerCase);
@@ -176,7 +175,6 @@ module.exports = {
     allTraces: allTraces,
     mainIndex: mainIndex,
     pathToPlotlyIndex: pathToPlotlyIndex,
-    pathToPlotlyStrict: pathToPlotlyStrict,
     pathToPlotlyCore: path.join(pathToSrc, 'core.js'),
     pathToPlotlyVersion: path.join(pathToSrc, 'version.js'),
     pathToPlotlyBuild: path.join(pathToBuild, 'plotly.js'),

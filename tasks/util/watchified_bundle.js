@@ -18,7 +18,7 @@ var common = require('./common');
  *
  */
 module.exports = function makeWatchifiedBundle(strict, onFirstBundleCallback) {
-    var b = browserify(strict ? constants.pathToPlotlyStrict : constants.pathToPlotlyIndex, {
+    var b = browserify(constants.pathToPlotlyIndex, {
         debug: true,
         standalone: 'Plotly',
         ignoreTransform: './tasks/compress_attributes.js',
