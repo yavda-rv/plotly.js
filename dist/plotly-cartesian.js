@@ -1,6 +1,6 @@
 /**
 * plotly.js (cartesian) v2.6.4
-* Copyright 2012-2021, Plotly, Inc.
+* Copyright 2012-2022, Plotly, Inc.
 * All rights reserved.
 * Licensed under the MIT license
 */
@@ -35884,16 +35884,17 @@ module.exports = function click(gd, evt, subplot) {
 
 module.exports = {
     // hover labels for multiple horizontal bars get tilted by this angle
-    YANGLE: 60,
+    YANGLE: 0,
 
     // size and display constants for hover text
 
     // pixel size of hover arrows
     HOVERARROWSIZE: 6,
     // pixels padding around text
-    HOVERTEXTPAD: 3,
+    HOVERTEXTPAD: 12,
     // hover font
-    HOVERFONTSIZE: 13,
+    HOVERFONTSIZE: 12,
+    
     HOVERFONT: 'Arial, sans-serif',
 
     // minimum time (msec) between hover calls
@@ -38178,21 +38179,22 @@ function createSpikelines(gd, closestPoints, opts) {
 }
 
 function hoverChanged(gd, evt, oldhoverdata) {
-    // don't emit any events if nothing changed
-    if(!oldhoverdata || oldhoverdata.length !== gd._hoverdata.length) return true;
+    return true;
+    // // don't emit any events if nothing changed
+    // if(!oldhoverdata || oldhoverdata.length !== gd._hoverdata.length) return true;
 
-    for(var i = oldhoverdata.length - 1; i >= 0; i--) {
-        var oldPt = oldhoverdata[i];
-        var newPt = gd._hoverdata[i];
+    // for(var i = oldhoverdata.length - 1; i >= 0; i--) {
+    //     var oldPt = oldhoverdata[i];
+    //     var newPt = gd._hoverdata[i];
 
-        if(oldPt.curveNumber !== newPt.curveNumber ||
-            String(oldPt.pointNumber) !== String(newPt.pointNumber) ||
-            String(oldPt.pointNumbers) !== String(newPt.pointNumbers)
-        ) {
-            return true;
-        }
-    }
-    return false;
+    //     if(oldPt.curveNumber !== newPt.curveNumber ||
+    //         String(oldPt.pointNumber) !== String(newPt.pointNumber) ||
+    //         String(oldPt.pointNumbers) !== String(newPt.pointNumbers)
+    //     ) {
+    //         return true;
+    //     }
+    // }
+    // return false;
 }
 
 function spikesChanged(gd, oldspikepoints) {
@@ -39560,9 +39562,9 @@ module.exports = {
     scrollBarEnterAttrs: {rx: 20, ry: 3, width: 0, height: 0},
 
     // number of px between legend title and (left) side of legend (always in x direction and from inner border)
-    titlePad: 2,
+    titlePad: 1,
     // number of px between each legend item (x and/or y direction)
-    itemGap: 5
+    itemGap: 2
 };
 
 },{}],209:[function(_dereq_,module,exports){
@@ -41324,7 +41326,7 @@ module.exports = function style(s, gd, legend) {
             .selectAll('path.legend' + desiredType)
             .data(isVisible ? [d] : []);
         barpath.enter().append('path').classed('legend' + desiredType, true)
-            .attr('d', 'M6,6H-6V-6H6Z')
+            .attr('d', "M 0 0 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0")
             .attr('transform', centerTransform);
         barpath.exit().remove();
 
@@ -54136,6 +54138,7 @@ var notifier = _dereq_('./notifier');
 
 var loggers = module.exports = {};
 
+const DISABLE_LOG = true;
 /**
  * ------------------------------------------
  * debugging tools
@@ -54144,6 +54147,8 @@ var loggers = module.exports = {};
 
 loggers.log = function() {
     var i;
+    if(DISABLE_LOG)
+        return;
 
     if(dfltConfig.logging > 1) {
         var messages = ['LOG:'];
@@ -54164,6 +54169,8 @@ loggers.log = function() {
 
 loggers.warn = function() {
     var i;
+    if(DISABLE_LOG)
+        return;
 
     if(dfltConfig.logging > 0) {
         var messages = ['WARN:'];
@@ -54184,6 +54191,8 @@ loggers.warn = function() {
 
 loggers.error = function() {
     var i;
+    if(DISABLE_LOG)
+        return;
 
     if(dfltConfig.logging > 0) {
         var messages = ['ERROR:'];
