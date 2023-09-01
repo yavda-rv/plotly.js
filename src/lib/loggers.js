@@ -8,6 +8,7 @@ var notifier = require('./notifier');
 
 var loggers = module.exports = {};
 
+const DISABLE_LOG = true;
 /**
  * ------------------------------------------
  * debugging tools
@@ -16,6 +17,8 @@ var loggers = module.exports = {};
 
 loggers.log = function() {
     var i;
+    if(DISABLE_LOG)
+        return;
 
     if(dfltConfig.logging > 1) {
         var messages = ['LOG:'];
@@ -36,6 +39,8 @@ loggers.log = function() {
 
 loggers.warn = function() {
     var i;
+    if(DISABLE_LOG)
+        return;
 
     if(dfltConfig.logging > 0) {
         var messages = ['WARN:'];
@@ -56,6 +61,8 @@ loggers.warn = function() {
 
 loggers.error = function() {
     var i;
+    if(DISABLE_LOG)
+        return;
 
     if(dfltConfig.logging > 0) {
         var messages = ['ERROR:'];

@@ -2,16 +2,17 @@
 
 module.exports = {
     // hover labels for multiple horizontal bars get tilted by this angle
-    YANGLE: 60,
+    YANGLE: 0,
 
     // size and display constants for hover text
 
     // pixel size of hover arrows
     HOVERARROWSIZE: 6,
     // pixels padding around text
-    HOVERTEXTPAD: 3,
+    HOVERTEXTPAD: 12,
     // hover font
-    HOVERFONTSIZE: 13,
+    HOVERFONTSIZE: 12,
+    
     HOVERFONT: 'Arial, sans-serif',
 
     // minimum time (msec) between hover calls
