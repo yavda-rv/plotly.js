@@ -236,11 +236,11 @@ function handlePointsDefaults(traceIn, traceOut, coerce, opts) {
     var lineoutliercolor = coerce('marker.line.outliercolor');
 
     var modeDflt = 'outliers';
-    if(traceOut._hasPreCompStats) {
-        modeDflt = 'all';
-    } else if(outlierColorDflt || lineoutliercolor) {
-        modeDflt = 'suspectedoutliers';
-    }
+    // if(traceOut._hasPreCompStats) {
+    //     modeDflt = 'all';
+    // } else if(outlierColorDflt || lineoutliercolor) {
+    //     modeDflt = 'suspectedoutliers';
+    // }
 
     var mode = coerce(prefix + 'points', modeDflt);
 
@@ -254,13 +254,14 @@ function handlePointsDefaults(traceIn, traceOut, coerce, opts) {
         coerce('marker.angle');
 
         coerce('marker.color', traceOut.line.color);
+        coerce('marker.outliercolor', traceOut.marker.color);
         coerce('marker.line.color');
         coerce('marker.line.width');
 
-        if(mode === 'suspectedoutliers') {
-            coerce('marker.line.outliercolor', traceOut.marker.color);
-            coerce('marker.line.outlierwidth');
-        }
+        //if(mode === 'suspectedoutliers') {
+            coerce('marker.line.outliercolor', traceOut.marker.line.color);
+            coerce('marker.line.outlierwidth', traceOut.marker.line.width);
+            //}
 
         coerce('selected.marker.color');
         coerce('unselected.marker.color');
