@@ -42,6 +42,8 @@ function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
     }
     coerce('boxmean', boxmeanDflt);
 
+    coerce('meancolor', traceOut.line.color);
+
     coerce('whiskerwidth');
     coerce('width');
     coerce('quartilemethod');

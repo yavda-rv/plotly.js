@@ -39,7 +39,7 @@ function style(gd, cd, sel) {
                     'stroke-width': lineWidth,
                     'stroke-dasharray': (2 * lineWidth) + 'px,' + lineWidth + 'px'
                 })
-                .call(Color.stroke, trace.line.color);
+                .call(Color.stroke, trace.meancolor);
 
             var pts = el.selectAll('path.point');
             Drawing.pointStyle(pts, trace, gd);
