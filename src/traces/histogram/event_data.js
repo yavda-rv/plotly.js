@@ -17,6 +17,9 @@ module.exports = function eventData(out, pt, trace, cd, pointNumber) {
             cd[0].pts[pointNumber[0]][pointNumber[1]] :
             cd[pointNumber].pts;
 
+        out.x0 = pt.cd[pointNumber].ph0;
+        out.x1 = pt.cd[pointNumber].ph1;
+            
         out.pointNumbers = pts;
         out.binNumber = out.pointNumber;
         delete out.pointNumber;
@@ -33,6 +36,15 @@ module.exports = function eventData(out, pt, trace, cd, pointNumber) {
         }
 
         out.pointIndices = pointIndices;
+    } else {
+        try{
+        var pts = Array.isArray(pointNumber) ?
+            cd[0].pts[pointNumber[0]][pointNumber[1]] :
+            cd[pointNumber].pts;
+
+        out.x0 = pt.cd[pointNumber].p0;
+        out.x1 = pt.cd[pointNumber].p1;
+        }catch{ }
     }
 
     return out;
