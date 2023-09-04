@@ -254,8 +254,7 @@ function plotPoints(sel, axes, trace, t) {
                 // tag suspected outliers
                 if((mode === 'suspectedoutliers' || mode === 'all') && v < d.uo && v > d.lo && (v < d.lf || v > d.uf)) {
                     pt.so = true;
-                }
-                else if((mode === 'outliers' || mode === 'all') && (v < d.lf || v > d.uf)) {
+                } else if((mode === 'outliers' || mode === 'all') && (v < d.lf || v > d.uf)) {
                     pt.so1 = true;
                 }
             }

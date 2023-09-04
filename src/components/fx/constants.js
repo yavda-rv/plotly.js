@@ -12,7 +12,7 @@ module.exports = {
     HOVERTEXTPAD: 12,
     // hover font
     HOVERFONTSIZE: 12,
-    
+
     HOVERFONT: 'Arial, sans-serif',
 
     // minimum time (msec) between hover calls

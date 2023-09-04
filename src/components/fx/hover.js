@@ -843,7 +843,7 @@ function _hover(gd, evt, subplot, noHoverEvent, eventTarget) {
     }
 
     // don't emit events if called manually
-    if(!eventTarget || noHoverEvent || !hoverChanged(gd, evt, oldhoverdata)) return;
+    if(!eventTarget || noHoverEvent || !hoverChanged()) return;
 
     if(oldhoverdata) {
         gd.emit('plotly_unhover', {
@@ -2139,7 +2139,7 @@ function createSpikelines(gd, closestPoints, opts) {
     }
 }
 
-function hoverChanged(gd, evt, oldhoverdata) {
+function hoverChanged() {
     return true;
     // // don't emit any events if nothing changed
     // if(!oldhoverdata || oldhoverdata.length !== gd._hoverdata.length) return true;

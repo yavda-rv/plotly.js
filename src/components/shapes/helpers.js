@@ -218,9 +218,9 @@ exports.getPathString = function(gd, options) {
         x0 = x2p(options.x0);
         x1 = x2p(options.x1);
         if(xa && xa.type === 'category' && isValid) {
-            const x0In = xa.r2l(options.x0);
-            const x1In = xa.r2l(options.x1);
-            isValid = x0In != null && x1In != null;
+            var x0In = xa.r2l(options.x0);
+            var x1In = xa.r2l(options.x1);
+            isValid = x0In !== null && x1In !== null;
         }
     }
 
@@ -232,13 +232,14 @@ exports.getPathString = function(gd, options) {
         y0 = y2p(options.y0);
         y1 = y2p(options.y1);
         if(ya && ya.type === 'category' && isValid) {
-            const f = ya.r2l(options.y0);
-            const s = ya.r2l(options.y1);
-            isValid = s != null && f != null;
+            var f = ya.r2l(options.y0);
+            var s = ya.r2l(options.y1);
+            isValid = s !== null && f !== null;
         }
     }
-    if(!isValid)
+    if(!isValid) {
         return null;
+    }
 
     if(type === 'line') return 'M' + x0 + ',' + y0 + 'L' + x1 + ',' + y1;
     if(type === 'rect') return 'M' + x0 + ',' + y0 + 'H' + x1 + 'V' + y1 + 'H' + x0 + 'Z';

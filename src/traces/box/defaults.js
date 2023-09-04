@@ -234,8 +234,8 @@ function handleSampleDefaults(traceIn, traceOut, coerce, layout) {
 function handlePointsDefaults(traceIn, traceOut, coerce, opts) {
     var prefix = opts.prefix;
 
-    var outlierColorDflt = Lib.coerce2(traceIn, traceOut, attributes, 'marker.outliercolor');
-    var lineoutliercolor = coerce('marker.line.outliercolor');
+    /* var outlierColorDflt = */ Lib.coerce2(traceIn, traceOut, attributes, 'marker.outliercolor');
+    /* var lineoutliercolor = */ coerce('marker.line.outliercolor');
 
     var modeDflt = 'outliers';
     // if(traceOut._hasPreCompStats) {
@@ -260,10 +260,10 @@ function handlePointsDefaults(traceIn, traceOut, coerce, opts) {
         coerce('marker.line.color');
         coerce('marker.line.width');
 
-        //if(mode === 'suspectedoutliers') {
-            coerce('marker.line.outliercolor', traceOut.marker.line.color);
-            coerce('marker.line.outlierwidth', traceOut.marker.line.width);
-            //}
+        // if(mode === 'suspectedoutliers') {
+        coerce('marker.line.outliercolor', traceOut.marker.line.color);
+        coerce('marker.line.outlierwidth', traceOut.marker.line.width);
+            // }
 
         coerce('selected.marker.color');
         coerce('unselected.marker.color');
