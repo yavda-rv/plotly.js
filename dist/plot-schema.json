@@ -2567,7 +2567,7 @@
      },
      "role": "object",
      "size": {
-      "dflt": 13,
+      "dflt": 12,
       "editType": "none",
       "min": 1,
       "valType": "number"
@@ -16409,6 +16409,11 @@
      "description": "Sets the mean values. There should be as many items as the number of boxes desired. This attribute has effect only under the q1/median/q3 signature. If `mean` is not provided but a sample (in `y` or `x`) is set, we compute the mean for each box using the sample values.",
      "editType": "calc",
      "valType": "data_array"
+    },
+    "meancolor": {
+     "description": "Sets mean color Defaults to border color of box",
+     "editType": "style",
+     "valType": "color"
     },
     "meansrc": {
      "description": "Sets the source reference on Chart Studio Cloud for `mean`.",
