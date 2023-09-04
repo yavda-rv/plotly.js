@@ -16,7 +16,7 @@ var pieCastOption = require('../../traces/pie/helpers').castOption;
 var constants = require('./constants');
 
 var CST_MARKER_SIZE = 12;
-var CST_LINE_WIDTH = 5;
+var CST_LINE_WIDTH = 1;
 var CST_MARKER_LINE_WIDTH = 2;
 var MAX_LINE_WIDTH = 10;
 var MAX_MARKER_LINE_WIDTH = 5;
