@@ -256,6 +256,14 @@ module.exports = {
             'Otherwise defaults to *false*.'
         ].join(' ')
     },
+    meancolor: {
+        valType: 'color',
+        editType: 'style',
+        description: [
+            'Sets mean color',
+            'Defaults to border color of box'
+        ].join(' ')
+    },
     mean: {
         valType: 'data_array',
         editType: 'calc',

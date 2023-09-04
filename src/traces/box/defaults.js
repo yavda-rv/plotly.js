@@ -41,6 +41,8 @@ function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
         }
     }
 
+    coerce('meancolor', traceOut.line.color);
+
     coerce('whiskerwidth');
     var sizemode = coerce('sizemode');
     var boxmean;
