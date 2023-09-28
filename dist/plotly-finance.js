@@ -19788,9 +19788,10 @@ exports.getPathString = function (gd, options) {
     if (xa && xa.type === 'category' && isValid) {
       var x0In = xa.r2l(options.x0);
       var x1In = xa.r2l(options.x1);
-      isValid = x0In !== null && x1In !== null;
+      isValid = x0In != null && x1In != null; // eslint-disable-line eqeqeq
     }
   }
+
   if (options.ysizemode === 'pixel') {
     var yAnchorPos = y2p(options.yanchor);
     y0 = yAnchorPos - options.y0;
@@ -19801,9 +19802,10 @@ exports.getPathString = function (gd, options) {
     if (ya && ya.type === 'category' && isValid) {
       var f = ya.r2l(options.y0);
       var s = ya.r2l(options.y1);
-      isValid = s !== null && f !== null;
+      isValid = s != null && f != null; // eslint-disable-line eqeqeq
     }
   }
+
   if (!isValid) {
     return null;
   }
