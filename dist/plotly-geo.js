@@ -1,6 +1,6 @@
 /**
 * plotly.js (geo) v2.22.0
-* Copyright 2012-2023, Plotly, Inc.
+* Copyright 2012-2024, Plotly, Inc.
 * All rights reserved.
 * Licensed under the MIT license
 */
@@ -17,13 +17,13 @@
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 3810:
+/***/ 8324:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 var rules = {
   "X,X div": "direction:ltr;font-family:\"Open Sans\",verdana,arial,sans-serif;margin:0;padding:0;",
   "X input,X button": "font-family:\"Open Sans\",verdana,arial,sans-serif;",
@@ -84,105 +84,105 @@ for (var selector in rules) {
 
 /***/ }),
 
-/***/ 3907:
+/***/ 8234:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(1474);
+module.exports = __webpack_require__(1159);
 
 /***/ }),
 
-/***/ 4859:
+/***/ 6438:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(7418);
+module.exports = __webpack_require__(6053);
 
 /***/ }),
 
-/***/ 1814:
+/***/ 4615:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(4786);
+module.exports = __webpack_require__(2042);
 
 /***/ }),
 
-/***/ 8346:
+/***/ 2990:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(5069);
+module.exports = __webpack_require__(633);
 
 /***/ }),
 
-/***/ 9907:
+/***/ 3947:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(7083);
+module.exports = __webpack_require__(6172);
 
 /***/ }),
 
-/***/ 771:
+/***/ 5587:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(8597);
+module.exports = __webpack_require__(1658);
 
 /***/ }),
 
-/***/ 5085:
+/***/ 9921:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Plotly = __webpack_require__(8346);
+var Plotly = __webpack_require__(2990);
 Plotly.register([
 // traces
-__webpack_require__(8758), __webpack_require__(1814),
+__webpack_require__(5334), __webpack_require__(4615),
 // transforms
-__webpack_require__(3907), __webpack_require__(9907), __webpack_require__(771), __webpack_require__(6435),
+__webpack_require__(8234), __webpack_require__(3947), __webpack_require__(5587), __webpack_require__(4461),
 // components
-__webpack_require__(4859)]);
+__webpack_require__(6438)]);
 module.exports = Plotly;
 
 /***/ }),
 
-/***/ 8758:
+/***/ 5334:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(2581);
+module.exports = __webpack_require__(4443);
 
 /***/ }),
 
-/***/ 6435:
+/***/ 4461:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(4468);
+module.exports = __webpack_require__(4930);
 
 /***/ }),
 
-/***/ 518:
+/***/ 1822:
 /***/ (function(module) {
 
 "use strict";
@@ -248,17 +248,17 @@ module.exports = [
 
 /***/ }),
 
-/***/ 121:
+/***/ 6155:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var ARROWPATHS = __webpack_require__(518);
-var fontAttrs = __webpack_require__(6948);
-var cartesianConstants = __webpack_require__(8074);
-var templatedArray = (__webpack_require__(9356).templatedArray);
-var axisPlaceableObjs = __webpack_require__(8835);
+var ARROWPATHS = __webpack_require__(1822);
+var fontAttrs = __webpack_require__(7716);
+var cartesianConstants = __webpack_require__(1071);
+var templatedArray = (__webpack_require__(8251).templatedArray);
+var axisPlaceableObjs = __webpack_require__(3750);
 function arrowAxisRefDescription(axis) {
   return ['In order for absolute positioning of the arrow to work, *a' + axis + 'ref* must be exactly the same as *' + axis + 'ref*, otherwise *a' + axis + 'ref* will revert to *pixel* (explained next).', 'For relative positioning, *a' + axis + 'ref* can be set to *pixel*,', 'in which case the *a' + axis + '* value is specified in pixels', 'relative to *' + axis + '*.', 'Absolute positioning is useful', 'for trendline annotations which should continue to indicate', 'the correct trend when zoomed. Relative positioning is useful', 'for specifying the text offset for an annotated point.'].join(' ');
 }
@@ -505,15 +505,15 @@ module.exports = templatedArray('annotation', {
 
 /***/ }),
 
-/***/ 9538:
+/***/ 4444:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var draw = (__webpack_require__(7537).draw);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var draw = (__webpack_require__(4128).draw);
 module.exports = function calcAutorange(gd) {
   var fullLayout = gd._fullLayout;
   var annotationList = Lib.filterVisible(fullLayout.annotations);
@@ -586,15 +586,15 @@ function calcAxisExpansion(ann, ax) {
 
 /***/ }),
 
-/***/ 2567:
+/***/ 4260:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Registry = __webpack_require__(2345);
-var arrayEditor = (__webpack_require__(9356).arrayEditor);
+var Lib = __webpack_require__(1372);
+var Registry = __webpack_require__(2817);
+var arrayEditor = (__webpack_require__(8251).arrayEditor);
 module.exports = {
   hasClickToShow: hasClickToShow,
   onClick: onClick
@@ -709,14 +709,14 @@ function clickData2r(d, ax) {
 
 /***/ }),
 
-/***/ 8267:
+/***/ 8328:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Color = __webpack_require__(9932);
+var Lib = __webpack_require__(1372);
+var Color = __webpack_require__(605);
 
 // defaults common to 'annotations' and 'annotations3d'
 module.exports = function handleAnnotationCommonDefaults(annIn, annOut, fullLayout, coerce) {
@@ -767,14 +767,14 @@ module.exports = function handleAnnotationCommonDefaults(annIn, annOut, fullLayo
 
 /***/ }),
 
-/***/ 6417:
+/***/ 3348:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var toLogRange = __webpack_require__(9925);
+var isNumeric = __webpack_require__(2538);
+var toLogRange = __webpack_require__(8724);
 
 /*
  * convertCoords: when converting an axis between log and linear
@@ -817,17 +817,17 @@ module.exports = function convertCoords(gd, ax, newType, doExtra) {
 
 /***/ }),
 
-/***/ 8253:
+/***/ 1036:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var handleAnnotationCommonDefaults = __webpack_require__(8267);
-var attributes = __webpack_require__(121);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var handleAnnotationCommonDefaults = __webpack_require__(8328);
+var attributes = __webpack_require__(6155);
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
   handleArrayContainerDefaults(layoutIn, layoutOut, {
     name: 'annotations',
@@ -906,26 +906,26 @@ function handleAnnotationDefaults(annIn, annOut, fullLayout) {
 
 /***/ }),
 
-/***/ 7537:
+/***/ 4128:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Plots = __webpack_require__(2815);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Plots = __webpack_require__(39);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var Axes = __webpack_require__(2814);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Fx = __webpack_require__(3847);
-var svgTextUtils = __webpack_require__(5965);
-var setCursor = __webpack_require__(9279);
-var dragElement = __webpack_require__(9103);
-var arrayEditor = (__webpack_require__(9356).arrayEditor);
-var drawArrowHead = __webpack_require__(1038);
+var Axes = __webpack_require__(1529);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Fx = __webpack_require__(956);
+var svgTextUtils = __webpack_require__(3888);
+var setCursor = __webpack_require__(8230);
+var dragElement = __webpack_require__(9468);
+var arrayEditor = (__webpack_require__(8251).arrayEditor);
+var drawArrowHead = __webpack_require__(8439);
 
 // Annotations are stored in gd.layout.annotations, an array of objects
 // index can point to one item in this array,
@@ -1536,16 +1536,16 @@ function drawRaw(gd, options, index, subplotId, xa, ya) {
 
 /***/ }),
 
-/***/ 1038:
+/***/ 8439:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Color = __webpack_require__(9932);
-var ARROWPATHS = __webpack_require__(518);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Color = __webpack_require__(605);
+var ARROWPATHS = __webpack_require__(1822);
+var Lib = __webpack_require__(1372);
 var strScale = Lib.strScale;
 var strRotate = Lib.strRotate;
 var strTranslate = Lib.strTranslate;
@@ -1673,40 +1673,40 @@ module.exports = function drawArrowHead(el3, ends, options) {
 
 /***/ }),
 
-/***/ 7155:
+/***/ 9432:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var drawModule = __webpack_require__(7537);
-var clickModule = __webpack_require__(2567);
+var drawModule = __webpack_require__(4128);
+var clickModule = __webpack_require__(4260);
 module.exports = {
   moduleType: 'component',
   name: 'annotations',
-  layoutAttributes: __webpack_require__(121),
-  supplyLayoutDefaults: __webpack_require__(8253),
-  includeBasePlot: __webpack_require__(3274)('annotations'),
-  calcAutorange: __webpack_require__(9538),
+  layoutAttributes: __webpack_require__(6155),
+  supplyLayoutDefaults: __webpack_require__(1036),
+  includeBasePlot: __webpack_require__(4997)('annotations'),
+  calcAutorange: __webpack_require__(4444),
   draw: drawModule.draw,
   drawOne: drawModule.drawOne,
   drawRaw: drawModule.drawRaw,
   hasClickToShow: clickModule.hasClickToShow,
   onClick: clickModule.onClick,
-  convertCoords: __webpack_require__(6417)
+  convertCoords: __webpack_require__(3348)
 };
 
 /***/ }),
 
-/***/ 8418:
+/***/ 6186:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var annAttrs = __webpack_require__(121);
-var overrideAll = (__webpack_require__(8541).overrideAll);
-var templatedArray = (__webpack_require__(9356).templatedArray);
+var annAttrs = __webpack_require__(6155);
+var overrideAll = (__webpack_require__(195).overrideAll);
+var templatedArray = (__webpack_require__(8251).templatedArray);
 module.exports = overrideAll(templatedArray('annotation', {
   visible: annAttrs.visible,
   x: {
@@ -1769,14 +1769,14 @@ module.exports = overrideAll(templatedArray('annotation', {
 
 /***/ }),
 
-/***/ 2772:
+/***/ 9004:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
 module.exports = function convert(scene) {
   var fullSceneLayout = scene.fullSceneLayout;
   var anns = fullSceneLayout.annotations;
@@ -1819,17 +1819,17 @@ function mockAnnAxes(ann, scene) {
 
 /***/ }),
 
-/***/ 280:
+/***/ 3773:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var handleAnnotationCommonDefaults = __webpack_require__(8267);
-var attributes = __webpack_require__(8418);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var handleAnnotationCommonDefaults = __webpack_require__(8328);
+var attributes = __webpack_require__(6186);
 module.exports = function handleDefaults(sceneLayoutIn, sceneLayoutOut, opts) {
   handleArrayContainerDefaults(sceneLayoutIn, sceneLayoutOut, {
     name: 'annotations',
@@ -1884,14 +1884,14 @@ function handleAnnotationDefaults(annIn, annOut, sceneLayout, opts) {
 
 /***/ }),
 
-/***/ 6674:
+/***/ 2405:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var drawRaw = (__webpack_require__(7537).drawRaw);
-var project = __webpack_require__(9354);
+var drawRaw = (__webpack_require__(4128).drawRaw);
+var project = __webpack_require__(969);
 var axLetters = ['x', 'y', 'z'];
 module.exports = function draw(scene) {
   var fullSceneLayout = scene.fullSceneLayout;
@@ -1921,29 +1921,29 @@ module.exports = function draw(scene) {
 
 /***/ }),
 
-/***/ 8503:
+/***/ 5267:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 module.exports = {
   moduleType: 'component',
   name: 'annotations3d',
   schema: {
     subplots: {
       scene: {
-        annotations: __webpack_require__(8418)
+        annotations: __webpack_require__(6186)
       }
     }
   },
-  layoutAttributes: __webpack_require__(8418),
-  handleDefaults: __webpack_require__(280),
+  layoutAttributes: __webpack_require__(6186),
+  handleDefaults: __webpack_require__(3773),
   includeBasePlot: includeGL3D,
-  convert: __webpack_require__(2772),
-  draw: __webpack_require__(6674)
+  convert: __webpack_require__(9004),
+  draw: __webpack_require__(2405)
 };
 function includeGL3D(layoutIn, layoutOut) {
   var GL3D = Registry.subplotsRegistry.gl3d;
@@ -1961,7 +1961,7 @@ function includeGL3D(layoutIn, layoutOut) {
 
 /***/ }),
 
-/***/ 1874:
+/***/ 394:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -1969,34 +1969,34 @@ function includeGL3D(layoutIn, layoutOut) {
 
 // a trimmed down version of:
 // https://github.com/alexcjohnson/world-calendars/blob/master/dist/index.js
-module.exports = __webpack_require__(1791);
-__webpack_require__(8591);
-__webpack_require__(9630);
-__webpack_require__(346);
-__webpack_require__(1487);
-__webpack_require__(8069);
-__webpack_require__(3331);
-__webpack_require__(7328);
-__webpack_require__(1354);
-__webpack_require__(3392);
-__webpack_require__(4329);
-__webpack_require__(587);
-__webpack_require__(8473);
-__webpack_require__(5296);
-__webpack_require__(4539);
-__webpack_require__(2419);
+module.exports = __webpack_require__(6712);
+__webpack_require__(2777);
+__webpack_require__(6266);
+__webpack_require__(2275);
+__webpack_require__(6962);
+__webpack_require__(3322);
+__webpack_require__(3502);
+__webpack_require__(2091);
+__webpack_require__(6016);
+__webpack_require__(7151);
+__webpack_require__(2439);
+__webpack_require__(3696);
+__webpack_require__(2973);
+__webpack_require__(7717);
+__webpack_require__(8327);
+__webpack_require__(9734);
 
 /***/ }),
 
-/***/ 7418:
+/***/ 6053:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var calendars = __webpack_require__(1874);
-var Lib = __webpack_require__(461);
-var constants = __webpack_require__(6524);
+var calendars = __webpack_require__(394);
+var Lib = __webpack_require__(1372);
+var constants = __webpack_require__(8580);
 var EPOCHJD = constants.EPOCHJD;
 var ONEDAY = constants.ONEDAY;
 var attributes = {
@@ -2285,7 +2285,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9765:
+/***/ 6784:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -2312,7 +2312,6 @@ exports.defaults = ['#1f77b4',
 // curry yellow-green
 '#17becf' // blue-teal
 ];
-
 exports.defaultLine = '#444';
 exports.lightLine = '#eee';
 exports.background = '#fff';
@@ -2326,17 +2325,17 @@ exports.lightFraction = 100 * (0xe - 0x4) / (0xf - 0x4);
 
 /***/ }),
 
-/***/ 9932:
+/***/ 605:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var tinycolor = __webpack_require__(4022);
-var isNumeric = __webpack_require__(5440);
-var isTypedArray = (__webpack_require__(6617).isTypedArray);
+var tinycolor = __webpack_require__(7218);
+var isNumeric = __webpack_require__(2538);
+var isTypedArray = (__webpack_require__(221).isTypedArray);
 var color = module.exports = {};
-var colorAttrs = __webpack_require__(9765);
+var colorAttrs = __webpack_require__(6784);
 color.defaults = colorAttrs.defaults;
 var defaultLine = color.defaultLine = colorAttrs.defaultLine;
 color.lightLine = colorAttrs.lightLine;
@@ -2475,16 +2474,16 @@ function cleanOne(val) {
 
 /***/ }),
 
-/***/ 487:
+/***/ 6733:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var axesAttrs = __webpack_require__(4481);
-var fontAttrs = __webpack_require__(6948);
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var overrideAll = (__webpack_require__(8541).overrideAll);
+var axesAttrs = __webpack_require__(3712);
+var fontAttrs = __webpack_require__(7716);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var overrideAll = (__webpack_require__(195).overrideAll);
 module.exports = overrideAll({
   orientation: {
     valType: 'enumerated',
@@ -2615,7 +2614,7 @@ module.exports = overrideAll({
 
 /***/ }),
 
-/***/ 4862:
+/***/ 4183:
 /***/ (function(module) {
 
 "use strict";
@@ -2640,19 +2639,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3425:
+/***/ 6682:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
-var handleTickValueDefaults = __webpack_require__(3142);
-var handleTickMarkDefaults = __webpack_require__(5285);
-var handleTickLabelDefaults = __webpack_require__(3243);
-var handlePrefixSuffixDefaults = __webpack_require__(540);
-var attributes = __webpack_require__(487);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
+var handleTickValueDefaults = __webpack_require__(4340);
+var handleTickMarkDefaults = __webpack_require__(9510);
+var handleTickLabelDefaults = __webpack_require__(5537);
+var handlePrefixSuffixDefaults = __webpack_require__(5647);
+var attributes = __webpack_require__(6733);
 module.exports = function colorbarDefaults(containerIn, containerOut, layout) {
   var colorbarOut = Template.newContainer(containerOut, 'colorbar');
   var colorbarIn = containerIn.colorbar || {};
@@ -2702,7 +2701,6 @@ module.exports = function colorbarDefaults(containerIn, containerOut, layout) {
   if (ticklabelposition.indexOf('inside') !== -1) {
     opts.bgColor = 'black'; // could we instead use the average of colors in the scale?
   }
-
   handlePrefixSuffixDefaults(colorbarIn, colorbarOut, coerce, 'linear', opts);
   handleTickLabelDefaults(colorbarIn, colorbarOut, coerce, 'linear', opts);
   handleTickMarkDefaults(colorbarIn, colorbarOut, coerce, 'linear', opts);
@@ -2718,35 +2716,35 @@ module.exports = function colorbarDefaults(containerIn, containerOut, layout) {
 
 /***/ }),
 
-/***/ 8780:
+/***/ 2558:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var tinycolor = __webpack_require__(4022);
-var Plots = __webpack_require__(2815);
-var Registry = __webpack_require__(2345);
-var Axes = __webpack_require__(2814);
-var dragElement = __webpack_require__(9103);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var tinycolor = __webpack_require__(7218);
+var Plots = __webpack_require__(39);
+var Registry = __webpack_require__(2817);
+var Axes = __webpack_require__(1529);
+var dragElement = __webpack_require__(9468);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var setCursor = __webpack_require__(9279);
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var Titles = __webpack_require__(9394);
-var svgTextUtils = __webpack_require__(5965);
-var flipScale = (__webpack_require__(3190).flipScale);
-var handleAxisDefaults = __webpack_require__(8886);
-var handleAxisPositionDefaults = __webpack_require__(6903);
-var axisLayoutAttrs = __webpack_require__(4481);
-var alignmentConstants = __webpack_require__(3098);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var setCursor = __webpack_require__(8230);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var Titles = __webpack_require__(8349);
+var svgTextUtils = __webpack_require__(3888);
+var flipScale = (__webpack_require__(7700).flipScale);
+var handleAxisDefaults = __webpack_require__(2482);
+var handleAxisPositionDefaults = __webpack_require__(9480);
+var axisLayoutAttrs = __webpack_require__(3712);
+var alignmentConstants = __webpack_require__(1407);
 var LINE_SPACING = alignmentConstants.LINE_SPACING;
 var FROM_TL = alignmentConstants.FROM_TL;
 var FROM_BR = alignmentConstants.FROM_BR;
-var cn = (__webpack_require__(4862).cn);
+var cn = (__webpack_require__(4183).cn);
 function draw(gd) {
   var fullLayout = gd._fullLayout;
   var colorBars = fullLayout._infolayer.selectAll('g.' + cn.colorbar).data(makeColorBarData(gd), function (opts) {
@@ -2962,7 +2960,6 @@ function drawColorBar(g, opts, gd) {
     ax.titley = optsY + ypad / gs.h;
     ax.titlex = vFrac + xpad / gs.w; // right side
   }
-
   if (line.color && opts.tickmode === 'auto') {
     ax.tickmode = 'linear';
     ax.tick0 = levelsIn.start;
@@ -3480,7 +3477,6 @@ function mockColorBarAxis(gd, opts, zrange) {
     noTicklabelmode: true,
     calendar: fullLayout.calendar // not really necessary (yet?)
   };
-
   function coerce(attr, dflt) {
     return Lib.coerce(cbAxisIn, cbAxisOut, axisLayoutAttrs, attr, dflt);
   }
@@ -3494,20 +3490,20 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2054:
+/***/ 5761:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 module.exports = function hasColorbar(container) {
   return Lib.isPlainObject(container.colorbar);
 };
 
 /***/ }),
 
-/***/ 1306:
+/***/ 2022:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -3516,24 +3512,24 @@ module.exports = function hasColorbar(container) {
 module.exports = {
   moduleType: 'component',
   name: 'colorbar',
-  attributes: __webpack_require__(487),
-  supplyDefaults: __webpack_require__(3425),
-  draw: (__webpack_require__(8780).draw),
-  hasColorbar: __webpack_require__(2054)
+  attributes: __webpack_require__(6733),
+  supplyDefaults: __webpack_require__(6682),
+  draw: (__webpack_require__(2558).draw),
+  hasColorbar: __webpack_require__(5761)
 };
 
 /***/ }),
 
-/***/ 2797:
+/***/ 2388:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var colorbarAttrs = __webpack_require__(487);
-var counterRegex = (__webpack_require__(7814).counter);
-var sortObjectKeys = __webpack_require__(4919);
-var palettes = (__webpack_require__(9325).scales);
+var colorbarAttrs = __webpack_require__(6733);
+var counterRegex = (__webpack_require__(979).counter);
+var sortObjectKeys = __webpack_require__(8301);
+var palettes = (__webpack_require__(98).scales);
 var paletteStr = sortObjectKeys(palettes);
 function code(s) {
   return '`' + s + '`';
@@ -3694,15 +3690,15 @@ module.exports = function colorScaleAttrs(context, opts) {
 
 /***/ }),
 
-/***/ 1788:
+/***/ 5719:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var extractOpts = (__webpack_require__(3190).extractOpts);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var extractOpts = (__webpack_require__(7700).extractOpts);
 module.exports = function calc(gd, trace, opts) {
   var fullLayout = gd._fullLayout;
   var vals = opts.vals;
@@ -3759,15 +3755,15 @@ module.exports = function calc(gd, trace, opts) {
 
 /***/ }),
 
-/***/ 3469:
+/***/ 3832:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var hasColorscale = (__webpack_require__(3190).hasColorscale);
-var extractOpts = (__webpack_require__(3190).extractOpts);
+var Lib = __webpack_require__(1372);
+var hasColorscale = (__webpack_require__(7700).hasColorscale);
+var extractOpts = (__webpack_require__(7700).extractOpts);
 module.exports = function crossTraceDefaults(fullData, fullLayout) {
   function replace(cont, k) {
     var val = cont['_' + k];
@@ -3826,18 +3822,18 @@ module.exports = function crossTraceDefaults(fullData, fullLayout) {
 
 /***/ }),
 
-/***/ 3308:
+/***/ 6035:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var hasColorbar = __webpack_require__(2054);
-var colorbarDefaults = __webpack_require__(3425);
-var isValidScale = (__webpack_require__(9325).isValid);
-var traceIs = (__webpack_require__(2345).traceIs);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var hasColorbar = __webpack_require__(5761);
+var colorbarDefaults = __webpack_require__(6682);
+var isValidScale = (__webpack_require__(98).isValid);
+var traceIs = (__webpack_require__(2817).traceIs);
 function npMaybe(parentCont, prefix) {
   var containerStr = prefix.slice(0, prefix.length - 1);
   return prefix ? Lib.nestedProperty(parentCont, containerStr).get() || {} : parentCont;
@@ -3927,18 +3923,18 @@ module.exports = function colorScaleDefaults(parentContIn, parentContOut, layout
 
 /***/ }),
 
-/***/ 3190:
+/***/ 7700:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var tinycolor = __webpack_require__(4022);
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var Color = __webpack_require__(9932);
-var isValidScale = (__webpack_require__(9325).isValid);
+var d3 = __webpack_require__(8197);
+var tinycolor = __webpack_require__(7218);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var Color = __webpack_require__(605);
+var isValidScale = (__webpack_require__(98).isValid);
 function hasColorscale(trace, containerStr, colorKey) {
   var container = containerStr ? Lib.nestedProperty(trace, containerStr).get() || {} : trace;
   var color = container[colorKey || 'color'];
@@ -4124,23 +4120,23 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6303:
+/***/ 5321:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var scales = __webpack_require__(9325);
-var helpers = __webpack_require__(3190);
+var scales = __webpack_require__(98);
+var helpers = __webpack_require__(7700);
 module.exports = {
   moduleType: 'component',
   name: 'colorscale',
-  attributes: __webpack_require__(2797),
-  layoutAttributes: __webpack_require__(9636),
-  supplyLayoutDefaults: __webpack_require__(7129),
-  handleDefaults: __webpack_require__(3308),
-  crossTraceDefaults: __webpack_require__(3469),
-  calc: __webpack_require__(1788),
+  attributes: __webpack_require__(2388),
+  layoutAttributes: __webpack_require__(2991),
+  supplyLayoutDefaults: __webpack_require__(1384),
+  handleDefaults: __webpack_require__(6035),
+  crossTraceDefaults: __webpack_require__(3832),
+  calc: __webpack_require__(5719),
   // ./scales.js is required in lib/coerce.js ;
   // it needs to be a separate module to avoid a circular dependency
   scales: scales.scales,
@@ -4157,15 +4153,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9636:
+/***/ 2991:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var colorScaleAttrs = __webpack_require__(2797);
-var scales = (__webpack_require__(9325).scales);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var colorScaleAttrs = __webpack_require__(2388);
+var scales = (__webpack_require__(98).scales);
 var msg = 'Note that `autocolorscale` must be true for this attribute to work.';
 module.exports = {
   editType: 'calc',
@@ -4202,16 +4198,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7129:
+/***/ 1384:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
-var colorScaleAttrs = __webpack_require__(9636);
-var colorScaleDefaults = __webpack_require__(3308);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
+var colorScaleAttrs = __webpack_require__(2991);
+var colorScaleDefaults = __webpack_require__(6035);
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
   function coerce(attr, dflt) {
     return Lib.coerce(layoutIn, layoutOut, colorScaleAttrs, attr, dflt);
@@ -4246,13 +4242,13 @@ module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
 
 /***/ }),
 
-/***/ 9325:
+/***/ 98:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var tinycolor = __webpack_require__(4022);
+var tinycolor = __webpack_require__(7218);
 var scales = {
   Greys: [[0, 'rgb(0,0,0)'], [1, 'rgb(255,255,255)']],
   YlGnBu: [[0, 'rgb(8,29,88)'], [0.125, 'rgb(37,52,148)'], [0.25, 'rgb(34,94,168)'], [0.375, 'rgb(29,145,192)'], [0.5, 'rgb(65,182,196)'], [0.625, 'rgb(127,205,187)'], [0.75, 'rgb(199,233,180)'], [0.875, 'rgb(237,248,217)'], [1, 'rgb(255,255,217)']],
@@ -4322,7 +4318,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 706:
+/***/ 1845:
 /***/ (function(module) {
 
 "use strict";
@@ -4350,13 +4346,13 @@ module.exports = function align(v, dv, v0, v1, anchor) {
 
 /***/ }),
 
-/***/ 6088:
+/***/ 2232:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 
 // set cursors pointing toward the closest corner/side,
 // to indicate alignment
@@ -4370,7 +4366,7 @@ module.exports = function getCursor(x, y, xanchor, yanchor) {
 
 /***/ }),
 
-/***/ 304:
+/***/ 9689:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -4397,21 +4393,21 @@ exports.selectingOrDrawing = function (dragmode) {
 
 /***/ }),
 
-/***/ 9103:
+/***/ 9468:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var mouseOffset = __webpack_require__(4980);
-var hasHover = __webpack_require__(2144);
-var supportsPassive = __webpack_require__(949);
-var removeElement = (__webpack_require__(461).removeElement);
-var constants = __webpack_require__(8074);
+var mouseOffset = __webpack_require__(5352);
+var hasHover = __webpack_require__(8917);
+var supportsPassive = __webpack_require__(4608);
+var removeElement = (__webpack_require__(1372).removeElement);
+var constants = __webpack_require__(1071);
 var dragElement = module.exports = {};
-dragElement.align = __webpack_require__(706);
-dragElement.getCursor = __webpack_require__(6088);
-var unhover = __webpack_require__(1296);
+dragElement.align = __webpack_require__(1845);
+dragElement.getCursor = __webpack_require__(2232);
+var unhover = __webpack_require__(2287);
 dragElement.unhover = unhover.wrapped;
 dragElement.unhoverRaw = unhover.raw;
 
@@ -4636,16 +4632,16 @@ function pointerOffset(e) {
 
 /***/ }),
 
-/***/ 1296:
+/***/ 2287:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Events = __webpack_require__(5761);
-var throttle = __webpack_require__(5079);
-var getGraphDiv = (__webpack_require__(9885).getGraphDiv);
-var hoverConstants = __webpack_require__(8789);
+var Events = __webpack_require__(9735);
+var throttle = __webpack_require__(3658);
+var getGraphDiv = (__webpack_require__(924).getGraphDiv);
+var hoverConstants = __webpack_require__(2241);
 var unhover = module.exports = {};
 unhover.wrapped = function (gd, evt, subplot) {
   gd = getGraphDiv(gd);
@@ -4679,13 +4675,13 @@ unhover.raw = function raw(gd, evt) {
 
 /***/ }),
 
-/***/ 1449:
+/***/ 9463:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
 
 
-exports.P = {
+exports.T = {
   valType: 'string',
   // string type usually doesn't take values... this one should really be
   // a special type or at least a special coercion function, from the GUI
@@ -4695,7 +4691,7 @@ exports.P = {
   dflt: 'solid',
   editType: 'style'
 };
-exports.u = {
+exports.k = {
   shape: {
     valType: 'enumerated',
     values: ['', '/', '\\', 'x', '-', '|', '+', '.'],
@@ -4745,29 +4741,29 @@ exports.u = {
 
 /***/ }),
 
-/***/ 8000:
+/***/ 2764:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
 var numberFormat = Lib.numberFormat;
-var isNumeric = __webpack_require__(5440);
-var tinycolor = __webpack_require__(4022);
-var Registry = __webpack_require__(2345);
-var Color = __webpack_require__(9932);
-var Colorscale = __webpack_require__(6303);
+var isNumeric = __webpack_require__(2538);
+var tinycolor = __webpack_require__(7218);
+var Registry = __webpack_require__(2817);
+var Color = __webpack_require__(605);
+var Colorscale = __webpack_require__(5321);
 var strTranslate = Lib.strTranslate;
-var svgTextUtils = __webpack_require__(5965);
-var xmlnsNamespaces = __webpack_require__(1234);
-var alignment = __webpack_require__(3098);
+var svgTextUtils = __webpack_require__(3888);
+var xmlnsNamespaces = __webpack_require__(8467);
+var alignment = __webpack_require__(1407);
 var LINE_SPACING = alignment.LINE_SPACING;
-var DESELECTDIM = (__webpack_require__(3087).DESELECTDIM);
-var subTypes = __webpack_require__(3940);
-var makeBubbleSizeFn = __webpack_require__(7168);
-var appendArrayPointValue = (__webpack_require__(4688).appendArrayPointValue);
+var DESELECTDIM = (__webpack_require__(9909).DESELECTDIM);
+var subTypes = __webpack_require__(795);
+var makeBubbleSizeFn = __webpack_require__(7668);
+var appendArrayPointValue = (__webpack_require__(7433).appendArrayPointValue);
 var drawing = module.exports = {};
 
 // -----------------------------------------------------
@@ -4931,7 +4927,7 @@ drawing.fillGroupStyle = function (s, gd) {
     }
   });
 };
-var SYMBOLDEFS = __webpack_require__(6370);
+var SYMBOLDEFS = __webpack_require__(3757);
 drawing.symbolNames = [];
 drawing.symbolFuncs = [];
 drawing.symbolBackOffs = [];
@@ -6053,7 +6049,6 @@ function getMarkerAngle(d, trace) {
       var lat = d.lonlat[1];
       var north = trace._geo.project([lon, lat + 1e-5 // epsilon
       ]);
-
       var east = trace._geo.project([lon + 1e-5,
       // epsilon
       lat]);
@@ -6109,14 +6104,14 @@ drawing.getMarkerAngle = getMarkerAngle;
 
 /***/ }),
 
-/***/ 6370:
+/***/ 3757:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var parseSvgPath = __webpack_require__(9123);
-var round = (__webpack_require__(6237).round);
+var parseSvgPath = __webpack_require__(6582);
+var round = (__webpack_require__(8197).round);
 
 /** Marker symbol definitions
  * users can specify markers either by number or name
@@ -6790,7 +6785,7 @@ function align(angle, standoff, path) {
 
 /***/ }),
 
-/***/ 1480:
+/***/ 5113:
 /***/ (function(module) {
 
 "use strict";
@@ -6876,17 +6871,17 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2675:
+/***/ 2541:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Registry = __webpack_require__(2345);
-var Axes = __webpack_require__(2814);
-var Lib = __webpack_require__(461);
-var makeComputeError = __webpack_require__(8190);
+var isNumeric = __webpack_require__(2538);
+var Registry = __webpack_require__(2817);
+var Axes = __webpack_require__(1529);
+var Lib = __webpack_require__(1372);
+var makeComputeError = __webpack_require__(8830);
 module.exports = function calc(gd) {
   var calcdata = gd.calcdata;
   for (var i = 0; i < calcdata.length; i++) {
@@ -6945,7 +6940,7 @@ function calcOneAxis(calcTrace, trace, axis, coord) {
 
 /***/ }),
 
-/***/ 8190:
+/***/ 8830:
 /***/ (function(module) {
 
 "use strict";
@@ -7035,17 +7030,17 @@ function makeComputeErrorValue(type, value) {
 
 /***/ }),
 
-/***/ 1250:
+/***/ 5153:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
-var attributes = __webpack_require__(1480);
+var isNumeric = __webpack_require__(2538);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
+var attributes = __webpack_require__(5113);
 module.exports = function (traceIn, traceOut, defaultColor, opts) {
   var objName = 'error_' + opts.axis;
   var containerOut = Template.newContainer(traceOut, objName);
@@ -7088,15 +7083,15 @@ module.exports = function (traceIn, traceOut, defaultColor, opts) {
 
 /***/ }),
 
-/***/ 6403:
+/***/ 8730:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var overrideAll = (__webpack_require__(8541).overrideAll);
-var attributes = __webpack_require__(1480);
+var Lib = __webpack_require__(1372);
+var overrideAll = (__webpack_require__(195).overrideAll);
+var attributes = __webpack_require__(5113);
 var xyAttrs = {
   error_x: Lib.extendFlat({}, attributes),
   error_y: Lib.extendFlat({}, attributes)
@@ -7125,11 +7120,11 @@ module.exports = {
       scattergl: overrideAll(xyAttrs, 'calc', 'nested')
     }
   },
-  supplyDefaults: __webpack_require__(1250),
-  calc: __webpack_require__(2675),
-  makeComputeError: __webpack_require__(8190),
-  plot: __webpack_require__(4485),
-  style: __webpack_require__(563),
+  supplyDefaults: __webpack_require__(5153),
+  calc: __webpack_require__(2541),
+  makeComputeError: __webpack_require__(8830),
+  plot: __webpack_require__(4867),
+  style: __webpack_require__(3507),
   hoverInfo: hoverInfo
 };
 function hoverInfo(calcPoint, trace, hoverPoint) {
@@ -7145,16 +7140,16 @@ function hoverInfo(calcPoint, trace, hoverPoint) {
 
 /***/ }),
 
-/***/ 4485:
+/***/ 4867:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
-var Drawing = __webpack_require__(8000);
-var subTypes = __webpack_require__(3940);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
+var Drawing = __webpack_require__(2764);
+var subTypes = __webpack_require__(795);
 module.exports = function plot(gd, traces, plotinfo, transitionOpts) {
   var isNew;
   var xa = plotinfo.xaxis;
@@ -7263,14 +7258,14 @@ function errorCoords(d, xa, ya) {
 
 /***/ }),
 
-/***/ 563:
+/***/ 3507:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Color = __webpack_require__(9932);
+var d3 = __webpack_require__(8197);
+var Color = __webpack_require__(605);
 module.exports = function style(traces) {
   traces.each(function (d) {
     var trace = d[0].trace;
@@ -7285,15 +7280,15 @@ module.exports = function style(traces) {
 
 /***/ }),
 
-/***/ 9751:
+/***/ 9927:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var hoverLabelAttrs = (__webpack_require__(4571).hoverlabel);
-var extendFlat = (__webpack_require__(9055).extendFlat);
+var fontAttrs = __webpack_require__(7716);
+var hoverLabelAttrs = (__webpack_require__(7534).hoverlabel);
+var extendFlat = (__webpack_require__(942).extendFlat);
 module.exports = {
   hoverlabel: {
     bgcolor: extendFlat({}, hoverLabelAttrs.bgcolor, {
@@ -7318,14 +7313,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4560:
+/***/ 8903:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Registry = __webpack_require__(2345);
+var Lib = __webpack_require__(1372);
+var Registry = __webpack_require__(2817);
 module.exports = function calc(gd) {
   var calcdata = gd.calcdata;
   var fullLayout = gd._fullLayout;
@@ -7368,14 +7363,14 @@ function paste(traceAttr, cd, cdAttr, fn) {
 
 /***/ }),
 
-/***/ 110:
+/***/ 4856:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var hover = (__webpack_require__(1680).hover);
+var Registry = __webpack_require__(2817);
+var hover = (__webpack_require__(9098).hover);
 module.exports = function click(gd, evt, subplot) {
   var annotationsDone = Registry.getComponentMethod('annotations', 'onClick')(gd, gd._hoverdata);
 
@@ -7404,7 +7399,7 @@ module.exports = function click(gd, evt, subplot) {
 
 /***/ }),
 
-/***/ 8789:
+/***/ 2241:
 /***/ (function(module) {
 
 "use strict";
@@ -7430,15 +7425,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2537:
+/***/ 992:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var attributes = __webpack_require__(9751);
-var handleHoverLabelDefaults = __webpack_require__(606);
+var Lib = __webpack_require__(1372);
+var attributes = __webpack_require__(9927);
+var handleHoverLabelDefaults = __webpack_require__(7915);
 module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
   function coerce(attr, dflt) {
     return Lib.coerce(traceIn, traceOut, attributes, attr, dflt);
@@ -7450,13 +7445,13 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
 
 /***/ }),
 
-/***/ 4688:
+/***/ 7433:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 
 // look for either subplot or xaxis and yaxis attributes
 // does not handle splom case
@@ -7679,30 +7674,30 @@ exports.isXYhover = function (hovermode) {
 
 /***/ }),
 
-/***/ 1680:
+/***/ 9098:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
-var tinycolor = __webpack_require__(4022);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
+var tinycolor = __webpack_require__(7218);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
 var strRotate = Lib.strRotate;
-var Events = __webpack_require__(5761);
-var svgTextUtils = __webpack_require__(5965);
-var overrideCursor = __webpack_require__(6351);
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var dragElement = __webpack_require__(9103);
-var Axes = __webpack_require__(2814);
-var Registry = __webpack_require__(2345);
-var helpers = __webpack_require__(4688);
-var constants = __webpack_require__(8789);
-var legendSupplyDefaults = __webpack_require__(2496);
-var legendDraw = __webpack_require__(4886);
+var Events = __webpack_require__(9735);
+var svgTextUtils = __webpack_require__(3888);
+var overrideCursor = __webpack_require__(551);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var dragElement = __webpack_require__(9468);
+var Axes = __webpack_require__(1529);
+var Registry = __webpack_require__(2817);
+var helpers = __webpack_require__(7433);
+var constants = __webpack_require__(2241);
+var legendSupplyDefaults = __webpack_require__(7929);
+var legendDraw = __webpack_require__(2849);
 
 // hover labels for multiple horizontal bars get tilted by some angle,
 // then need to be offset differently if they overlap
@@ -9559,7 +9554,6 @@ function hoverChanged() {
   // }
   // return false;
 }
-
 function spikesChanged(gd, oldspikepoints) {
   // don't relayout the plot because of new spikelines if spikelines points didn't change
   if (!oldspikepoints) return true;
@@ -9654,15 +9648,15 @@ function getBoundingClientRect(gd, node) {
 
 /***/ }),
 
-/***/ 606:
+/***/ 7915:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Color = __webpack_require__(9932);
-var isUnifiedHover = (__webpack_require__(4688).isUnifiedHover);
+var Lib = __webpack_require__(1372);
+var Color = __webpack_require__(605);
+var isUnifiedHover = (__webpack_require__(7433).isUnifiedHover);
 module.exports = function handleHoverLabelDefaults(contIn, contOut, coerce, opts) {
   opts = opts || {};
   var hasLegend = contOut.legend;
@@ -9694,14 +9688,14 @@ module.exports = function handleHoverLabelDefaults(contIn, contOut, coerce, opts
 
 /***/ }),
 
-/***/ 6759:
+/***/ 7030:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var layoutAttributes = __webpack_require__(4571);
+var Lib = __webpack_require__(1372);
+var layoutAttributes = __webpack_require__(7534);
 module.exports = function handleHoverModeDefaults(layoutIn, layoutOut) {
   function coerce(attr, dflt) {
     // don't coerce if it is already coerced in other place e.g. in cartesian defaults
@@ -9714,31 +9708,31 @@ module.exports = function handleHoverModeDefaults(layoutIn, layoutOut) {
 
 /***/ }),
 
-/***/ 3847:
+/***/ 956:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
-var dragElement = __webpack_require__(9103);
-var helpers = __webpack_require__(4688);
-var layoutAttributes = __webpack_require__(4571);
-var hoverModule = __webpack_require__(1680);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
+var dragElement = __webpack_require__(9468);
+var helpers = __webpack_require__(7433);
+var layoutAttributes = __webpack_require__(7534);
+var hoverModule = __webpack_require__(9098);
 module.exports = {
   moduleType: 'component',
   name: 'fx',
-  constants: __webpack_require__(8789),
+  constants: __webpack_require__(2241),
   schema: {
     layout: layoutAttributes
   },
-  attributes: __webpack_require__(9751),
+  attributes: __webpack_require__(9927),
   layoutAttributes: layoutAttributes,
-  supplyLayoutGlobalDefaults: __webpack_require__(9967),
-  supplyDefaults: __webpack_require__(2537),
-  supplyLayoutDefaults: __webpack_require__(391),
-  calc: __webpack_require__(4560),
+  supplyLayoutGlobalDefaults: __webpack_require__(257),
+  supplyDefaults: __webpack_require__(992),
+  supplyLayoutDefaults: __webpack_require__(3673),
+  calc: __webpack_require__(8903),
   getDistanceFunction: helpers.getDistanceFunction,
   getClosest: helpers.getClosest,
   inbox: helpers.inbox,
@@ -9750,7 +9744,7 @@ module.exports = {
   unhover: dragElement.unhover,
   loneHover: hoverModule.loneHover,
   loneUnhover: loneUnhover,
-  click: __webpack_require__(110)
+  click: __webpack_require__(4856)
 };
 function loneUnhover(containerOrSelection) {
   // duck type whether the arg is a d3 selection because ie9 doesn't
@@ -9778,14 +9772,14 @@ function castHoverinfo(trace, fullLayout, ptNumber) {
 
 /***/ }),
 
-/***/ 4571:
+/***/ 7534:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var constants = __webpack_require__(8789);
-var fontAttrs = __webpack_require__(6948);
+var constants = __webpack_require__(2241);
+var fontAttrs = __webpack_require__(7716);
 var font = fontAttrs({
   editType: 'none'
 });
@@ -9860,16 +9854,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 391:
+/***/ 3673:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var layoutAttributes = __webpack_require__(4571);
-var handleHoverModeDefaults = __webpack_require__(6759);
-var handleHoverLabelDefaults = __webpack_require__(606);
+var Lib = __webpack_require__(1372);
+var layoutAttributes = __webpack_require__(7534);
+var handleHoverModeDefaults = __webpack_require__(7030);
+var handleHoverLabelDefaults = __webpack_require__(7915);
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
   function coerce(attr, dflt) {
     return Lib.coerce(layoutIn, layoutOut, layoutAttributes, attr, dflt);
@@ -9897,15 +9891,15 @@ module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
 
 /***/ }),
 
-/***/ 9967:
+/***/ 257:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var handleHoverLabelDefaults = __webpack_require__(606);
-var layoutAttributes = __webpack_require__(4571);
+var Lib = __webpack_require__(1372);
+var handleHoverLabelDefaults = __webpack_require__(7915);
+var layoutAttributes = __webpack_require__(7534);
 module.exports = function supplyLayoutGlobalDefaults(layoutIn, layoutOut) {
   function coerce(attr, dflt) {
     return Lib.coerce(layoutIn, layoutOut, layoutAttributes, attr, dflt);
@@ -9915,17 +9909,17 @@ module.exports = function supplyLayoutGlobalDefaults(layoutIn, layoutOut) {
 
 /***/ }),
 
-/***/ 5875:
+/***/ 4270:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var counterRegex = (__webpack_require__(7814).counter);
-var domainAttrs = (__webpack_require__(6432)/* .attributes */ .Y);
-var cartesianIdRegex = (__webpack_require__(8074).idRegex);
-var Template = __webpack_require__(9356);
+var Lib = __webpack_require__(1372);
+var counterRegex = (__webpack_require__(979).counter);
+var domainAttrs = (__webpack_require__(2399)/* .attributes */ .u);
+var cartesianIdRegex = (__webpack_require__(1071).idRegex);
+var Template = __webpack_require__(8251);
 var gridAttrs = {
   rows: {
     valType: 'integer',
@@ -10239,15 +10233,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3074:
+/***/ 5060:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var cartesianConstants = __webpack_require__(8074);
-var templatedArray = (__webpack_require__(9356).templatedArray);
-var axisPlaceableObjs = __webpack_require__(8835);
+var cartesianConstants = __webpack_require__(1071);
+var templatedArray = (__webpack_require__(8251).templatedArray);
+var axisPlaceableObjs = __webpack_require__(3750);
 module.exports = templatedArray('image', {
   visible: {
     valType: 'boolean',
@@ -10326,14 +10320,14 @@ module.exports = templatedArray('image', {
 
 /***/ }),
 
-/***/ 9787:
+/***/ 6368:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var toLogRange = __webpack_require__(9925);
+var isNumeric = __webpack_require__(2538);
+var toLogRange = __webpack_require__(8724);
 
 /*
  * convertCoords: when converting an axis between log and linear
@@ -10396,16 +10390,16 @@ module.exports = function convertCoords(gd, ax, newType, doExtra) {
 
 /***/ }),
 
-/***/ 5395:
+/***/ 2320:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var attributes = __webpack_require__(3074);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var attributes = __webpack_require__(5060);
 var name = 'images';
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
   var opts = {
@@ -10447,17 +10441,17 @@ function imageDefaults(imageIn, imageOut, fullLayout) {
 
 /***/ }),
 
-/***/ 7562:
+/***/ 788:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Drawing = __webpack_require__(8000);
-var Axes = __webpack_require__(2814);
-var axisIds = __webpack_require__(4898);
-var xmlnsNamespaces = __webpack_require__(1234);
+var d3 = __webpack_require__(8197);
+var Drawing = __webpack_require__(2764);
+var Axes = __webpack_require__(1529);
+var axisIds = __webpack_require__(4720);
+var xmlnsNamespaces = __webpack_require__(8467);
 module.exports = function draw(gd) {
   var fullLayout = gd._fullLayout;
   var imageDataAbove = [];
@@ -10675,7 +10669,7 @@ module.exports = function draw(gd) {
 
 /***/ }),
 
-/***/ 580:
+/***/ 9452:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -10684,23 +10678,23 @@ module.exports = function draw(gd) {
 module.exports = {
   moduleType: 'component',
   name: 'images',
-  layoutAttributes: __webpack_require__(3074),
-  supplyLayoutDefaults: __webpack_require__(5395),
-  includeBasePlot: __webpack_require__(3274)('images'),
-  draw: __webpack_require__(7562),
-  convertCoords: __webpack_require__(9787)
+  layoutAttributes: __webpack_require__(5060),
+  supplyLayoutDefaults: __webpack_require__(2320),
+  includeBasePlot: __webpack_require__(4997)('images'),
+  draw: __webpack_require__(788),
+  convertCoords: __webpack_require__(6368)
 };
 
 /***/ }),
 
-/***/ 9338:
+/***/ 7134:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var colorAttrs = __webpack_require__(9765);
+var fontAttrs = __webpack_require__(7716);
+var colorAttrs = __webpack_require__(6784);
 module.exports = {
   // not really a 'subplot' attribute container,
   // but this is the flag we use to denote attributes that
@@ -10845,7 +10839,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4974:
+/***/ 1074:
 /***/ (function(module) {
 
 "use strict";
@@ -10870,19 +10864,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2496:
+/***/ 7929:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
-var plotsAttrs = __webpack_require__(5253);
-var attributes = __webpack_require__(9338);
-var basePlotLayoutAttributes = __webpack_require__(6108);
-var helpers = __webpack_require__(6572);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
+var plotsAttrs = __webpack_require__(718);
+var attributes = __webpack_require__(7134);
+var basePlotLayoutAttributes = __webpack_require__(5613);
+var helpers = __webpack_require__(6478);
 function groupDefaults(legendId, layoutIn, layoutOut, fullData) {
   var containerIn = layoutIn[legendId] || {};
   var containerOut = Template.newContainer(layoutOut, legendId);
@@ -11011,30 +11005,30 @@ module.exports = function legendDefaults(layoutIn, layoutOut, fullData) {
 
 /***/ }),
 
-/***/ 4886:
+/***/ 2849:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
-var Plots = __webpack_require__(2815);
-var Registry = __webpack_require__(2345);
-var Events = __webpack_require__(5761);
-var dragElement = __webpack_require__(9103);
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var svgTextUtils = __webpack_require__(5965);
-var handleClick = __webpack_require__(8889);
-var constants = __webpack_require__(4974);
-var alignmentConstants = __webpack_require__(3098);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
+var Plots = __webpack_require__(39);
+var Registry = __webpack_require__(2817);
+var Events = __webpack_require__(9735);
+var dragElement = __webpack_require__(9468);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var svgTextUtils = __webpack_require__(3888);
+var handleClick = __webpack_require__(9562);
+var constants = __webpack_require__(1074);
+var alignmentConstants = __webpack_require__(1407);
 var LINE_SPACING = alignmentConstants.LINE_SPACING;
 var FROM_TL = alignmentConstants.FROM_TL;
 var FROM_BR = alignmentConstants.FROM_BR;
-var getLegendData = __webpack_require__(8643);
-var style = __webpack_require__(5734);
-var helpers = __webpack_require__(6572);
+var getLegendData = __webpack_require__(3586);
+var style = __webpack_require__(2002);
+var helpers = __webpack_require__(6478);
 var MAIN_TITLE = 1;
 var LEGEND_PATTERN = /^legend[0-9]*$/;
 module.exports = function draw(gd, opts) {
@@ -11735,14 +11729,14 @@ function getId(legendObj) {
 
 /***/ }),
 
-/***/ 8643:
+/***/ 3586:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var helpers = __webpack_require__(6572);
+var Registry = __webpack_require__(2817);
+var helpers = __webpack_require__(6478);
 module.exports = function getLegendData(calcdata, opts, hasMultipleLegends) {
   var inHover = opts._inHover;
   var grouped = helpers.isGrouped(opts);
@@ -11835,7 +11829,6 @@ module.exports = function getLegendData(calcdata, opts, hasMultipleLegends) {
     return a[0]._groupMinRank - b[0]._groupMinRank || a[0]._preGroupSort - b[0]._preGroupSort // fallback for old Chrome < 70 https://bugs.chromium.org/p/v8/issues/detail?id=90
     ;
   };
-
   var orderFn2 = function (a, b) {
     return a.trace.legendrank - b.trace.legendrank || a._preSort - b._preSort // fallback for old Chrome < 70 https://bugs.chromium.org/p/v8/issues/detail?id=90
     ;
@@ -11903,14 +11896,14 @@ module.exports = function getLegendData(calcdata, opts, hasMultipleLegends) {
 
 /***/ }),
 
-/***/ 8889:
+/***/ 9562:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Registry = __webpack_require__(2345);
+var Lib = __webpack_require__(1372);
+var Registry = __webpack_require__(2817);
 var SHOWISOLATETIP = true;
 module.exports = function handleClick(g, gd, numClicks) {
   var fullLayout = gd._fullLayout;
@@ -12110,7 +12103,7 @@ module.exports = function handleClick(g, gd, numClicks) {
 
 /***/ }),
 
-/***/ 6572:
+/***/ 6478:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -12128,7 +12121,7 @@ exports.isReversed = function isReversed(legendLayout) {
 
 /***/ }),
 
-/***/ 517:
+/***/ 3983:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -12137,31 +12130,31 @@ exports.isReversed = function isReversed(legendLayout) {
 module.exports = {
   moduleType: 'component',
   name: 'legend',
-  layoutAttributes: __webpack_require__(9338),
-  supplyLayoutDefaults: __webpack_require__(2496),
-  draw: __webpack_require__(4886),
-  style: __webpack_require__(5734)
+  layoutAttributes: __webpack_require__(7134),
+  supplyLayoutDefaults: __webpack_require__(7929),
+  draw: __webpack_require__(2849),
+  style: __webpack_require__(2002)
 };
 
 /***/ }),
 
-/***/ 5734:
+/***/ 2002:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var extractOpts = (__webpack_require__(3190).extractOpts);
-var subTypes = __webpack_require__(3940);
-var stylePie = __webpack_require__(6889);
-var pieCastOption = (__webpack_require__(8721).castOption);
-var constants = __webpack_require__(4974);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var extractOpts = (__webpack_require__(7700).extractOpts);
+var subTypes = __webpack_require__(795);
+var stylePie = __webpack_require__(236);
+var pieCastOption = (__webpack_require__(671).castOption);
+var constants = __webpack_require__(1074);
 var CST_MARKER_SIZE = 12;
 var CST_LINE_WIDTH = 1;
 var CST_MARKER_LINE_WIDTH = 2;
@@ -12535,7 +12528,6 @@ module.exports = function style(s, gd, legend) {
         case 'heatmap':
           ptsData = [['M-15,-2V4H15V-2Z'] // similar to contour
           ];
-
           useGradient = true;
           break;
         case 'choropleth':
@@ -12601,7 +12593,6 @@ module.exports = function style(s, gd, legend) {
           colorscale[Math.floor((len - 1) / 2)][1]; // middle
         }
       }
-
       pt.attr('d', dd[0]);
       if (fillColor) {
         pt.call(Color.fill, fillColor);
@@ -12654,13 +12645,13 @@ function dimAttr(v, dflt, max) {
 
 /***/ }),
 
-/***/ 5844:
+/***/ 377:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var constants = __webpack_require__(8683);
+var constants = __webpack_require__(3899);
 module.exports = {
   editType: 'modebar',
   orientation: {
@@ -12701,18 +12692,18 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4246:
+/***/ 9439:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var Plots = __webpack_require__(2815);
-var axisIds = __webpack_require__(4898);
-var Icons = __webpack_require__(4338);
-var eraseActiveShape = (__webpack_require__(2014).eraseActiveShape);
-var Lib = __webpack_require__(461);
+var Registry = __webpack_require__(2817);
+var Plots = __webpack_require__(39);
+var axisIds = __webpack_require__(4720);
+var Icons = __webpack_require__(143);
+var eraseActiveShape = (__webpack_require__(5612).eraseActiveShape);
+var Lib = __webpack_require__(1372);
 var _ = Lib._;
 var modeBarButtons = module.exports = {};
 
@@ -12750,7 +12741,6 @@ modeBarButtons.toImage = {
     // legacy text
     _(gd, 'Download plot'); // generic non-PNG text
   },
-
   icon: Icons.camera,
   click: function (gd) {
     var toImageButtonOptions = gd._context.toImageButtonOptions;
@@ -13437,13 +13427,13 @@ function resetView(gd, subplotType) {
 
 /***/ }),
 
-/***/ 8683:
+/***/ 3899:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var modeBarButtons = __webpack_require__(4246);
+var modeBarButtons = __webpack_require__(9439);
 var buttonList = Object.keys(modeBarButtons);
 var DRAW_MODES = ['drawline', 'drawopenpath', 'drawclosedpath', 'drawcircle', 'drawrect', 'eraseshape'];
 var backButtons = ['v1hovermode', 'hoverclosest', 'hovercompare', 'togglehover', 'togglespikelines'].concat(DRAW_MODES);
@@ -13468,16 +13458,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3590:
+/***/ 4830:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Color = __webpack_require__(9932);
-var Template = __webpack_require__(9356);
-var attributes = __webpack_require__(5844);
+var Lib = __webpack_require__(1372);
+var Color = __webpack_require__(605);
+var Template = __webpack_require__(8251);
+var attributes = __webpack_require__(377);
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
   var containerIn = layoutIn.modebar || {};
   var containerOut = Template.newContainer(layoutOut, 'modebar');
@@ -13496,7 +13486,7 @@ module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
 
 /***/ }),
 
-/***/ 9032:
+/***/ 6250:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -13505,27 +13495,27 @@ module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
 module.exports = {
   moduleType: 'component',
   name: 'modebar',
-  layoutAttributes: __webpack_require__(5844),
-  supplyLayoutDefaults: __webpack_require__(3590),
-  manage: __webpack_require__(4345)
+  layoutAttributes: __webpack_require__(377),
+  supplyLayoutDefaults: __webpack_require__(4830),
+  manage: __webpack_require__(2355)
 };
 
 /***/ }),
 
-/***/ 4345:
+/***/ 2355:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var axisIds = __webpack_require__(4898);
-var scatterSubTypes = __webpack_require__(3940);
-var Registry = __webpack_require__(2345);
-var isUnifiedHover = (__webpack_require__(4688).isUnifiedHover);
-var createModeBar = __webpack_require__(8361);
-var modeBarButtons = __webpack_require__(4246);
-var DRAW_MODES = (__webpack_require__(8683).DRAW_MODES);
-var extendDeep = (__webpack_require__(461).extendDeep);
+var axisIds = __webpack_require__(4720);
+var scatterSubTypes = __webpack_require__(795);
+var Registry = __webpack_require__(2817);
+var isUnifiedHover = (__webpack_require__(7433).isUnifiedHover);
+var createModeBar = __webpack_require__(6130);
+var modeBarButtons = __webpack_require__(9439);
+var DRAW_MODES = (__webpack_require__(3899).DRAW_MODES);
+var extendDeep = (__webpack_require__(1372).extendDeep);
 
 /**
  * ModeBar wrapper around 'create' and 'update',
@@ -13823,17 +13813,17 @@ function fillCustomButton(originalModeBarButtons) {
 
 /***/ }),
 
-/***/ 8361:
+/***/ 6130:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var Icons = __webpack_require__(4338);
-var version = (__webpack_require__(5136).version);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var Icons = __webpack_require__(143);
+var version = (__webpack_require__(188).version);
 var Parser = new DOMParser();
 
 /**
@@ -14105,15 +14095,15 @@ module.exports = createModeBar;
 
 /***/ }),
 
-/***/ 7922:
+/***/ 2473:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var colorAttrs = __webpack_require__(9765);
-var templatedArray = (__webpack_require__(9356).templatedArray);
+var fontAttrs = __webpack_require__(7716);
+var colorAttrs = __webpack_require__(6784);
+var templatedArray = (__webpack_require__(8251).templatedArray);
 var buttonAttrs = templatedArray('button', {
   visible: {
     valType: 'boolean',
@@ -14202,7 +14192,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7459:
+/***/ 2267:
 /***/ (function(module) {
 
 "use strict";
@@ -14223,18 +14213,18 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9085:
+/***/ 2862:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Color = __webpack_require__(9932);
-var Template = __webpack_require__(9356);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var attributes = __webpack_require__(7922);
-var constants = __webpack_require__(7459);
+var Lib = __webpack_require__(1372);
+var Color = __webpack_require__(605);
+var Template = __webpack_require__(8251);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var attributes = __webpack_require__(2473);
+var constants = __webpack_require__(2267);
 module.exports = function handleDefaults(containerIn, containerOut, layout, counterAxes, calendar) {
   var selectorIn = containerIn.rangeselector || {};
   var selectorOut = Template.newContainer(containerOut, 'rangeselector');
@@ -14294,27 +14284,27 @@ function getPosDflt(containerOut, layout, counterAxes) {
 
 /***/ }),
 
-/***/ 2883:
+/***/ 8946:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Plots = __webpack_require__(2815);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Plots = __webpack_require__(39);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var svgTextUtils = __webpack_require__(5965);
-var axisIds = __webpack_require__(4898);
-var alignmentConstants = __webpack_require__(3098);
+var svgTextUtils = __webpack_require__(3888);
+var axisIds = __webpack_require__(4720);
+var alignmentConstants = __webpack_require__(1407);
 var LINE_SPACING = alignmentConstants.LINE_SPACING;
 var FROM_TL = alignmentConstants.FROM_TL;
 var FROM_BR = alignmentConstants.FROM_BR;
-var constants = __webpack_require__(7459);
-var getUpdateObject = __webpack_require__(1153);
+var constants = __webpack_require__(2267);
+var getUpdateObject = __webpack_require__(6884);
 module.exports = function draw(gd) {
   var fullLayout = gd._fullLayout;
   var selectors = fullLayout._infolayer.selectAll('.rangeselector').data(makeSelectorData(gd), selectorKeyFunc);
@@ -14476,14 +14466,14 @@ function reposition(gd, buttons, opts, axName, selector) {
 
 /***/ }),
 
-/***/ 1153:
+/***/ 6884:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3Time = __webpack_require__(5007);
-var titleCase = (__webpack_require__(461).titleCase);
+var d3Time = __webpack_require__(6062);
+var titleCase = (__webpack_require__(1372).titleCase);
 module.exports = function getUpdateObject(axisLayout, buttonLayout) {
   var axName = axisLayout._name;
   var update = {};
@@ -14518,7 +14508,7 @@ function getXRange(axisLayout, buttonLayout) {
 
 /***/ }),
 
-/***/ 2940:
+/***/ 6922:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -14530,24 +14520,24 @@ module.exports = {
   schema: {
     subplots: {
       xaxis: {
-        rangeselector: __webpack_require__(7922)
+        rangeselector: __webpack_require__(2473)
       }
     }
   },
-  layoutAttributes: __webpack_require__(7922),
-  handleDefaults: __webpack_require__(9085),
-  draw: __webpack_require__(2883)
+  layoutAttributes: __webpack_require__(2473),
+  handleDefaults: __webpack_require__(2862),
+  draw: __webpack_require__(8946)
 };
 
 /***/ }),
 
-/***/ 9537:
+/***/ 3449:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var colorAttributes = __webpack_require__(9765);
+var colorAttributes = __webpack_require__(6784);
 module.exports = {
   bgcolor: {
     valType: 'color',
@@ -14611,15 +14601,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5442:
+/***/ 2162:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var listAxes = (__webpack_require__(4898).list);
-var getAutoRange = (__webpack_require__(4363).getAutoRange);
-var constants = __webpack_require__(4021);
+var listAxes = (__webpack_require__(4720).list);
+var getAutoRange = (__webpack_require__(7706).getAutoRange);
+var constants = __webpack_require__(987);
 module.exports = function calcAutorange(gd) {
   var axes = listAxes(gd, 'x', true);
 
@@ -14640,7 +14630,7 @@ module.exports = function calcAutorange(gd) {
 
 /***/ }),
 
-/***/ 4021:
+/***/ 987:
 /***/ (function(module) {
 
 "use strict";
@@ -14682,17 +14672,17 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8893:
+/***/ 9374:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
-var axisIds = __webpack_require__(4898);
-var attributes = __webpack_require__(9537);
-var oppAxisAttrs = __webpack_require__(5466);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
+var axisIds = __webpack_require__(4720);
+var attributes = __webpack_require__(3449);
+var oppAxisAttrs = __webpack_require__(3856);
 module.exports = function handleDefaults(layoutIn, layoutOut, axName) {
   var axIn = layoutIn[axName];
   var axOut = layoutOut[axName];
@@ -14749,25 +14739,25 @@ module.exports = function handleDefaults(layoutIn, layoutOut, axName) {
 
 /***/ }),
 
-/***/ 2538:
+/***/ 6898:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Plots = __webpack_require__(2815);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Plots = __webpack_require__(39);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var Titles = __webpack_require__(9394);
-var Cartesian = __webpack_require__(6642);
-var axisIDs = __webpack_require__(4898);
-var dragElement = __webpack_require__(9103);
-var setCursor = __webpack_require__(9279);
-var constants = __webpack_require__(4021);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var Titles = __webpack_require__(8349);
+var Cartesian = __webpack_require__(5694);
+var axisIDs = __webpack_require__(4720);
+var dragElement = __webpack_require__(9468);
+var setCursor = __webpack_require__(8230);
+var constants = __webpack_require__(987);
 module.exports = function (gd) {
   var fullLayout = gd._fullLayout;
   var rangeSliderData = fullLayout._rangeSliderData;
@@ -15254,16 +15244,16 @@ function drawGrabbers(rangeSlider, gd, axisOpts, opts) {
 
 /***/ }),
 
-/***/ 4389:
+/***/ 8571:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var axisIDs = __webpack_require__(4898);
-var svgTextUtils = __webpack_require__(5965);
-var constants = __webpack_require__(4021);
-var LINE_SPACING = (__webpack_require__(3098).LINE_SPACING);
+var axisIDs = __webpack_require__(4720);
+var svgTextUtils = __webpack_require__(3888);
+var constants = __webpack_require__(987);
+var LINE_SPACING = (__webpack_require__(1407).LINE_SPACING);
 var name = constants.name;
 function isVisible(ax) {
   var rangeSlider = ax && ax[name];
@@ -15319,16 +15309,16 @@ exports.autoMarginOpts = function (gd, ax) {
 
 /***/ }),
 
-/***/ 1972:
+/***/ 666:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var attrs = __webpack_require__(9537);
-var oppAxisAttrs = __webpack_require__(5466);
-var helpers = __webpack_require__(4389);
+var Lib = __webpack_require__(1372);
+var attrs = __webpack_require__(3449);
+var oppAxisAttrs = __webpack_require__(3856);
+var helpers = __webpack_require__(8571);
 module.exports = {
   moduleType: 'component',
   name: 'rangeslider',
@@ -15341,10 +15331,10 @@ module.exports = {
       }
     }
   },
-  layoutAttributes: __webpack_require__(9537),
-  handleDefaults: __webpack_require__(8893),
-  calcAutorange: __webpack_require__(5442),
-  draw: __webpack_require__(2538),
+  layoutAttributes: __webpack_require__(3449),
+  handleDefaults: __webpack_require__(9374),
+  calcAutorange: __webpack_require__(2162),
+  draw: __webpack_require__(6898),
   isVisible: helpers.isVisible,
   makeData: helpers.makeData,
   autoMarginOpts: helpers.autoMarginOpts
@@ -15352,7 +15342,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5466:
+/***/ 3856:
 /***/ (function(module) {
 
 "use strict";
@@ -15385,19 +15375,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2749:
+/***/ 5872:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var annAttrs = __webpack_require__(121);
-var scatterLineAttrs = (__webpack_require__(6830).line);
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var overrideAll = (__webpack_require__(8541).overrideAll);
-var templatedArray = (__webpack_require__(9356).templatedArray);
-var axisPlaceableObjs = __webpack_require__(8835);
+var annAttrs = __webpack_require__(6155);
+var scatterLineAttrs = (__webpack_require__(4985).line);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var overrideAll = (__webpack_require__(195).overrideAll);
+var templatedArray = (__webpack_require__(8251).templatedArray);
+var axisPlaceableObjs = __webpack_require__(3750);
 module.exports = overrideAll(templatedArray('selection', {
   type: {
     valType: 'enumerated',
@@ -15442,7 +15432,7 @@ module.exports = overrideAll(templatedArray('selection', {
 
 /***/ }),
 
-/***/ 6546:
+/***/ 2212:
 /***/ (function(module) {
 
 "use strict";
@@ -15461,17 +15451,17 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4581:
+/***/ 3911:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var attributes = __webpack_require__(2749);
-var helpers = __webpack_require__(4017);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var attributes = __webpack_require__(5872);
+var helpers = __webpack_require__(7505);
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
   handleArrayContainerDefaults(layoutIn, layoutOut, {
     name: 'selections',
@@ -15559,19 +15549,19 @@ function handleSelectionDefaults(selectionIn, selectionOut, fullLayout) {
 
 /***/ }),
 
-/***/ 1221:
+/***/ 4671:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var readPaths = (__webpack_require__(4083).readPaths);
-var displayOutlines = __webpack_require__(9777);
-var clearOutlineControllers = (__webpack_require__(9842).clearOutlineControllers);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var arrayEditor = (__webpack_require__(9356).arrayEditor);
-var helpers = __webpack_require__(4017);
+var readPaths = (__webpack_require__(8198).readPaths);
+var displayOutlines = __webpack_require__(6822);
+var clearOutlineControllers = (__webpack_require__(8601).clearOutlineControllers);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var arrayEditor = (__webpack_require__(8251).arrayEditor);
+var helpers = __webpack_require__(7505);
 var getPathString = helpers.getPathString;
 
 // Selections are stored in gd.layout.selections, an array of objects
@@ -15657,7 +15647,6 @@ function drawOne(gd, index) {
           editHelpers: editHelpers,
           isActiveSelection: true // i.e. to enable controllers
         };
-
         var polygons = readPaths(d, gd);
         // display polygons on the screen
         displayOutlines(polygons, path, dragOptions);
@@ -15711,14 +15700,14 @@ function deactivateSelection(gd) {
 
 /***/ }),
 
-/***/ 3342:
+/***/ 348:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var extendFlat = (__webpack_require__(9055).extendFlat);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var extendFlat = (__webpack_require__(942).extendFlat);
 module.exports = {
   newselection: {
     mode: {
@@ -15767,7 +15756,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6775:
+/***/ 4187:
 /***/ (function(module) {
 
 "use strict";
@@ -15786,17 +15775,17 @@ module.exports = function supplyDrawNewSelectionDefaults(layoutIn, layoutOut, co
 
 /***/ }),
 
-/***/ 7385:
+/***/ 1112:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var dragHelpers = __webpack_require__(304);
+var dragHelpers = __webpack_require__(9689);
 var selectMode = dragHelpers.selectMode;
-var handleOutline = __webpack_require__(9842);
+var handleOutline = __webpack_require__(8601);
 var clearOutline = handleOutline.clearOutline;
-var helpers = __webpack_require__(4083);
+var helpers = __webpack_require__(8198);
 var readPaths = helpers.readPaths;
 var writePaths = helpers.writePaths;
 var fixDatesForPaths = helpers.fixDatesForPaths;
@@ -15890,13 +15879,13 @@ module.exports = function newSelections(outlines, dragOptions) {
 
 /***/ }),
 
-/***/ 2402:
+/***/ 8456:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var strTranslate = (__webpack_require__(461).strTranslate);
+var strTranslate = (__webpack_require__(1372).strTranslate);
 
 // in v3 (once log ranges are fixed),
 // we'll be able to p2r here for all axis types
@@ -15938,21 +15927,21 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1868:
+/***/ 1549:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var drawModule = __webpack_require__(1221);
-var select = __webpack_require__(1548);
+var drawModule = __webpack_require__(4671);
+var select = __webpack_require__(7785);
 module.exports = {
   moduleType: 'component',
   name: 'selections',
-  layoutAttributes: __webpack_require__(2749),
-  supplyLayoutDefaults: __webpack_require__(4581),
-  supplyDrawNewSelectionDefaults: __webpack_require__(6775),
-  includeBasePlot: __webpack_require__(3274)('selections'),
+  layoutAttributes: __webpack_require__(5872),
+  supplyLayoutDefaults: __webpack_require__(3911),
+  supplyDrawNewSelectionDefaults: __webpack_require__(4187),
+  includeBasePlot: __webpack_require__(4997)('selections'),
   draw: drawModule.draw,
   drawOne: drawModule.drawOne,
   reselect: select.reselect,
@@ -15964,48 +15953,48 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1548:
+/***/ 7785:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var polybool = __webpack_require__(5650);
-var pointInPolygon = __webpack_require__(114); // could we use contains lib/polygon instead?
+var polybool = __webpack_require__(7399);
+var pointInPolygon = __webpack_require__(7008); // could we use contains lib/polygon instead?
 
-var Registry = __webpack_require__(2345);
-var dashStyle = (__webpack_require__(8000).dashStyle);
-var Color = __webpack_require__(9932);
-var Fx = __webpack_require__(3847);
-var makeEventData = (__webpack_require__(4688).makeEventData);
-var dragHelpers = __webpack_require__(304);
+var Registry = __webpack_require__(2817);
+var dashStyle = (__webpack_require__(2764).dashStyle);
+var Color = __webpack_require__(605);
+var Fx = __webpack_require__(956);
+var makeEventData = (__webpack_require__(7433).makeEventData);
+var dragHelpers = __webpack_require__(9689);
 var freeMode = dragHelpers.freeMode;
 var rectMode = dragHelpers.rectMode;
 var drawMode = dragHelpers.drawMode;
 var openMode = dragHelpers.openMode;
 var selectMode = dragHelpers.selectMode;
-var shapeHelpers = __webpack_require__(4017);
-var shapeConstants = __webpack_require__(9598);
-var displayOutlines = __webpack_require__(9777);
-var clearOutline = (__webpack_require__(9842).clearOutline);
-var newShapeHelpers = __webpack_require__(4083);
+var shapeHelpers = __webpack_require__(7505);
+var shapeConstants = __webpack_require__(5801);
+var displayOutlines = __webpack_require__(6822);
+var clearOutline = (__webpack_require__(8601).clearOutline);
+var newShapeHelpers = __webpack_require__(8198);
 var handleEllipse = newShapeHelpers.handleEllipse;
 var readPaths = newShapeHelpers.readPaths;
-var newShapes = __webpack_require__(2666);
-var newSelections = __webpack_require__(7385);
-var activateLastSelection = (__webpack_require__(1221).activateLastSelection);
-var Lib = __webpack_require__(461);
+var newShapes = __webpack_require__(4571);
+var newSelections = __webpack_require__(1112);
+var activateLastSelection = (__webpack_require__(4671).activateLastSelection);
+var Lib = __webpack_require__(1372);
 var ascending = Lib.sorterAsc;
-var libPolygon = __webpack_require__(7535);
-var throttle = __webpack_require__(5079);
-var getFromId = (__webpack_require__(4898).getFromId);
-var clearGlCanvases = __webpack_require__(6259);
-var redrawReglTraces = (__webpack_require__(5669).redrawReglTraces);
-var constants = __webpack_require__(6546);
+var libPolygon = __webpack_require__(4097);
+var throttle = __webpack_require__(3658);
+var getFromId = (__webpack_require__(4720).getFromId);
+var clearGlCanvases = __webpack_require__(1750);
+var redrawReglTraces = (__webpack_require__(1742).redrawReglTraces);
+var constants = __webpack_require__(2212);
 var MINSELECT = constants.MINSELECT;
 var filteredPolygon = libPolygon.filter;
 var polygonTester = libPolygon.tester;
-var helpers = __webpack_require__(2402);
+var helpers = __webpack_require__(8456);
 var p2r = helpers.p2r;
 var axValue = helpers.axValue;
 var getTransform = helpers.getTransform;
@@ -16059,7 +16048,6 @@ function prepSelect(evt, startX, startY, dragOptions, mode) {
   var fillC = isDrawMode && !isOpenMode ? newStyle.fillcolor : 'rgba(0,0,0,0)';
   var strokeC = newStyle.line.color || (isCartesian ? Color.contrast(gd._fullLayout.plot_bgcolor) : '#7f7f7f' // non-cartesian subplot
   );
-
   outlines.enter().append('path').attr('class', 'select-outline select-outline-' + plotinfo.id).style({
     opacity: isDrawMode ? newStyle.opacity / 2 : 1,
     'stroke-dasharray': dashStyle(newStyle.line.dash, newStyle.line.width),
@@ -16816,7 +16804,6 @@ function convertPoly(polygonsIn, isOpenMode) {
       ]);
     }
   }
-
   return polygonsOut;
 }
 function _doSelect(selectionTesters, searchTraces) {
@@ -17195,21 +17182,21 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8343:
+/***/ 4511:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var annAttrs = __webpack_require__(121);
-var fontAttrs = __webpack_require__(6948);
-var scatterLineAttrs = (__webpack_require__(6830).line);
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var templatedArray = (__webpack_require__(9356).templatedArray);
-var axisPlaceableObjs = __webpack_require__(8835);
-var shapeTexttemplateAttrs = (__webpack_require__(202)/* .shapeTexttemplateAttrs */ .R);
-var shapeLabelTexttemplateVars = __webpack_require__(9841);
+var annAttrs = __webpack_require__(6155);
+var fontAttrs = __webpack_require__(7716);
+var scatterLineAttrs = (__webpack_require__(4985).line);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var templatedArray = (__webpack_require__(8251).templatedArray);
+var axisPlaceableObjs = __webpack_require__(3750);
+var shapeTexttemplateAttrs = (__webpack_require__(6689)/* .shapeTexttemplateAttrs */ .LF);
+var shapeLabelTexttemplateVars = __webpack_require__(8100);
 module.exports = templatedArray('shape', {
   visible: {
     valType: 'boolean',
@@ -17351,16 +17338,16 @@ module.exports = templatedArray('shape', {
 
 /***/ }),
 
-/***/ 9804:
+/***/ 136:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var constants = __webpack_require__(9598);
-var helpers = __webpack_require__(4017);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var constants = __webpack_require__(5801);
+var helpers = __webpack_require__(7505);
 module.exports = function calcAutorange(gd) {
   var fullLayout = gd._fullLayout;
   var shapeList = Lib.filterVisible(fullLayout.shapes);
@@ -17448,7 +17435,7 @@ function shapeBounds(ax, v0, v1, path, paramsToUse) {
 
 /***/ }),
 
-/***/ 9598:
+/***/ 5801:
 /***/ (function(module) {
 
 "use strict";
@@ -17554,17 +17541,17 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6334:
+/***/ 2424:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var attributes = __webpack_require__(8343);
-var helpers = __webpack_require__(4017);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var attributes = __webpack_require__(4511);
+var helpers = __webpack_require__(7505);
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
   handleArrayContainerDefaults(layoutIn, layoutOut, {
     name: 'shapes',
@@ -17693,33 +17680,33 @@ function handleShapeDefaults(shapeIn, shapeOut, fullLayout) {
 
 /***/ }),
 
-/***/ 9777:
+/***/ 6822:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var dragElement = __webpack_require__(9103);
-var dragHelpers = __webpack_require__(304);
+var dragElement = __webpack_require__(9468);
+var dragHelpers = __webpack_require__(9689);
 var drawMode = dragHelpers.drawMode;
 var selectMode = dragHelpers.selectMode;
-var Registry = __webpack_require__(2345);
-var Color = __webpack_require__(9932);
-var constants = __webpack_require__(3466);
+var Registry = __webpack_require__(2817);
+var Color = __webpack_require__(605);
+var constants = __webpack_require__(7034);
 var i000 = constants.i000;
 var i090 = constants.i090;
 var i180 = constants.i180;
 var i270 = constants.i270;
-var handleOutline = __webpack_require__(9842);
+var handleOutline = __webpack_require__(8601);
 var clearOutlineControllers = handleOutline.clearOutlineControllers;
-var helpers = __webpack_require__(4083);
+var helpers = __webpack_require__(8198);
 var pointsOnRectangle = helpers.pointsOnRectangle;
 var pointsOnEllipse = helpers.pointsOnEllipse;
 var writePaths = helpers.writePaths;
-var newShapes = __webpack_require__(2666);
-var newSelections = __webpack_require__(7385);
+var newShapes = __webpack_require__(4571);
+var newSelections = __webpack_require__(1112);
 module.exports = function displayOutlines(polygons, outlines, dragOptions, nCalls) {
   if (!nCalls) nCalls = 0;
   var gd = dragOptions.gd;
@@ -18009,30 +17996,30 @@ function eraseActiveSelection(gd) {
 
 /***/ }),
 
-/***/ 2014:
+/***/ 5612:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var readPaths = (__webpack_require__(4083).readPaths);
-var displayOutlines = __webpack_require__(9777);
-var clearOutlineControllers = (__webpack_require__(9842).clearOutlineControllers);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var arrayEditor = (__webpack_require__(9356).arrayEditor);
-var dragElement = __webpack_require__(9103);
-var setCursor = __webpack_require__(9279);
-var svgTextUtils = __webpack_require__(5965);
-var constants = __webpack_require__(9598);
-var helpers = __webpack_require__(4017);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var readPaths = (__webpack_require__(8198).readPaths);
+var displayOutlines = __webpack_require__(6822);
+var clearOutlineControllers = (__webpack_require__(8601).clearOutlineControllers);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var arrayEditor = (__webpack_require__(8251).arrayEditor);
+var dragElement = __webpack_require__(9468);
+var setCursor = __webpack_require__(8230);
+var svgTextUtils = __webpack_require__(3888);
+var constants = __webpack_require__(5801);
+var helpers = __webpack_require__(7505);
 var getPathString = helpers.getPathString;
-var shapeLabelTexttemplateVars = __webpack_require__(9841);
-var FROM_TL = (__webpack_require__(3098).FROM_TL);
+var shapeLabelTexttemplateVars = __webpack_require__(8100);
+var FROM_TL = (__webpack_require__(1407).FROM_TL);
 
 // Shapes are stored in gd.layout.shapes, an array of objects
 // index can point to one item in this array,
@@ -18073,7 +18060,6 @@ function draw(gd) {
   // may need to resurrect this if we put text (LaTeX) in shapes
   // return Plots.previousPromises(gd);
 }
-
 function shouldSkipEdits(gd) {
   return !!gd._fullLayout._outlining;
 }
@@ -18153,7 +18139,6 @@ function drawOne(gd, index) {
         hasText: options.label.text || options.label.texttemplate,
         isActiveShape: true // i.e. to enable controllers
       };
-
       var polygons = readPaths(d, gd);
       // display polygons on the screen
       displayOutlines(polygons, path, dragOptions);
@@ -18235,7 +18220,6 @@ function setupDragElement(gd, shapePath, shapeOptions, index, shapeLayer, editHe
     var circleStyle = {
       'fill-opacity': '0' // ensure not visible
     };
-
     var circleRadius = Math.max(sensoryWidth / 2, minSensoryWidth);
     g.append('circle').attr({
       'data-line-point': 'start-point',
@@ -18810,17 +18794,17 @@ function eraseActiveShape(gd) {
 
 /***/ }),
 
-/***/ 8413:
+/***/ 3318:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var shapeTexttemplateAttrs = (__webpack_require__(202)/* .shapeTexttemplateAttrs */ .R);
-var shapeLabelTexttemplateVars = __webpack_require__(9841);
+var fontAttrs = __webpack_require__(7716);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var shapeTexttemplateAttrs = (__webpack_require__(6689)/* .shapeTexttemplateAttrs */ .LF);
+var shapeLabelTexttemplateVars = __webpack_require__(8100);
 module.exports = {
   newshape: {
     line: {
@@ -18935,7 +18919,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3466:
+/***/ 7034:
 /***/ (function(module) {
 
 "use strict";
@@ -18956,14 +18940,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8121:
+/***/ 5198:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Color = __webpack_require__(9932);
-var Lib = __webpack_require__(461);
+var Color = __webpack_require__(605);
+var Lib = __webpack_require__(1372);
 function dfltLabelYanchor(isLine, labelTextPosition) {
   // If shape is a line, default y-anchor is 'bottom' (so that text is above line by default)
   // Otherwise, default y-anchor is equal to y-component of `textposition`
@@ -18999,17 +18983,17 @@ module.exports = function supplyDrawNewShapeDefaults(layoutIn, layoutOut, coerce
 
 /***/ }),
 
-/***/ 4083:
+/***/ 8198:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var parseSvgPath = __webpack_require__(9123);
-var constants = __webpack_require__(3466);
+var parseSvgPath = __webpack_require__(6582);
+var constants = __webpack_require__(7034);
 var CIRCLE_SIDES = constants.CIRCLE_SIDES;
 var SQRT2 = constants.SQRT2;
-var cartesianHelpers = __webpack_require__(2402);
+var cartesianHelpers = __webpack_require__(8456);
 var p2r = cartesianHelpers.p2r;
 var r2p = cartesianHelpers.r2p;
 var iC = [0, 3, 4, 5, 6, 1, 2];
@@ -19278,28 +19262,28 @@ exports.fixDatesForPaths = function (polygons, xaxis, yaxis) {
 
 /***/ }),
 
-/***/ 2666:
+/***/ 4571:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var dragHelpers = __webpack_require__(304);
+var dragHelpers = __webpack_require__(9689);
 var drawMode = dragHelpers.drawMode;
 var openMode = dragHelpers.openMode;
-var constants = __webpack_require__(3466);
+var constants = __webpack_require__(7034);
 var i000 = constants.i000;
 var i090 = constants.i090;
 var i180 = constants.i180;
 var i270 = constants.i270;
 var cos45 = constants.cos45;
 var sin45 = constants.sin45;
-var cartesianHelpers = __webpack_require__(2402);
+var cartesianHelpers = __webpack_require__(8456);
 var p2r = cartesianHelpers.p2r;
 var r2p = cartesianHelpers.r2p;
-var handleOutline = __webpack_require__(9842);
+var handleOutline = __webpack_require__(8601);
 var clearOutline = handleOutline.clearOutline;
-var helpers = __webpack_require__(4083);
+var helpers = __webpack_require__(8198);
 var readPaths = helpers.readPaths;
 var writePaths = helpers.writePaths;
 var ellipseOver = helpers.ellipseOver;
@@ -19466,7 +19450,7 @@ module.exports = function newShapes(outlines, dragOptions) {
 
 /***/ }),
 
-/***/ 9842:
+/***/ 8601:
 /***/ (function(module) {
 
 "use strict";
@@ -19495,15 +19479,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4017:
+/***/ 7505:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var constants = __webpack_require__(9598);
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
+var constants = __webpack_require__(5801);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
 
 // special position conversion functions... category axis positions can't be
 // specified by their data values, because they don't make a continuous mapping.
@@ -19721,7 +19705,6 @@ exports.getPathString = function (gd, options) {
       isValid = x0In != null && x1In != null; // eslint-disable-line eqeqeq
     }
   }
-
   if (options.ysizemode === 'pixel') {
     var yAnchorPos = y2p(options.yanchor);
     y0 = yAnchorPos - options.y0;
@@ -19735,7 +19718,6 @@ exports.getPathString = function (gd, options) {
       isValid = s != null && f != null; // eslint-disable-line eqeqeq
     }
   }
-
   if (!isValid) {
     return null;
   }
@@ -19784,28 +19766,28 @@ function convertPath(options, x2p, y2p) {
 
 /***/ }),
 
-/***/ 2379:
+/***/ 3860:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var drawModule = __webpack_require__(2014);
+var drawModule = __webpack_require__(5612);
 module.exports = {
   moduleType: 'component',
   name: 'shapes',
-  layoutAttributes: __webpack_require__(8343),
-  supplyLayoutDefaults: __webpack_require__(6334),
-  supplyDrawNewShapeDefaults: __webpack_require__(8121),
-  includeBasePlot: __webpack_require__(3274)('shapes'),
-  calcAutorange: __webpack_require__(9804),
+  layoutAttributes: __webpack_require__(4511),
+  supplyLayoutDefaults: __webpack_require__(2424),
+  supplyDrawNewShapeDefaults: __webpack_require__(5198),
+  includeBasePlot: __webpack_require__(4997)('shapes'),
+  calcAutorange: __webpack_require__(136),
   draw: drawModule.draw,
   drawOne: drawModule.drawOne
 };
 
 /***/ }),
 
-/***/ 9841:
+/***/ 8100:
 /***/ (function(module) {
 
 "use strict";
@@ -19871,19 +19853,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6146:
+/***/ 2695:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var padAttrs = __webpack_require__(3134);
-var extendDeepAll = (__webpack_require__(9055).extendDeepAll);
-var overrideAll = (__webpack_require__(8541).overrideAll);
-var animationAttrs = __webpack_require__(3778);
-var templatedArray = (__webpack_require__(9356).templatedArray);
-var constants = __webpack_require__(1954);
+var fontAttrs = __webpack_require__(7716);
+var padAttrs = __webpack_require__(5804);
+var extendDeepAll = (__webpack_require__(942).extendDeepAll);
+var overrideAll = (__webpack_require__(195).overrideAll);
+var animationAttrs = __webpack_require__(7685);
+var templatedArray = (__webpack_require__(8251).templatedArray);
+var constants = __webpack_require__(6161);
 var stepsAttrs = templatedArray('step', {
   visible: {
     valType: 'boolean',
@@ -20041,7 +20023,7 @@ module.exports = overrideAll(templatedArray('slider', {
 
 /***/ }),
 
-/***/ 1954:
+/***/ 6161:
 /***/ (function(module) {
 
 "use strict";
@@ -20114,16 +20096,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 550:
+/***/ 8656:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var attributes = __webpack_require__(6146);
-var constants = __webpack_require__(1954);
+var Lib = __webpack_require__(1372);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var attributes = __webpack_require__(2695);
+var constants = __webpack_require__(6161);
 var name = constants.name;
 var stepAttrs = attributes.steps;
 module.exports = function slidersDefaults(layoutIn, layoutOut) {
@@ -20202,22 +20184,22 @@ function stepDefaults(valueIn, valueOut) {
 
 /***/ }),
 
-/***/ 5188:
+/***/ 4228:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Plots = __webpack_require__(2815);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Plots = __webpack_require__(39);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var svgTextUtils = __webpack_require__(5965);
-var arrayEditor = (__webpack_require__(9356).arrayEditor);
-var constants = __webpack_require__(1954);
-var alignmentConstants = __webpack_require__(3098);
+var svgTextUtils = __webpack_require__(3888);
+var arrayEditor = (__webpack_require__(8251).arrayEditor);
+var constants = __webpack_require__(6161);
+var alignmentConstants = __webpack_require__(1407);
 var LINE_SPACING = alignmentConstants.LINE_SPACING;
 var FROM_TL = alignmentConstants.FROM_TL;
 var FROM_BR = alignmentConstants.FROM_BR;
@@ -20694,40 +20676,40 @@ function drawRail(sliderGroup, sliderOpts) {
 
 /***/ }),
 
-/***/ 684:
+/***/ 9228:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var constants = __webpack_require__(1954);
+var constants = __webpack_require__(6161);
 module.exports = {
   moduleType: 'component',
   name: constants.name,
-  layoutAttributes: __webpack_require__(6146),
-  supplyLayoutDefaults: __webpack_require__(550),
-  draw: __webpack_require__(5188)
+  layoutAttributes: __webpack_require__(2695),
+  supplyLayoutDefaults: __webpack_require__(8656),
+  draw: __webpack_require__(4228)
 };
 
 /***/ }),
 
-/***/ 9394:
+/***/ 8349:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
-var Plots = __webpack_require__(2815);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
+var Plots = __webpack_require__(39);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var svgTextUtils = __webpack_require__(5965);
-var interactConstants = __webpack_require__(3087);
-var OPPOSITE_SIDE = (__webpack_require__(3098).OPPOSITE_SIDE);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var svgTextUtils = __webpack_require__(3888);
+var interactConstants = __webpack_require__(9909);
+var OPPOSITE_SIDE = (__webpack_require__(1407).OPPOSITE_SIDE);
 var numStripRE = / [XY][0-9]* /;
 
 /**
@@ -20953,18 +20935,18 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3637:
+/***/ 8352:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var colorAttrs = __webpack_require__(9765);
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var overrideAll = (__webpack_require__(8541).overrideAll);
-var padAttrs = __webpack_require__(3134);
-var templatedArray = (__webpack_require__(9356).templatedArray);
+var fontAttrs = __webpack_require__(7716);
+var colorAttrs = __webpack_require__(6784);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var overrideAll = (__webpack_require__(195).overrideAll);
+var padAttrs = __webpack_require__(5804);
+var templatedArray = (__webpack_require__(8251).templatedArray);
 var buttonsAttrs = templatedArray('button', {
   visible: {
     valType: 'boolean'
@@ -21073,7 +21055,7 @@ module.exports = overrideAll(templatedArray('updatemenu', {
 
 /***/ }),
 
-/***/ 1843:
+/***/ 4516:
 /***/ (function(module) {
 
 "use strict";
@@ -21135,16 +21117,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2243:
+/***/ 2615:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var attributes = __webpack_require__(3637);
-var constants = __webpack_require__(1843);
+var Lib = __webpack_require__(1372);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var attributes = __webpack_require__(8352);
+var constants = __webpack_require__(4516);
 var name = constants.name;
 var buttonAttrs = attributes.buttons;
 module.exports = function updateMenusDefaults(layoutIn, layoutOut) {
@@ -21198,22 +21180,22 @@ function buttonDefaults(buttonIn, buttonOut) {
 
 /***/ }),
 
-/***/ 9578:
+/***/ 8527:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Plots = __webpack_require__(2815);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Lib = __webpack_require__(461);
-var svgTextUtils = __webpack_require__(5965);
-var arrayEditor = (__webpack_require__(9356).arrayEditor);
-var LINE_SPACING = (__webpack_require__(3098).LINE_SPACING);
-var constants = __webpack_require__(1843);
-var ScrollBox = __webpack_require__(7135);
+var d3 = __webpack_require__(8197);
+var Plots = __webpack_require__(39);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Lib = __webpack_require__(1372);
+var svgTextUtils = __webpack_require__(3888);
+var arrayEditor = (__webpack_require__(8251).arrayEditor);
+var LINE_SPACING = (__webpack_require__(1407).LINE_SPACING);
+var constants = __webpack_require__(4516);
+var ScrollBox = __webpack_require__(7887);
 module.exports = function draw(gd) {
   var fullLayout = gd._fullLayout;
   var menuData = Lib.filterVisible(fullLayout[constants.name]);
@@ -21721,34 +21703,34 @@ function removeAllButtons(gButton, newMenuIndexAttr) {
 
 /***/ }),
 
-/***/ 6322:
+/***/ 9005:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var constants = __webpack_require__(1843);
+var constants = __webpack_require__(4516);
 module.exports = {
   moduleType: 'component',
   name: constants.name,
-  layoutAttributes: __webpack_require__(3637),
-  supplyLayoutDefaults: __webpack_require__(2243),
-  draw: __webpack_require__(9578)
+  layoutAttributes: __webpack_require__(8352),
+  supplyLayoutDefaults: __webpack_require__(2615),
+  draw: __webpack_require__(8527)
 };
 
 /***/ }),
 
-/***/ 7135:
+/***/ 7887:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = ScrollBox;
-var d3 = __webpack_require__(6237);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Lib = __webpack_require__(1372);
 
 /**
  * Helper class to setup a scroll box
@@ -22103,7 +22085,7 @@ ScrollBox.prototype.setTranslate = function setTranslate(translateX, translateY)
 
 /***/ }),
 
-/***/ 3098:
+/***/ 1407:
 /***/ (function(module) {
 
 "use strict";
@@ -22162,7 +22144,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8835:
+/***/ 3750:
 /***/ (function(module) {
 
 "use strict";
@@ -22176,7 +22158,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9706:
+/***/ 6463:
 /***/ (function(module) {
 
 "use strict";
@@ -22189,7 +22171,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4079:
+/***/ 7517:
 /***/ (function(module) {
 
 "use strict";
@@ -22220,7 +22202,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3087:
+/***/ 9909:
 /***/ (function(module) {
 
 "use strict";
@@ -22238,7 +22220,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6524:
+/***/ 8580:
 /***/ (function(module) {
 
 "use strict";
@@ -22312,7 +22294,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1234:
+/***/ 8467:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -22331,26 +22313,26 @@ exports.svgAttrs = {
 
 /***/ }),
 
-/***/ 5069:
+/***/ 633:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.version = __webpack_require__(5136).version;
+exports.version = __webpack_require__(188).version;
 
 // inject promise polyfill
-__webpack_require__(9451);
+__webpack_require__(2245);
 
 // inject plot css
-__webpack_require__(3810);
+__webpack_require__(8324);
 
 // include registry module and expose register method
-var Registry = __webpack_require__(2345);
+var Registry = __webpack_require__(2817);
 var register = exports.register = Registry.register;
 
 // expose plot api methods
-var plotApi = __webpack_require__(8206);
+var plotApi = __webpack_require__(8733);
 var methodNames = Object.keys(plotApi);
 for (var i = 0; i < methodNames.length; i++) {
   var name = methodNames[i];
@@ -22364,15 +22346,15 @@ for (var i = 0; i < methodNames.length; i++) {
 }
 
 // scatter is the only trace included by default
-register(__webpack_require__(9781));
+register(__webpack_require__(3626));
 
 // register all registrable components modules
-register([__webpack_require__(517), __webpack_require__(3847),
+register([__webpack_require__(3983), __webpack_require__(956),
 // fx needs to come after legend
-__webpack_require__(7155), __webpack_require__(8503), __webpack_require__(1868), __webpack_require__(2379), __webpack_require__(580), __webpack_require__(6322), __webpack_require__(684), __webpack_require__(1972), __webpack_require__(2940), __webpack_require__(5875), __webpack_require__(6403), __webpack_require__(6303), __webpack_require__(1306), __webpack_require__(9032)]);
+__webpack_require__(9432), __webpack_require__(5267), __webpack_require__(1549), __webpack_require__(3860), __webpack_require__(9452), __webpack_require__(9005), __webpack_require__(9228), __webpack_require__(666), __webpack_require__(6922), __webpack_require__(4270), __webpack_require__(8730), __webpack_require__(5321), __webpack_require__(2022), __webpack_require__(6250)]);
 
 // locales en and en-US are required for default behavior
-register([__webpack_require__(9439), __webpack_require__(9735)]);
+register([__webpack_require__(7566), __webpack_require__(2576)]);
 
 // locales that are present in the window should be loaded
 if (window.PlotlyLocales && Array.isArray(window.PlotlyLocales)) {
@@ -22381,11 +22363,11 @@ if (window.PlotlyLocales && Array.isArray(window.PlotlyLocales)) {
 }
 
 // plot icons
-exports.Icons = __webpack_require__(4338);
+exports.Icons = __webpack_require__(143);
 
 // unofficial 'beta' plot methods, use at your own risk
-var Fx = __webpack_require__(3847);
-var Plots = __webpack_require__(2815);
+var Fx = __webpack_require__(956);
+var Plots = __webpack_require__(39);
 exports.Plots = {
   resize: Plots.resize,
   graphJson: Plots.graphJson,
@@ -22397,12 +22379,12 @@ exports.Fx = {
   loneHover: Fx.loneHover,
   loneUnhover: Fx.loneUnhover
 };
-exports.Snapshot = __webpack_require__(5541);
-exports.PlotSchema = __webpack_require__(3966);
+exports.Snapshot = __webpack_require__(6677);
+exports.PlotSchema = __webpack_require__(6078);
 
 /***/ }),
 
-/***/ 4338:
+/***/ 143:
 /***/ (function(module) {
 
 "use strict";
@@ -22579,7 +22561,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9661:
+/***/ 6201:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -22613,13 +22595,13 @@ exports.isBottomAnchor = function isBottomAnchor(opts) {
 
 /***/ }),
 
-/***/ 3229:
+/***/ 9478:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var modModule = __webpack_require__(1534);
+var modModule = __webpack_require__(2692);
 var mod = modModule.mod;
 var modHalf = modModule.modHalf;
 var PI = Math.PI;
@@ -22825,7 +22807,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6617:
+/***/ 221:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -22958,14 +22940,14 @@ function _rowLength(z, fn, len0) {
 
 /***/ }),
 
-/***/ 1617:
+/***/ 385:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var isNumeric = __webpack_require__(2538);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 
 // precompile for speed
 var JUNK = /^['"%,$#\s']+|[, ]|['"%,$#\s']+$/g;
@@ -22984,7 +22966,7 @@ module.exports = function cleanNumber(v) {
 
 /***/ }),
 
-/***/ 6259:
+/***/ 1750:
 /***/ (function(module) {
 
 "use strict";
@@ -23011,7 +22993,7 @@ module.exports = function clearGlCanvases(gd) {
 
 /***/ }),
 
-/***/ 5574:
+/***/ 3650:
 /***/ (function(module) {
 
 "use strict";
@@ -23031,22 +23013,22 @@ module.exports = function clearResponsive(gd) {
 
 /***/ }),
 
-/***/ 1224:
+/***/ 4131:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var tinycolor = __webpack_require__(4022);
-var baseTraceAttrs = __webpack_require__(5253);
-var colorscales = __webpack_require__(9325);
-var Color = __webpack_require__(9932);
-var DESELECTDIM = (__webpack_require__(3087).DESELECTDIM);
-var nestedProperty = __webpack_require__(143);
-var counterRegex = (__webpack_require__(7814).counter);
-var modHalf = (__webpack_require__(1534).modHalf);
-var isArrayOrTypedArray = (__webpack_require__(6617).isArrayOrTypedArray);
+var isNumeric = __webpack_require__(2538);
+var tinycolor = __webpack_require__(7218);
+var baseTraceAttrs = __webpack_require__(718);
+var colorscales = __webpack_require__(98);
+var Color = __webpack_require__(605);
+var DESELECTDIM = (__webpack_require__(9909).DESELECTDIM);
+var nestedProperty = __webpack_require__(1829);
+var counterRegex = (__webpack_require__(979).counter);
+var modHalf = (__webpack_require__(2692).modHalf);
+var isArrayOrTypedArray = (__webpack_require__(221).isArrayOrTypedArray);
 exports.valObjectMeta = {
   data_array: {
     // You can use *dflt=[] to force said array to exist though.
@@ -23414,25 +23396,25 @@ exports.validate = validate;
 
 /***/ }),
 
-/***/ 8104:
+/***/ 8949:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var timeFormat = (__webpack_require__(2505)/* .timeFormat */ .i$);
-var isNumeric = __webpack_require__(5440);
-var Loggers = __webpack_require__(8994);
-var mod = (__webpack_require__(1534).mod);
-var constants = __webpack_require__(6524);
+var timeFormat = (__webpack_require__(8836)/* .timeFormat */ .DC);
+var isNumeric = __webpack_require__(2538);
+var Loggers = __webpack_require__(5953);
+var mod = (__webpack_require__(2692).mod);
+var constants = __webpack_require__(8580);
 var BADNUM = constants.BADNUM;
 var ONEDAY = constants.ONEDAY;
 var ONEHOUR = constants.ONEHOUR;
 var ONEMIN = constants.ONEMIN;
 var ONESEC = constants.ONESEC;
 var EPOCHJD = constants.EPOCHJD;
-var Registry = __webpack_require__(2345);
-var utcFormat = (__webpack_require__(2505)/* .utcFormat */ .g0);
+var Registry = __webpack_require__(2817);
+var utcFormat = (__webpack_require__(8836)/* .utcFormat */ .aL);
 var DATETIME_REGEXP = /^\s*(-?\d\d\d\d|\d\d)(-(\d?\d)(-(\d?\d)([ Tt]([01]?\d|2[0-3])(:([0-5]\d)(:([0-5]\d(\.\d+)?))?(Z|z|[+\-]\d\d(:?\d\d)?)?)?)?)?)?\s*$/m;
 // special regex for chinese calendars to support yyyy-mmi-dd etc for intercalary months
 var DATETIME_REGEXP_CN = /^\s*(-?\d\d\d\d|\d\d)(-(\d?\di?)(-(\d?\d)([ Tt]([01]?\d|2[0-3])(:([0-5]\d)(:([0-5]\d(\.\d+)?))?(Z|z|[+\-]\d\d(:?\d\d)?)?)?)?)?)?\s*$/m;
@@ -23902,7 +23884,6 @@ exports.incrementMonth = function (ms, dMonth, calendar) {
       // then keep going in gregorian even though the result will be 'Invalid'
     }
   }
-
   var y = new Date(ms + THREEDAYS);
   return y.setUTCMonth(y.getUTCMonth() + dMonth) + timeMs - THREEDAYS;
 };
@@ -23960,16 +23941,16 @@ exports.findExactDates = function (data, calendar) {
 
 /***/ }),
 
-/***/ 9885:
+/***/ 924:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var loggers = __webpack_require__(8994);
-var matrix = __webpack_require__(6472);
-var mat4X4 = __webpack_require__(9949);
+var d3 = __webpack_require__(8197);
+var loggers = __webpack_require__(5953);
+var matrix = __webpack_require__(4207);
+var mat4X4 = __webpack_require__(1906);
 
 /**
  * Allow referencing a graph DOM element either directly
@@ -24100,14 +24081,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5761:
+/***/ 9735:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 /* global jQuery:false */
-var EventEmitter = (__webpack_require__(5520).EventEmitter);
+var EventEmitter = (__webpack_require__(5074).EventEmitter);
 var Events = {
   init: function (plotObj) {
     /*
@@ -24253,13 +24234,13 @@ module.exports = Events;
 
 /***/ }),
 
-/***/ 9055:
+/***/ 942:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isPlainObject = __webpack_require__(6612);
+var isPlainObject = __webpack_require__(1919);
 var isArray = Array.isArray;
 function primitivesLoopSplice(source, target) {
   var i, value;
@@ -24319,7 +24300,6 @@ function _extend(inputs, isDeep, keepAllKeys, noArrayCopies) {
       target.splice(0, target.length); // reset target and continue to next block
     }
   }
-
   for (var i = 1; i < length; i++) {
     input = inputs[i];
     for (key in input) {
@@ -24353,7 +24333,7 @@ function _extend(inputs, isDeep, keepAllKeys, noArrayCopies) {
 
 /***/ }),
 
-/***/ 2746:
+/***/ 2328:
 /***/ (function(module) {
 
 "use strict";
@@ -24396,7 +24376,7 @@ module.exports = function filterUnique(array) {
 
 /***/ }),
 
-/***/ 430:
+/***/ 2697:
 /***/ (function(module) {
 
 "use strict";
@@ -24431,22 +24411,22 @@ function isCalcData(cont) {
 
 /***/ }),
 
-/***/ 4668:
+/***/ 5517:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var countryRegex = __webpack_require__(4852);
-var turfArea = __webpack_require__(8088);
-var turfCentroid = __webpack_require__(2768);
-var turfBbox = __webpack_require__(6698);
-var identity = __webpack_require__(4939);
-var loggers = __webpack_require__(8994);
-var isPlainObject = __webpack_require__(6612);
-var nestedProperty = __webpack_require__(143);
-var polygon = __webpack_require__(7535);
+var d3 = __webpack_require__(8197);
+var countryRegex = __webpack_require__(2666);
+var turfArea = __webpack_require__(6717);
+var turfCentroid = __webpack_require__(4051);
+var turfBbox = __webpack_require__(332);
+var identity = __webpack_require__(396);
+var loggers = __webpack_require__(5953);
+var isPlainObject = __webpack_require__(1919);
+var nestedProperty = __webpack_require__(1829);
+var polygon = __webpack_require__(4097);
 
 // make list of all country iso3 ids from at runtime
 var countryIds = Object.keys(countryRegex);
@@ -24751,13 +24731,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2219:
+/***/ 7121:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 
 /**
  * Convert calcTrace to GeoJSON 'MultiLineString' coordinate arrays
@@ -24856,13 +24836,13 @@ exports.makeBlank = function () {
 
 /***/ }),
 
-/***/ 58:
+/***/ 4592:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var mod = (__webpack_require__(1534).mod);
+var mod = (__webpack_require__(2692).mod);
 
 /*
  * look for intersection of two line segments
@@ -25081,7 +25061,7 @@ exports.findPointOnPath = function findPointOnPath(path, val, coord, opts) {
 
 /***/ }),
 
-/***/ 4939:
+/***/ 396:
 /***/ (function(module) {
 
 "use strict";
@@ -25095,7 +25075,7 @@ module.exports = function identity(d) {
 
 /***/ }),
 
-/***/ 7494:
+/***/ 3877:
 /***/ (function(module) {
 
 "use strict";
@@ -25129,17 +25109,17 @@ module.exports = function incrementNumeric(x, delta) {
 
 /***/ }),
 
-/***/ 461:
+/***/ 1372:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var utcFormat = (__webpack_require__(2505)/* .utcFormat */ .g0);
-var d3Format = (__webpack_require__(6137)/* .format */ .WU);
-var isNumeric = __webpack_require__(5440);
-var numConstants = __webpack_require__(6524);
+var d3 = __webpack_require__(8197);
+var utcFormat = (__webpack_require__(8836)/* .utcFormat */ .aL);
+var d3Format = (__webpack_require__(3052)/* .format */ .GP);
+var isNumeric = __webpack_require__(2538);
+var numConstants = __webpack_require__(8580);
 var MAX_SAFE = numConstants.FP_SAFE;
 var MIN_SAFE = -MAX_SAFE;
 var BADNUM = numConstants.BADNUM;
@@ -25175,13 +25155,13 @@ lib.numberFormat = function (formatStr) {
   }
   return fn;
 };
-lib.nestedProperty = __webpack_require__(143);
-lib.keyedContainer = __webpack_require__(8807);
-lib.relativeAttr = __webpack_require__(4945);
-lib.isPlainObject = __webpack_require__(6612);
-lib.toLogRange = __webpack_require__(9925);
-lib.relinkPrivateKeys = __webpack_require__(6387);
-var arrayModule = __webpack_require__(6617);
+lib.nestedProperty = __webpack_require__(1829);
+lib.keyedContainer = __webpack_require__(434);
+lib.relativeAttr = __webpack_require__(6850);
+lib.isPlainObject = __webpack_require__(1919);
+lib.toLogRange = __webpack_require__(8724);
+lib.relinkPrivateKeys = __webpack_require__(1927);
+var arrayModule = __webpack_require__(221);
 lib.isTypedArray = arrayModule.isTypedArray;
 lib.isArrayOrTypedArray = arrayModule.isArrayOrTypedArray;
 lib.isArray1D = arrayModule.isArray1D;
@@ -25189,10 +25169,10 @@ lib.ensureArray = arrayModule.ensureArray;
 lib.concat = arrayModule.concat;
 lib.maxRowLength = arrayModule.maxRowLength;
 lib.minRowLength = arrayModule.minRowLength;
-var modModule = __webpack_require__(1534);
+var modModule = __webpack_require__(2692);
 lib.mod = modModule.mod;
 lib.modHalf = modModule.modHalf;
-var coerceModule = __webpack_require__(1224);
+var coerceModule = __webpack_require__(4131);
 lib.valObjectMeta = coerceModule.valObjectMeta;
 lib.coerce = coerceModule.coerce;
 lib.coerce2 = coerceModule.coerce2;
@@ -25201,7 +25181,7 @@ lib.coercePattern = coerceModule.coercePattern;
 lib.coerceHoverinfo = coerceModule.coerceHoverinfo;
 lib.coerceSelectionMarkerOpacity = coerceModule.coerceSelectionMarkerOpacity;
 lib.validate = coerceModule.validate;
-var datesModule = __webpack_require__(8104);
+var datesModule = __webpack_require__(8949);
 lib.dateTime2ms = datesModule.dateTime2ms;
 lib.isDateTime = datesModule.isDateTime;
 lib.ms2DateTime = datesModule.ms2DateTime;
@@ -25215,7 +25195,7 @@ lib.dfltRange = datesModule.dfltRange;
 lib.findExactDates = datesModule.findExactDates;
 lib.MIN_MS = datesModule.MIN_MS;
 lib.MAX_MS = datesModule.MAX_MS;
-var searchModule = __webpack_require__(1889);
+var searchModule = __webpack_require__(9870);
 lib.findBin = searchModule.findBin;
 lib.sorterAsc = searchModule.sorterAsc;
 lib.sorterDes = searchModule.sorterDes;
@@ -25223,8 +25203,8 @@ lib.distinctVals = searchModule.distinctVals;
 lib.roundUp = searchModule.roundUp;
 lib.sort = searchModule.sort;
 lib.findIndexOfMin = searchModule.findIndexOfMin;
-lib.sortObjectKeys = __webpack_require__(4919);
-var statsModule = __webpack_require__(8990);
+lib.sortObjectKeys = __webpack_require__(8301);
+var statsModule = __webpack_require__(6959);
 lib.aggNums = statsModule.aggNums;
 lib.len = statsModule.len;
 lib.mean = statsModule.mean;
@@ -25233,7 +25213,7 @@ lib.midRange = statsModule.midRange;
 lib.variance = statsModule.variance;
 lib.stdev = statsModule.stdev;
 lib.interp = statsModule.interp;
-var matrixModule = __webpack_require__(6472);
+var matrixModule = __webpack_require__(4207);
 lib.init2dArray = matrixModule.init2dArray;
 lib.transposeRagged = matrixModule.transposeRagged;
 lib.dot = matrixModule.dot;
@@ -25245,7 +25225,7 @@ lib.apply2DTransform = matrixModule.apply2DTransform;
 lib.apply2DTransform2 = matrixModule.apply2DTransform2;
 lib.convertCssMatrix = matrixModule.convertCssMatrix;
 lib.inverseTransformMatrix = matrixModule.inverseTransformMatrix;
-var anglesModule = __webpack_require__(3229);
+var anglesModule = __webpack_require__(9478);
 lib.deg2rad = anglesModule.deg2rad;
 lib.rad2deg = anglesModule.rad2deg;
 lib.angleDelta = anglesModule.angleDelta;
@@ -25256,36 +25236,36 @@ lib.isPtInsideSector = anglesModule.isPtInsideSector;
 lib.pathArc = anglesModule.pathArc;
 lib.pathSector = anglesModule.pathSector;
 lib.pathAnnulus = anglesModule.pathAnnulus;
-var anchorUtils = __webpack_require__(9661);
+var anchorUtils = __webpack_require__(6201);
 lib.isLeftAnchor = anchorUtils.isLeftAnchor;
 lib.isCenterAnchor = anchorUtils.isCenterAnchor;
 lib.isRightAnchor = anchorUtils.isRightAnchor;
 lib.isTopAnchor = anchorUtils.isTopAnchor;
 lib.isMiddleAnchor = anchorUtils.isMiddleAnchor;
 lib.isBottomAnchor = anchorUtils.isBottomAnchor;
-var geom2dModule = __webpack_require__(58);
+var geom2dModule = __webpack_require__(4592);
 lib.segmentsIntersect = geom2dModule.segmentsIntersect;
 lib.segmentDistance = geom2dModule.segmentDistance;
 lib.getTextLocation = geom2dModule.getTextLocation;
 lib.clearLocationCache = geom2dModule.clearLocationCache;
 lib.getVisibleSegment = geom2dModule.getVisibleSegment;
 lib.findPointOnPath = geom2dModule.findPointOnPath;
-var extendModule = __webpack_require__(9055);
+var extendModule = __webpack_require__(942);
 lib.extendFlat = extendModule.extendFlat;
 lib.extendDeep = extendModule.extendDeep;
 lib.extendDeepAll = extendModule.extendDeepAll;
 lib.extendDeepNoArrays = extendModule.extendDeepNoArrays;
-var loggersModule = __webpack_require__(8994);
+var loggersModule = __webpack_require__(5953);
 lib.log = loggersModule.log;
 lib.warn = loggersModule.warn;
 lib.error = loggersModule.error;
-var regexModule = __webpack_require__(7814);
+var regexModule = __webpack_require__(979);
 lib.counterRegex = regexModule.counter;
-var throttleModule = __webpack_require__(5079);
+var throttleModule = __webpack_require__(3658);
 lib.throttle = throttleModule.throttle;
 lib.throttleDone = throttleModule.done;
 lib.clearThrottle = throttleModule.clear;
-var domModule = __webpack_require__(9885);
+var domModule = __webpack_require__(924);
 lib.getGraphDiv = domModule.getGraphDiv;
 lib.isPlotDiv = domModule.isPlotDiv;
 lib.removeElement = domModule.removeElement;
@@ -25296,16 +25276,16 @@ lib.getFullTransformMatrix = domModule.getFullTransformMatrix;
 lib.getElementTransformMatrix = domModule.getElementTransformMatrix;
 lib.getElementAndAncestors = domModule.getElementAndAncestors;
 lib.equalDomRects = domModule.equalDomRects;
-lib.clearResponsive = __webpack_require__(5574);
-lib.preserveDrawingBuffer = __webpack_require__(4625);
-lib.makeTraceGroups = __webpack_require__(3257);
-lib._ = __webpack_require__(5717);
-lib.notifier = __webpack_require__(7687);
-lib.filterUnique = __webpack_require__(2746);
-lib.filterVisible = __webpack_require__(430);
-lib.pushUnique = __webpack_require__(5370);
-lib.increment = __webpack_require__(7494);
-lib.cleanNumber = __webpack_require__(1617);
+lib.clearResponsive = __webpack_require__(3650);
+lib.preserveDrawingBuffer = __webpack_require__(872);
+lib.makeTraceGroups = __webpack_require__(6033);
+lib._ = __webpack_require__(7305);
+lib.notifier = __webpack_require__(2876);
+lib.filterUnique = __webpack_require__(2328);
+lib.filterVisible = __webpack_require__(2697);
+lib.pushUnique = __webpack_require__(4614);
+lib.increment = __webpack_require__(3877);
+lib.cleanNumber = __webpack_require__(385);
 lib.ensureNumber = function ensureNumber(v) {
   if (!isNumeric(v)) return BADNUM;
   v = Number(v);
@@ -25324,8 +25304,8 @@ lib.isIndex = function (v, len) {
   if (len !== undefined && v >= len) return false;
   return isNumeric(v) && v >= 0 && v % 1 === 0;
 };
-lib.noop = __webpack_require__(5786);
-lib.identity = __webpack_require__(4939);
+lib.noop = __webpack_require__(1754);
+lib.identity = __webpack_require__(396);
 
 /**
  * create an array of length 'cnt' filled with 'v' at all indices
@@ -26387,7 +26367,7 @@ lib.getPositionFromD3Event = function () {
 
 /***/ }),
 
-/***/ 6612:
+/***/ 1919:
 /***/ (function(module) {
 
 "use strict";
@@ -26407,13 +26387,13 @@ module.exports = function isPlainObject(obj) {
 
 /***/ }),
 
-/***/ 8807:
+/***/ 434:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var nestedProperty = __webpack_require__(143);
+var nestedProperty = __webpack_require__(1829);
 var SIMPLE_PROPERTY_REGEX = /^\w*$/;
 
 // bitmask for deciding what's updated. Sometimes the name needs to be updated,
@@ -26572,13 +26552,13 @@ module.exports = function keyedContainer(baseObj, path, keyName, valueName) {
 
 /***/ }),
 
-/***/ 5717:
+/***/ 7305:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
+var Registry = __webpack_require__(2817);
 
 /**
  * localize: translate a string for the current locale
@@ -26622,15 +26602,15 @@ module.exports = function localize(gd, s) {
 
 /***/ }),
 
-/***/ 8994:
+/***/ 5953:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 /* eslint-disable no-console */
-var dfltConfig = (__webpack_require__(7341).dfltConfig);
-var notifier = __webpack_require__(7687);
+var dfltConfig = (__webpack_require__(8787).dfltConfig);
+var notifier = __webpack_require__(2876);
 var loggers = module.exports = {};
 var DISABLE_LOG = true;
 /**
@@ -26702,13 +26682,13 @@ loggers.error = function () {
 
 /***/ }),
 
-/***/ 3257:
+/***/ 6033:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
+var d3 = __webpack_require__(8197);
 
 /**
  * General helper to manage trace groups based on calcdata
@@ -26740,13 +26720,13 @@ module.exports = function makeTraceGroups(traceLayer, cdModule, cls) {
 
 /***/ }),
 
-/***/ 6472:
+/***/ 4207:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var mat4X4 = __webpack_require__(9949);
+var mat4X4 = __webpack_require__(1906);
 exports.init2dArray = function (rowLength, colLength) {
   var array = new Array(rowLength);
   for (var i = 0; i < rowLength; i++) array[i] = new Array(colLength);
@@ -26861,7 +26841,7 @@ exports.inverseTransformMatrix = function (m) {
 
 /***/ }),
 
-/***/ 1534:
+/***/ 2692:
 /***/ (function(module) {
 
 "use strict";
@@ -26890,14 +26870,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 143:
+/***/ 1829:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var isArrayOrTypedArray = (__webpack_require__(6617).isArrayOrTypedArray);
+var isNumeric = __webpack_require__(2538);
+var isArrayOrTypedArray = (__webpack_require__(221).isArrayOrTypedArray);
 
 /**
  * convert a string s (such as 'xaxis.range[0]')
@@ -27104,7 +27084,7 @@ function badContainer(container, propStr, propParts) {
 
 /***/ }),
 
-/***/ 5786:
+/***/ 1754:
 /***/ (function(module) {
 
 "use strict";
@@ -27116,14 +27096,14 @@ module.exports = function noop() {};
 
 /***/ }),
 
-/***/ 7687:
+/***/ 2876:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
 var NOTEDATA = [];
 
 /**
@@ -27169,13 +27149,13 @@ module.exports = function (text, displayLength) {
 
 /***/ }),
 
-/***/ 6351:
+/***/ 551:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var setCursor = __webpack_require__(9279);
+var setCursor = __webpack_require__(8230);
 var STASHATTR = 'data-savedcursor';
 var NO_CURSOR = '!!';
 
@@ -27209,14 +27189,14 @@ module.exports = function overrideCursor(el3, csr) {
 
 /***/ }),
 
-/***/ 7535:
+/***/ 4097:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var dot = (__webpack_require__(6472).dot);
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var dot = (__webpack_require__(4207).dot);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 var polygon = module.exports = {};
 
 /**
@@ -27442,14 +27422,14 @@ polygon.filter = function filter(pts, tolerance) {
 
 /***/ }),
 
-/***/ 4625:
+/***/ 872:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var isMobileOrTablet = __webpack_require__(3149);
+var isNumeric = __webpack_require__(2538);
+var isMobileOrTablet = __webpack_require__(8904);
 module.exports = function preserveDrawingBuffer(opts) {
   var ua;
   if (opts && opts.hasOwnProperty('userAgent')) {
@@ -27500,7 +27480,7 @@ function getUserAgent() {
 
 /***/ }),
 
-/***/ 5370:
+/***/ 4614:
 /***/ (function(module) {
 
 "use strict";
@@ -27534,14 +27514,14 @@ module.exports = function pushUnique(array, item) {
 
 /***/ }),
 
-/***/ 3219:
+/***/ 7555:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var dfltConfig = (__webpack_require__(7341).dfltConfig);
+var Lib = __webpack_require__(1372);
+var dfltConfig = (__webpack_require__(8787).dfltConfig);
 
 /**
  * Copy arg array *without* removing `undefined` values from objects.
@@ -27735,7 +27715,7 @@ module.exports = queue;
 
 /***/ }),
 
-/***/ 7814:
+/***/ 979:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -27762,7 +27742,7 @@ exports.counter = function (head, tail, openEnded, matchBeginning) {
 
 /***/ }),
 
-/***/ 4945:
+/***/ 6850:
 /***/ (function(module) {
 
 "use strict";
@@ -27805,14 +27785,14 @@ module.exports = function (baseAttr, relativeAttr) {
 
 /***/ }),
 
-/***/ 6387:
+/***/ 1927:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isArrayOrTypedArray = (__webpack_require__(6617).isArrayOrTypedArray);
-var isPlainObject = __webpack_require__(6612);
+var isArrayOrTypedArray = (__webpack_require__(221).isArrayOrTypedArray);
+var isPlainObject = __webpack_require__(1919);
 
 /**
  * Relink private _keys and keys with a function value from one container
@@ -27854,16 +27834,16 @@ module.exports = function relinkPrivateKeys(toContainer, fromContainer) {
 
 /***/ }),
 
-/***/ 1889:
+/***/ 9870:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var loggers = __webpack_require__(8994);
-var identity = __webpack_require__(4939);
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var isNumeric = __webpack_require__(2538);
+var loggers = __webpack_require__(5953);
+var identity = __webpack_require__(396);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 
 // don't trust floating point equality - fraction of bin size to call
 // "on the line" and ensure that they go the right way specified by
@@ -28052,7 +28032,7 @@ exports.findIndexOfMin = function (arr, fn) {
 
 /***/ }),
 
-/***/ 9279:
+/***/ 8230:
 /***/ (function(module) {
 
 "use strict";
@@ -28070,7 +28050,7 @@ module.exports = function setCursor(el3, csr) {
 
 /***/ }),
 
-/***/ 4919:
+/***/ 8301:
 /***/ (function(module) {
 
 "use strict";
@@ -28082,14 +28062,14 @@ module.exports = function sortObjectKeys(obj) {
 
 /***/ }),
 
-/***/ 8990:
+/***/ 6959:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var isArrayOrTypedArray = (__webpack_require__(6617).isArrayOrTypedArray);
+var isNumeric = __webpack_require__(2538);
+var isArrayOrTypedArray = (__webpack_require__(221).isArrayOrTypedArray);
 
 /**
  * aggNums() returns the result of an aggregate function applied to an array of
@@ -28184,18 +28164,18 @@ exports.interp = function (arr, n) {
 
 /***/ }),
 
-/***/ 5965:
+/***/ 3888:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
 /* global MathJax:false */
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var xmlnsNamespaces = __webpack_require__(1234);
-var LINE_SPACING = (__webpack_require__(3098).LINE_SPACING);
+var xmlnsNamespaces = __webpack_require__(8467);
+var LINE_SPACING = (__webpack_require__(1407).LINE_SPACING);
 
 // text converter
 
@@ -29057,7 +29037,7 @@ exports.makeEditable = function (context, options) {
 
 /***/ }),
 
-/***/ 5079:
+/***/ 3658:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -29152,13 +29132,13 @@ function _clearTimeout(cache) {
 
 /***/ }),
 
-/***/ 9925:
+/***/ 8724:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
+var isNumeric = __webpack_require__(2538);
 
 /**
  * convert a linear value into a logged value, folding negative numbers into
@@ -29177,15 +29157,15 @@ module.exports = function toLogRange(val, range) {
 
 /***/ }),
 
-/***/ 8710:
+/***/ 6626:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 var topojsonUtils = module.exports = {};
-var locationmodeToLayer = (__webpack_require__(6469).locationmodeToLayer);
-var topojsonFeature = (__webpack_require__(5413)/* .feature */ .zL);
+var locationmodeToLayer = (__webpack_require__(416).locationmodeToLayer);
+var topojsonFeature = (__webpack_require__(3914)/* .feature */ .N4);
 topojsonUtils.getTopojsonName = function (geoLayout) {
   return [geoLayout.scope.replace(/ /g, '-'), '_', geoLayout.resolution.toString(), 'm'].join('');
 };
@@ -29200,7 +29180,7 @@ topojsonUtils.getTopojsonFeatures = function (trace, topojson) {
 
 /***/ }),
 
-/***/ 9735:
+/***/ 2576:
 /***/ (function(module) {
 
 "use strict";
@@ -29219,7 +29199,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9439:
+/***/ 7566:
 /***/ (function(module) {
 
 "use strict";
@@ -29253,13 +29233,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 776:
+/***/ 4578:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
+var Registry = __webpack_require__(2817);
 
 /*
  * containerArrayMatch: does this attribute string point into a
@@ -29311,13 +29291,13 @@ module.exports = function containerArrayMatch(astr) {
 
 /***/ }),
 
-/***/ 8541:
+/***/ 195:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 var extendFlat = Lib.extendFlat;
 var isPlainObject = Lib.isPlainObject;
 var traceOpts = {
@@ -29418,19 +29398,19 @@ function overrideOne(attr, editTypeOverride, overrideContainers, key) {
 
 /***/ }),
 
-/***/ 5680:
+/***/ 9096:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var m4FromQuat = __webpack_require__(2106);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var Plots = __webpack_require__(2815);
-var AxisIds = __webpack_require__(4898);
-var Color = __webpack_require__(9932);
+var isNumeric = __webpack_require__(2538);
+var m4FromQuat = __webpack_require__(1255);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var Plots = __webpack_require__(39);
+var AxisIds = __webpack_require__(4720);
+var Color = __webpack_require__(605);
 var cleanId = AxisIds.cleanId;
 var getFromTrace = AxisIds.getFromTrace;
 var traceIs = Registry.traceIs;
@@ -29547,7 +29527,6 @@ exports.cleanLayout = function (layout) {
             z: 1
           } // we just ignore calculating camera z up in this case
         };
-
         delete scene.cameraposition;
       }
 
@@ -30053,13 +30032,13 @@ exports.clearAxisTypes = function (gd, traces, layoutUpdate) {
 
 /***/ }),
 
-/***/ 8206:
+/***/ 8733:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var main = __webpack_require__(5305);
+var main = __webpack_require__(2281);
 exports._doPlot = main._doPlot;
 exports.newPlot = main.newPlot;
 exports.restyle = main.restyle;
@@ -30081,27 +30060,27 @@ exports.addFrames = main.addFrames;
 exports.deleteFrames = main.deleteFrames;
 exports.animate = main.animate;
 exports.setPlotConfig = main.setPlotConfig;
-exports.toImage = __webpack_require__(6212);
-exports.validate = __webpack_require__(8400);
-exports.downloadImage = __webpack_require__(2884);
-var templateApi = __webpack_require__(5611);
+exports.toImage = __webpack_require__(258);
+exports.validate = __webpack_require__(2303);
+exports.downloadImage = __webpack_require__(6249);
+var templateApi = __webpack_require__(7116);
 exports.makeTemplate = templateApi.makeTemplate;
 exports.validateTemplate = templateApi.validateTemplate;
 
 /***/ }),
 
-/***/ 2385:
+/***/ 4851:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isPlainObject = __webpack_require__(6612);
-var noop = __webpack_require__(5786);
-var Loggers = __webpack_require__(8994);
-var sorterAsc = (__webpack_require__(1889).sorterAsc);
-var Registry = __webpack_require__(2345);
-exports.containerArrayMatch = __webpack_require__(776);
+var isPlainObject = __webpack_require__(1919);
+var noop = __webpack_require__(1754);
+var Loggers = __webpack_require__(5953);
+var sorterAsc = (__webpack_require__(9870).sorterAsc);
+var Registry = __webpack_require__(2817);
+exports.containerArrayMatch = __webpack_require__(4578);
 var isAddVal = exports.isAddVal = function isAddVal(val) {
   return val === 'add' || isPlainObject(val);
 };
@@ -30271,34 +30250,34 @@ exports.applyContainerArrayChanges = function applyContainerArrayChanges(gd, np,
 
 /***/ }),
 
-/***/ 5305:
+/***/ 2281:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
-var hasHover = __webpack_require__(2144);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
+var hasHover = __webpack_require__(8917);
+var Lib = __webpack_require__(1372);
 var nestedProperty = Lib.nestedProperty;
-var Events = __webpack_require__(5761);
-var Queue = __webpack_require__(3219);
-var Registry = __webpack_require__(2345);
-var PlotSchema = __webpack_require__(3966);
-var Plots = __webpack_require__(2815);
-var Axes = __webpack_require__(2814);
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var initInteractions = (__webpack_require__(7337).initInteractions);
-var xmlnsNamespaces = __webpack_require__(1234);
-var clearOutline = (__webpack_require__(1868).clearOutline);
-var dfltConfig = (__webpack_require__(7341).dfltConfig);
-var manageArrays = __webpack_require__(2385);
-var helpers = __webpack_require__(5680);
-var subroutines = __webpack_require__(5669);
-var editTypes = __webpack_require__(8541);
-var AX_NAME_PATTERN = (__webpack_require__(8074).AX_NAME_PATTERN);
+var Events = __webpack_require__(9735);
+var Queue = __webpack_require__(7555);
+var Registry = __webpack_require__(2817);
+var PlotSchema = __webpack_require__(6078);
+var Plots = __webpack_require__(39);
+var Axes = __webpack_require__(1529);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var initInteractions = (__webpack_require__(5087).initInteractions);
+var xmlnsNamespaces = __webpack_require__(8467);
+var clearOutline = (__webpack_require__(1549).clearOutline);
+var dfltConfig = (__webpack_require__(8787).dfltConfig);
+var manageArrays = __webpack_require__(4851);
+var helpers = __webpack_require__(9096);
+var subroutines = __webpack_require__(1742);
+var editTypes = __webpack_require__(195);
+var AX_NAME_PATTERN = (__webpack_require__(1071).AX_NAME_PATTERN);
 var numericNameWarningCount = 0;
 var numericNameWarningCountLimit = 5;
 
@@ -31428,7 +31407,6 @@ function restyle(gd, astr, val, _traces) {
       // otherwise we must go through addAxRangeSequence,
       // which in general must redraws 'all' axes
     }
-
     if (flags.style) seq.push(subroutines.doTraceStyle);
     if (flags.colorbars) seq.push(subroutines.doColorBars);
     seq.push(emitAfterPlot);
@@ -33724,7 +33702,7 @@ exports._storeDirectGUIEdit = _storeDirectGUIEdit;
 
 /***/ }),
 
-/***/ 7341:
+/***/ 8787:
 /***/ (function(module) {
 
 "use strict";
@@ -33975,20 +33953,20 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3966:
+/***/ 6078:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var baseAttributes = __webpack_require__(5253);
-var baseLayoutAttributes = __webpack_require__(6108);
-var frameAttributes = __webpack_require__(2042);
-var animationAttributes = __webpack_require__(3778);
-var configAttributes = (__webpack_require__(7341).configAttributes);
-var editTypes = __webpack_require__(8541);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var baseAttributes = __webpack_require__(718);
+var baseLayoutAttributes = __webpack_require__(5613);
+var frameAttributes = __webpack_require__(1124);
+var animationAttributes = __webpack_require__(7685);
+var configAttributes = (__webpack_require__(8787).configAttributes);
+var editTypes = __webpack_require__(195);
 var extendDeepAll = Lib.extendDeepAll;
 var isPlainObject = Lib.isPlainObject;
 var isArrayOrTypedArray = Lib.isArrayOrTypedArray;
@@ -34571,14 +34549,14 @@ function insertAttrs(baseAttrs, newAttrs, astr) {
 
 /***/ }),
 
-/***/ 9356:
+/***/ 8251:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var plotAttributes = __webpack_require__(5253);
+var Lib = __webpack_require__(1372);
+var plotAttributes = __webpack_require__(718);
 var TEMPLATEITEMNAME = 'templateitemname';
 var templateAttrs = {
   name: {
@@ -34867,28 +34845,28 @@ exports.arrayEditor = function (parentIn, containerStr, itemOut) {
 
 /***/ }),
 
-/***/ 5669:
+/***/ 1742:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Plots = __webpack_require__(2815);
-var Lib = __webpack_require__(461);
-var svgTextUtils = __webpack_require__(5965);
-var clearGlCanvases = __webpack_require__(6259);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Titles = __webpack_require__(9394);
-var ModeBar = __webpack_require__(9032);
-var Axes = __webpack_require__(2814);
-var alignmentConstants = __webpack_require__(3098);
-var axisConstraints = __webpack_require__(1405);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Plots = __webpack_require__(39);
+var Lib = __webpack_require__(1372);
+var svgTextUtils = __webpack_require__(3888);
+var clearGlCanvases = __webpack_require__(1750);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Titles = __webpack_require__(8349);
+var ModeBar = __webpack_require__(6250);
+var Axes = __webpack_require__(1529);
+var alignmentConstants = __webpack_require__(1407);
+var axisConstraints = __webpack_require__(1278);
 var enforceAxisConstraints = axisConstraints.enforce;
 var cleanAxisConstraints = axisConstraints.clean;
-var doAutoRange = (__webpack_require__(4363).doAutoRange);
+var doAutoRange = (__webpack_require__(7706).doAutoRange);
 var SVG_TEXT_ANCHOR_START = 'start';
 var SVG_TEXT_ANCHOR_MIDDLE = 'middle';
 var SVG_TEXT_ANCHOR_END = 'end';
@@ -35568,19 +35546,19 @@ exports.drawMarginPushers = function (gd) {
 
 /***/ }),
 
-/***/ 5611:
+/***/ 7116:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 var isPlainObject = Lib.isPlainObject;
-var PlotSchema = __webpack_require__(3966);
-var Plots = __webpack_require__(2815);
-var plotAttributes = __webpack_require__(5253);
-var Template = __webpack_require__(9356);
-var dfltConfig = (__webpack_require__(7341).dfltConfig);
+var PlotSchema = __webpack_require__(6078);
+var Plots = __webpack_require__(39);
+var plotAttributes = __webpack_require__(718);
+var Template = __webpack_require__(8251);
+var dfltConfig = (__webpack_require__(8787).dfltConfig);
 
 /**
  * Plotly.makeTemplate: create a template off an existing figure to reuse
@@ -35992,20 +35970,20 @@ function format(opts) {
 
 /***/ }),
 
-/***/ 6212:
+/***/ 258:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var plotApi = __webpack_require__(5305);
-var plots = __webpack_require__(2815);
-var Lib = __webpack_require__(461);
-var helpers = __webpack_require__(9005);
-var toSVG = __webpack_require__(1914);
-var svgToImg = __webpack_require__(8100);
-var version = (__webpack_require__(5136).version);
+var isNumeric = __webpack_require__(2538);
+var plotApi = __webpack_require__(2281);
+var plots = __webpack_require__(39);
+var Lib = __webpack_require__(1372);
+var helpers = __webpack_require__(1984);
+var toSVG = __webpack_require__(8804);
+var svgToImg = __webpack_require__(1787);
+var version = (__webpack_require__(188).version);
 var attrs = {
   format: {
     valType: 'enumerated',
@@ -36177,16 +36155,16 @@ module.exports = toImage;
 
 /***/ }),
 
-/***/ 8400:
+/***/ 2303:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Plots = __webpack_require__(2815);
-var PlotSchema = __webpack_require__(3966);
-var dfltConfig = (__webpack_require__(7341).dfltConfig);
+var Lib = __webpack_require__(1372);
+var Plots = __webpack_require__(39);
+var PlotSchema = __webpack_require__(6078);
+var dfltConfig = (__webpack_require__(8787).dfltConfig);
 var isPlainObject = Lib.isPlainObject;
 var isArray = Array.isArray;
 var isArrayOrTypedArray = Lib.isArrayOrTypedArray;
@@ -36528,7 +36506,7 @@ function convertPathToAttributeString(path) {
 
 /***/ }),
 
-/***/ 3778:
+/***/ 7685:
 /***/ (function(module) {
 
 "use strict";
@@ -36584,14 +36562,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1904:
+/***/ 9627:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
 
 /** Convenience wrapper for making array container logic DRY and consistent
  *
@@ -36667,14 +36645,14 @@ module.exports = function handleArrayContainerDefaults(parentObjIn, parentObjOut
 
 /***/ }),
 
-/***/ 5253:
+/***/ 718:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var fxAttrs = __webpack_require__(9751);
+var fontAttrs = __webpack_require__(7716);
+var fxAttrs = __webpack_require__(9927);
 module.exports = {
   type: {
     valType: 'enumerated',
@@ -36684,7 +36662,6 @@ module.exports = {
     editType: 'calc+clearAxisTypes',
     _noTemplating: true // we handle this at a higher level
   },
-
   visible: {
     valType: 'enumerated',
     values: [true, false, 'legendonly'],
@@ -36803,17 +36780,17 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4778:
+/***/ 2103:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
 var dateTime2ms = Lib.dateTime2ms;
 var incrementMonth = Lib.incrementMonth;
-var constants = __webpack_require__(6524);
+var constants = __webpack_require__(8580);
 var ONEAVGMONTH = constants.ONEAVGMONTH;
 module.exports = function alignPeriod(trace, ax, axLetter, vals) {
   if (ax.type !== 'date') return {
@@ -36894,7 +36871,7 @@ module.exports = function alignPeriod(trace, ax, axLetter, vals) {
 
 /***/ }),
 
-/***/ 4003:
+/***/ 2565:
 /***/ (function(module) {
 
 "use strict";
@@ -36915,19 +36892,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4363:
+/***/ 7706:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var FP_SAFE = (__webpack_require__(6524).FP_SAFE);
-var Registry = __webpack_require__(2345);
-var Drawing = __webpack_require__(8000);
-var axIds = __webpack_require__(4898);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var FP_SAFE = (__webpack_require__(8580).FP_SAFE);
+var Registry = __webpack_require__(2817);
+var Drawing = __webpack_require__(2764);
+var axIds = __webpack_require__(4720);
 var getFromId = axIds.getFromId;
 var isLinked = axIds.isLinked;
 module.exports = {
@@ -37506,25 +37483,25 @@ function greaterOrEqual(v0, v1) {
 
 /***/ }),
 
-/***/ 2814:
+/***/ 1529:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var isNumeric = __webpack_require__(5440);
-var Plots = __webpack_require__(2815);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var isNumeric = __webpack_require__(2538);
+var Plots = __webpack_require__(39);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var svgTextUtils = __webpack_require__(5965);
-var Titles = __webpack_require__(9394);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var axAttrs = __webpack_require__(4481);
-var cleanTicks = __webpack_require__(8570);
-var constants = __webpack_require__(6524);
+var svgTextUtils = __webpack_require__(3888);
+var Titles = __webpack_require__(8349);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var axAttrs = __webpack_require__(3712);
+var cleanTicks = __webpack_require__(9666);
+var constants = __webpack_require__(8580);
 var ONEMAXYEAR = constants.ONEMAXYEAR;
 var ONEAVGYEAR = constants.ONEAVGYEAR;
 var ONEMINYEAR = constants.ONEMINYEAR;
@@ -37569,16 +37546,16 @@ var MARGIN_MAPPING = {
   top: ['t', 'yt'],
   bottom: ['b', 'yb']
 };
-var alignmentConstants = __webpack_require__(3098);
+var alignmentConstants = __webpack_require__(1407);
 var MID_SHIFT = alignmentConstants.MID_SHIFT;
 var CAP_SHIFT = alignmentConstants.CAP_SHIFT;
 var LINE_SPACING = alignmentConstants.LINE_SPACING;
 var OPPOSITE_SIDE = alignmentConstants.OPPOSITE_SIDE;
 var TEXTPAD = 3;
 var axes = module.exports = {};
-axes.setConvert = __webpack_require__(5700);
-var autoType = __webpack_require__(3362);
-var axisIds = __webpack_require__(4898);
+axes.setConvert = __webpack_require__(654);
+var autoType = __webpack_require__(6843);
+var axisIds = __webpack_require__(4720);
 var idSort = axisIds.idSort;
 var isLinked = axisIds.isLinked;
 
@@ -37590,7 +37567,7 @@ axes.list = axisIds.list;
 axes.listIds = axisIds.listIds;
 axes.getFromId = axisIds.getFromId;
 axes.getFromTrace = axisIds.getFromTrace;
-var autorange = __webpack_require__(4363);
+var autorange = __webpack_require__(7706);
 axes.getAutoRange = autorange.getAutoRange;
 axes.findExtremes = autorange.findExtremes;
 var epsilon = 0.0001;
@@ -38327,7 +38304,6 @@ function positionPeriodTicks(tickVals, ax, definedDelta) {
       }
       if (inBetween && actualDelta > ONEWEEK) periodLength = actualDelta; // center monthly & longer periods
     }
-
     if (periodLength > 0 ||
     // not instant
     i === 0 // taking care first tick added
@@ -38569,7 +38545,6 @@ axes.calcTicks = function calcTicks(ax, opts) {
       // hover
       tickVals[i].simpleLabel // noSuffixPrefix
       );
-
       p = tickVals[i].periodX;
       if (p !== undefined) {
         t.periodX = p;
@@ -38735,7 +38710,6 @@ axes.autoTicks = function (ax, roughDTick, isMinor) {
         } else {
           ax.tick0 = Lib.dateTick0(ax.calendar, 1); // Sunday
         }
-
         if (isPeriod) ax._dowTick0 = ax.tick0;
       }
     } else if (roughX2 > ONEHOUR) {
@@ -40695,7 +40669,6 @@ axes.drawLabels = function (gd, ax, opts) {
         }
       } // TODO: hide mathjax?
     });
-
     for (var subplot in fullLayout._plots) {
       var plotinfo = fullLayout._plots[subplot];
       if (ax._id !== plotinfo.xaxis._id && ax._id !== plotinfo.yaxis._id) continue;
@@ -41306,15 +41279,15 @@ function setShiftVal(ax, axShifts) {
 
 /***/ }),
 
-/***/ 3362:
+/***/ 6843:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 var isArrayOrTypedArray = Lib.isArrayOrTypedArray;
 var isDateTime = Lib.isDateTime;
 var cleanNumber = Lib.cleanNumber;
@@ -41414,27 +41387,27 @@ function multiCategory(a) {
 
 /***/ }),
 
-/***/ 8886:
+/***/ 2482:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
-var handleArrayContainerDefaults = __webpack_require__(1904);
-var layoutAttributes = __webpack_require__(4481);
-var handleTickValueDefaults = __webpack_require__(3142);
-var handleTickMarkDefaults = __webpack_require__(5285);
-var handleTickLabelDefaults = __webpack_require__(3243);
-var handlePrefixSuffixDefaults = __webpack_require__(540);
-var handleCategoryOrderDefaults = __webpack_require__(9320);
-var handleLineGridDefaults = __webpack_require__(6934);
-var setConvert = __webpack_require__(5700);
-var DAY_OF_WEEK = (__webpack_require__(8074).WEEKDAY_PATTERN);
-var HOUR = (__webpack_require__(8074).HOUR_PATTERN);
+var isNumeric = __webpack_require__(2538);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
+var handleArrayContainerDefaults = __webpack_require__(9627);
+var layoutAttributes = __webpack_require__(3712);
+var handleTickValueDefaults = __webpack_require__(4340);
+var handleTickMarkDefaults = __webpack_require__(9510);
+var handleTickLabelDefaults = __webpack_require__(5537);
+var handlePrefixSuffixDefaults = __webpack_require__(5647);
+var handleCategoryOrderDefaults = __webpack_require__(7384);
+var handleLineGridDefaults = __webpack_require__(3814);
+var setConvert = __webpack_require__(654);
+var DAY_OF_WEEK = (__webpack_require__(1071).WEEKDAY_PATTERN);
+var HOUR = (__webpack_require__(1071).HOUR_PATTERN);
 
 /**
  * options: object containing:
@@ -41697,13 +41670,13 @@ function indexOfDay(v) {
 
 /***/ }),
 
-/***/ 1204:
+/***/ 299:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var docs = __webpack_require__(9706);
+var docs = __webpack_require__(6463);
 var FORMAT_LINK = docs.FORMAT_LINK;
 var DATE_FORMAT_LINK = docs.DATE_FORMAT_LINK;
 function axisHoverFormat(x, noDates) {
@@ -41728,14 +41701,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4898:
+/***/ 4720:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var constants = __webpack_require__(8074);
+var Registry = __webpack_require__(2817);
+var constants = __webpack_require__(1071);
 
 // convert between axis names (xaxis, xaxis2, etc, elements of gd.layout)
 // and axis id's (x, x2, etc). Would probably have ditched 'xaxis'
@@ -41860,7 +41833,7 @@ exports.isLinked = function (fullLayout, axId) {
 
 /***/ }),
 
-/***/ 9320:
+/***/ 7384:
 /***/ (function(module) {
 
 "use strict";
@@ -41946,15 +41919,15 @@ module.exports = function handleCategoryOrderDefaults(containerIn, containerOut,
 
 /***/ }),
 
-/***/ 8570:
+/***/ 9666:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var constants = __webpack_require__(6524);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var constants = __webpack_require__(8580);
 var ONEDAY = constants.ONEDAY;
 var ONEWEEK = constants.ONEWEEK;
 
@@ -42026,13 +41999,13 @@ exports.tick0 = function (tick0, axType, calendar, dtick) {
 
 /***/ }),
 
-/***/ 8074:
+/***/ 1071:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var counterRegex = (__webpack_require__(7814).counter);
+var counterRegex = (__webpack_require__(979).counter);
 module.exports = {
   idRegex: {
     x: counterRegex('x', '( domain)?'),
@@ -42074,20 +42047,20 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1405:
+/***/ 1278:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var autorange = __webpack_require__(4363);
-var id2name = (__webpack_require__(4898).id2name);
-var layoutAttributes = __webpack_require__(4481);
-var scaleZoom = __webpack_require__(5398);
-var setConvert = __webpack_require__(5700);
-var ALMOST_EQUAL = (__webpack_require__(6524).ALMOST_EQUAL);
-var FROM_BL = (__webpack_require__(3098).FROM_BL);
+var Lib = __webpack_require__(1372);
+var autorange = __webpack_require__(7706);
+var id2name = (__webpack_require__(4720).id2name);
+var layoutAttributes = __webpack_require__(3712);
+var scaleZoom = __webpack_require__(2616);
+var setConvert = __webpack_require__(654);
+var ALMOST_EQUAL = (__webpack_require__(8580).ALMOST_EQUAL);
+var FROM_BL = (__webpack_require__(1407).FROM_BL);
 exports.handleDefaults = function (layoutIn, layoutOut, opts) {
   var axIds = opts.axIds;
   var axHasImage = opts.axHasImage;
@@ -42646,39 +42619,39 @@ function updateDomain(ax, factor) {
 
 /***/ }),
 
-/***/ 8018:
+/***/ 6517:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
 var numberFormat = Lib.numberFormat;
-var tinycolor = __webpack_require__(4022);
-var supportsPassive = __webpack_require__(949);
-var Registry = __webpack_require__(2345);
+var tinycolor = __webpack_require__(7218);
+var supportsPassive = __webpack_require__(4608);
+var Registry = __webpack_require__(2817);
 var strTranslate = Lib.strTranslate;
-var svgTextUtils = __webpack_require__(5965);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Fx = __webpack_require__(3847);
-var Axes = __webpack_require__(2814);
-var setCursor = __webpack_require__(9279);
-var dragElement = __webpack_require__(9103);
-var helpers = __webpack_require__(304);
+var svgTextUtils = __webpack_require__(3888);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Fx = __webpack_require__(956);
+var Axes = __webpack_require__(1529);
+var setCursor = __webpack_require__(8230);
+var dragElement = __webpack_require__(9468);
+var helpers = __webpack_require__(9689);
 var selectingOrDrawing = helpers.selectingOrDrawing;
 var freeMode = helpers.freeMode;
-var FROM_TL = (__webpack_require__(3098).FROM_TL);
-var clearGlCanvases = __webpack_require__(6259);
-var redrawReglTraces = (__webpack_require__(5669).redrawReglTraces);
-var Plots = __webpack_require__(2815);
-var getFromId = (__webpack_require__(4898).getFromId);
-var prepSelect = (__webpack_require__(1868).prepSelect);
-var clearOutline = (__webpack_require__(1868).clearOutline);
-var selectOnClick = (__webpack_require__(1868).selectOnClick);
-var scaleZoom = __webpack_require__(5398);
-var constants = __webpack_require__(8074);
+var FROM_TL = (__webpack_require__(1407).FROM_TL);
+var clearGlCanvases = __webpack_require__(1750);
+var redrawReglTraces = (__webpack_require__(1742).redrawReglTraces);
+var Plots = __webpack_require__(39);
+var getFromId = (__webpack_require__(4720).getFromId);
+var prepSelect = (__webpack_require__(1549).prepSelect);
+var clearOutline = (__webpack_require__(1549).clearOutline);
+var selectOnClick = (__webpack_require__(1549).selectOnClick);
+var scaleZoom = __webpack_require__(2616);
+var constants = __webpack_require__(1071);
 var MINDRAG = constants.MINDRAG;
 var MINZOOM = constants.MINZOOM;
 
@@ -43793,18 +43766,18 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7337:
+/***/ 5087:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Fx = __webpack_require__(3847);
-var dragElement = __webpack_require__(9103);
-var setCursor = __webpack_require__(9279);
-var makeDragBox = (__webpack_require__(8018).makeDragBox);
-var DRAGGERSIZE = (__webpack_require__(8074).DRAGGERSIZE);
+var d3 = __webpack_require__(8197);
+var Fx = __webpack_require__(956);
+var dragElement = __webpack_require__(9468);
+var setCursor = __webpack_require__(8230);
+var makeDragBox = (__webpack_require__(6517).makeDragBox);
+var DRAGGERSIZE = (__webpack_require__(1071).DRAGGERSIZE);
 exports.initInteractions = function initInteractions(gd) {
   var fullLayout = gd._fullLayout;
   if (gd._context.staticPlot) {
@@ -43930,15 +43903,15 @@ exports.updateFx = function (gd) {
 
 /***/ }),
 
-/***/ 3274:
+/***/ 4997:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var axisIds = __webpack_require__(4898);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var axisIds = __webpack_require__(4720);
 
 /**
  * Factory function for checking component arrays for subplot references.
@@ -44000,21 +43973,21 @@ module.exports = function makeIncludeComponents(containerArrayName) {
 
 /***/ }),
 
-/***/ 6642:
+/***/ 5694:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var Plots = __webpack_require__(2815);
-var Drawing = __webpack_require__(8000);
-var getModuleCalcData = (__webpack_require__(306)/* .getModuleCalcData */ .a0);
-var axisIds = __webpack_require__(4898);
-var constants = __webpack_require__(8074);
-var xmlnsNamespaces = __webpack_require__(1234);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var Plots = __webpack_require__(39);
+var Drawing = __webpack_require__(2764);
+var getModuleCalcData = (__webpack_require__(9054)/* .getModuleCalcData */ .eV);
+var axisIds = __webpack_require__(4720);
+var constants = __webpack_require__(1071);
+var xmlnsNamespaces = __webpack_require__(8467);
 var ensureSingle = Lib.ensureSingle;
 function ensureSingleAndAddDatum(parent, nodeType, className) {
   return Lib.ensureSingle(parent, nodeType, className, function (s) {
@@ -44026,10 +43999,10 @@ exports.attr = ['xaxis', 'yaxis'];
 exports.idRoot = ['x', 'y'];
 exports.idRegex = constants.idRegex;
 exports.attrRegex = constants.attrRegex;
-exports.attributes = __webpack_require__(4003);
-exports.layoutAttributes = __webpack_require__(4481);
-exports.supplyLayoutDefaults = __webpack_require__(2591);
-exports.transitionAxes = __webpack_require__(9504);
+exports.attributes = __webpack_require__(2565);
+exports.layoutAttributes = __webpack_require__(3712);
+exports.supplyLayoutDefaults = __webpack_require__(2679);
+exports.transitionAxes = __webpack_require__(7127);
 exports.finalizeSubplots = function (layoutIn, layoutOut) {
   var subplots = layoutOut._subplots;
   var xList = subplots.xaxis;
@@ -44524,24 +44497,24 @@ exports.toSVG = function (gd) {
   }
   canvases.each(canvasToImage);
 };
-exports.updateFx = __webpack_require__(7337).updateFx;
+exports.updateFx = __webpack_require__(5087).updateFx;
 
 /***/ }),
 
-/***/ 4481:
+/***/ 3712:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var colorAttrs = __webpack_require__(9765);
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var templatedArray = (__webpack_require__(9356).templatedArray);
-var descriptionWithDates = (__webpack_require__(1204).descriptionWithDates);
-var ONEDAY = (__webpack_require__(6524).ONEDAY);
-var constants = __webpack_require__(8074);
+var fontAttrs = __webpack_require__(7716);
+var colorAttrs = __webpack_require__(6784);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var templatedArray = (__webpack_require__(8251).templatedArray);
+var descriptionWithDates = (__webpack_require__(299).descriptionWithDates);
+var ONEDAY = (__webpack_require__(8580).ONEDAY);
+var constants = __webpack_require__(1071);
 var HOUR = constants.HOUR_PATTERN;
 var DAY_OF_WEEK = constants.WEEKDAY_PATTERN;
 var minorTickmode = {
@@ -45159,28 +45132,28 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2591:
+/***/ 2679:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Color = __webpack_require__(9932);
-var isUnifiedHover = (__webpack_require__(4688).isUnifiedHover);
-var handleHoverModeDefaults = __webpack_require__(6759);
-var Template = __webpack_require__(9356);
-var basePlotLayoutAttributes = __webpack_require__(6108);
-var layoutAttributes = __webpack_require__(4481);
-var handleTypeDefaults = __webpack_require__(236);
-var handleAxisDefaults = __webpack_require__(8886);
-var constraints = __webpack_require__(1405);
-var handlePositionDefaults = __webpack_require__(6903);
-var axisIds = __webpack_require__(4898);
+var Lib = __webpack_require__(1372);
+var Color = __webpack_require__(605);
+var isUnifiedHover = (__webpack_require__(7433).isUnifiedHover);
+var handleHoverModeDefaults = __webpack_require__(7030);
+var Template = __webpack_require__(8251);
+var basePlotLayoutAttributes = __webpack_require__(5613);
+var layoutAttributes = __webpack_require__(3712);
+var handleTypeDefaults = __webpack_require__(7901);
+var handleAxisDefaults = __webpack_require__(2482);
+var constraints = __webpack_require__(1278);
+var handlePositionDefaults = __webpack_require__(9480);
+var axisIds = __webpack_require__(4720);
 var id2name = axisIds.id2name;
 var name2id = axisIds.name2id;
-var AX_ID_PATTERN = (__webpack_require__(8074).AX_ID_PATTERN);
-var Registry = __webpack_require__(2345);
+var AX_ID_PATTERN = (__webpack_require__(1071).AX_ID_PATTERN);
+var Registry = __webpack_require__(2817);
 var traceIs = Registry.traceIs;
 var getComponentMethod = Registry.getComponentMethod;
 function appendList(cont, k, item) {
@@ -45493,15 +45466,15 @@ module.exports = function supplyLayoutDefaults(layoutIn, layoutOut, fullData) {
 
 /***/ }),
 
-/***/ 6934:
+/***/ 3814:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var colorMix = (__webpack_require__(4022).mix);
-var colorAttrs = __webpack_require__(9765);
-var Lib = __webpack_require__(461);
+var colorMix = (__webpack_require__(7218).mix);
+var colorAttrs = __webpack_require__(6784);
+var Lib = __webpack_require__(1372);
 
 /**
  * @param {object} opts :
@@ -45561,14 +45534,14 @@ module.exports = function handleLineGridDefaults(containerIn, containerOut, coer
 
 /***/ }),
 
-/***/ 6903:
+/***/ 9480:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
 module.exports = function handlePositionDefaults(containerIn, containerOut, coerce, options) {
   var counterAxes = options.counterAxes || [];
   var overlayableAxes = options.overlayableAxes || [];
@@ -45654,13 +45627,13 @@ module.exports = function handlePositionDefaults(containerIn, containerOut, coer
 
 /***/ }),
 
-/***/ 540:
+/***/ 5647:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var getShowAttrDflt = __webpack_require__(1777);
+var getShowAttrDflt = __webpack_require__(8878);
 module.exports = function handlePrefixSuffixDefaults(containerIn, containerOut, coerce, axType, options) {
   if (!options) options = {};
   var tickSuffixDflt = options.tickSuffixDflt;
@@ -45673,13 +45646,13 @@ module.exports = function handlePrefixSuffixDefaults(containerIn, containerOut, 
 
 /***/ }),
 
-/***/ 5398:
+/***/ 2616:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var FROM_BL = (__webpack_require__(3098).FROM_BL);
+var FROM_BL = (__webpack_require__(1407).FROM_BL);
 module.exports = function scaleZoom(ax, factor, centerFraction) {
   if (centerFraction === undefined) {
     centerFraction = FROM_BL[ax.constraintoward || 'center'];
@@ -45692,23 +45665,23 @@ module.exports = function scaleZoom(ax, factor, centerFraction) {
 
 /***/ }),
 
-/***/ 5700:
+/***/ 654:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var utcFormat = (__webpack_require__(2505)/* .utcFormat */ .g0);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var utcFormat = (__webpack_require__(8836)/* .utcFormat */ .aL);
+var Lib = __webpack_require__(1372);
 var numberFormat = Lib.numberFormat;
-var isNumeric = __webpack_require__(5440);
+var isNumeric = __webpack_require__(2538);
 var cleanNumber = Lib.cleanNumber;
 var ms2DateTime = Lib.ms2DateTime;
 var dateTime2ms = Lib.dateTime2ms;
 var ensureNumber = Lib.ensureNumber;
 var isArrayOrTypedArray = Lib.isArrayOrTypedArray;
-var numConstants = __webpack_require__(6524);
+var numConstants = __webpack_require__(8580);
 var FP_SAFE = numConstants.FP_SAFE;
 var BADNUM = numConstants.BADNUM;
 var LOG_CLIP = numConstants.LOG_CLIP;
@@ -45717,8 +45690,8 @@ var ONEDAY = numConstants.ONEDAY;
 var ONEHOUR = numConstants.ONEHOUR;
 var ONEMIN = numConstants.ONEMIN;
 var ONESEC = numConstants.ONESEC;
-var axisIds = __webpack_require__(4898);
-var constants = __webpack_require__(8074);
+var axisIds = __webpack_require__(4720);
+var constants = __webpack_require__(1071);
 var HOUR_PATTERN = constants.HOUR_PATTERN;
 var WEEKDAY_PATTERN = constants.WEEKDAY_PATTERN;
 function fromLog(v) {
@@ -46542,7 +46515,7 @@ module.exports = function setConvert(ax, fullLayout) {
 
 /***/ }),
 
-/***/ 1777:
+/***/ 8878:
 /***/ (function(module) {
 
 "use strict";
@@ -46577,17 +46550,17 @@ module.exports = function getShowAttrDflt(containerIn) {
 
 /***/ }),
 
-/***/ 3243:
+/***/ 5537:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var contrast = (__webpack_require__(9932).contrast);
-var layoutAttributes = __webpack_require__(4481);
-var getShowAttrDflt = __webpack_require__(1777);
-var handleArrayContainerDefaults = __webpack_require__(1904);
+var Lib = __webpack_require__(1372);
+var contrast = (__webpack_require__(605).contrast);
+var layoutAttributes = __webpack_require__(3712);
+var getShowAttrDflt = __webpack_require__(8878);
+var handleArrayContainerDefaults = __webpack_require__(9627);
 module.exports = function handleTickLabelDefaults(containerIn, containerOut, coerce, axType, options) {
   if (!options) options = {};
   var labelalias = coerce('labelalias');
@@ -46643,14 +46616,14 @@ function tickformatstopDefaults(valueIn, valueOut) {
 
 /***/ }),
 
-/***/ 5285:
+/***/ 9510:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var layoutAttributes = __webpack_require__(4481);
+var Lib = __webpack_require__(1372);
+var layoutAttributes = __webpack_require__(3712);
 
 /**
  * options: inherits outerTicks from axes.handleAxisDefaults
@@ -46674,14 +46647,14 @@ module.exports = function handleTickMarkDefaults(containerIn, containerOut, coer
 
 /***/ }),
 
-/***/ 3142:
+/***/ 4340:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var cleanTicks = __webpack_require__(8570);
-var isArrayOrTypedArray = (__webpack_require__(461).isArrayOrTypedArray);
+var cleanTicks = __webpack_require__(9666);
+var isArrayOrTypedArray = (__webpack_require__(1372).isArrayOrTypedArray);
 module.exports = function handleTickValueDefaults(containerIn, containerOut, coerce, axType, opts) {
   if (!opts) opts = {};
   var isMinor = opts.isMinor;
@@ -46713,17 +46686,17 @@ module.exports = function handleTickValueDefaults(containerIn, containerOut, coe
 
 /***/ }),
 
-/***/ 9504:
+/***/ 7127:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var Drawing = __webpack_require__(8000);
-var Axes = __webpack_require__(2814);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var Drawing = __webpack_require__(2764);
+var Axes = __webpack_require__(1529);
 
 /**
  * transitionAxes
@@ -46889,14 +46862,14 @@ module.exports = function transitionAxes(gd, edits, transitionOpts, makeOnComple
 
 /***/ }),
 
-/***/ 236:
+/***/ 7901:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var traceIs = (__webpack_require__(2345).traceIs);
-var autoType = __webpack_require__(3362);
+var traceIs = (__webpack_require__(2817).traceIs);
+var autoType = __webpack_require__(6843);
 
 /*
  *  data: the plot data to use in choosing auto type
@@ -47005,14 +46978,14 @@ function isBoxWithoutPositionCoords(trace, axLetter) {
 
 /***/ }),
 
-/***/ 2439:
+/***/ 126:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 
 /*
  * Create or update an observer. This function is designed to be
@@ -47377,13 +47350,13 @@ function crawl(attrs, callback, path, depth) {
 
 /***/ }),
 
-/***/ 6432:
+/***/ 2399:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var extendFlat = (__webpack_require__(9055).extendFlat);
+var extendFlat = (__webpack_require__(942).extendFlat);
 
 /**
  * Make a xy domain attribute group
@@ -47406,7 +47379,7 @@ var extendFlat = (__webpack_require__(9055).extendFlat);
  *
  * @return {object} attributes object containing {x,y} as specified
  */
-exports.Y = function (opts, extra) {
+exports.u = function (opts, extra) {
   opts = opts || {};
   extra = extra || {};
   var base = {
@@ -47449,7 +47422,7 @@ exports.Y = function (opts, extra) {
   }
   return out;
 };
-exports.c = function (containerOut, layout, coerce, dfltDomains) {
+exports.N = function (containerOut, layout, coerce, dfltDomains) {
   var dfltX = dfltDomains && dfltDomains.x || [0, 1];
   var dfltY = dfltDomains && dfltDomains.y || [0, 1];
   var grid = layout.grid;
@@ -47473,7 +47446,7 @@ exports.c = function (containerOut, layout, coerce, dfltDomains) {
 
 /***/ }),
 
-/***/ 6948:
+/***/ 7716:
 /***/ (function(module) {
 
 "use strict";
@@ -47518,7 +47491,6 @@ module.exports = function (opts) {
     // blank strings so compress_attributes can remove
     // TODO - that's uber hacky... better solution?
   };
-
   if (opts.autoSize) attrs.size.dflt = 'auto';
   if (opts.autoColor) attrs.color.dflt = 'auto';
   if (opts.arrayOk) {
@@ -47531,7 +47503,7 @@ module.exports = function (opts) {
 
 /***/ }),
 
-/***/ 2042:
+/***/ 1124:
 /***/ (function(module) {
 
 "use strict";
@@ -47561,7 +47533,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6469:
+/***/ 416:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -47808,36 +47780,36 @@ exports.layerNameToAdjective = {
 
 /***/ }),
 
-/***/ 8217:
+/***/ 5040:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 /* global PlotlyGeoAssets:false */
-var d3 = __webpack_require__(6237);
-var geo = __webpack_require__(3199);
+var d3 = __webpack_require__(8197);
+var geo = __webpack_require__(808);
 var geoPath = geo.geoPath;
 var geoDistance = geo.geoDistance;
-var geoProjection = __webpack_require__(8804);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var geoProjection = __webpack_require__(7041);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Fx = __webpack_require__(3847);
-var Plots = __webpack_require__(2815);
-var Axes = __webpack_require__(2814);
-var getAutoRange = (__webpack_require__(4363).getAutoRange);
-var dragElement = __webpack_require__(9103);
-var prepSelect = (__webpack_require__(1868).prepSelect);
-var clearOutline = (__webpack_require__(1868).clearOutline);
-var selectOnClick = (__webpack_require__(1868).selectOnClick);
-var createGeoZoom = __webpack_require__(5168);
-var constants = __webpack_require__(6469);
-var geoUtils = __webpack_require__(4668);
-var topojsonUtils = __webpack_require__(8710);
-var topojsonFeature = (__webpack_require__(5413)/* .feature */ .zL);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Fx = __webpack_require__(956);
+var Plots = __webpack_require__(39);
+var Axes = __webpack_require__(1529);
+var getAutoRange = (__webpack_require__(7706).getAutoRange);
+var dragElement = __webpack_require__(9468);
+var prepSelect = (__webpack_require__(1549).prepSelect);
+var clearOutline = (__webpack_require__(1549).clearOutline);
+var selectOnClick = (__webpack_require__(1549).selectOnClick);
+var createGeoZoom = __webpack_require__(5202);
+var constants = __webpack_require__(416);
+var geoUtils = __webpack_require__(5517);
+var topojsonUtils = __webpack_require__(6626);
+var topojsonFeature = (__webpack_require__(3914)/* .feature */ .N4);
 function Geo(opts) {
   this.id = opts.id;
   this.graphDiv = opts.graphDiv;
@@ -48455,15 +48427,15 @@ function makeRangeBox(lon, lat) {
 
 /***/ }),
 
-/***/ 4123:
+/***/ 4041:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var getSubplotCalcData = (__webpack_require__(306)/* .getSubplotCalcData */ .AU);
-var counterRegex = (__webpack_require__(461).counterRegex);
-var createGeo = __webpack_require__(8217);
+var getSubplotCalcData = (__webpack_require__(9054)/* .getSubplotCalcData */ .fX);
+var counterRegex = (__webpack_require__(1372).counterRegex);
+var createGeo = __webpack_require__(5040);
 var GEO = 'geo';
 var counter = counterRegex(GEO);
 var attributes = {};
@@ -48521,8 +48493,8 @@ module.exports = {
   idRegex: counter,
   attrRegex: counter,
   attributes: attributes,
-  layoutAttributes: __webpack_require__(1969),
-  supplyLayoutDefaults: __webpack_require__(3303),
+  layoutAttributes: __webpack_require__(2831),
+  supplyLayoutDefaults: __webpack_require__(6856),
   plot: plotGeo,
   updateFx: updateFx,
   clean: clean
@@ -48530,18 +48502,18 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1969:
+/***/ 2831:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var colorAttrs = __webpack_require__(9765);
-var domainAttrs = (__webpack_require__(6432)/* .attributes */ .Y);
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var constants = __webpack_require__(6469);
-var overrideAll = (__webpack_require__(8541).overrideAll);
-var sortObjectKeys = __webpack_require__(4919);
+var colorAttrs = __webpack_require__(6784);
+var domainAttrs = (__webpack_require__(2399)/* .attributes */ .u);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var constants = __webpack_require__(416);
+var overrideAll = (__webpack_require__(195).overrideAll);
+var sortObjectKeys = __webpack_require__(8301);
 var geoAxesAttrs = {
   range: {
     valType: 'info_array',
@@ -48746,17 +48718,17 @@ attrs.uirevision = {
 
 /***/ }),
 
-/***/ 3303:
+/***/ 6856:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var handleSubplotDefaults = __webpack_require__(5744);
-var getSubplotData = (__webpack_require__(306)/* .getSubplotData */ .NG);
-var constants = __webpack_require__(6469);
-var layoutAttributes = __webpack_require__(1969);
+var Lib = __webpack_require__(1372);
+var handleSubplotDefaults = __webpack_require__(2907);
+var getSubplotData = (__webpack_require__(9054)/* .getSubplotData */ .KO);
+var constants = __webpack_require__(416);
+var layoutAttributes = __webpack_require__(2831);
 var axesNames = constants.axesNames;
 module.exports = function supplyLayoutDefaults(layoutIn, layoutOut, fullData) {
   handleSubplotDefaults(layoutIn, layoutOut, fullData, {
@@ -48944,15 +48916,15 @@ function handleGeoDefaults(geoLayoutIn, geoLayoutOut, coerce, opts) {
 
 /***/ }),
 
-/***/ 5168:
+/***/ 5202:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
-var Registry = __webpack_require__(2345);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
+var Registry = __webpack_require__(2817);
 var radians = Math.PI / 180;
 var degrees = 180 / Math.PI;
 var zoomstartStyle = {
@@ -49359,14 +49331,14 @@ function d3eventDispatch(target) {
 
 /***/ }),
 
-/***/ 306:
+/***/ 9054:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var SUBPLOT_PATTERN = (__webpack_require__(8074).SUBPLOT_PATTERN);
+var Registry = __webpack_require__(2817);
+var SUBPLOT_PATTERN = (__webpack_require__(1071).SUBPLOT_PATTERN);
 
 /**
  * Get calcdata trace(s) associated with a given subplot
@@ -49377,7 +49349,7 @@ var SUBPLOT_PATTERN = (__webpack_require__(8074).SUBPLOT_PATTERN);
  *
  * @return {array} array of calcdata traces
  */
-exports.AU = function (calcData, type, subplotId) {
+exports.fX = function (calcData, type, subplotId) {
   var basePlotModule = Registry.subplotsRegistry[type];
   if (!basePlotModule) return [];
   var attr = basePlotModule.attr;
@@ -49403,7 +49375,7 @@ exports.AU = function (calcData, type, subplotId) {
  *
  * @return {array[array]} [foundCalcdata, remainingCalcdata]
  */
-exports.a0 = function (calcdata, arg1) {
+exports.eV = function (calcdata, arg1) {
   var moduleCalcData = [];
   var remainingCalcData = [];
   var plotMethod;
@@ -49448,7 +49420,7 @@ exports.a0 = function (calcdata, arg1) {
  * @return {array} list of trace objects.
  *
  */
-exports.NG = function getSubplotData(data, type, subplotId) {
+exports.KO = function getSubplotData(data, type, subplotId) {
   if (!Registry.subplotsRegistry[type]) return [];
   var attr = Registry.subplotsRegistry[type].attr;
   var subplotData = [];
@@ -49473,7 +49445,7 @@ exports.NG = function getSubplotData(data, type, subplotId) {
 
 /***/ }),
 
-/***/ 9354:
+/***/ 969:
 /***/ (function(module) {
 
 "use strict";
@@ -49497,19 +49469,19 @@ module.exports = project;
 
 /***/ }),
 
-/***/ 6108:
+/***/ 5613:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var fontAttrs = __webpack_require__(6948);
-var animationAttrs = __webpack_require__(3778);
-var colorAttrs = __webpack_require__(9765);
-var drawNewShapeAttrs = __webpack_require__(8413);
-var drawNewSelectionAttrs = __webpack_require__(3342);
-var padAttrs = __webpack_require__(3134);
-var extendFlat = (__webpack_require__(9055).extendFlat);
+var fontAttrs = __webpack_require__(7716);
+var animationAttrs = __webpack_require__(7685);
+var colorAttrs = __webpack_require__(6784);
+var drawNewShapeAttrs = __webpack_require__(3318);
+var drawNewSelectionAttrs = __webpack_require__(348);
+var padAttrs = __webpack_require__(5804);
+var extendFlat = (__webpack_require__(942).extendFlat);
 var globalFont = fontAttrs({
   editType: 'calc'
 });
@@ -49745,7 +49717,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3134:
+/***/ 5804:
 /***/ (function(module) {
 
 "use strict";
@@ -49789,43 +49761,43 @@ module.exports = function (opts) {
 
 /***/ }),
 
-/***/ 2815:
+/***/ 39:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var timeFormatLocale = (__webpack_require__(2505)/* .timeFormatLocale */ .Dq);
-var formatLocale = (__webpack_require__(6137)/* .formatLocale */ .FF);
-var isNumeric = __webpack_require__(5440);
-var Registry = __webpack_require__(2345);
-var PlotSchema = __webpack_require__(3966);
-var Template = __webpack_require__(9356);
-var Lib = __webpack_require__(461);
-var Color = __webpack_require__(9932);
-var BADNUM = (__webpack_require__(6524).BADNUM);
-var axisIDs = __webpack_require__(4898);
-var clearOutline = (__webpack_require__(9842).clearOutline);
-var scatterAttrs = __webpack_require__(2491);
-var animationAttrs = __webpack_require__(3778);
-var frameAttrs = __webpack_require__(2042);
-var getModuleCalcData = (__webpack_require__(306)/* .getModuleCalcData */ .a0);
+var d3 = __webpack_require__(8197);
+var timeFormatLocale = (__webpack_require__(8836)/* .timeFormatLocale */ .de);
+var formatLocale = (__webpack_require__(3052)/* .formatLocale */ .OE);
+var isNumeric = __webpack_require__(2538);
+var Registry = __webpack_require__(2817);
+var PlotSchema = __webpack_require__(6078);
+var Template = __webpack_require__(8251);
+var Lib = __webpack_require__(1372);
+var Color = __webpack_require__(605);
+var BADNUM = (__webpack_require__(8580).BADNUM);
+var axisIDs = __webpack_require__(4720);
+var clearOutline = (__webpack_require__(8601).clearOutline);
+var scatterAttrs = __webpack_require__(7140);
+var animationAttrs = __webpack_require__(7685);
+var frameAttrs = __webpack_require__(1124);
+var getModuleCalcData = (__webpack_require__(9054)/* .getModuleCalcData */ .eV);
 var relinkPrivateKeys = Lib.relinkPrivateKeys;
 var _ = Lib._;
 var plots = module.exports = {};
 
 // Expose registry methods on Plots for backward-compatibility
 Lib.extendFlat(plots, Registry);
-plots.attributes = __webpack_require__(5253);
+plots.attributes = __webpack_require__(718);
 plots.attributes.type.values = plots.allTypes;
-plots.fontAttrs = __webpack_require__(6948);
-plots.layoutAttributes = __webpack_require__(6108);
+plots.fontAttrs = __webpack_require__(7716);
+plots.layoutAttributes = __webpack_require__(5613);
 
 // TODO make this a plot attribute?
 plots.fontWeight = 'normal';
 var transformsRegistry = plots.transformsRegistry;
-var commandModule = __webpack_require__(2439);
+var commandModule = __webpack_require__(126);
 plots.executeAPICommand = commandModule.executeAPICommand;
 plots.computeAPICommandBindings = commandModule.computeAPICommandBindings;
 plots.manageCommandObserver = commandModule.manageCommandObserver;
@@ -52875,15 +52847,15 @@ plots.cleanBasePlot = function (desiredType, newFullData, newFullLayout, oldFull
 
 /***/ }),
 
-/***/ 5744:
+/***/ 2907:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Template = __webpack_require__(9356);
-var handleDomainDefaults = (__webpack_require__(6432)/* .defaults */ .c);
+var Lib = __webpack_require__(1372);
+var Template = __webpack_require__(8251);
+var handleDomainDefaults = (__webpack_require__(2399)/* .defaults */ .N);
 
 /**
  * Find and supply defaults to all subplots of a given type
@@ -52941,13 +52913,13 @@ module.exports = function handleSubplotDefaults(layoutIn, layoutOut, fullData, o
 
 /***/ }),
 
-/***/ 202:
+/***/ 6689:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var docs = __webpack_require__(9706);
+var docs = __webpack_require__(6463);
 var FORMAT_LINK = docs.FORMAT_LINK;
 var DATE_FORMAT_LINK = docs.DATE_FORMAT_LINK;
 function templateFormatStringDescription(opts) {
@@ -52974,7 +52946,7 @@ function describeVariables(extra) {
   }
   return descPart;
 }
-exports.fF = function (opts, extra) {
+exports.rb = function (opts, extra) {
   opts = opts || {};
   extra = extra || {};
   var descPart = describeVariables(extra);
@@ -52988,7 +52960,7 @@ exports.fF = function (opts, extra) {
   }
   return hovertemplate;
 };
-exports.si = function (opts, extra) {
+exports.ay = function (opts, extra) {
   opts = opts || {};
   extra = extra || {};
   var descPart = describeVariables(extra);
@@ -53002,7 +52974,7 @@ exports.si = function (opts, extra) {
   }
   return texttemplate;
 };
-exports.R = function (opts, extra) {
+exports.LF = function (opts, extra) {
   opts = opts || {};
   extra = extra || {};
   var newStr = opts.newshape ? 'new ' : '';
@@ -53017,20 +52989,20 @@ exports.R = function (opts, extra) {
 
 /***/ }),
 
-/***/ 2345:
+/***/ 2817:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Loggers = __webpack_require__(8994);
-var noop = __webpack_require__(5786);
-var pushUnique = __webpack_require__(5370);
-var isPlainObject = __webpack_require__(6612);
-var addStyleRule = (__webpack_require__(9885).addStyleRule);
-var ExtendModule = __webpack_require__(9055);
-var basePlotAttributes = __webpack_require__(5253);
-var baseLayoutAttributes = __webpack_require__(6108);
+var Loggers = __webpack_require__(5953);
+var noop = __webpack_require__(1754);
+var pushUnique = __webpack_require__(4614);
+var isPlainObject = __webpack_require__(1919);
+var addStyleRule = (__webpack_require__(924).addStyleRule);
+var ExtendModule = __webpack_require__(942);
+var basePlotAttributes = __webpack_require__(718);
+var baseLayoutAttributes = __webpack_require__(5613);
 var extendFlat = ExtendModule.extendFlat;
 var extendDeepAll = ExtendModule.extendDeepAll;
 exports.modules = {};
@@ -53425,14 +53397,14 @@ function getTraceType(traceType) {
 
 /***/ }),
 
-/***/ 6721:
+/***/ 267:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 var extendFlat = Lib.extendFlat;
 var extendDeep = Lib.extendDeep;
 
@@ -53586,16 +53558,16 @@ module.exports = function clonePlot(graphObj, options) {
 
 /***/ }),
 
-/***/ 2884:
+/***/ 6249:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var toImage = __webpack_require__(6212);
-var fileSaver = __webpack_require__(4042);
-var helpers = __webpack_require__(9005);
+var Lib = __webpack_require__(1372);
+var toImage = __webpack_require__(258);
+var fileSaver = __webpack_require__(8294);
+var helpers = __webpack_require__(1984);
 
 /**
  * Plotly.downloadImage
@@ -53647,14 +53619,14 @@ module.exports = downloadImage;
 
 /***/ }),
 
-/***/ 4042:
+/***/ 8294:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var helpers = __webpack_require__(9005);
+var Lib = __webpack_require__(1372);
+var helpers = __webpack_require__(1984);
 
 /*
 * substantial portions of this code from FileSaver.js
@@ -53711,13 +53683,13 @@ module.exports = fileSaver;
 
 /***/ }),
 
-/***/ 9005:
+/***/ 1984:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Registry = __webpack_require__(2345);
+var Registry = __webpack_require__(2817);
 exports.getDelay = function (fullLayout) {
   if (!fullLayout._has) return 0;
   return fullLayout._has('gl3d') || fullLayout._has('gl2d') || fullLayout._has('mapbox') ? 500 : 0;
@@ -53775,35 +53747,35 @@ exports.MSG_IE_BAD_FORMAT = 'Sorry IE does not support downloading from canvas. 
 
 /***/ }),
 
-/***/ 5541:
+/***/ 6677:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(9005);
+var helpers = __webpack_require__(1984);
 var Snapshot = {
   getDelay: helpers.getDelay,
   getRedrawFunc: helpers.getRedrawFunc,
-  clone: __webpack_require__(6721),
-  toSVG: __webpack_require__(1914),
-  svgToImg: __webpack_require__(8100),
-  toImage: __webpack_require__(9660),
-  downloadImage: __webpack_require__(2884)
+  clone: __webpack_require__(267),
+  toSVG: __webpack_require__(8804),
+  svgToImg: __webpack_require__(1787),
+  toImage: __webpack_require__(8935),
+  downloadImage: __webpack_require__(6249)
 };
 module.exports = Snapshot;
 
 /***/ }),
 
-/***/ 8100:
+/***/ 1787:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var EventEmitter = (__webpack_require__(5520).EventEmitter);
-var helpers = __webpack_require__(9005);
+var Lib = __webpack_require__(1372);
+var EventEmitter = (__webpack_require__(5074).EventEmitter);
+var helpers = __webpack_require__(1984);
 function svgToImg(opts) {
   var ev = opts.emitter || new EventEmitter();
   var promise = new Promise(function (resolve, reject) {
@@ -53906,19 +53878,19 @@ module.exports = svgToImg;
 
 /***/ }),
 
-/***/ 9660:
+/***/ 8935:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var EventEmitter = (__webpack_require__(5520).EventEmitter);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
-var helpers = __webpack_require__(9005);
-var clonePlot = __webpack_require__(6721);
-var toSVG = __webpack_require__(1914);
-var svgToImg = __webpack_require__(8100);
+var EventEmitter = (__webpack_require__(5074).EventEmitter);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
+var helpers = __webpack_require__(1984);
+var clonePlot = __webpack_require__(267);
+var toSVG = __webpack_require__(8804);
+var svgToImg = __webpack_require__(1787);
 
 /**
  * @param {object} gd figure Object
@@ -53966,17 +53938,17 @@ module.exports = toImage;
 
 /***/ }),
 
-/***/ 1914:
+/***/ 8804:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var xmlnsNamespaces = __webpack_require__(1234);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var xmlnsNamespaces = __webpack_require__(8467);
 var DOUBLEQUOTE_REGEX = /"/g;
 var DUMMY_SUB = 'TOBESTRIPPED';
 var DUMMY_REGEX = new RegExp('("' + DUMMY_SUB + ')|(' + DUMMY_SUB + '")', 'g');
@@ -53996,7 +53968,6 @@ function htmlEntityDecode(s) {
     }
     return hiddenDiv.html(d).text(); // everything else, let the browser decode it to unicode
   });
-
   hiddenDiv.remove();
   return replaced;
 }
@@ -54140,19 +54111,19 @@ module.exports = function toSVG(gd, format, scale) {
 
 /***/ }),
 
-/***/ 8773:
+/***/ 9928:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var isArrayOrTypedArray = (__webpack_require__(461).isArrayOrTypedArray);
-var BADNUM = (__webpack_require__(6524).BADNUM);
-var Registry = __webpack_require__(2345);
-var Axes = __webpack_require__(2814);
-var getAxisGroup = (__webpack_require__(1405).getAxisGroup);
-var Sieve = __webpack_require__(4585);
+var isNumeric = __webpack_require__(2538);
+var isArrayOrTypedArray = (__webpack_require__(1372).isArrayOrTypedArray);
+var BADNUM = (__webpack_require__(8580).BADNUM);
+var Registry = __webpack_require__(2817);
+var Axes = __webpack_require__(1529);
+var getAxisGroup = (__webpack_require__(1278).getAxisGroup);
+var Sieve = __webpack_require__(1587);
 
 /*
  * Bar chart stacking/grouping positioning and autoscaling calculations
@@ -54817,14 +54788,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4585:
+/***/ 1587:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = Sieve;
-var distinctVals = (__webpack_require__(461).distinctVals);
+var distinctVals = (__webpack_require__(1372).distinctVals);
 
 /**
  * Helper class to sieve data from traces into bins
@@ -54923,18 +54894,18 @@ Sieve.prototype.getLabel = function getLabel(position, value) {
 
 /***/ }),
 
-/***/ 6245:
+/***/ 201:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var hovertemplateAttrs = (__webpack_require__(202)/* .hovertemplateAttrs */ .fF);
-var scatterGeoAttrs = __webpack_require__(522);
-var colorScaleAttrs = __webpack_require__(2797);
-var baseAttrs = __webpack_require__(5253);
-var defaultLine = (__webpack_require__(9765).defaultLine);
-var extendFlat = (__webpack_require__(9055).extendFlat);
+var hovertemplateAttrs = (__webpack_require__(6689)/* .hovertemplateAttrs */ .rb);
+var scatterGeoAttrs = __webpack_require__(8258);
+var colorScaleAttrs = __webpack_require__(2388);
+var baseAttrs = __webpack_require__(718);
+var defaultLine = (__webpack_require__(6784).defaultLine);
+var extendFlat = (__webpack_require__(942).extendFlat);
 var scatterGeoMarkerLineAttrs = scatterGeoAttrs.marker.line;
 module.exports = extendFlat({
   locations: {
@@ -54999,17 +54970,17 @@ module.exports = extendFlat({
 
 /***/ }),
 
-/***/ 6225:
+/***/ 461:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var BADNUM = (__webpack_require__(6524).BADNUM);
-var colorscaleCalc = __webpack_require__(1788);
-var arraysToCalcdata = __webpack_require__(937);
-var calcSelection = __webpack_require__(866);
+var isNumeric = __webpack_require__(2538);
+var BADNUM = (__webpack_require__(8580).BADNUM);
+var colorscaleCalc = __webpack_require__(5719);
+var arraysToCalcdata = __webpack_require__(7022);
+var calcSelection = __webpack_require__(8584);
 function isNonBlankString(v) {
   return v && typeof v === 'string';
 }
@@ -55049,15 +55020,15 @@ module.exports = function calc(gd, trace) {
 
 /***/ }),
 
-/***/ 2785:
+/***/ 7950:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var colorscaleDefaults = __webpack_require__(3308);
-var attributes = __webpack_require__(6245);
+var Lib = __webpack_require__(1372);
+var colorscaleDefaults = __webpack_require__(6035);
+var attributes = __webpack_require__(201);
 module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
   function coerce(attr, dflt) {
     return Lib.coerce(traceIn, traceOut, attributes, attr, dflt);
@@ -55093,7 +55064,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
 
 /***/ }),
 
-/***/ 8113:
+/***/ 8261:
 /***/ (function(module) {
 
 "use strict";
@@ -55114,15 +55085,15 @@ module.exports = function eventData(out, pt, trace, cd, pointNumber) {
 
 /***/ }),
 
-/***/ 6887:
+/***/ 9136:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Axes = __webpack_require__(2814);
-var attributes = __webpack_require__(6245);
-var fillText = (__webpack_require__(461).fillText);
+var Axes = __webpack_require__(1529);
+var attributes = __webpack_require__(201);
+var fillText = (__webpack_require__(1372).fillText);
 module.exports = function hoverPoints(pointData, xval, yval) {
   var cd = pointData.cd;
   var trace = cd[0].trace;
@@ -55185,45 +55156,45 @@ function makeHoverInfo(pointData, trace, pt) {
 
 /***/ }),
 
-/***/ 4786:
+/***/ 2042:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = {
-  attributes: __webpack_require__(6245),
-  supplyDefaults: __webpack_require__(2785),
-  colorbar: __webpack_require__(4330),
-  calc: __webpack_require__(6225),
-  calcGeoJSON: (__webpack_require__(4711).calcGeoJSON),
-  plot: (__webpack_require__(4711).plot),
-  style: (__webpack_require__(886).style),
-  styleOnSelect: (__webpack_require__(886).styleOnSelect),
-  hoverPoints: __webpack_require__(6887),
-  eventData: __webpack_require__(8113),
-  selectPoints: __webpack_require__(8426),
+  attributes: __webpack_require__(201),
+  supplyDefaults: __webpack_require__(7950),
+  colorbar: __webpack_require__(6546),
+  calc: __webpack_require__(461),
+  calcGeoJSON: (__webpack_require__(5891).calcGeoJSON),
+  plot: (__webpack_require__(5891).plot),
+  style: (__webpack_require__(4323).style),
+  styleOnSelect: (__webpack_require__(4323).styleOnSelect),
+  hoverPoints: __webpack_require__(9136),
+  eventData: __webpack_require__(8261),
+  selectPoints: __webpack_require__(6480),
   moduleType: 'trace',
   name: 'choropleth',
-  basePlotModule: __webpack_require__(4123),
+  basePlotModule: __webpack_require__(4041),
   categories: ['geo', 'noOpacity', 'showLegend'],
   meta: {}
 };
 
 /***/ }),
 
-/***/ 4711:
+/***/ 5891:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
-var geoUtils = __webpack_require__(4668);
-var getTopojsonFeatures = (__webpack_require__(8710).getTopojsonFeatures);
-var findExtremes = (__webpack_require__(4363).findExtremes);
-var style = (__webpack_require__(886).style);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
+var geoUtils = __webpack_require__(5517);
+var getTopojsonFeatures = (__webpack_require__(6626).getTopojsonFeatures);
+var findExtremes = (__webpack_require__(7706).findExtremes);
+var style = (__webpack_require__(4323).style);
 function plot(gd, geo, calcData) {
   var choroplethLayer = geo.layers.backplot.select('.choroplethlayer');
   Lib.makeTraceGroups(choroplethLayer, calcData, 'trace choropleth').each(function (calcTrace) {
@@ -55277,7 +55248,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8426:
+/***/ 6480:
 /***/ (function(module) {
 
 "use strict";
@@ -55317,16 +55288,16 @@ module.exports = function selectPoints(searchInfo, selectionTester) {
 
 /***/ }),
 
-/***/ 886:
+/***/ 4323:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Color = __webpack_require__(9932);
-var Drawing = __webpack_require__(8000);
-var Colorscale = __webpack_require__(6303);
+var d3 = __webpack_require__(8197);
+var Color = __webpack_require__(605);
+var Drawing = __webpack_require__(2764);
+var Colorscale = __webpack_require__(5321);
 function style(gd, calcTrace) {
   if (calcTrace) styleTrace(gd, calcTrace);
 }
@@ -55358,7 +55329,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4330:
+/***/ 6546:
 /***/ (function(module) {
 
 "use strict";
@@ -55371,13 +55342,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8721:
+/***/ 671:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 function format(vRounded) {
   return vRounded.indexOf('e') !== -1 ? vRounded.replace(/[.]?0+e/, 'e') : vRounded.indexOf('.') !== -1 ? vRounded.replace(/[.]?0+$/, '') : vRounded;
 }
@@ -55405,14 +55376,14 @@ exports.getRotationAngle = function (rotation) {
 
 /***/ }),
 
-/***/ 6889:
+/***/ 236:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Color = __webpack_require__(9932);
-var castOption = (__webpack_require__(8721).castOption);
+var Color = __webpack_require__(605);
+var castOption = (__webpack_require__(671).castOption);
 module.exports = function styleOne(s, pt, trace) {
   var line = trace.marker.line;
   var lineColor = castOption(line.color, pt.pts) || Color.defaultLine;
@@ -55422,13 +55393,13 @@ module.exports = function styleOne(s, pt, trace) {
 
 /***/ }),
 
-/***/ 937:
+/***/ 7022:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 
 // arrayOk attributes, merge them into calcdata array
 module.exports = function arraysToCalcdata(cd, trace) {
@@ -55467,22 +55438,22 @@ module.exports = function arraysToCalcdata(cd, trace) {
 
 /***/ }),
 
-/***/ 6830:
+/***/ 4985:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var axisHoverFormat = (__webpack_require__(1204).axisHoverFormat);
-var texttemplateAttrs = (__webpack_require__(202)/* .texttemplateAttrs */ .si);
-var hovertemplateAttrs = (__webpack_require__(202)/* .hovertemplateAttrs */ .fF);
-var colorScaleAttrs = __webpack_require__(2797);
-var fontAttrs = __webpack_require__(6948);
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var pattern = (__webpack_require__(1449)/* .pattern */ .u);
-var Drawing = __webpack_require__(8000);
-var constants = __webpack_require__(4061);
-var extendFlat = (__webpack_require__(9055).extendFlat);
+var axisHoverFormat = (__webpack_require__(299).axisHoverFormat);
+var texttemplateAttrs = (__webpack_require__(6689)/* .texttemplateAttrs */ .ay);
+var hovertemplateAttrs = (__webpack_require__(6689)/* .hovertemplateAttrs */ .rb);
+var colorScaleAttrs = __webpack_require__(2388);
+var fontAttrs = __webpack_require__(7716);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var pattern = (__webpack_require__(9463)/* .pattern */ .k);
+var Drawing = __webpack_require__(2764);
+var constants = __webpack_require__(5211);
+var extendFlat = (__webpack_require__(942).extendFlat);
 function axisPeriod(axis) {
   return {
     valType: 'any',
@@ -55694,7 +55665,6 @@ module.exports = {
       editType: 'plot',
       anim: false // TODO: possibly set to true in future
     },
-
     angleref: {
       valType: 'enumerated',
       values: ['previous', 'up'],
@@ -55844,21 +55814,21 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1486:
+/***/ 7565:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var alignPeriod = __webpack_require__(4778);
-var BADNUM = (__webpack_require__(6524).BADNUM);
-var subTypes = __webpack_require__(3940);
-var calcColorscale = __webpack_require__(4639);
-var arraysToCalcdata = __webpack_require__(937);
-var calcSelection = __webpack_require__(866);
+var isNumeric = __webpack_require__(2538);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var alignPeriod = __webpack_require__(2103);
+var BADNUM = (__webpack_require__(8580).BADNUM);
+var subTypes = __webpack_require__(795);
+var calcColorscale = __webpack_require__(848);
+var arraysToCalcdata = __webpack_require__(7022);
+var calcSelection = __webpack_require__(8584);
 function calc(gd, trace) {
   var fullLayout = gd._fullLayout;
   var xa = trace._xA = Axes.getFromId(gd, trace.xaxis || 'x', 'x');
@@ -56116,13 +56086,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 866:
+/***/ 8584:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 module.exports = function calcSelection(cd, trace) {
   if (Lib.isArrayOrTypedArray(trace.selectedpoints)) {
     Lib.tagSelected(cd, trace);
@@ -56131,15 +56101,15 @@ module.exports = function calcSelection(cd, trace) {
 
 /***/ }),
 
-/***/ 4639:
+/***/ 848:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var hasColorscale = (__webpack_require__(3190).hasColorscale);
-var calcColorscale = __webpack_require__(1788);
-var subTypes = __webpack_require__(3940);
+var hasColorscale = (__webpack_require__(7700).hasColorscale);
+var calcColorscale = __webpack_require__(5719);
+var subTypes = __webpack_require__(795);
 module.exports = function calcMarkerColorscale(gd, trace) {
   if (subTypes.hasLines(trace) && hasColorscale(trace, 'line')) {
     calcColorscale(gd, trace, {
@@ -56168,7 +56138,7 @@ module.exports = function calcMarkerColorscale(gd, trace) {
 
 /***/ }),
 
-/***/ 4061:
+/***/ 5211:
 /***/ (function(module) {
 
 "use strict";
@@ -56190,14 +56160,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9825:
+/***/ 3390:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var calc = __webpack_require__(1486);
-var setGroupPositions = (__webpack_require__(8773).setGroupPositions);
+var calc = __webpack_require__(7565);
+var setGroupPositions = (__webpack_require__(9928).setGroupPositions);
 function groupCrossTraceCalc(gd, plotinfo) {
   var xa = plotinfo.xaxis;
   var ya = plotinfo.yaxis;
@@ -56386,15 +56356,15 @@ function getInterp(calcTrace, index, position, posAttr) {
 
 /***/ }),
 
-/***/ 7358:
+/***/ 3173:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var handleGroupingDefaults = __webpack_require__(1027);
-var attributes = __webpack_require__(6830);
+var Lib = __webpack_require__(1372);
+var handleGroupingDefaults = __webpack_require__(5038);
+var attributes = __webpack_require__(4985);
 
 // remove opacity for any trace that has a fill or is filled to
 module.exports = function crossTraceDefaults(fullData, fullLayout) {
@@ -56431,26 +56401,26 @@ module.exports = function crossTraceDefaults(fullData, fullLayout) {
 
 /***/ }),
 
-/***/ 8539:
+/***/ 9198:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Registry = __webpack_require__(2345);
-var attributes = __webpack_require__(6830);
-var constants = __webpack_require__(4061);
-var subTypes = __webpack_require__(3940);
-var handleXYDefaults = __webpack_require__(9062);
-var handlePeriodDefaults = __webpack_require__(8393);
-var handleStackDefaults = __webpack_require__(857);
-var handleMarkerDefaults = __webpack_require__(6744);
-var handleLineDefaults = __webpack_require__(845);
-var handleLineShapeDefaults = __webpack_require__(4788);
-var handleTextDefaults = __webpack_require__(2079);
-var handleFillColorDefaults = __webpack_require__(5137);
-var coercePattern = (__webpack_require__(461).coercePattern);
+var Lib = __webpack_require__(1372);
+var Registry = __webpack_require__(2817);
+var attributes = __webpack_require__(4985);
+var constants = __webpack_require__(5211);
+var subTypes = __webpack_require__(795);
+var handleXYDefaults = __webpack_require__(7855);
+var handlePeriodDefaults = __webpack_require__(9434);
+var handleStackDefaults = __webpack_require__(1207);
+var handleMarkerDefaults = __webpack_require__(6139);
+var handleLineDefaults = __webpack_require__(7547);
+var handleLineShapeDefaults = __webpack_require__(3821);
+var handleTextDefaults = __webpack_require__(2728);
+var handleFillColorDefaults = __webpack_require__(4335);
+var coercePattern = (__webpack_require__(1372).coercePattern);
 module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
   function coerce(attr, dflt) {
     return Lib.coerce(traceIn, traceOut, attributes, attr, dflt);
@@ -56521,14 +56491,14 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
 
 /***/ }),
 
-/***/ 5137:
+/***/ 4335:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Color = __webpack_require__(9932);
-var isArrayOrTypedArray = (__webpack_require__(461).isArrayOrTypedArray);
+var Color = __webpack_require__(605);
+var isArrayOrTypedArray = (__webpack_require__(1372).isArrayOrTypedArray);
 module.exports = function fillColorDefaults(traceIn, traceOut, defaultColor, coerce) {
   var inheritColorFromMarker = false;
   if (traceOut.marker) {
@@ -56546,13 +56516,13 @@ module.exports = function fillColorDefaults(traceIn, traceOut, defaultColor, coe
 
 /***/ }),
 
-/***/ 9244:
+/***/ 8785:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Axes = __webpack_require__(2814);
+var Axes = __webpack_require__(1529);
 module.exports = function formatLabels(cdi, trace, fullLayout) {
   var labels = {};
   var mockGd = {
@@ -56571,14 +56541,14 @@ module.exports = function formatLabels(cdi, trace, fullLayout) {
 
 /***/ }),
 
-/***/ 9908:
+/***/ 2008:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Color = __webpack_require__(9932);
-var subtypes = __webpack_require__(3940);
+var Color = __webpack_require__(605);
+var subtypes = __webpack_require__(795);
 module.exports = function getTraceColor(trace, di) {
   var lc, tc;
 
@@ -56607,13 +56577,13 @@ module.exports = function getTraceColor(trace, di) {
 
 /***/ }),
 
-/***/ 1027:
+/***/ 5038:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var getAxisGroup = (__webpack_require__(1405).getAxisGroup);
+var getAxisGroup = (__webpack_require__(1278).getAxisGroup);
 module.exports = function handleGroupingDefaults(traceIn, traceOut, fullLayout, coerce) {
   var orientation = traceOut.orientation;
   // N.B. grouping is done across all trace types that support it
@@ -56651,17 +56621,17 @@ module.exports = function handleGroupingDefaults(traceIn, traceOut, fullLayout, 
 
 /***/ }),
 
-/***/ 2301:
+/***/ 320:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Fx = __webpack_require__(3847);
-var Registry = __webpack_require__(2345);
-var getTraceColor = __webpack_require__(9908);
-var Color = __webpack_require__(9932);
+var Lib = __webpack_require__(1372);
+var Fx = __webpack_require__(956);
+var Registry = __webpack_require__(2817);
+var getTraceColor = __webpack_require__(2008);
+var Color = __webpack_require__(605);
 var fillText = Lib.fillText;
 module.exports = function hoverPoints(pointData, xval, yval, hovermode) {
   var cd = pointData.cd;
@@ -56839,44 +56809,44 @@ module.exports = function hoverPoints(pointData, xval, yval, hovermode) {
 
 /***/ }),
 
-/***/ 9781:
+/***/ 3626:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var subtypes = __webpack_require__(3940);
+var subtypes = __webpack_require__(795);
 module.exports = {
   hasLines: subtypes.hasLines,
   hasMarkers: subtypes.hasMarkers,
   hasText: subtypes.hasText,
   isBubble: subtypes.isBubble,
-  attributes: __webpack_require__(6830),
-  layoutAttributes: __webpack_require__(2491),
-  supplyDefaults: __webpack_require__(8539),
-  crossTraceDefaults: __webpack_require__(7358),
-  supplyLayoutDefaults: __webpack_require__(59),
-  calc: (__webpack_require__(1486).calc),
-  crossTraceCalc: __webpack_require__(9825),
-  arraysToCalcdata: __webpack_require__(937),
-  plot: __webpack_require__(9402),
-  colorbar: __webpack_require__(8482),
-  formatLabels: __webpack_require__(9244),
-  style: (__webpack_require__(2494).style),
-  styleOnSelect: (__webpack_require__(2494).styleOnSelect),
-  hoverPoints: __webpack_require__(2301),
-  selectPoints: __webpack_require__(2279),
+  attributes: __webpack_require__(4985),
+  layoutAttributes: __webpack_require__(7140),
+  supplyDefaults: __webpack_require__(9198),
+  crossTraceDefaults: __webpack_require__(3173),
+  supplyLayoutDefaults: __webpack_require__(1987),
+  calc: (__webpack_require__(7565).calc),
+  crossTraceCalc: __webpack_require__(3390),
+  arraysToCalcdata: __webpack_require__(7022),
+  plot: __webpack_require__(1139),
+  colorbar: __webpack_require__(21),
+  formatLabels: __webpack_require__(8785),
+  style: (__webpack_require__(7651).style),
+  styleOnSelect: (__webpack_require__(7651).styleOnSelect),
+  hoverPoints: __webpack_require__(320),
+  selectPoints: __webpack_require__(9632),
   animatable: true,
   moduleType: 'trace',
   name: 'scatter',
-  basePlotModule: __webpack_require__(6642),
+  basePlotModule: __webpack_require__(5694),
   categories: ['cartesian', 'svg', 'symbols', 'errorBarsOK', 'showLegend', 'scatter-like', 'zoomScale'],
   meta: {}
 };
 
 /***/ }),
 
-/***/ 2491:
+/***/ 7140:
 /***/ (function(module) {
 
 "use strict";
@@ -56899,14 +56869,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 59:
+/***/ 1987:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var layoutAttributes = __webpack_require__(2491);
+var Lib = __webpack_require__(1372);
+var layoutAttributes = __webpack_require__(7140);
 module.exports = function (layoutIn, layoutOut) {
   function coerce(attr, dflt) {
     return Lib.coerce(layoutIn, layoutOut, layoutAttributes, attr, dflt);
@@ -56919,15 +56889,15 @@ module.exports = function (layoutIn, layoutOut) {
 
 /***/ }),
 
-/***/ 845:
+/***/ 7547:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isArrayOrTypedArray = (__webpack_require__(461).isArrayOrTypedArray);
-var hasColorscale = (__webpack_require__(3190).hasColorscale);
-var colorscaleDefaults = __webpack_require__(3308);
+var isArrayOrTypedArray = (__webpack_require__(1372).isArrayOrTypedArray);
+var hasColorscale = (__webpack_require__(7700).hasColorscale);
+var colorscaleDefaults = __webpack_require__(6035);
 module.exports = function lineDefaults(traceIn, traceOut, defaultColor, layout, coerce, opts) {
   if (!opts) opts = {};
   var markerColor = (traceIn.marker || {}).color;
@@ -56948,22 +56918,22 @@ module.exports = function lineDefaults(traceIn, traceOut, defaultColor, layout, 
 
 /***/ }),
 
-/***/ 3988:
+/***/ 8910:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Drawing = __webpack_require__(8000);
-var numConstants = __webpack_require__(6524);
+var Drawing = __webpack_require__(2764);
+var numConstants = __webpack_require__(8580);
 var BADNUM = numConstants.BADNUM;
 var LOG_CLIP = numConstants.LOG_CLIP;
 var LOG_CLIP_PLUS = LOG_CLIP + 0.5;
 var LOG_CLIP_MINUS = LOG_CLIP - 0.5;
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 var segmentsIntersect = Lib.segmentsIntersect;
 var constrain = Lib.constrain;
-var constants = __webpack_require__(4061);
+var constants = __webpack_require__(5211);
 module.exports = function linePoints(d, opts) {
   var trace = opts.trace || {};
   var xa = opts.xaxis;
@@ -57376,7 +57346,7 @@ module.exports = function linePoints(d, opts) {
 
 /***/ }),
 
-/***/ 4788:
+/***/ 3821:
 /***/ (function(module) {
 
 "use strict";
@@ -57390,7 +57360,7 @@ module.exports = function handleLineShapeDefaults(traceIn, traceOut, coerce) {
 
 /***/ }),
 
-/***/ 4478:
+/***/ 505:
 /***/ (function(module) {
 
 "use strict";
@@ -57468,13 +57438,13 @@ module.exports = function linkTraces(gd, plotinfo, cdscatter) {
 
 /***/ }),
 
-/***/ 7168:
+/***/ 7668:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
+var isNumeric = __webpack_require__(2538);
 
 // used in the drawing step for 'scatter' and 'scattegeo' and
 // in the convert step for 'scatter3d'
@@ -57508,7 +57478,7 @@ module.exports = function makeBubbleSizeFn(trace, factor) {
 
 /***/ }),
 
-/***/ 8482:
+/***/ 21:
 /***/ (function(module) {
 
 "use strict";
@@ -57522,16 +57492,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6744:
+/***/ 6139:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Color = __webpack_require__(9932);
-var hasColorscale = (__webpack_require__(3190).hasColorscale);
-var colorscaleDefaults = __webpack_require__(3308);
-var subTypes = __webpack_require__(3940);
+var Color = __webpack_require__(605);
+var hasColorscale = (__webpack_require__(7700).hasColorscale);
+var colorscaleDefaults = __webpack_require__(6035);
+var subTypes = __webpack_require__(795);
 
 /*
  * opts: object of flags to control features not all marker users support
@@ -57604,20 +57574,19 @@ module.exports = function markerDefaults(traceIn, traceOut, defaultColor, layout
 
 /***/ }),
 
-/***/ 8393:
+/***/ 9434:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var dateTick0 = (__webpack_require__(461).dateTick0);
-var numConstants = __webpack_require__(6524);
+var dateTick0 = (__webpack_require__(1372).dateTick0);
+var numConstants = __webpack_require__(8580);
 var ONEWEEK = numConstants.ONEWEEK;
 function getPeriod0Dflt(period, calendar) {
   if (period % ONEWEEK === 0) {
     return dateTick0(calendar, 1); // Sunday
   }
-
   return dateTick0(calendar, 0);
 }
 module.exports = function handlePeriodDefaults(traceIn, traceOut, layout, coerce, opts) {
@@ -57645,22 +57614,22 @@ module.exports = function handlePeriodDefaults(traceIn, traceOut, layout, coerce
 
 /***/ }),
 
-/***/ 9402:
+/***/ 1139:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Registry = __webpack_require__(2345);
-var Lib = __webpack_require__(461);
+var d3 = __webpack_require__(8197);
+var Registry = __webpack_require__(2817);
+var Lib = __webpack_require__(1372);
 var ensureSingle = Lib.ensureSingle;
 var identity = Lib.identity;
-var Drawing = __webpack_require__(8000);
-var subTypes = __webpack_require__(3940);
-var linePoints = __webpack_require__(3988);
-var linkTraces = __webpack_require__(4478);
-var polygonTester = (__webpack_require__(7535).tester);
+var Drawing = __webpack_require__(2764);
+var subTypes = __webpack_require__(795);
+var linePoints = __webpack_require__(8910);
+var linkTraces = __webpack_require__(505);
+var polygonTester = (__webpack_require__(4097).tester);
 module.exports = function plot(gd, plotinfo, cdscatter, scatterLayer, transitionOpts, makeOnCompleteCallback) {
   var join, onComplete;
 
@@ -58109,13 +58078,13 @@ function selectMarkers(gd, idx, plotinfo, cdscatter, cdscatterAll) {
 
 /***/ }),
 
-/***/ 2279:
+/***/ 9632:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var subtypes = __webpack_require__(3940);
+var subtypes = __webpack_require__(795);
 module.exports = function selectPoints(searchInfo, selectionTester) {
   var cd = searchInfo.cd;
   var xa = searchInfo.xaxis;
@@ -58155,7 +58124,7 @@ module.exports = function selectPoints(searchInfo, selectionTester) {
 
 /***/ }),
 
-/***/ 857:
+/***/ 1207:
 /***/ (function(module) {
 
 "use strict";
@@ -58250,15 +58219,15 @@ module.exports = function handleStackDefaults(traceIn, traceOut, layout, coerce)
 
 /***/ }),
 
-/***/ 2494:
+/***/ 7651:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Drawing = __webpack_require__(8000);
-var Registry = __webpack_require__(2345);
+var d3 = __webpack_require__(8197);
+var Drawing = __webpack_require__(2764);
+var Registry = __webpack_require__(2817);
 function style(gd) {
   var s = d3.select(gd).selectAll('g.trace.scatter');
   s.style('opacity', function (d) {
@@ -58303,13 +58272,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3940:
+/***/ 795:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 module.exports = {
   hasLines: function (trace) {
     return trace.visible && trace.mode && trace.mode.indexOf('lines') !== -1;
@@ -58329,13 +58298,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2079:
+/***/ 2728:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
+var Lib = __webpack_require__(1372);
 
 /*
  * opts: object of flags to control features not all text users support
@@ -58353,14 +58322,14 @@ module.exports = function (traceIn, traceOut, layout, coerce, opts) {
 
 /***/ }),
 
-/***/ 9062:
+/***/ 7855:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Registry = __webpack_require__(2345);
+var Lib = __webpack_require__(1372);
+var Registry = __webpack_require__(2817);
 module.exports = function handleXYDefaults(traceIn, traceOut, layout, coerce) {
   var x = coerce('x');
   var y = coerce('y');
@@ -58388,20 +58357,20 @@ module.exports = function handleXYDefaults(traceIn, traceOut, layout, coerce) {
 
 /***/ }),
 
-/***/ 522:
+/***/ 8258:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var hovertemplateAttrs = (__webpack_require__(202)/* .hovertemplateAttrs */ .fF);
-var texttemplateAttrs = (__webpack_require__(202)/* .texttemplateAttrs */ .si);
-var scatterAttrs = __webpack_require__(6830);
-var baseAttrs = __webpack_require__(5253);
-var colorAttributes = __webpack_require__(2797);
-var dash = (__webpack_require__(1449)/* .dash */ .P);
-var extendFlat = (__webpack_require__(9055).extendFlat);
-var overrideAll = (__webpack_require__(8541).overrideAll);
+var hovertemplateAttrs = (__webpack_require__(6689)/* .hovertemplateAttrs */ .rb);
+var texttemplateAttrs = (__webpack_require__(6689)/* .texttemplateAttrs */ .ay);
+var scatterAttrs = __webpack_require__(4985);
+var baseAttrs = __webpack_require__(718);
+var colorAttributes = __webpack_require__(2388);
+var dash = (__webpack_require__(9463)/* .dash */ .T);
+var extendFlat = (__webpack_require__(942).extendFlat);
+var overrideAll = (__webpack_require__(195).overrideAll);
 var scatterMarkerAttrs = scatterAttrs.marker;
 var scatterLineAttrs = scatterAttrs.line;
 var scatterMarkerLineAttrs = scatterMarkerAttrs.line;
@@ -58481,18 +58450,18 @@ module.exports = overrideAll({
 
 /***/ }),
 
-/***/ 6720:
+/***/ 6446:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isNumeric = __webpack_require__(5440);
-var BADNUM = (__webpack_require__(6524).BADNUM);
-var calcMarkerColorscale = __webpack_require__(4639);
-var arraysToCalcdata = __webpack_require__(937);
-var calcSelection = __webpack_require__(866);
-var _ = (__webpack_require__(461)._);
+var isNumeric = __webpack_require__(2538);
+var BADNUM = (__webpack_require__(8580).BADNUM);
+var calcMarkerColorscale = __webpack_require__(848);
+var arraysToCalcdata = __webpack_require__(7022);
+var calcSelection = __webpack_require__(8584);
+var _ = (__webpack_require__(1372)._);
 function isNonBlankString(v) {
   return v && typeof v === 'string';
 }
@@ -58535,19 +58504,19 @@ module.exports = function calc(gd, trace) {
 
 /***/ }),
 
-/***/ 3178:
+/***/ 8181:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var subTypes = __webpack_require__(3940);
-var handleMarkerDefaults = __webpack_require__(6744);
-var handleLineDefaults = __webpack_require__(845);
-var handleTextDefaults = __webpack_require__(2079);
-var handleFillColorDefaults = __webpack_require__(5137);
-var attributes = __webpack_require__(522);
+var Lib = __webpack_require__(1372);
+var subTypes = __webpack_require__(795);
+var handleMarkerDefaults = __webpack_require__(6139);
+var handleLineDefaults = __webpack_require__(7547);
+var handleTextDefaults = __webpack_require__(2728);
+var handleFillColorDefaults = __webpack_require__(4335);
+var attributes = __webpack_require__(8258);
 module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
   function coerce(attr, dflt) {
     return Lib.coerce(traceIn, traceOut, attributes, attr, dflt);
@@ -58601,7 +58570,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
 
 /***/ }),
 
-/***/ 325:
+/***/ 222:
 /***/ (function(module) {
 
 "use strict";
@@ -58622,13 +58591,13 @@ module.exports = function eventData(out, pt, trace, cd, pointNumber) {
 
 /***/ }),
 
-/***/ 2056:
+/***/ 6088:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Axes = __webpack_require__(2814);
+var Axes = __webpack_require__(1529);
 module.exports = function formatLabels(cdi, trace, fullLayout) {
   var labels = {};
   var geo = fullLayout[trace.geo]._subplot;
@@ -58641,17 +58610,17 @@ module.exports = function formatLabels(cdi, trace, fullLayout) {
 
 /***/ }),
 
-/***/ 9228:
+/***/ 4141:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var Fx = __webpack_require__(3847);
-var BADNUM = (__webpack_require__(6524).BADNUM);
-var getTraceColor = __webpack_require__(9908);
-var fillText = (__webpack_require__(461).fillText);
-var attributes = __webpack_require__(522);
+var Fx = __webpack_require__(956);
+var BADNUM = (__webpack_require__(8580).BADNUM);
+var getTraceColor = __webpack_require__(2008);
+var fillText = (__webpack_require__(1372).fillText);
+var attributes = __webpack_require__(8258);
 module.exports = function hoverPoints(pointData, xval, yval) {
   var cd = pointData.cd;
   var trace = cd[0].trace;
@@ -58731,50 +58700,50 @@ function getExtraText(trace, pt, pointData, labels) {
 
 /***/ }),
 
-/***/ 2581:
+/***/ 4443:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = {
-  attributes: __webpack_require__(522),
-  supplyDefaults: __webpack_require__(3178),
-  colorbar: __webpack_require__(8482),
-  formatLabels: __webpack_require__(2056),
-  calc: __webpack_require__(6720),
-  calcGeoJSON: (__webpack_require__(5985).calcGeoJSON),
-  plot: (__webpack_require__(5985).plot),
-  style: __webpack_require__(5298),
-  styleOnSelect: (__webpack_require__(2494).styleOnSelect),
-  hoverPoints: __webpack_require__(9228),
-  eventData: __webpack_require__(325),
-  selectPoints: __webpack_require__(1603),
+  attributes: __webpack_require__(8258),
+  supplyDefaults: __webpack_require__(8181),
+  colorbar: __webpack_require__(21),
+  formatLabels: __webpack_require__(6088),
+  calc: __webpack_require__(6446),
+  calcGeoJSON: (__webpack_require__(8444).calcGeoJSON),
+  plot: (__webpack_require__(8444).plot),
+  style: __webpack_require__(9358),
+  styleOnSelect: (__webpack_require__(7651).styleOnSelect),
+  hoverPoints: __webpack_require__(4141),
+  eventData: __webpack_require__(222),
+  selectPoints: __webpack_require__(3791),
   moduleType: 'trace',
   name: 'scattergeo',
-  basePlotModule: __webpack_require__(4123),
+  basePlotModule: __webpack_require__(4041),
   categories: ['geo', 'symbols', 'showLegend', 'scatter-like'],
   meta: {}
 };
 
 /***/ }),
 
-/***/ 5985:
+/***/ 8444:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Lib = __webpack_require__(461);
-var getTopojsonFeatures = (__webpack_require__(8710).getTopojsonFeatures);
-var geoJsonUtils = __webpack_require__(2219);
-var geoUtils = __webpack_require__(4668);
-var findExtremes = (__webpack_require__(4363).findExtremes);
-var BADNUM = (__webpack_require__(6524).BADNUM);
-var calcMarkerSize = (__webpack_require__(1486).calcMarkerSize);
-var subTypes = __webpack_require__(3940);
-var style = __webpack_require__(5298);
+var d3 = __webpack_require__(8197);
+var Lib = __webpack_require__(1372);
+var getTopojsonFeatures = (__webpack_require__(6626).getTopojsonFeatures);
+var geoJsonUtils = __webpack_require__(7121);
+var geoUtils = __webpack_require__(5517);
+var findExtremes = (__webpack_require__(7706).findExtremes);
+var BADNUM = (__webpack_require__(8580).BADNUM);
+var calcMarkerSize = (__webpack_require__(7565).calcMarkerSize);
+var subTypes = __webpack_require__(795);
+var style = __webpack_require__(9358);
 function plot(gd, geo, calcData) {
   var scatterLayer = geo.layers.frontplot.select('.scatterlayer');
   var gTraces = Lib.makeTraceGroups(scatterLayer, calcData, 'trace scattergeo');
@@ -58856,14 +58825,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1603:
+/***/ 3791:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var subtypes = __webpack_require__(3940);
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var subtypes = __webpack_require__(795);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 module.exports = function selectPoints(searchInfo, selectionTester) {
   var cd = searchInfo.cd;
   var xa = searchInfo.xaxis;
@@ -58903,16 +58872,16 @@ module.exports = function selectPoints(searchInfo, selectionTester) {
 
 /***/ }),
 
-/***/ 5298:
+/***/ 9358:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var d3 = __webpack_require__(6237);
-var Drawing = __webpack_require__(8000);
-var Color = __webpack_require__(9932);
-var scatterStyle = __webpack_require__(2494);
+var d3 = __webpack_require__(8197);
+var Drawing = __webpack_require__(2764);
+var Color = __webpack_require__(605);
+var scatterStyle = __webpack_require__(7651);
 var stylePoints = scatterStyle.stylePoints;
 var styleText = scatterStyle.styleText;
 module.exports = function style(gd, calcTrace) {
@@ -58939,17 +58908,17 @@ function styleTrace(gd, calcTrace) {
 
 /***/ }),
 
-/***/ 1474:
+/***/ 1159:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Axes = __webpack_require__(2814);
-var Lib = __webpack_require__(461);
-var PlotSchema = __webpack_require__(3966);
-var pointsAccessorFunction = (__webpack_require__(2899)/* .pointsAccessorFunction */ .p);
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var Axes = __webpack_require__(1529);
+var Lib = __webpack_require__(1372);
+var PlotSchema = __webpack_require__(6078);
+var pointsAccessorFunction = (__webpack_require__(453)/* .pointsAccessorFunction */ .z);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 exports.moduleType = 'transform';
 exports.name = 'aggregate';
 var attrs = exports.attributes = {
@@ -59307,17 +59276,17 @@ function last(array, indices) {
 
 /***/ }),
 
-/***/ 7083:
+/***/ 6172:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Registry = __webpack_require__(2345);
-var Axes = __webpack_require__(2814);
-var pointsAccessorFunction = (__webpack_require__(2899)/* .pointsAccessorFunction */ .p);
-var filterOps = __webpack_require__(4079);
+var Lib = __webpack_require__(1372);
+var Registry = __webpack_require__(2817);
+var Axes = __webpack_require__(1529);
+var pointsAccessorFunction = (__webpack_require__(453)/* .pointsAccessorFunction */ .z);
+var filterOps = __webpack_require__(7517);
 var COMPARISON_OPS = filterOps.COMPARISON_OPS;
 var INTERVAL_OPS = filterOps.INTERVAL_OPS;
 var SET_OPS = filterOps.SET_OPS;
@@ -59540,16 +59509,16 @@ function getFilterFunc(opts, d2c, targetCalendar) {
 
 /***/ }),
 
-/***/ 8597:
+/***/ 1658:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var PlotSchema = __webpack_require__(3966);
-var Plots = __webpack_require__(2815);
-var pointsAccessorFunction = (__webpack_require__(2899)/* .pointsAccessorFunction */ .p);
+var Lib = __webpack_require__(1372);
+var PlotSchema = __webpack_require__(6078);
+var Plots = __webpack_require__(39);
+var pointsAccessorFunction = (__webpack_require__(453)/* .pointsAccessorFunction */ .z);
 exports.moduleType = 'transform';
 exports.name = 'groupby';
 exports.attributes = {
@@ -59759,13 +59728,13 @@ function transformOne(trace, state) {
 
 /***/ }),
 
-/***/ 2899:
+/***/ 453:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
 
 
-exports.p = function (transforms, opts) {
+exports.z = function (transforms, opts) {
   var tr;
   var prevIndexToPoints;
   for (var i = 0; i < transforms.length; i++) {
@@ -59784,16 +59753,16 @@ exports.p = function (transforms, opts) {
 
 /***/ }),
 
-/***/ 4468:
+/***/ 4930:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Lib = __webpack_require__(461);
-var Axes = __webpack_require__(2814);
-var pointsAccessorFunction = (__webpack_require__(2899)/* .pointsAccessorFunction */ .p);
-var BADNUM = (__webpack_require__(6524).BADNUM);
+var Lib = __webpack_require__(1372);
+var Axes = __webpack_require__(1529);
+var pointsAccessorFunction = (__webpack_require__(453)/* .pointsAccessorFunction */ .z);
+var BADNUM = (__webpack_require__(8580).BADNUM);
 exports.moduleType = 'transform';
 exports.name = 'sort';
 exports.attributes = {
@@ -59905,7 +59874,7 @@ function getSortFunc(opts, d2c) {
 
 /***/ }),
 
-/***/ 5136:
+/***/ 188:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -59916,7 +59885,7 @@ exports.version = '2.22.0';
 
 /***/ }),
 
-/***/ 3149:
+/***/ 8904:
 /***/ (function(module) {
 
 "use strict";
@@ -59945,7 +59914,7 @@ function isMobile(opts) {
 
 /***/ }),
 
-/***/ 6237:
+/***/ 8197:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -66782,13 +66751,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
 
 /***/ }),
 
-/***/ 8088:
+/***/ 6717:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var meta_1 = __webpack_require__(4595);
+var meta_1 = __webpack_require__(2946);
 // Note: change RADIUS => earthRadius
 var RADIUS = 6378137;
 /**
@@ -66907,2174 +66876,13 @@ function rad(num) {
 
 /***/ }),
 
-/***/ 8790:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * @module helpers
- */
-/**
- * Earth Radius used with the Harvesine formula and approximates using a spherical (non-ellipsoid) Earth.
- *
- * @memberof helpers
- * @type {number}
- */
-exports.earthRadius = 6371008.8;
-/**
- * Unit of measurement factors using a spherical (non-ellipsoid) earth radius.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.factors = {
-    centimeters: exports.earthRadius * 100,
-    centimetres: exports.earthRadius * 100,
-    degrees: exports.earthRadius / 111325,
-    feet: exports.earthRadius * 3.28084,
-    inches: exports.earthRadius * 39.37,
-    kilometers: exports.earthRadius / 1000,
-    kilometres: exports.earthRadius / 1000,
-    meters: exports.earthRadius,
-    metres: exports.earthRadius,
-    miles: exports.earthRadius / 1609.344,
-    millimeters: exports.earthRadius * 1000,
-    millimetres: exports.earthRadius * 1000,
-    nauticalmiles: exports.earthRadius / 1852,
-    radians: 1,
-    yards: exports.earthRadius * 1.0936,
-};
-/**
- * Units of measurement factors based on 1 meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.unitsFactors = {
-    centimeters: 100,
-    centimetres: 100,
-    degrees: 1 / 111325,
-    feet: 3.28084,
-    inches: 39.37,
-    kilometers: 1 / 1000,
-    kilometres: 1 / 1000,
-    meters: 1,
-    metres: 1,
-    miles: 1 / 1609.344,
-    millimeters: 1000,
-    millimetres: 1000,
-    nauticalmiles: 1 / 1852,
-    radians: 1 / exports.earthRadius,
-    yards: 1.0936133,
-};
-/**
- * Area of measurement factors based on 1 square meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.areaFactors = {
-    acres: 0.000247105,
-    centimeters: 10000,
-    centimetres: 10000,
-    feet: 10.763910417,
-    hectares: 0.0001,
-    inches: 1550.003100006,
-    kilometers: 0.000001,
-    kilometres: 0.000001,
-    meters: 1,
-    metres: 1,
-    miles: 3.86e-7,
-    millimeters: 1000000,
-    millimetres: 1000000,
-    yards: 1.195990046,
-};
-/**
- * Wraps a GeoJSON {@link Geometry} in a GeoJSON {@link Feature}.
- *
- * @name feature
- * @param {Geometry} geometry input geometry
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature} a GeoJSON Feature
- * @example
- * var geometry = {
- *   "type": "Point",
- *   "coordinates": [110, 50]
- * };
- *
- * var feature = turf.feature(geometry);
- *
- * //=feature
- */
-function feature(geom, properties, options) {
-    if (options === void 0) { options = {}; }
-    var feat = { type: "Feature" };
-    if (options.id === 0 || options.id) {
-        feat.id = options.id;
-    }
-    if (options.bbox) {
-        feat.bbox = options.bbox;
-    }
-    feat.properties = properties || {};
-    feat.geometry = geom;
-    return feat;
-}
-exports.feature = feature;
-/**
- * Creates a GeoJSON {@link Geometry} from a Geometry string type & coordinates.
- * For GeometryCollection type use `helpers.geometryCollection`
- *
- * @name geometry
- * @param {string} type Geometry Type
- * @param {Array<any>} coordinates Coordinates
- * @param {Object} [options={}] Optional Parameters
- * @returns {Geometry} a GeoJSON Geometry
- * @example
- * var type = "Point";
- * var coordinates = [110, 50];
- * var geometry = turf.geometry(type, coordinates);
- * // => geometry
- */
-function geometry(type, coordinates, _options) {
-    if (_options === void 0) { _options = {}; }
-    switch (type) {
-        case "Point":
-            return point(coordinates).geometry;
-        case "LineString":
-            return lineString(coordinates).geometry;
-        case "Polygon":
-            return polygon(coordinates).geometry;
-        case "MultiPoint":
-            return multiPoint(coordinates).geometry;
-        case "MultiLineString":
-            return multiLineString(coordinates).geometry;
-        case "MultiPolygon":
-            return multiPolygon(coordinates).geometry;
-        default:
-            throw new Error(type + " is invalid");
-    }
-}
-exports.geometry = geometry;
-/**
- * Creates a {@link Point} {@link Feature} from a Position.
- *
- * @name point
- * @param {Array<number>} coordinates longitude, latitude position (each in decimal degrees)
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Point>} a Point feature
- * @example
- * var point = turf.point([-75.343, 39.984]);
- *
- * //=point
- */
-function point(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    if (!coordinates) {
-        throw new Error("coordinates is required");
-    }
-    if (!Array.isArray(coordinates)) {
-        throw new Error("coordinates must be an Array");
-    }
-    if (coordinates.length < 2) {
-        throw new Error("coordinates must be at least 2 numbers long");
-    }
-    if (!isNumber(coordinates[0]) || !isNumber(coordinates[1])) {
-        throw new Error("coordinates must contain numbers");
-    }
-    var geom = {
-        type: "Point",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.point = point;
-/**
- * Creates a {@link Point} {@link FeatureCollection} from an Array of Point coordinates.
- *
- * @name points
- * @param {Array<Array<number>>} coordinates an array of Points
- * @param {Object} [properties={}] Translate these properties to each Feature
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Point>} Point Feature
- * @example
- * var points = turf.points([
- *   [-75, 39],
- *   [-80, 45],
- *   [-78, 50]
- * ]);
- *
- * //=points
- */
-function points(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return point(coords, properties);
-    }), options);
-}
-exports.points = points;
-/**
- * Creates a {@link Polygon} {@link Feature} from an Array of LinearRings.
- *
- * @name polygon
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Polygon>} Polygon Feature
- * @example
- * var polygon = turf.polygon([[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]], { name: 'poly1' });
- *
- * //=polygon
- */
-function polygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    for (var _i = 0, coordinates_1 = coordinates; _i < coordinates_1.length; _i++) {
-        var ring = coordinates_1[_i];
-        if (ring.length < 4) {
-            throw new Error("Each LinearRing of a Polygon must have 4 or more Positions.");
-        }
-        for (var j = 0; j < ring[ring.length - 1].length; j++) {
-            // Check if first point of Polygon contains two numbers
-            if (ring[ring.length - 1][j] !== ring[0][j]) {
-                throw new Error("First and last Position are not equivalent.");
-            }
-        }
-    }
-    var geom = {
-        type: "Polygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.polygon = polygon;
-/**
- * Creates a {@link Polygon} {@link FeatureCollection} from an Array of Polygon coordinates.
- *
- * @name polygons
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygon coordinates
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Polygon>} Polygon FeatureCollection
- * @example
- * var polygons = turf.polygons([
- *   [[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]],
- *   [[[-15, 42], [-14, 46], [-12, 41], [-17, 44], [-15, 42]]],
- * ]);
- *
- * //=polygons
- */
-function polygons(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return polygon(coords, properties);
-    }), options);
-}
-exports.polygons = polygons;
-/**
- * Creates a {@link LineString} {@link Feature} from an Array of Positions.
- *
- * @name lineString
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<LineString>} LineString Feature
- * @example
- * var linestring1 = turf.lineString([[-24, 63], [-23, 60], [-25, 65], [-20, 69]], {name: 'line 1'});
- * var linestring2 = turf.lineString([[-14, 43], [-13, 40], [-15, 45], [-10, 49]], {name: 'line 2'});
- *
- * //=linestring1
- * //=linestring2
- */
-function lineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    if (coordinates.length < 2) {
-        throw new Error("coordinates must be an array of two or more positions");
-    }
-    var geom = {
-        type: "LineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.lineString = lineString;
-/**
- * Creates a {@link LineString} {@link FeatureCollection} from an Array of LineString coordinates.
- *
- * @name lineStrings
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<LineString>} LineString FeatureCollection
- * @example
- * var linestrings = turf.lineStrings([
- *   [[-24, 63], [-23, 60], [-25, 65], [-20, 69]],
- *   [[-14, 43], [-13, 40], [-15, 45], [-10, 49]]
- * ]);
- *
- * //=linestrings
- */
-function lineStrings(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return lineString(coords, properties);
-    }), options);
-}
-exports.lineStrings = lineStrings;
-/**
- * Takes one or more {@link Feature|Features} and creates a {@link FeatureCollection}.
- *
- * @name featureCollection
- * @param {Feature[]} features input features
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {FeatureCollection} FeatureCollection of Features
- * @example
- * var locationA = turf.point([-75.343, 39.984], {name: 'Location A'});
- * var locationB = turf.point([-75.833, 39.284], {name: 'Location B'});
- * var locationC = turf.point([-75.534, 39.123], {name: 'Location C'});
- *
- * var collection = turf.featureCollection([
- *   locationA,
- *   locationB,
- *   locationC
- * ]);
- *
- * //=collection
- */
-function featureCollection(features, options) {
-    if (options === void 0) { options = {}; }
-    var fc = { type: "FeatureCollection" };
-    if (options.id) {
-        fc.id = options.id;
-    }
-    if (options.bbox) {
-        fc.bbox = options.bbox;
-    }
-    fc.features = features;
-    return fc;
-}
-exports.featureCollection = featureCollection;
-/**
- * Creates a {@link Feature<MultiLineString>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiLineString
- * @param {Array<Array<Array<number>>>} coordinates an array of LineStrings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiLineString>} a MultiLineString feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiLine = turf.multiLineString([[[0,0],[10,10]]]);
- *
- * //=multiLine
- */
-function multiLineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiLineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiLineString = multiLineString;
-/**
- * Creates a {@link Feature<MultiPoint>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPoint
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPoint>} a MultiPoint feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPt = turf.multiPoint([[0,0],[10,10]]);
- *
- * //=multiPt
- */
-function multiPoint(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPoint",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPoint = multiPoint;
-/**
- * Creates a {@link Feature<MultiPolygon>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPolygon
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygons
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPolygon>} a multipolygon feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPoly = turf.multiPolygon([[[[0,0],[0,10],[10,10],[10,0],[0,0]]]]);
- *
- * //=multiPoly
- *
- */
-function multiPolygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPolygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPolygon = multiPolygon;
-/**
- * Creates a {@link Feature<GeometryCollection>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name geometryCollection
- * @param {Array<Geometry>} geometries an array of GeoJSON Geometries
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<GeometryCollection>} a GeoJSON GeometryCollection Feature
- * @example
- * var pt = turf.geometry("Point", [100, 0]);
- * var line = turf.geometry("LineString", [[101, 0], [102, 1]]);
- * var collection = turf.geometryCollection([pt, line]);
- *
- * // => collection
- */
-function geometryCollection(geometries, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "GeometryCollection",
-        geometries: geometries,
-    };
-    return feature(geom, properties, options);
-}
-exports.geometryCollection = geometryCollection;
-/**
- * Round number to precision
- *
- * @param {number} num Number
- * @param {number} [precision=0] Precision
- * @returns {number} rounded number
- * @example
- * turf.round(120.4321)
- * //=120
- *
- * turf.round(120.4321, 2)
- * //=120.43
- */
-function round(num, precision) {
-    if (precision === void 0) { precision = 0; }
-    if (precision && !(precision >= 0)) {
-        throw new Error("precision must be a positive number");
-    }
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(num * multiplier) / multiplier;
-}
-exports.round = round;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from radians to a more friendly unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name radiansToLength
- * @param {number} radians in radians across the sphere
- * @param {string} [units="kilometers"] can be degrees, radians, miles, inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} distance
- */
-function radiansToLength(radians, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return radians * factor;
-}
-exports.radiansToLength = radiansToLength;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into radians
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name lengthToRadians
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} radians
- */
-function lengthToRadians(distance, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return distance / factor;
-}
-exports.lengthToRadians = lengthToRadians;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into degrees
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, centimeters, kilometres, feet
- *
- * @name lengthToDegrees
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} degrees
- */
-function lengthToDegrees(distance, units) {
-    return radiansToDegrees(lengthToRadians(distance, units));
-}
-exports.lengthToDegrees = lengthToDegrees;
-/**
- * Converts any bearing angle from the north line direction (positive clockwise)
- * and returns an angle between 0-360 degrees (positive clockwise), 0 being the north line
- *
- * @name bearingToAzimuth
- * @param {number} bearing angle, between -180 and +180 degrees
- * @returns {number} angle between 0 and 360 degrees
- */
-function bearingToAzimuth(bearing) {
-    var angle = bearing % 360;
-    if (angle < 0) {
-        angle += 360;
-    }
-    return angle;
-}
-exports.bearingToAzimuth = bearingToAzimuth;
-/**
- * Converts an angle in radians to degrees
- *
- * @name radiansToDegrees
- * @param {number} radians angle in radians
- * @returns {number} degrees between 0 and 360 degrees
- */
-function radiansToDegrees(radians) {
-    var degrees = radians % (2 * Math.PI);
-    return (degrees * 180) / Math.PI;
-}
-exports.radiansToDegrees = radiansToDegrees;
-/**
- * Converts an angle in degrees to radians
- *
- * @name degreesToRadians
- * @param {number} degrees angle between 0 and 360 degrees
- * @returns {number} angle in radians
- */
-function degreesToRadians(degrees) {
-    var radians = degrees % 360;
-    return (radians * Math.PI) / 180;
-}
-exports.degreesToRadians = degreesToRadians;
-/**
- * Converts a length to the requested unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @param {number} length to be converted
- * @param {Units} [originalUnit="kilometers"] of the length
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted length
- */
-function convertLength(length, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "kilometers"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(length >= 0)) {
-        throw new Error("length must be a positive number");
-    }
-    return radiansToLength(lengthToRadians(length, originalUnit), finalUnit);
-}
-exports.convertLength = convertLength;
-/**
- * Converts a area to the requested unit.
- * Valid units: kilometers, kilometres, meters, metres, centimetres, millimeters, acres, miles, yards, feet, inches, hectares
- * @param {number} area to be converted
- * @param {Units} [originalUnit="meters"] of the distance
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted area
- */
-function convertArea(area, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "meters"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(area >= 0)) {
-        throw new Error("area must be a positive number");
-    }
-    var startFactor = exports.areaFactors[originalUnit];
-    if (!startFactor) {
-        throw new Error("invalid original units");
-    }
-    var finalFactor = exports.areaFactors[finalUnit];
-    if (!finalFactor) {
-        throw new Error("invalid final units");
-    }
-    return (area / startFactor) * finalFactor;
-}
-exports.convertArea = convertArea;
-/**
- * isNumber
- *
- * @param {*} num Number to validate
- * @returns {boolean} true/false
- * @example
- * turf.isNumber(123)
- * //=true
- * turf.isNumber('foo')
- * //=false
- */
-function isNumber(num) {
-    return !isNaN(num) && num !== null && !Array.isArray(num);
-}
-exports.isNumber = isNumber;
-/**
- * isObject
- *
- * @param {*} input variable to validate
- * @returns {boolean} true/false
- * @example
- * turf.isObject({elevation: 10})
- * //=true
- * turf.isObject('foo')
- * //=false
- */
-function isObject(input) {
-    return !!input && input.constructor === Object;
-}
-exports.isObject = isObject;
-/**
- * Validate BBox
- *
- * @private
- * @param {Array<number>} bbox BBox to validate
- * @returns {void}
- * @throws Error if BBox is not valid
- * @example
- * validateBBox([-180, -40, 110, 50])
- * //=OK
- * validateBBox([-180, -40])
- * //=Error
- * validateBBox('Foo')
- * //=Error
- * validateBBox(5)
- * //=Error
- * validateBBox(null)
- * //=Error
- * validateBBox(undefined)
- * //=Error
- */
-function validateBBox(bbox) {
-    if (!bbox) {
-        throw new Error("bbox is required");
-    }
-    if (!Array.isArray(bbox)) {
-        throw new Error("bbox must be an Array");
-    }
-    if (bbox.length !== 4 && bbox.length !== 6) {
-        throw new Error("bbox must be an Array of 4 or 6 numbers");
-    }
-    bbox.forEach(function (num) {
-        if (!isNumber(num)) {
-            throw new Error("bbox must only contain numbers");
-        }
-    });
-}
-exports.validateBBox = validateBBox;
-/**
- * Validate Id
- *
- * @private
- * @param {string|number} id Id to validate
- * @returns {void}
- * @throws Error if Id is not valid
- * @example
- * validateId([-180, -40, 110, 50])
- * //=Error
- * validateId([-180, -40])
- * //=Error
- * validateId('Foo')
- * //=OK
- * validateId(5)
- * //=OK
- * validateId(null)
- * //=Error
- * validateId(undefined)
- * //=Error
- */
-function validateId(id) {
-    if (!id) {
-        throw new Error("id is required");
-    }
-    if (["string", "number"].indexOf(typeof id) === -1) {
-        throw new Error("id must be a number or a string");
-    }
-}
-exports.validateId = validateId;
-
-
-/***/ }),
-
-/***/ 4595:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-var helpers = __webpack_require__(8790);
-
-/**
- * Callback for coordEach
- *
- * @callback coordEachCallback
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Iterate over coordinates in any GeoJSON object, similar to Array.forEach()
- *
- * @name coordEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentCoord, coordIndex, featureIndex, multiFeatureIndex)
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordEach(features, function (currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function coordEach(geojson, callback, excludeWrapCoord) {
-  // Handles null Geometry -- Skips this GeoJSON
-  if (geojson === null) return;
-  var j,
-    k,
-    l,
-    geometry,
-    stopG,
-    coords,
-    geometryMaybeCollection,
-    wrapShrink = 0,
-    coordIndex = 0,
-    isGeometryCollection,
-    type = geojson.type,
-    isFeatureCollection = type === "FeatureCollection",
-    isFeature = type === "Feature",
-    stop = isFeatureCollection ? geojson.features.length : 1;
-
-  // This logic may look a little weird. The reason why it is that way
-  // is because it's trying to be fast. GeoJSON supports multiple kinds
-  // of objects at its root: FeatureCollection, Features, Geometries.
-  // This function has the responsibility of handling all of them, and that
-  // means that some of the `for` loops you see below actually just don't apply
-  // to certain inputs. For instance, if you give this just a
-  // Point geometry, then both loops are short-circuited and all we do
-  // is gradually rename the input until it's called 'geometry'.
-  //
-  // This also aims to allocate as few resources as possible: just a
-  // few numbers and booleans, rather than any temporary arrays as would
-  // be required with the normalization approach.
-  for (var featureIndex = 0; featureIndex < stop; featureIndex++) {
-    geometryMaybeCollection = isFeatureCollection
-      ? geojson.features[featureIndex].geometry
-      : isFeature
-      ? geojson.geometry
-      : geojson;
-    isGeometryCollection = geometryMaybeCollection
-      ? geometryMaybeCollection.type === "GeometryCollection"
-      : false;
-    stopG = isGeometryCollection
-      ? geometryMaybeCollection.geometries.length
-      : 1;
-
-    for (var geomIndex = 0; geomIndex < stopG; geomIndex++) {
-      var multiFeatureIndex = 0;
-      var geometryIndex = 0;
-      geometry = isGeometryCollection
-        ? geometryMaybeCollection.geometries[geomIndex]
-        : geometryMaybeCollection;
-
-      // Handles null Geometry -- Skips this geometry
-      if (geometry === null) continue;
-      coords = geometry.coordinates;
-      var geomType = geometry.type;
-
-      wrapShrink =
-        excludeWrapCoord &&
-        (geomType === "Polygon" || geomType === "MultiPolygon")
-          ? 1
-          : 0;
-
-      switch (geomType) {
-        case null:
-          break;
-        case "Point":
-          if (
-            callback(
-              coords,
-              coordIndex,
-              featureIndex,
-              multiFeatureIndex,
-              geometryIndex
-            ) === false
-          )
-            return false;
-          coordIndex++;
-          multiFeatureIndex++;
-          break;
-        case "LineString":
-        case "MultiPoint":
-          for (j = 0; j < coords.length; j++) {
-            if (
-              callback(
-                coords[j],
-                coordIndex,
-                featureIndex,
-                multiFeatureIndex,
-                geometryIndex
-              ) === false
-            )
-              return false;
-            coordIndex++;
-            if (geomType === "MultiPoint") multiFeatureIndex++;
-          }
-          if (geomType === "LineString") multiFeatureIndex++;
-          break;
-        case "Polygon":
-        case "MultiLineString":
-          for (j = 0; j < coords.length; j++) {
-            for (k = 0; k < coords[j].length - wrapShrink; k++) {
-              if (
-                callback(
-                  coords[j][k],
-                  coordIndex,
-                  featureIndex,
-                  multiFeatureIndex,
-                  geometryIndex
-                ) === false
-              )
-                return false;
-              coordIndex++;
-            }
-            if (geomType === "MultiLineString") multiFeatureIndex++;
-            if (geomType === "Polygon") geometryIndex++;
-          }
-          if (geomType === "Polygon") multiFeatureIndex++;
-          break;
-        case "MultiPolygon":
-          for (j = 0; j < coords.length; j++) {
-            geometryIndex = 0;
-            for (k = 0; k < coords[j].length; k++) {
-              for (l = 0; l < coords[j][k].length - wrapShrink; l++) {
-                if (
-                  callback(
-                    coords[j][k][l],
-                    coordIndex,
-                    featureIndex,
-                    multiFeatureIndex,
-                    geometryIndex
-                  ) === false
-                )
-                  return false;
-                coordIndex++;
-              }
-              geometryIndex++;
-            }
-            multiFeatureIndex++;
-          }
-          break;
-        case "GeometryCollection":
-          for (j = 0; j < geometry.geometries.length; j++)
-            if (
-              coordEach(geometry.geometries[j], callback, excludeWrapCoord) ===
-              false
-            )
-              return false;
-          break;
-        default:
-          throw new Error("Unknown Geometry Type");
-      }
-    }
-  }
-}
-
-/**
- * Callback for coordReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback coordReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * Starts at index 0, if an initialValue is provided, and at index 1 otherwise.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Reduce coordinates in any GeoJSON object, similar to Array.reduce()
- *
- * @name coordReduce
- * @param {FeatureCollection|Geometry|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentCoord, coordIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordReduce(features, function (previousValue, currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentCoord;
- * });
- */
-function coordReduce(geojson, callback, initialValue, excludeWrapCoord) {
-  var previousValue = initialValue;
-  coordEach(
-    geojson,
-    function (
-      currentCoord,
-      coordIndex,
-      featureIndex,
-      multiFeatureIndex,
-      geometryIndex
-    ) {
-      if (coordIndex === 0 && initialValue === undefined)
-        previousValue = currentCoord;
-      else
-        previousValue = callback(
-          previousValue,
-          currentCoord,
-          coordIndex,
-          featureIndex,
-          multiFeatureIndex,
-          geometryIndex
-        );
-    },
-    excludeWrapCoord
-  );
-  return previousValue;
-}
-
-/**
- * Callback for propEach
- *
- * @callback propEachCallback
- * @param {Object} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over properties in any GeoJSON object, similar to Array.forEach()
- *
- * @name propEach
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentProperties, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propEach(features, function (currentProperties, featureIndex) {
- *   //=currentProperties
- *   //=featureIndex
- * });
- */
-function propEach(geojson, callback) {
-  var i;
-  switch (geojson.type) {
-    case "FeatureCollection":
-      for (i = 0; i < geojson.features.length; i++) {
-        if (callback(geojson.features[i].properties, i) === false) break;
-      }
-      break;
-    case "Feature":
-      callback(geojson.properties, 0);
-      break;
-  }
-}
-
-/**
- * Callback for propReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback propReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {*} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce properties in any GeoJSON object into a single value,
- * similar to how Array.reduce works. However, in this case we lazily run
- * the reduction, so an array of all properties is unnecessary.
- *
- * @name propReduce
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentProperties, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propReduce(features, function (previousValue, currentProperties, featureIndex) {
- *   //=previousValue
- *   //=currentProperties
- *   //=featureIndex
- *   return currentProperties
- * });
- */
-function propReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  propEach(geojson, function (currentProperties, featureIndex) {
-    if (featureIndex === 0 && initialValue === undefined)
-      previousValue = currentProperties;
-    else
-      previousValue = callback(previousValue, currentProperties, featureIndex);
-  });
-  return previousValue;
-}
-
-/**
- * Callback for featureEach
- *
- * @callback featureEachCallback
- * @param {Feature<any>} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name featureEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.featureEach(features, function (currentFeature, featureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- * });
- */
-function featureEach(geojson, callback) {
-  if (geojson.type === "Feature") {
-    callback(geojson, 0);
-  } else if (geojson.type === "FeatureCollection") {
-    for (var i = 0; i < geojson.features.length; i++) {
-      if (callback(geojson.features[i], i) === false) break;
-    }
-  }
-}
-
-/**
- * Callback for featureReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback featureReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name featureReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.featureReduce(features, function (previousValue, currentFeature, featureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   return currentFeature
- * });
- */
-function featureReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  featureEach(geojson, function (currentFeature, featureIndex) {
-    if (featureIndex === 0 && initialValue === undefined)
-      previousValue = currentFeature;
-    else previousValue = callback(previousValue, currentFeature, featureIndex);
-  });
-  return previousValue;
-}
-
-/**
- * Get all coordinates from any GeoJSON object.
- *
- * @name coordAll
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @returns {Array<Array<number>>} coordinate position array
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * var coords = turf.coordAll(features);
- * //= [[26, 37], [36, 53]]
- */
-function coordAll(geojson) {
-  var coords = [];
-  coordEach(geojson, function (coord) {
-    coords.push(coord);
-  });
-  return coords;
-}
-
-/**
- * Callback for geomEach
- *
- * @callback geomEachCallback
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Iterate over each geometry in any GeoJSON object, similar to Array.forEach()
- *
- * @name geomEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomEach(features, function (currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- * });
- */
-function geomEach(geojson, callback) {
-  var i,
-    j,
-    g,
-    geometry,
-    stopG,
-    geometryMaybeCollection,
-    isGeometryCollection,
-    featureProperties,
-    featureBBox,
-    featureId,
-    featureIndex = 0,
-    isFeatureCollection = geojson.type === "FeatureCollection",
-    isFeature = geojson.type === "Feature",
-    stop = isFeatureCollection ? geojson.features.length : 1;
-
-  // This logic may look a little weird. The reason why it is that way
-  // is because it's trying to be fast. GeoJSON supports multiple kinds
-  // of objects at its root: FeatureCollection, Features, Geometries.
-  // This function has the responsibility of handling all of them, and that
-  // means that some of the `for` loops you see below actually just don't apply
-  // to certain inputs. For instance, if you give this just a
-  // Point geometry, then both loops are short-circuited and all we do
-  // is gradually rename the input until it's called 'geometry'.
-  //
-  // This also aims to allocate as few resources as possible: just a
-  // few numbers and booleans, rather than any temporary arrays as would
-  // be required with the normalization approach.
-  for (i = 0; i < stop; i++) {
-    geometryMaybeCollection = isFeatureCollection
-      ? geojson.features[i].geometry
-      : isFeature
-      ? geojson.geometry
-      : geojson;
-    featureProperties = isFeatureCollection
-      ? geojson.features[i].properties
-      : isFeature
-      ? geojson.properties
-      : {};
-    featureBBox = isFeatureCollection
-      ? geojson.features[i].bbox
-      : isFeature
-      ? geojson.bbox
-      : undefined;
-    featureId = isFeatureCollection
-      ? geojson.features[i].id
-      : isFeature
-      ? geojson.id
-      : undefined;
-    isGeometryCollection = geometryMaybeCollection
-      ? geometryMaybeCollection.type === "GeometryCollection"
-      : false;
-    stopG = isGeometryCollection
-      ? geometryMaybeCollection.geometries.length
-      : 1;
-
-    for (g = 0; g < stopG; g++) {
-      geometry = isGeometryCollection
-        ? geometryMaybeCollection.geometries[g]
-        : geometryMaybeCollection;
-
-      // Handle null Geometry
-      if (geometry === null) {
-        if (
-          callback(
-            null,
-            featureIndex,
-            featureProperties,
-            featureBBox,
-            featureId
-          ) === false
-        )
-          return false;
-        continue;
-      }
-      switch (geometry.type) {
-        case "Point":
-        case "LineString":
-        case "MultiPoint":
-        case "Polygon":
-        case "MultiLineString":
-        case "MultiPolygon": {
-          if (
-            callback(
-              geometry,
-              featureIndex,
-              featureProperties,
-              featureBBox,
-              featureId
-            ) === false
-          )
-            return false;
-          break;
-        }
-        case "GeometryCollection": {
-          for (j = 0; j < geometry.geometries.length; j++) {
-            if (
-              callback(
-                geometry.geometries[j],
-                featureIndex,
-                featureProperties,
-                featureBBox,
-                featureId
-              ) === false
-            )
-              return false;
-          }
-          break;
-        }
-        default:
-          throw new Error("Unknown Geometry Type");
-      }
-    }
-    // Only increase `featureIndex` per each feature
-    featureIndex++;
-  }
-}
-
-/**
- * Callback for geomReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback geomReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Reduce geometry in any GeoJSON object, similar to Array.reduce().
- *
- * @name geomReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomReduce(features, function (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=previousValue
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- *   return currentGeometry
- * });
- */
-function geomReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  geomEach(
-    geojson,
-    function (
-      currentGeometry,
-      featureIndex,
-      featureProperties,
-      featureBBox,
-      featureId
-    ) {
-      if (featureIndex === 0 && initialValue === undefined)
-        previousValue = currentGeometry;
-      else
-        previousValue = callback(
-          previousValue,
-          currentGeometry,
-          featureIndex,
-          featureProperties,
-          featureBBox,
-          featureId
-        );
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Callback for flattenEach
- *
- * @callback flattenEachCallback
- * @param {Feature} currentFeature The current flattened feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Iterate over flattened features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name flattenEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex, multiFeatureIndex)
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenEach(features, function (currentFeature, featureIndex, multiFeatureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- * });
- */
-function flattenEach(geojson, callback) {
-  geomEach(geojson, function (geometry, featureIndex, properties, bbox, id) {
-    // Callback for single geometry
-    var type = geometry === null ? null : geometry.type;
-    switch (type) {
-      case null:
-      case "Point":
-      case "LineString":
-      case "Polygon":
-        if (
-          callback(
-            helpers.feature(geometry, properties, { bbox: bbox, id: id }),
-            featureIndex,
-            0
-          ) === false
-        )
-          return false;
-        return;
-    }
-
-    var geomType;
-
-    // Callback for multi-geometry
-    switch (type) {
-      case "MultiPoint":
-        geomType = "Point";
-        break;
-      case "MultiLineString":
-        geomType = "LineString";
-        break;
-      case "MultiPolygon":
-        geomType = "Polygon";
-        break;
-    }
-
-    for (
-      var multiFeatureIndex = 0;
-      multiFeatureIndex < geometry.coordinates.length;
-      multiFeatureIndex++
-    ) {
-      var coordinate = geometry.coordinates[multiFeatureIndex];
-      var geom = {
-        type: geomType,
-        coordinates: coordinate,
-      };
-      if (
-        callback(helpers.feature(geom, properties), featureIndex, multiFeatureIndex) ===
-        false
-      )
-        return false;
-    }
-  });
-}
-
-/**
- * Callback for flattenReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback flattenReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Reduce flattened features in any GeoJSON object, similar to Array.reduce().
- *
- * @name flattenReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex, multiFeatureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenReduce(features, function (previousValue, currentFeature, featureIndex, multiFeatureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   return currentFeature
- * });
- */
-function flattenReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  flattenEach(
-    geojson,
-    function (currentFeature, featureIndex, multiFeatureIndex) {
-      if (
-        featureIndex === 0 &&
-        multiFeatureIndex === 0 &&
-        initialValue === undefined
-      )
-        previousValue = currentFeature;
-      else
-        previousValue = callback(
-          previousValue,
-          currentFeature,
-          featureIndex,
-          multiFeatureIndex
-        );
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Callback for segmentEach
- *
- * @callback segmentEachCallback
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- * @returns {void}
- */
-
-/**
- * Iterate over 2-vertex line segment in any GeoJSON object, similar to Array.forEach()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex)
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentEach(polygon, function (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //=currentSegment
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   //=segmentIndex
- * });
- *
- * // Calculate the total number of segments
- * var total = 0;
- * turf.segmentEach(polygon, function () {
- *     total++;
- * });
- */
-function segmentEach(geojson, callback) {
-  flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-    var segmentIndex = 0;
-
-    // Exclude null Geometries
-    if (!feature.geometry) return;
-    // (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
-    var type = feature.geometry.type;
-    if (type === "Point" || type === "MultiPoint") return;
-
-    // Generate 2-vertex line segments
-    var previousCoords;
-    var previousFeatureIndex = 0;
-    var previousMultiIndex = 0;
-    var prevGeomIndex = 0;
-    if (
-      coordEach(
-        feature,
-        function (
-          currentCoord,
-          coordIndex,
-          featureIndexCoord,
-          multiPartIndexCoord,
-          geometryIndex
-        ) {
-          // Simulating a meta.coordReduce() since `reduce` operations cannot be stopped by returning `false`
-          if (
-            previousCoords === undefined ||
-            featureIndex > previousFeatureIndex ||
-            multiPartIndexCoord > previousMultiIndex ||
-            geometryIndex > prevGeomIndex
-          ) {
-            previousCoords = currentCoord;
-            previousFeatureIndex = featureIndex;
-            previousMultiIndex = multiPartIndexCoord;
-            prevGeomIndex = geometryIndex;
-            segmentIndex = 0;
-            return;
-          }
-          var currentSegment = helpers.lineString(
-            [previousCoords, currentCoord],
-            feature.properties
-          );
-          if (
-            callback(
-              currentSegment,
-              featureIndex,
-              multiFeatureIndex,
-              geometryIndex,
-              segmentIndex
-            ) === false
-          )
-            return false;
-          segmentIndex++;
-          previousCoords = currentCoord;
-        }
-      ) === false
-    )
-      return false;
-  });
-}
-
-/**
- * Callback for segmentReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback segmentReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- */
-
-/**
- * Reduce 2-vertex line segment in any GeoJSON object, similar to Array.reduce()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (previousValue, currentSegment, currentIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentReduce(polygon, function (previousSegment, currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //= previousSegment
- *   //= currentSegment
- *   //= featureIndex
- *   //= multiFeatureIndex
- *   //= geometryIndex
- *   //= segmentIndex
- *   return currentSegment
- * });
- *
- * // Calculate the total number of segments
- * var initialValue = 0
- * var total = turf.segmentReduce(polygon, function (previousValue) {
- *     previousValue++;
- *     return previousValue;
- * }, initialValue);
- */
-function segmentReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  var started = false;
-  segmentEach(
-    geojson,
-    function (
-      currentSegment,
-      featureIndex,
-      multiFeatureIndex,
-      geometryIndex,
-      segmentIndex
-    ) {
-      if (started === false && initialValue === undefined)
-        previousValue = currentSegment;
-      else
-        previousValue = callback(
-          previousValue,
-          currentSegment,
-          featureIndex,
-          multiFeatureIndex,
-          geometryIndex,
-          segmentIndex
-        );
-      started = true;
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Callback for lineEach
- *
- * @callback lineEachCallback
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Iterate over line or ring coordinates in LineString, Polygon, MultiLineString, MultiPolygon Features or Geometries,
- * similar to Array.forEach.
- *
- * @name lineEach
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @example
- * var multiLine = turf.multiLineString([
- *   [[26, 37], [35, 45]],
- *   [[36, 53], [38, 50], [41, 55]]
- * ]);
- *
- * turf.lineEach(multiLine, function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function lineEach(geojson, callback) {
-  // validation
-  if (!geojson) throw new Error("geojson is required");
-
-  flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-    if (feature.geometry === null) return;
-    var type = feature.geometry.type;
-    var coords = feature.geometry.coordinates;
-    switch (type) {
-      case "LineString":
-        if (callback(feature, featureIndex, multiFeatureIndex, 0, 0) === false)
-          return false;
-        break;
-      case "Polygon":
-        for (
-          var geometryIndex = 0;
-          geometryIndex < coords.length;
-          geometryIndex++
-        ) {
-          if (
-            callback(
-              helpers.lineString(coords[geometryIndex], feature.properties),
-              featureIndex,
-              multiFeatureIndex,
-              geometryIndex
-            ) === false
-          )
-            return false;
-        }
-        break;
-    }
-  });
-}
-
-/**
- * Callback for lineReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback lineReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed.
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name lineReduce
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var multiPoly = turf.multiPolygon([
- *   turf.polygon([[[12,48],[2,41],[24,38],[12,48]], [[9,44],[13,41],[13,45],[9,44]]]),
- *   turf.polygon([[[5, 5], [0, 0], [2, 2], [4, 4], [5, 5]]])
- * ]);
- *
- * turf.lineReduce(multiPoly, function (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentLine
- * });
- */
-function lineReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  lineEach(
-    geojson,
-    function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
-      if (featureIndex === 0 && initialValue === undefined)
-        previousValue = currentLine;
-      else
-        previousValue = callback(
-          previousValue,
-          currentLine,
-          featureIndex,
-          multiFeatureIndex,
-          geometryIndex
-        );
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Finds a particular 2-vertex LineString Segment from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- * Point & MultiPoint will always return null.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.segmentIndex=0] Segment Index
- * @param {Object} [options.properties={}] Translate Properties to output LineString
- * @param {BBox} [options.bbox={}] Translate BBox to output LineString
- * @param {number|string} [options.id={}] Translate Id to output LineString
- * @returns {Feature<LineString>} 2-vertex GeoJSON Feature LineString
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findSegment(multiLine);
- * // => Feature<LineString<[[10, 10], [50, 30]]>>
- *
- * // First Segment of 2nd Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: 1});
- * // => Feature<LineString<[[-10, -10], [-50, -30]]>>
- *
- * // Last Segment of Last Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: -1, segmentIndex: -1});
- * // => Feature<LineString<[[-50, -30], [-30, -40]]>>
- */
-function findSegment(geojson, options) {
-  // Optional Parameters
-  options = options || {};
-  if (!helpers.isObject(options)) throw new Error("options is invalid");
-  var featureIndex = options.featureIndex || 0;
-  var multiFeatureIndex = options.multiFeatureIndex || 0;
-  var geometryIndex = options.geometryIndex || 0;
-  var segmentIndex = options.segmentIndex || 0;
-
-  // Find FeatureIndex
-  var properties = options.properties;
-  var geometry;
-
-  switch (geojson.type) {
-    case "FeatureCollection":
-      if (featureIndex < 0)
-        featureIndex = geojson.features.length + featureIndex;
-      properties = properties || geojson.features[featureIndex].properties;
-      geometry = geojson.features[featureIndex].geometry;
-      break;
-    case "Feature":
-      properties = properties || geojson.properties;
-      geometry = geojson.geometry;
-      break;
-    case "Point":
-    case "MultiPoint":
-      return null;
-    case "LineString":
-    case "Polygon":
-    case "MultiLineString":
-    case "MultiPolygon":
-      geometry = geojson;
-      break;
-    default:
-      throw new Error("geojson is invalid");
-  }
-
-  // Find SegmentIndex
-  if (geometry === null) return null;
-  var coords = geometry.coordinates;
-  switch (geometry.type) {
-    case "Point":
-    case "MultiPoint":
-      return null;
-    case "LineString":
-      if (segmentIndex < 0) segmentIndex = coords.length + segmentIndex - 1;
-      return helpers.lineString(
-        [coords[segmentIndex], coords[segmentIndex + 1]],
-        properties,
-        options
-      );
-    case "Polygon":
-      if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-      if (segmentIndex < 0)
-        segmentIndex = coords[geometryIndex].length + segmentIndex - 1;
-      return helpers.lineString(
-        [
-          coords[geometryIndex][segmentIndex],
-          coords[geometryIndex][segmentIndex + 1],
-        ],
-        properties,
-        options
-      );
-    case "MultiLineString":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (segmentIndex < 0)
-        segmentIndex = coords[multiFeatureIndex].length + segmentIndex - 1;
-      return helpers.lineString(
-        [
-          coords[multiFeatureIndex][segmentIndex],
-          coords[multiFeatureIndex][segmentIndex + 1],
-        ],
-        properties,
-        options
-      );
-    case "MultiPolygon":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (geometryIndex < 0)
-        geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-      if (segmentIndex < 0)
-        segmentIndex =
-          coords[multiFeatureIndex][geometryIndex].length - segmentIndex - 1;
-      return helpers.lineString(
-        [
-          coords[multiFeatureIndex][geometryIndex][segmentIndex],
-          coords[multiFeatureIndex][geometryIndex][segmentIndex + 1],
-        ],
-        properties,
-        options
-      );
-  }
-  throw new Error("geojson is invalid");
-}
-
-/**
- * Finds a particular Point from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.coordIndex=0] Coord Index
- * @param {Object} [options.properties={}] Translate Properties to output Point
- * @param {BBox} [options.bbox={}] Translate BBox to output Point
- * @param {number|string} [options.id={}] Translate Id to output Point
- * @returns {Feature<Point>} 2-vertex GeoJSON Feature Point
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findPoint(multiLine);
- * // => Feature<Point<[10, 10]>>
- *
- * // First Segment of the 2nd Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: 1});
- * // => Feature<Point<[-10, -10]>>
- *
- * // Last Segment of last Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: -1, coordIndex: -1});
- * // => Feature<Point<[-30, -40]>>
- */
-function findPoint(geojson, options) {
-  // Optional Parameters
-  options = options || {};
-  if (!helpers.isObject(options)) throw new Error("options is invalid");
-  var featureIndex = options.featureIndex || 0;
-  var multiFeatureIndex = options.multiFeatureIndex || 0;
-  var geometryIndex = options.geometryIndex || 0;
-  var coordIndex = options.coordIndex || 0;
-
-  // Find FeatureIndex
-  var properties = options.properties;
-  var geometry;
-
-  switch (geojson.type) {
-    case "FeatureCollection":
-      if (featureIndex < 0)
-        featureIndex = geojson.features.length + featureIndex;
-      properties = properties || geojson.features[featureIndex].properties;
-      geometry = geojson.features[featureIndex].geometry;
-      break;
-    case "Feature":
-      properties = properties || geojson.properties;
-      geometry = geojson.geometry;
-      break;
-    case "Point":
-    case "MultiPoint":
-      return null;
-    case "LineString":
-    case "Polygon":
-    case "MultiLineString":
-    case "MultiPolygon":
-      geometry = geojson;
-      break;
-    default:
-      throw new Error("geojson is invalid");
-  }
-
-  // Find Coord Index
-  if (geometry === null) return null;
-  var coords = geometry.coordinates;
-  switch (geometry.type) {
-    case "Point":
-      return helpers.point(coords, properties, options);
-    case "MultiPoint":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      return helpers.point(coords[multiFeatureIndex], properties, options);
-    case "LineString":
-      if (coordIndex < 0) coordIndex = coords.length + coordIndex;
-      return helpers.point(coords[coordIndex], properties, options);
-    case "Polygon":
-      if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-      if (coordIndex < 0)
-        coordIndex = coords[geometryIndex].length + coordIndex;
-      return helpers.point(coords[geometryIndex][coordIndex], properties, options);
-    case "MultiLineString":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (coordIndex < 0)
-        coordIndex = coords[multiFeatureIndex].length + coordIndex;
-      return helpers.point(coords[multiFeatureIndex][coordIndex], properties, options);
-    case "MultiPolygon":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (geometryIndex < 0)
-        geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-      if (coordIndex < 0)
-        coordIndex =
-          coords[multiFeatureIndex][geometryIndex].length - coordIndex;
-      return helpers.point(
-        coords[multiFeatureIndex][geometryIndex][coordIndex],
-        properties,
-        options
-      );
-  }
-  throw new Error("geojson is invalid");
-}
-
-exports.coordEach = coordEach;
-exports.coordReduce = coordReduce;
-exports.propEach = propEach;
-exports.propReduce = propReduce;
-exports.featureEach = featureEach;
-exports.featureReduce = featureReduce;
-exports.coordAll = coordAll;
-exports.geomEach = geomEach;
-exports.geomReduce = geomReduce;
-exports.flattenEach = flattenEach;
-exports.flattenReduce = flattenReduce;
-exports.segmentEach = segmentEach;
-exports.segmentReduce = segmentReduce;
-exports.lineEach = lineEach;
-exports.lineReduce = lineReduce;
-exports.findSegment = findSegment;
-exports.findPoint = findPoint;
-
-
-/***/ }),
-
-/***/ 6698:
+/***/ 332:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var meta_1 = __webpack_require__(4636);
+var meta_1 = __webpack_require__(2946);
 /**
  * Takes a set of features, calculates the bbox of all input features, and returns a bounding box.
  *
@@ -69113,7 +66921,49 @@ exports["default"] = bbox;
 
 /***/ }),
 
-/***/ 3535:
+/***/ 4051:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var meta_1 = __webpack_require__(2946);
+var helpers_1 = __webpack_require__(7458);
+/**
+ * Takes one or more features and calculates the centroid using the mean of all vertices.
+ * This lessens the effect of small islands and artifacts when calculating the centroid of a set of polygons.
+ *
+ * @name centroid
+ * @param {GeoJSON} geojson GeoJSON to be centered
+ * @param {Object} [options={}] Optional Parameters
+ * @param {Object} [options.properties={}] an Object that is used as the {@link Feature}'s properties
+ * @returns {Feature<Point>} the centroid of the input features
+ * @example
+ * var polygon = turf.polygon([[[-81, 41], [-88, 36], [-84, 31], [-80, 33], [-77, 39], [-81, 41]]]);
+ *
+ * var centroid = turf.centroid(polygon);
+ *
+ * //addToMap
+ * var addToMap = [polygon, centroid]
+ */
+function centroid(geojson, options) {
+    if (options === void 0) { options = {}; }
+    var xSum = 0;
+    var ySum = 0;
+    var len = 0;
+    meta_1.coordEach(geojson, function (coord) {
+        xSum += coord[0];
+        ySum += coord[1];
+        len++;
+    }, true);
+    return helpers_1.point([xSum / len, ySum / len], options.properties);
+}
+exports["default"] = centroid;
+
+
+/***/ }),
+
+/***/ 7458:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -69845,7 +67695,7 @@ exports.validateId = validateId;
 
 /***/ }),
 
-/***/ 4636:
+/***/ 2946:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -69853,7 +67703,7 @@ exports.validateId = validateId;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 
-var helpers = __webpack_require__(3535);
+var helpers = __webpack_require__(7458);
 
 /**
  * Callback for coordEach
@@ -71253,1951 +69103,28 @@ function findPoint(geojson, options) {
   throw new Error("geojson is invalid");
 }
 
+exports.coordAll = coordAll;
 exports.coordEach = coordEach;
 exports.coordReduce = coordReduce;
-exports.propEach = propEach;
-exports.propReduce = propReduce;
 exports.featureEach = featureEach;
 exports.featureReduce = featureReduce;
-exports.coordAll = coordAll;
-exports.geomEach = geomEach;
-exports.geomReduce = geomReduce;
+exports.findPoint = findPoint;
+exports.findSegment = findSegment;
 exports.flattenEach = flattenEach;
 exports.flattenReduce = flattenReduce;
-exports.segmentEach = segmentEach;
-exports.segmentReduce = segmentReduce;
+exports.geomEach = geomEach;
+exports.geomReduce = geomReduce;
 exports.lineEach = lineEach;
 exports.lineReduce = lineReduce;
-exports.findSegment = findSegment;
-exports.findPoint = findPoint;
-
-
-/***/ }),
-
-/***/ 2768:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var meta_1 = __webpack_require__(6044);
-var helpers_1 = __webpack_require__(7663);
-/**
- * Takes one or more features and calculates the centroid using the mean of all vertices.
- * This lessens the effect of small islands and artifacts when calculating the centroid of a set of polygons.
- *
- * @name centroid
- * @param {GeoJSON} geojson GeoJSON to be centered
- * @param {Object} [options={}] Optional Parameters
- * @param {Object} [options.properties={}] an Object that is used as the {@link Feature}'s properties
- * @returns {Feature<Point>} the centroid of the input features
- * @example
- * var polygon = turf.polygon([[[-81, 41], [-88, 36], [-84, 31], [-80, 33], [-77, 39], [-81, 41]]]);
- *
- * var centroid = turf.centroid(polygon);
- *
- * //addToMap
- * var addToMap = [polygon, centroid]
- */
-function centroid(geojson, options) {
-    if (options === void 0) { options = {}; }
-    var xSum = 0;
-    var ySum = 0;
-    var len = 0;
-    meta_1.coordEach(geojson, function (coord) {
-        xSum += coord[0];
-        ySum += coord[1];
-        len++;
-    });
-    return helpers_1.point([xSum / len, ySum / len], options.properties);
-}
-exports["default"] = centroid;
-
-
-/***/ }),
-
-/***/ 7663:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * @module helpers
- */
-/**
- * Earth Radius used with the Harvesine formula and approximates using a spherical (non-ellipsoid) Earth.
- *
- * @memberof helpers
- * @type {number}
- */
-exports.earthRadius = 6371008.8;
-/**
- * Unit of measurement factors using a spherical (non-ellipsoid) earth radius.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.factors = {
-    centimeters: exports.earthRadius * 100,
-    centimetres: exports.earthRadius * 100,
-    degrees: exports.earthRadius / 111325,
-    feet: exports.earthRadius * 3.28084,
-    inches: exports.earthRadius * 39.370,
-    kilometers: exports.earthRadius / 1000,
-    kilometres: exports.earthRadius / 1000,
-    meters: exports.earthRadius,
-    metres: exports.earthRadius,
-    miles: exports.earthRadius / 1609.344,
-    millimeters: exports.earthRadius * 1000,
-    millimetres: exports.earthRadius * 1000,
-    nauticalmiles: exports.earthRadius / 1852,
-    radians: 1,
-    yards: exports.earthRadius / 1.0936,
-};
-/**
- * Units of measurement factors based on 1 meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.unitsFactors = {
-    centimeters: 100,
-    centimetres: 100,
-    degrees: 1 / 111325,
-    feet: 3.28084,
-    inches: 39.370,
-    kilometers: 1 / 1000,
-    kilometres: 1 / 1000,
-    meters: 1,
-    metres: 1,
-    miles: 1 / 1609.344,
-    millimeters: 1000,
-    millimetres: 1000,
-    nauticalmiles: 1 / 1852,
-    radians: 1 / exports.earthRadius,
-    yards: 1 / 1.0936,
-};
-/**
- * Area of measurement factors based on 1 square meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.areaFactors = {
-    acres: 0.000247105,
-    centimeters: 10000,
-    centimetres: 10000,
-    feet: 10.763910417,
-    inches: 1550.003100006,
-    kilometers: 0.000001,
-    kilometres: 0.000001,
-    meters: 1,
-    metres: 1,
-    miles: 3.86e-7,
-    millimeters: 1000000,
-    millimetres: 1000000,
-    yards: 1.195990046,
-};
-/**
- * Wraps a GeoJSON {@link Geometry} in a GeoJSON {@link Feature}.
- *
- * @name feature
- * @param {Geometry} geometry input geometry
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature} a GeoJSON Feature
- * @example
- * var geometry = {
- *   "type": "Point",
- *   "coordinates": [110, 50]
- * };
- *
- * var feature = turf.feature(geometry);
- *
- * //=feature
- */
-function feature(geom, properties, options) {
-    if (options === void 0) { options = {}; }
-    var feat = { type: "Feature" };
-    if (options.id === 0 || options.id) {
-        feat.id = options.id;
-    }
-    if (options.bbox) {
-        feat.bbox = options.bbox;
-    }
-    feat.properties = properties || {};
-    feat.geometry = geom;
-    return feat;
-}
-exports.feature = feature;
-/**
- * Creates a GeoJSON {@link Geometry} from a Geometry string type & coordinates.
- * For GeometryCollection type use `helpers.geometryCollection`
- *
- * @name geometry
- * @param {string} type Geometry Type
- * @param {Array<any>} coordinates Coordinates
- * @param {Object} [options={}] Optional Parameters
- * @returns {Geometry} a GeoJSON Geometry
- * @example
- * var type = "Point";
- * var coordinates = [110, 50];
- * var geometry = turf.geometry(type, coordinates);
- * // => geometry
- */
-function geometry(type, coordinates, options) {
-    if (options === void 0) { options = {}; }
-    switch (type) {
-        case "Point": return point(coordinates).geometry;
-        case "LineString": return lineString(coordinates).geometry;
-        case "Polygon": return polygon(coordinates).geometry;
-        case "MultiPoint": return multiPoint(coordinates).geometry;
-        case "MultiLineString": return multiLineString(coordinates).geometry;
-        case "MultiPolygon": return multiPolygon(coordinates).geometry;
-        default: throw new Error(type + " is invalid");
-    }
-}
-exports.geometry = geometry;
-/**
- * Creates a {@link Point} {@link Feature} from a Position.
- *
- * @name point
- * @param {Array<number>} coordinates longitude, latitude position (each in decimal degrees)
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Point>} a Point feature
- * @example
- * var point = turf.point([-75.343, 39.984]);
- *
- * //=point
- */
-function point(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "Point",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.point = point;
-/**
- * Creates a {@link Point} {@link FeatureCollection} from an Array of Point coordinates.
- *
- * @name points
- * @param {Array<Array<number>>} coordinates an array of Points
- * @param {Object} [properties={}] Translate these properties to each Feature
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Point>} Point Feature
- * @example
- * var points = turf.points([
- *   [-75, 39],
- *   [-80, 45],
- *   [-78, 50]
- * ]);
- *
- * //=points
- */
-function points(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return point(coords, properties);
-    }), options);
-}
-exports.points = points;
-/**
- * Creates a {@link Polygon} {@link Feature} from an Array of LinearRings.
- *
- * @name polygon
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Polygon>} Polygon Feature
- * @example
- * var polygon = turf.polygon([[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]], { name: 'poly1' });
- *
- * //=polygon
- */
-function polygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    for (var _i = 0, coordinates_1 = coordinates; _i < coordinates_1.length; _i++) {
-        var ring = coordinates_1[_i];
-        if (ring.length < 4) {
-            throw new Error("Each LinearRing of a Polygon must have 4 or more Positions.");
-        }
-        for (var j = 0; j < ring[ring.length - 1].length; j++) {
-            // Check if first point of Polygon contains two numbers
-            if (ring[ring.length - 1][j] !== ring[0][j]) {
-                throw new Error("First and last Position are not equivalent.");
-            }
-        }
-    }
-    var geom = {
-        type: "Polygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.polygon = polygon;
-/**
- * Creates a {@link Polygon} {@link FeatureCollection} from an Array of Polygon coordinates.
- *
- * @name polygons
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygon coordinates
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Polygon>} Polygon FeatureCollection
- * @example
- * var polygons = turf.polygons([
- *   [[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]],
- *   [[[-15, 42], [-14, 46], [-12, 41], [-17, 44], [-15, 42]]],
- * ]);
- *
- * //=polygons
- */
-function polygons(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return polygon(coords, properties);
-    }), options);
-}
-exports.polygons = polygons;
-/**
- * Creates a {@link LineString} {@link Feature} from an Array of Positions.
- *
- * @name lineString
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<LineString>} LineString Feature
- * @example
- * var linestring1 = turf.lineString([[-24, 63], [-23, 60], [-25, 65], [-20, 69]], {name: 'line 1'});
- * var linestring2 = turf.lineString([[-14, 43], [-13, 40], [-15, 45], [-10, 49]], {name: 'line 2'});
- *
- * //=linestring1
- * //=linestring2
- */
-function lineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    if (coordinates.length < 2) {
-        throw new Error("coordinates must be an array of two or more positions");
-    }
-    var geom = {
-        type: "LineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.lineString = lineString;
-/**
- * Creates a {@link LineString} {@link FeatureCollection} from an Array of LineString coordinates.
- *
- * @name lineStrings
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<LineString>} LineString FeatureCollection
- * @example
- * var linestrings = turf.lineStrings([
- *   [[-24, 63], [-23, 60], [-25, 65], [-20, 69]],
- *   [[-14, 43], [-13, 40], [-15, 45], [-10, 49]]
- * ]);
- *
- * //=linestrings
- */
-function lineStrings(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return lineString(coords, properties);
-    }), options);
-}
-exports.lineStrings = lineStrings;
-/**
- * Takes one or more {@link Feature|Features} and creates a {@link FeatureCollection}.
- *
- * @name featureCollection
- * @param {Feature[]} features input features
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {FeatureCollection} FeatureCollection of Features
- * @example
- * var locationA = turf.point([-75.343, 39.984], {name: 'Location A'});
- * var locationB = turf.point([-75.833, 39.284], {name: 'Location B'});
- * var locationC = turf.point([-75.534, 39.123], {name: 'Location C'});
- *
- * var collection = turf.featureCollection([
- *   locationA,
- *   locationB,
- *   locationC
- * ]);
- *
- * //=collection
- */
-function featureCollection(features, options) {
-    if (options === void 0) { options = {}; }
-    var fc = { type: "FeatureCollection" };
-    if (options.id) {
-        fc.id = options.id;
-    }
-    if (options.bbox) {
-        fc.bbox = options.bbox;
-    }
-    fc.features = features;
-    return fc;
-}
-exports.featureCollection = featureCollection;
-/**
- * Creates a {@link Feature<MultiLineString>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiLineString
- * @param {Array<Array<Array<number>>>} coordinates an array of LineStrings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiLineString>} a MultiLineString feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiLine = turf.multiLineString([[[0,0],[10,10]]]);
- *
- * //=multiLine
- */
-function multiLineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiLineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiLineString = multiLineString;
-/**
- * Creates a {@link Feature<MultiPoint>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPoint
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPoint>} a MultiPoint feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPt = turf.multiPoint([[0,0],[10,10]]);
- *
- * //=multiPt
- */
-function multiPoint(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPoint",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPoint = multiPoint;
-/**
- * Creates a {@link Feature<MultiPolygon>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPolygon
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygons
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPolygon>} a multipolygon feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPoly = turf.multiPolygon([[[[0,0],[0,10],[10,10],[10,0],[0,0]]]]);
- *
- * //=multiPoly
- *
- */
-function multiPolygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPolygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPolygon = multiPolygon;
-/**
- * Creates a {@link Feature<GeometryCollection>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name geometryCollection
- * @param {Array<Geometry>} geometries an array of GeoJSON Geometries
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<GeometryCollection>} a GeoJSON GeometryCollection Feature
- * @example
- * var pt = turf.geometry("Point", [100, 0]);
- * var line = turf.geometry("LineString", [[101, 0], [102, 1]]);
- * var collection = turf.geometryCollection([pt, line]);
- *
- * // => collection
- */
-function geometryCollection(geometries, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "GeometryCollection",
-        geometries: geometries,
-    };
-    return feature(geom, properties, options);
-}
-exports.geometryCollection = geometryCollection;
-/**
- * Round number to precision
- *
- * @param {number} num Number
- * @param {number} [precision=0] Precision
- * @returns {number} rounded number
- * @example
- * turf.round(120.4321)
- * //=120
- *
- * turf.round(120.4321, 2)
- * //=120.43
- */
-function round(num, precision) {
-    if (precision === void 0) { precision = 0; }
-    if (precision && !(precision >= 0)) {
-        throw new Error("precision must be a positive number");
-    }
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(num * multiplier) / multiplier;
-}
-exports.round = round;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from radians to a more friendly unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name radiansToLength
- * @param {number} radians in radians across the sphere
- * @param {string} [units="kilometers"] can be degrees, radians, miles, or kilometers inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} distance
- */
-function radiansToLength(radians, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return radians * factor;
-}
-exports.radiansToLength = radiansToLength;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into radians
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name lengthToRadians
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, or kilometers inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} radians
- */
-function lengthToRadians(distance, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return distance / factor;
-}
-exports.lengthToRadians = lengthToRadians;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into degrees
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, centimeters, kilometres, feet
- *
- * @name lengthToDegrees
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, or kilometers inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} degrees
- */
-function lengthToDegrees(distance, units) {
-    return radiansToDegrees(lengthToRadians(distance, units));
-}
-exports.lengthToDegrees = lengthToDegrees;
-/**
- * Converts any bearing angle from the north line direction (positive clockwise)
- * and returns an angle between 0-360 degrees (positive clockwise), 0 being the north line
- *
- * @name bearingToAzimuth
- * @param {number} bearing angle, between -180 and +180 degrees
- * @returns {number} angle between 0 and 360 degrees
- */
-function bearingToAzimuth(bearing) {
-    var angle = bearing % 360;
-    if (angle < 0) {
-        angle += 360;
-    }
-    return angle;
-}
-exports.bearingToAzimuth = bearingToAzimuth;
-/**
- * Converts an angle in radians to degrees
- *
- * @name radiansToDegrees
- * @param {number} radians angle in radians
- * @returns {number} degrees between 0 and 360 degrees
- */
-function radiansToDegrees(radians) {
-    var degrees = radians % (2 * Math.PI);
-    return degrees * 180 / Math.PI;
-}
-exports.radiansToDegrees = radiansToDegrees;
-/**
- * Converts an angle in degrees to radians
- *
- * @name degreesToRadians
- * @param {number} degrees angle between 0 and 360 degrees
- * @returns {number} angle in radians
- */
-function degreesToRadians(degrees) {
-    var radians = degrees % 360;
-    return radians * Math.PI / 180;
-}
-exports.degreesToRadians = degreesToRadians;
-/**
- * Converts a length to the requested unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @param {number} length to be converted
- * @param {Units} [originalUnit="kilometers"] of the length
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted length
- */
-function convertLength(length, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "kilometers"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(length >= 0)) {
-        throw new Error("length must be a positive number");
-    }
-    return radiansToLength(lengthToRadians(length, originalUnit), finalUnit);
-}
-exports.convertLength = convertLength;
-/**
- * Converts a area to the requested unit.
- * Valid units: kilometers, kilometres, meters, metres, centimetres, millimeters, acres, miles, yards, feet, inches
- * @param {number} area to be converted
- * @param {Units} [originalUnit="meters"] of the distance
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted distance
- */
-function convertArea(area, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "meters"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(area >= 0)) {
-        throw new Error("area must be a positive number");
-    }
-    var startFactor = exports.areaFactors[originalUnit];
-    if (!startFactor) {
-        throw new Error("invalid original units");
-    }
-    var finalFactor = exports.areaFactors[finalUnit];
-    if (!finalFactor) {
-        throw new Error("invalid final units");
-    }
-    return (area / startFactor) * finalFactor;
-}
-exports.convertArea = convertArea;
-/**
- * isNumber
- *
- * @param {*} num Number to validate
- * @returns {boolean} true/false
- * @example
- * turf.isNumber(123)
- * //=true
- * turf.isNumber('foo')
- * //=false
- */
-function isNumber(num) {
-    return !isNaN(num) && num !== null && !Array.isArray(num) && !/^\s*$/.test(num);
-}
-exports.isNumber = isNumber;
-/**
- * isObject
- *
- * @param {*} input variable to validate
- * @returns {boolean} true/false
- * @example
- * turf.isObject({elevation: 10})
- * //=true
- * turf.isObject('foo')
- * //=false
- */
-function isObject(input) {
-    return (!!input) && (input.constructor === Object);
-}
-exports.isObject = isObject;
-/**
- * Validate BBox
- *
- * @private
- * @param {Array<number>} bbox BBox to validate
- * @returns {void}
- * @throws Error if BBox is not valid
- * @example
- * validateBBox([-180, -40, 110, 50])
- * //=OK
- * validateBBox([-180, -40])
- * //=Error
- * validateBBox('Foo')
- * //=Error
- * validateBBox(5)
- * //=Error
- * validateBBox(null)
- * //=Error
- * validateBBox(undefined)
- * //=Error
- */
-function validateBBox(bbox) {
-    if (!bbox) {
-        throw new Error("bbox is required");
-    }
-    if (!Array.isArray(bbox)) {
-        throw new Error("bbox must be an Array");
-    }
-    if (bbox.length !== 4 && bbox.length !== 6) {
-        throw new Error("bbox must be an Array of 4 or 6 numbers");
-    }
-    bbox.forEach(function (num) {
-        if (!isNumber(num)) {
-            throw new Error("bbox must only contain numbers");
-        }
-    });
-}
-exports.validateBBox = validateBBox;
-/**
- * Validate Id
- *
- * @private
- * @param {string|number} id Id to validate
- * @returns {void}
- * @throws Error if Id is not valid
- * @example
- * validateId([-180, -40, 110, 50])
- * //=Error
- * validateId([-180, -40])
- * //=Error
- * validateId('Foo')
- * //=OK
- * validateId(5)
- * //=OK
- * validateId(null)
- * //=Error
- * validateId(undefined)
- * //=Error
- */
-function validateId(id) {
-    if (!id) {
-        throw new Error("id is required");
-    }
-    if (["string", "number"].indexOf(typeof id) === -1) {
-        throw new Error("id must be a number or a string");
-    }
-}
-exports.validateId = validateId;
-// Deprecated methods
-function radians2degrees() {
-    throw new Error("method has been renamed to `radiansToDegrees`");
-}
-exports.radians2degrees = radians2degrees;
-function degrees2radians() {
-    throw new Error("method has been renamed to `degreesToRadians`");
-}
-exports.degrees2radians = degrees2radians;
-function distanceToDegrees() {
-    throw new Error("method has been renamed to `lengthToDegrees`");
-}
-exports.distanceToDegrees = distanceToDegrees;
-function distanceToRadians() {
-    throw new Error("method has been renamed to `lengthToRadians`");
-}
-exports.distanceToRadians = distanceToRadians;
-function radiansToDistance() {
-    throw new Error("method has been renamed to `radiansToLength`");
-}
-exports.radiansToDistance = radiansToDistance;
-function bearingToAngle() {
-    throw new Error("method has been renamed to `bearingToAzimuth`");
-}
-exports.bearingToAngle = bearingToAngle;
-function convertDistance() {
-    throw new Error("method has been renamed to `convertLength`");
-}
-exports.convertDistance = convertDistance;
-
-
-/***/ }),
-
-/***/ 6044:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-var helpers = __webpack_require__(7663);
-
-/**
- * Callback for coordEach
- *
- * @callback coordEachCallback
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Iterate over coordinates in any GeoJSON object, similar to Array.forEach()
- *
- * @name coordEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentCoord, coordIndex, featureIndex, multiFeatureIndex)
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordEach(features, function (currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function coordEach(geojson, callback, excludeWrapCoord) {
-    // Handles null Geometry -- Skips this GeoJSON
-    if (geojson === null) return;
-    var j, k, l, geometry, stopG, coords,
-        geometryMaybeCollection,
-        wrapShrink = 0,
-        coordIndex = 0,
-        isGeometryCollection,
-        type = geojson.type,
-        isFeatureCollection = type === 'FeatureCollection',
-        isFeature = type === 'Feature',
-        stop = isFeatureCollection ? geojson.features.length : 1;
-
-    // This logic may look a little weird. The reason why it is that way
-    // is because it's trying to be fast. GeoJSON supports multiple kinds
-    // of objects at its root: FeatureCollection, Features, Geometries.
-    // This function has the responsibility of handling all of them, and that
-    // means that some of the `for` loops you see below actually just don't apply
-    // to certain inputs. For instance, if you give this just a
-    // Point geometry, then both loops are short-circuited and all we do
-    // is gradually rename the input until it's called 'geometry'.
-    //
-    // This also aims to allocate as few resources as possible: just a
-    // few numbers and booleans, rather than any temporary arrays as would
-    // be required with the normalization approach.
-    for (var featureIndex = 0; featureIndex < stop; featureIndex++) {
-        geometryMaybeCollection = (isFeatureCollection ? geojson.features[featureIndex].geometry :
-            (isFeature ? geojson.geometry : geojson));
-        isGeometryCollection = (geometryMaybeCollection) ? geometryMaybeCollection.type === 'GeometryCollection' : false;
-        stopG = isGeometryCollection ? geometryMaybeCollection.geometries.length : 1;
-
-        for (var geomIndex = 0; geomIndex < stopG; geomIndex++) {
-            var multiFeatureIndex = 0;
-            var geometryIndex = 0;
-            geometry = isGeometryCollection ?
-                geometryMaybeCollection.geometries[geomIndex] : geometryMaybeCollection;
-
-            // Handles null Geometry -- Skips this geometry
-            if (geometry === null) continue;
-            coords = geometry.coordinates;
-            var geomType = geometry.type;
-
-            wrapShrink = (excludeWrapCoord && (geomType === 'Polygon' || geomType === 'MultiPolygon')) ? 1 : 0;
-
-            switch (geomType) {
-            case null:
-                break;
-            case 'Point':
-                if (callback(coords, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                coordIndex++;
-                multiFeatureIndex++;
-                break;
-            case 'LineString':
-            case 'MultiPoint':
-                for (j = 0; j < coords.length; j++) {
-                    if (callback(coords[j], coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                    coordIndex++;
-                    if (geomType === 'MultiPoint') multiFeatureIndex++;
-                }
-                if (geomType === 'LineString') multiFeatureIndex++;
-                break;
-            case 'Polygon':
-            case 'MultiLineString':
-                for (j = 0; j < coords.length; j++) {
-                    for (k = 0; k < coords[j].length - wrapShrink; k++) {
-                        if (callback(coords[j][k], coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                        coordIndex++;
-                    }
-                    if (geomType === 'MultiLineString') multiFeatureIndex++;
-                    if (geomType === 'Polygon') geometryIndex++;
-                }
-                if (geomType === 'Polygon') multiFeatureIndex++;
-                break;
-            case 'MultiPolygon':
-                for (j = 0; j < coords.length; j++) {
-                    geometryIndex = 0;
-                    for (k = 0; k < coords[j].length; k++) {
-                        for (l = 0; l < coords[j][k].length - wrapShrink; l++) {
-                            if (callback(coords[j][k][l], coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                            coordIndex++;
-                        }
-                        geometryIndex++;
-                    }
-                    multiFeatureIndex++;
-                }
-                break;
-            case 'GeometryCollection':
-                for (j = 0; j < geometry.geometries.length; j++)
-                    if (coordEach(geometry.geometries[j], callback, excludeWrapCoord) === false) return false;
-                break;
-            default:
-                throw new Error('Unknown Geometry Type');
-            }
-        }
-    }
-}
-
-/**
- * Callback for coordReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback coordReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * Starts at index 0, if an initialValue is provided, and at index 1 otherwise.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Reduce coordinates in any GeoJSON object, similar to Array.reduce()
- *
- * @name coordReduce
- * @param {FeatureCollection|Geometry|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentCoord, coordIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordReduce(features, function (previousValue, currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentCoord;
- * });
- */
-function coordReduce(geojson, callback, initialValue, excludeWrapCoord) {
-    var previousValue = initialValue;
-    coordEach(geojson, function (currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
-        if (coordIndex === 0 && initialValue === undefined) previousValue = currentCoord;
-        else previousValue = callback(previousValue, currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex);
-    }, excludeWrapCoord);
-    return previousValue;
-}
-
-/**
- * Callback for propEach
- *
- * @callback propEachCallback
- * @param {Object} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over properties in any GeoJSON object, similar to Array.forEach()
- *
- * @name propEach
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentProperties, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propEach(features, function (currentProperties, featureIndex) {
- *   //=currentProperties
- *   //=featureIndex
- * });
- */
-function propEach(geojson, callback) {
-    var i;
-    switch (geojson.type) {
-    case 'FeatureCollection':
-        for (i = 0; i < geojson.features.length; i++) {
-            if (callback(geojson.features[i].properties, i) === false) break;
-        }
-        break;
-    case 'Feature':
-        callback(geojson.properties, 0);
-        break;
-    }
-}
-
-
-/**
- * Callback for propReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback propReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {*} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce properties in any GeoJSON object into a single value,
- * similar to how Array.reduce works. However, in this case we lazily run
- * the reduction, so an array of all properties is unnecessary.
- *
- * @name propReduce
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentProperties, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propReduce(features, function (previousValue, currentProperties, featureIndex) {
- *   //=previousValue
- *   //=currentProperties
- *   //=featureIndex
- *   return currentProperties
- * });
- */
-function propReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    propEach(geojson, function (currentProperties, featureIndex) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentProperties;
-        else previousValue = callback(previousValue, currentProperties, featureIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Callback for featureEach
- *
- * @callback featureEachCallback
- * @param {Feature<any>} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name featureEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.featureEach(features, function (currentFeature, featureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- * });
- */
-function featureEach(geojson, callback) {
-    if (geojson.type === 'Feature') {
-        callback(geojson, 0);
-    } else if (geojson.type === 'FeatureCollection') {
-        for (var i = 0; i < geojson.features.length; i++) {
-            if (callback(geojson.features[i], i) === false) break;
-        }
-    }
-}
-
-/**
- * Callback for featureReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback featureReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name featureReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.featureReduce(features, function (previousValue, currentFeature, featureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   return currentFeature
- * });
- */
-function featureReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    featureEach(geojson, function (currentFeature, featureIndex) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentFeature;
-        else previousValue = callback(previousValue, currentFeature, featureIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Get all coordinates from any GeoJSON object.
- *
- * @name coordAll
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @returns {Array<Array<number>>} coordinate position array
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * var coords = turf.coordAll(features);
- * //= [[26, 37], [36, 53]]
- */
-function coordAll(geojson) {
-    var coords = [];
-    coordEach(geojson, function (coord) {
-        coords.push(coord);
-    });
-    return coords;
-}
-
-/**
- * Callback for geomEach
- *
- * @callback geomEachCallback
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Iterate over each geometry in any GeoJSON object, similar to Array.forEach()
- *
- * @name geomEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomEach(features, function (currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- * });
- */
-function geomEach(geojson, callback) {
-    var i, j, g, geometry, stopG,
-        geometryMaybeCollection,
-        isGeometryCollection,
-        featureProperties,
-        featureBBox,
-        featureId,
-        featureIndex = 0,
-        isFeatureCollection = geojson.type === 'FeatureCollection',
-        isFeature = geojson.type === 'Feature',
-        stop = isFeatureCollection ? geojson.features.length : 1;
-
-    // This logic may look a little weird. The reason why it is that way
-    // is because it's trying to be fast. GeoJSON supports multiple kinds
-    // of objects at its root: FeatureCollection, Features, Geometries.
-    // This function has the responsibility of handling all of them, and that
-    // means that some of the `for` loops you see below actually just don't apply
-    // to certain inputs. For instance, if you give this just a
-    // Point geometry, then both loops are short-circuited and all we do
-    // is gradually rename the input until it's called 'geometry'.
-    //
-    // This also aims to allocate as few resources as possible: just a
-    // few numbers and booleans, rather than any temporary arrays as would
-    // be required with the normalization approach.
-    for (i = 0; i < stop; i++) {
-
-        geometryMaybeCollection = (isFeatureCollection ? geojson.features[i].geometry :
-            (isFeature ? geojson.geometry : geojson));
-        featureProperties = (isFeatureCollection ? geojson.features[i].properties :
-            (isFeature ? geojson.properties : {}));
-        featureBBox = (isFeatureCollection ? geojson.features[i].bbox :
-            (isFeature ? geojson.bbox : undefined));
-        featureId = (isFeatureCollection ? geojson.features[i].id :
-            (isFeature ? geojson.id : undefined));
-        isGeometryCollection = (geometryMaybeCollection) ? geometryMaybeCollection.type === 'GeometryCollection' : false;
-        stopG = isGeometryCollection ? geometryMaybeCollection.geometries.length : 1;
-
-        for (g = 0; g < stopG; g++) {
-            geometry = isGeometryCollection ?
-                geometryMaybeCollection.geometries[g] : geometryMaybeCollection;
-
-            // Handle null Geometry
-            if (geometry === null) {
-                if (callback(null, featureIndex, featureProperties, featureBBox, featureId) === false) return false;
-                continue;
-            }
-            switch (geometry.type) {
-            case 'Point':
-            case 'LineString':
-            case 'MultiPoint':
-            case 'Polygon':
-            case 'MultiLineString':
-            case 'MultiPolygon': {
-                if (callback(geometry, featureIndex, featureProperties, featureBBox, featureId) === false) return false;
-                break;
-            }
-            case 'GeometryCollection': {
-                for (j = 0; j < geometry.geometries.length; j++) {
-                    if (callback(geometry.geometries[j], featureIndex, featureProperties, featureBBox, featureId) === false) return false;
-                }
-                break;
-            }
-            default:
-                throw new Error('Unknown Geometry Type');
-            }
-        }
-        // Only increase `featureIndex` per each feature
-        featureIndex++;
-    }
-}
-
-/**
- * Callback for geomReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback geomReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Reduce geometry in any GeoJSON object, similar to Array.reduce().
- *
- * @name geomReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomReduce(features, function (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=previousValue
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- *   return currentGeometry
- * });
- */
-function geomReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    geomEach(geojson, function (currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentGeometry;
-        else previousValue = callback(previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId);
-    });
-    return previousValue;
-}
-
-/**
- * Callback for flattenEach
- *
- * @callback flattenEachCallback
- * @param {Feature} currentFeature The current flattened feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Iterate over flattened features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name flattenEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex, multiFeatureIndex)
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenEach(features, function (currentFeature, featureIndex, multiFeatureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- * });
- */
-function flattenEach(geojson, callback) {
-    geomEach(geojson, function (geometry, featureIndex, properties, bbox, id) {
-        // Callback for single geometry
-        var type = (geometry === null) ? null : geometry.type;
-        switch (type) {
-        case null:
-        case 'Point':
-        case 'LineString':
-        case 'Polygon':
-            if (callback(helpers.feature(geometry, properties, {bbox: bbox, id: id}), featureIndex, 0) === false) return false;
-            return;
-        }
-
-        var geomType;
-
-        // Callback for multi-geometry
-        switch (type) {
-        case 'MultiPoint':
-            geomType = 'Point';
-            break;
-        case 'MultiLineString':
-            geomType = 'LineString';
-            break;
-        case 'MultiPolygon':
-            geomType = 'Polygon';
-            break;
-        }
-
-        for (var multiFeatureIndex = 0; multiFeatureIndex < geometry.coordinates.length; multiFeatureIndex++) {
-            var coordinate = geometry.coordinates[multiFeatureIndex];
-            var geom = {
-                type: geomType,
-                coordinates: coordinate
-            };
-            if (callback(helpers.feature(geom, properties), featureIndex, multiFeatureIndex) === false) return false;
-        }
-    });
-}
-
-/**
- * Callback for flattenReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback flattenReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Reduce flattened features in any GeoJSON object, similar to Array.reduce().
- *
- * @name flattenReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex, multiFeatureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenReduce(features, function (previousValue, currentFeature, featureIndex, multiFeatureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   return currentFeature
- * });
- */
-function flattenReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    flattenEach(geojson, function (currentFeature, featureIndex, multiFeatureIndex) {
-        if (featureIndex === 0 && multiFeatureIndex === 0 && initialValue === undefined) previousValue = currentFeature;
-        else previousValue = callback(previousValue, currentFeature, featureIndex, multiFeatureIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Callback for segmentEach
- *
- * @callback segmentEachCallback
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- * @returns {void}
- */
-
-/**
- * Iterate over 2-vertex line segment in any GeoJSON object, similar to Array.forEach()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex)
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentEach(polygon, function (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //=currentSegment
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   //=segmentIndex
- * });
- *
- * // Calculate the total number of segments
- * var total = 0;
- * turf.segmentEach(polygon, function () {
- *     total++;
- * });
- */
-function segmentEach(geojson, callback) {
-    flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-        var segmentIndex = 0;
-
-        // Exclude null Geometries
-        if (!feature.geometry) return;
-        // (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
-        var type = feature.geometry.type;
-        if (type === 'Point' || type === 'MultiPoint') return;
-
-        // Generate 2-vertex line segments
-        var previousCoords;
-        var previousFeatureIndex = 0;
-        var previousMultiIndex = 0;
-        var prevGeomIndex = 0;
-        if (coordEach(feature, function (currentCoord, coordIndex, featureIndexCoord, multiPartIndexCoord, geometryIndex) {
-            // Simulating a meta.coordReduce() since `reduce` operations cannot be stopped by returning `false`
-            if (previousCoords === undefined || featureIndex > previousFeatureIndex || multiPartIndexCoord > previousMultiIndex || geometryIndex > prevGeomIndex) {
-                previousCoords = currentCoord;
-                previousFeatureIndex = featureIndex;
-                previousMultiIndex = multiPartIndexCoord;
-                prevGeomIndex = geometryIndex;
-                segmentIndex = 0;
-                return;
-            }
-            var currentSegment = helpers.lineString([previousCoords, currentCoord], feature.properties);
-            if (callback(currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) === false) return false;
-            segmentIndex++;
-            previousCoords = currentCoord;
-        }) === false) return false;
-    });
-}
-
-/**
- * Callback for segmentReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback segmentReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- */
-
-/**
- * Reduce 2-vertex line segment in any GeoJSON object, similar to Array.reduce()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (previousValue, currentSegment, currentIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentReduce(polygon, function (previousSegment, currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //= previousSegment
- *   //= currentSegment
- *   //= featureIndex
- *   //= multiFeatureIndex
- *   //= geometryIndex
- *   //= segmentInex
- *   return currentSegment
- * });
- *
- * // Calculate the total number of segments
- * var initialValue = 0
- * var total = turf.segmentReduce(polygon, function (previousValue) {
- *     previousValue++;
- *     return previousValue;
- * }, initialValue);
- */
-function segmentReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    var started = false;
-    segmentEach(geojson, function (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
-        if (started === false && initialValue === undefined) previousValue = currentSegment;
-        else previousValue = callback(previousValue, currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex);
-        started = true;
-    });
-    return previousValue;
-}
-
-/**
- * Callback for lineEach
- *
- * @callback lineEachCallback
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Iterate over line or ring coordinates in LineString, Polygon, MultiLineString, MultiPolygon Features or Geometries,
- * similar to Array.forEach.
- *
- * @name lineEach
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @example
- * var multiLine = turf.multiLineString([
- *   [[26, 37], [35, 45]],
- *   [[36, 53], [38, 50], [41, 55]]
- * ]);
- *
- * turf.lineEach(multiLine, function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function lineEach(geojson, callback) {
-    // validation
-    if (!geojson) throw new Error('geojson is required');
-
-    flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-        if (feature.geometry === null) return;
-        var type = feature.geometry.type;
-        var coords = feature.geometry.coordinates;
-        switch (type) {
-        case 'LineString':
-            if (callback(feature, featureIndex, multiFeatureIndex, 0, 0) === false) return false;
-            break;
-        case 'Polygon':
-            for (var geometryIndex = 0; geometryIndex < coords.length; geometryIndex++) {
-                if (callback(helpers.lineString(coords[geometryIndex], feature.properties), featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-            }
-            break;
-        }
-    });
-}
-
-/**
- * Callback for lineReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback lineReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed.
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name lineReduce
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var multiPoly = turf.multiPolygon([
- *   turf.polygon([[[12,48],[2,41],[24,38],[12,48]], [[9,44],[13,41],[13,45],[9,44]]]),
- *   turf.polygon([[[5, 5], [0, 0], [2, 2], [4, 4], [5, 5]]])
- * ]);
- *
- * turf.lineReduce(multiPoly, function (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentLine
- * });
- */
-function lineReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    lineEach(geojson, function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentLine;
-        else previousValue = callback(previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Finds a particular 2-vertex LineString Segment from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- * Point & MultiPoint will always return null.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.segmentIndex=0] Segment Index
- * @param {Object} [options.properties={}] Translate Properties to output LineString
- * @param {BBox} [options.bbox={}] Translate BBox to output LineString
- * @param {number|string} [options.id={}] Translate Id to output LineString
- * @returns {Feature<LineString>} 2-vertex GeoJSON Feature LineString
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findSegment(multiLine);
- * // => Feature<LineString<[[10, 10], [50, 30]]>>
- *
- * // First Segment of 2nd Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: 1});
- * // => Feature<LineString<[[-10, -10], [-50, -30]]>>
- *
- * // Last Segment of Last Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: -1, segmentIndex: -1});
- * // => Feature<LineString<[[-50, -30], [-30, -40]]>>
- */
-function findSegment(geojson, options) {
-    // Optional Parameters
-    options = options || {};
-    if (!helpers.isObject(options)) throw new Error('options is invalid');
-    var featureIndex = options.featureIndex || 0;
-    var multiFeatureIndex = options.multiFeatureIndex || 0;
-    var geometryIndex = options.geometryIndex || 0;
-    var segmentIndex = options.segmentIndex || 0;
-
-    // Find FeatureIndex
-    var properties = options.properties;
-    var geometry;
-
-    switch (geojson.type) {
-    case 'FeatureCollection':
-        if (featureIndex < 0) featureIndex = geojson.features.length + featureIndex;
-        properties = properties || geojson.features[featureIndex].properties;
-        geometry = geojson.features[featureIndex].geometry;
-        break;
-    case 'Feature':
-        properties = properties || geojson.properties;
-        geometry = geojson.geometry;
-        break;
-    case 'Point':
-    case 'MultiPoint':
-        return null;
-    case 'LineString':
-    case 'Polygon':
-    case 'MultiLineString':
-    case 'MultiPolygon':
-        geometry = geojson;
-        break;
-    default:
-        throw new Error('geojson is invalid');
-    }
-
-    // Find SegmentIndex
-    if (geometry === null) return null;
-    var coords = geometry.coordinates;
-    switch (geometry.type) {
-    case 'Point':
-    case 'MultiPoint':
-        return null;
-    case 'LineString':
-        if (segmentIndex < 0) segmentIndex = coords.length + segmentIndex - 1;
-        return helpers.lineString([coords[segmentIndex], coords[segmentIndex + 1]], properties, options);
-    case 'Polygon':
-        if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-        if (segmentIndex < 0) segmentIndex = coords[geometryIndex].length + segmentIndex - 1;
-        return helpers.lineString([coords[geometryIndex][segmentIndex], coords[geometryIndex][segmentIndex + 1]], properties, options);
-    case 'MultiLineString':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (segmentIndex < 0) segmentIndex = coords[multiFeatureIndex].length + segmentIndex - 1;
-        return helpers.lineString([coords[multiFeatureIndex][segmentIndex], coords[multiFeatureIndex][segmentIndex + 1]], properties, options);
-    case 'MultiPolygon':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (geometryIndex < 0) geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-        if (segmentIndex < 0) segmentIndex = coords[multiFeatureIndex][geometryIndex].length - segmentIndex - 1;
-        return helpers.lineString([coords[multiFeatureIndex][geometryIndex][segmentIndex], coords[multiFeatureIndex][geometryIndex][segmentIndex + 1]], properties, options);
-    }
-    throw new Error('geojson is invalid');
-}
-
-/**
- * Finds a particular Point from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.coordIndex=0] Coord Index
- * @param {Object} [options.properties={}] Translate Properties to output Point
- * @param {BBox} [options.bbox={}] Translate BBox to output Point
- * @param {number|string} [options.id={}] Translate Id to output Point
- * @returns {Feature<Point>} 2-vertex GeoJSON Feature Point
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findPoint(multiLine);
- * // => Feature<Point<[10, 10]>>
- *
- * // First Segment of the 2nd Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: 1});
- * // => Feature<Point<[-10, -10]>>
- *
- * // Last Segment of last Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: -1, coordIndex: -1});
- * // => Feature<Point<[-30, -40]>>
- */
-function findPoint(geojson, options) {
-    // Optional Parameters
-    options = options || {};
-    if (!helpers.isObject(options)) throw new Error('options is invalid');
-    var featureIndex = options.featureIndex || 0;
-    var multiFeatureIndex = options.multiFeatureIndex || 0;
-    var geometryIndex = options.geometryIndex || 0;
-    var coordIndex = options.coordIndex || 0;
-
-    // Find FeatureIndex
-    var properties = options.properties;
-    var geometry;
-
-    switch (geojson.type) {
-    case 'FeatureCollection':
-        if (featureIndex < 0) featureIndex = geojson.features.length + featureIndex;
-        properties = properties || geojson.features[featureIndex].properties;
-        geometry = geojson.features[featureIndex].geometry;
-        break;
-    case 'Feature':
-        properties = properties || geojson.properties;
-        geometry = geojson.geometry;
-        break;
-    case 'Point':
-    case 'MultiPoint':
-        return null;
-    case 'LineString':
-    case 'Polygon':
-    case 'MultiLineString':
-    case 'MultiPolygon':
-        geometry = geojson;
-        break;
-    default:
-        throw new Error('geojson is invalid');
-    }
-
-    // Find Coord Index
-    if (geometry === null) return null;
-    var coords = geometry.coordinates;
-    switch (geometry.type) {
-    case 'Point':
-        return helpers.point(coords, properties, options);
-    case 'MultiPoint':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        return helpers.point(coords[multiFeatureIndex], properties, options);
-    case 'LineString':
-        if (coordIndex < 0) coordIndex = coords.length + coordIndex;
-        return helpers.point(coords[coordIndex], properties, options);
-    case 'Polygon':
-        if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-        if (coordIndex < 0) coordIndex = coords[geometryIndex].length + coordIndex;
-        return helpers.point(coords[geometryIndex][coordIndex], properties, options);
-    case 'MultiLineString':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (coordIndex < 0) coordIndex = coords[multiFeatureIndex].length + coordIndex;
-        return helpers.point(coords[multiFeatureIndex][coordIndex], properties, options);
-    case 'MultiPolygon':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (geometryIndex < 0) geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-        if (coordIndex < 0) coordIndex = coords[multiFeatureIndex][geometryIndex].length - coordIndex;
-        return helpers.point(coords[multiFeatureIndex][geometryIndex][coordIndex], properties, options);
-    }
-    throw new Error('geojson is invalid');
-}
-
-exports.coordEach = coordEach;
-exports.coordReduce = coordReduce;
 exports.propEach = propEach;
 exports.propReduce = propReduce;
-exports.featureEach = featureEach;
-exports.featureReduce = featureReduce;
-exports.coordAll = coordAll;
-exports.geomEach = geomEach;
-exports.geomReduce = geomReduce;
-exports.flattenEach = flattenEach;
-exports.flattenReduce = flattenReduce;
 exports.segmentEach = segmentEach;
 exports.segmentReduce = segmentReduce;
-exports.lineEach = lineEach;
-exports.lineReduce = lineReduce;
-exports.findSegment = findSegment;
-exports.findPoint = findPoint;
 
 
 /***/ }),
 
-/***/ 4852:
+/***/ 2666:
 /***/ (function(module) {
 
 module.exports = {
@@ -73461,15 +69388,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1705:
+/***/ 2423:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "TS": function() { return /* reexport */ merge; },
-  "w6": function() { return /* reexport */ src_range; }
+  Am: function() { return /* reexport */ merge; },
+  y1: function() { return /* reexport */ src_range; }
 });
 
 // UNUSED EXPORTS: ascending, bisect, bisectLeft, bisectRight, bisector, cross, descending, deviation, extent, histogram, max, mean, median, min, pairs, permute, quantile, scan, shuffle, sum, thresholdFreedmanDiaconis, thresholdScott, thresholdSturges, tickIncrement, tickStep, ticks, transpose, variance, zip
@@ -73740,15 +69667,15 @@ function ticks_tickStep(start, stop, count) {
 
 /***/ }),
 
-/***/ 6137:
+/***/ 3052:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "WU": function() { return /* reexport */ format; },
-  "FF": function() { return /* reexport */ locale; }
+  GP: function() { return /* reexport */ format; },
+  OE: function() { return /* reexport */ locale; }
 });
 
 // UNUSED EXPORTS: FormatSpecifier, formatDefaultLocale, formatPrefix, formatSpecifier, precisionFixed, precisionPrefix, precisionRound
@@ -74113,7 +70040,7 @@ function defaultLocale(definition) {
 
 /***/ }),
 
-/***/ 8804:
+/***/ 7041:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74122,193 +70049,193 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "geoAiry": function() { return /* reexport */ airy; },
-  "geoAiryRaw": function() { return /* reexport */ airyRaw; },
-  "geoAitoff": function() { return /* reexport */ aitoff; },
-  "geoAitoffRaw": function() { return /* reexport */ aitoffRaw; },
-  "geoArmadillo": function() { return /* reexport */ armadillo; },
-  "geoArmadilloRaw": function() { return /* reexport */ armadilloRaw; },
-  "geoAugust": function() { return /* reexport */ august; },
-  "geoAugustRaw": function() { return /* reexport */ augustRaw; },
-  "geoBaker": function() { return /* reexport */ baker; },
-  "geoBakerRaw": function() { return /* reexport */ bakerRaw; },
-  "geoBerghaus": function() { return /* reexport */ berghaus; },
-  "geoBerghausRaw": function() { return /* reexport */ berghausRaw; },
-  "geoBertin1953": function() { return /* reexport */ bertin; },
-  "geoBertin1953Raw": function() { return /* reexport */ bertin1953Raw; },
-  "geoBoggs": function() { return /* reexport */ boggs; },
-  "geoBoggsRaw": function() { return /* reexport */ boggsRaw; },
-  "geoBonne": function() { return /* reexport */ bonne; },
-  "geoBonneRaw": function() { return /* reexport */ bonneRaw; },
-  "geoBottomley": function() { return /* reexport */ bottomley; },
-  "geoBottomleyRaw": function() { return /* reexport */ bottomleyRaw; },
-  "geoBromley": function() { return /* reexport */ bromley; },
-  "geoBromleyRaw": function() { return /* reexport */ bromleyRaw; },
-  "geoChamberlin": function() { return /* reexport */ chamberlin; },
-  "geoChamberlinAfrica": function() { return /* reexport */ chamberlinAfrica; },
-  "geoChamberlinRaw": function() { return /* reexport */ chamberlinRaw; },
-  "geoCollignon": function() { return /* reexport */ collignon; },
-  "geoCollignonRaw": function() { return /* reexport */ collignonRaw; },
-  "geoCraig": function() { return /* reexport */ craig; },
-  "geoCraigRaw": function() { return /* reexport */ craigRaw; },
-  "geoCraster": function() { return /* reexport */ craster; },
-  "geoCrasterRaw": function() { return /* reexport */ crasterRaw; },
-  "geoCylindricalEqualArea": function() { return /* reexport */ cylindricalEqualArea; },
-  "geoCylindricalEqualAreaRaw": function() { return /* reexport */ cylindricalEqualAreaRaw; },
-  "geoCylindricalStereographic": function() { return /* reexport */ cylindricalStereographic; },
-  "geoCylindricalStereographicRaw": function() { return /* reexport */ cylindricalStereographicRaw; },
-  "geoEckert1": function() { return /* reexport */ eckert1; },
-  "geoEckert1Raw": function() { return /* reexport */ eckert1Raw; },
-  "geoEckert2": function() { return /* reexport */ eckert2; },
-  "geoEckert2Raw": function() { return /* reexport */ eckert2Raw; },
-  "geoEckert3": function() { return /* reexport */ eckert3; },
-  "geoEckert3Raw": function() { return /* reexport */ eckert3Raw; },
-  "geoEckert4": function() { return /* reexport */ eckert4; },
-  "geoEckert4Raw": function() { return /* reexport */ eckert4Raw; },
-  "geoEckert5": function() { return /* reexport */ eckert5; },
-  "geoEckert5Raw": function() { return /* reexport */ eckert5Raw; },
-  "geoEckert6": function() { return /* reexport */ eckert6; },
-  "geoEckert6Raw": function() { return /* reexport */ eckert6Raw; },
-  "geoEisenlohr": function() { return /* reexport */ eisenlohr; },
-  "geoEisenlohrRaw": function() { return /* reexport */ eisenlohrRaw; },
-  "geoFahey": function() { return /* reexport */ fahey; },
-  "geoFaheyRaw": function() { return /* reexport */ faheyRaw; },
-  "geoFoucaut": function() { return /* reexport */ foucaut; },
-  "geoFoucautRaw": function() { return /* reexport */ foucautRaw; },
-  "geoFoucautSinusoidal": function() { return /* reexport */ foucautSinusoidal; },
-  "geoFoucautSinusoidalRaw": function() { return /* reexport */ foucautSinusoidalRaw; },
-  "geoGilbert": function() { return /* reexport */ gilbert; },
-  "geoGingery": function() { return /* reexport */ gingery; },
-  "geoGingeryRaw": function() { return /* reexport */ gingeryRaw; },
-  "geoGinzburg4": function() { return /* reexport */ ginzburg4; },
-  "geoGinzburg4Raw": function() { return /* reexport */ ginzburg4Raw; },
-  "geoGinzburg5": function() { return /* reexport */ ginzburg5; },
-  "geoGinzburg5Raw": function() { return /* reexport */ ginzburg5Raw; },
-  "geoGinzburg6": function() { return /* reexport */ ginzburg6; },
-  "geoGinzburg6Raw": function() { return /* reexport */ ginzburg6Raw; },
-  "geoGinzburg8": function() { return /* reexport */ ginzburg8; },
-  "geoGinzburg8Raw": function() { return /* reexport */ ginzburg8Raw; },
-  "geoGinzburg9": function() { return /* reexport */ ginzburg9; },
-  "geoGinzburg9Raw": function() { return /* reexport */ ginzburg9Raw; },
-  "geoGringorten": function() { return /* reexport */ gringorten; },
-  "geoGringortenQuincuncial": function() { return /* reexport */ quincuncial_gringorten; },
-  "geoGringortenRaw": function() { return /* reexport */ gringortenRaw; },
-  "geoGuyou": function() { return /* reexport */ guyou; },
-  "geoGuyouRaw": function() { return /* reexport */ guyouRaw; },
-  "geoHammer": function() { return /* reexport */ hammer; },
-  "geoHammerRaw": function() { return /* reexport */ hammerRaw; },
-  "geoHammerRetroazimuthal": function() { return /* reexport */ hammerRetroazimuthal; },
-  "geoHammerRetroazimuthalRaw": function() { return /* reexport */ hammerRetroazimuthalRaw; },
-  "geoHealpix": function() { return /* reexport */ healpix; },
-  "geoHealpixRaw": function() { return /* reexport */ healpixRaw; },
-  "geoHill": function() { return /* reexport */ hill; },
-  "geoHillRaw": function() { return /* reexport */ hillRaw; },
-  "geoHomolosine": function() { return /* reexport */ homolosine; },
-  "geoHomolosineRaw": function() { return /* reexport */ homolosineRaw; },
-  "geoHufnagel": function() { return /* reexport */ hufnagel; },
-  "geoHufnagelRaw": function() { return /* reexport */ hufnagelRaw; },
-  "geoHyperelliptical": function() { return /* reexport */ hyperelliptical; },
-  "geoHyperellipticalRaw": function() { return /* reexport */ hyperellipticalRaw; },
-  "geoInterrupt": function() { return /* reexport */ interrupted; },
-  "geoInterruptedBoggs": function() { return /* reexport */ interrupted_boggs; },
-  "geoInterruptedHomolosine": function() { return /* reexport */ interrupted_homolosine; },
-  "geoInterruptedMollweide": function() { return /* reexport */ interrupted_mollweide; },
-  "geoInterruptedMollweideHemispheres": function() { return /* reexport */ mollweideHemispheres; },
-  "geoInterruptedQuarticAuthalic": function() { return /* reexport */ quarticAuthalic; },
-  "geoInterruptedSinuMollweide": function() { return /* reexport */ interrupted_sinuMollweide; },
-  "geoInterruptedSinusoidal": function() { return /* reexport */ interrupted_sinusoidal; },
-  "geoKavrayskiy7": function() { return /* reexport */ kavrayskiy7; },
-  "geoKavrayskiy7Raw": function() { return /* reexport */ kavrayskiy7Raw; },
-  "geoLagrange": function() { return /* reexport */ lagrange; },
-  "geoLagrangeRaw": function() { return /* reexport */ lagrangeRaw; },
-  "geoLarrivee": function() { return /* reexport */ larrivee; },
-  "geoLarriveeRaw": function() { return /* reexport */ larriveeRaw; },
-  "geoLaskowski": function() { return /* reexport */ laskowski; },
-  "geoLaskowskiRaw": function() { return /* reexport */ laskowskiRaw; },
-  "geoLittrow": function() { return /* reexport */ littrow; },
-  "geoLittrowRaw": function() { return /* reexport */ littrowRaw; },
-  "geoLoximuthal": function() { return /* reexport */ loximuthal; },
-  "geoLoximuthalRaw": function() { return /* reexport */ loximuthalRaw; },
-  "geoMiller": function() { return /* reexport */ miller; },
-  "geoMillerRaw": function() { return /* reexport */ millerRaw; },
-  "geoModifiedStereographic": function() { return /* reexport */ modifiedStereographic; },
-  "geoModifiedStereographicAlaska": function() { return /* reexport */ modifiedStereographicAlaska; },
-  "geoModifiedStereographicGs48": function() { return /* reexport */ modifiedStereographicGs48; },
-  "geoModifiedStereographicGs50": function() { return /* reexport */ modifiedStereographicGs50; },
-  "geoModifiedStereographicLee": function() { return /* reexport */ modifiedStereographicLee; },
-  "geoModifiedStereographicMiller": function() { return /* reexport */ modifiedStereographicMiller; },
-  "geoModifiedStereographicRaw": function() { return /* reexport */ modifiedStereographicRaw; },
-  "geoMollweide": function() { return /* reexport */ mollweide; },
-  "geoMollweideRaw": function() { return /* reexport */ mollweideRaw; },
-  "geoMtFlatPolarParabolic": function() { return /* reexport */ mtFlatPolarParabolic; },
-  "geoMtFlatPolarParabolicRaw": function() { return /* reexport */ mtFlatPolarParabolicRaw; },
-  "geoMtFlatPolarQuartic": function() { return /* reexport */ mtFlatPolarQuartic; },
-  "geoMtFlatPolarQuarticRaw": function() { return /* reexport */ mtFlatPolarQuarticRaw; },
-  "geoMtFlatPolarSinusoidal": function() { return /* reexport */ mtFlatPolarSinusoidal; },
-  "geoMtFlatPolarSinusoidalRaw": function() { return /* reexport */ mtFlatPolarSinusoidalRaw; },
-  "geoNaturalEarth": function() { return /* reexport */ naturalEarth1/* default */.Z; },
-  "geoNaturalEarth2": function() { return /* reexport */ naturalEarth2; },
-  "geoNaturalEarth2Raw": function() { return /* reexport */ naturalEarth2Raw; },
-  "geoNaturalEarthRaw": function() { return /* reexport */ naturalEarth1/* naturalEarth1Raw */.K; },
-  "geoNellHammer": function() { return /* reexport */ nellHammer; },
-  "geoNellHammerRaw": function() { return /* reexport */ nellHammerRaw; },
-  "geoNicolosi": function() { return /* reexport */ nicolosi; },
-  "geoNicolosiRaw": function() { return /* reexport */ nicolosiRaw; },
-  "geoPatterson": function() { return /* reexport */ patterson; },
-  "geoPattersonRaw": function() { return /* reexport */ pattersonRaw; },
-  "geoPeirceQuincuncial": function() { return /* reexport */ peirce; },
-  "geoPierceQuincuncial": function() { return /* reexport */ peirce; },
-  "geoPolyconic": function() { return /* reexport */ polyconic; },
-  "geoPolyconicRaw": function() { return /* reexport */ polyconicRaw; },
-  "geoPolyhedral": function() { return /* reexport */ polyhedral; },
-  "geoPolyhedralButterfly": function() { return /* reexport */ butterfly; },
-  "geoPolyhedralCollignon": function() { return /* reexport */ polyhedral_collignon; },
-  "geoPolyhedralWaterman": function() { return /* reexport */ waterman; },
-  "geoProject": function() { return /* reexport */ project; },
-  "geoQuantize": function() { return /* reexport */ quantize; },
-  "geoQuincuncial": function() { return /* reexport */ quincuncial; },
-  "geoRectangularPolyconic": function() { return /* reexport */ rectangularPolyconic; },
-  "geoRectangularPolyconicRaw": function() { return /* reexport */ rectangularPolyconicRaw; },
-  "geoRobinson": function() { return /* reexport */ robinson; },
-  "geoRobinsonRaw": function() { return /* reexport */ robinsonRaw; },
-  "geoSatellite": function() { return /* reexport */ satellite; },
-  "geoSatelliteRaw": function() { return /* reexport */ satelliteRaw; },
-  "geoSinuMollweide": function() { return /* reexport */ sinuMollweide; },
-  "geoSinuMollweideRaw": function() { return /* reexport */ sinuMollweideRaw; },
-  "geoSinusoidal": function() { return /* reexport */ sinusoidal; },
-  "geoSinusoidalRaw": function() { return /* reexport */ sinusoidalRaw; },
-  "geoStitch": function() { return /* reexport */ stitch; },
-  "geoTimes": function() { return /* reexport */ times; },
-  "geoTimesRaw": function() { return /* reexport */ timesRaw; },
-  "geoTwoPointAzimuthal": function() { return /* reexport */ twoPointAzimuthal; },
-  "geoTwoPointAzimuthalRaw": function() { return /* reexport */ twoPointAzimuthalRaw; },
-  "geoTwoPointAzimuthalUsa": function() { return /* reexport */ twoPointAzimuthalUsa; },
-  "geoTwoPointEquidistant": function() { return /* reexport */ twoPointEquidistant; },
-  "geoTwoPointEquidistantRaw": function() { return /* reexport */ twoPointEquidistantRaw; },
-  "geoTwoPointEquidistantUsa": function() { return /* reexport */ twoPointEquidistantUsa; },
-  "geoVanDerGrinten": function() { return /* reexport */ vanDerGrinten; },
-  "geoVanDerGrinten2": function() { return /* reexport */ vanDerGrinten2; },
-  "geoVanDerGrinten2Raw": function() { return /* reexport */ vanDerGrinten2Raw; },
-  "geoVanDerGrinten3": function() { return /* reexport */ vanDerGrinten3; },
-  "geoVanDerGrinten3Raw": function() { return /* reexport */ vanDerGrinten3Raw; },
-  "geoVanDerGrinten4": function() { return /* reexport */ vanDerGrinten4; },
-  "geoVanDerGrinten4Raw": function() { return /* reexport */ vanDerGrinten4Raw; },
-  "geoVanDerGrintenRaw": function() { return /* reexport */ vanDerGrintenRaw; },
-  "geoWagner": function() { return /* reexport */ wagner; },
-  "geoWagner4": function() { return /* reexport */ wagner4; },
-  "geoWagner4Raw": function() { return /* reexport */ wagner4Raw; },
-  "geoWagner6": function() { return /* reexport */ wagner6; },
-  "geoWagner6Raw": function() { return /* reexport */ wagner6Raw; },
-  "geoWagner7": function() { return /* reexport */ wagner7; },
-  "geoWagnerRaw": function() { return /* reexport */ wagnerRaw; },
-  "geoWiechel": function() { return /* reexport */ wiechel; },
-  "geoWiechelRaw": function() { return /* reexport */ wiechelRaw; },
-  "geoWinkel3": function() { return /* reexport */ winkel3; },
-  "geoWinkel3Raw": function() { return /* reexport */ winkel3Raw; }
+  geoAiry: function() { return /* reexport */ airy; },
+  geoAiryRaw: function() { return /* reexport */ airyRaw; },
+  geoAitoff: function() { return /* reexport */ aitoff; },
+  geoAitoffRaw: function() { return /* reexport */ aitoffRaw; },
+  geoArmadillo: function() { return /* reexport */ armadillo; },
+  geoArmadilloRaw: function() { return /* reexport */ armadilloRaw; },
+  geoAugust: function() { return /* reexport */ august; },
+  geoAugustRaw: function() { return /* reexport */ augustRaw; },
+  geoBaker: function() { return /* reexport */ baker; },
+  geoBakerRaw: function() { return /* reexport */ bakerRaw; },
+  geoBerghaus: function() { return /* reexport */ berghaus; },
+  geoBerghausRaw: function() { return /* reexport */ berghausRaw; },
+  geoBertin1953: function() { return /* reexport */ bertin; },
+  geoBertin1953Raw: function() { return /* reexport */ bertin1953Raw; },
+  geoBoggs: function() { return /* reexport */ boggs; },
+  geoBoggsRaw: function() { return /* reexport */ boggsRaw; },
+  geoBonne: function() { return /* reexport */ bonne; },
+  geoBonneRaw: function() { return /* reexport */ bonneRaw; },
+  geoBottomley: function() { return /* reexport */ bottomley; },
+  geoBottomleyRaw: function() { return /* reexport */ bottomleyRaw; },
+  geoBromley: function() { return /* reexport */ bromley; },
+  geoBromleyRaw: function() { return /* reexport */ bromleyRaw; },
+  geoChamberlin: function() { return /* reexport */ chamberlin; },
+  geoChamberlinAfrica: function() { return /* reexport */ chamberlinAfrica; },
+  geoChamberlinRaw: function() { return /* reexport */ chamberlinRaw; },
+  geoCollignon: function() { return /* reexport */ collignon; },
+  geoCollignonRaw: function() { return /* reexport */ collignonRaw; },
+  geoCraig: function() { return /* reexport */ craig; },
+  geoCraigRaw: function() { return /* reexport */ craigRaw; },
+  geoCraster: function() { return /* reexport */ craster; },
+  geoCrasterRaw: function() { return /* reexport */ crasterRaw; },
+  geoCylindricalEqualArea: function() { return /* reexport */ cylindricalEqualArea; },
+  geoCylindricalEqualAreaRaw: function() { return /* reexport */ cylindricalEqualAreaRaw; },
+  geoCylindricalStereographic: function() { return /* reexport */ cylindricalStereographic; },
+  geoCylindricalStereographicRaw: function() { return /* reexport */ cylindricalStereographicRaw; },
+  geoEckert1: function() { return /* reexport */ eckert1; },
+  geoEckert1Raw: function() { return /* reexport */ eckert1Raw; },
+  geoEckert2: function() { return /* reexport */ eckert2; },
+  geoEckert2Raw: function() { return /* reexport */ eckert2Raw; },
+  geoEckert3: function() { return /* reexport */ eckert3; },
+  geoEckert3Raw: function() { return /* reexport */ eckert3Raw; },
+  geoEckert4: function() { return /* reexport */ eckert4; },
+  geoEckert4Raw: function() { return /* reexport */ eckert4Raw; },
+  geoEckert5: function() { return /* reexport */ eckert5; },
+  geoEckert5Raw: function() { return /* reexport */ eckert5Raw; },
+  geoEckert6: function() { return /* reexport */ eckert6; },
+  geoEckert6Raw: function() { return /* reexport */ eckert6Raw; },
+  geoEisenlohr: function() { return /* reexport */ eisenlohr; },
+  geoEisenlohrRaw: function() { return /* reexport */ eisenlohrRaw; },
+  geoFahey: function() { return /* reexport */ fahey; },
+  geoFaheyRaw: function() { return /* reexport */ faheyRaw; },
+  geoFoucaut: function() { return /* reexport */ foucaut; },
+  geoFoucautRaw: function() { return /* reexport */ foucautRaw; },
+  geoFoucautSinusoidal: function() { return /* reexport */ foucautSinusoidal; },
+  geoFoucautSinusoidalRaw: function() { return /* reexport */ foucautSinusoidalRaw; },
+  geoGilbert: function() { return /* reexport */ gilbert; },
+  geoGingery: function() { return /* reexport */ gingery; },
+  geoGingeryRaw: function() { return /* reexport */ gingeryRaw; },
+  geoGinzburg4: function() { return /* reexport */ ginzburg4; },
+  geoGinzburg4Raw: function() { return /* reexport */ ginzburg4Raw; },
+  geoGinzburg5: function() { return /* reexport */ ginzburg5; },
+  geoGinzburg5Raw: function() { return /* reexport */ ginzburg5Raw; },
+  geoGinzburg6: function() { return /* reexport */ ginzburg6; },
+  geoGinzburg6Raw: function() { return /* reexport */ ginzburg6Raw; },
+  geoGinzburg8: function() { return /* reexport */ ginzburg8; },
+  geoGinzburg8Raw: function() { return /* reexport */ ginzburg8Raw; },
+  geoGinzburg9: function() { return /* reexport */ ginzburg9; },
+  geoGinzburg9Raw: function() { return /* reexport */ ginzburg9Raw; },
+  geoGringorten: function() { return /* reexport */ gringorten; },
+  geoGringortenQuincuncial: function() { return /* reexport */ quincuncial_gringorten; },
+  geoGringortenRaw: function() { return /* reexport */ gringortenRaw; },
+  geoGuyou: function() { return /* reexport */ guyou; },
+  geoGuyouRaw: function() { return /* reexport */ guyouRaw; },
+  geoHammer: function() { return /* reexport */ hammer; },
+  geoHammerRaw: function() { return /* reexport */ hammerRaw; },
+  geoHammerRetroazimuthal: function() { return /* reexport */ hammerRetroazimuthal; },
+  geoHammerRetroazimuthalRaw: function() { return /* reexport */ hammerRetroazimuthalRaw; },
+  geoHealpix: function() { return /* reexport */ healpix; },
+  geoHealpixRaw: function() { return /* reexport */ healpixRaw; },
+  geoHill: function() { return /* reexport */ hill; },
+  geoHillRaw: function() { return /* reexport */ hillRaw; },
+  geoHomolosine: function() { return /* reexport */ homolosine; },
+  geoHomolosineRaw: function() { return /* reexport */ homolosineRaw; },
+  geoHufnagel: function() { return /* reexport */ hufnagel; },
+  geoHufnagelRaw: function() { return /* reexport */ hufnagelRaw; },
+  geoHyperelliptical: function() { return /* reexport */ hyperelliptical; },
+  geoHyperellipticalRaw: function() { return /* reexport */ hyperellipticalRaw; },
+  geoInterrupt: function() { return /* reexport */ interrupted; },
+  geoInterruptedBoggs: function() { return /* reexport */ interrupted_boggs; },
+  geoInterruptedHomolosine: function() { return /* reexport */ interrupted_homolosine; },
+  geoInterruptedMollweide: function() { return /* reexport */ interrupted_mollweide; },
+  geoInterruptedMollweideHemispheres: function() { return /* reexport */ mollweideHemispheres; },
+  geoInterruptedQuarticAuthalic: function() { return /* reexport */ quarticAuthalic; },
+  geoInterruptedSinuMollweide: function() { return /* reexport */ interrupted_sinuMollweide; },
+  geoInterruptedSinusoidal: function() { return /* reexport */ interrupted_sinusoidal; },
+  geoKavrayskiy7: function() { return /* reexport */ kavrayskiy7; },
+  geoKavrayskiy7Raw: function() { return /* reexport */ kavrayskiy7Raw; },
+  geoLagrange: function() { return /* reexport */ lagrange; },
+  geoLagrangeRaw: function() { return /* reexport */ lagrangeRaw; },
+  geoLarrivee: function() { return /* reexport */ larrivee; },
+  geoLarriveeRaw: function() { return /* reexport */ larriveeRaw; },
+  geoLaskowski: function() { return /* reexport */ laskowski; },
+  geoLaskowskiRaw: function() { return /* reexport */ laskowskiRaw; },
+  geoLittrow: function() { return /* reexport */ littrow; },
+  geoLittrowRaw: function() { return /* reexport */ littrowRaw; },
+  geoLoximuthal: function() { return /* reexport */ loximuthal; },
+  geoLoximuthalRaw: function() { return /* reexport */ loximuthalRaw; },
+  geoMiller: function() { return /* reexport */ miller; },
+  geoMillerRaw: function() { return /* reexport */ millerRaw; },
+  geoModifiedStereographic: function() { return /* reexport */ modifiedStereographic; },
+  geoModifiedStereographicAlaska: function() { return /* reexport */ modifiedStereographicAlaska; },
+  geoModifiedStereographicGs48: function() { return /* reexport */ modifiedStereographicGs48; },
+  geoModifiedStereographicGs50: function() { return /* reexport */ modifiedStereographicGs50; },
+  geoModifiedStereographicLee: function() { return /* reexport */ modifiedStereographicLee; },
+  geoModifiedStereographicMiller: function() { return /* reexport */ modifiedStereographicMiller; },
+  geoModifiedStereographicRaw: function() { return /* reexport */ modifiedStereographicRaw; },
+  geoMollweide: function() { return /* reexport */ mollweide; },
+  geoMollweideRaw: function() { return /* reexport */ mollweideRaw; },
+  geoMtFlatPolarParabolic: function() { return /* reexport */ mtFlatPolarParabolic; },
+  geoMtFlatPolarParabolicRaw: function() { return /* reexport */ mtFlatPolarParabolicRaw; },
+  geoMtFlatPolarQuartic: function() { return /* reexport */ mtFlatPolarQuartic; },
+  geoMtFlatPolarQuarticRaw: function() { return /* reexport */ mtFlatPolarQuarticRaw; },
+  geoMtFlatPolarSinusoidal: function() { return /* reexport */ mtFlatPolarSinusoidal; },
+  geoMtFlatPolarSinusoidalRaw: function() { return /* reexport */ mtFlatPolarSinusoidalRaw; },
+  geoNaturalEarth: function() { return /* reexport */ naturalEarth1/* default */.A; },
+  geoNaturalEarth2: function() { return /* reexport */ naturalEarth2; },
+  geoNaturalEarth2Raw: function() { return /* reexport */ naturalEarth2Raw; },
+  geoNaturalEarthRaw: function() { return /* reexport */ naturalEarth1/* naturalEarth1Raw */.P; },
+  geoNellHammer: function() { return /* reexport */ nellHammer; },
+  geoNellHammerRaw: function() { return /* reexport */ nellHammerRaw; },
+  geoNicolosi: function() { return /* reexport */ nicolosi; },
+  geoNicolosiRaw: function() { return /* reexport */ nicolosiRaw; },
+  geoPatterson: function() { return /* reexport */ patterson; },
+  geoPattersonRaw: function() { return /* reexport */ pattersonRaw; },
+  geoPeirceQuincuncial: function() { return /* reexport */ peirce; },
+  geoPierceQuincuncial: function() { return /* reexport */ peirce; },
+  geoPolyconic: function() { return /* reexport */ polyconic; },
+  geoPolyconicRaw: function() { return /* reexport */ polyconicRaw; },
+  geoPolyhedral: function() { return /* reexport */ polyhedral; },
+  geoPolyhedralButterfly: function() { return /* reexport */ butterfly; },
+  geoPolyhedralCollignon: function() { return /* reexport */ polyhedral_collignon; },
+  geoPolyhedralWaterman: function() { return /* reexport */ waterman; },
+  geoProject: function() { return /* reexport */ project; },
+  geoQuantize: function() { return /* reexport */ quantize; },
+  geoQuincuncial: function() { return /* reexport */ quincuncial; },
+  geoRectangularPolyconic: function() { return /* reexport */ rectangularPolyconic; },
+  geoRectangularPolyconicRaw: function() { return /* reexport */ rectangularPolyconicRaw; },
+  geoRobinson: function() { return /* reexport */ robinson; },
+  geoRobinsonRaw: function() { return /* reexport */ robinsonRaw; },
+  geoSatellite: function() { return /* reexport */ satellite; },
+  geoSatelliteRaw: function() { return /* reexport */ satelliteRaw; },
+  geoSinuMollweide: function() { return /* reexport */ sinuMollweide; },
+  geoSinuMollweideRaw: function() { return /* reexport */ sinuMollweideRaw; },
+  geoSinusoidal: function() { return /* reexport */ sinusoidal; },
+  geoSinusoidalRaw: function() { return /* reexport */ sinusoidalRaw; },
+  geoStitch: function() { return /* reexport */ stitch; },
+  geoTimes: function() { return /* reexport */ times; },
+  geoTimesRaw: function() { return /* reexport */ timesRaw; },
+  geoTwoPointAzimuthal: function() { return /* reexport */ twoPointAzimuthal; },
+  geoTwoPointAzimuthalRaw: function() { return /* reexport */ twoPointAzimuthalRaw; },
+  geoTwoPointAzimuthalUsa: function() { return /* reexport */ twoPointAzimuthalUsa; },
+  geoTwoPointEquidistant: function() { return /* reexport */ twoPointEquidistant; },
+  geoTwoPointEquidistantRaw: function() { return /* reexport */ twoPointEquidistantRaw; },
+  geoTwoPointEquidistantUsa: function() { return /* reexport */ twoPointEquidistantUsa; },
+  geoVanDerGrinten: function() { return /* reexport */ vanDerGrinten; },
+  geoVanDerGrinten2: function() { return /* reexport */ vanDerGrinten2; },
+  geoVanDerGrinten2Raw: function() { return /* reexport */ vanDerGrinten2Raw; },
+  geoVanDerGrinten3: function() { return /* reexport */ vanDerGrinten3; },
+  geoVanDerGrinten3Raw: function() { return /* reexport */ vanDerGrinten3Raw; },
+  geoVanDerGrinten4: function() { return /* reexport */ vanDerGrinten4; },
+  geoVanDerGrinten4Raw: function() { return /* reexport */ vanDerGrinten4Raw; },
+  geoVanDerGrintenRaw: function() { return /* reexport */ vanDerGrintenRaw; },
+  geoWagner: function() { return /* reexport */ wagner; },
+  geoWagner4: function() { return /* reexport */ wagner4; },
+  geoWagner4Raw: function() { return /* reexport */ wagner4Raw; },
+  geoWagner6: function() { return /* reexport */ wagner6; },
+  geoWagner6Raw: function() { return /* reexport */ wagner6Raw; },
+  geoWagner7: function() { return /* reexport */ wagner7; },
+  geoWagnerRaw: function() { return /* reexport */ wagnerRaw; },
+  geoWiechel: function() { return /* reexport */ wiechel; },
+  geoWiechelRaw: function() { return /* reexport */ wiechelRaw; },
+  geoWinkel3: function() { return /* reexport */ winkel3; },
+  geoWinkel3Raw: function() { return /* reexport */ winkel3Raw; }
 });
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/index.js + 1 modules
-var src_projection = __webpack_require__(5152);
+var src_projection = __webpack_require__(4370);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/math.js
 var abs = Math.abs;
 var atan = Math.atan;
@@ -74414,7 +70341,7 @@ function airyRaw(beta) {
 
 /* harmony default export */ function airy() {
   var beta = halfPi,
-      m = (0,src_projection/* projectionMutator */.r)(airyRaw),
+      m = (0,src_projection/* projectionMutator */.U)(airyRaw),
       p = m(beta);
 
   p.radius = function(_) {
@@ -74469,7 +70396,7 @@ aitoffRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function aitoff() {
-  return (0,src_projection/* default */.Z)(aitoffRaw)
+  return (0,src_projection/* default */.A)(aitoffRaw)
       .scale(152.63);
 }
 
@@ -74525,7 +70452,7 @@ function armadilloRaw(phi0) {
   var phi0 = 20 * radians,
       sPhi0 = phi0 >= 0 ? 1 : -1,
       tanPhi0 = tan(sPhi0 * phi0),
-      m = (0,src_projection/* projectionMutator */.r)(armadilloRaw),
+      m = (0,src_projection/* projectionMutator */.U)(armadilloRaw),
       p = m(phi0),
       stream_ = p.stream;
 
@@ -74595,7 +70522,7 @@ augustRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function august() {
-  return (0,src_projection/* default */.Z)(augustRaw)
+  return (0,src_projection/* default */.A)(augustRaw)
       .scale(66.1603);
 }
 
@@ -74624,12 +70551,12 @@ bakerRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function baker() {
-  return (0,src_projection/* default */.Z)(bakerRaw)
+  return (0,src_projection/* default */.A)(bakerRaw)
       .scale(112.314);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthalEquidistant.js
-var azimuthalEquidistant = __webpack_require__(3633);
+var azimuthalEquidistant = __webpack_require__(4858);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/berghaus.js
 
 
@@ -74638,7 +70565,7 @@ function berghausRaw(lobes) {
   var k = 2 * pi / lobes;
 
   function forward(lambda, phi) {
-    var p = (0,azimuthalEquidistant/* azimuthalEquidistantRaw */.N)(lambda, phi);
+    var p = (0,azimuthalEquidistant/* azimuthalEquidistantRaw */.j)(lambda, phi);
     if (abs(lambda) > halfPi) { // back hemisphere
       var theta = atan2(p[1], p[0]),
           r = sqrt(p[0] * p[0] + p[1] * p[1]),
@@ -74662,7 +70589,7 @@ function berghausRaw(lobes) {
       theta = theta0 + 2 * atan((cotAlpha + s * sqrt(cotAlpha * cotAlpha - 3)) / 3);
       x = r * cos(theta), y = r * sin(theta);
     }
-    return azimuthalEquidistant/* azimuthalEquidistantRaw.invert */.N.invert(x, y);
+    return azimuthalEquidistant/* azimuthalEquidistantRaw */.j.invert(x, y);
   };
 
   return forward;
@@ -74670,7 +70597,7 @@ function berghausRaw(lobes) {
 
 /* harmony default export */ function berghaus() {
   var lobes = 5,
-      m = (0,src_projection/* projectionMutator */.r)(berghausRaw),
+      m = (0,src_projection/* projectionMutator */.U)(berghausRaw),
       p = m(lobes),
       projectionStream = p.stream,
       epsilon = 1e-2,
@@ -74710,24 +70637,24 @@ function berghausRaw(lobes) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthalEqualArea.js
-var azimuthalEqualArea = __webpack_require__(7935);
+var azimuthalEqualArea = __webpack_require__(4550);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/hammer.js
 
 
 
 function hammerRaw(A, B) {
   if (arguments.length < 2) B = A;
-  if (B === 1) return azimuthalEqualArea/* azimuthalEqualAreaRaw */.l;
+  if (B === 1) return azimuthalEqualArea/* azimuthalEqualAreaRaw */.n;
   if (B === Infinity) return hammerQuarticAuthalicRaw;
 
   function forward(lambda, phi) {
-    var coordinates = (0,azimuthalEqualArea/* azimuthalEqualAreaRaw */.l)(lambda / B, phi);
+    var coordinates = (0,azimuthalEqualArea/* azimuthalEqualAreaRaw */.n)(lambda / B, phi);
     coordinates[0] *= A;
     return coordinates;
   }
 
   forward.invert = function(x, y) {
-    var coordinates = azimuthalEqualArea/* azimuthalEqualAreaRaw.invert */.l.invert(x / A, y);
+    var coordinates = azimuthalEqualArea/* azimuthalEqualAreaRaw */.n.invert(x / A, y);
     coordinates[0] *= B;
     return coordinates;
   };
@@ -74752,7 +70679,7 @@ hammerQuarticAuthalicRaw.invert = function(x, y) {
 
 /* harmony default export */ function hammer() {
   var B = 2,
-      m = (0,src_projection/* projectionMutator */.r)(hammerRaw),
+      m = (0,src_projection/* projectionMutator */.U)(hammerRaw),
       p = m(B);
 
   p.coefficient = function(_) {
@@ -74869,7 +70796,7 @@ function bertin1953Raw() {
 
 /* harmony default export */ function bertin() {
   // this projection should not be rotated
-  return (0,src_projection/* default */.Z)(bertin1953Raw())
+  return (0,src_projection/* default */.A)(bertin1953Raw())
     .rotate([-16.5, -42])
     .scale(176.57)
     .center([7.93, 0.09]);
@@ -74902,7 +70829,7 @@ function mollweideBromleyRaw(cx, cy, cp) {
 var mollweideRaw = mollweideBromleyRaw(sqrt2 / halfPi, sqrt2, pi);
 
 /* harmony default export */ function mollweide() {
-  return (0,src_projection/* default */.Z)(mollweideRaw)
+  return (0,src_projection/* default */.A)(mollweideRaw)
       .scale(169.529);
 }
 
@@ -74930,7 +70857,7 @@ boggsRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function boggs() {
-  return (0,src_projection/* default */.Z)(boggsRaw)
+  return (0,src_projection/* default */.A)(boggsRaw)
       .scale(160.857);
 }
 
@@ -74940,7 +70867,7 @@ boggsRaw.invert = function(x, y) {
 
 /* harmony default export */ function parallel1(projectAt) {
   var phi0 = 0,
-      m = (0,src_projection/* projectionMutator */.r)(projectAt),
+      m = (0,src_projection/* projectionMutator */.U)(projectAt),
       p = m(phi0);
 
   p.parallel = function(_) {
@@ -74963,7 +70890,7 @@ sinusoidalRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function sinusoidal() {
-  return (0,src_projection/* default */.Z)(sinusoidalRaw)
+  return (0,src_projection/* default */.A)(sinusoidalRaw)
       .scale(152.63);
 }
 
@@ -75023,7 +70950,7 @@ function bottomleyRaw(sinPsi) {
 
 /* harmony default export */ function bottomley() {
   var sinPsi = 0.5,
-      m = (0,src_projection/* projectionMutator */.r)(bottomleyRaw),
+      m = (0,src_projection/* projectionMutator */.U)(bottomleyRaw),
       p = m(sinPsi);
 
   p.fraction = function(_) {
@@ -75042,14 +70969,14 @@ function bottomleyRaw(sinPsi) {
 var bromleyRaw = mollweideBromleyRaw(1, 4 / pi, pi);
 
 /* harmony default export */ function bromley() {
-  return (0,src_projection/* default */.Z)(bromleyRaw)
+  return (0,src_projection/* default */.A)(bromleyRaw)
       .scale(152.63);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/centroid.js
-var centroid = __webpack_require__(1157);
+var centroid = __webpack_require__(5308);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/rotation.js
-var rotation = __webpack_require__(8442);
+var rotation = __webpack_require__(5378);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/chamberlin.js
 
 
@@ -75154,12 +71081,12 @@ function chamberlinAfrica() {
 }
 
 function chamberlin(p0, p1, p2) { // TODO order matters!
-  var c = (0,centroid/* default */.Z)({type: "MultiPoint", coordinates: [p0, p1, p2]}),
+  var c = (0,centroid/* default */.A)({type: "MultiPoint", coordinates: [p0, p1, p2]}),
       R = [-c[0], -c[1]],
-      r = (0,rotation/* default */.Z)(R),
+      r = (0,rotation/* default */.A)(R),
       f = chamberlinRaw(pointRadians(r(p0)), pointRadians(r(p1)), pointRadians(r(p2)));
   f.invert = solve2d(f);
-  var p = (0,src_projection/* default */.Z)(f).rotate(R),
+  var p = (0,src_projection/* default */.A)(f).rotate(R),
       center = p.center;
 
   delete p.rotate;
@@ -75187,7 +71114,7 @@ collignonRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function collignon() {
-  return (0,src_projection/* default */.Z)(collignonRaw)
+  return (0,src_projection/* default */.A)(collignonRaw)
       .scale(95.6464)
       .center([0, 30]);
 }
@@ -75236,7 +71163,7 @@ crasterRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function craster() {
-  return (0,src_projection/* default */.Z)(crasterRaw)
+  return (0,src_projection/* default */.A)(crasterRaw)
       .scale(156.19);
 }
 
@@ -75309,7 +71236,7 @@ eckert1Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function eckert1() {
-  return (0,src_projection/* default */.Z)(eckert1Raw)
+  return (0,src_projection/* default */.A)(eckert1Raw)
       .scale(165.664);
 }
 
@@ -75334,7 +71261,7 @@ eckert2Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function eckert2() {
-  return (0,src_projection/* default */.Z)(eckert2Raw)
+  return (0,src_projection/* default */.A)(eckert2Raw)
       .scale(165.664);
 }
 
@@ -75359,7 +71286,7 @@ eckert3Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function eckert3() {
-  return (0,src_projection/* default */.Z)(eckert3Raw)
+  return (0,src_projection/* default */.A)(eckert3Raw)
       .scale(180.739);
 }
 
@@ -75391,7 +71318,7 @@ eckert4Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function eckert4() {
-  return (0,src_projection/* default */.Z)(eckert4Raw)
+  return (0,src_projection/* default */.A)(eckert4Raw)
       .scale(180.739);
 }
 
@@ -75416,7 +71343,7 @@ eckert5Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function eckert5() {
-  return (0,src_projection/* default */.Z)(eckert5Raw)
+  return (0,src_projection/* default */.A)(eckert5Raw)
       .scale(173.044);
 }
 
@@ -75446,7 +71373,7 @@ eckert6Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function eckert6() {
-  return (0,src_projection/* default */.Z)(eckert6Raw)
+  return (0,src_projection/* default */.A)(eckert6Raw)
       .scale(173.044);
 }
 
@@ -75518,7 +71445,7 @@ eisenlohrRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function eisenlohr() {
-  return (0,src_projection/* default */.Z)(eisenlohrRaw)
+  return (0,src_projection/* default */.A)(eisenlohrRaw)
       .scale(62.5271);
 }
 
@@ -75539,7 +71466,7 @@ faheyRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function fahey() {
-  return (0,src_projection/* default */.Z)(faheyRaw)
+  return (0,src_projection/* default */.A)(faheyRaw)
       .scale(137.152);
 }
 
@@ -75558,7 +71485,7 @@ foucautRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function foucaut() {
-  return (0,src_projection/* default */.Z)(foucautRaw)
+  return (0,src_projection/* default */.A)(foucautRaw)
       .scale(135.264);
 }
 
@@ -75602,7 +71529,7 @@ function foucautSinusoidalRaw(alpha) {
 
 /* harmony default export */ function foucautSinusoidal() {
   var alpha = 0.5,
-      m = (0,src_projection/* projectionMutator */.r)(foucautSinusoidalRaw),
+      m = (0,src_projection/* projectionMutator */.U)(foucautSinusoidalRaw),
       p = m(alpha);
 
   p.alpha = function(_) {
@@ -75614,9 +71541,9 @@ function foucautSinusoidalRaw(alpha) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/orthographic.js
-var orthographic = __webpack_require__(5794);
+var orthographic = __webpack_require__(5782);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/equirectangular.js
-var projection_equirectangular = __webpack_require__(3512);
+var projection_equirectangular = __webpack_require__(3538);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/gilbert.js
 
 
@@ -75630,9 +71557,9 @@ function gilbertInvert(point) {
 }
 
 /* harmony default export */ function gilbert(projectionType) {
-  if (projectionType == null) projectionType = orthographic/* default */.Z;
+  if (projectionType == null) projectionType = orthographic/* default */.A;
   var projection = projectionType(),
-      equirectangular = (0,projection_equirectangular/* default */.Z)().scale(degrees).precision(0).clipAngle(null).translate([0, 0]); // antimeridian cutting
+      equirectangular = (0,projection_equirectangular/* default */.A)().scale(degrees).precision(0).clipAngle(null).translate([0, 0]); // antimeridian cutting
 
   function gilbert(point) {
     return projection(gilbertForward(point));
@@ -75692,7 +71619,7 @@ function gingeryRaw(rho, n) {
       rho2 = rho * rho;
 
   function forward(lambda, phi) {
-    var p = (0,azimuthalEquidistant/* azimuthalEquidistantRaw */.N)(lambda, phi),
+    var p = (0,azimuthalEquidistant/* azimuthalEquidistantRaw */.j)(lambda, phi),
         x = p[0],
         y = p[1],
         r2 = x * x + y * y;
@@ -75762,7 +71689,7 @@ function gingeryRaw(rho, n) {
       x = r * cos(theta);
       y = r * sin(theta);
     }
-    return azimuthalEquidistant/* azimuthalEquidistantRaw.invert */.N.invert(x, y);
+    return azimuthalEquidistant/* azimuthalEquidistantRaw */.j.invert(x, y);
   };
 
   return forward;
@@ -75790,7 +71717,7 @@ function gingeryIntegrate(f, a, b) {
       rho = 30 * radians,
       cRho = cos(rho),
       sRho = sin(rho),
-      m = (0,src_projection/* projectionMutator */.r)(gingeryRaw),
+      m = (0,src_projection/* projectionMutator */.U)(gingeryRaw),
       p = m(rho, n),
       stream_ = p.stream,
       epsilon = 1e-2,
@@ -75896,7 +71823,7 @@ function gingeryIntegrate(f, a, b) {
 var ginzburg4Raw = ginzburgPolyconic(2.8284, -1.6988, 0.75432, -0.18071, 1.76003, -0.38914, 0.042555);
 
 /* harmony default export */ function ginzburg4() {
-  return (0,src_projection/* default */.Z)(ginzburg4Raw)
+  return (0,src_projection/* default */.A)(ginzburg4Raw)
       .scale(149.995);
 }
 
@@ -75907,7 +71834,7 @@ var ginzburg4Raw = ginzburgPolyconic(2.8284, -1.6988, 0.75432, -0.18071, 1.76003
 var ginzburg5Raw = ginzburgPolyconic(2.583819, -0.835827, 0.170354, -0.038094, 1.543313, -0.411435,0.082742);
 
 /* harmony default export */ function ginzburg5() {
-  return (0,src_projection/* default */.Z)(ginzburg5Raw)
+  return (0,src_projection/* default */.A)(ginzburg5Raw)
       .scale(153.93);
 }
 
@@ -75919,7 +71846,7 @@ var ginzburg5Raw = ginzburgPolyconic(2.583819, -0.835827, 0.170354, -0.038094, 1
 var ginzburg6Raw = ginzburgPolyconic(5 / 6 * pi, -0.62636, -0.0344, 0, 1.3493, -0.05524, 0, 0.045);
 
 /* harmony default export */ function ginzburg6() {
-  return (0,src_projection/* default */.Z)(ginzburg6Raw)
+  return (0,src_projection/* default */.A)(ginzburg6Raw)
       .scale(130.945);
 }
 
@@ -75954,7 +71881,7 @@ ginzburg8Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function ginzburg8() {
-  return (0,src_projection/* default */.Z)(ginzburg8Raw)
+  return (0,src_projection/* default */.A)(ginzburg8Raw)
       .scale(131.747);
 }
 
@@ -75965,7 +71892,7 @@ ginzburg8Raw.invert = function(x, y) {
 var ginzburg9Raw = ginzburgPolyconic(2.6516, -0.76534, 0.19123, -0.047094, 1.36289, -0.13965,0.031762);
 
 /* harmony default export */ function ginzburg9() {
-  return (0,src_projection/* default */.Z)(ginzburg9Raw)
+  return (0,src_projection/* default */.A)(ginzburg9Raw)
       .scale(131.087);
 }
 
@@ -76140,7 +72067,7 @@ function gringortenHexadecantInvert(x, y) {
 }
 
 /* harmony default export */ function gringorten() {
-  return (0,src_projection/* default */.Z)(square(gringortenRaw))
+  return (0,src_projection/* default */.A)(square(gringortenRaw))
       .scale(239.75);
 }
 
@@ -76315,12 +72242,12 @@ guyouRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function guyou() {
-  return (0,src_projection/* default */.Z)(square(guyouRaw))
+  return (0,src_projection/* default */.A)(square(guyouRaw))
       .scale(151.496);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/circle.js + 1 modules
-var src_circle = __webpack_require__(9811);
+var src_circle = __webpack_require__(2504);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/hammerRetroazimuthal.js
 
 
@@ -76384,11 +72311,11 @@ function hammerRetroazimuthalRotation(phi0) {
 
 /* harmony default export */ function hammerRetroazimuthal() {
   var phi0 = 0,
-      m = (0,src_projection/* projectionMutator */.r)(hammerRetroazimuthalRaw),
+      m = (0,src_projection/* projectionMutator */.U)(hammerRetroazimuthalRaw),
       p = m(phi0),
       rotate_ = p.rotate,
       stream_ = p.stream,
-      circle = (0,src_circle/* default */.Z)();
+      circle = (0,src_circle/* default */.A)();
 
   p.parallel = function(_) {
     if (!arguments.length) return phi0 * degrees;
@@ -76433,9 +72360,9 @@ function hammerRetroazimuthalRotation(phi0) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-array/src/index.js + 9 modules
-var src = __webpack_require__(1705);
+var src = __webpack_require__(2423);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/stream.js
-var src_stream = __webpack_require__(4471);
+var src_stream = __webpack_require__(6804);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/healpix.js
 
 
@@ -76505,8 +72432,8 @@ function sphereNudge(d) {
 
 function sphere(step) {
   var c = [].concat(
-    (0,src/* range */.w6)(-180, 180 + step / 2, step).map(sphereTop),
-    (0,src/* range */.w6)(180, -180 - step / 2, -step).map(sphereBottom)
+    (0,src/* range */.y1)(-180, 180 + step / 2, step).map(sphereTop),
+    (0,src/* range */.y1)(180, -180 - step / 2, -step).map(sphereBottom)
   );
   return {
     type: "Polygon",
@@ -76516,7 +72443,7 @@ function sphere(step) {
 
 /* harmony default export */ function healpix() {
   var H = 4,
-      m = (0,src_projection/* projectionMutator */.r)(healpixRaw),
+      m = (0,src_projection/* projectionMutator */.U)(healpixRaw),
       p = m(H),
       stream_ = p.stream;
 
@@ -76529,7 +72456,7 @@ function sphere(step) {
         rotateStream = stream_(stream),
         sphereStream = (p.rotate([0, 0]), stream_(stream));
     p.rotate(rotate);
-    rotateStream.sphere = function() { (0,src_stream/* default */.Z)(sphere(180 / H), sphereStream); };
+    rotateStream.sphere = function() { (0,src_stream/* default */.A)(sphere(180 / H), sphereStream); };
     return rotateStream;
   };
 
@@ -76593,7 +72520,7 @@ function hillRaw(K) {
 
 /* harmony default export */ function hill() {
   var K = 1,
-      m = (0,src_projection/* projectionMutator */.r)(hillRaw),
+      m = (0,src_projection/* projectionMutator */.U)(hillRaw),
       p = m(K);
 
   p.ratio = function(_) {
@@ -76627,7 +72554,7 @@ sinuMollweideRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function sinuMollweide() {
-  return (0,src_projection/* default */.Z)(sinuMollweideRaw)
+  return (0,src_projection/* default */.A)(sinuMollweideRaw)
       .rotate([-20, -55])
       .scale(164.263)
       .center([0, -5.4036]);
@@ -76653,7 +72580,7 @@ homolosineRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function homolosine() {
-  return (0,src_projection/* default */.Z)(homolosineRaw)
+  return (0,src_projection/* default */.A)(homolosineRaw)
       .scale(152.63);
 }
 
@@ -76729,7 +72656,7 @@ function hufnagelRaw(a, b, psiMax, ratio) {
     b = 0,
     psiMax = 45 * radians,
     ratio = 2,
-    mutate = (0,src_projection/* projectionMutator */.r)(hufnagelRaw),
+    mutate = (0,src_projection/* projectionMutator */.U)(hufnagelRaw),
     projection = mutate(a, b, psiMax, ratio);
 
   projection.a = function(_) {
@@ -76898,7 +72825,7 @@ function hyperellipticalRaw(alpha, k, gamma) {
   var alpha = 0,
       k = 2.5,
       gamma = 1.183136, // affine = sqrt(2 * gamma / pi) = 0.8679
-      m = (0,src_projection/* projectionMutator */.r)(hyperellipticalRaw),
+      m = (0,src_projection/* projectionMutator */.U)(hyperellipticalRaw),
       p = m(alpha, k, gamma);
 
   p.alpha = function(_) {
@@ -76980,7 +72907,7 @@ function interpolateSphere(lobes) {
 
   return {
     type: "Polygon",
-    coordinates: [(0,src/* merge */.TS)(coordinates)]
+    coordinates: [(0,src/* merge */.Am)(coordinates)]
   };
 }
 
@@ -77011,7 +72938,7 @@ function interpolateSphere(lobes) {
     };
   }
 
-  var p = (0,src_projection/* default */.Z)(forward),
+  var p = (0,src_projection/* default */.A)(forward),
       stream_ = p.stream;
 
   p.stream = function(stream) {
@@ -77019,7 +72946,7 @@ function interpolateSphere(lobes) {
         rotateStream = stream_(stream),
         sphereStream = (p.rotate([0, 0]), stream_(stream));
     p.rotate(rotate);
-    rotateStream.sphere = function() { (0,src_stream/* default */.Z)(sphere, sphereStream); };
+    rotateStream.sphere = function() { (0,src_stream/* default */.A)(sphere, sphereStream); };
     return rotateStream;
   };
   
@@ -77195,7 +73122,7 @@ kavrayskiy7Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function kavrayskiy7() {
-  return (0,src_projection/* default */.Z)(kavrayskiy7Raw)
+  return (0,src_projection/* default */.A)(kavrayskiy7Raw)
       .scale(158.837);
 }
 
@@ -77237,7 +73164,7 @@ function lagrangeRaw(n) {
 
 /* harmony default export */ function lagrange() {
   var n = 0.5,
-      m = (0,src_projection/* projectionMutator */.r)(lagrangeRaw),
+      m = (0,src_projection/* projectionMutator */.U)(lagrangeRaw),
       p = m(n);
 
   p.spacing = function(_) {
@@ -77292,7 +73219,7 @@ larriveeRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function larrivee() {
-  return (0,src_projection/* default */.Z)(larriveeRaw)
+  return (0,src_projection/* default */.A)(larriveeRaw)
       .scale(97.2672);
 }
 
@@ -77331,7 +73258,7 @@ laskowskiRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function laskowski() {
-  return (0,src_projection/* default */.Z)(laskowskiRaw)
+  return (0,src_projection/* default */.A)(laskowskiRaw)
       .scale(139.98);
 }
 
@@ -77361,7 +73288,7 @@ littrowRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function littrow() {
-  return (0,src_projection/* default */.Z)(littrowRaw)
+  return (0,src_projection/* default */.A)(littrowRaw)
       .scale(144.049)
       .clipAngle(90 - 1e-3);
 }
@@ -77415,7 +73342,7 @@ millerRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function miller() {
-  return (0,src_projection/* default */.Z)(millerRaw)
+  return (0,src_projection/* default */.A)(millerRaw)
       .scale(108.318);
 }
 
@@ -77530,8 +73457,8 @@ function modifiedStereographicLee() {
 }
 
 function modifiedStereographic(coefficients, rotate) {
-  var p = (0,src_projection/* default */.Z)(modifiedStereographicRaw(coefficients)).rotate(rotate).clipAngle(90),
-      r = (0,rotation/* default */.Z)(rotate),
+  var p = (0,src_projection/* default */.A)(modifiedStereographicRaw(coefficients)).rotate(rotate).clipAngle(90),
+      r = (0,rotation/* default */.A)(rotate),
       center = p.center;
 
   delete p.rotate;
@@ -77567,7 +73494,7 @@ mtFlatPolarParabolicRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function mtFlatPolarParabolic() {
-  return (0,src_projection/* default */.Z)(mtFlatPolarParabolicRaw)
+  return (0,src_projection/* default */.A)(mtFlatPolarParabolicRaw)
       .scale(164.859);
 }
 
@@ -77598,7 +73525,7 @@ mtFlatPolarQuarticRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function mtFlatPolarQuartic() {
-  return (0,src_projection/* default */.Z)(mtFlatPolarQuarticRaw)
+  return (0,src_projection/* default */.A)(mtFlatPolarQuarticRaw)
       .scale(188.209);
 }
 
@@ -77631,12 +73558,12 @@ mtFlatPolarSinusoidalRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function mtFlatPolarSinusoidal() {
-  return (0,src_projection/* default */.Z)(mtFlatPolarSinusoidalRaw)
+  return (0,src_projection/* default */.A)(mtFlatPolarSinusoidalRaw)
       .scale(166.518);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/naturalEarth1.js
-var naturalEarth1 = __webpack_require__(332);
+var naturalEarth1 = __webpack_require__(5400);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/naturalEarth2.js
 
 
@@ -77664,7 +73591,7 @@ naturalEarth2Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function naturalEarth2() {
-  return (0,src_projection/* default */.Z)(naturalEarth2Raw)
+  return (0,src_projection/* default */.A)(naturalEarth2Raw)
       .scale(175.295);
 }
 
@@ -77692,7 +73619,7 @@ nellHammerRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function nellHammer() {
-  return (0,src_projection/* default */.Z)(nellHammerRaw)
+  return (0,src_projection/* default */.A)(nellHammerRaw)
       .scale(152.63);
 }
 
@@ -77776,7 +73703,7 @@ nicolosiRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function nicolosi() {
-  return (0,src_projection/* default */.Z)(nicolosiRaw)
+  return (0,src_projection/* default */.A)(nicolosiRaw)
     .scale(127.267);
 }
 
@@ -77819,7 +73746,7 @@ pattersonRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function patterson() {
-  return (0,src_projection/* default */.Z)(pattersonRaw)
+  return (0,src_projection/* default */.A)(pattersonRaw)
       .scale(139.319);
 }
 
@@ -77856,14 +73783,14 @@ polyconicRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function polyconic() {
-  return (0,src_projection/* default */.Z)(polyconicRaw)
+  return (0,src_projection/* default */.A)(polyconicRaw)
       .scale(103.74);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/bounds.js
-var bounds = __webpack_require__(5925);
+var bounds = __webpack_require__(9565);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/interpolate.js
-var interpolate = __webpack_require__(1121);
+var interpolate = __webpack_require__(9829);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/matrix.js
 
 
@@ -78018,7 +73945,7 @@ function matrix_angle(a, b) {
     return face(coordinates[0] * radians, coordinates[1] * radians);
   }
 
-  var proj = (0,src_projection/* default */.Z)(forward),
+  var proj = (0,src_projection/* default */.A)(forward),
       stream_ = proj.stream;
 
   proj.stream = function(stream) {
@@ -78046,14 +73973,14 @@ function outline(stream, node, parent) {
       edge,
       multiPoint = {type: "MultiPoint", coordinates: node.face},
       notPoles = node.face.filter(function(d) { return abs(d[1]) !== 90; }),
-      b = (0,bounds/* default */.Z)({type: "MultiPoint", coordinates: notPoles}),
+      b = (0,bounds/* default */.A)({type: "MultiPoint", coordinates: notPoles}),
       inside = false,
       j = -1,
       dx = b[1][0] - b[0][0];
   // TODO
   var c = dx === 180 || dx === 360
       ? [(b[0][0] + b[1][0]) / 2, (b[0][1] + b[1][1]) / 2]
-      : (0,centroid/* default */.Z)(multiPoint);
+      : (0,centroid/* default */.A)(multiPoint);
   // First find the shared edge…
   if (parent) while (++j < n) {
     if (edges[j] === parent) break;
@@ -78063,10 +73990,10 @@ function outline(stream, node, parent) {
     edge = edges[(i + j) % n];
     if (Array.isArray(edge)) {
       if (!inside) {
-        stream.point((point = (0,interpolate/* default */.Z)(edge[0], c)(epsilon))[0], point[1]);
+        stream.point((point = (0,interpolate/* default */.A)(edge[0], c)(epsilon))[0], point[1]);
         inside = true;
       }
-      stream.point((point = (0,interpolate/* default */.Z)(edge[1], c)(epsilon))[0], point[1]);
+      stream.point((point = (0,interpolate/* default */.A)(edge[1], c)(epsilon))[0], point[1]);
     } else {
       inside = false;
       if (edge !== parent) outline(stream, edge, node);
@@ -78107,7 +74034,7 @@ function hasInverse(node) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/gnomonic.js
-var gnomonic = __webpack_require__(7119);
+var gnomonic = __webpack_require__(5912);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/octahedron.js
 // TODO generate on-the-fly to avoid external modification.
 var octahedron = [
@@ -78140,8 +74067,8 @@ var octahedron = [
 /* harmony default export */ function butterfly(faceProjection) {
 
   faceProjection = faceProjection || function(face) {
-    var c = (0,centroid/* default */.Z)({type: "MultiPoint", coordinates: face});
-    return (0,gnomonic/* default */.Z)().scale(1).translate([0, 0]).rotate([-c[0], -c[1]]);
+    var c = (0,centroid/* default */.A)({type: "MultiPoint", coordinates: face});
+    return (0,gnomonic/* default */.A)().scale(1).translate([0, 0]).rotate([-c[0], -c[1]]);
   };
 
   var faces = polyhedral_octahedron.map(function(face) {
@@ -78185,8 +74112,8 @@ collignonK.invert = function(x,y) {
 /* harmony default export */ function polyhedral_collignon(faceProjection) {
 
   faceProjection = faceProjection || function(face) {
-    var c = (0,centroid/* default */.Z)({type: "MultiPoint", coordinates: face});
-    return (0,src_projection/* default */.Z)(collignonK).translate([0, 0]).scale(1).rotate(c[1] > 0 ? [-c[0], 0] : [180 - c[0], 180]);
+    var c = (0,centroid/* default */.A)({type: "MultiPoint", coordinates: face});
+    return (0,src_projection/* default */.A)(collignonK).translate([0, 0]).scale(1).rotate(c[1] > 0 ? [-c[0], 0] : [180 - c[0], 180]);
   };
 
   var faces = polyhedral_octahedron.map(function(face) {
@@ -78218,8 +74145,8 @@ collignonK.invert = function(x,y) {
 /* harmony default export */ function waterman(faceProjection) {
 
   faceProjection = faceProjection || function(face) {
-    var c = face.length === 6 ? (0,centroid/* default */.Z)({type: "MultiPoint", coordinates: face}) : face[0];
-    return (0,gnomonic/* default */.Z)().scale(1).translate([0, 0]).rotate([-c[0], -c[1]]);
+    var c = face.length === 6 ? (0,centroid/* default */.A)({type: "MultiPoint", coordinates: face}) : face[0];
+    return (0,gnomonic/* default */.A)().scale(1).translate([0, 0]).rotate([-c[0], -c[1]]);
   };
 
   var w5 = polyhedral_octahedron.map(function(face) {
@@ -78418,7 +74345,7 @@ function projectGeometry(o, stream) {
     case "Sphere": sink = sinkPolygon; break;
     default: return null;
   }
-  (0,src_stream/* default */.Z)(o, stream(sink));
+  (0,src_stream/* default */.A)(o, stream(sink));
   return sink.result();
 }
 
@@ -78535,7 +74462,7 @@ var sinkPolygon = {
     return p;
   };
 
-  return (0,src_projection/* default */.Z)(projectQuincuncial)
+  return (0,src_projection/* default */.A)(projectQuincuncial)
       .rotate([-90, -90, 45])
       .clipAngle(180 - 1e-3);
 }
@@ -78763,7 +74690,7 @@ robinsonRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function robinson() {
-  return (0,src_projection/* default */.Z)(robinsonRaw)
+  return (0,src_projection/* default */.A)(robinsonRaw)
       .scale(152.63);
 }
 
@@ -78821,7 +74748,7 @@ function satelliteRaw(P, omega) {
 /* harmony default export */ function satellite() {
   var distance = 2,
       omega = 0,
-      m = (0,src_projection/* projectionMutator */.r)(satelliteRaw),
+      m = (0,src_projection/* projectionMutator */.U)(satelliteRaw),
       p = m(distance, omega);
 
   // As a multiple of radius.
@@ -79080,7 +75007,7 @@ timesRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function times() {
-  return (0,src_projection/* default */.Z)(timesRaw)
+  return (0,src_projection/* default */.A)(timesRaw)
       .scale(146.153);
 }
 
@@ -79092,14 +75019,14 @@ timesRaw.invert = function(x, y) {
 // Rotate one of the reference points by the origin.
 // Apply the spherical law of sines to compute gamma rotation.
 /* harmony default export */ function twoPoint(raw, p0, p1) {
-  var i = (0,interpolate/* default */.Z)(p0, p1),
+  var i = (0,interpolate/* default */.A)(p0, p1),
       o = i(0.5),
-      a = (0,rotation/* default */.Z)([-o[0], -o[1]])(p0),
+      a = (0,rotation/* default */.A)([-o[0], -o[1]])(p0),
       b = i.distance / 2,
       y = -asin(sin(a[1] * radians) / sin(b)),
       R = [-o[0], -o[1], -(a[0] > 0 ? pi - y : y) * degrees],
-      p = (0,src_projection/* default */.Z)(raw(b)).rotate(R),
-      r = (0,rotation/* default */.Z)(R),
+      p = (0,src_projection/* default */.A)(raw(b)).rotate(R),
+      r = (0,rotation/* default */.A)(R),
       center = p.center;
 
   delete p.rotate;
@@ -79121,13 +75048,13 @@ function twoPointAzimuthalRaw(d) {
   var cosd = cos(d);
 
   function forward(lambda, phi) {
-    var coordinates = (0,gnomonic/* gnomonicRaw */.M)(lambda, phi);
+    var coordinates = (0,gnomonic/* gnomonicRaw */.T)(lambda, phi);
     coordinates[0] *= cosd;
     return coordinates;
   }
 
   forward.invert = function(x, y) {
-    return gnomonic/* gnomonicRaw.invert */.M.invert(x / cosd, y);
+    return gnomonic/* gnomonicRaw */.T.invert(x / cosd, y);
   };
 
   return forward;
@@ -79150,7 +75077,7 @@ function twoPointAzimuthal(p0, p1) {
 
 // TODO clip to ellipse
 function twoPointEquidistantRaw(z0) {
-  if (!(z0 *= 2)) return azimuthalEquidistant/* azimuthalEquidistantRaw */.N;
+  if (!(z0 *= 2)) return azimuthalEquidistant/* azimuthalEquidistantRaw */.j;
   var lambdaa = -z0 / 2,
       lambdab = -lambdaa,
       z02 = z0 * z0,
@@ -79238,7 +75165,7 @@ vanDerGrintenRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function vanDerGrinten() {
-  return (0,src_projection/* default */.Z)(vanDerGrintenRaw)
+  return (0,src_projection/* default */.A)(vanDerGrintenRaw)
       .scale(79.4183);
 }
 
@@ -79274,7 +75201,7 @@ vanDerGrinten2Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function vanDerGrinten2() {
-  return (0,src_projection/* default */.Z)(vanDerGrinten2Raw)
+  return (0,src_projection/* default */.A)(vanDerGrinten2Raw)
       .scale(79.4183);
 }
 
@@ -79306,7 +75233,7 @@ vanDerGrinten3Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function vanDerGrinten3() {
-  return (0,src_projection/* default */.Z)(vanDerGrinten3Raw)
+  return (0,src_projection/* default */.A)(vanDerGrinten3Raw)
         .scale(79.4183);
 }
 
@@ -79369,7 +75296,7 @@ vanDerGrinten4Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function vanDerGrinten4() {
-  return (0,src_projection/* default */.Z)(vanDerGrinten4Raw)
+  return (0,src_projection/* default */.A)(vanDerGrinten4Raw)
       .scale(127.16);
 }
 
@@ -79443,7 +75370,7 @@ function wagner() {
       parallels = 60 * radians,
       inflation = 20,
       ratio = 200,
-      mutate = (0,src_projection/* projectionMutator */.r)(wagnerRaw),
+      mutate = (0,src_projection/* projectionMutator */.U)(wagnerRaw),
       projection = mutate(poleline, parallels, inflation, ratio);
 
   projection.poleline = function(_) {
@@ -79484,7 +75411,7 @@ var A = 4 * pi + 3 * sqrt(3),
 var wagner4Raw = mollweideBromleyRaw(B * sqrt(3) / pi, B, A / 6);
 
 /* harmony default export */ function wagner4() {
-  return (0,src_projection/* default */.Z)(wagner4Raw)
+  return (0,src_projection/* default */.A)(wagner4Raw)
       .scale(176.84);
 }
 
@@ -79501,7 +75428,7 @@ wagner6Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function wagner6() {
-  return (0,src_projection/* default */.Z)(wagner6Raw)
+  return (0,src_projection/* default */.A)(wagner6Raw)
       .scale(152.63);
 }
 
@@ -79535,7 +75462,7 @@ wiechelRaw.invert = function(x, y) {
 };
 
 /* harmony default export */ function wiechel() {
-  return (0,src_projection/* default */.Z)(wiechelRaw)
+  return (0,src_projection/* default */.A)(wiechelRaw)
       .rotate([0, -90, 45])
       .scale(124.75)
       .clipAngle(180 - 1e-3);
@@ -79584,7 +75511,7 @@ winkel3Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function winkel3() {
-  return (0,src_projection/* default */.Z)(winkel3Raw)
+  return (0,src_projection/* default */.A)(winkel3Raw)
       .scale(158.837);
 }
 
@@ -79690,12 +75617,12 @@ winkel3Raw.invert = function(x, y) {
 
 /***/ }),
 
-/***/ 6033:
+/***/ 5022:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
 // Adds floating point numbers with twice the normal precision.
 // Reference: J. R. Shewchuk, Adaptive Precision Floating-Point Arithmetic and
@@ -79741,27 +75668,27 @@ function add(adder, a, b) {
 
 /***/ }),
 
-/***/ 2708:
+/***/ 2333:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "L9": function() { return /* binding */ areaRingSum; },
-/* harmony export */   "ZP": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
-/* harmony export */   "gL": function() { return /* binding */ areaStream; }
+/* harmony export */   Ay: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   B0: function() { return /* binding */ areaRingSum; },
+/* harmony export */   Y7: function() { return /* binding */ areaStream; }
 /* harmony export */ });
-/* harmony import */ var _adder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6033);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6354);
-/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8437);
-/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4471);
+/* harmony import */ var _adder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5022);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4650);
+/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6608);
+/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6804);
 
 
 
 
 
-var areaRingSum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)();
+var areaRingSum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 
-var areaSum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(),
+var areaSum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(),
     lambda00,
     phi00,
     lambda0,
@@ -79769,9 +75696,9 @@ var areaSum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(),
     sinPhi0;
 
 var areaStream = {
-  point: _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z,
-  lineStart: _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z,
-  lineEnd: _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z,
+  point: _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,
+  lineStart: _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,
+  lineEnd: _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,
   polygonStart: function() {
     areaRingSum.reset();
     areaStream.lineStart = areaRingStart;
@@ -79779,11 +75706,11 @@ var areaStream = {
   },
   polygonEnd: function() {
     var areaRing = +areaRingSum;
-    areaSum.add(areaRing < 0 ? _math_js__WEBPACK_IMPORTED_MODULE_2__/* .tau */ .BZ + areaRing : areaRing);
-    this.lineStart = this.lineEnd = this.point = _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z;
+    areaSum.add(areaRing < 0 ? _math_js__WEBPACK_IMPORTED_MODULE_2__/* .tau */ .FA + areaRing : areaRing);
+    this.lineStart = this.lineEnd = this.point = _noop_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A;
   },
   sphere: function() {
-    areaSum.add(_math_js__WEBPACK_IMPORTED_MODULE_2__/* .tau */ .BZ);
+    areaSum.add(_math_js__WEBPACK_IMPORTED_MODULE_2__/* .tau */ .FA);
   }
 };
 
@@ -79798,13 +75725,13 @@ function areaRingEnd() {
 function areaPointFirst(lambda, phi) {
   areaStream.point = areaPoint;
   lambda00 = lambda, phi00 = phi;
-  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .uR, phi *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .uR;
-  lambda0 = lambda, cosPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .cos */ .mC)(phi = phi / 2 + _math_js__WEBPACK_IMPORTED_MODULE_2__/* .quarterPi */ .pu), sinPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .sin */ .O$)(phi);
+  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .F2, phi *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .F2;
+  lambda0 = lambda, cosPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .cos */ .gn)(phi = phi / 2 + _math_js__WEBPACK_IMPORTED_MODULE_2__/* .quarterPi */ .gz), sinPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .sin */ .F8)(phi);
 }
 
 function areaPoint(lambda, phi) {
-  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .uR, phi *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .uR;
-  phi = phi / 2 + _math_js__WEBPACK_IMPORTED_MODULE_2__/* .quarterPi */ .pu; // half the angular distance from south pole
+  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .F2, phi *= _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .F2;
+  phi = phi / 2 + _math_js__WEBPACK_IMPORTED_MODULE_2__/* .quarterPi */ .gz; // half the angular distance from south pole
 
   // Spherical excess E for a spherical triangle with vertices: south pole,
   // previous point, current point.  Uses a formula derived from Cagnoli’s
@@ -79812,12 +75739,12 @@ function areaPoint(lambda, phi) {
   var dLambda = lambda - lambda0,
       sdLambda = dLambda >= 0 ? 1 : -1,
       adLambda = sdLambda * dLambda,
-      cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .cos */ .mC)(phi),
-      sinPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .sin */ .O$)(phi),
+      cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .cos */ .gn)(phi),
+      sinPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .sin */ .F8)(phi),
       k = sinPhi0 * sinPhi,
-      u = cosPhi0 * cosPhi + k * (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .cos */ .mC)(adLambda),
-      v = k * sdLambda * (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .sin */ .O$)(adLambda);
-  areaRingSum.add((0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .atan2 */ .fv)(v, u));
+      u = cosPhi0 * cosPhi + k * (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .cos */ .gn)(adLambda),
+      v = k * sdLambda * (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .sin */ .F8)(adLambda);
+  areaRingSum.add((0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .atan2 */ .FP)(v, u));
 
   // Advance the previous points.
   lambda0 = lambda, cosPhi0 = cosPhi, sinPhi0 = sinPhi;
@@ -79825,25 +75752,25 @@ function areaPoint(lambda, phi) {
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(object) {
   areaSum.reset();
-  (0,_stream_js__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z)(object, areaStream);
+  (0,_stream_js__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A)(object, areaStream);
   return areaSum * 2;
 }
 
 
 /***/ }),
 
-/***/ 5925:
+/***/ 9565:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _adder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6033);
-/* harmony import */ var _area_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2708);
-/* harmony import */ var _cartesian_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9665);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6354);
-/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4471);
+/* harmony import */ var _adder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5022);
+/* harmony import */ var _area_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2333);
+/* harmony import */ var _cartesian_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8696);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4650);
+/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6804);
 
 
 
@@ -79854,7 +75781,7 @@ var lambda0, phi0, lambda1, phi1, // bounds
     lambda2, // previous lambda-coordinate
     lambda00, phi00, // first point
     p0, // previous 3D point
-    deltaSum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(),
+    deltaSum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(),
     ranges,
     range;
 
@@ -79867,16 +75794,16 @@ var boundsStream = {
     boundsStream.lineStart = boundsRingStart;
     boundsStream.lineEnd = boundsRingEnd;
     deltaSum.reset();
-    _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream.polygonStart */ .gL.polygonStart();
+    _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream */ .Y7.polygonStart();
   },
   polygonEnd: function() {
-    _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream.polygonEnd */ .gL.polygonEnd();
+    _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream */ .Y7.polygonEnd();
     boundsStream.point = boundsPoint;
     boundsStream.lineStart = boundsLineStart;
     boundsStream.lineEnd = boundsLineEnd;
-    if (_area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaRingSum */ .L9 < 0) lambda0 = -(lambda1 = 180), phi0 = -(phi1 = 90);
-    else if (deltaSum > _math_js__WEBPACK_IMPORTED_MODULE_2__/* .epsilon */ .Ho) phi1 = 90;
-    else if (deltaSum < -_math_js__WEBPACK_IMPORTED_MODULE_2__/* .epsilon */ .Ho) phi0 = -90;
+    if (_area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaRingSum */ .B0 < 0) lambda0 = -(lambda1 = 180), phi0 = -(phi1 = 90);
+    else if (deltaSum > _math_js__WEBPACK_IMPORTED_MODULE_2__/* .epsilon */ .Ni) phi1 = 90;
+    else if (deltaSum < -_math_js__WEBPACK_IMPORTED_MODULE_2__/* .epsilon */ .Ni) phi0 = -90;
     range[0] = lambda0, range[1] = lambda1;
   },
   sphere: function() {
@@ -79891,23 +75818,23 @@ function boundsPoint(lambda, phi) {
 }
 
 function linePoint(lambda, phi) {
-  var p = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesian */ .Og)([lambda * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .uR, phi * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .uR]);
+  var p = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesian */ .jf)([lambda * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .F2, phi * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .radians */ .F2]);
   if (p0) {
-    var normal = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .T5)(p0, p),
+    var normal = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .r8)(p0, p),
         equatorial = [normal[1], -normal[0], 0],
-        inflection = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .T5)(equatorial, normal);
-    (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianNormalizeInPlace */ .iJ)(inflection);
-    inflection = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .spherical */ .Y1)(inflection);
+        inflection = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .r8)(equatorial, normal);
+    (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianNormalizeInPlace */ .Cx)(inflection);
+    inflection = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .spherical */ .EV)(inflection);
     var delta = lambda - lambda2,
         sign = delta > 0 ? 1 : -1,
-        lambdai = inflection[0] * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .degrees */ .RW * sign,
+        lambdai = inflection[0] * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .degrees */ .uj * sign,
         phii,
-        antimeridian = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .abs */ .Wn)(delta) > 180;
+        antimeridian = (0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .abs */ .tn)(delta) > 180;
     if (antimeridian ^ (sign * lambda2 < lambdai && lambdai < sign * lambda)) {
-      phii = inflection[1] * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .degrees */ .RW;
+      phii = inflection[1] * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .degrees */ .uj;
       if (phii > phi1) phi1 = phii;
     } else if (lambdai = (lambdai + 360) % 360 - 180, antimeridian ^ (sign * lambda2 < lambdai && lambdai < sign * lambda)) {
-      phii = -inflection[1] * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .degrees */ .RW;
+      phii = -inflection[1] * _math_js__WEBPACK_IMPORTED_MODULE_2__/* .degrees */ .uj;
       if (phii < phi0) phi0 = phii;
     } else {
       if (phi < phi0) phi0 = phi;
@@ -79952,22 +75879,22 @@ function boundsLineEnd() {
 function boundsRingPoint(lambda, phi) {
   if (p0) {
     var delta = lambda - lambda2;
-    deltaSum.add((0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .abs */ .Wn)(delta) > 180 ? delta + (delta > 0 ? 360 : -360) : delta);
+    deltaSum.add((0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .abs */ .tn)(delta) > 180 ? delta + (delta > 0 ? 360 : -360) : delta);
   } else {
     lambda00 = lambda, phi00 = phi;
   }
-  _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream.point */ .gL.point(lambda, phi);
+  _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream */ .Y7.point(lambda, phi);
   linePoint(lambda, phi);
 }
 
 function boundsRingStart() {
-  _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream.lineStart */ .gL.lineStart();
+  _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream */ .Y7.lineStart();
 }
 
 function boundsRingEnd() {
   boundsRingPoint(lambda00, phi00);
-  _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream.lineEnd */ .gL.lineEnd();
-  if ((0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .abs */ .Wn)(deltaSum) > _math_js__WEBPACK_IMPORTED_MODULE_2__/* .epsilon */ .Ho) lambda0 = -(lambda1 = 180);
+  _area_js__WEBPACK_IMPORTED_MODULE_1__/* .areaStream */ .Y7.lineEnd();
+  if ((0,_math_js__WEBPACK_IMPORTED_MODULE_2__/* .abs */ .tn)(deltaSum) > _math_js__WEBPACK_IMPORTED_MODULE_2__/* .epsilon */ .Ni) lambda0 = -(lambda1 = 180);
   range[0] = lambda0, range[1] = lambda1;
   p0 = null;
 }
@@ -79992,7 +75919,7 @@ function rangeContains(range, x) {
 
   phi1 = lambda1 = -(lambda0 = phi0 = Infinity);
   ranges = [];
-  (0,_stream_js__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z)(feature, boundsStream);
+  (0,_stream_js__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .A)(feature, boundsStream);
 
   // First, sort ranges by their minimum longitudes.
   if (n = ranges.length) {
@@ -80027,29 +75954,29 @@ function rangeContains(range, x) {
 
 /***/ }),
 
-/***/ 9665:
+/***/ 8696:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Og": function() { return /* binding */ cartesian; },
-/* harmony export */   "T": function() { return /* binding */ cartesianScale; },
-/* harmony export */   "T5": function() { return /* binding */ cartesianCross; },
-/* harmony export */   "Y1": function() { return /* binding */ spherical; },
-/* harmony export */   "iJ": function() { return /* binding */ cartesianNormalizeInPlace; },
-/* harmony export */   "j9": function() { return /* binding */ cartesianDot; },
-/* harmony export */   "s0": function() { return /* binding */ cartesianAddInPlace; }
+/* harmony export */   Cx: function() { return /* binding */ cartesianNormalizeInPlace; },
+/* harmony export */   EV: function() { return /* binding */ spherical; },
+/* harmony export */   W8: function() { return /* binding */ cartesianDot; },
+/* harmony export */   ep: function() { return /* binding */ cartesianAddInPlace; },
+/* harmony export */   jf: function() { return /* binding */ cartesian; },
+/* harmony export */   ly: function() { return /* binding */ cartesianScale; },
+/* harmony export */   r8: function() { return /* binding */ cartesianCross; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
 
 
 function spherical(cartesian) {
-  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .fv)(cartesian[1], cartesian[0]), (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .ZR)(cartesian[2])];
+  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .FP)(cartesian[1], cartesian[0]), (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .qR)(cartesian[2])];
 }
 
 function cartesian(spherical) {
-  var lambda = spherical[0], phi = spherical[1], cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(phi);
-  return [cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(lambda), cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(lambda), (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(phi)];
+  var lambda = spherical[0], phi = spherical[1], cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(phi);
+  return [cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(lambda), cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(lambda), (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(phi)];
 }
 
 function cartesianDot(a, b) {
@@ -80071,23 +75998,23 @@ function cartesianScale(vector, k) {
 
 // TODO return d
 function cartesianNormalizeInPlace(d) {
-  var l = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ ._b)(d[0] * d[0] + d[1] * d[1] + d[2] * d[2]);
+  var l = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ .RZ)(d[0] * d[0] + d[1] * d[1] + d[2] * d[2]);
   d[0] /= l, d[1] /= l, d[2] /= l;
 }
 
 
 /***/ }),
 
-/***/ 1157:
+/***/ 5308:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6354);
-/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8437);
-/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4471);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4650);
+/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6608);
+/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6804);
 
 
 
@@ -80100,7 +76027,7 @@ var W0, W1,
     x0, y0, z0; // previous point
 
 var centroidStream = {
-  sphere: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z,
+  sphere: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,
   point: centroidPoint,
   lineStart: centroidLineStart,
   lineEnd: centroidLineEnd,
@@ -80116,9 +76043,9 @@ var centroidStream = {
 
 // Arithmetic mean of Cartesian vectors.
 function centroidPoint(lambda, phi) {
-  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR;
-  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi);
-  centroidPointCartesian(cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(lambda), cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda), (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi));
+  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2;
+  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi);
+  centroidPointCartesian(cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(lambda), cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda), (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi));
 }
 
 function centroidPointCartesian(x, y, z) {
@@ -80133,22 +76060,22 @@ function centroidLineStart() {
 }
 
 function centroidLinePointFirst(lambda, phi) {
-  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR;
-  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi);
-  x0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(lambda);
-  y0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda);
-  z0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi);
+  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2;
+  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi);
+  x0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(lambda);
+  y0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda);
+  z0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi);
   centroidStream.point = centroidLinePoint;
   centroidPointCartesian(x0, y0, z0);
 }
 
 function centroidLinePoint(lambda, phi) {
-  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR;
-  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi),
-      x = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(lambda),
-      y = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda),
-      z = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi),
-      w = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan2 */ .fv)((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ ._b)((w = y0 * z - z0 * y) * w + (w = z0 * x - x0 * z) * w + (w = x0 * y - y0 * x) * w), x0 * x + y0 * y + z0 * z);
+  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2;
+  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi),
+      x = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(lambda),
+      y = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda),
+      z = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi),
+      w = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan2 */ .FP)((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ .RZ)((w = y0 * z - z0 * y) * w + (w = z0 * x - x0 * z) * w + (w = x0 * y - y0 * x) * w), x0 * x + y0 * y + z0 * z);
   W1 += w;
   X1 += w * (x0 + (x0 = x));
   Y1 += w * (y0 + (y0 = y));
@@ -80173,26 +76100,26 @@ function centroidRingEnd() {
 
 function centroidRingPointFirst(lambda, phi) {
   lambda00 = lambda, phi00 = phi;
-  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR;
+  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2;
   centroidStream.point = centroidRingPoint;
-  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi);
-  x0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(lambda);
-  y0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda);
-  z0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi);
+  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi);
+  x0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(lambda);
+  y0 = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda);
+  z0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi);
   centroidPointCartesian(x0, y0, z0);
 }
 
 function centroidRingPoint(lambda, phi) {
-  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .uR;
-  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi),
-      x = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(lambda),
-      y = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda),
-      z = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi),
+  lambda *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2, phi *= _math_js__WEBPACK_IMPORTED_MODULE_1__/* .radians */ .F2;
+  var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi),
+      x = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(lambda),
+      y = cosPhi * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda),
+      z = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi),
       cx = y0 * z - z0 * y,
       cy = z0 * x - x0 * z,
       cz = x0 * y - y0 * x,
-      m = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ ._b)(cx * cx + cy * cy + cz * cz),
-      w = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .ZR)(m), // line weight = angle
+      m = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ .RZ)(cx * cx + cy * cy + cz * cz),
+      w = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .qR)(m), // line weight = angle
       v = m && -w / m; // area weight multiplier
   X2 += v * cx;
   Y2 += v * cy;
@@ -80209,7 +76136,7 @@ function centroidRingPoint(lambda, phi) {
   X0 = Y0 = Z0 =
   X1 = Y1 = Z1 =
   X2 = Y2 = Z2 = 0;
-  (0,_stream_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(object, centroidStream);
+  (0,_stream_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(object, centroidStream);
 
   var x = X2,
       y = Y2,
@@ -80217,34 +76144,34 @@ function centroidRingPoint(lambda, phi) {
       m = x * x + y * y + z * z;
 
   // If the area-weighted ccentroid is undefined, fall back to length-weighted ccentroid.
-  if (m < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon2 */ .aW) {
+  if (m < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon2 */ .$t) {
     x = X1, y = Y1, z = Z1;
     // If the feature has zero length, fall back to arithmetic mean of point vectors.
-    if (W1 < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho) x = X0, y = Y0, z = Z0;
+    if (W1 < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni) x = X0, y = Y0, z = Z0;
     m = x * x + y * y + z * z;
     // If the feature still has an undefined ccentroid, then return.
-    if (m < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon2 */ .aW) return [NaN, NaN];
+    if (m < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon2 */ .$t) return [NaN, NaN];
   }
 
-  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan2 */ .fv)(y, x) * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .degrees */ .RW, (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .ZR)(z / (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ ._b)(m)) * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .degrees */ .RW];
+  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan2 */ .FP)(y, x) * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .degrees */ .uj, (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .qR)(z / (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ .RZ)(m)) * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .degrees */ .uj];
 }
 
 
 /***/ }),
 
-/***/ 9811:
+/***/ 2504:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "m": function() { return /* binding */ circleStream; },
-  "Z": function() { return /* binding */ circle; }
+  J: function() { return /* binding */ circleStream; },
+  A: function() { return /* binding */ circle; }
 });
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/cartesian.js
-var cartesian = __webpack_require__(9665);
+var cartesian = __webpack_require__(8696);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/constant.js
 /* harmony default export */ function constant(x) {
   return function() {
@@ -80253,9 +76180,9 @@ var cartesian = __webpack_require__(9665);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/math.js
-var math = __webpack_require__(6354);
+var math = __webpack_require__(4650);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/rotation.js
-var rotation = __webpack_require__(8442);
+var rotation = __webpack_require__(5378);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/circle.js
 
 
@@ -80265,29 +76192,29 @@ var rotation = __webpack_require__(8442);
 // Generates a circle centered at [0°, 0°], with a given radius and precision.
 function circleStream(stream, radius, delta, direction, t0, t1) {
   if (!delta) return;
-  var cosRadius = (0,math/* cos */.mC)(radius),
-      sinRadius = (0,math/* sin */.O$)(radius),
+  var cosRadius = (0,math/* cos */.gn)(radius),
+      sinRadius = (0,math/* sin */.F8)(radius),
       step = direction * delta;
   if (t0 == null) {
-    t0 = radius + direction * math/* tau */.BZ;
+    t0 = radius + direction * math/* tau */.FA;
     t1 = radius - step / 2;
   } else {
     t0 = circleRadius(cosRadius, t0);
     t1 = circleRadius(cosRadius, t1);
-    if (direction > 0 ? t0 < t1 : t0 > t1) t0 += direction * math/* tau */.BZ;
+    if (direction > 0 ? t0 < t1 : t0 > t1) t0 += direction * math/* tau */.FA;
   }
   for (var point, t = t0; direction > 0 ? t > t1 : t < t1; t -= step) {
-    point = (0,cartesian/* spherical */.Y1)([cosRadius, -sinRadius * (0,math/* cos */.mC)(t), -sinRadius * (0,math/* sin */.O$)(t)]);
+    point = (0,cartesian/* spherical */.EV)([cosRadius, -sinRadius * (0,math/* cos */.gn)(t), -sinRadius * (0,math/* sin */.F8)(t)]);
     stream.point(point[0], point[1]);
   }
 }
 
 // Returns the signed angle of a cartesian point relative to [cosRadius, 0, 0].
 function circleRadius(cosRadius, point) {
-  point = (0,cartesian/* cartesian */.Og)(point), point[0] -= cosRadius;
-  (0,cartesian/* cartesianNormalizeInPlace */.iJ)(point);
-  var radius = (0,math/* acos */.Kh)(-point[1]);
-  return ((-point[2] < 0 ? -radius : radius) + math/* tau */.BZ - math/* epsilon */.Ho) % math/* tau */.BZ;
+  point = (0,cartesian/* cartesian */.jf)(point), point[0] -= cosRadius;
+  (0,cartesian/* cartesianNormalizeInPlace */.Cx)(point);
+  var radius = (0,math/* acos */.HQ)(-point[1]);
+  return ((-point[2] < 0 ? -radius : radius) + math/* tau */.FA - math/* epsilon */.Ni) % math/* tau */.FA;
 }
 
 /* harmony default export */ function circle() {
@@ -80300,15 +76227,15 @@ function circleRadius(cosRadius, point) {
 
   function point(x, y) {
     ring.push(x = rotate(x, y));
-    x[0] *= math/* degrees */.RW, x[1] *= math/* degrees */.RW;
+    x[0] *= math/* degrees */.uj, x[1] *= math/* degrees */.uj;
   }
 
   function circle() {
     var c = center.apply(this, arguments),
-        r = radius.apply(this, arguments) * math/* radians */.uR,
-        p = precision.apply(this, arguments) * math/* radians */.uR;
+        r = radius.apply(this, arguments) * math/* radians */.F2,
+        p = precision.apply(this, arguments) * math/* radians */.F2;
     ring = [];
-    rotate = (0,rotation/* rotateRadians */.I)(-c[0] * math/* radians */.uR, -c[1] * math/* radians */.uR, 0).invert;
+    rotate = (0,rotation/* rotateRadians */.y)(-c[0] * math/* radians */.F2, -c[1] * math/* radians */.F2, 0).invert;
     circleStream(stream, r, p, 1);
     c = {type: "Polygon", coordinates: [ring]};
     ring = rotate = null;
@@ -80333,20 +76260,20 @@ function circleRadius(cosRadius, point) {
 
 /***/ }),
 
-/***/ 4348:
+/***/ 3630:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8943);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6354);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8633);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4650);
 
 
 
-/* harmony default export */ __webpack_exports__["Z"] = ((0,_index_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(
+/* harmony default export */ __webpack_exports__.A = ((0,_index_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(
   function() { return true; },
   clipAntimeridianLine,
   clipAntimeridianInterpolate,
-  [-_math_js__WEBPACK_IMPORTED_MODULE_1__.pi, -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .ou]
+  [-_math_js__WEBPACK_IMPORTED_MODULE_1__.pi, -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .TW]
 ));
 
 // Takes a line and cuts into visible segments. Return values: 0 - there were
@@ -80365,9 +76292,9 @@ function clipAntimeridianLine(stream) {
     },
     point: function(lambda1, phi1) {
       var sign1 = lambda1 > 0 ? _math_js__WEBPACK_IMPORTED_MODULE_1__.pi : -_math_js__WEBPACK_IMPORTED_MODULE_1__.pi,
-          delta = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(lambda1 - lambda0);
-      if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(delta - _math_js__WEBPACK_IMPORTED_MODULE_1__.pi) < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho) { // line crosses a pole
-        stream.point(lambda0, phi0 = (phi0 + phi1) / 2 > 0 ? _math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .ou : -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .ou);
+          delta = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(lambda1 - lambda0);
+      if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(delta - _math_js__WEBPACK_IMPORTED_MODULE_1__.pi) < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni) { // line crosses a pole
+        stream.point(lambda0, phi0 = (phi0 + phi1) / 2 > 0 ? _math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .TW : -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .TW);
         stream.point(sign0, phi0);
         stream.lineEnd();
         stream.lineStart();
@@ -80375,8 +76302,8 @@ function clipAntimeridianLine(stream) {
         stream.point(lambda1, phi0);
         clean = 0;
       } else if (sign0 !== sign1 && delta >= _math_js__WEBPACK_IMPORTED_MODULE_1__.pi) { // line crosses antimeridian
-        if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(lambda0 - sign0) < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho) lambda0 -= sign0 * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho; // handle degeneracies
-        if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(lambda1 - sign1) < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho) lambda1 -= sign1 * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho;
+        if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(lambda0 - sign0) < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni) lambda0 -= sign0 * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni; // handle degeneracies
+        if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(lambda1 - sign1) < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni) lambda1 -= sign1 * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni;
         phi0 = clipAntimeridianIntersect(lambda0, phi0, lambda1, phi1);
         stream.point(sign0, phi0);
         stream.lineEnd();
@@ -80400,10 +76327,10 @@ function clipAntimeridianLine(stream) {
 function clipAntimeridianIntersect(lambda0, phi0, lambda1, phi1) {
   var cosPhi0,
       cosPhi1,
-      sinLambda0Lambda1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda0 - lambda1);
-  return (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(sinLambda0Lambda1) > _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho
-      ? (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan */ .z4)(((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi0) * (cosPhi1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi1)) * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda1)
-          - (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi1) * (cosPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi0)) * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda0))
+      sinLambda0Lambda1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda0 - lambda1);
+  return (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(sinLambda0Lambda1) > _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni
+      ? (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan */ .rY)(((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi0) * (cosPhi1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi1)) * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda1)
+          - (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi1) * (cosPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi0)) * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda0))
           / (cosPhi0 * cosPhi1 * sinLambda0Lambda1))
       : (phi0 + phi1) / 2;
 }
@@ -80411,7 +76338,7 @@ function clipAntimeridianIntersect(lambda0, phi0, lambda1, phi1) {
 function clipAntimeridianInterpolate(from, to, direction, stream) {
   var phi;
   if (from == null) {
-    phi = direction * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .ou;
+    phi = direction * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .TW;
     stream.point(-_math_js__WEBPACK_IMPORTED_MODULE_1__.pi, phi);
     stream.point(0, phi);
     stream.point(_math_js__WEBPACK_IMPORTED_MODULE_1__.pi, phi);
@@ -80421,7 +76348,7 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
     stream.point(-_math_js__WEBPACK_IMPORTED_MODULE_1__.pi, -phi);
     stream.point(-_math_js__WEBPACK_IMPORTED_MODULE_1__.pi, 0);
     stream.point(-_math_js__WEBPACK_IMPORTED_MODULE_1__.pi, phi);
-  } else if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(from[0] - to[0]) > _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho) {
+  } else if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(from[0] - to[0]) > _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni) {
     var lambda = from[0] < to[0] ? _math_js__WEBPACK_IMPORTED_MODULE_1__.pi : -_math_js__WEBPACK_IMPORTED_MODULE_1__.pi;
     phi = direction * lambda / 2;
     stream.point(-lambda, phi);
@@ -80435,14 +76362,14 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
 
 /***/ }),
 
-/***/ 2579:
+/***/ 3819:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8437);
+/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6608);
 
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
@@ -80455,7 +76382,7 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
     lineStart: function() {
       lines.push(line = []);
     },
-    lineEnd: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z,
+    lineEnd: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,
     rejoin: function() {
       if (lines.length > 1) lines.push(lines.pop().concat(lines.shift()));
     },
@@ -80471,18 +76398,18 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
 
 /***/ }),
 
-/***/ 1428:
+/***/ 3749:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _cartesian_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9665);
-/* harmony import */ var _circle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9811);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
-/* harmony import */ var _pointEqual_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9877);
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8943);
+/* harmony import */ var _cartesian_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8696);
+/* harmony import */ var _circle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2504);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
+/* harmony import */ var _pointEqual_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6110);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8633);
 
 
 
@@ -80490,17 +76417,17 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
 
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(radius) {
-  var cr = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(radius),
-      delta = 6 * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR,
+  var cr = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(radius),
+      delta = 6 * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2,
       smallRadius = cr > 0,
-      notHemisphere = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .Wn)(cr) > _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho; // TODO optimise for this common case
+      notHemisphere = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .tn)(cr) > _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni; // TODO optimise for this common case
 
   function interpolate(from, to, direction, stream) {
-    (0,_circle_js__WEBPACK_IMPORTED_MODULE_1__/* .circleStream */ .m)(stream, radius, delta, direction, from, to);
+    (0,_circle_js__WEBPACK_IMPORTED_MODULE_1__/* .circleStream */ .J)(stream, radius, delta, direction, from, to);
   }
 
   function visible(lambda, phi) {
-    return (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(lambda) * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(phi) > cr;
+    return (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(lambda) * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(phi) > cr;
   }
 
   // Takes a line and cuts into visible segments. Return values used for polygon
@@ -80528,7 +76455,7 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
         if (!point0 && (v00 = v0 = v)) stream.lineStart();
         if (v !== v0) {
           point2 = intersect(point0, point1);
-          if (!point2 || (0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(point0, point2) || (0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(point1, point2))
+          if (!point2 || (0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(point0, point2) || (0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(point1, point2))
             point1[2] = 1;
         }
         if (v !== v0) {
@@ -80564,7 +76491,7 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
             }
           }
         }
-        if (v && (!point0 || !(0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(point0, point1))) {
+        if (v && (!point0 || !(0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(point0, point1))) {
           stream.point(point1[0], point1[1]);
         }
         point0 = point1, v0 = v, c0 = c;
@@ -80583,14 +76510,14 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
 
   // Intersects the great circle between a and b with the clip circle.
   function intersect(a, b, two) {
-    var pa = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesian */ .Og)(a),
-        pb = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesian */ .Og)(b);
+    var pa = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesian */ .jf)(a),
+        pb = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesian */ .jf)(b);
 
     // We have two planes, n1.p = d1 and n2.p = d2.
     // Find intersection line p(t) = c1 n1 + c2 n2 + t (n1 ⨯ n2).
     var n1 = [1, 0, 0], // normal
-        n2 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .T5)(pa, pb),
-        n2n2 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .j9)(n2, n2),
+        n2 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .r8)(pa, pb),
+        n2n2 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .W8)(n2, n2),
         n1n2 = n2[0], // cartesianDot(n1, n2),
         determinant = n2n2 - n1n2 * n1n2;
 
@@ -80599,23 +76526,23 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
 
     var c1 =  cr * n2n2 / determinant,
         c2 = -cr * n1n2 / determinant,
-        n1xn2 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .T5)(n1, n2),
-        A = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .T)(n1, c1),
-        B = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .T)(n2, c2);
-    (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianAddInPlace */ .s0)(A, B);
+        n1xn2 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianCross */ .r8)(n1, n2),
+        A = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .ly)(n1, c1),
+        B = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .ly)(n2, c2);
+    (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianAddInPlace */ .ep)(A, B);
 
     // Solve |p(t)|^2 = 1.
     var u = n1xn2,
-        w = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .j9)(A, u),
-        uu = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .j9)(u, u),
-        t2 = w * w - uu * ((0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .j9)(A, A) - 1);
+        w = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .W8)(A, u),
+        uu = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .W8)(u, u),
+        t2 = w * w - uu * ((0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianDot */ .W8)(A, A) - 1);
 
     if (t2 < 0) return;
 
-    var t = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ ._b)(t2),
-        q = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .T)(u, (-w - t) / uu);
-    (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianAddInPlace */ .s0)(q, A);
-    q = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .spherical */ .Y1)(q);
+    var t = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ .RZ)(t2),
+        q = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .ly)(u, (-w - t) / uu);
+    (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianAddInPlace */ .ep)(q, A);
+    q = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .spherical */ .EV)(q);
 
     if (!two) return q;
 
@@ -80629,20 +76556,20 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
     if (lambda1 < lambda0) z = lambda0, lambda0 = lambda1, lambda1 = z;
 
     var delta = lambda1 - lambda0,
-        polar = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .Wn)(delta - _math_js__WEBPACK_IMPORTED_MODULE_0__.pi) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho,
-        meridian = polar || delta < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho;
+        polar = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .tn)(delta - _math_js__WEBPACK_IMPORTED_MODULE_0__.pi) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni,
+        meridian = polar || delta < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni;
 
     if (!polar && phi1 < phi0) z = phi0, phi0 = phi1, phi1 = z;
 
     // Check that the first point is between a and b.
     if (meridian
         ? polar
-          ? phi0 + phi1 > 0 ^ q[1] < ((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .Wn)(q[0] - lambda0) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho ? phi0 : phi1)
+          ? phi0 + phi1 > 0 ^ q[1] < ((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .tn)(q[0] - lambda0) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni ? phi0 : phi1)
           : phi0 <= q[1] && q[1] <= phi1
         : delta > _math_js__WEBPACK_IMPORTED_MODULE_0__.pi ^ (lambda0 <= q[0] && q[0] <= lambda1)) {
-      var q1 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .T)(u, (-w + t) / uu);
-      (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianAddInPlace */ .s0)(q1, A);
-      return [q, (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .spherical */ .Y1)(q1)];
+      var q1 = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianScale */ .ly)(u, (-w + t) / uu);
+      (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .cartesianAddInPlace */ .ep)(q1, A);
+      return [q, (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_3__/* .spherical */ .EV)(q1)];
     }
   }
 
@@ -80658,24 +76585,24 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
     return code;
   }
 
-  return (0,_index_js__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z)(visible, clipLine, interpolate, smallRadius ? [0, -radius] : [-_math_js__WEBPACK_IMPORTED_MODULE_0__.pi, radius - _math_js__WEBPACK_IMPORTED_MODULE_0__.pi]);
+  return (0,_index_js__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .A)(visible, clipLine, interpolate, smallRadius ? [0, -radius] : [-_math_js__WEBPACK_IMPORTED_MODULE_0__.pi, radius - _math_js__WEBPACK_IMPORTED_MODULE_0__.pi]);
 }
 
 
 /***/ }),
 
-/***/ 8943:
+/***/ 8633:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _buffer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2579);
-/* harmony import */ var _rejoin_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6573);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6354);
-/* harmony import */ var _polygonContains_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9269);
-/* harmony import */ var d3_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1705);
+/* harmony import */ var _buffer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3819);
+/* harmony import */ var _rejoin_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5404);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4650);
+/* harmony import */ var _polygonContains_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(801);
+/* harmony import */ var d3_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2423);
 
 
 
@@ -80685,7 +76612,7 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(pointVisible, clipLine, interpolate, start) {
   return function(sink) {
     var line = clipLine(sink),
-        ringBuffer = (0,_buffer_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)(),
+        ringBuffer = (0,_buffer_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A)(),
         ringSink = clipLine(ringBuffer),
         polygonStarted = false,
         polygon,
@@ -80707,11 +76634,11 @@ function clipAntimeridianInterpolate(from, to, direction, stream) {
         clip.point = point;
         clip.lineStart = lineStart;
         clip.lineEnd = lineEnd;
-        segments = (0,d3_array__WEBPACK_IMPORTED_MODULE_0__/* .merge */ .TS)(segments);
-        var startInside = (0,_polygonContains_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(polygon, start);
+        segments = (0,d3_array__WEBPACK_IMPORTED_MODULE_0__/* .merge */ .Am)(segments);
+        var startInside = (0,_polygonContains_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(polygon, start);
         if (segments.length) {
           if (!polygonStarted) sink.polygonStart(), polygonStarted = true;
-          (0,_rejoin_js__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z)(segments, compareIntersection, startInside, interpolate, sink);
+          (0,_rejoin_js__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A)(segments, compareIntersection, startInside, interpolate, sink);
         } else if (startInside) {
           if (!polygonStarted) sink.polygonStart(), polygonStarted = true;
           sink.lineStart();
@@ -80804,27 +76731,27 @@ function validSegment(segment) {
 // Intersections are sorted along the clip edge. For both antimeridian cutting
 // and circle clipping, the same comparison is used.
 function compareIntersection(a, b) {
-  return ((a = a.x)[0] < 0 ? a[1] - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .ou - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .epsilon */ .Ho : _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .ou - a[1])
-       - ((b = b.x)[0] < 0 ? b[1] - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .ou - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .epsilon */ .Ho : _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .ou - b[1]);
+  return ((a = a.x)[0] < 0 ? a[1] - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .TW - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .epsilon */ .Ni : _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .TW - a[1])
+       - ((b = b.x)[0] < 0 ? b[1] - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .TW - _math_js__WEBPACK_IMPORTED_MODULE_4__/* .epsilon */ .Ni : _math_js__WEBPACK_IMPORTED_MODULE_4__/* .halfPi */ .TW - b[1]);
 }
 
 
 /***/ }),
 
-/***/ 3063:
+/***/ 9602:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ clipRectangle; }
+  A: function() { return /* binding */ clipRectangle; }
 });
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/math.js
-var math = __webpack_require__(6354);
+var math = __webpack_require__(4650);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/buffer.js
-var buffer = __webpack_require__(2579);
+var buffer = __webpack_require__(3819);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/clip/line.js
 /* harmony default export */ function line(a, b, x0, y0, x1, y1) {
   var ax = a[0],
@@ -80887,9 +76814,9 @@ var buffer = __webpack_require__(2579);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/rejoin.js
-var rejoin = __webpack_require__(6573);
+var rejoin = __webpack_require__(5404);
 // EXTERNAL MODULE: ./node_modules/d3-array/src/index.js + 9 modules
-var src = __webpack_require__(1705);
+var src = __webpack_require__(2423);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/clip/rectangle.js
 
 
@@ -80921,9 +76848,9 @@ function clipRectangle(x0, y0, x1, y1) {
   }
 
   function corner(p, direction) {
-    return (0,math/* abs */.Wn)(p[0] - x0) < math/* epsilon */.Ho ? direction > 0 ? 0 : 3
-        : (0,math/* abs */.Wn)(p[0] - x1) < math/* epsilon */.Ho ? direction > 0 ? 2 : 1
-        : (0,math/* abs */.Wn)(p[1] - y0) < math/* epsilon */.Ho ? direction > 0 ? 1 : 0
+    return (0,math/* abs */.tn)(p[0] - x0) < math/* epsilon */.Ni ? direction > 0 ? 0 : 3
+        : (0,math/* abs */.tn)(p[0] - x1) < math/* epsilon */.Ni ? direction > 0 ? 2 : 1
+        : (0,math/* abs */.tn)(p[1] - y0) < math/* epsilon */.Ni ? direction > 0 ? 1 : 0
         : direction > 0 ? 3 : 2; // abs(p[1] - y1) < epsilon
   }
 
@@ -80943,7 +76870,7 @@ function clipRectangle(x0, y0, x1, y1) {
 
   return function(stream) {
     var activeStream = stream,
-        bufferStream = (0,buffer/* default */.Z)(),
+        bufferStream = (0,buffer/* default */.A)(),
         segments,
         polygon,
         ring,
@@ -80986,7 +76913,7 @@ function clipRectangle(x0, y0, x1, y1) {
     function polygonEnd() {
       var startInside = polygonInside(),
           cleanInside = clean && startInside,
-          visible = (segments = (0,src/* merge */.TS)(segments)).length;
+          visible = (segments = (0,src/* merge */.Am)(segments)).length;
       if (cleanInside || visible) {
         stream.polygonStart();
         if (cleanInside) {
@@ -80995,7 +76922,7 @@ function clipRectangle(x0, y0, x1, y1) {
           stream.lineEnd();
         }
         if (visible) {
-          (0,rejoin/* default */.Z)(segments, compareIntersection, startInside, interpolate, stream);
+          (0,rejoin/* default */.A)(segments, compareIntersection, startInside, interpolate, stream);
         }
         stream.polygonEnd();
       }
@@ -81063,15 +76990,15 @@ function clipRectangle(x0, y0, x1, y1) {
 
 /***/ }),
 
-/***/ 6573:
+/***/ 5404:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _pointEqual_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9877);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6354);
+/* harmony import */ var _pointEqual_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6110);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4650);
 
 
 
@@ -81097,7 +77024,7 @@ function Intersection(point, points, other, entry) {
     if ((n = segment.length - 1) <= 0) return;
     var n, p0 = segment[0], p1 = segment[n], x;
 
-    if ((0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(p0, p1)) {
+    if ((0,_pointEqual_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(p0, p1)) {
       if (!p0[2] && !p1[2]) {
         stream.lineStart();
         for (i = 0; i < n; ++i) stream.point((p0 = segment[i])[0], p0[1]);
@@ -81105,7 +77032,7 @@ function Intersection(point, points, other, entry) {
         return;
       }
       // handle degenerate cases by moving the point
-      p1[0] += 2 * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho;
+      p1[0] += 2 * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni;
     }
 
     subject.push(x = new Intersection(p0, segment, null, true));
@@ -81179,12 +77106,12 @@ function link(array) {
 
 /***/ }),
 
-/***/ 3981:
+/***/ 6434:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(a, b) {
 
@@ -81202,12 +77129,12 @@ function link(array) {
 
 /***/ }),
 
-/***/ 4243:
+/***/ 2674:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(x) {
   return x;
@@ -81216,7 +77143,7 @@ function link(array) {
 
 /***/ }),
 
-/***/ 3199:
+/***/ 808:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81225,71 +77152,71 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "geoAlbers": function() { return /* reexport */ albers; },
-  "geoAlbersUsa": function() { return /* reexport */ albersUsa; },
-  "geoArea": function() { return /* reexport */ src_area/* default */.ZP; },
-  "geoAzimuthalEqualArea": function() { return /* reexport */ azimuthalEqualArea/* default */.Z; },
-  "geoAzimuthalEqualAreaRaw": function() { return /* reexport */ azimuthalEqualArea/* azimuthalEqualAreaRaw */.l; },
-  "geoAzimuthalEquidistant": function() { return /* reexport */ azimuthalEquidistant/* default */.Z; },
-  "geoAzimuthalEquidistantRaw": function() { return /* reexport */ azimuthalEquidistant/* azimuthalEquidistantRaw */.N; },
-  "geoBounds": function() { return /* reexport */ bounds/* default */.Z; },
-  "geoCentroid": function() { return /* reexport */ centroid/* default */.Z; },
-  "geoCircle": function() { return /* reexport */ circle/* default */.Z; },
-  "geoClipAntimeridian": function() { return /* reexport */ antimeridian/* default */.Z; },
-  "geoClipCircle": function() { return /* reexport */ clip_circle/* default */.Z; },
-  "geoClipExtent": function() { return /* reexport */ extent; },
-  "geoClipRectangle": function() { return /* reexport */ rectangle/* default */.Z; },
-  "geoConicConformal": function() { return /* reexport */ conicConformal; },
-  "geoConicConformalRaw": function() { return /* reexport */ conicConformalRaw; },
-  "geoConicEqualArea": function() { return /* reexport */ conicEqualArea; },
-  "geoConicEqualAreaRaw": function() { return /* reexport */ conicEqualAreaRaw; },
-  "geoConicEquidistant": function() { return /* reexport */ conicEquidistant; },
-  "geoConicEquidistantRaw": function() { return /* reexport */ conicEquidistantRaw; },
-  "geoContains": function() { return /* reexport */ contains; },
-  "geoDistance": function() { return /* reexport */ distance; },
-  "geoEqualEarth": function() { return /* reexport */ equalEarth; },
-  "geoEqualEarthRaw": function() { return /* reexport */ equalEarthRaw; },
-  "geoEquirectangular": function() { return /* reexport */ equirectangular/* default */.Z; },
-  "geoEquirectangularRaw": function() { return /* reexport */ equirectangular/* equirectangularRaw */.k; },
-  "geoGnomonic": function() { return /* reexport */ gnomonic/* default */.Z; },
-  "geoGnomonicRaw": function() { return /* reexport */ gnomonic/* gnomonicRaw */.M; },
-  "geoGraticule": function() { return /* reexport */ graticule; },
-  "geoGraticule10": function() { return /* reexport */ graticule10; },
-  "geoIdentity": function() { return /* reexport */ projection_identity; },
-  "geoInterpolate": function() { return /* reexport */ interpolate/* default */.Z; },
-  "geoLength": function() { return /* reexport */ src_length; },
-  "geoMercator": function() { return /* reexport */ mercator; },
-  "geoMercatorRaw": function() { return /* reexport */ mercatorRaw; },
-  "geoNaturalEarth1": function() { return /* reexport */ naturalEarth1/* default */.Z; },
-  "geoNaturalEarth1Raw": function() { return /* reexport */ naturalEarth1/* naturalEarth1Raw */.K; },
-  "geoOrthographic": function() { return /* reexport */ orthographic/* default */.Z; },
-  "geoOrthographicRaw": function() { return /* reexport */ orthographic/* orthographicRaw */.I; },
-  "geoPath": function() { return /* reexport */ path; },
-  "geoProjection": function() { return /* reexport */ projection/* default */.Z; },
-  "geoProjectionMutator": function() { return /* reexport */ projection/* projectionMutator */.r; },
-  "geoRotation": function() { return /* reexport */ rotation/* default */.Z; },
-  "geoStereographic": function() { return /* reexport */ stereographic; },
-  "geoStereographicRaw": function() { return /* reexport */ stereographicRaw; },
-  "geoStream": function() { return /* reexport */ stream/* default */.Z; },
-  "geoTransform": function() { return /* reexport */ src_transform/* default */.Z; },
-  "geoTransverseMercator": function() { return /* reexport */ transverseMercator; },
-  "geoTransverseMercatorRaw": function() { return /* reexport */ transverseMercatorRaw; }
+  geoAlbers: function() { return /* reexport */ albers; },
+  geoAlbersUsa: function() { return /* reexport */ albersUsa; },
+  geoArea: function() { return /* reexport */ src_area/* default */.Ay; },
+  geoAzimuthalEqualArea: function() { return /* reexport */ azimuthalEqualArea/* default */.A; },
+  geoAzimuthalEqualAreaRaw: function() { return /* reexport */ azimuthalEqualArea/* azimuthalEqualAreaRaw */.n; },
+  geoAzimuthalEquidistant: function() { return /* reexport */ azimuthalEquidistant/* default */.A; },
+  geoAzimuthalEquidistantRaw: function() { return /* reexport */ azimuthalEquidistant/* azimuthalEquidistantRaw */.j; },
+  geoBounds: function() { return /* reexport */ bounds/* default */.A; },
+  geoCentroid: function() { return /* reexport */ centroid/* default */.A; },
+  geoCircle: function() { return /* reexport */ circle/* default */.A; },
+  geoClipAntimeridian: function() { return /* reexport */ antimeridian/* default */.A; },
+  geoClipCircle: function() { return /* reexport */ clip_circle/* default */.A; },
+  geoClipExtent: function() { return /* reexport */ extent; },
+  geoClipRectangle: function() { return /* reexport */ rectangle/* default */.A; },
+  geoConicConformal: function() { return /* reexport */ conicConformal; },
+  geoConicConformalRaw: function() { return /* reexport */ conicConformalRaw; },
+  geoConicEqualArea: function() { return /* reexport */ conicEqualArea; },
+  geoConicEqualAreaRaw: function() { return /* reexport */ conicEqualAreaRaw; },
+  geoConicEquidistant: function() { return /* reexport */ conicEquidistant; },
+  geoConicEquidistantRaw: function() { return /* reexport */ conicEquidistantRaw; },
+  geoContains: function() { return /* reexport */ contains; },
+  geoDistance: function() { return /* reexport */ distance; },
+  geoEqualEarth: function() { return /* reexport */ equalEarth; },
+  geoEqualEarthRaw: function() { return /* reexport */ equalEarthRaw; },
+  geoEquirectangular: function() { return /* reexport */ equirectangular/* default */.A; },
+  geoEquirectangularRaw: function() { return /* reexport */ equirectangular/* equirectangularRaw */.f; },
+  geoGnomonic: function() { return /* reexport */ gnomonic/* default */.A; },
+  geoGnomonicRaw: function() { return /* reexport */ gnomonic/* gnomonicRaw */.T; },
+  geoGraticule: function() { return /* reexport */ graticule; },
+  geoGraticule10: function() { return /* reexport */ graticule10; },
+  geoIdentity: function() { return /* reexport */ projection_identity; },
+  geoInterpolate: function() { return /* reexport */ interpolate/* default */.A; },
+  geoLength: function() { return /* reexport */ src_length; },
+  geoMercator: function() { return /* reexport */ mercator; },
+  geoMercatorRaw: function() { return /* reexport */ mercatorRaw; },
+  geoNaturalEarth1: function() { return /* reexport */ naturalEarth1/* default */.A; },
+  geoNaturalEarth1Raw: function() { return /* reexport */ naturalEarth1/* naturalEarth1Raw */.P; },
+  geoOrthographic: function() { return /* reexport */ orthographic/* default */.A; },
+  geoOrthographicRaw: function() { return /* reexport */ orthographic/* orthographicRaw */.x; },
+  geoPath: function() { return /* reexport */ path; },
+  geoProjection: function() { return /* reexport */ projection/* default */.A; },
+  geoProjectionMutator: function() { return /* reexport */ projection/* projectionMutator */.U; },
+  geoRotation: function() { return /* reexport */ rotation/* default */.A; },
+  geoStereographic: function() { return /* reexport */ stereographic; },
+  geoStereographicRaw: function() { return /* reexport */ stereographicRaw; },
+  geoStream: function() { return /* reexport */ stream/* default */.A; },
+  geoTransform: function() { return /* reexport */ src_transform/* default */.A; },
+  geoTransverseMercator: function() { return /* reexport */ transverseMercator; },
+  geoTransverseMercatorRaw: function() { return /* reexport */ transverseMercatorRaw; }
 });
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/area.js
-var src_area = __webpack_require__(2708);
+var src_area = __webpack_require__(2333);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/bounds.js
-var bounds = __webpack_require__(5925);
+var bounds = __webpack_require__(9565);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/centroid.js
-var centroid = __webpack_require__(1157);
+var centroid = __webpack_require__(5308);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/circle.js + 1 modules
-var circle = __webpack_require__(9811);
+var circle = __webpack_require__(2504);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/antimeridian.js
-var antimeridian = __webpack_require__(4348);
+var antimeridian = __webpack_require__(3630);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/circle.js
-var clip_circle = __webpack_require__(1428);
+var clip_circle = __webpack_require__(3749);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/rectangle.js + 1 modules
-var rectangle = __webpack_require__(3063);
+var rectangle = __webpack_require__(9602);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/clip/extent.js
 
 
@@ -81304,7 +77231,7 @@ var rectangle = __webpack_require__(3063);
 
   return clip = {
     stream: function(stream) {
-      return cache && cacheStream === stream ? cache : cache = (0,rectangle/* default */.Z)(x0, y0, x1, y1)(cacheStream = stream);
+      return cache && cacheStream === stream ? cache : cache = (0,rectangle/* default */.A)(x0, y0, x1, y1)(cacheStream = stream);
     },
     extent: function(_) {
       return arguments.length ? (x0 = +_[0][0], y0 = +_[0][1], x1 = +_[1][0], y1 = +_[1][1], cache = cacheStream = null, clip) : [[x0, y0], [x1, y1]];
@@ -81313,33 +77240,33 @@ var rectangle = __webpack_require__(3063);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/polygonContains.js
-var polygonContains = __webpack_require__(9269);
+var polygonContains = __webpack_require__(801);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/adder.js
-var adder = __webpack_require__(6033);
+var adder = __webpack_require__(5022);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/math.js
-var math = __webpack_require__(6354);
+var math = __webpack_require__(4650);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/noop.js
-var noop = __webpack_require__(8437);
+var noop = __webpack_require__(6608);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/stream.js
-var stream = __webpack_require__(4471);
+var stream = __webpack_require__(6804);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/length.js
 
 
 
 
 
-var lengthSum = (0,adder/* default */.Z)(),
+var lengthSum = (0,adder/* default */.A)(),
     lambda0,
     sinPhi0,
     cosPhi0;
 
 var lengthStream = {
-  sphere: noop/* default */.Z,
-  point: noop/* default */.Z,
+  sphere: noop/* default */.A,
+  point: noop/* default */.A,
   lineStart: lengthLineStart,
-  lineEnd: noop/* default */.Z,
-  polygonStart: noop/* default */.Z,
-  polygonEnd: noop/* default */.Z
+  lineEnd: noop/* default */.A,
+  polygonStart: noop/* default */.A,
+  polygonEnd: noop/* default */.A
 };
 
 function lengthLineStart() {
@@ -81348,32 +77275,32 @@ function lengthLineStart() {
 }
 
 function lengthLineEnd() {
-  lengthStream.point = lengthStream.lineEnd = noop/* default */.Z;
+  lengthStream.point = lengthStream.lineEnd = noop/* default */.A;
 }
 
 function lengthPointFirst(lambda, phi) {
-  lambda *= math/* radians */.uR, phi *= math/* radians */.uR;
-  lambda0 = lambda, sinPhi0 = (0,math/* sin */.O$)(phi), cosPhi0 = (0,math/* cos */.mC)(phi);
+  lambda *= math/* radians */.F2, phi *= math/* radians */.F2;
+  lambda0 = lambda, sinPhi0 = (0,math/* sin */.F8)(phi), cosPhi0 = (0,math/* cos */.gn)(phi);
   lengthStream.point = lengthPoint;
 }
 
 function lengthPoint(lambda, phi) {
-  lambda *= math/* radians */.uR, phi *= math/* radians */.uR;
-  var sinPhi = (0,math/* sin */.O$)(phi),
-      cosPhi = (0,math/* cos */.mC)(phi),
-      delta = (0,math/* abs */.Wn)(lambda - lambda0),
-      cosDelta = (0,math/* cos */.mC)(delta),
-      sinDelta = (0,math/* sin */.O$)(delta),
+  lambda *= math/* radians */.F2, phi *= math/* radians */.F2;
+  var sinPhi = (0,math/* sin */.F8)(phi),
+      cosPhi = (0,math/* cos */.gn)(phi),
+      delta = (0,math/* abs */.tn)(lambda - lambda0),
+      cosDelta = (0,math/* cos */.gn)(delta),
+      sinDelta = (0,math/* sin */.F8)(delta),
       x = cosPhi * sinDelta,
       y = cosPhi0 * sinPhi - sinPhi0 * cosPhi * cosDelta,
       z = sinPhi0 * sinPhi + cosPhi0 * cosPhi * cosDelta;
-  lengthSum.add((0,math/* atan2 */.fv)((0,math/* sqrt */._b)(x * x + y * y), z));
+  lengthSum.add((0,math/* atan2 */.FP)((0,math/* sqrt */.RZ)(x * x + y * y), z));
   lambda0 = lambda, sinPhi0 = sinPhi, cosPhi0 = cosPhi;
 }
 
 /* harmony default export */ function src_length(object) {
   lengthSum.reset();
-  (0,stream/* default */.Z)(object, lengthStream);
+  (0,stream/* default */.A)(object, lengthStream);
   return +lengthSum;
 }
 
@@ -81461,7 +77388,7 @@ function containsLine(coordinates, point) {
         ab > 0 &&
         ao <= ab &&
         bo <= ab &&
-        (ao + bo - ab) * (1 - Math.pow((ao - bo) / ab, 2)) < math/* epsilon2 */.aW * ab
+        (ao + bo - ab) * (1 - Math.pow((ao - bo) / ab, 2)) < math/* epsilon2 */.$t * ab
       )
         return true;
     }
@@ -81471,7 +77398,7 @@ function containsLine(coordinates, point) {
 }
 
 function containsPolygon(coordinates, point) {
-  return !!(0,polygonContains/* default */.Z)(coordinates.map(ringRadians), pointRadians(point));
+  return !!(0,polygonContains/* default */.A)(coordinates.map(ringRadians), pointRadians(point));
 }
 
 function ringRadians(ring) {
@@ -81479,7 +77406,7 @@ function ringRadians(ring) {
 }
 
 function pointRadians(point) {
-  return [point[0] * math/* radians */.uR, point[1] * math/* radians */.uR];
+  return [point[0] * math/* radians */.F2, point[1] * math/* radians */.F2];
 }
 
 /* harmony default export */ function contains(object, point) {
@@ -81489,18 +77416,18 @@ function pointRadians(point) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-array/src/index.js + 9 modules
-var src = __webpack_require__(1705);
+var src = __webpack_require__(2423);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/graticule.js
 
 
 
 function graticuleX(y0, y1, dy) {
-  var y = (0,src/* range */.w6)(y0, y1 - math/* epsilon */.Ho, dy).concat(y1);
+  var y = (0,src/* range */.y1)(y0, y1 - math/* epsilon */.Ni, dy).concat(y1);
   return function(x) { return y.map(function(y) { return [x, y]; }); };
 }
 
 function graticuleY(x0, x1, dx) {
-  var x = (0,src/* range */.w6)(x0, x1 - math/* epsilon */.Ho, dx).concat(x1);
+  var x = (0,src/* range */.y1)(x0, x1 - math/* epsilon */.Ni, dx).concat(x1);
   return function(y) { return x.map(function(x) { return [x, y]; }); };
 }
 
@@ -81516,10 +77443,10 @@ function graticule() {
   }
 
   function lines() {
-    return (0,src/* range */.w6)((0,math/* ceil */.mD)(X0 / DX) * DX, X1, DX).map(X)
-        .concat((0,src/* range */.w6)((0,math/* ceil */.mD)(Y0 / DY) * DY, Y1, DY).map(Y))
-        .concat((0,src/* range */.w6)((0,math/* ceil */.mD)(x0 / dx) * dx, x1, dx).filter(function(x) { return (0,math/* abs */.Wn)(x % DX) > math/* epsilon */.Ho; }).map(x))
-        .concat((0,src/* range */.w6)((0,math/* ceil */.mD)(y0 / dy) * dy, y1, dy).filter(function(y) { return (0,math/* abs */.Wn)(y % DY) > math/* epsilon */.Ho; }).map(y));
+    return (0,src/* range */.y1)((0,math/* ceil */.mk)(X0 / DX) * DX, X1, DX).map(X)
+        .concat((0,src/* range */.y1)((0,math/* ceil */.mk)(Y0 / DY) * DY, Y1, DY).map(Y))
+        .concat((0,src/* range */.y1)((0,math/* ceil */.mk)(x0 / dx) * dx, x1, dx).filter(function(x) { return (0,math/* abs */.tn)(x % DX) > math/* epsilon */.Ni; }).map(x))
+        .concat((0,src/* range */.y1)((0,math/* ceil */.mk)(y0 / dy) * dy, y1, dy).filter(function(y) { return (0,math/* abs */.tn)(y % DY) > math/* epsilon */.Ni; }).map(y));
   }
 
   graticule.lines = function() {
@@ -81589,8 +77516,8 @@ function graticule() {
   };
 
   return graticule
-      .extentMajor([[-180, -90 + math/* epsilon */.Ho], [180, 90 - math/* epsilon */.Ho]])
-      .extentMinor([[-180, -80 - math/* epsilon */.Ho], [180, 80 + math/* epsilon */.Ho]]);
+      .extentMajor([[-180, -90 + math/* epsilon */.Ni], [180, 90 - math/* epsilon */.Ni]])
+      .extentMinor([[-180, -80 - math/* epsilon */.Ni], [180, 80 + math/* epsilon */.Ni]]);
 }
 
 function graticule10() {
@@ -81598,32 +77525,32 @@ function graticule10() {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/interpolate.js
-var interpolate = __webpack_require__(1121);
+var interpolate = __webpack_require__(9829);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/identity.js
-var identity = __webpack_require__(4243);
+var identity = __webpack_require__(2674);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/area.js
 
 
 
 
-var areaSum = (0,adder/* default */.Z)(),
-    areaRingSum = (0,adder/* default */.Z)(),
+var areaSum = (0,adder/* default */.A)(),
+    areaRingSum = (0,adder/* default */.A)(),
     x00,
     y00,
     x0,
     y0;
 
 var areaStream = {
-  point: noop/* default */.Z,
-  lineStart: noop/* default */.Z,
-  lineEnd: noop/* default */.Z,
+  point: noop/* default */.A,
+  lineStart: noop/* default */.A,
+  lineEnd: noop/* default */.A,
   polygonStart: function() {
     areaStream.lineStart = areaRingStart;
     areaStream.lineEnd = areaRingEnd;
   },
   polygonEnd: function() {
-    areaStream.lineStart = areaStream.lineEnd = areaStream.point = noop/* default */.Z;
-    areaSum.add((0,math/* abs */.Wn)(areaRingSum));
+    areaStream.lineStart = areaStream.lineEnd = areaStream.point = noop/* default */.A;
+    areaSum.add((0,math/* abs */.tn)(areaRingSum));
     areaRingSum.reset();
   },
   result: function() {
@@ -81654,7 +77581,7 @@ function areaRingEnd() {
 /* harmony default export */ var path_area = (areaStream);
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/path/bounds.js
-var path_bounds = __webpack_require__(5834);
+var path_bounds = __webpack_require__(6927);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/centroid.js
 
 
@@ -81715,7 +77642,7 @@ function centroidPointFirstLine(x, y) {
 }
 
 function centroidPointLine(x, y) {
-  var dx = x - centroid_x0, dy = y - centroid_y0, z = (0,math/* sqrt */._b)(dx * dx + dy * dy);
+  var dx = x - centroid_x0, dy = y - centroid_y0, z = (0,math/* sqrt */.RZ)(dx * dx + dy * dy);
   X1 += z * (centroid_x0 + x) / 2;
   Y1 += z * (centroid_y0 + y) / 2;
   Z1 += z;
@@ -81742,7 +77669,7 @@ function centroidPointFirstRing(x, y) {
 function centroidPointRing(x, y) {
   var dx = x - centroid_x0,
       dy = y - centroid_y0,
-      z = (0,math/* sqrt */._b)(dx * dx + dy * dy);
+      z = (0,math/* sqrt */.RZ)(dx * dx + dy * dy);
 
   X1 += z * (centroid_x0 + x) / 2;
   Y1 += z * (centroid_y0 + y) / 2;
@@ -81796,12 +77723,12 @@ PathContext.prototype = {
       }
       default: {
         this._context.moveTo(x + this._radius, y);
-        this._context.arc(x, y, this._radius, 0, math/* tau */.BZ);
+        this._context.arc(x, y, this._radius, 0, math/* tau */.FA);
         break;
       }
     }
   },
-  result: noop/* default */.Z
+  result: noop/* default */.A
 };
 
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/measure.js
@@ -81809,7 +77736,7 @@ PathContext.prototype = {
 
 
 
-var measure_lengthSum = (0,adder/* default */.Z)(),
+var measure_lengthSum = (0,adder/* default */.A)(),
     lengthRing,
     measure_x00,
     measure_y00,
@@ -81817,13 +77744,13 @@ var measure_lengthSum = (0,adder/* default */.Z)(),
     measure_y0;
 
 var measure_lengthStream = {
-  point: noop/* default */.Z,
+  point: noop/* default */.A,
   lineStart: function() {
     measure_lengthStream.point = measure_lengthPointFirst;
   },
   lineEnd: function() {
     if (lengthRing) measure_lengthPoint(measure_x00, measure_y00);
-    measure_lengthStream.point = noop/* default */.Z;
+    measure_lengthStream.point = noop/* default */.A;
   },
   polygonStart: function() {
     lengthRing = true;
@@ -81845,7 +77772,7 @@ function measure_lengthPointFirst(x, y) {
 
 function measure_lengthPoint(x, y) {
   measure_x0 -= x, measure_y0 -= y;
-  measure_lengthSum.add((0,math/* sqrt */._b)(measure_x0 * measure_x0 + measure_y0 * measure_y0));
+  measure_lengthSum.add((0,math/* sqrt */.RZ)(measure_x0 * measure_x0 + measure_y0 * measure_y0));
   measure_x0 = x, measure_y0 = y;
 }
 
@@ -81930,33 +77857,33 @@ function string_circle(radius) {
   function path(object) {
     if (object) {
       if (typeof pointRadius === "function") contextStream.pointRadius(+pointRadius.apply(this, arguments));
-      (0,stream/* default */.Z)(object, projectionStream(contextStream));
+      (0,stream/* default */.A)(object, projectionStream(contextStream));
     }
     return contextStream.result();
   }
 
   path.area = function(object) {
-    (0,stream/* default */.Z)(object, projectionStream(path_area));
+    (0,stream/* default */.A)(object, projectionStream(path_area));
     return path_area.result();
   };
 
   path.measure = function(object) {
-    (0,stream/* default */.Z)(object, projectionStream(measure));
+    (0,stream/* default */.A)(object, projectionStream(measure));
     return measure.result();
   };
 
   path.bounds = function(object) {
-    (0,stream/* default */.Z)(object, projectionStream(path_bounds/* default */.Z));
-    return path_bounds/* default.result */.Z.result();
+    (0,stream/* default */.A)(object, projectionStream(path_bounds/* default */.A));
+    return path_bounds/* default */.A.result();
   };
 
   path.centroid = function(object) {
-    (0,stream/* default */.Z)(object, projectionStream(path_centroid));
+    (0,stream/* default */.A)(object, projectionStream(path_centroid));
     return path_centroid.result();
   };
 
   path.projection = function(_) {
-    return arguments.length ? (projectionStream = _ == null ? (projection = null, identity/* default */.Z) : (projection = _).stream, path) : projection;
+    return arguments.length ? (projectionStream = _ == null ? (projection = null, identity/* default */.A) : (projection = _).stream, path) : projection;
   };
 
   path.context = function(_) {
@@ -81976,7 +77903,7 @@ function string_circle(radius) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/index.js + 1 modules
-var projection = __webpack_require__(5152);
+var projection = __webpack_require__(4370);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/conic.js
 
 
@@ -81984,11 +77911,11 @@ var projection = __webpack_require__(5152);
 function conicProjection(projectAt) {
   var phi0 = 0,
       phi1 = math.pi / 3,
-      m = (0,projection/* projectionMutator */.r)(projectAt),
+      m = (0,projection/* projectionMutator */.U)(projectAt),
       p = m(phi0, phi1);
 
   p.parallels = function(_) {
-    return arguments.length ? m(phi0 = _[0] * math/* radians */.uR, phi1 = _[1] * math/* radians */.uR) : [phi0 * math/* degrees */.RW, phi1 * math/* degrees */.RW];
+    return arguments.length ? m(phi0 = _[0] * math/* radians */.F2, phi1 = _[1] * math/* radians */.F2) : [phi0 * math/* degrees */.uj, phi1 * math/* degrees */.uj];
   };
 
   return p;
@@ -81998,14 +77925,14 @@ function conicProjection(projectAt) {
 
 
 function cylindricalEqualAreaRaw(phi0) {
-  var cosPhi0 = (0,math/* cos */.mC)(phi0);
+  var cosPhi0 = (0,math/* cos */.gn)(phi0);
 
   function forward(lambda, phi) {
-    return [lambda * cosPhi0, (0,math/* sin */.O$)(phi) / cosPhi0];
+    return [lambda * cosPhi0, (0,math/* sin */.F8)(phi) / cosPhi0];
   }
 
   forward.invert = function(x, y) {
-    return [x / cosPhi0, (0,math/* asin */.ZR)(y * cosPhi0)];
+    return [x / cosPhi0, (0,math/* asin */.qR)(y * cosPhi0)];
   };
 
   return forward;
@@ -82017,24 +77944,24 @@ function cylindricalEqualAreaRaw(phi0) {
 
 
 function conicEqualAreaRaw(y0, y1) {
-  var sy0 = (0,math/* sin */.O$)(y0), n = (sy0 + (0,math/* sin */.O$)(y1)) / 2;
+  var sy0 = (0,math/* sin */.F8)(y0), n = (sy0 + (0,math/* sin */.F8)(y1)) / 2;
 
   // Are the parallels symmetrical around the Equator?
-  if ((0,math/* abs */.Wn)(n) < math/* epsilon */.Ho) return cylindricalEqualAreaRaw(y0);
+  if ((0,math/* abs */.tn)(n) < math/* epsilon */.Ni) return cylindricalEqualAreaRaw(y0);
 
-  var c = 1 + sy0 * (2 * n - sy0), r0 = (0,math/* sqrt */._b)(c) / n;
+  var c = 1 + sy0 * (2 * n - sy0), r0 = (0,math/* sqrt */.RZ)(c) / n;
 
   function project(x, y) {
-    var r = (0,math/* sqrt */._b)(c - 2 * n * (0,math/* sin */.O$)(y)) / n;
-    return [r * (0,math/* sin */.O$)(x *= n), r0 - r * (0,math/* cos */.mC)(x)];
+    var r = (0,math/* sqrt */.RZ)(c - 2 * n * (0,math/* sin */.F8)(y)) / n;
+    return [r * (0,math/* sin */.F8)(x *= n), r0 - r * (0,math/* cos */.gn)(x)];
   }
 
   project.invert = function(x, y) {
     var r0y = r0 - y,
-        l = (0,math/* atan2 */.fv)(x, (0,math/* abs */.Wn)(r0y)) * (0,math/* sign */.Xx)(r0y);
+        l = (0,math/* atan2 */.FP)(x, (0,math/* abs */.tn)(r0y)) * (0,math/* sign */._S)(r0y);
     if (r0y * n < 0)
-      l -= math.pi * (0,math/* sign */.Xx)(x) * (0,math/* sign */.Xx)(r0y);
-    return [l / n, (0,math/* asin */.ZR)((c - (x * x + r0y * r0y) * n * n) / (2 * n))];
+      l -= math.pi * (0,math/* sign */._S)(x) * (0,math/* sign */._S)(r0y);
+    return [l / n, (0,math/* asin */.qR)((c - (x * x + r0y * r0y) * n * n) / (2 * n))];
   };
 
   return project;
@@ -82059,7 +77986,7 @@ function conicEqualAreaRaw(y0, y1) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/fit.js
-var fit = __webpack_require__(8008);
+var fit = __webpack_require__(5185);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/albersUsa.js
 
 
@@ -82138,31 +78065,31 @@ function multiplex(streams) {
 
     alaskaPoint = alaska
         .translate([x - 0.307 * k, y + 0.201 * k])
-        .clipExtent([[x - 0.425 * k + math/* epsilon */.Ho, y + 0.120 * k + math/* epsilon */.Ho], [x - 0.214 * k - math/* epsilon */.Ho, y + 0.234 * k - math/* epsilon */.Ho]])
+        .clipExtent([[x - 0.425 * k + math/* epsilon */.Ni, y + 0.120 * k + math/* epsilon */.Ni], [x - 0.214 * k - math/* epsilon */.Ni, y + 0.234 * k - math/* epsilon */.Ni]])
         .stream(pointStream);
 
     hawaiiPoint = hawaii
         .translate([x - 0.205 * k, y + 0.212 * k])
-        .clipExtent([[x - 0.214 * k + math/* epsilon */.Ho, y + 0.166 * k + math/* epsilon */.Ho], [x - 0.115 * k - math/* epsilon */.Ho, y + 0.234 * k - math/* epsilon */.Ho]])
+        .clipExtent([[x - 0.214 * k + math/* epsilon */.Ni, y + 0.166 * k + math/* epsilon */.Ni], [x - 0.115 * k - math/* epsilon */.Ni, y + 0.234 * k - math/* epsilon */.Ni]])
         .stream(pointStream);
 
     return reset();
   };
 
   albersUsa.fitExtent = function(extent, object) {
-    return (0,fit/* fitExtent */.qg)(albersUsa, extent, object);
+    return (0,fit/* fitExtent */.sp)(albersUsa, extent, object);
   };
 
   albersUsa.fitSize = function(size, object) {
-    return (0,fit/* fitSize */.mF)(albersUsa, size, object);
+    return (0,fit/* fitSize */.Hv)(albersUsa, size, object);
   };
 
   albersUsa.fitWidth = function(width, object) {
-    return (0,fit/* fitWidth */.V6)(albersUsa, width, object);
+    return (0,fit/* fitWidth */.G0)(albersUsa, width, object);
   };
 
   albersUsa.fitHeight = function(height, object) {
-    return (0,fit/* fitHeight */.rf)(albersUsa, height, object);
+    return (0,fit/* fitHeight */.FL)(albersUsa, height, object);
   };
 
   function reset() {
@@ -82174,31 +78101,31 @@ function multiplex(streams) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthalEqualArea.js
-var azimuthalEqualArea = __webpack_require__(7935);
+var azimuthalEqualArea = __webpack_require__(4550);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthalEquidistant.js
-var azimuthalEquidistant = __webpack_require__(3633);
+var azimuthalEquidistant = __webpack_require__(4858);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/rotation.js
-var rotation = __webpack_require__(8442);
+var rotation = __webpack_require__(5378);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/mercator.js
 
 
 
 
 function mercatorRaw(lambda, phi) {
-  return [lambda, (0,math/* log */.cM)((0,math/* tan */.OR)((math/* halfPi */.ou + phi) / 2))];
+  return [lambda, (0,math/* log */.Rm)((0,math/* tan */.Ml)((math/* halfPi */.TW + phi) / 2))];
 }
 
 mercatorRaw.invert = function(x, y) {
-  return [x, 2 * (0,math/* atan */.z4)((0,math/* exp */.Qq)(y)) - math/* halfPi */.ou];
+  return [x, 2 * (0,math/* atan */.rY)((0,math/* exp */.oN)(y)) - math/* halfPi */.TW];
 };
 
 /* harmony default export */ function mercator() {
   return mercatorProjection(mercatorRaw)
-      .scale(961 / math/* tau */.BZ);
+      .scale(961 / math/* tau */.FA);
 }
 
 function mercatorProjection(project) {
-  var m = (0,projection/* default */.Z)(project),
+  var m = (0,projection/* default */.A)(project),
       center = m.center,
       scale = m.scale,
       translate = m.translate,
@@ -82223,7 +78150,7 @@ function mercatorProjection(project) {
 
   function reclip() {
     var k = math.pi * scale(),
-        t = m((0,rotation/* default */.Z)(m.rotate()).invert([0, 0]));
+        t = m((0,rotation/* default */.A)(m.rotate()).invert([0, 0]));
     return clipExtent(x0 == null
         ? [[t[0] - k, t[1] - k], [t[0] + k, t[1] + k]] : project === mercatorRaw
         ? [[Math.max(t[0] - k, x0), y0], [Math.min(t[0] + k, x1), y1]]
@@ -82239,29 +78166,29 @@ function mercatorProjection(project) {
 
 
 function tany(y) {
-  return (0,math/* tan */.OR)((math/* halfPi */.ou + y) / 2);
+  return (0,math/* tan */.Ml)((math/* halfPi */.TW + y) / 2);
 }
 
 function conicConformalRaw(y0, y1) {
-  var cy0 = (0,math/* cos */.mC)(y0),
-      n = y0 === y1 ? (0,math/* sin */.O$)(y0) : (0,math/* log */.cM)(cy0 / (0,math/* cos */.mC)(y1)) / (0,math/* log */.cM)(tany(y1) / tany(y0)),
-      f = cy0 * (0,math/* pow */.sQ)(tany(y0), n) / n;
+  var cy0 = (0,math/* cos */.gn)(y0),
+      n = y0 === y1 ? (0,math/* sin */.F8)(y0) : (0,math/* log */.Rm)(cy0 / (0,math/* cos */.gn)(y1)) / (0,math/* log */.Rm)(tany(y1) / tany(y0)),
+      f = cy0 * (0,math/* pow */.n7)(tany(y0), n) / n;
 
   if (!n) return mercatorRaw;
 
   function project(x, y) {
-    if (f > 0) { if (y < -math/* halfPi */.ou + math/* epsilon */.Ho) y = -math/* halfPi */.ou + math/* epsilon */.Ho; }
-    else { if (y > math/* halfPi */.ou - math/* epsilon */.Ho) y = math/* halfPi */.ou - math/* epsilon */.Ho; }
-    var r = f / (0,math/* pow */.sQ)(tany(y), n);
-    return [r * (0,math/* sin */.O$)(n * x), f - r * (0,math/* cos */.mC)(n * x)];
+    if (f > 0) { if (y < -math/* halfPi */.TW + math/* epsilon */.Ni) y = -math/* halfPi */.TW + math/* epsilon */.Ni; }
+    else { if (y > math/* halfPi */.TW - math/* epsilon */.Ni) y = math/* halfPi */.TW - math/* epsilon */.Ni; }
+    var r = f / (0,math/* pow */.n7)(tany(y), n);
+    return [r * (0,math/* sin */.F8)(n * x), f - r * (0,math/* cos */.gn)(n * x)];
   }
 
   project.invert = function(x, y) {
-    var fy = f - y, r = (0,math/* sign */.Xx)(n) * (0,math/* sqrt */._b)(x * x + fy * fy),
-      l = (0,math/* atan2 */.fv)(x, (0,math/* abs */.Wn)(fy)) * (0,math/* sign */.Xx)(fy);
+    var fy = f - y, r = (0,math/* sign */._S)(n) * (0,math/* sqrt */.RZ)(x * x + fy * fy),
+      l = (0,math/* atan2 */.FP)(x, (0,math/* abs */.tn)(fy)) * (0,math/* sign */._S)(fy);
     if (fy * n < 0)
-      l -= math.pi * (0,math/* sign */.Xx)(x) * (0,math/* sign */.Xx)(fy);
-    return [l / n, 2 * (0,math/* atan */.z4)((0,math/* pow */.sQ)(f / r, 1 / n)) - math/* halfPi */.ou];
+      l -= math.pi * (0,math/* sign */._S)(x) * (0,math/* sign */._S)(fy);
+    return [l / n, 2 * (0,math/* atan */.rY)((0,math/* pow */.n7)(f / r, 1 / n)) - math/* halfPi */.TW];
   };
 
   return project;
@@ -82274,30 +78201,30 @@ function conicConformalRaw(y0, y1) {
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/equirectangular.js
-var equirectangular = __webpack_require__(3512);
+var equirectangular = __webpack_require__(3538);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/conicEquidistant.js
 
 
 
 
 function conicEquidistantRaw(y0, y1) {
-  var cy0 = (0,math/* cos */.mC)(y0),
-      n = y0 === y1 ? (0,math/* sin */.O$)(y0) : (cy0 - (0,math/* cos */.mC)(y1)) / (y1 - y0),
+  var cy0 = (0,math/* cos */.gn)(y0),
+      n = y0 === y1 ? (0,math/* sin */.F8)(y0) : (cy0 - (0,math/* cos */.gn)(y1)) / (y1 - y0),
       g = cy0 / n + y0;
 
-  if ((0,math/* abs */.Wn)(n) < math/* epsilon */.Ho) return equirectangular/* equirectangularRaw */.k;
+  if ((0,math/* abs */.tn)(n) < math/* epsilon */.Ni) return equirectangular/* equirectangularRaw */.f;
 
   function project(x, y) {
     var gy = g - y, nx = n * x;
-    return [gy * (0,math/* sin */.O$)(nx), g - gy * (0,math/* cos */.mC)(nx)];
+    return [gy * (0,math/* sin */.F8)(nx), g - gy * (0,math/* cos */.gn)(nx)];
   }
 
   project.invert = function(x, y) {
     var gy = g - y,
-        l = (0,math/* atan2 */.fv)(x, (0,math/* abs */.Wn)(gy)) * (0,math/* sign */.Xx)(gy);
+        l = (0,math/* atan2 */.FP)(x, (0,math/* abs */.tn)(gy)) * (0,math/* sign */._S)(gy);
     if (gy * n < 0)
-      l -= math.pi * (0,math/* sign */.Xx)(x) * (0,math/* sign */.Xx)(gy);
-    return [l / n, g - (0,math/* sign */.Xx)(n) * (0,math/* sqrt */._b)(x * x + gy * gy)];
+      l -= math.pi * (0,math/* sign */._S)(x) * (0,math/* sign */._S)(gy);
+    return [l / n, g - (0,math/* sign */._S)(n) * (0,math/* sqrt */.RZ)(x * x + gy * gy)];
   };
 
   return project;
@@ -82317,13 +78244,13 @@ var A1 = 1.340264,
     A2 = -0.081106,
     A3 = 0.000893,
     A4 = 0.003796,
-    M = (0,math/* sqrt */._b)(3) / 2,
+    M = (0,math/* sqrt */.RZ)(3) / 2,
     iterations = 12;
 
 function equalEarthRaw(lambda, phi) {
-  var l = (0,math/* asin */.ZR)(M * (0,math/* sin */.O$)(phi)), l2 = l * l, l6 = l2 * l2 * l2;
+  var l = (0,math/* asin */.qR)(M * (0,math/* sin */.F8)(phi)), l2 = l * l, l6 = l2 * l2 * l2;
   return [
-    lambda * (0,math/* cos */.mC)(l) / (M * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2))),
+    lambda * (0,math/* cos */.gn)(l) / (M * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2))),
     l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2))
   ];
 }
@@ -82334,23 +78261,23 @@ equalEarthRaw.invert = function(x, y) {
     fy = l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2)) - y;
     fpy = A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2);
     l -= delta = fy / fpy, l2 = l * l, l6 = l2 * l2 * l2;
-    if ((0,math/* abs */.Wn)(delta) < math/* epsilon2 */.aW) break;
+    if ((0,math/* abs */.tn)(delta) < math/* epsilon2 */.$t) break;
   }
   return [
-    M * x * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2)) / (0,math/* cos */.mC)(l),
-    (0,math/* asin */.ZR)((0,math/* sin */.O$)(l) / M)
+    M * x * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2)) / (0,math/* cos */.gn)(l),
+    (0,math/* asin */.qR)((0,math/* sin */.F8)(l) / M)
   ];
 };
 
 /* harmony default export */ function equalEarth() {
-  return (0,projection/* default */.Z)(equalEarthRaw)
+  return (0,projection/* default */.A)(equalEarthRaw)
       .scale(177.158);
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/gnomonic.js
-var gnomonic = __webpack_require__(7119);
+var gnomonic = __webpack_require__(5912);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/transform.js
-var src_transform = __webpack_require__(2200);
+var src_transform = __webpack_require__(7722);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/identity.js
 
 
@@ -82363,13 +78290,13 @@ var src_transform = __webpack_require__(2200);
       alpha = 0, ca, sa, // angle
       x0 = null, y0, x1, y1, // clip extent
       kx = 1, ky = 1,
-      transform = (0,src_transform/* transformer */.l)({
+      transform = (0,src_transform/* transformer */.G)({
         point: function(x, y) {
           var p = projection([x, y])
           this.stream.point(p[0], p[1]);
         }
       }),
-      postclip = identity/* default */.Z,
+      postclip = identity/* default */.A,
       cache,
       cacheStream;
 
@@ -82405,7 +78332,7 @@ var src_transform = __webpack_require__(2200);
     return arguments.length ? (postclip = _, x0 = y0 = x1 = y1 = null, reset()) : postclip;
   };
   projection.clipExtent = function(_) {
-    return arguments.length ? (postclip = _ == null ? (x0 = y0 = x1 = y1 = null, identity/* default */.Z) : (0,rectangle/* default */.Z)(x0 = +_[0][0], y0 = +_[0][1], x1 = +_[1][0], y1 = +_[1][1]), reset()) : x0 == null ? null : [[x0, y0], [x1, y1]];
+    return arguments.length ? (postclip = _ == null ? (x0 = y0 = x1 = y1 = null, identity/* default */.A) : (0,rectangle/* default */.A)(x0 = +_[0][0], y0 = +_[0][1], x1 = +_[1][0], y1 = +_[1][1]), reset()) : x0 == null ? null : [[x0, y0], [x1, y1]];
   };
   projection.scale = function(_) {
     return arguments.length ? (k = +_, reset()) : k;
@@ -82414,7 +78341,7 @@ var src_transform = __webpack_require__(2200);
     return arguments.length ? (tx = +_[0], ty = +_[1], reset()) : [tx, ty];
   }
   projection.angle = function(_) {
-    return arguments.length ? (alpha = _ % 360 * math/* radians */.uR, sa = (0,math/* sin */.O$)(alpha), ca = (0,math/* cos */.mC)(alpha), reset()) : alpha * math/* degrees */.RW;
+    return arguments.length ? (alpha = _ % 360 * math/* radians */.F2, sa = (0,math/* sin */.F8)(alpha), ca = (0,math/* cos */.gn)(alpha), reset()) : alpha * math/* degrees */.uj;
   };
   projection.reflectX = function(_) {
     return arguments.length ? (sx = _ ? -1 : 1, reset()) : sx < 0;
@@ -82423,43 +78350,43 @@ var src_transform = __webpack_require__(2200);
     return arguments.length ? (sy = _ ? -1 : 1, reset()) : sy < 0;
   };
   projection.fitExtent = function(extent, object) {
-    return (0,fit/* fitExtent */.qg)(projection, extent, object);
+    return (0,fit/* fitExtent */.sp)(projection, extent, object);
   };
   projection.fitSize = function(size, object) {
-    return (0,fit/* fitSize */.mF)(projection, size, object);
+    return (0,fit/* fitSize */.Hv)(projection, size, object);
   };
   projection.fitWidth = function(width, object) {
-    return (0,fit/* fitWidth */.V6)(projection, width, object);
+    return (0,fit/* fitWidth */.G0)(projection, width, object);
   };
   projection.fitHeight = function(height, object) {
-    return (0,fit/* fitHeight */.rf)(projection, height, object);
+    return (0,fit/* fitHeight */.FL)(projection, height, object);
   };
 
   return projection;
 }
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/naturalEarth1.js
-var naturalEarth1 = __webpack_require__(332);
+var naturalEarth1 = __webpack_require__(5400);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/orthographic.js
-var orthographic = __webpack_require__(5794);
+var orthographic = __webpack_require__(5782);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthal.js
-var azimuthal = __webpack_require__(3543);
+var azimuthal = __webpack_require__(6603);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/stereographic.js
 
 
 
 
 function stereographicRaw(x, y) {
-  var cy = (0,math/* cos */.mC)(y), k = 1 + (0,math/* cos */.mC)(x) * cy;
-  return [cy * (0,math/* sin */.O$)(x) / k, (0,math/* sin */.O$)(y) / k];
+  var cy = (0,math/* cos */.gn)(y), k = 1 + (0,math/* cos */.gn)(x) * cy;
+  return [cy * (0,math/* sin */.F8)(x) / k, (0,math/* sin */.F8)(y) / k];
 }
 
-stereographicRaw.invert = (0,azimuthal/* azimuthalInvert */.O)(function(z) {
-  return 2 * (0,math/* atan */.z4)(z);
+stereographicRaw.invert = (0,azimuthal/* azimuthalInvert */.I)(function(z) {
+  return 2 * (0,math/* atan */.rY)(z);
 });
 
 /* harmony default export */ function stereographic() {
-  return (0,projection/* default */.Z)(stereographicRaw)
+  return (0,projection/* default */.A)(stereographicRaw)
       .scale(250)
       .clipAngle(142);
 }
@@ -82469,11 +78396,11 @@ stereographicRaw.invert = (0,azimuthal/* azimuthalInvert */.O)(function(z) {
 
 
 function transverseMercatorRaw(lambda, phi) {
-  return [(0,math/* log */.cM)((0,math/* tan */.OR)((math/* halfPi */.ou + phi) / 2)), -lambda];
+  return [(0,math/* log */.Rm)((0,math/* tan */.Ml)((math/* halfPi */.TW + phi) / 2)), -lambda];
 }
 
 transverseMercatorRaw.invert = function(x, y) {
-  return [-y, 2 * (0,math/* atan */.z4)((0,math/* exp */.Qq)(x)) - math/* halfPi */.ou];
+  return [-y, 2 * (0,math/* atan */.rY)((0,math/* exp */.oN)(x)) - math/* halfPi */.TW];
 };
 
 /* harmony default export */ function transverseMercator() {
@@ -82532,44 +78459,44 @@ transverseMercatorRaw.invert = function(x, y) {
 
 /***/ }),
 
-/***/ 1121:
+/***/ 9829:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
 
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(a, b) {
-  var x0 = a[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR,
-      y0 = a[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR,
-      x1 = b[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR,
-      y1 = b[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR,
-      cy0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(y0),
-      sy0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(y0),
-      cy1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(y1),
-      sy1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(y1),
-      kx0 = cy0 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(x0),
-      ky0 = cy0 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(x0),
-      kx1 = cy1 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(x1),
-      ky1 = cy1 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(x1),
-      d = 2 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .ZR)((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ ._b)((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .haversin */ .Jy)(y1 - y0) + cy0 * cy1 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .haversin */ .Jy)(x1 - x0))),
-      k = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(d);
+  var x0 = a[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2,
+      y0 = a[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2,
+      x1 = b[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2,
+      y1 = b[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2,
+      cy0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(y0),
+      sy0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(y0),
+      cy1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(y1),
+      sy1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(y1),
+      kx0 = cy0 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(x0),
+      ky0 = cy0 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(x0),
+      kx1 = cy1 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(x1),
+      ky1 = cy1 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(x1),
+      d = 2 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .qR)((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ .RZ)((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .haversin */ .bo)(y1 - y0) + cy0 * cy1 * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .haversin */ .bo)(x1 - x0))),
+      k = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(d);
 
   var interpolate = d ? function(t) {
-    var B = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(t *= d) / k,
-        A = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(d - t) / k,
+    var B = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(t *= d) / k,
+        A = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(d - t) / k,
         x = A * kx0 + B * kx1,
         y = A * ky0 + B * ky1,
         z = A * sy0 + B * sy1;
     return [
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .fv)(y, x) * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW,
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .fv)(z, (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ ._b)(x * x + y * y)) * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .FP)(y, x) * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj,
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .FP)(z, (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ .RZ)(x * x + y * y)) * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj
     ];
   } : function() {
-    return [x0 * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW, y0 * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW];
+    return [x0 * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj, y0 * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj];
   };
 
   interpolate.distance = d;
@@ -82580,34 +78507,34 @@ transverseMercatorRaw.invert = function(x, y) {
 
 /***/ }),
 
-/***/ 6354:
+/***/ 4650:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BZ": function() { return /* binding */ tau; },
-/* harmony export */   "Ho": function() { return /* binding */ epsilon; },
-/* harmony export */   "Jy": function() { return /* binding */ haversin; },
-/* harmony export */   "Kh": function() { return /* binding */ acos; },
-/* harmony export */   "O$": function() { return /* binding */ sin; },
-/* harmony export */   "OR": function() { return /* binding */ tan; },
-/* harmony export */   "Qq": function() { return /* binding */ exp; },
-/* harmony export */   "RW": function() { return /* binding */ degrees; },
-/* harmony export */   "Wn": function() { return /* binding */ abs; },
-/* harmony export */   "Xx": function() { return /* binding */ sign; },
-/* harmony export */   "ZR": function() { return /* binding */ asin; },
-/* harmony export */   "_b": function() { return /* binding */ sqrt; },
-/* harmony export */   "aW": function() { return /* binding */ epsilon2; },
-/* harmony export */   "cM": function() { return /* binding */ log; },
-/* harmony export */   "fv": function() { return /* binding */ atan2; },
-/* harmony export */   "mC": function() { return /* binding */ cos; },
-/* harmony export */   "mD": function() { return /* binding */ ceil; },
-/* harmony export */   "ou": function() { return /* binding */ halfPi; },
-/* harmony export */   "pi": function() { return /* binding */ pi; },
-/* harmony export */   "pu": function() { return /* binding */ quarterPi; },
-/* harmony export */   "sQ": function() { return /* binding */ pow; },
-/* harmony export */   "uR": function() { return /* binding */ radians; },
-/* harmony export */   "z4": function() { return /* binding */ atan; }
+/* harmony export */   $t: function() { return /* binding */ epsilon2; },
+/* harmony export */   F2: function() { return /* binding */ radians; },
+/* harmony export */   F8: function() { return /* binding */ sin; },
+/* harmony export */   FA: function() { return /* binding */ tau; },
+/* harmony export */   FP: function() { return /* binding */ atan2; },
+/* harmony export */   HQ: function() { return /* binding */ acos; },
+/* harmony export */   Ml: function() { return /* binding */ tan; },
+/* harmony export */   Ni: function() { return /* binding */ epsilon; },
+/* harmony export */   RZ: function() { return /* binding */ sqrt; },
+/* harmony export */   Rm: function() { return /* binding */ log; },
+/* harmony export */   TW: function() { return /* binding */ halfPi; },
+/* harmony export */   _S: function() { return /* binding */ sign; },
+/* harmony export */   bo: function() { return /* binding */ haversin; },
+/* harmony export */   gn: function() { return /* binding */ cos; },
+/* harmony export */   gz: function() { return /* binding */ quarterPi; },
+/* harmony export */   mk: function() { return /* binding */ ceil; },
+/* harmony export */   n7: function() { return /* binding */ pow; },
+/* harmony export */   oN: function() { return /* binding */ exp; },
+/* harmony export */   pi: function() { return /* binding */ pi; },
+/* harmony export */   qR: function() { return /* binding */ asin; },
+/* harmony export */   rY: function() { return /* binding */ atan; },
+/* harmony export */   tn: function() { return /* binding */ abs; },
+/* harmony export */   uj: function() { return /* binding */ degrees; }
 /* harmony export */ });
 /* unused harmony export floor */
 var epsilon = 1e-6;
@@ -82649,23 +78576,23 @@ function haversin(x) {
 
 /***/ }),
 
-/***/ 8437:
+/***/ 6608:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* binding */ noop; }
+/* harmony export */   A: function() { return /* binding */ noop; }
 /* harmony export */ });
 function noop() {}
 
 
 /***/ }),
 
-/***/ 5834:
+/***/ 6927:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8437);
+/* harmony import */ var _noop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6608);
 
 
 var x0 = Infinity,
@@ -82675,10 +78602,10 @@ var x0 = Infinity,
 
 var boundsStream = {
   point: boundsPoint,
-  lineStart: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z,
-  lineEnd: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z,
-  polygonStart: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z,
-  polygonEnd: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z,
+  lineStart: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,
+  lineEnd: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,
+  polygonStart: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,
+  polygonEnd: _noop_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,
   result: function() {
     var bounds = [[x0, y0], [x1, y1]];
     x1 = y1 = -(y0 = x0 = Infinity);
@@ -82693,63 +78620,63 @@ function boundsPoint(x, y) {
   if (y > y1) y1 = y;
 }
 
-/* harmony default export */ __webpack_exports__["Z"] = (boundsStream);
+/* harmony default export */ __webpack_exports__.A = (boundsStream);
 
 
 /***/ }),
 
-/***/ 9877:
+/***/ 6110:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
 
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(a, b) {
-  return (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .Wn)(a[0] - b[0]) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho && (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .Wn)(a[1] - b[1]) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho;
+  return (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .tn)(a[0] - b[0]) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni && (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .tn)(a[1] - b[1]) < _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni;
 }
 
 
 /***/ }),
 
-/***/ 9269:
+/***/ 801:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
-/* harmony import */ var _adder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6033);
-/* harmony import */ var _cartesian_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9665);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6354);
+/* harmony import */ var _adder_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5022);
+/* harmony import */ var _cartesian_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8696);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4650);
 
 
 
 
-var sum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)();
+var sum = (0,_adder_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)();
 
 function longitude(point) {
-  if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(point[0]) <= _math_js__WEBPACK_IMPORTED_MODULE_1__.pi)
+  if ((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(point[0]) <= _math_js__WEBPACK_IMPORTED_MODULE_1__.pi)
     return point[0];
   else
-    return (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sign */ .Xx)(point[0]) * (((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .Wn)(point[0]) + _math_js__WEBPACK_IMPORTED_MODULE_1__.pi) % _math_js__WEBPACK_IMPORTED_MODULE_1__/* .tau */ .BZ - _math_js__WEBPACK_IMPORTED_MODULE_1__.pi);
+    return (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sign */ ._S)(point[0]) * (((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .abs */ .tn)(point[0]) + _math_js__WEBPACK_IMPORTED_MODULE_1__.pi) % _math_js__WEBPACK_IMPORTED_MODULE_1__/* .tau */ .FA - _math_js__WEBPACK_IMPORTED_MODULE_1__.pi);
 }
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(polygon, point) {
   var lambda = longitude(point),
       phi = point[1],
-      sinPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi),
-      normal = [(0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(lambda), -(0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(lambda), 0],
+      sinPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi),
+      normal = [(0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(lambda), -(0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(lambda), 0],
       angle = 0,
       winding = 0;
 
   sum.reset();
 
-  if (sinPhi === 1) phi = _math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .ou + _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho;
-  else if (sinPhi === -1) phi = -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .ou - _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho;
+  if (sinPhi === 1) phi = _math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .TW + _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni;
+  else if (sinPhi === -1) phi = -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .halfPi */ .TW - _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni;
 
   for (var i = 0, n = polygon.length; i < n; ++i) {
     if (!(m = (ring = polygon[i]).length)) continue;
@@ -82757,33 +78684,33 @@ function longitude(point) {
         m,
         point0 = ring[m - 1],
         lambda0 = longitude(point0),
-        phi0 = point0[1] / 2 + _math_js__WEBPACK_IMPORTED_MODULE_1__/* .quarterPi */ .pu,
-        sinPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi0),
-        cosPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi0);
+        phi0 = point0[1] / 2 + _math_js__WEBPACK_IMPORTED_MODULE_1__/* .quarterPi */ .gz,
+        sinPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi0),
+        cosPhi0 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi0);
 
     for (var j = 0; j < m; ++j, lambda0 = lambda1, sinPhi0 = sinPhi1, cosPhi0 = cosPhi1, point0 = point1) {
       var point1 = ring[j],
           lambda1 = longitude(point1),
-          phi1 = point1[1] / 2 + _math_js__WEBPACK_IMPORTED_MODULE_1__/* .quarterPi */ .pu,
-          sinPhi1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(phi1),
-          cosPhi1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(phi1),
+          phi1 = point1[1] / 2 + _math_js__WEBPACK_IMPORTED_MODULE_1__/* .quarterPi */ .gz,
+          sinPhi1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(phi1),
+          cosPhi1 = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(phi1),
           delta = lambda1 - lambda0,
           sign = delta >= 0 ? 1 : -1,
           absDelta = sign * delta,
           antimeridian = absDelta > _math_js__WEBPACK_IMPORTED_MODULE_1__.pi,
           k = sinPhi0 * sinPhi1;
 
-      sum.add((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan2 */ .fv)(k * sign * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(absDelta), cosPhi0 * cosPhi1 + k * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .mC)(absDelta)));
-      angle += antimeridian ? delta + sign * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .tau */ .BZ : delta;
+      sum.add((0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .atan2 */ .FP)(k * sign * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(absDelta), cosPhi0 * cosPhi1 + k * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .cos */ .gn)(absDelta)));
+      angle += antimeridian ? delta + sign * _math_js__WEBPACK_IMPORTED_MODULE_1__/* .tau */ .FA : delta;
 
       // Are the longitudes either side of the point’s meridian (lambda),
       // and are the latitudes smaller than the parallel (phi)?
       if (antimeridian ^ lambda0 >= lambda ^ lambda1 >= lambda) {
-        var arc = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianCross */ .T5)((0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesian */ .Og)(point0), (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesian */ .Og)(point1));
-        (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianNormalizeInPlace */ .iJ)(arc);
-        var intersection = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianCross */ .T5)(normal, arc);
-        (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianNormalizeInPlace */ .iJ)(intersection);
-        var phiArc = (antimeridian ^ delta >= 0 ? -1 : 1) * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .ZR)(intersection[2]);
+        var arc = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianCross */ .r8)((0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesian */ .jf)(point0), (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesian */ .jf)(point1));
+        (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianNormalizeInPlace */ .Cx)(arc);
+        var intersection = (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianCross */ .r8)(normal, arc);
+        (0,_cartesian_js__WEBPACK_IMPORTED_MODULE_2__/* .cartesianNormalizeInPlace */ .Cx)(intersection);
+        var phiArc = (antimeridian ^ delta >= 0 ? -1 : 1) * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .qR)(intersection[2]);
         if (phi > phiArc || phi === phiArc && (arc[0] || arc[1])) {
           winding += antimeridian ^ delta >= 0 ? 1 : -1;
         }
@@ -82802,44 +78729,44 @@ function longitude(point) {
   // from the point to the South pole.  If it is zero, then the point is the
   // same side as the South pole.
 
-  return (angle < -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho || angle < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho && sum < -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ho) ^ (winding & 1);
+  return (angle < -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni || angle < _math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni && sum < -_math_js__WEBPACK_IMPORTED_MODULE_1__/* .epsilon */ .Ni) ^ (winding & 1);
 }
 
 
 /***/ }),
 
-/***/ 3543:
+/***/ 6603:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "O": function() { return /* binding */ azimuthalInvert; },
-/* harmony export */   "W": function() { return /* binding */ azimuthalRaw; }
+/* harmony export */   I: function() { return /* binding */ azimuthalInvert; },
+/* harmony export */   c: function() { return /* binding */ azimuthalRaw; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
 
 
 function azimuthalRaw(scale) {
   return function(x, y) {
-    var cx = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(x),
-        cy = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(y),
+    var cx = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(x),
+        cy = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(y),
         k = scale(cx * cy);
     return [
-      k * cy * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(x),
-      k * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(y)
+      k * cy * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(x),
+      k * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(y)
     ];
   }
 }
 
 function azimuthalInvert(angle) {
   return function(x, y) {
-    var z = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ ._b)(x * x + y * y),
+    var z = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sqrt */ .RZ)(x * x + y * y),
         c = angle(z),
-        sc = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(c),
-        cc = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(c);
+        sc = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(c),
+        cc = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(c);
     return [
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .fv)(x * sc, z * cc),
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .ZR)(z && y * sc / z)
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .FP)(x * sc, z * cc),
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .qR)(z && y * sc / z)
     ];
   }
 }
@@ -82847,31 +78774,31 @@ function azimuthalInvert(angle) {
 
 /***/ }),
 
-/***/ 7935:
+/***/ 4550:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
-/* harmony export */   "l": function() { return /* binding */ azimuthalEqualAreaRaw; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   n: function() { return /* binding */ azimuthalEqualAreaRaw; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6354);
-/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3543);
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5152);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4650);
+/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6603);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4370);
 
 
 
 
-var azimuthalEqualAreaRaw = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalRaw */ .W)(function(cxcy) {
-  return (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ ._b)(2 / (1 + cxcy));
+var azimuthalEqualAreaRaw = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalRaw */ .c)(function(cxcy) {
+  return (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sqrt */ .RZ)(2 / (1 + cxcy));
 });
 
-azimuthalEqualAreaRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalInvert */ .O)(function(z) {
-  return 2 * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .ZR)(z / 2);
+azimuthalEqualAreaRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalInvert */ .I)(function(z) {
+  return 2 * (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .asin */ .qR)(z / 2);
 });
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(azimuthalEqualAreaRaw)
+  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(azimuthalEqualAreaRaw)
       .scale(124.75)
       .clipAngle(180 - 1e-3);
 }
@@ -82879,31 +78806,31 @@ azimuthalEqualAreaRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .
 
 /***/ }),
 
-/***/ 3633:
+/***/ 4858:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "N": function() { return /* binding */ azimuthalEquidistantRaw; },
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   j: function() { return /* binding */ azimuthalEquidistantRaw; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6354);
-/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3543);
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5152);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4650);
+/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6603);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4370);
 
 
 
 
-var azimuthalEquidistantRaw = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalRaw */ .W)(function(c) {
-  return (c = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .acos */ .Kh)(c)) && c / (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .O$)(c);
+var azimuthalEquidistantRaw = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalRaw */ .c)(function(c) {
+  return (c = (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .acos */ .HQ)(c)) && c / (0,_math_js__WEBPACK_IMPORTED_MODULE_1__/* .sin */ .F8)(c);
 });
 
-azimuthalEquidistantRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalInvert */ .O)(function(z) {
+azimuthalEquidistantRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/* .azimuthalInvert */ .I)(function(z) {
   return z;
 });
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(azimuthalEquidistantRaw)
+  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(azimuthalEquidistantRaw)
       .scale(79.4188)
       .clipAngle(180 - 1e-3);
 }
@@ -82911,15 +78838,15 @@ azimuthalEquidistantRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_0__/*
 
 /***/ }),
 
-/***/ 3512:
+/***/ 3538:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
-/* harmony export */   "k": function() { return /* binding */ equirectangularRaw; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   f: function() { return /* binding */ equirectangularRaw; }
 /* harmony export */ });
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5152);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4370);
 
 
 function equirectangularRaw(lambda, phi) {
@@ -82929,25 +78856,25 @@ function equirectangularRaw(lambda, phi) {
 equirectangularRaw.invert = equirectangularRaw;
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return (0,_index_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(equirectangularRaw)
+  return (0,_index_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(equirectangularRaw)
       .scale(152.63);
 }
 
 
 /***/ }),
 
-/***/ 8008:
+/***/ 5185:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "V6": function() { return /* binding */ fitWidth; },
-/* harmony export */   "mF": function() { return /* binding */ fitSize; },
-/* harmony export */   "qg": function() { return /* binding */ fitExtent; },
-/* harmony export */   "rf": function() { return /* binding */ fitHeight; }
+/* harmony export */   FL: function() { return /* binding */ fitHeight; },
+/* harmony export */   G0: function() { return /* binding */ fitWidth; },
+/* harmony export */   Hv: function() { return /* binding */ fitSize; },
+/* harmony export */   sp: function() { return /* binding */ fitExtent; }
 /* harmony export */ });
-/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4471);
-/* harmony import */ var _path_bounds_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5834);
+/* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6804);
+/* harmony import */ var _path_bounds_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6927);
 
 
 
@@ -82955,8 +78882,8 @@ function fit(projection, fitBounds, object) {
   var clip = projection.clipExtent && projection.clipExtent();
   projection.scale(150).translate([0, 0]);
   if (clip != null) projection.clipExtent(null);
-  (0,_stream_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(object, projection.stream(_path_bounds_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z));
-  fitBounds(_path_bounds_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"].result */ .Z.result());
+  (0,_stream_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(object, projection.stream(_path_bounds_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A));
+  fitBounds(_path_bounds_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A.result());
   if (clip != null) projection.clipExtent(clip);
   return projection;
 }
@@ -82999,30 +78926,30 @@ function fitHeight(projection, height, object) {
 
 /***/ }),
 
-/***/ 7119:
+/***/ 5912:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "M": function() { return /* binding */ gnomonicRaw; },
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   T: function() { return /* binding */ gnomonicRaw; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
-/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3543);
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5152);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
+/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6603);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4370);
 
 
 
 
 function gnomonicRaw(x, y) {
-  var cy = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(y), k = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(x) * cy;
-  return [cy * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(x) / k, (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(y) / k];
+  var cy = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(y), k = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(x) * cy;
+  return [cy * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(x) / k, (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(y) / k];
 }
 
-gnomonicRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_1__/* .azimuthalInvert */ .O)(_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan */ .z4);
+gnomonicRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_1__/* .azimuthalInvert */ .I)(_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan */ .rY);
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(gnomonicRaw)
+  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(gnomonicRaw)
       .scale(144.049)
       .clipAngle(60);
 }
@@ -83030,51 +78957,51 @@ gnomonicRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_1__/* .azimuthalI
 
 /***/ }),
 
-/***/ 5152:
+/***/ 4370:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ projection; },
-  "r": function() { return /* binding */ projectionMutator; }
+  A: function() { return /* binding */ projection; },
+  U: function() { return /* binding */ projectionMutator; }
 });
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/antimeridian.js
-var antimeridian = __webpack_require__(4348);
+var antimeridian = __webpack_require__(3630);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/circle.js
-var circle = __webpack_require__(1428);
+var circle = __webpack_require__(3749);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/rectangle.js + 1 modules
-var rectangle = __webpack_require__(3063);
+var rectangle = __webpack_require__(9602);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/compose.js
-var compose = __webpack_require__(3981);
+var compose = __webpack_require__(6434);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/identity.js
-var identity = __webpack_require__(4243);
+var identity = __webpack_require__(2674);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/math.js
-var math = __webpack_require__(6354);
+var math = __webpack_require__(4650);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/rotation.js
-var rotation = __webpack_require__(8442);
+var rotation = __webpack_require__(5378);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/transform.js
-var transform = __webpack_require__(2200);
+var transform = __webpack_require__(7722);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/fit.js
-var fit = __webpack_require__(8008);
+var fit = __webpack_require__(5185);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/cartesian.js
-var cartesian = __webpack_require__(9665);
+var cartesian = __webpack_require__(8696);
 ;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/resample.js
 
 
 
 
 var maxDepth = 16, // maximum depth of subdivision
-    cosMinDistance = (0,math/* cos */.mC)(30 * math/* radians */.uR); // cos(minimum angular distance)
+    cosMinDistance = (0,math/* cos */.gn)(30 * math/* radians */.F2); // cos(minimum angular distance)
 
 /* harmony default export */ function resample(project, delta2) {
   return +delta2 ? resample_resample(project, delta2) : resampleNone(project);
 }
 
 function resampleNone(project) {
-  return (0,transform/* transformer */.l)({
+  return (0,transform/* transformer */.G)({
     point: function(x, y) {
       x = project(x, y);
       this.stream.point(x[0], x[1]);
@@ -83092,9 +79019,9 @@ function resample_resample(project, delta2) {
       var a = a0 + a1,
           b = b0 + b1,
           c = c0 + c1,
-          m = (0,math/* sqrt */._b)(a * a + b * b + c * c),
-          phi2 = (0,math/* asin */.ZR)(c /= m),
-          lambda2 = (0,math/* abs */.Wn)((0,math/* abs */.Wn)(c) - 1) < math/* epsilon */.Ho || (0,math/* abs */.Wn)(lambda0 - lambda1) < math/* epsilon */.Ho ? (lambda0 + lambda1) / 2 : (0,math/* atan2 */.fv)(b, a),
+          m = (0,math/* sqrt */.RZ)(a * a + b * b + c * c),
+          phi2 = (0,math/* asin */.qR)(c /= m),
+          lambda2 = (0,math/* abs */.tn)((0,math/* abs */.tn)(c) - 1) < math/* epsilon */.Ni || (0,math/* abs */.tn)(lambda0 - lambda1) < math/* epsilon */.Ni ? (lambda0 + lambda1) / 2 : (0,math/* atan2 */.FP)(b, a),
           p = project(lambda2, phi2),
           x2 = p[0],
           y2 = p[1],
@@ -83102,7 +79029,7 @@ function resample_resample(project, delta2) {
           dy2 = y2 - y0,
           dz = dy * dx2 - dx * dy2;
       if (dz * dz / d2 > delta2 // perpendicular projected distance
-          || (0,math/* abs */.Wn)((dx * dx2 + dy * dy2) / d2 - 0.5) > 0.3 // midpoint close to an end
+          || (0,math/* abs */.tn)((dx * dx2 + dy * dy2) / d2 - 0.5) > 0.3 // midpoint close to an end
           || a0 * a1 + b0 * b1 + c0 * c1 < cosMinDistance) { // angular distance
         resampleLineTo(x0, y0, lambda0, a0, b0, c0, x2, y2, lambda2, a /= m, b /= m, c, depth, stream);
         stream.point(x2, y2);
@@ -83134,7 +79061,7 @@ function resample_resample(project, delta2) {
     }
 
     function linePoint(lambda, phi) {
-      var c = (0,cartesian/* cartesian */.Og)([lambda, phi]), p = project(lambda, phi);
+      var c = (0,cartesian/* cartesian */.jf)([lambda, phi]), p = project(lambda, phi);
       resampleLineTo(x0, y0, lambda0, a0, b0, c0, x0 = p[0], y0 = p[1], lambda0 = lambda, a0 = c[0], b0 = c[1], c0 = c[2], maxDepth, stream);
       stream.point(x0, y0);
     }
@@ -83177,14 +79104,14 @@ function resample_resample(project, delta2) {
 
 
 
-var transformRadians = (0,transform/* transformer */.l)({
+var transformRadians = (0,transform/* transformer */.G)({
   point: function(x, y) {
-    this.stream.point(x * math/* radians */.uR, y * math/* radians */.uR);
+    this.stream.point(x * math/* radians */.F2, y * math/* radians */.F2);
   }
 });
 
 function transformRotate(rotate) {
-  return (0,transform/* transformer */.l)({
+  return (0,transform/* transformer */.G)({
     point: function(x, y) {
       var r = rotate(x, y);
       return this.stream.point(r[0], r[1]);
@@ -83204,8 +79131,8 @@ function scaleTranslate(k, dx, dy, sx, sy) {
 }
 
 function scaleTranslateRotate(k, dx, dy, sx, sy, alpha) {
-  var cosAlpha = (0,math/* cos */.mC)(alpha),
-      sinAlpha = (0,math/* sin */.O$)(alpha),
+  var cosAlpha = (0,math/* cos */.gn)(alpha),
+      sinAlpha = (0,math/* sin */.F8)(alpha),
       a = cosAlpha * k,
       b = sinAlpha * k,
       ai = cosAlpha / k,
@@ -83235,8 +79162,8 @@ function projectionMutator(projectAt) {
       alpha = 0, // post-rotate angle
       sx = 1, // reflectX
       sy = 1, // reflectX
-      theta = null, preclip = antimeridian/* default */.Z, // pre-clip angle
-      x0 = null, y0, x1, y1, postclip = identity/* default */.Z, // post-clip extent
+      theta = null, preclip = antimeridian/* default */.A, // pre-clip angle
+      x0 = null, y0, x1, y1, postclip = identity/* default */.A, // post-clip extent
       delta2 = 0.5, // precision
       projectResample,
       projectTransform,
@@ -83245,12 +79172,12 @@ function projectionMutator(projectAt) {
       cacheStream;
 
   function projection(point) {
-    return projectRotateTransform(point[0] * math/* radians */.uR, point[1] * math/* radians */.uR);
+    return projectRotateTransform(point[0] * math/* radians */.F2, point[1] * math/* radians */.F2);
   }
 
   function invert(point) {
     point = projectRotateTransform.invert(point[0], point[1]);
-    return point && [point[0] * math/* degrees */.RW, point[1] * math/* degrees */.RW];
+    return point && [point[0] * math/* degrees */.uj, point[1] * math/* degrees */.uj];
   }
 
   projection.stream = function(stream) {
@@ -83266,11 +79193,11 @@ function projectionMutator(projectAt) {
   };
 
   projection.clipAngle = function(_) {
-    return arguments.length ? (preclip = +_ ? (0,circle/* default */.Z)(theta = _ * math/* radians */.uR) : (theta = null, antimeridian/* default */.Z), reset()) : theta * math/* degrees */.RW;
+    return arguments.length ? (preclip = +_ ? (0,circle/* default */.A)(theta = _ * math/* radians */.F2) : (theta = null, antimeridian/* default */.A), reset()) : theta * math/* degrees */.uj;
   };
 
   projection.clipExtent = function(_) {
-    return arguments.length ? (postclip = _ == null ? (x0 = y0 = x1 = y1 = null, identity/* default */.Z) : (0,rectangle/* default */.Z)(x0 = +_[0][0], y0 = +_[0][1], x1 = +_[1][0], y1 = +_[1][1]), reset()) : x0 == null ? null : [[x0, y0], [x1, y1]];
+    return arguments.length ? (postclip = _ == null ? (x0 = y0 = x1 = y1 = null, identity/* default */.A) : (0,rectangle/* default */.A)(x0 = +_[0][0], y0 = +_[0][1], x1 = +_[1][0], y1 = +_[1][1]), reset()) : x0 == null ? null : [[x0, y0], [x1, y1]];
   };
 
   projection.scale = function(_) {
@@ -83282,15 +79209,15 @@ function projectionMutator(projectAt) {
   };
 
   projection.center = function(_) {
-    return arguments.length ? (lambda = _[0] % 360 * math/* radians */.uR, phi = _[1] % 360 * math/* radians */.uR, recenter()) : [lambda * math/* degrees */.RW, phi * math/* degrees */.RW];
+    return arguments.length ? (lambda = _[0] % 360 * math/* radians */.F2, phi = _[1] % 360 * math/* radians */.F2, recenter()) : [lambda * math/* degrees */.uj, phi * math/* degrees */.uj];
   };
 
   projection.rotate = function(_) {
-    return arguments.length ? (deltaLambda = _[0] % 360 * math/* radians */.uR, deltaPhi = _[1] % 360 * math/* radians */.uR, deltaGamma = _.length > 2 ? _[2] % 360 * math/* radians */.uR : 0, recenter()) : [deltaLambda * math/* degrees */.RW, deltaPhi * math/* degrees */.RW, deltaGamma * math/* degrees */.RW];
+    return arguments.length ? (deltaLambda = _[0] % 360 * math/* radians */.F2, deltaPhi = _[1] % 360 * math/* radians */.F2, deltaGamma = _.length > 2 ? _[2] % 360 * math/* radians */.F2 : 0, recenter()) : [deltaLambda * math/* degrees */.uj, deltaPhi * math/* degrees */.uj, deltaGamma * math/* degrees */.uj];
   };
 
   projection.angle = function(_) {
-    return arguments.length ? (alpha = _ % 360 * math/* radians */.uR, recenter()) : alpha * math/* degrees */.RW;
+    return arguments.length ? (alpha = _ % 360 * math/* radians */.F2, recenter()) : alpha * math/* degrees */.uj;
   };
 
   projection.reflectX = function(_) {
@@ -83302,31 +79229,31 @@ function projectionMutator(projectAt) {
   };
 
   projection.precision = function(_) {
-    return arguments.length ? (projectResample = resample(projectTransform, delta2 = _ * _), reset()) : (0,math/* sqrt */._b)(delta2);
+    return arguments.length ? (projectResample = resample(projectTransform, delta2 = _ * _), reset()) : (0,math/* sqrt */.RZ)(delta2);
   };
 
   projection.fitExtent = function(extent, object) {
-    return (0,fit/* fitExtent */.qg)(projection, extent, object);
+    return (0,fit/* fitExtent */.sp)(projection, extent, object);
   };
 
   projection.fitSize = function(size, object) {
-    return (0,fit/* fitSize */.mF)(projection, size, object);
+    return (0,fit/* fitSize */.Hv)(projection, size, object);
   };
 
   projection.fitWidth = function(width, object) {
-    return (0,fit/* fitWidth */.V6)(projection, width, object);
+    return (0,fit/* fitWidth */.G0)(projection, width, object);
   };
 
   projection.fitHeight = function(height, object) {
-    return (0,fit/* fitHeight */.rf)(projection, height, object);
+    return (0,fit/* fitHeight */.FL)(projection, height, object);
   };
 
   function recenter() {
     var center = scaleTranslateRotate(k, 0, 0, sx, sy, alpha).apply(null, project(lambda, phi)),
         transform = (alpha ? scaleTranslateRotate : scaleTranslate)(k, x - center[0], y - center[1], sx, sy, alpha);
-    rotate = (0,rotation/* rotateRadians */.I)(deltaLambda, deltaPhi, deltaGamma);
-    projectTransform = (0,compose/* default */.Z)(project, transform);
-    projectRotateTransform = (0,compose/* default */.Z)(rotate, projectTransform);
+    rotate = (0,rotation/* rotateRadians */.y)(deltaLambda, deltaPhi, deltaGamma);
+    projectTransform = (0,compose/* default */.A)(project, transform);
+    projectRotateTransform = (0,compose/* default */.A)(rotate, projectTransform);
     projectResample = resample(projectTransform, delta2);
     return reset();
   }
@@ -83346,16 +79273,16 @@ function projectionMutator(projectAt) {
 
 /***/ }),
 
-/***/ 332:
+/***/ 5400:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "K": function() { return /* binding */ naturalEarth1Raw; },
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   P: function() { return /* binding */ naturalEarth1Raw; }
 /* harmony export */ });
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5152);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4370);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
 
 
 
@@ -83373,7 +79300,7 @@ naturalEarth1Raw.invert = function(x, y) {
     var phi2 = phi * phi, phi4 = phi2 * phi2;
     phi -= delta = (phi * (1.007226 + phi2 * (0.015085 + phi4 * (-0.044475 + 0.028874 * phi2 - 0.005916 * phi4))) - y) /
         (1.007226 + phi2 * (0.015085 * 3 + phi4 * (-0.044475 * 7 + 0.028874 * 9 * phi2 - 0.005916 * 11 * phi4)));
-  } while ((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .Wn)(delta) > _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho && --i > 0);
+  } while ((0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .tn)(delta) > _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni && --i > 0);
   return [
     x / (0.8707 + (phi2 = phi * phi) * (-0.131979 + phi2 * (-0.013791 + phi2 * phi2 * phi2 * (0.003971 - 0.001529 * phi2)))),
     phi
@@ -83381,64 +79308,64 @@ naturalEarth1Raw.invert = function(x, y) {
 };
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return (0,_index_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)(naturalEarth1Raw)
+  return (0,_index_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A)(naturalEarth1Raw)
       .scale(175.295);
 }
 
 
 /***/ }),
 
-/***/ 5794:
+/***/ 5782:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "I": function() { return /* binding */ orthographicRaw; },
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   x: function() { return /* binding */ orthographicRaw; }
 /* harmony export */ });
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
-/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3543);
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5152);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
+/* harmony import */ var _azimuthal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6603);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4370);
 
 
 
 
 function orthographicRaw(x, y) {
-  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(y) * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(x), (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(y)];
+  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(y) * (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(x), (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(y)];
 }
 
-orthographicRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_1__/* .azimuthalInvert */ .O)(_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .ZR);
+orthographicRaw.invert = (0,_azimuthal_js__WEBPACK_IMPORTED_MODULE_1__/* .azimuthalInvert */ .I)(_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .qR);
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)(orthographicRaw)
+  return (0,_index_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(orthographicRaw)
       .scale(249.5)
-      .clipAngle(90 + _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ho);
+      .clipAngle(90 + _math_js__WEBPACK_IMPORTED_MODULE_0__/* .epsilon */ .Ni);
 }
 
 
 /***/ }),
 
-/***/ 8442:
+/***/ 5378:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "I": function() { return /* binding */ rotateRadians; },
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   y: function() { return /* binding */ rotateRadians; }
 /* harmony export */ });
-/* harmony import */ var _compose_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3981);
-/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6354);
+/* harmony import */ var _compose_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6434);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4650);
 
 
 
 function rotationIdentity(lambda, phi) {
-  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .Wn)(lambda) > _math_js__WEBPACK_IMPORTED_MODULE_0__.pi ? lambda + Math.round(-lambda / _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .BZ) * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .BZ : lambda, phi];
+  return [(0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .abs */ .tn)(lambda) > _math_js__WEBPACK_IMPORTED_MODULE_0__.pi ? lambda + Math.round(-lambda / _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .FA) * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .FA : lambda, phi];
 }
 
 rotationIdentity.invert = rotationIdentity;
 
 function rotateRadians(deltaLambda, deltaPhi, deltaGamma) {
-  return (deltaLambda %= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .BZ) ? (deltaPhi || deltaGamma ? (0,_compose_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)(rotationLambda(deltaLambda), rotationPhiGamma(deltaPhi, deltaGamma))
+  return (deltaLambda %= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .FA) ? (deltaPhi || deltaGamma ? (0,_compose_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A)(rotationLambda(deltaLambda), rotationPhiGamma(deltaPhi, deltaGamma))
     : rotationLambda(deltaLambda))
     : (deltaPhi || deltaGamma ? rotationPhiGamma(deltaPhi, deltaGamma)
     : rotationIdentity);
@@ -83446,7 +79373,7 @@ function rotateRadians(deltaLambda, deltaPhi, deltaGamma) {
 
 function forwardRotationLambda(deltaLambda) {
   return function(lambda, phi) {
-    return lambda += deltaLambda, [lambda > _math_js__WEBPACK_IMPORTED_MODULE_0__.pi ? lambda - _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .BZ : lambda < -_math_js__WEBPACK_IMPORTED_MODULE_0__.pi ? lambda + _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .BZ : lambda, phi];
+    return lambda += deltaLambda, [lambda > _math_js__WEBPACK_IMPORTED_MODULE_0__.pi ? lambda - _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .FA : lambda < -_math_js__WEBPACK_IMPORTED_MODULE_0__.pi ? lambda + _math_js__WEBPACK_IMPORTED_MODULE_0__/* .tau */ .FA : lambda, phi];
   };
 }
 
@@ -83457,32 +79384,32 @@ function rotationLambda(deltaLambda) {
 }
 
 function rotationPhiGamma(deltaPhi, deltaGamma) {
-  var cosDeltaPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(deltaPhi),
-      sinDeltaPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(deltaPhi),
-      cosDeltaGamma = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(deltaGamma),
-      sinDeltaGamma = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(deltaGamma);
+  var cosDeltaPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(deltaPhi),
+      sinDeltaPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(deltaPhi),
+      cosDeltaGamma = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(deltaGamma),
+      sinDeltaGamma = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(deltaGamma);
 
   function rotation(lambda, phi) {
-    var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(phi),
-        x = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(lambda) * cosPhi,
-        y = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(lambda) * cosPhi,
-        z = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(phi),
+    var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(phi),
+        x = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(lambda) * cosPhi,
+        y = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(lambda) * cosPhi,
+        z = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(phi),
         k = z * cosDeltaPhi + x * sinDeltaPhi;
     return [
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .fv)(y * cosDeltaGamma - k * sinDeltaGamma, x * cosDeltaPhi - z * sinDeltaPhi),
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .ZR)(k * cosDeltaGamma + y * sinDeltaGamma)
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .FP)(y * cosDeltaGamma - k * sinDeltaGamma, x * cosDeltaPhi - z * sinDeltaPhi),
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .qR)(k * cosDeltaGamma + y * sinDeltaGamma)
     ];
   }
 
   rotation.invert = function(lambda, phi) {
-    var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(phi),
-        x = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .mC)(lambda) * cosPhi,
-        y = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(lambda) * cosPhi,
-        z = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .O$)(phi),
+    var cosPhi = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(phi),
+        x = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .cos */ .gn)(lambda) * cosPhi,
+        y = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(lambda) * cosPhi,
+        z = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .sin */ .F8)(phi),
         k = z * cosDeltaGamma - y * sinDeltaGamma;
     return [
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .fv)(y * cosDeltaGamma + z * sinDeltaGamma, x * cosDeltaPhi + k * sinDeltaPhi),
-      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .ZR)(k * cosDeltaPhi - x * sinDeltaPhi)
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .atan2 */ .FP)(y * cosDeltaGamma + z * sinDeltaGamma, x * cosDeltaPhi + k * sinDeltaPhi),
+      (0,_math_js__WEBPACK_IMPORTED_MODULE_0__/* .asin */ .qR)(k * cosDeltaPhi - x * sinDeltaPhi)
     ];
   };
 
@@ -83490,16 +79417,16 @@ function rotationPhiGamma(deltaPhi, deltaGamma) {
 }
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(rotate) {
-  rotate = rotateRadians(rotate[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR, rotate[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR, rotate.length > 2 ? rotate[2] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR : 0);
+  rotate = rotateRadians(rotate[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2, rotate[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2, rotate.length > 2 ? rotate[2] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2 : 0);
 
   function forward(coordinates) {
-    coordinates = rotate(coordinates[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR, coordinates[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR);
-    return coordinates[0] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW, coordinates[1] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW, coordinates;
+    coordinates = rotate(coordinates[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2, coordinates[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2);
+    return coordinates[0] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj, coordinates[1] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj, coordinates;
   }
 
   forward.invert = function(coordinates) {
-    coordinates = rotate.invert(coordinates[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR, coordinates[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .uR);
-    return coordinates[0] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW, coordinates[1] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .RW, coordinates;
+    coordinates = rotate.invert(coordinates[0] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2, coordinates[1] * _math_js__WEBPACK_IMPORTED_MODULE_0__/* .radians */ .F2);
+    return coordinates[0] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj, coordinates[1] *= _math_js__WEBPACK_IMPORTED_MODULE_0__/* .degrees */ .uj, coordinates;
   };
 
   return forward;
@@ -83508,12 +79435,12 @@ function rotationPhiGamma(deltaPhi, deltaGamma) {
 
 /***/ }),
 
-/***/ 4471:
+/***/ 6804:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
 function streamGeometry(geometry, stream) {
   if (geometry && streamGeometryType.hasOwnProperty(geometry.type)) {
@@ -83588,13 +79515,13 @@ function streamPolygon(coordinates, stream) {
 
 /***/ }),
 
-/***/ 2200:
+/***/ 7722:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
-/* harmony export */   "l": function() { return /* binding */ transformer; }
+/* harmony export */   A: function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; },
+/* harmony export */   G: function() { return /* binding */ transformer; }
 /* harmony export */ });
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(methods) {
   return {
@@ -83626,32 +79553,32 @@ TransformStream.prototype = {
 
 /***/ }),
 
-/***/ 2505:
+/***/ 8836:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "i$": function() { return /* reexport */ timeFormat; },
-  "Dq": function() { return /* reexport */ formatLocale; },
-  "g0": function() { return /* reexport */ utcFormat; }
+  DC: function() { return /* reexport */ timeFormat; },
+  de: function() { return /* reexport */ formatLocale; },
+  aL: function() { return /* reexport */ utcFormat; }
 });
 
 // UNUSED EXPORTS: isoFormat, isoParse, timeFormatDefaultLocale, timeParse, utcParse
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcWeek.js
-var utcWeek = __webpack_require__(5882);
+var utcWeek = __webpack_require__(4420);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcDay.js
-var utcDay = __webpack_require__(9570);
+var utcDay = __webpack_require__(4840);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/week.js
-var src_week = __webpack_require__(99);
+var src_week = __webpack_require__(4740);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/day.js
-var src_day = __webpack_require__(3625);
+var src_day = __webpack_require__(9576);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/year.js
-var year = __webpack_require__(6688);
+var year = __webpack_require__(9325);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcYear.js
-var utcYear = __webpack_require__(7679);
+var utcYear = __webpack_require__(6077);
 ;// CONCATENATED MODULE: ./node_modules/d3-time-format/src/locale.js
 
 
@@ -83707,6 +79634,8 @@ function formatLocale(locale) {
     "d": formatDayOfMonth,
     "e": formatDayOfMonth,
     "f": formatMicroseconds,
+    "g": formatYearISO,
+    "G": formatFullYearISO,
     "H": formatHour24,
     "I": formatHour12,
     "j": formatDayOfYear,
@@ -83740,6 +79669,8 @@ function formatLocale(locale) {
     "d": formatUTCDayOfMonth,
     "e": formatUTCDayOfMonth,
     "f": formatUTCMicroseconds,
+    "g": formatUTCYearISO,
+    "G": formatUTCFullYearISO,
     "H": formatUTCHour24,
     "I": formatUTCHour12,
     "j": formatUTCDayOfYear,
@@ -83773,6 +79704,8 @@ function formatLocale(locale) {
     "d": parseDayOfMonth,
     "e": parseDayOfMonth,
     "f": parseMicroseconds,
+    "g": parseYear,
+    "G": parseFullYear,
     "H": parseHour24,
     "I": parseHour24,
     "j": parseDayOfYear,
@@ -83859,15 +79792,15 @@ function formatLocale(locale) {
         if (!("w" in d)) d.w = 1;
         if ("Z" in d) {
           week = utcDate(newDate(d.y, 0, 1)), day = week.getUTCDay();
-          week = day > 4 || day === 0 ? utcWeek/* utcMonday.ceil */.l6.ceil(week) : (0,utcWeek/* utcMonday */.l6)(week);
-          week = utcDay/* default.offset */.Z.offset(week, (d.V - 1) * 7);
+          week = day > 4 || day === 0 ? utcWeek/* utcMonday */.rt.ceil(week) : (0,utcWeek/* utcMonday */.rt)(week);
+          week = utcDay/* default */.A.offset(week, (d.V - 1) * 7);
           d.y = week.getUTCFullYear();
           d.m = week.getUTCMonth();
           d.d = week.getUTCDate() + (d.w + 6) % 7;
         } else {
           week = localDate(newDate(d.y, 0, 1)), day = week.getDay();
-          week = day > 4 || day === 0 ? src_week/* monday.ceil */.wA.ceil(week) : (0,src_week/* monday */.wA)(week);
-          week = src_day/* default.offset */.Z.offset(week, (d.V - 1) * 7);
+          week = day > 4 || day === 0 ? src_week/* monday */.By.ceil(week) : (0,src_week/* monday */.By)(week);
+          week = src_day/* default */.A.offset(week, (d.V - 1) * 7);
           d.y = week.getFullYear();
           d.m = week.getMonth();
           d.d = week.getDate() + (d.w + 6) % 7;
@@ -84162,7 +80095,7 @@ function formatHour12(d, p) {
 }
 
 function formatDayOfYear(d, p) {
-  return pad(1 + src_day/* default.count */.Z.count((0,year/* default */.Z)(d), d), p, 3);
+  return pad(1 + src_day/* default */.A.count((0,year/* default */.A)(d), d), p, 3);
 }
 
 function formatMilliseconds(d, p) {
@@ -84191,13 +80124,17 @@ function formatWeekdayNumberMonday(d) {
 }
 
 function formatWeekNumberSunday(d, p) {
-  return pad(src_week/* sunday.count */.OM.count((0,year/* default */.Z)(d) - 1, d), p, 2);
+  return pad(src_week/* sunday */.fz.count((0,year/* default */.A)(d) - 1, d), p, 2);
+}
+
+function dISO(d) {
+  var day = d.getDay();
+  return (day >= 4 || day === 0) ? (0,src_week/* thursday */.dt)(d) : src_week/* thursday */.dt.ceil(d);
 }
 
 function formatWeekNumberISO(d, p) {
-  var day = d.getDay();
-  d = (day >= 4 || day === 0) ? (0,src_week/* thursday */.bL)(d) : src_week/* thursday.ceil */.bL.ceil(d);
-  return pad(src_week/* thursday.count */.bL.count((0,year/* default */.Z)(d), d) + ((0,year/* default */.Z)(d).getDay() === 4), p, 2);
+  d = dISO(d);
+  return pad(src_week/* thursday */.dt.count((0,year/* default */.A)(d), d) + ((0,year/* default */.A)(d).getDay() === 4), p, 2);
 }
 
 function formatWeekdayNumberSunday(d) {
@@ -84205,14 +80142,25 @@ function formatWeekdayNumberSunday(d) {
 }
 
 function formatWeekNumberMonday(d, p) {
-  return pad(src_week/* monday.count */.wA.count((0,year/* default */.Z)(d) - 1, d), p, 2);
+  return pad(src_week/* monday */.By.count((0,year/* default */.A)(d) - 1, d), p, 2);
 }
 
 function formatYear(d, p) {
   return pad(d.getFullYear() % 100, p, 2);
 }
 
+function formatYearISO(d, p) {
+  d = dISO(d);
+  return pad(d.getFullYear() % 100, p, 2);
+}
+
 function formatFullYear(d, p) {
+  return pad(d.getFullYear() % 10000, p, 4);
+}
+
+function formatFullYearISO(d, p) {
+  var day = d.getDay();
+  d = (day >= 4 || day === 0) ? (0,src_week/* thursday */.dt)(d) : src_week/* thursday */.dt.ceil(d);
   return pad(d.getFullYear() % 10000, p, 4);
 }
 
@@ -84236,7 +80184,7 @@ function formatUTCHour12(d, p) {
 }
 
 function formatUTCDayOfYear(d, p) {
-  return pad(1 + utcDay/* default.count */.Z.count((0,utcYear/* default */.Z)(d), d), p, 3);
+  return pad(1 + utcDay/* default */.A.count((0,utcYear/* default */.A)(d), d), p, 3);
 }
 
 function formatUTCMilliseconds(d, p) {
@@ -84265,13 +80213,17 @@ function formatUTCWeekdayNumberMonday(d) {
 }
 
 function formatUTCWeekNumberSunday(d, p) {
-  return pad(utcWeek/* utcSunday.count */.Ox.count((0,utcYear/* default */.Z)(d) - 1, d), p, 2);
+  return pad(utcWeek/* utcSunday */.Hl.count((0,utcYear/* default */.A)(d) - 1, d), p, 2);
+}
+
+function UTCdISO(d) {
+  var day = d.getUTCDay();
+  return (day >= 4 || day === 0) ? (0,utcWeek/* utcThursday */.pT)(d) : utcWeek/* utcThursday */.pT.ceil(d);
 }
 
 function formatUTCWeekNumberISO(d, p) {
-  var day = d.getUTCDay();
-  d = (day >= 4 || day === 0) ? (0,utcWeek/* utcThursday */.hB)(d) : utcWeek/* utcThursday.ceil */.hB.ceil(d);
-  return pad(utcWeek/* utcThursday.count */.hB.count((0,utcYear/* default */.Z)(d), d) + ((0,utcYear/* default */.Z)(d).getUTCDay() === 4), p, 2);
+  d = UTCdISO(d);
+  return pad(utcWeek/* utcThursday */.pT.count((0,utcYear/* default */.A)(d), d) + ((0,utcYear/* default */.A)(d).getUTCDay() === 4), p, 2);
 }
 
 function formatUTCWeekdayNumberSunday(d) {
@@ -84279,14 +80231,25 @@ function formatUTCWeekdayNumberSunday(d) {
 }
 
 function formatUTCWeekNumberMonday(d, p) {
-  return pad(utcWeek/* utcMonday.count */.l6.count((0,utcYear/* default */.Z)(d) - 1, d), p, 2);
+  return pad(utcWeek/* utcMonday */.rt.count((0,utcYear/* default */.A)(d) - 1, d), p, 2);
 }
 
 function formatUTCYear(d, p) {
   return pad(d.getUTCFullYear() % 100, p, 2);
 }
 
+function formatUTCYearISO(d, p) {
+  d = UTCdISO(d);
+  return pad(d.getUTCFullYear() % 100, p, 2);
+}
+
 function formatUTCFullYear(d, p) {
+  return pad(d.getUTCFullYear() % 10000, p, 4);
+}
+
+function formatUTCFullYearISO(d, p) {
+  var day = d.getUTCDay();
+  d = (day >= 4 || day === 0) ? (0,utcWeek/* utcThursday */.pT)(d) : utcWeek/* utcThursday */.pT.ceil(d);
   return pad(d.getUTCFullYear() % 10000, p, 4);
 }
 
@@ -84344,44 +80307,44 @@ function defaultLocale(definition) {
 
 /***/ }),
 
-/***/ 3625:
+/***/ 9576:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": function() { return /* binding */ days; }
+/* harmony export */   _: function() { return /* binding */ days; }
 /* harmony export */ });
-/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7289);
-/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7268);
+/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9257);
+/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6096);
 
 
 
-var day = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+var day = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
   date.setHours(0, 0, 0, 0);
 }, function(date, step) {
   date.setDate(date.getDate() + step);
 }, function(start, end) {
-  return (end - start - (end.getTimezoneOffset() - start.getTimezoneOffset()) * _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationMinute */ .yB) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationDay */ .UD;
+  return (end - start - (end.getTimezoneOffset() - start.getTimezoneOffset()) * _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationMinute */ .rR) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationDay */ .Nm;
 }, function(date) {
   return date.getDate() - 1;
 });
 
-/* harmony default export */ __webpack_exports__["Z"] = (day);
+/* harmony default export */ __webpack_exports__.A = (day);
 var days = day.range;
 
 
 /***/ }),
 
-/***/ 7268:
+/***/ 6096:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UD": function() { return /* binding */ durationDay; },
-/* harmony export */   "Y2": function() { return /* binding */ durationHour; },
-/* harmony export */   "Ym": function() { return /* binding */ durationSecond; },
-/* harmony export */   "iM": function() { return /* binding */ durationWeek; },
-/* harmony export */   "yB": function() { return /* binding */ durationMinute; }
+/* harmony export */   Fq: function() { return /* binding */ durationWeek; },
+/* harmony export */   JJ: function() { return /* binding */ durationHour; },
+/* harmony export */   Nm: function() { return /* binding */ durationDay; },
+/* harmony export */   Tt: function() { return /* binding */ durationSecond; },
+/* harmony export */   rR: function() { return /* binding */ durationMinute; }
 /* harmony export */ });
 var durationSecond = 1e3;
 var durationMinute = 6e4;
@@ -84392,7 +80355,7 @@ var durationWeek = 6048e5;
 
 /***/ }),
 
-/***/ 5007:
+/***/ 6062:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84401,75 +80364,75 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "timeDay": function() { return /* reexport */ day/* default */.Z; },
-  "timeDays": function() { return /* reexport */ day/* days */.a; },
-  "timeFriday": function() { return /* reexport */ week/* friday */.mC; },
-  "timeFridays": function() { return /* reexport */ week/* fridays */.b$; },
-  "timeHour": function() { return /* reexport */ src_hour; },
-  "timeHours": function() { return /* reexport */ hours; },
-  "timeInterval": function() { return /* reexport */ interval/* default */.Z; },
-  "timeMillisecond": function() { return /* reexport */ src_millisecond; },
-  "timeMilliseconds": function() { return /* reexport */ milliseconds; },
-  "timeMinute": function() { return /* reexport */ src_minute; },
-  "timeMinutes": function() { return /* reexport */ minutes; },
-  "timeMonday": function() { return /* reexport */ week/* monday */.wA; },
-  "timeMondays": function() { return /* reexport */ week/* mondays */.bJ; },
-  "timeMonth": function() { return /* reexport */ src_month; },
-  "timeMonths": function() { return /* reexport */ months; },
-  "timeSaturday": function() { return /* reexport */ week/* saturday */.EY; },
-  "timeSaturdays": function() { return /* reexport */ week/* saturdays */.Ff; },
-  "timeSecond": function() { return /* reexport */ src_second; },
-  "timeSeconds": function() { return /* reexport */ seconds; },
-  "timeSunday": function() { return /* reexport */ week/* sunday */.OM; },
-  "timeSundays": function() { return /* reexport */ week/* sundays */.vm; },
-  "timeThursday": function() { return /* reexport */ week/* thursday */.bL; },
-  "timeThursdays": function() { return /* reexport */ week/* thursdays */.$t; },
-  "timeTuesday": function() { return /* reexport */ week/* tuesday */.sy; },
-  "timeTuesdays": function() { return /* reexport */ week/* tuesdays */.aU; },
-  "timeWednesday": function() { return /* reexport */ week/* wednesday */.zg; },
-  "timeWednesdays": function() { return /* reexport */ week/* wednesdays */.Ld; },
-  "timeWeek": function() { return /* reexport */ week/* sunday */.OM; },
-  "timeWeeks": function() { return /* reexport */ week/* sundays */.vm; },
-  "timeYear": function() { return /* reexport */ year/* default */.Z; },
-  "timeYears": function() { return /* reexport */ year/* years */.g; },
-  "utcDay": function() { return /* reexport */ utcDay/* default */.Z; },
-  "utcDays": function() { return /* reexport */ utcDay/* utcDays */.y; },
-  "utcFriday": function() { return /* reexport */ utcWeek/* utcFriday */.QQ; },
-  "utcFridays": function() { return /* reexport */ utcWeek/* utcFridays */.fz; },
-  "utcHour": function() { return /* reexport */ src_utcHour; },
-  "utcHours": function() { return /* reexport */ utcHours; },
-  "utcMillisecond": function() { return /* reexport */ src_millisecond; },
-  "utcMilliseconds": function() { return /* reexport */ milliseconds; },
-  "utcMinute": function() { return /* reexport */ src_utcMinute; },
-  "utcMinutes": function() { return /* reexport */ utcMinutes; },
-  "utcMonday": function() { return /* reexport */ utcWeek/* utcMonday */.l6; },
-  "utcMondays": function() { return /* reexport */ utcWeek/* utcMondays */.$3; },
-  "utcMonth": function() { return /* reexport */ src_utcMonth; },
-  "utcMonths": function() { return /* reexport */ utcMonths; },
-  "utcSaturday": function() { return /* reexport */ utcWeek/* utcSaturday */.g4; },
-  "utcSaturdays": function() { return /* reexport */ utcWeek/* utcSaturdays */.Q_; },
-  "utcSecond": function() { return /* reexport */ src_second; },
-  "utcSeconds": function() { return /* reexport */ seconds; },
-  "utcSunday": function() { return /* reexport */ utcWeek/* utcSunday */.Ox; },
-  "utcSundays": function() { return /* reexport */ utcWeek/* utcSundays */.SU; },
-  "utcThursday": function() { return /* reexport */ utcWeek/* utcThursday */.hB; },
-  "utcThursdays": function() { return /* reexport */ utcWeek/* utcThursdays */.xj; },
-  "utcTuesday": function() { return /* reexport */ utcWeek/* utcTuesday */.J1; },
-  "utcTuesdays": function() { return /* reexport */ utcWeek/* utcTuesdays */.DK; },
-  "utcWednesday": function() { return /* reexport */ utcWeek/* utcWednesday */.b3; },
-  "utcWednesdays": function() { return /* reexport */ utcWeek/* utcWednesdays */.uy; },
-  "utcWeek": function() { return /* reexport */ utcWeek/* utcSunday */.Ox; },
-  "utcWeeks": function() { return /* reexport */ utcWeek/* utcSundays */.SU; },
-  "utcYear": function() { return /* reexport */ utcYear/* default */.Z; },
-  "utcYears": function() { return /* reexport */ utcYear/* utcYears */.D; }
+  timeDay: function() { return /* reexport */ day/* default */.A; },
+  timeDays: function() { return /* reexport */ day/* days */._; },
+  timeFriday: function() { return /* reexport */ week/* friday */.Sh; },
+  timeFridays: function() { return /* reexport */ week/* fridays */.tz; },
+  timeHour: function() { return /* reexport */ src_hour; },
+  timeHours: function() { return /* reexport */ hours; },
+  timeInterval: function() { return /* reexport */ interval/* default */.A; },
+  timeMillisecond: function() { return /* reexport */ src_millisecond; },
+  timeMilliseconds: function() { return /* reexport */ milliseconds; },
+  timeMinute: function() { return /* reexport */ src_minute; },
+  timeMinutes: function() { return /* reexport */ minutes; },
+  timeMonday: function() { return /* reexport */ week/* monday */.By; },
+  timeMondays: function() { return /* reexport */ week/* mondays */.KP; },
+  timeMonth: function() { return /* reexport */ src_month; },
+  timeMonths: function() { return /* reexport */ months; },
+  timeSaturday: function() { return /* reexport */ week/* saturday */.kS; },
+  timeSaturdays: function() { return /* reexport */ week/* saturdays */.t$; },
+  timeSecond: function() { return /* reexport */ src_second; },
+  timeSeconds: function() { return /* reexport */ seconds; },
+  timeSunday: function() { return /* reexport */ week/* sunday */.fz; },
+  timeSundays: function() { return /* reexport */ week/* sundays */.se; },
+  timeThursday: function() { return /* reexport */ week/* thursday */.dt; },
+  timeThursdays: function() { return /* reexport */ week/* thursdays */.Q$; },
+  timeTuesday: function() { return /* reexport */ week/* tuesday */.eQ; },
+  timeTuesdays: function() { return /* reexport */ week/* tuesdays */.yW; },
+  timeWednesday: function() { return /* reexport */ week/* wednesday */.l3; },
+  timeWednesdays: function() { return /* reexport */ week/* wednesdays */.gf; },
+  timeWeek: function() { return /* reexport */ week/* sunday */.fz; },
+  timeWeeks: function() { return /* reexport */ week/* sundays */.se; },
+  timeYear: function() { return /* reexport */ year/* default */.A; },
+  timeYears: function() { return /* reexport */ year/* years */.V; },
+  utcDay: function() { return /* reexport */ utcDay/* default */.A; },
+  utcDays: function() { return /* reexport */ utcDay/* utcDays */.o; },
+  utcFriday: function() { return /* reexport */ utcWeek/* utcFriday */.a1; },
+  utcFridays: function() { return /* reexport */ utcWeek/* utcFridays */.Zn; },
+  utcHour: function() { return /* reexport */ src_utcHour; },
+  utcHours: function() { return /* reexport */ utcHours; },
+  utcMillisecond: function() { return /* reexport */ src_millisecond; },
+  utcMilliseconds: function() { return /* reexport */ milliseconds; },
+  utcMinute: function() { return /* reexport */ src_utcMinute; },
+  utcMinutes: function() { return /* reexport */ utcMinutes; },
+  utcMonday: function() { return /* reexport */ utcWeek/* utcMonday */.rt; },
+  utcMondays: function() { return /* reexport */ utcWeek/* utcMondays */.ON; },
+  utcMonth: function() { return /* reexport */ src_utcMonth; },
+  utcMonths: function() { return /* reexport */ utcMonths; },
+  utcSaturday: function() { return /* reexport */ utcWeek/* utcSaturday */.c8; },
+  utcSaturdays: function() { return /* reexport */ utcWeek/* utcSaturdays */.Xo; },
+  utcSecond: function() { return /* reexport */ src_second; },
+  utcSeconds: function() { return /* reexport */ seconds; },
+  utcSunday: function() { return /* reexport */ utcWeek/* utcSunday */.Hl; },
+  utcSundays: function() { return /* reexport */ utcWeek/* utcSundays */.aZ; },
+  utcThursday: function() { return /* reexport */ utcWeek/* utcThursday */.pT; },
+  utcThursdays: function() { return /* reexport */ utcWeek/* utcThursdays */.wr; },
+  utcTuesday: function() { return /* reexport */ utcWeek/* utcTuesday */.sr; },
+  utcTuesdays: function() { return /* reexport */ utcWeek/* utcTuesdays */.jN; },
+  utcWednesday: function() { return /* reexport */ utcWeek/* utcWednesday */.z2; },
+  utcWednesdays: function() { return /* reexport */ utcWeek/* utcWednesdays */.G6; },
+  utcWeek: function() { return /* reexport */ utcWeek/* utcSunday */.Hl; },
+  utcWeeks: function() { return /* reexport */ utcWeek/* utcSundays */.aZ; },
+  utcYear: function() { return /* reexport */ utcYear/* default */.A; },
+  utcYears: function() { return /* reexport */ utcYear/* utcYears */.j; }
 });
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/interval.js
-var interval = __webpack_require__(7289);
+var interval = __webpack_require__(9257);
 ;// CONCATENATED MODULE: ./node_modules/d3-time/src/millisecond.js
 
 
-var millisecond = (0,interval/* default */.Z)(function() {
+var millisecond = (0,interval/* default */.A)(function() {
   // noop
 }, function(date, step) {
   date.setTime(+date + step);
@@ -84482,7 +80445,7 @@ millisecond.every = function(k) {
   k = Math.floor(k);
   if (!isFinite(k) || !(k > 0)) return null;
   if (!(k > 1)) return millisecond;
-  return (0,interval/* default */.Z)(function(date) {
+  return (0,interval/* default */.A)(function(date) {
     date.setTime(Math.floor(date / k) * k);
   }, function(date, step) {
     date.setTime(+date + step * k);
@@ -84495,17 +80458,17 @@ millisecond.every = function(k) {
 var milliseconds = millisecond.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/duration.js
-var duration = __webpack_require__(7268);
+var duration = __webpack_require__(6096);
 ;// CONCATENATED MODULE: ./node_modules/d3-time/src/second.js
 
 
 
-var second = (0,interval/* default */.Z)(function(date) {
+var second = (0,interval/* default */.A)(function(date) {
   date.setTime(date - date.getMilliseconds());
 }, function(date, step) {
-  date.setTime(+date + step * duration/* durationSecond */.Ym);
+  date.setTime(+date + step * duration/* durationSecond */.Tt);
 }, function(start, end) {
-  return (end - start) / duration/* durationSecond */.Ym;
+  return (end - start) / duration/* durationSecond */.Tt;
 }, function(date) {
   return date.getUTCSeconds();
 });
@@ -84517,12 +80480,12 @@ var seconds = second.range;
 
 
 
-var minute = (0,interval/* default */.Z)(function(date) {
-  date.setTime(date - date.getMilliseconds() - date.getSeconds() * duration/* durationSecond */.Ym);
+var minute = (0,interval/* default */.A)(function(date) {
+  date.setTime(date - date.getMilliseconds() - date.getSeconds() * duration/* durationSecond */.Tt);
 }, function(date, step) {
-  date.setTime(+date + step * duration/* durationMinute */.yB);
+  date.setTime(+date + step * duration/* durationMinute */.rR);
 }, function(start, end) {
-  return (end - start) / duration/* durationMinute */.yB;
+  return (end - start) / duration/* durationMinute */.rR;
 }, function(date) {
   return date.getMinutes();
 });
@@ -84534,12 +80497,12 @@ var minutes = minute.range;
 
 
 
-var hour = (0,interval/* default */.Z)(function(date) {
-  date.setTime(date - date.getMilliseconds() - date.getSeconds() * duration/* durationSecond */.Ym - date.getMinutes() * duration/* durationMinute */.yB);
+var hour = (0,interval/* default */.A)(function(date) {
+  date.setTime(date - date.getMilliseconds() - date.getSeconds() * duration/* durationSecond */.Tt - date.getMinutes() * duration/* durationMinute */.rR);
 }, function(date, step) {
-  date.setTime(+date + step * duration/* durationHour */.Y2);
+  date.setTime(+date + step * duration/* durationHour */.JJ);
 }, function(start, end) {
-  return (end - start) / duration/* durationHour */.Y2;
+  return (end - start) / duration/* durationHour */.JJ;
 }, function(date) {
   return date.getHours();
 });
@@ -84548,13 +80511,13 @@ var hour = (0,interval/* default */.Z)(function(date) {
 var hours = hour.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/day.js
-var day = __webpack_require__(3625);
+var day = __webpack_require__(9576);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/week.js
-var week = __webpack_require__(99);
+var week = __webpack_require__(4740);
 ;// CONCATENATED MODULE: ./node_modules/d3-time/src/month.js
 
 
-var month = (0,interval/* default */.Z)(function(date) {
+var month = (0,interval/* default */.A)(function(date) {
   date.setDate(1);
   date.setHours(0, 0, 0, 0);
 }, function(date, step) {
@@ -84569,17 +80532,17 @@ var month = (0,interval/* default */.Z)(function(date) {
 var months = month.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/year.js
-var year = __webpack_require__(6688);
+var year = __webpack_require__(9325);
 ;// CONCATENATED MODULE: ./node_modules/d3-time/src/utcMinute.js
 
 
 
-var utcMinute = (0,interval/* default */.Z)(function(date) {
+var utcMinute = (0,interval/* default */.A)(function(date) {
   date.setUTCSeconds(0, 0);
 }, function(date, step) {
-  date.setTime(+date + step * duration/* durationMinute */.yB);
+  date.setTime(+date + step * duration/* durationMinute */.rR);
 }, function(start, end) {
-  return (end - start) / duration/* durationMinute */.yB;
+  return (end - start) / duration/* durationMinute */.rR;
 }, function(date) {
   return date.getUTCMinutes();
 });
@@ -84591,12 +80554,12 @@ var utcMinutes = utcMinute.range;
 
 
 
-var utcHour = (0,interval/* default */.Z)(function(date) {
+var utcHour = (0,interval/* default */.A)(function(date) {
   date.setUTCMinutes(0, 0, 0);
 }, function(date, step) {
-  date.setTime(+date + step * duration/* durationHour */.Y2);
+  date.setTime(+date + step * duration/* durationHour */.JJ);
 }, function(start, end) {
-  return (end - start) / duration/* durationHour */.Y2;
+  return (end - start) / duration/* durationHour */.JJ;
 }, function(date) {
   return date.getUTCHours();
 });
@@ -84605,13 +80568,13 @@ var utcHour = (0,interval/* default */.Z)(function(date) {
 var utcHours = utcHour.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcDay.js
-var utcDay = __webpack_require__(9570);
+var utcDay = __webpack_require__(4840);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcWeek.js
-var utcWeek = __webpack_require__(5882);
+var utcWeek = __webpack_require__(4420);
 ;// CONCATENATED MODULE: ./node_modules/d3-time/src/utcMonth.js
 
 
-var utcMonth = (0,interval/* default */.Z)(function(date) {
+var utcMonth = (0,interval/* default */.A)(function(date) {
   date.setUTCDate(1);
   date.setUTCHours(0, 0, 0, 0);
 }, function(date, step) {
@@ -84626,7 +80589,7 @@ var utcMonth = (0,interval/* default */.Z)(function(date) {
 var utcMonths = utcMonth.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcYear.js
-var utcYear = __webpack_require__(7679);
+var utcYear = __webpack_require__(6077);
 ;// CONCATENATED MODULE: ./node_modules/d3-time/src/index.js
 
 
@@ -84661,12 +80624,12 @@ var utcYear = __webpack_require__(7679);
 
 /***/ }),
 
-/***/ 7289:
+/***/ 9257:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* binding */ newInterval; }
+/* harmony export */   A: function() { return /* binding */ newInterval; }
 /* harmony export */ });
 var t0 = new Date,
     t1 = new Date;
@@ -84742,67 +80705,67 @@ function newInterval(floori, offseti, count, field) {
 
 /***/ }),
 
-/***/ 9570:
+/***/ 4840:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "y": function() { return /* binding */ utcDays; }
+/* harmony export */   o: function() { return /* binding */ utcDays; }
 /* harmony export */ });
-/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7289);
-/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7268);
+/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9257);
+/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6096);
 
 
 
-var utcDay = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+var utcDay = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
   date.setUTCHours(0, 0, 0, 0);
 }, function(date, step) {
   date.setUTCDate(date.getUTCDate() + step);
 }, function(start, end) {
-  return (end - start) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationDay */ .UD;
+  return (end - start) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationDay */ .Nm;
 }, function(date) {
   return date.getUTCDate() - 1;
 });
 
-/* harmony default export */ __webpack_exports__["Z"] = (utcDay);
+/* harmony default export */ __webpack_exports__.A = (utcDay);
 var utcDays = utcDay.range;
 
 
 /***/ }),
 
-/***/ 5882:
+/***/ 4420:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "$3": function() { return /* binding */ utcMondays; },
-/* harmony export */   "DK": function() { return /* binding */ utcTuesdays; },
-/* harmony export */   "J1": function() { return /* binding */ utcTuesday; },
-/* harmony export */   "Ox": function() { return /* binding */ utcSunday; },
-/* harmony export */   "QQ": function() { return /* binding */ utcFriday; },
-/* harmony export */   "Q_": function() { return /* binding */ utcSaturdays; },
-/* harmony export */   "SU": function() { return /* binding */ utcSundays; },
-/* harmony export */   "b3": function() { return /* binding */ utcWednesday; },
-/* harmony export */   "fz": function() { return /* binding */ utcFridays; },
-/* harmony export */   "g4": function() { return /* binding */ utcSaturday; },
-/* harmony export */   "hB": function() { return /* binding */ utcThursday; },
-/* harmony export */   "l6": function() { return /* binding */ utcMonday; },
-/* harmony export */   "uy": function() { return /* binding */ utcWednesdays; },
-/* harmony export */   "xj": function() { return /* binding */ utcThursdays; }
+/* harmony export */   G6: function() { return /* binding */ utcWednesdays; },
+/* harmony export */   Hl: function() { return /* binding */ utcSunday; },
+/* harmony export */   ON: function() { return /* binding */ utcMondays; },
+/* harmony export */   Xo: function() { return /* binding */ utcSaturdays; },
+/* harmony export */   Zn: function() { return /* binding */ utcFridays; },
+/* harmony export */   a1: function() { return /* binding */ utcFriday; },
+/* harmony export */   aZ: function() { return /* binding */ utcSundays; },
+/* harmony export */   c8: function() { return /* binding */ utcSaturday; },
+/* harmony export */   jN: function() { return /* binding */ utcTuesdays; },
+/* harmony export */   pT: function() { return /* binding */ utcThursday; },
+/* harmony export */   rt: function() { return /* binding */ utcMonday; },
+/* harmony export */   sr: function() { return /* binding */ utcTuesday; },
+/* harmony export */   wr: function() { return /* binding */ utcThursdays; },
+/* harmony export */   z2: function() { return /* binding */ utcWednesday; }
 /* harmony export */ });
-/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7289);
-/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7268);
+/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9257);
+/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6096);
 
 
 
 function utcWeekday(i) {
-  return (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+  return (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
     date.setUTCDate(date.getUTCDate() - (date.getUTCDay() + 7 - i) % 7);
     date.setUTCHours(0, 0, 0, 0);
   }, function(date, step) {
     date.setUTCDate(date.getUTCDate() + step * 7);
   }, function(start, end) {
-    return (end - start) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationWeek */ .iM;
+    return (end - start) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationWeek */ .Fq;
   });
 }
 
@@ -84825,17 +80788,17 @@ var utcSaturdays = utcSaturday.range;
 
 /***/ }),
 
-/***/ 7679:
+/***/ 6077:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "D": function() { return /* binding */ utcYears; }
+/* harmony export */   j: function() { return /* binding */ utcYears; }
 /* harmony export */ });
-/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7289);
+/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9257);
 
 
-var utcYear = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+var utcYear = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
   date.setUTCMonth(0, 1);
   date.setUTCHours(0, 0, 0, 0);
 }, function(date, step) {
@@ -84848,7 +80811,7 @@ var utcYear = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(
 
 // An optimized implementation for this simple case.
 utcYear.every = function(k) {
-  return !isFinite(k = Math.floor(k)) || !(k > 0) ? null : (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+  return !isFinite(k = Math.floor(k)) || !(k > 0) ? null : (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
     date.setUTCFullYear(Math.floor(date.getUTCFullYear() / k) * k);
     date.setUTCMonth(0, 1);
     date.setUTCHours(0, 0, 0, 0);
@@ -84857,45 +80820,45 @@ utcYear.every = function(k) {
   });
 };
 
-/* harmony default export */ __webpack_exports__["Z"] = (utcYear);
+/* harmony default export */ __webpack_exports__.A = (utcYear);
 var utcYears = utcYear.range;
 
 
 /***/ }),
 
-/***/ 99:
+/***/ 4740:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "$t": function() { return /* binding */ thursdays; },
-/* harmony export */   "EY": function() { return /* binding */ saturday; },
-/* harmony export */   "Ff": function() { return /* binding */ saturdays; },
-/* harmony export */   "Ld": function() { return /* binding */ wednesdays; },
-/* harmony export */   "OM": function() { return /* binding */ sunday; },
-/* harmony export */   "aU": function() { return /* binding */ tuesdays; },
-/* harmony export */   "b$": function() { return /* binding */ fridays; },
-/* harmony export */   "bJ": function() { return /* binding */ mondays; },
-/* harmony export */   "bL": function() { return /* binding */ thursday; },
-/* harmony export */   "mC": function() { return /* binding */ friday; },
-/* harmony export */   "sy": function() { return /* binding */ tuesday; },
-/* harmony export */   "vm": function() { return /* binding */ sundays; },
-/* harmony export */   "wA": function() { return /* binding */ monday; },
-/* harmony export */   "zg": function() { return /* binding */ wednesday; }
+/* harmony export */   By: function() { return /* binding */ monday; },
+/* harmony export */   KP: function() { return /* binding */ mondays; },
+/* harmony export */   Q$: function() { return /* binding */ thursdays; },
+/* harmony export */   Sh: function() { return /* binding */ friday; },
+/* harmony export */   dt: function() { return /* binding */ thursday; },
+/* harmony export */   eQ: function() { return /* binding */ tuesday; },
+/* harmony export */   fz: function() { return /* binding */ sunday; },
+/* harmony export */   gf: function() { return /* binding */ wednesdays; },
+/* harmony export */   kS: function() { return /* binding */ saturday; },
+/* harmony export */   l3: function() { return /* binding */ wednesday; },
+/* harmony export */   se: function() { return /* binding */ sundays; },
+/* harmony export */   t$: function() { return /* binding */ saturdays; },
+/* harmony export */   tz: function() { return /* binding */ fridays; },
+/* harmony export */   yW: function() { return /* binding */ tuesdays; }
 /* harmony export */ });
-/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7289);
-/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7268);
+/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9257);
+/* harmony import */ var _duration_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6096);
 
 
 
 function weekday(i) {
-  return (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+  return (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
     date.setDate(date.getDate() - (date.getDay() + 7 - i) % 7);
     date.setHours(0, 0, 0, 0);
   }, function(date, step) {
     date.setDate(date.getDate() + step * 7);
   }, function(start, end) {
-    return (end - start - (end.getTimezoneOffset() - start.getTimezoneOffset()) * _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationMinute */ .yB) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationWeek */ .iM;
+    return (end - start - (end.getTimezoneOffset() - start.getTimezoneOffset()) * _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationMinute */ .rR) / _duration_js__WEBPACK_IMPORTED_MODULE_1__/* .durationWeek */ .Fq;
   });
 }
 
@@ -84918,17 +80881,17 @@ var saturdays = saturday.range;
 
 /***/ }),
 
-/***/ 6688:
+/***/ 9325:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "g": function() { return /* binding */ years; }
+/* harmony export */   V: function() { return /* binding */ years; }
 /* harmony export */ });
-/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7289);
+/* harmony import */ var _interval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9257);
 
 
-var year = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+var year = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
   date.setMonth(0, 1);
   date.setHours(0, 0, 0, 0);
 }, function(date, step) {
@@ -84941,7 +80904,7 @@ var year = (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(fun
 
 // An optimized implementation for this simple case.
 year.every = function(k) {
-  return !isFinite(k = Math.floor(k)) || !(k > 0) ? null : (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(function(date) {
+  return !isFinite(k = Math.floor(k)) || !(k > 0) ? null : (0,_interval_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function(date) {
     date.setFullYear(Math.floor(date.getFullYear() / k) * k);
     date.setMonth(0, 1);
     date.setHours(0, 0, 0, 0);
@@ -84950,13 +80913,13 @@ year.every = function(k) {
   });
 };
 
-/* harmony default export */ __webpack_exports__["Z"] = (year);
+/* harmony default export */ __webpack_exports__.A = (year);
 var years = year.range;
 
 
 /***/ }),
 
-/***/ 5520:
+/***/ 5074:
 /***/ (function(module) {
 
 "use strict";
@@ -85461,7 +81424,7 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ 5440:
+/***/ 2538:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
@@ -85475,7 +81438,7 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 
 
-var allBlankCharCodes = __webpack_require__(232);
+var allBlankCharCodes = __webpack_require__(9427);
 
 module.exports = function(n) {
     var type = typeof n;
@@ -85493,7 +81456,7 @@ module.exports = function(n) {
 
 /***/ }),
 
-/***/ 1129:
+/***/ 8077:
 /***/ (function(module) {
 
 module.exports = adjoint;
@@ -85532,7 +81495,7 @@ function adjoint(out, a) {
 
 /***/ }),
 
-/***/ 926:
+/***/ 2159:
 /***/ (function(module) {
 
 module.exports = clone;
@@ -85566,7 +81529,7 @@ function clone(a) {
 
 /***/ }),
 
-/***/ 3850:
+/***/ 2005:
 /***/ (function(module) {
 
 module.exports = copy;
@@ -85600,7 +81563,7 @@ function copy(out, a) {
 
 /***/ }),
 
-/***/ 5187:
+/***/ 1504:
 /***/ (function(module) {
 
 module.exports = create;
@@ -85633,7 +81596,7 @@ function create() {
 
 /***/ }),
 
-/***/ 6317:
+/***/ 9873:
 /***/ (function(module) {
 
 module.exports = determinant;
@@ -85669,7 +81632,7 @@ function determinant(a) {
 
 /***/ }),
 
-/***/ 2106:
+/***/ 1255:
 /***/ (function(module) {
 
 module.exports = fromQuat;
@@ -85722,7 +81685,7 @@ function fromQuat(out, q) {
 
 /***/ }),
 
-/***/ 97:
+/***/ 2618:
 /***/ (function(module) {
 
 module.exports = fromRotation
@@ -85782,7 +81745,7 @@ function fromRotation(out, rad, axis) {
 
 /***/ }),
 
-/***/ 5981:
+/***/ 7527:
 /***/ (function(module) {
 
 module.exports = fromRotationTranslation;
@@ -85841,7 +81804,7 @@ function fromRotationTranslation(out, q, v) {
 
 /***/ }),
 
-/***/ 3813:
+/***/ 5055:
 /***/ (function(module) {
 
 module.exports = fromScaling
@@ -85880,7 +81843,7 @@ function fromScaling(out, v) {
 
 /***/ }),
 
-/***/ 6053:
+/***/ 4049:
 /***/ (function(module) {
 
 module.exports = fromTranslation
@@ -85919,7 +81882,7 @@ function fromTranslation(out, v) {
 
 /***/ }),
 
-/***/ 2632:
+/***/ 1684:
 /***/ (function(module) {
 
 module.exports = fromXRotation
@@ -85961,7 +81924,7 @@ function fromXRotation(out, rad) {
 
 /***/ }),
 
-/***/ 5444:
+/***/ 7815:
 /***/ (function(module) {
 
 module.exports = fromYRotation
@@ -86003,7 +81966,7 @@ function fromYRotation(out, rad) {
 
 /***/ }),
 
-/***/ 4676:
+/***/ 4658:
 /***/ (function(module) {
 
 module.exports = fromZRotation
@@ -86045,7 +82008,7 @@ function fromZRotation(out, rad) {
 
 /***/ }),
 
-/***/ 9926:
+/***/ 4056:
 /***/ (function(module) {
 
 module.exports = frustum;
@@ -86087,7 +82050,7 @@ function frustum(out, left, right, bottom, top, near, far) {
 
 /***/ }),
 
-/***/ 5185:
+/***/ 3558:
 /***/ (function(module) {
 
 module.exports = identity;
@@ -86120,45 +82083,45 @@ function identity(out) {
 
 /***/ }),
 
-/***/ 9949:
+/***/ 1906:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 module.exports = {
-  create: __webpack_require__(5187)
-  , clone: __webpack_require__(926)
-  , copy: __webpack_require__(3850)
-  , identity: __webpack_require__(5185)
-  , transpose: __webpack_require__(1274)
-  , invert: __webpack_require__(5668)
-  , adjoint: __webpack_require__(1129)
-  , determinant: __webpack_require__(6317)
-  , multiply: __webpack_require__(789)
-  , translate: __webpack_require__(8922)
-  , scale: __webpack_require__(312)
-  , rotate: __webpack_require__(9911)
-  , rotateX: __webpack_require__(2808)
-  , rotateY: __webpack_require__(3470)
-  , rotateZ: __webpack_require__(8422)
-  , fromRotation: __webpack_require__(97)
-  , fromRotationTranslation: __webpack_require__(5981)
-  , fromScaling: __webpack_require__(3813)
-  , fromTranslation: __webpack_require__(6053)
-  , fromXRotation: __webpack_require__(2632)
-  , fromYRotation: __webpack_require__(5444)
-  , fromZRotation: __webpack_require__(4676)
-  , fromQuat: __webpack_require__(2106)
-  , frustum: __webpack_require__(9926)
-  , perspective: __webpack_require__(8448)
-  , perspectiveFromFieldOfView: __webpack_require__(5402)
-  , ortho: __webpack_require__(2534)
-  , lookAt: __webpack_require__(7363)
-  , str: __webpack_require__(6659)
+  create: __webpack_require__(1504)
+  , clone: __webpack_require__(2159)
+  , copy: __webpack_require__(2005)
+  , identity: __webpack_require__(3558)
+  , transpose: __webpack_require__(1921)
+  , invert: __webpack_require__(5224)
+  , adjoint: __webpack_require__(8077)
+  , determinant: __webpack_require__(9873)
+  , multiply: __webpack_require__(5000)
+  , translate: __webpack_require__(5800)
+  , scale: __webpack_require__(2952)
+  , rotate: __webpack_require__(8767)
+  , rotateX: __webpack_require__(4847)
+  , rotateY: __webpack_require__(2760)
+  , rotateZ: __webpack_require__(5681)
+  , fromRotation: __webpack_require__(2618)
+  , fromRotationTranslation: __webpack_require__(7527)
+  , fromScaling: __webpack_require__(5055)
+  , fromTranslation: __webpack_require__(4049)
+  , fromXRotation: __webpack_require__(1684)
+  , fromYRotation: __webpack_require__(7815)
+  , fromZRotation: __webpack_require__(4658)
+  , fromQuat: __webpack_require__(1255)
+  , frustum: __webpack_require__(4056)
+  , perspective: __webpack_require__(8708)
+  , perspectiveFromFieldOfView: __webpack_require__(10)
+  , ortho: __webpack_require__(4456)
+  , lookAt: __webpack_require__(9062)
+  , str: __webpack_require__(733)
 }
 
 
 /***/ }),
 
-/***/ 5668:
+/***/ 5224:
 /***/ (function(module) {
 
 module.exports = invert;
@@ -86219,10 +82182,10 @@ function invert(out, a) {
 
 /***/ }),
 
-/***/ 7363:
+/***/ 9062:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-var identity = __webpack_require__(5185);
+var identity = __webpack_require__(3558);
 
 module.exports = lookAt;
 
@@ -86315,7 +82278,7 @@ function lookAt(out, eye, center, up) {
 
 /***/ }),
 
-/***/ 789:
+/***/ 5000:
 /***/ (function(module) {
 
 module.exports = multiply;
@@ -86363,7 +82326,7 @@ function multiply(out, a, b) {
 
 /***/ }),
 
-/***/ 2534:
+/***/ 4456:
 /***/ (function(module) {
 
 module.exports = ortho;
@@ -86405,7 +82368,7 @@ function ortho(out, left, right, bottom, top, near, far) {
 
 /***/ }),
 
-/***/ 8448:
+/***/ 8708:
 /***/ (function(module) {
 
 module.exports = perspective;
@@ -86444,7 +82407,7 @@ function perspective(out, fovy, aspect, near, far) {
 
 /***/ }),
 
-/***/ 5402:
+/***/ 10:
 /***/ (function(module) {
 
 module.exports = perspectiveFromFieldOfView;
@@ -86491,7 +82454,7 @@ function perspectiveFromFieldOfView(out, fov, near, far) {
 
 /***/ }),
 
-/***/ 9911:
+/***/ 8767:
 /***/ (function(module) {
 
 module.exports = rotate;
@@ -86561,7 +82524,7 @@ function rotate(out, a, rad, axis) {
 
 /***/ }),
 
-/***/ 2808:
+/***/ 4847:
 /***/ (function(module) {
 
 module.exports = rotateX;
@@ -86611,7 +82574,7 @@ function rotateX(out, a, rad) {
 
 /***/ }),
 
-/***/ 3470:
+/***/ 2760:
 /***/ (function(module) {
 
 module.exports = rotateY;
@@ -86661,7 +82624,7 @@ function rotateY(out, a, rad) {
 
 /***/ }),
 
-/***/ 8422:
+/***/ 5681:
 /***/ (function(module) {
 
 module.exports = rotateZ;
@@ -86711,7 +82674,7 @@ function rotateZ(out, a, rad) {
 
 /***/ }),
 
-/***/ 312:
+/***/ 2952:
 /***/ (function(module) {
 
 module.exports = scale;
@@ -86748,7 +82711,7 @@ function scale(out, a, v) {
 
 /***/ }),
 
-/***/ 6659:
+/***/ 733:
 /***/ (function(module) {
 
 module.exports = str;
@@ -86768,7 +82731,7 @@ function str(a) {
 
 /***/ }),
 
-/***/ 8922:
+/***/ 5800:
 /***/ (function(module) {
 
 module.exports = translate;
@@ -86812,7 +82775,7 @@ function translate(out, a, v) {
 
 /***/ }),
 
-/***/ 1274:
+/***/ 1921:
 /***/ (function(module) {
 
 module.exports = transpose;
@@ -86867,13 +82830,13 @@ function transpose(out, a) {
 
 /***/ }),
 
-/***/ 2144:
+/***/ 8917:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isBrowser = __webpack_require__(9105)
+var isBrowser = __webpack_require__(9376)
 var hasHover
 
 if (typeof __webpack_require__.g.matchMedia === 'function') {
@@ -86888,13 +82851,13 @@ module.exports = hasHover
 
 /***/ }),
 
-/***/ 949:
+/***/ 4608:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
-var isBrowser = __webpack_require__(9105)
+var isBrowser = __webpack_require__(9376)
 
 function detect() {
 	var supported = false
@@ -86920,14 +82883,14 @@ module.exports = isBrowser && detect()
 
 /***/ }),
 
-/***/ 9105:
+/***/ 9376:
 /***/ (function(module) {
 
 module.exports = true;
 
 /***/ }),
 
-/***/ 232:
+/***/ 9427:
 /***/ (function(module) {
 
 "use strict";
@@ -86970,7 +82933,7 @@ module.exports = function(str){
 
 /***/ }),
 
-/***/ 4980:
+/***/ 5352:
 /***/ (function(module) {
 
 var rootPosition = { left: 0, top: 0 }
@@ -87002,7 +82965,7 @@ function getBoundingClientOffset (element) {
 
 /***/ }),
 
-/***/ 9451:
+/***/ 2245:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*! Native Promise Only
@@ -87383,7 +83346,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! Native Promise Only
 
 /***/ }),
 
-/***/ 3743:
+/***/ 7365:
 /***/ (function(module) {
 
 "use strict";
@@ -87481,7 +83444,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ 9123:
+/***/ 6582:
 /***/ (function(module) {
 
 
@@ -87545,7 +83508,7 @@ function parseValues(args) {
 
 /***/ }),
 
-/***/ 114:
+/***/ 7008:
 /***/ (function(module) {
 
 // ray-casting algorithm based on
@@ -87570,7 +83533,7 @@ module.exports = function pointInPolygonNested (point, vs, start, end) {
 
 /***/ }),
 
-/***/ 5650:
+/***/ 7399:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -87579,12 +83542,12 @@ module.exports = function pointInPolygonNested (point, vs, start, end) {
  * @preserve Project Home: https://github.com/voidqk/polybooljs
  */
 
-var BuildLog = __webpack_require__(5291);
-var Epsilon = __webpack_require__(3157);
-var Intersecter = __webpack_require__(9374);
-var SegmentChainer = __webpack_require__(2690);
-var SegmentSelector = __webpack_require__(1286);
-var GeoJSON = __webpack_require__(9683);
+var BuildLog = __webpack_require__(1240);
+var Epsilon = __webpack_require__(4881);
+var Intersecter = __webpack_require__(6525);
+var SegmentChainer = __webpack_require__(7805);
+var SegmentSelector = __webpack_require__(8270);
+var GeoJSON = __webpack_require__(8660);
 
 var buildLog = false;
 var epsilon = Epsilon();
@@ -87703,7 +83666,7 @@ module.exports = PolyBool;
 
 /***/ }),
 
-/***/ 5291:
+/***/ 1240:
 /***/ (function(module) {
 
 // (c) Copyright 2016, Sean Connelly (@voidqk), http://syntheti.cc
@@ -87823,7 +83786,7 @@ module.exports = BuildLog;
 
 /***/ }),
 
-/***/ 3157:
+/***/ 4881:
 /***/ (function(module) {
 
 // (c) Copyright 2016, Sean Connelly (@voidqk), http://syntheti.cc
@@ -88000,7 +83963,7 @@ module.exports = Epsilon;
 
 /***/ }),
 
-/***/ 9683:
+/***/ 8660:
 /***/ (function(module) {
 
 // (c) Copyright 2017, Sean Connelly (@voidqk), http://syntheti.cc
@@ -88195,7 +84158,7 @@ module.exports = GeoJSON;
 
 /***/ }),
 
-/***/ 9374:
+/***/ 6525:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 // (c) Copyright 2016, Sean Connelly (@voidqk), http://syntheti.cc
@@ -88206,7 +84169,7 @@ module.exports = GeoJSON;
 // this is the core work-horse
 //
 
-var LinkedList = __webpack_require__(9386);
+var LinkedList = __webpack_require__(2420);
 
 function Intersecter(selfIntersection, eps, buildLog){
 	// selfIntersection is true/false depending on the phase of the overall algorithm
@@ -88707,7 +84670,7 @@ module.exports = Intersecter;
 
 /***/ }),
 
-/***/ 9386:
+/***/ 2420:
 /***/ (function(module) {
 
 // (c) Copyright 2016, Sean Connelly (@voidqk), http://syntheti.cc
@@ -88795,7 +84758,7 @@ module.exports = LinkedList;
 
 /***/ }),
 
-/***/ 2690:
+/***/ 7805:
 /***/ (function(module) {
 
 // (c) Copyright 2016, Sean Connelly (@voidqk), http://syntheti.cc
@@ -89054,7 +85017,7 @@ module.exports = SegmentChainer;
 
 /***/ }),
 
-/***/ 1286:
+/***/ 8270:
 /***/ (function(module) {
 
 // (c) Copyright 2016, Sean Connelly (@voidqk), http://syntheti.cc
@@ -89227,1215 +85190,14 @@ module.exports = SegmentSelector;
 
 /***/ }),
 
-/***/ 4022:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;// TinyColor v1.4.2
-// https://github.com/bgrins/TinyColor
-// Brian Grinstead, MIT License
-
-(function(Math) {
-
-var trimLeft = /^\s+/,
-    trimRight = /\s+$/,
-    tinyCounter = 0,
-    mathRound = Math.round,
-    mathMin = Math.min,
-    mathMax = Math.max,
-    mathRandom = Math.random;
-
-function tinycolor (color, opts) {
-
-    color = (color) ? color : '';
-    opts = opts || { };
-
-    // If input is already a tinycolor, return itself
-    if (color instanceof tinycolor) {
-       return color;
-    }
-    // If we are called as a function, call using new instead
-    if (!(this instanceof tinycolor)) {
-        return new tinycolor(color, opts);
-    }
-
-    var rgb = inputToRGB(color);
-    this._originalInput = color,
-    this._r = rgb.r,
-    this._g = rgb.g,
-    this._b = rgb.b,
-    this._a = rgb.a,
-    this._roundA = mathRound(100*this._a) / 100,
-    this._format = opts.format || rgb.format;
-    this._gradientType = opts.gradientType;
-
-    // Don't let the range of [0,255] come back in [0,1].
-    // Potentially lose a little bit of precision here, but will fix issues where
-    // .5 gets interpreted as half of the total, instead of half of 1
-    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
-    if (this._r < 1) { this._r = mathRound(this._r); }
-    if (this._g < 1) { this._g = mathRound(this._g); }
-    if (this._b < 1) { this._b = mathRound(this._b); }
-
-    this._ok = rgb.ok;
-    this._tc_id = tinyCounter++;
-}
-
-tinycolor.prototype = {
-    isDark: function() {
-        return this.getBrightness() < 128;
-    },
-    isLight: function() {
-        return !this.isDark();
-    },
-    isValid: function() {
-        return this._ok;
-    },
-    getOriginalInput: function() {
-      return this._originalInput;
-    },
-    getFormat: function() {
-        return this._format;
-    },
-    getAlpha: function() {
-        return this._a;
-    },
-    getBrightness: function() {
-        //http://www.w3.org/TR/AERT#color-contrast
-        var rgb = this.toRgb();
-        return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
-    },
-    getLuminance: function() {
-        //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
-        var rgb = this.toRgb();
-        var RsRGB, GsRGB, BsRGB, R, G, B;
-        RsRGB = rgb.r/255;
-        GsRGB = rgb.g/255;
-        BsRGB = rgb.b/255;
-
-        if (RsRGB <= 0.03928) {R = RsRGB / 12.92;} else {R = Math.pow(((RsRGB + 0.055) / 1.055), 2.4);}
-        if (GsRGB <= 0.03928) {G = GsRGB / 12.92;} else {G = Math.pow(((GsRGB + 0.055) / 1.055), 2.4);}
-        if (BsRGB <= 0.03928) {B = BsRGB / 12.92;} else {B = Math.pow(((BsRGB + 0.055) / 1.055), 2.4);}
-        return (0.2126 * R) + (0.7152 * G) + (0.0722 * B);
-    },
-    setAlpha: function(value) {
-        this._a = boundAlpha(value);
-        this._roundA = mathRound(100*this._a) / 100;
-        return this;
-    },
-    toHsv: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
-    },
-    toHsvString: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        var h = mathRound(hsv.h * 360), s = mathRound(hsv.s * 100), v = mathRound(hsv.v * 100);
-        return (this._a == 1) ?
-          "hsv("  + h + ", " + s + "%, " + v + "%)" :
-          "hsva(" + h + ", " + s + "%, " + v + "%, "+ this._roundA + ")";
-    },
-    toHsl: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
-    },
-    toHslString: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        var h = mathRound(hsl.h * 360), s = mathRound(hsl.s * 100), l = mathRound(hsl.l * 100);
-        return (this._a == 1) ?
-          "hsl("  + h + ", " + s + "%, " + l + "%)" :
-          "hsla(" + h + ", " + s + "%, " + l + "%, "+ this._roundA + ")";
-    },
-    toHex: function(allow3Char) {
-        return rgbToHex(this._r, this._g, this._b, allow3Char);
-    },
-    toHexString: function(allow3Char) {
-        return '#' + this.toHex(allow3Char);
-    },
-    toHex8: function(allow4Char) {
-        return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
-    },
-    toHex8String: function(allow4Char) {
-        return '#' + this.toHex8(allow4Char);
-    },
-    toRgb: function() {
-        return { r: mathRound(this._r), g: mathRound(this._g), b: mathRound(this._b), a: this._a };
-    },
-    toRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ")" :
-          "rgba(" + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ", " + this._roundA + ")";
-    },
-    toPercentageRgb: function() {
-        return { r: mathRound(bound01(this._r, 255) * 100) + "%", g: mathRound(bound01(this._g, 255) * 100) + "%", b: mathRound(bound01(this._b, 255) * 100) + "%", a: this._a };
-    },
-    toPercentageRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%)" :
-          "rgba(" + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
-    },
-    toName: function() {
-        if (this._a === 0) {
-            return "transparent";
-        }
-
-        if (this._a < 1) {
-            return false;
-        }
-
-        return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
-    },
-    toFilter: function(secondColor) {
-        var hex8String = '#' + rgbaToArgbHex(this._r, this._g, this._b, this._a);
-        var secondHex8String = hex8String;
-        var gradientType = this._gradientType ? "GradientType = 1, " : "";
-
-        if (secondColor) {
-            var s = tinycolor(secondColor);
-            secondHex8String = '#' + rgbaToArgbHex(s._r, s._g, s._b, s._a);
-        }
-
-        return "progid:DXImageTransform.Microsoft.gradient("+gradientType+"startColorstr="+hex8String+",endColorstr="+secondHex8String+")";
-    },
-    toString: function(format) {
-        var formatSet = !!format;
-        format = format || this._format;
-
-        var formattedString = false;
-        var hasAlpha = this._a < 1 && this._a >= 0;
-        var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
-
-        if (needsAlphaFormat) {
-            // Special case for "transparent", all other non-alpha formats
-            // will return rgba when there is transparency.
-            if (format === "name" && this._a === 0) {
-                return this.toName();
-            }
-            return this.toRgbString();
-        }
-        if (format === "rgb") {
-            formattedString = this.toRgbString();
-        }
-        if (format === "prgb") {
-            formattedString = this.toPercentageRgbString();
-        }
-        if (format === "hex" || format === "hex6") {
-            formattedString = this.toHexString();
-        }
-        if (format === "hex3") {
-            formattedString = this.toHexString(true);
-        }
-        if (format === "hex4") {
-            formattedString = this.toHex8String(true);
-        }
-        if (format === "hex8") {
-            formattedString = this.toHex8String();
-        }
-        if (format === "name") {
-            formattedString = this.toName();
-        }
-        if (format === "hsl") {
-            formattedString = this.toHslString();
-        }
-        if (format === "hsv") {
-            formattedString = this.toHsvString();
-        }
-
-        return formattedString || this.toHexString();
-    },
-    clone: function() {
-        return tinycolor(this.toString());
-    },
-
-    _applyModification: function(fn, args) {
-        var color = fn.apply(null, [this].concat([].slice.call(args)));
-        this._r = color._r;
-        this._g = color._g;
-        this._b = color._b;
-        this.setAlpha(color._a);
-        return this;
-    },
-    lighten: function() {
-        return this._applyModification(lighten, arguments);
-    },
-    brighten: function() {
-        return this._applyModification(brighten, arguments);
-    },
-    darken: function() {
-        return this._applyModification(darken, arguments);
-    },
-    desaturate: function() {
-        return this._applyModification(desaturate, arguments);
-    },
-    saturate: function() {
-        return this._applyModification(saturate, arguments);
-    },
-    greyscale: function() {
-        return this._applyModification(greyscale, arguments);
-    },
-    spin: function() {
-        return this._applyModification(spin, arguments);
-    },
-
-    _applyCombination: function(fn, args) {
-        return fn.apply(null, [this].concat([].slice.call(args)));
-    },
-    analogous: function() {
-        return this._applyCombination(analogous, arguments);
-    },
-    complement: function() {
-        return this._applyCombination(complement, arguments);
-    },
-    monochromatic: function() {
-        return this._applyCombination(monochromatic, arguments);
-    },
-    splitcomplement: function() {
-        return this._applyCombination(splitcomplement, arguments);
-    },
-    triad: function() {
-        return this._applyCombination(triad, arguments);
-    },
-    tetrad: function() {
-        return this._applyCombination(tetrad, arguments);
-    }
-};
-
-// If input is an object, force 1 into "1.0" to handle ratios properly
-// String input requires "1.0" as input, so 1 will be treated as 1
-tinycolor.fromRatio = function(color, opts) {
-    if (typeof color == "object") {
-        var newColor = {};
-        for (var i in color) {
-            if (color.hasOwnProperty(i)) {
-                if (i === "a") {
-                    newColor[i] = color[i];
-                }
-                else {
-                    newColor[i] = convertToPercentage(color[i]);
-                }
-            }
-        }
-        color = newColor;
-    }
-
-    return tinycolor(color, opts);
-};
-
-// Given a string or object, convert that input to RGB
-// Possible string inputs:
-//
-//     "red"
-//     "#f00" or "f00"
-//     "#ff0000" or "ff0000"
-//     "#ff000000" or "ff000000"
-//     "rgb 255 0 0" or "rgb (255, 0, 0)"
-//     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
-//     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
-//     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
-//     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
-//     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
-//     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
-//
-function inputToRGB(color) {
-
-    var rgb = { r: 0, g: 0, b: 0 };
-    var a = 1;
-    var s = null;
-    var v = null;
-    var l = null;
-    var ok = false;
-    var format = false;
-
-    if (typeof color == "string") {
-        color = stringInputToObject(color);
-    }
-
-    if (typeof color == "object") {
-        if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
-            rgb = rgbToRgb(color.r, color.g, color.b);
-            ok = true;
-            format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
-            s = convertToPercentage(color.s);
-            v = convertToPercentage(color.v);
-            rgb = hsvToRgb(color.h, s, v);
-            ok = true;
-            format = "hsv";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
-            s = convertToPercentage(color.s);
-            l = convertToPercentage(color.l);
-            rgb = hslToRgb(color.h, s, l);
-            ok = true;
-            format = "hsl";
-        }
-
-        if (color.hasOwnProperty("a")) {
-            a = color.a;
-        }
-    }
-
-    a = boundAlpha(a);
-
-    return {
-        ok: ok,
-        format: color.format || format,
-        r: mathMin(255, mathMax(rgb.r, 0)),
-        g: mathMin(255, mathMax(rgb.g, 0)),
-        b: mathMin(255, mathMax(rgb.b, 0)),
-        a: a
-    };
-}
-
-
-// Conversion Functions
-// --------------------
-
-// `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
-// <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
-
-// `rgbToRgb`
-// Handle bounds / percentage checking to conform to CSS color spec
-// <http://www.w3.org/TR/css3-color/>
-// *Assumes:* r, g, b in [0, 255] or [0, 1]
-// *Returns:* { r, g, b } in [0, 255]
-function rgbToRgb(r, g, b){
-    return {
-        r: bound01(r, 255) * 255,
-        g: bound01(g, 255) * 255,
-        b: bound01(b, 255) * 255
-    };
-}
-
-// `rgbToHsl`
-// Converts an RGB color value to HSL.
-// *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
-// *Returns:* { h, s, l } in [0,1]
-function rgbToHsl(r, g, b) {
-
-    r = bound01(r, 255);
-    g = bound01(g, 255);
-    b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, l = (max + min) / 2;
-
-    if(max == min) {
-        h = s = 0; // achromatic
-    }
-    else {
-        var d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-
-        h /= 6;
-    }
-
-    return { h: h, s: s, l: l };
-}
-
-// `hslToRgb`
-// Converts an HSL color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
-function hslToRgb(h, s, l) {
-    var r, g, b;
-
-    h = bound01(h, 360);
-    s = bound01(s, 100);
-    l = bound01(l, 100);
-
-    function hue2rgb(p, q, t) {
-        if(t < 0) t += 1;
-        if(t > 1) t -= 1;
-        if(t < 1/6) return p + (q - p) * 6 * t;
-        if(t < 1/2) return q;
-        if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-        return p;
-    }
-
-    if(s === 0) {
-        r = g = b = l; // achromatic
-    }
-    else {
-        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        var p = 2 * l - q;
-        r = hue2rgb(p, q, h + 1/3);
-        g = hue2rgb(p, q, h);
-        b = hue2rgb(p, q, h - 1/3);
-    }
-
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHsv`
-// Converts an RGB color value to HSV
-// *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
-// *Returns:* { h, s, v } in [0,1]
-function rgbToHsv(r, g, b) {
-
-    r = bound01(r, 255);
-    g = bound01(g, 255);
-    b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, v = max;
-
-    var d = max - min;
-    s = max === 0 ? 0 : d / max;
-
-    if(max == min) {
-        h = 0; // achromatic
-    }
-    else {
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-        h /= 6;
-    }
-    return { h: h, s: s, v: v };
-}
-
-// `hsvToRgb`
-// Converts an HSV color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
- function hsvToRgb(h, s, v) {
-
-    h = bound01(h, 360) * 6;
-    s = bound01(s, 100);
-    v = bound01(v, 100);
-
-    var i = Math.floor(h),
-        f = h - i,
-        p = v * (1 - s),
-        q = v * (1 - f * s),
-        t = v * (1 - (1 - f) * s),
-        mod = i % 6,
-        r = [v, q, p, p, t, v][mod],
-        g = [t, v, v, q, p, p][mod],
-        b = [p, p, t, v, v, q][mod];
-
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHex`
-// Converts an RGB color to hex
-// Assumes r, g, and b are contained in the set [0, 255]
-// Returns a 3 or 6 character hex
-function rgbToHex(r, g, b, allow3Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
-
-    // Return a 3 character hex if possible
-    if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
-    }
-
-    return hex.join("");
-}
-
-// `rgbaToHex`
-// Converts an RGBA color plus alpha transparency to hex
-// Assumes r, g, b are contained in the set [0, 255] and
-// a in [0, 1]. Returns a 4 or 8 character rgba hex
-function rgbaToHex(r, g, b, a, allow4Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16)),
-        pad2(convertDecimalToHex(a))
-    ];
-
-    // Return a 4 character hex if possible
-    if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
-    }
-
-    return hex.join("");
-}
-
-// `rgbaToArgbHex`
-// Converts an RGBA color to an ARGB Hex8 string
-// Rarely used, but required for "toFilter()"
-function rgbaToArgbHex(r, g, b, a) {
-
-    var hex = [
-        pad2(convertDecimalToHex(a)),
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
-
-    return hex.join("");
-}
-
-// `equals`
-// Can be called with any tinycolor input
-tinycolor.equals = function (color1, color2) {
-    if (!color1 || !color2) { return false; }
-    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
-};
-
-tinycolor.random = function() {
-    return tinycolor.fromRatio({
-        r: mathRandom(),
-        g: mathRandom(),
-        b: mathRandom()
-    });
-};
-
-
-// Modification Functions
-// ----------------------
-// Thanks to less.js for some of the basics here
-// <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
-
-function desaturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.s -= amount / 100;
-    hsl.s = clamp01(hsl.s);
-    return tinycolor(hsl);
-}
-
-function saturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.s += amount / 100;
-    hsl.s = clamp01(hsl.s);
-    return tinycolor(hsl);
-}
-
-function greyscale(color) {
-    return tinycolor(color).desaturate(100);
-}
-
-function lighten (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.l += amount / 100;
-    hsl.l = clamp01(hsl.l);
-    return tinycolor(hsl);
-}
-
-function brighten(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var rgb = tinycolor(color).toRgb();
-    rgb.r = mathMax(0, mathMin(255, rgb.r - mathRound(255 * - (amount / 100))));
-    rgb.g = mathMax(0, mathMin(255, rgb.g - mathRound(255 * - (amount / 100))));
-    rgb.b = mathMax(0, mathMin(255, rgb.b - mathRound(255 * - (amount / 100))));
-    return tinycolor(rgb);
-}
-
-function darken (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.l -= amount / 100;
-    hsl.l = clamp01(hsl.l);
-    return tinycolor(hsl);
-}
-
-// Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
-// Values outside of this range will be wrapped into this range.
-function spin(color, amount) {
-    var hsl = tinycolor(color).toHsl();
-    var hue = (hsl.h + amount) % 360;
-    hsl.h = hue < 0 ? 360 + hue : hue;
-    return tinycolor(hsl);
-}
-
-// Combination Functions
-// ---------------------
-// Thanks to jQuery xColor for some of the ideas behind these
-// <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
-
-function complement(color) {
-    var hsl = tinycolor(color).toHsl();
-    hsl.h = (hsl.h + 180) % 360;
-    return tinycolor(hsl);
-}
-
-function triad(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 120) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 240) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function tetrad(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 90) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 180) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 270) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function splitcomplement(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l}),
-        tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l})
-    ];
-}
-
-function analogous(color, results, slices) {
-    results = results || 6;
-    slices = slices || 30;
-
-    var hsl = tinycolor(color).toHsl();
-    var part = 360 / slices;
-    var ret = [tinycolor(color)];
-
-    for (hsl.h = ((hsl.h - (part * results >> 1)) + 720) % 360; --results; ) {
-        hsl.h = (hsl.h + part) % 360;
-        ret.push(tinycolor(hsl));
-    }
-    return ret;
-}
-
-function monochromatic(color, results) {
-    results = results || 6;
-    var hsv = tinycolor(color).toHsv();
-    var h = hsv.h, s = hsv.s, v = hsv.v;
-    var ret = [];
-    var modification = 1 / results;
-
-    while (results--) {
-        ret.push(tinycolor({ h: h, s: s, v: v}));
-        v = (v + modification) % 1;
-    }
-
-    return ret;
-}
-
-// Utility Functions
-// ---------------------
-
-tinycolor.mix = function(color1, color2, amount) {
-    amount = (amount === 0) ? 0 : (amount || 50);
-
-    var rgb1 = tinycolor(color1).toRgb();
-    var rgb2 = tinycolor(color2).toRgb();
-
-    var p = amount / 100;
-
-    var rgba = {
-        r: ((rgb2.r - rgb1.r) * p) + rgb1.r,
-        g: ((rgb2.g - rgb1.g) * p) + rgb1.g,
-        b: ((rgb2.b - rgb1.b) * p) + rgb1.b,
-        a: ((rgb2.a - rgb1.a) * p) + rgb1.a
-    };
-
-    return tinycolor(rgba);
-};
-
-
-// Readability Functions
-// ---------------------
-// <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
-
-// `contrast`
-// Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
-tinycolor.readability = function(color1, color2) {
-    var c1 = tinycolor(color1);
-    var c2 = tinycolor(color2);
-    return (Math.max(c1.getLuminance(),c2.getLuminance())+0.05) / (Math.min(c1.getLuminance(),c2.getLuminance())+0.05);
-};
-
-// `isReadable`
-// Ensure that foreground and background color combinations meet WCAG2 guidelines.
-// The third argument is an optional Object.
-//      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
-//      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
-// If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
-
-// *Example*
-//    tinycolor.isReadable("#000", "#111") => false
-//    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
-tinycolor.isReadable = function(color1, color2, wcag2) {
-    var readability = tinycolor.readability(color1, color2);
-    var wcag2Parms, out;
-
-    out = false;
-
-    wcag2Parms = validateWCAG2Parms(wcag2);
-    switch (wcag2Parms.level + wcag2Parms.size) {
-        case "AAsmall":
-        case "AAAlarge":
-            out = readability >= 4.5;
-            break;
-        case "AAlarge":
-            out = readability >= 3;
-            break;
-        case "AAAsmall":
-            out = readability >= 7;
-            break;
-    }
-    return out;
-
-};
-
-// `mostReadable`
-// Given a base color and a list of possible foreground or background
-// colors for that base, returns the most readable color.
-// Optionally returns Black or White if the most readable color is unreadable.
-// *Example*
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
-tinycolor.mostReadable = function(baseColor, colorList, args) {
-    var bestColor = null;
-    var bestScore = 0;
-    var readability;
-    var includeFallbackColors, level, size ;
-    args = args || {};
-    includeFallbackColors = args.includeFallbackColors ;
-    level = args.level;
-    size = args.size;
-
-    for (var i= 0; i < colorList.length ; i++) {
-        readability = tinycolor.readability(baseColor, colorList[i]);
-        if (readability > bestScore) {
-            bestScore = readability;
-            bestColor = tinycolor(colorList[i]);
-        }
-    }
-
-    if (tinycolor.isReadable(baseColor, bestColor, {"level":level,"size":size}) || !includeFallbackColors) {
-        return bestColor;
-    }
-    else {
-        args.includeFallbackColors=false;
-        return tinycolor.mostReadable(baseColor,["#fff", "#000"],args);
-    }
-};
-
-
-// Big List of Colors
-// ------------------
-// <http://www.w3.org/TR/css3-color/#svg-color>
-var names = tinycolor.names = {
-    aliceblue: "f0f8ff",
-    antiquewhite: "faebd7",
-    aqua: "0ff",
-    aquamarine: "7fffd4",
-    azure: "f0ffff",
-    beige: "f5f5dc",
-    bisque: "ffe4c4",
-    black: "000",
-    blanchedalmond: "ffebcd",
-    blue: "00f",
-    blueviolet: "8a2be2",
-    brown: "a52a2a",
-    burlywood: "deb887",
-    burntsienna: "ea7e5d",
-    cadetblue: "5f9ea0",
-    chartreuse: "7fff00",
-    chocolate: "d2691e",
-    coral: "ff7f50",
-    cornflowerblue: "6495ed",
-    cornsilk: "fff8dc",
-    crimson: "dc143c",
-    cyan: "0ff",
-    darkblue: "00008b",
-    darkcyan: "008b8b",
-    darkgoldenrod: "b8860b",
-    darkgray: "a9a9a9",
-    darkgreen: "006400",
-    darkgrey: "a9a9a9",
-    darkkhaki: "bdb76b",
-    darkmagenta: "8b008b",
-    darkolivegreen: "556b2f",
-    darkorange: "ff8c00",
-    darkorchid: "9932cc",
-    darkred: "8b0000",
-    darksalmon: "e9967a",
-    darkseagreen: "8fbc8f",
-    darkslateblue: "483d8b",
-    darkslategray: "2f4f4f",
-    darkslategrey: "2f4f4f",
-    darkturquoise: "00ced1",
-    darkviolet: "9400d3",
-    deeppink: "ff1493",
-    deepskyblue: "00bfff",
-    dimgray: "696969",
-    dimgrey: "696969",
-    dodgerblue: "1e90ff",
-    firebrick: "b22222",
-    floralwhite: "fffaf0",
-    forestgreen: "228b22",
-    fuchsia: "f0f",
-    gainsboro: "dcdcdc",
-    ghostwhite: "f8f8ff",
-    gold: "ffd700",
-    goldenrod: "daa520",
-    gray: "808080",
-    green: "008000",
-    greenyellow: "adff2f",
-    grey: "808080",
-    honeydew: "f0fff0",
-    hotpink: "ff69b4",
-    indianred: "cd5c5c",
-    indigo: "4b0082",
-    ivory: "fffff0",
-    khaki: "f0e68c",
-    lavender: "e6e6fa",
-    lavenderblush: "fff0f5",
-    lawngreen: "7cfc00",
-    lemonchiffon: "fffacd",
-    lightblue: "add8e6",
-    lightcoral: "f08080",
-    lightcyan: "e0ffff",
-    lightgoldenrodyellow: "fafad2",
-    lightgray: "d3d3d3",
-    lightgreen: "90ee90",
-    lightgrey: "d3d3d3",
-    lightpink: "ffb6c1",
-    lightsalmon: "ffa07a",
-    lightseagreen: "20b2aa",
-    lightskyblue: "87cefa",
-    lightslategray: "789",
-    lightslategrey: "789",
-    lightsteelblue: "b0c4de",
-    lightyellow: "ffffe0",
-    lime: "0f0",
-    limegreen: "32cd32",
-    linen: "faf0e6",
-    magenta: "f0f",
-    maroon: "800000",
-    mediumaquamarine: "66cdaa",
-    mediumblue: "0000cd",
-    mediumorchid: "ba55d3",
-    mediumpurple: "9370db",
-    mediumseagreen: "3cb371",
-    mediumslateblue: "7b68ee",
-    mediumspringgreen: "00fa9a",
-    mediumturquoise: "48d1cc",
-    mediumvioletred: "c71585",
-    midnightblue: "191970",
-    mintcream: "f5fffa",
-    mistyrose: "ffe4e1",
-    moccasin: "ffe4b5",
-    navajowhite: "ffdead",
-    navy: "000080",
-    oldlace: "fdf5e6",
-    olive: "808000",
-    olivedrab: "6b8e23",
-    orange: "ffa500",
-    orangered: "ff4500",
-    orchid: "da70d6",
-    palegoldenrod: "eee8aa",
-    palegreen: "98fb98",
-    paleturquoise: "afeeee",
-    palevioletred: "db7093",
-    papayawhip: "ffefd5",
-    peachpuff: "ffdab9",
-    peru: "cd853f",
-    pink: "ffc0cb",
-    plum: "dda0dd",
-    powderblue: "b0e0e6",
-    purple: "800080",
-    rebeccapurple: "663399",
-    red: "f00",
-    rosybrown: "bc8f8f",
-    royalblue: "4169e1",
-    saddlebrown: "8b4513",
-    salmon: "fa8072",
-    sandybrown: "f4a460",
-    seagreen: "2e8b57",
-    seashell: "fff5ee",
-    sienna: "a0522d",
-    silver: "c0c0c0",
-    skyblue: "87ceeb",
-    slateblue: "6a5acd",
-    slategray: "708090",
-    slategrey: "708090",
-    snow: "fffafa",
-    springgreen: "00ff7f",
-    steelblue: "4682b4",
-    tan: "d2b48c",
-    teal: "008080",
-    thistle: "d8bfd8",
-    tomato: "ff6347",
-    turquoise: "40e0d0",
-    violet: "ee82ee",
-    wheat: "f5deb3",
-    white: "fff",
-    whitesmoke: "f5f5f5",
-    yellow: "ff0",
-    yellowgreen: "9acd32"
-};
-
-// Make it easy to access colors via `hexNames[hex]`
-var hexNames = tinycolor.hexNames = flip(names);
-
-
-// Utilities
-// ---------
-
-// `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
-function flip(o) {
-    var flipped = { };
-    for (var i in o) {
-        if (o.hasOwnProperty(i)) {
-            flipped[o[i]] = i;
-        }
-    }
-    return flipped;
-}
-
-// Return a valid alpha value [0,1] with all invalid values being set to 1
-function boundAlpha(a) {
-    a = parseFloat(a);
-
-    if (isNaN(a) || a < 0 || a > 1) {
-        a = 1;
-    }
-
-    return a;
-}
-
-// Take input from [0, n] and return it as [0, 1]
-function bound01(n, max) {
-    if (isOnePointZero(n)) { n = "100%"; }
-
-    var processPercent = isPercentage(n);
-    n = mathMin(max, mathMax(0, parseFloat(n)));
-
-    // Automatically convert percentage into number
-    if (processPercent) {
-        n = parseInt(n * max, 10) / 100;
-    }
-
-    // Handle floating point rounding errors
-    if ((Math.abs(n - max) < 0.000001)) {
-        return 1;
-    }
-
-    // Convert into [0, 1] range if it isn't already
-    return (n % max) / parseFloat(max);
-}
-
-// Force a number between 0 and 1
-function clamp01(val) {
-    return mathMin(1, mathMax(0, val));
-}
-
-// Parse a base-16 hex value into a base-10 integer
-function parseIntFromHex(val) {
-    return parseInt(val, 16);
-}
-
-// Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
-// <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
-function isOnePointZero(n) {
-    return typeof n == "string" && n.indexOf('.') != -1 && parseFloat(n) === 1;
-}
-
-// Check to see if string passed in is a percentage
-function isPercentage(n) {
-    return typeof n === "string" && n.indexOf('%') != -1;
-}
-
-// Force a hex value to have 2 characters
-function pad2(c) {
-    return c.length == 1 ? '0' + c : '' + c;
-}
-
-// Replace a decimal with it's percentage value
-function convertToPercentage(n) {
-    if (n <= 1) {
-        n = (n * 100) + "%";
-    }
-
-    return n;
-}
-
-// Converts a decimal to a hex value
-function convertDecimalToHex(d) {
-    return Math.round(parseFloat(d) * 255).toString(16);
-}
-// Converts a hex value to a decimal
-function convertHexToDecimal(h) {
-    return (parseIntFromHex(h) / 255);
-}
-
-var matchers = (function() {
-
-    // <http://www.w3.org/TR/css3-values/#integers>
-    var CSS_INTEGER = "[-\\+]?\\d+%?";
-
-    // <http://www.w3.org/TR/css3-values/#number-value>
-    var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
-
-    // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
-    var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
-
-    // Actual matching.
-    // Parentheses and commas are optional, but not required.
-    // Whitespace can take the place of commas or opening paren
-    var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-    var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-
-    return {
-        CSS_UNIT: new RegExp(CSS_UNIT),
-        rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
-        rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
-        hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
-        hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
-        hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
-        hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
-        hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-        hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
-    };
-})();
-
-// `isValidCSSUnit`
-// Take in a single string / number and check to see if it looks like a CSS unit
-// (see `matchers` above for definition).
-function isValidCSSUnit(color) {
-    return !!matchers.CSS_UNIT.exec(color);
-}
-
-// `stringInputToObject`
-// Permissive string parsing.  Take in a number of formats, and output an object
-// based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
-function stringInputToObject(color) {
-
-    color = color.replace(trimLeft,'').replace(trimRight, '').toLowerCase();
-    var named = false;
-    if (names[color]) {
-        color = names[color];
-        named = true;
-    }
-    else if (color == 'transparent') {
-        return { r: 0, g: 0, b: 0, a: 0, format: "name" };
-    }
-
-    // Try to match string input using regular expressions.
-    // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
-    // Just return an object and let the conversion functions handle that.
-    // This way the result will be the same whether the tinycolor is initialized with string or object.
-    var match;
-    if ((match = matchers.rgb.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3] };
-    }
-    if ((match = matchers.rgba.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3], a: match[4] };
-    }
-    if ((match = matchers.hsl.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3] };
-    }
-    if ((match = matchers.hsla.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3], a: match[4] };
-    }
-    if ((match = matchers.hsv.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3] };
-    }
-    if ((match = matchers.hsva.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3], a: match[4] };
-    }
-    if ((match = matchers.hex8.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            a: convertHexToDecimal(match[4]),
-            format: named ? "name" : "hex8"
-        };
-    }
-    if ((match = matchers.hex6.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            format: named ? "name" : "hex"
-        };
-    }
-    if ((match = matchers.hex4.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            a: convertHexToDecimal(match[4] + '' + match[4]),
-            format: named ? "name" : "hex8"
-        };
-    }
-    if ((match = matchers.hex3.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            format: named ? "name" : "hex"
-        };
-    }
-
-    return false;
-}
-
-function validateWCAG2Parms(parms) {
-    // return valid WCAG2 parms for isReadable.
-    // If input parms are invalid, return {"level":"AA", "size":"small"}
-    var level, size;
-    parms = parms || {"level":"AA", "size":"small"};
-    level = (parms.level || "AA").toUpperCase();
-    size = (parms.size || "small").toLowerCase();
-    if (level !== "AA" && level !== "AAA") {
-        level = "AA";
-    }
-    if (size !== "small" && size !== "large") {
-        size = "small";
-    }
-    return {"level":level, "size":size};
-}
-
-// Node: Export function
-if ( true && module.exports) {
-    module.exports = tinycolor;
-}
-// AMD/requirejs: Define the module
-else if (true) {
-    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {return tinycolor;}).call(exports, __webpack_require__, exports, module),
-		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-}
-// Browser: Expose to window
-else {}
-
-})(Math);
-
-
-/***/ }),
-
-/***/ 5413:
+/***/ 3914:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "zL": function() { return /* reexport */ feature; }
+  N4: function() { return /* reexport */ feature; }
 });
 
 // UNUSED EXPORTS: bbox, merge, mergeArcs, mesh, meshArcs, neighbors, quantize, transform, untransform
@@ -90557,7 +85319,7 @@ function object(topology, o) {
 
 /***/ }),
 
-/***/ 9630:
+/***/ 6266:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -90577,8 +85339,8 @@ function object(topology, o) {
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 var gregorianCalendar = main.instance();
@@ -91295,7 +86057,7 @@ function toSolar(yearOrDate, monthOrResult, day, isIntercalaryOrResult, result) 
 
 /***/ }),
 
-/***/ 346:
+/***/ 2275:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -91315,8 +86077,8 @@ function toSolar(yearOrDate, monthOrResult, day, isIntercalaryOrResult, result) 
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Coptic calendar.
@@ -91484,7 +86246,7 @@ main.calendars.coptic = CopticCalendar;
 
 /***/ }),
 
-/***/ 1487:
+/***/ 6962:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -91504,8 +86266,8 @@ main.calendars.coptic = CopticCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Discworld calendar - Unseen University version.
@@ -91717,7 +86479,7 @@ main.calendars.discworld = DiscworldCalendar;
 
 /***/ }),
 
-/***/ 8069:
+/***/ 3322:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -91737,8 +86499,8 @@ main.calendars.discworld = DiscworldCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Ethiopian calendar.
@@ -91906,7 +86668,7 @@ main.calendars.ethiopian = EthiopianCalendar;
 
 /***/ }),
 
-/***/ 3331:
+/***/ 3502:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -91926,8 +86688,8 @@ main.calendars.ethiopian = EthiopianCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Hebrew civil calendar.
@@ -92185,7 +86947,7 @@ main.calendars.hebrew = HebrewCalendar;
 
 /***/ }),
 
-/***/ 7328:
+/***/ 2091:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -92205,8 +86967,8 @@ main.calendars.hebrew = HebrewCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Islamic or '16 civil' calendar.
@@ -92371,7 +87133,7 @@ main.calendars.islamic = IslamicCalendar;
 
 /***/ }),
 
-/***/ 1354:
+/***/ 6016:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -92391,8 +87153,8 @@ main.calendars.islamic = IslamicCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Julian calendar.
@@ -92559,7 +87321,7 @@ main.calendars.julian = JulianCalendar;
 
 /***/ }),
 
-/***/ 3392:
+/***/ 7151:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -92579,8 +87341,8 @@ main.calendars.julian = JulianCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Mayan Long Count calendar.
@@ -92859,7 +87621,7 @@ main.calendars.mayan = MayanCalendar;
 
 /***/ }),
 
-/***/ 4329:
+/***/ 2439:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -92879,8 +87641,8 @@ main.calendars.mayan = MayanCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Nanakshahi calendar.
@@ -93044,7 +87806,7 @@ main.calendars.nanakshahi = NanakshahiCalendar;
 
 /***/ }),
 
-/***/ 587:
+/***/ 3696:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -93064,8 +87826,8 @@ main.calendars.nanakshahi = NanakshahiCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Nepali civil calendar.
@@ -93472,7 +88234,7 @@ main.calendars.nepali = NepaliCalendar;
 
 /***/ }),
 
-/***/ 8473:
+/***/ 2973:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -93492,8 +88254,8 @@ main.calendars.nepali = NepaliCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the Persian or Jalali calendar.
@@ -93667,7 +88429,7 @@ main.calendars.jalali = PersianCalendar;
 
 /***/ }),
 
-/***/ 5296:
+/***/ 7717:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -93687,8 +88449,8 @@ main.calendars.jalali = PersianCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 var gregorianCalendar = main.instance();
@@ -93858,7 +88620,7 @@ main.calendars.taiwan = TaiwanCalendar;
 
 /***/ }),
 
-/***/ 4539:
+/***/ 8327:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -93878,8 +88640,8 @@ main.calendars.taiwan = TaiwanCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 var gregorianCalendar = main.instance();
@@ -94049,7 +88811,7 @@ main.calendars.thai = ThaiCalendar;
 
 /***/ }),
 
-/***/ 2419:
+/***/ 9734:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -94070,8 +88832,8 @@ main.calendars.thai = ThaiCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var main = __webpack_require__(1791);
-var assign = __webpack_require__(3743);
+var main = __webpack_require__(6712);
+var assign = __webpack_require__(7365);
 
 
 /** Implementation of the UmmAlQura or 'saudi' calendar.
@@ -94419,7 +89181,7 @@ var ummalqura_dat = [
 
 /***/ }),
 
-/***/ 1791:
+/***/ 6712:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -94439,7 +89201,7 @@ var ummalqura_dat = [
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var assign = __webpack_require__(3743);
+var assign = __webpack_require__(7365);
 
 
 function Calendars() {
@@ -95329,7 +90091,7 @@ _exports.calendars.gregorian = GregorianCalendar;
 
 /***/ }),
 
-/***/ 8591:
+/***/ 2777:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 /*
@@ -95349,8 +90111,8 @@ _exports.calendars.gregorian = GregorianCalendar;
    Available under the MIT (http://keith-wood.name/licence.html) license. 
    Please attribute the author if you use it. */
 
-var assign = __webpack_require__(3743);
-var main = __webpack_require__(1791);
+var assign = __webpack_require__(7365);
+var main = __webpack_require__(6712);
 
 
 assign(main.regionalOptions[''], {
@@ -95834,6 +90596,1200 @@ assign(main.baseCalendar.prototype, {
 
 
 
+/***/ }),
+
+/***/ 7218:
+/***/ (function(module) {
+
+// This file is autogenerated. It's used to publish CJS to npm.
+(function (global, factory) {
+   true ? module.exports = factory() :
+  0;
+})(this, (function () { 'use strict';
+
+  function _typeof(obj) {
+    "@babel/helpers - typeof";
+
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+      return typeof obj;
+    } : function (obj) {
+      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    }, _typeof(obj);
+  }
+
+  // https://github.com/bgrins/TinyColor
+  // Brian Grinstead, MIT License
+
+  var trimLeft = /^\s+/;
+  var trimRight = /\s+$/;
+  function tinycolor(color, opts) {
+    color = color ? color : "";
+    opts = opts || {};
+
+    // If input is already a tinycolor, return itself
+    if (color instanceof tinycolor) {
+      return color;
+    }
+    // If we are called as a function, call using new instead
+    if (!(this instanceof tinycolor)) {
+      return new tinycolor(color, opts);
+    }
+    var rgb = inputToRGB(color);
+    this._originalInput = color, this._r = rgb.r, this._g = rgb.g, this._b = rgb.b, this._a = rgb.a, this._roundA = Math.round(100 * this._a) / 100, this._format = opts.format || rgb.format;
+    this._gradientType = opts.gradientType;
+
+    // Don't let the range of [0,255] come back in [0,1].
+    // Potentially lose a little bit of precision here, but will fix issues where
+    // .5 gets interpreted as half of the total, instead of half of 1
+    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+    if (this._r < 1) this._r = Math.round(this._r);
+    if (this._g < 1) this._g = Math.round(this._g);
+    if (this._b < 1) this._b = Math.round(this._b);
+    this._ok = rgb.ok;
+  }
+  tinycolor.prototype = {
+    isDark: function isDark() {
+      return this.getBrightness() < 128;
+    },
+    isLight: function isLight() {
+      return !this.isDark();
+    },
+    isValid: function isValid() {
+      return this._ok;
+    },
+    getOriginalInput: function getOriginalInput() {
+      return this._originalInput;
+    },
+    getFormat: function getFormat() {
+      return this._format;
+    },
+    getAlpha: function getAlpha() {
+      return this._a;
+    },
+    getBrightness: function getBrightness() {
+      //http://www.w3.org/TR/AERT#color-contrast
+      var rgb = this.toRgb();
+      return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+    },
+    getLuminance: function getLuminance() {
+      //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+      var rgb = this.toRgb();
+      var RsRGB, GsRGB, BsRGB, R, G, B;
+      RsRGB = rgb.r / 255;
+      GsRGB = rgb.g / 255;
+      BsRGB = rgb.b / 255;
+      if (RsRGB <= 0.03928) R = RsRGB / 12.92;else R = Math.pow((RsRGB + 0.055) / 1.055, 2.4);
+      if (GsRGB <= 0.03928) G = GsRGB / 12.92;else G = Math.pow((GsRGB + 0.055) / 1.055, 2.4);
+      if (BsRGB <= 0.03928) B = BsRGB / 12.92;else B = Math.pow((BsRGB + 0.055) / 1.055, 2.4);
+      return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+    },
+    setAlpha: function setAlpha(value) {
+      this._a = boundAlpha(value);
+      this._roundA = Math.round(100 * this._a) / 100;
+      return this;
+    },
+    toHsv: function toHsv() {
+      var hsv = rgbToHsv(this._r, this._g, this._b);
+      return {
+        h: hsv.h * 360,
+        s: hsv.s,
+        v: hsv.v,
+        a: this._a
+      };
+    },
+    toHsvString: function toHsvString() {
+      var hsv = rgbToHsv(this._r, this._g, this._b);
+      var h = Math.round(hsv.h * 360),
+        s = Math.round(hsv.s * 100),
+        v = Math.round(hsv.v * 100);
+      return this._a == 1 ? "hsv(" + h + ", " + s + "%, " + v + "%)" : "hsva(" + h + ", " + s + "%, " + v + "%, " + this._roundA + ")";
+    },
+    toHsl: function toHsl() {
+      var hsl = rgbToHsl(this._r, this._g, this._b);
+      return {
+        h: hsl.h * 360,
+        s: hsl.s,
+        l: hsl.l,
+        a: this._a
+      };
+    },
+    toHslString: function toHslString() {
+      var hsl = rgbToHsl(this._r, this._g, this._b);
+      var h = Math.round(hsl.h * 360),
+        s = Math.round(hsl.s * 100),
+        l = Math.round(hsl.l * 100);
+      return this._a == 1 ? "hsl(" + h + ", " + s + "%, " + l + "%)" : "hsla(" + h + ", " + s + "%, " + l + "%, " + this._roundA + ")";
+    },
+    toHex: function toHex(allow3Char) {
+      return rgbToHex(this._r, this._g, this._b, allow3Char);
+    },
+    toHexString: function toHexString(allow3Char) {
+      return "#" + this.toHex(allow3Char);
+    },
+    toHex8: function toHex8(allow4Char) {
+      return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
+    },
+    toHex8String: function toHex8String(allow4Char) {
+      return "#" + this.toHex8(allow4Char);
+    },
+    toRgb: function toRgb() {
+      return {
+        r: Math.round(this._r),
+        g: Math.round(this._g),
+        b: Math.round(this._b),
+        a: this._a
+      };
+    },
+    toRgbString: function toRgbString() {
+      return this._a == 1 ? "rgb(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ")" : "rgba(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ", " + this._roundA + ")";
+    },
+    toPercentageRgb: function toPercentageRgb() {
+      return {
+        r: Math.round(bound01(this._r, 255) * 100) + "%",
+        g: Math.round(bound01(this._g, 255) * 100) + "%",
+        b: Math.round(bound01(this._b, 255) * 100) + "%",
+        a: this._a
+      };
+    },
+    toPercentageRgbString: function toPercentageRgbString() {
+      return this._a == 1 ? "rgb(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%)" : "rgba(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
+    },
+    toName: function toName() {
+      if (this._a === 0) {
+        return "transparent";
+      }
+      if (this._a < 1) {
+        return false;
+      }
+      return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+    },
+    toFilter: function toFilter(secondColor) {
+      var hex8String = "#" + rgbaToArgbHex(this._r, this._g, this._b, this._a);
+      var secondHex8String = hex8String;
+      var gradientType = this._gradientType ? "GradientType = 1, " : "";
+      if (secondColor) {
+        var s = tinycolor(secondColor);
+        secondHex8String = "#" + rgbaToArgbHex(s._r, s._g, s._b, s._a);
+      }
+      return "progid:DXImageTransform.Microsoft.gradient(" + gradientType + "startColorstr=" + hex8String + ",endColorstr=" + secondHex8String + ")";
+    },
+    toString: function toString(format) {
+      var formatSet = !!format;
+      format = format || this._format;
+      var formattedString = false;
+      var hasAlpha = this._a < 1 && this._a >= 0;
+      var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
+      if (needsAlphaFormat) {
+        // Special case for "transparent", all other non-alpha formats
+        // will return rgba when there is transparency.
+        if (format === "name" && this._a === 0) {
+          return this.toName();
+        }
+        return this.toRgbString();
+      }
+      if (format === "rgb") {
+        formattedString = this.toRgbString();
+      }
+      if (format === "prgb") {
+        formattedString = this.toPercentageRgbString();
+      }
+      if (format === "hex" || format === "hex6") {
+        formattedString = this.toHexString();
+      }
+      if (format === "hex3") {
+        formattedString = this.toHexString(true);
+      }
+      if (format === "hex4") {
+        formattedString = this.toHex8String(true);
+      }
+      if (format === "hex8") {
+        formattedString = this.toHex8String();
+      }
+      if (format === "name") {
+        formattedString = this.toName();
+      }
+      if (format === "hsl") {
+        formattedString = this.toHslString();
+      }
+      if (format === "hsv") {
+        formattedString = this.toHsvString();
+      }
+      return formattedString || this.toHexString();
+    },
+    clone: function clone() {
+      return tinycolor(this.toString());
+    },
+    _applyModification: function _applyModification(fn, args) {
+      var color = fn.apply(null, [this].concat([].slice.call(args)));
+      this._r = color._r;
+      this._g = color._g;
+      this._b = color._b;
+      this.setAlpha(color._a);
+      return this;
+    },
+    lighten: function lighten() {
+      return this._applyModification(_lighten, arguments);
+    },
+    brighten: function brighten() {
+      return this._applyModification(_brighten, arguments);
+    },
+    darken: function darken() {
+      return this._applyModification(_darken, arguments);
+    },
+    desaturate: function desaturate() {
+      return this._applyModification(_desaturate, arguments);
+    },
+    saturate: function saturate() {
+      return this._applyModification(_saturate, arguments);
+    },
+    greyscale: function greyscale() {
+      return this._applyModification(_greyscale, arguments);
+    },
+    spin: function spin() {
+      return this._applyModification(_spin, arguments);
+    },
+    _applyCombination: function _applyCombination(fn, args) {
+      return fn.apply(null, [this].concat([].slice.call(args)));
+    },
+    analogous: function analogous() {
+      return this._applyCombination(_analogous, arguments);
+    },
+    complement: function complement() {
+      return this._applyCombination(_complement, arguments);
+    },
+    monochromatic: function monochromatic() {
+      return this._applyCombination(_monochromatic, arguments);
+    },
+    splitcomplement: function splitcomplement() {
+      return this._applyCombination(_splitcomplement, arguments);
+    },
+    // Disabled until https://github.com/bgrins/TinyColor/issues/254
+    // polyad: function (number) {
+    //   return this._applyCombination(polyad, [number]);
+    // },
+    triad: function triad() {
+      return this._applyCombination(polyad, [3]);
+    },
+    tetrad: function tetrad() {
+      return this._applyCombination(polyad, [4]);
+    }
+  };
+
+  // If input is an object, force 1 into "1.0" to handle ratios properly
+  // String input requires "1.0" as input, so 1 will be treated as 1
+  tinycolor.fromRatio = function (color, opts) {
+    if (_typeof(color) == "object") {
+      var newColor = {};
+      for (var i in color) {
+        if (color.hasOwnProperty(i)) {
+          if (i === "a") {
+            newColor[i] = color[i];
+          } else {
+            newColor[i] = convertToPercentage(color[i]);
+          }
+        }
+      }
+      color = newColor;
+    }
+    return tinycolor(color, opts);
+  };
+
+  // Given a string or object, convert that input to RGB
+  // Possible string inputs:
+  //
+  //     "red"
+  //     "#f00" or "f00"
+  //     "#ff0000" or "ff0000"
+  //     "#ff000000" or "ff000000"
+  //     "rgb 255 0 0" or "rgb (255, 0, 0)"
+  //     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
+  //     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
+  //     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
+  //     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
+  //     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
+  //     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
+  //
+  function inputToRGB(color) {
+    var rgb = {
+      r: 0,
+      g: 0,
+      b: 0
+    };
+    var a = 1;
+    var s = null;
+    var v = null;
+    var l = null;
+    var ok = false;
+    var format = false;
+    if (typeof color == "string") {
+      color = stringInputToObject(color);
+    }
+    if (_typeof(color) == "object") {
+      if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
+        rgb = rgbToRgb(color.r, color.g, color.b);
+        ok = true;
+        format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
+      } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
+        s = convertToPercentage(color.s);
+        v = convertToPercentage(color.v);
+        rgb = hsvToRgb(color.h, s, v);
+        ok = true;
+        format = "hsv";
+      } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
+        s = convertToPercentage(color.s);
+        l = convertToPercentage(color.l);
+        rgb = hslToRgb(color.h, s, l);
+        ok = true;
+        format = "hsl";
+      }
+      if (color.hasOwnProperty("a")) {
+        a = color.a;
+      }
+    }
+    a = boundAlpha(a);
+    return {
+      ok: ok,
+      format: color.format || format,
+      r: Math.min(255, Math.max(rgb.r, 0)),
+      g: Math.min(255, Math.max(rgb.g, 0)),
+      b: Math.min(255, Math.max(rgb.b, 0)),
+      a: a
+    };
+  }
+
+  // Conversion Functions
+  // --------------------
+
+  // `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
+  // <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
+
+  // `rgbToRgb`
+  // Handle bounds / percentage checking to conform to CSS color spec
+  // <http://www.w3.org/TR/css3-color/>
+  // *Assumes:* r, g, b in [0, 255] or [0, 1]
+  // *Returns:* { r, g, b } in [0, 255]
+  function rgbToRgb(r, g, b) {
+    return {
+      r: bound01(r, 255) * 255,
+      g: bound01(g, 255) * 255,
+      b: bound01(b, 255) * 255
+    };
+  }
+
+  // `rgbToHsl`
+  // Converts an RGB color value to HSL.
+  // *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
+  // *Returns:* { h, s, l } in [0,1]
+  function rgbToHsl(r, g, b) {
+    r = bound01(r, 255);
+    g = bound01(g, 255);
+    b = bound01(b, 255);
+    var max = Math.max(r, g, b),
+      min = Math.min(r, g, b);
+    var h,
+      s,
+      l = (max + min) / 2;
+    if (max == min) {
+      h = s = 0; // achromatic
+    } else {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r:
+          h = (g - b) / d + (g < b ? 6 : 0);
+          break;
+        case g:
+          h = (b - r) / d + 2;
+          break;
+        case b:
+          h = (r - g) / d + 4;
+          break;
+      }
+      h /= 6;
+    }
+    return {
+      h: h,
+      s: s,
+      l: l
+    };
+  }
+
+  // `hslToRgb`
+  // Converts an HSL color value to RGB.
+  // *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
+  // *Returns:* { r, g, b } in the set [0, 255]
+  function hslToRgb(h, s, l) {
+    var r, g, b;
+    h = bound01(h, 360);
+    s = bound01(s, 100);
+    l = bound01(l, 100);
+    function hue2rgb(p, q, t) {
+      if (t < 0) t += 1;
+      if (t > 1) t -= 1;
+      if (t < 1 / 6) return p + (q - p) * 6 * t;
+      if (t < 1 / 2) return q;
+      if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+      return p;
+    }
+    if (s === 0) {
+      r = g = b = l; // achromatic
+    } else {
+      var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      var p = 2 * l - q;
+      r = hue2rgb(p, q, h + 1 / 3);
+      g = hue2rgb(p, q, h);
+      b = hue2rgb(p, q, h - 1 / 3);
+    }
+    return {
+      r: r * 255,
+      g: g * 255,
+      b: b * 255
+    };
+  }
+
+  // `rgbToHsv`
+  // Converts an RGB color value to HSV
+  // *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
+  // *Returns:* { h, s, v } in [0,1]
+  function rgbToHsv(r, g, b) {
+    r = bound01(r, 255);
+    g = bound01(g, 255);
+    b = bound01(b, 255);
+    var max = Math.max(r, g, b),
+      min = Math.min(r, g, b);
+    var h,
+      s,
+      v = max;
+    var d = max - min;
+    s = max === 0 ? 0 : d / max;
+    if (max == min) {
+      h = 0; // achromatic
+    } else {
+      switch (max) {
+        case r:
+          h = (g - b) / d + (g < b ? 6 : 0);
+          break;
+        case g:
+          h = (b - r) / d + 2;
+          break;
+        case b:
+          h = (r - g) / d + 4;
+          break;
+      }
+      h /= 6;
+    }
+    return {
+      h: h,
+      s: s,
+      v: v
+    };
+  }
+
+  // `hsvToRgb`
+  // Converts an HSV color value to RGB.
+  // *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
+  // *Returns:* { r, g, b } in the set [0, 255]
+  function hsvToRgb(h, s, v) {
+    h = bound01(h, 360) * 6;
+    s = bound01(s, 100);
+    v = bound01(v, 100);
+    var i = Math.floor(h),
+      f = h - i,
+      p = v * (1 - s),
+      q = v * (1 - f * s),
+      t = v * (1 - (1 - f) * s),
+      mod = i % 6,
+      r = [v, q, p, p, t, v][mod],
+      g = [t, v, v, q, p, p][mod],
+      b = [p, p, t, v, v, q][mod];
+    return {
+      r: r * 255,
+      g: g * 255,
+      b: b * 255
+    };
+  }
+
+  // `rgbToHex`
+  // Converts an RGB color to hex
+  // Assumes r, g, and b are contained in the set [0, 255]
+  // Returns a 3 or 6 character hex
+  function rgbToHex(r, g, b, allow3Char) {
+    var hex = [pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16))];
+
+    // Return a 3 character hex if possible
+    if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
+      return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
+    }
+    return hex.join("");
+  }
+
+  // `rgbaToHex`
+  // Converts an RGBA color plus alpha transparency to hex
+  // Assumes r, g, b are contained in the set [0, 255] and
+  // a in [0, 1]. Returns a 4 or 8 character rgba hex
+  function rgbaToHex(r, g, b, a, allow4Char) {
+    var hex = [pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16)), pad2(convertDecimalToHex(a))];
+
+    // Return a 4 character hex if possible
+    if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
+      return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
+    }
+    return hex.join("");
+  }
+
+  // `rgbaToArgbHex`
+  // Converts an RGBA color to an ARGB Hex8 string
+  // Rarely used, but required for "toFilter()"
+  function rgbaToArgbHex(r, g, b, a) {
+    var hex = [pad2(convertDecimalToHex(a)), pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16))];
+    return hex.join("");
+  }
+
+  // `equals`
+  // Can be called with any tinycolor input
+  tinycolor.equals = function (color1, color2) {
+    if (!color1 || !color2) return false;
+    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+  };
+  tinycolor.random = function () {
+    return tinycolor.fromRatio({
+      r: Math.random(),
+      g: Math.random(),
+      b: Math.random()
+    });
+  };
+
+  // Modification Functions
+  // ----------------------
+  // Thanks to less.js for some of the basics here
+  // <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
+
+  function _desaturate(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.s -= amount / 100;
+    hsl.s = clamp01(hsl.s);
+    return tinycolor(hsl);
+  }
+  function _saturate(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.s += amount / 100;
+    hsl.s = clamp01(hsl.s);
+    return tinycolor(hsl);
+  }
+  function _greyscale(color) {
+    return tinycolor(color).desaturate(100);
+  }
+  function _lighten(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.l += amount / 100;
+    hsl.l = clamp01(hsl.l);
+    return tinycolor(hsl);
+  }
+  function _brighten(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var rgb = tinycolor(color).toRgb();
+    rgb.r = Math.max(0, Math.min(255, rgb.r - Math.round(255 * -(amount / 100))));
+    rgb.g = Math.max(0, Math.min(255, rgb.g - Math.round(255 * -(amount / 100))));
+    rgb.b = Math.max(0, Math.min(255, rgb.b - Math.round(255 * -(amount / 100))));
+    return tinycolor(rgb);
+  }
+  function _darken(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.l -= amount / 100;
+    hsl.l = clamp01(hsl.l);
+    return tinycolor(hsl);
+  }
+
+  // Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
+  // Values outside of this range will be wrapped into this range.
+  function _spin(color, amount) {
+    var hsl = tinycolor(color).toHsl();
+    var hue = (hsl.h + amount) % 360;
+    hsl.h = hue < 0 ? 360 + hue : hue;
+    return tinycolor(hsl);
+  }
+
+  // Combination Functions
+  // ---------------------
+  // Thanks to jQuery xColor for some of the ideas behind these
+  // <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
+
+  function _complement(color) {
+    var hsl = tinycolor(color).toHsl();
+    hsl.h = (hsl.h + 180) % 360;
+    return tinycolor(hsl);
+  }
+  function polyad(color, number) {
+    if (isNaN(number) || number <= 0) {
+      throw new Error("Argument to polyad must be a positive number");
+    }
+    var hsl = tinycolor(color).toHsl();
+    var result = [tinycolor(color)];
+    var step = 360 / number;
+    for (var i = 1; i < number; i++) {
+      result.push(tinycolor({
+        h: (hsl.h + i * step) % 360,
+        s: hsl.s,
+        l: hsl.l
+      }));
+    }
+    return result;
+  }
+  function _splitcomplement(color) {
+    var hsl = tinycolor(color).toHsl();
+    var h = hsl.h;
+    return [tinycolor(color), tinycolor({
+      h: (h + 72) % 360,
+      s: hsl.s,
+      l: hsl.l
+    }), tinycolor({
+      h: (h + 216) % 360,
+      s: hsl.s,
+      l: hsl.l
+    })];
+  }
+  function _analogous(color, results, slices) {
+    results = results || 6;
+    slices = slices || 30;
+    var hsl = tinycolor(color).toHsl();
+    var part = 360 / slices;
+    var ret = [tinycolor(color)];
+    for (hsl.h = (hsl.h - (part * results >> 1) + 720) % 360; --results;) {
+      hsl.h = (hsl.h + part) % 360;
+      ret.push(tinycolor(hsl));
+    }
+    return ret;
+  }
+  function _monochromatic(color, results) {
+    results = results || 6;
+    var hsv = tinycolor(color).toHsv();
+    var h = hsv.h,
+      s = hsv.s,
+      v = hsv.v;
+    var ret = [];
+    var modification = 1 / results;
+    while (results--) {
+      ret.push(tinycolor({
+        h: h,
+        s: s,
+        v: v
+      }));
+      v = (v + modification) % 1;
+    }
+    return ret;
+  }
+
+  // Utility Functions
+  // ---------------------
+
+  tinycolor.mix = function (color1, color2, amount) {
+    amount = amount === 0 ? 0 : amount || 50;
+    var rgb1 = tinycolor(color1).toRgb();
+    var rgb2 = tinycolor(color2).toRgb();
+    var p = amount / 100;
+    var rgba = {
+      r: (rgb2.r - rgb1.r) * p + rgb1.r,
+      g: (rgb2.g - rgb1.g) * p + rgb1.g,
+      b: (rgb2.b - rgb1.b) * p + rgb1.b,
+      a: (rgb2.a - rgb1.a) * p + rgb1.a
+    };
+    return tinycolor(rgba);
+  };
+
+  // Readability Functions
+  // ---------------------
+  // <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
+
+  // `contrast`
+  // Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
+  tinycolor.readability = function (color1, color2) {
+    var c1 = tinycolor(color1);
+    var c2 = tinycolor(color2);
+    return (Math.max(c1.getLuminance(), c2.getLuminance()) + 0.05) / (Math.min(c1.getLuminance(), c2.getLuminance()) + 0.05);
+  };
+
+  // `isReadable`
+  // Ensure that foreground and background color combinations meet WCAG2 guidelines.
+  // The third argument is an optional Object.
+  //      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
+  //      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
+  // If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
+
+  // *Example*
+  //    tinycolor.isReadable("#000", "#111") => false
+  //    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
+  tinycolor.isReadable = function (color1, color2, wcag2) {
+    var readability = tinycolor.readability(color1, color2);
+    var wcag2Parms, out;
+    out = false;
+    wcag2Parms = validateWCAG2Parms(wcag2);
+    switch (wcag2Parms.level + wcag2Parms.size) {
+      case "AAsmall":
+      case "AAAlarge":
+        out = readability >= 4.5;
+        break;
+      case "AAlarge":
+        out = readability >= 3;
+        break;
+      case "AAAsmall":
+        out = readability >= 7;
+        break;
+    }
+    return out;
+  };
+
+  // `mostReadable`
+  // Given a base color and a list of possible foreground or background
+  // colors for that base, returns the most readable color.
+  // Optionally returns Black or White if the most readable color is unreadable.
+  // *Example*
+  //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
+  //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
+  //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
+  //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
+  tinycolor.mostReadable = function (baseColor, colorList, args) {
+    var bestColor = null;
+    var bestScore = 0;
+    var readability;
+    var includeFallbackColors, level, size;
+    args = args || {};
+    includeFallbackColors = args.includeFallbackColors;
+    level = args.level;
+    size = args.size;
+    for (var i = 0; i < colorList.length; i++) {
+      readability = tinycolor.readability(baseColor, colorList[i]);
+      if (readability > bestScore) {
+        bestScore = readability;
+        bestColor = tinycolor(colorList[i]);
+      }
+    }
+    if (tinycolor.isReadable(baseColor, bestColor, {
+      level: level,
+      size: size
+    }) || !includeFallbackColors) {
+      return bestColor;
+    } else {
+      args.includeFallbackColors = false;
+      return tinycolor.mostReadable(baseColor, ["#fff", "#000"], args);
+    }
+  };
+
+  // Big List of Colors
+  // ------------------
+  // <https://www.w3.org/TR/css-color-4/#named-colors>
+  var names = tinycolor.names = {
+    aliceblue: "f0f8ff",
+    antiquewhite: "faebd7",
+    aqua: "0ff",
+    aquamarine: "7fffd4",
+    azure: "f0ffff",
+    beige: "f5f5dc",
+    bisque: "ffe4c4",
+    black: "000",
+    blanchedalmond: "ffebcd",
+    blue: "00f",
+    blueviolet: "8a2be2",
+    brown: "a52a2a",
+    burlywood: "deb887",
+    burntsienna: "ea7e5d",
+    cadetblue: "5f9ea0",
+    chartreuse: "7fff00",
+    chocolate: "d2691e",
+    coral: "ff7f50",
+    cornflowerblue: "6495ed",
+    cornsilk: "fff8dc",
+    crimson: "dc143c",
+    cyan: "0ff",
+    darkblue: "00008b",
+    darkcyan: "008b8b",
+    darkgoldenrod: "b8860b",
+    darkgray: "a9a9a9",
+    darkgreen: "006400",
+    darkgrey: "a9a9a9",
+    darkkhaki: "bdb76b",
+    darkmagenta: "8b008b",
+    darkolivegreen: "556b2f",
+    darkorange: "ff8c00",
+    darkorchid: "9932cc",
+    darkred: "8b0000",
+    darksalmon: "e9967a",
+    darkseagreen: "8fbc8f",
+    darkslateblue: "483d8b",
+    darkslategray: "2f4f4f",
+    darkslategrey: "2f4f4f",
+    darkturquoise: "00ced1",
+    darkviolet: "9400d3",
+    deeppink: "ff1493",
+    deepskyblue: "00bfff",
+    dimgray: "696969",
+    dimgrey: "696969",
+    dodgerblue: "1e90ff",
+    firebrick: "b22222",
+    floralwhite: "fffaf0",
+    forestgreen: "228b22",
+    fuchsia: "f0f",
+    gainsboro: "dcdcdc",
+    ghostwhite: "f8f8ff",
+    gold: "ffd700",
+    goldenrod: "daa520",
+    gray: "808080",
+    green: "008000",
+    greenyellow: "adff2f",
+    grey: "808080",
+    honeydew: "f0fff0",
+    hotpink: "ff69b4",
+    indianred: "cd5c5c",
+    indigo: "4b0082",
+    ivory: "fffff0",
+    khaki: "f0e68c",
+    lavender: "e6e6fa",
+    lavenderblush: "fff0f5",
+    lawngreen: "7cfc00",
+    lemonchiffon: "fffacd",
+    lightblue: "add8e6",
+    lightcoral: "f08080",
+    lightcyan: "e0ffff",
+    lightgoldenrodyellow: "fafad2",
+    lightgray: "d3d3d3",
+    lightgreen: "90ee90",
+    lightgrey: "d3d3d3",
+    lightpink: "ffb6c1",
+    lightsalmon: "ffa07a",
+    lightseagreen: "20b2aa",
+    lightskyblue: "87cefa",
+    lightslategray: "789",
+    lightslategrey: "789",
+    lightsteelblue: "b0c4de",
+    lightyellow: "ffffe0",
+    lime: "0f0",
+    limegreen: "32cd32",
+    linen: "faf0e6",
+    magenta: "f0f",
+    maroon: "800000",
+    mediumaquamarine: "66cdaa",
+    mediumblue: "0000cd",
+    mediumorchid: "ba55d3",
+    mediumpurple: "9370db",
+    mediumseagreen: "3cb371",
+    mediumslateblue: "7b68ee",
+    mediumspringgreen: "00fa9a",
+    mediumturquoise: "48d1cc",
+    mediumvioletred: "c71585",
+    midnightblue: "191970",
+    mintcream: "f5fffa",
+    mistyrose: "ffe4e1",
+    moccasin: "ffe4b5",
+    navajowhite: "ffdead",
+    navy: "000080",
+    oldlace: "fdf5e6",
+    olive: "808000",
+    olivedrab: "6b8e23",
+    orange: "ffa500",
+    orangered: "ff4500",
+    orchid: "da70d6",
+    palegoldenrod: "eee8aa",
+    palegreen: "98fb98",
+    paleturquoise: "afeeee",
+    palevioletred: "db7093",
+    papayawhip: "ffefd5",
+    peachpuff: "ffdab9",
+    peru: "cd853f",
+    pink: "ffc0cb",
+    plum: "dda0dd",
+    powderblue: "b0e0e6",
+    purple: "800080",
+    rebeccapurple: "663399",
+    red: "f00",
+    rosybrown: "bc8f8f",
+    royalblue: "4169e1",
+    saddlebrown: "8b4513",
+    salmon: "fa8072",
+    sandybrown: "f4a460",
+    seagreen: "2e8b57",
+    seashell: "fff5ee",
+    sienna: "a0522d",
+    silver: "c0c0c0",
+    skyblue: "87ceeb",
+    slateblue: "6a5acd",
+    slategray: "708090",
+    slategrey: "708090",
+    snow: "fffafa",
+    springgreen: "00ff7f",
+    steelblue: "4682b4",
+    tan: "d2b48c",
+    teal: "008080",
+    thistle: "d8bfd8",
+    tomato: "ff6347",
+    turquoise: "40e0d0",
+    violet: "ee82ee",
+    wheat: "f5deb3",
+    white: "fff",
+    whitesmoke: "f5f5f5",
+    yellow: "ff0",
+    yellowgreen: "9acd32"
+  };
+
+  // Make it easy to access colors via `hexNames[hex]`
+  var hexNames = tinycolor.hexNames = flip(names);
+
+  // Utilities
+  // ---------
+
+  // `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
+  function flip(o) {
+    var flipped = {};
+    for (var i in o) {
+      if (o.hasOwnProperty(i)) {
+        flipped[o[i]] = i;
+      }
+    }
+    return flipped;
+  }
+
+  // Return a valid alpha value [0,1] with all invalid values being set to 1
+  function boundAlpha(a) {
+    a = parseFloat(a);
+    if (isNaN(a) || a < 0 || a > 1) {
+      a = 1;
+    }
+    return a;
+  }
+
+  // Take input from [0, n] and return it as [0, 1]
+  function bound01(n, max) {
+    if (isOnePointZero(n)) n = "100%";
+    var processPercent = isPercentage(n);
+    n = Math.min(max, Math.max(0, parseFloat(n)));
+
+    // Automatically convert percentage into number
+    if (processPercent) {
+      n = parseInt(n * max, 10) / 100;
+    }
+
+    // Handle floating point rounding errors
+    if (Math.abs(n - max) < 0.000001) {
+      return 1;
+    }
+
+    // Convert into [0, 1] range if it isn't already
+    return n % max / parseFloat(max);
+  }
+
+  // Force a number between 0 and 1
+  function clamp01(val) {
+    return Math.min(1, Math.max(0, val));
+  }
+
+  // Parse a base-16 hex value into a base-10 integer
+  function parseIntFromHex(val) {
+    return parseInt(val, 16);
+  }
+
+  // Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
+  // <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
+  function isOnePointZero(n) {
+    return typeof n == "string" && n.indexOf(".") != -1 && parseFloat(n) === 1;
+  }
+
+  // Check to see if string passed in is a percentage
+  function isPercentage(n) {
+    return typeof n === "string" && n.indexOf("%") != -1;
+  }
+
+  // Force a hex value to have 2 characters
+  function pad2(c) {
+    return c.length == 1 ? "0" + c : "" + c;
+  }
+
+  // Replace a decimal with it's percentage value
+  function convertToPercentage(n) {
+    if (n <= 1) {
+      n = n * 100 + "%";
+    }
+    return n;
+  }
+
+  // Converts a decimal to a hex value
+  function convertDecimalToHex(d) {
+    return Math.round(parseFloat(d) * 255).toString(16);
+  }
+  // Converts a hex value to a decimal
+  function convertHexToDecimal(h) {
+    return parseIntFromHex(h) / 255;
+  }
+  var matchers = function () {
+    // <http://www.w3.org/TR/css3-values/#integers>
+    var CSS_INTEGER = "[-\\+]?\\d+%?";
+
+    // <http://www.w3.org/TR/css3-values/#number-value>
+    var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
+
+    // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
+    var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
+
+    // Actual matching.
+    // Parentheses and commas are optional, but not required.
+    // Whitespace can take the place of commas or opening paren
+    var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+    var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+    return {
+      CSS_UNIT: new RegExp(CSS_UNIT),
+      rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
+      rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
+      hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
+      hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
+      hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
+      hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
+      hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+      hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+      hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+      hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+    };
+  }();
+
+  // `isValidCSSUnit`
+  // Take in a single string / number and check to see if it looks like a CSS unit
+  // (see `matchers` above for definition).
+  function isValidCSSUnit(color) {
+    return !!matchers.CSS_UNIT.exec(color);
+  }
+
+  // `stringInputToObject`
+  // Permissive string parsing.  Take in a number of formats, and output an object
+  // based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
+  function stringInputToObject(color) {
+    color = color.replace(trimLeft, "").replace(trimRight, "").toLowerCase();
+    var named = false;
+    if (names[color]) {
+      color = names[color];
+      named = true;
+    } else if (color == "transparent") {
+      return {
+        r: 0,
+        g: 0,
+        b: 0,
+        a: 0,
+        format: "name"
+      };
+    }
+
+    // Try to match string input using regular expressions.
+    // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
+    // Just return an object and let the conversion functions handle that.
+    // This way the result will be the same whether the tinycolor is initialized with string or object.
+    var match;
+    if (match = matchers.rgb.exec(color)) {
+      return {
+        r: match[1],
+        g: match[2],
+        b: match[3]
+      };
+    }
+    if (match = matchers.rgba.exec(color)) {
+      return {
+        r: match[1],
+        g: match[2],
+        b: match[3],
+        a: match[4]
+      };
+    }
+    if (match = matchers.hsl.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        l: match[3]
+      };
+    }
+    if (match = matchers.hsla.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        l: match[3],
+        a: match[4]
+      };
+    }
+    if (match = matchers.hsv.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        v: match[3]
+      };
+    }
+    if (match = matchers.hsva.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        v: match[3],
+        a: match[4]
+      };
+    }
+    if (match = matchers.hex8.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1]),
+        g: parseIntFromHex(match[2]),
+        b: parseIntFromHex(match[3]),
+        a: convertHexToDecimal(match[4]),
+        format: named ? "name" : "hex8"
+      };
+    }
+    if (match = matchers.hex6.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1]),
+        g: parseIntFromHex(match[2]),
+        b: parseIntFromHex(match[3]),
+        format: named ? "name" : "hex"
+      };
+    }
+    if (match = matchers.hex4.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1] + "" + match[1]),
+        g: parseIntFromHex(match[2] + "" + match[2]),
+        b: parseIntFromHex(match[3] + "" + match[3]),
+        a: convertHexToDecimal(match[4] + "" + match[4]),
+        format: named ? "name" : "hex8"
+      };
+    }
+    if (match = matchers.hex3.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1] + "" + match[1]),
+        g: parseIntFromHex(match[2] + "" + match[2]),
+        b: parseIntFromHex(match[3] + "" + match[3]),
+        format: named ? "name" : "hex"
+      };
+    }
+    return false;
+  }
+  function validateWCAG2Parms(parms) {
+    // return valid WCAG2 parms for isReadable.
+    // If input parms are invalid, return {"level":"AA", "size":"small"}
+    var level, size;
+    parms = parms || {
+      level: "AA",
+      size: "small"
+    };
+    level = (parms.level || "AA").toUpperCase();
+    size = (parms.size || "small").toLowerCase();
+    if (level !== "AA" && level !== "AAA") {
+      level = "AA";
+    }
+    if (size !== "small" && size !== "large") {
+      size = "small";
+    }
+    return {
+      level: level,
+      size: size
+    };
+  }
+
+  return tinycolor;
+
+}));
+
+
 /***/ })
 
 /******/ 	});
@@ -95908,7 +91864,7 @@ assign(main.baseCalendar.prototype, {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(5085);
+/******/ 	var __webpack_exports__ = __webpack_require__(9921);
 /******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()
