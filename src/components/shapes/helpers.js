@@ -209,6 +209,7 @@ exports.getPathString = function(gd, options) {
         return convertPath(options, x2p, y2p);
     }
 
+    var isValid = true;
     if(options.xsizemode === 'pixel') {
         var xAnchorPos = x2p(options.xanchor);
         x0 = xAnchorPos + options.x0;
@@ -216,6 +217,11 @@ exports.getPathString = function(gd, options) {
     } else {
         x0 = x2p(options.x0);
         x1 = x2p(options.x1);
+        if(xa && xa.type === 'category' && isValid) {
+            const x0In = xa.r2l(options.x0);
+            const x1In = xa.r2l(options.x1);
+            isValid = x0In != null && x1In != null;
+        }
     }
 
     if(options.ysizemode === 'pixel') {
@@ -225,7 +231,14 @@ exports.getPathString = function(gd, options) {
     } else {
         y0 = y2p(options.y0);
         y1 = y2p(options.y1);
+        if(ya && ya.type === 'category' && isValid) {
+            const f = ya.r2l(options.y0);
+            const s = ya.r2l(options.y1);
+            isValid = s != null && f != null;
+        }
     }
+    if(!isValid)
+        return null;
 
     if(type === 'line') return 'M' + x0 + ',' + y0 + 'L' + x1 + ',' + y1;
     if(type === 'rect') return 'M' + x0 + ',' + y0 + 'H' + x1 + 'V' + y1 + 'H' + x0 + 'Z';

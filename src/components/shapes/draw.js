@@ -109,6 +109,7 @@ function drawOne(gd, index) {
 
     function drawShape(shapeLayer) {
         var d = getPathString(gd, options);
+        if(!d) return;
         var attrs = {
             'data-index': index,
             'fill-rule': options.fillrule,
