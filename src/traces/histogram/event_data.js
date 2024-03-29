@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function eventData(out, pt, trace, cd, pointNumber) {
+    var pts;
     // standard cartesian event data
     out.x = 'xVal' in pt ? pt.xVal : pt.x;
     out.y = 'yVal' in pt ? pt.yVal : pt.y;
@@ -13,13 +14,13 @@ module.exports = function eventData(out, pt, trace, cd, pointNumber) {
 
     // specific to histogram - CDFs do not have pts (yet?)
     if(!(trace.cumulative || {}).enabled) {
-        var pts = Array.isArray(pointNumber) ?
+        pts = Array.isArray(pointNumber) ?
             cd[0].pts[pointNumber[0]][pointNumber[1]] :
             cd[pointNumber].pts;
 
         out.x0 = pt.cd[pointNumber].ph0;
         out.x1 = pt.cd[pointNumber].ph1;
-            
+
         out.pointNumbers = pts;
         out.binNumber = out.pointNumber;
         delete out.pointNumber;
@@ -37,14 +38,16 @@ module.exports = function eventData(out, pt, trace, cd, pointNumber) {
 
         out.pointIndices = pointIndices;
     } else {
-        try{
-        var pts = Array.isArray(pointNumber) ?
-            cd[0].pts[pointNumber[0]][pointNumber[1]] :
-            cd[pointNumber].pts;
+        try {
+            pts = Array.isArray(pointNumber) ?
+                cd[0].pts[pointNumber[0]][pointNumber[1]] :
+                cd[pointNumber].pts;
 
-        out.x0 = pt.cd[pointNumber].p0;
-        out.x1 = pt.cd[pointNumber].p1;
-        }catch{ }
+            out.x0 = pt.cd[pointNumber].p0;
+            out.x1 = pt.cd[pointNumber].p1;
+        } catch(e) {
+            // nothing happens here.
+        }
     }
 
     return out;
