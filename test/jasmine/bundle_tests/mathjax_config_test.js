@@ -27,9 +27,7 @@ describe('Test MathJax v' + mathjaxVersion + ' config test:', function() {
             };
         }
 
-        var src = mathjaxVersion === 3 ?
-            '/base/node_modules/mathjax-v3/es5/tex-svg.js' :
-            '/base/node_modules/mathjax-v2/MathJax.js?config=TeX-AMS_SVG';
+        var src = '/base/node_modules/mathjax-v3/es5/tex-svg.js';
 
         loadScript(src, done);
     });

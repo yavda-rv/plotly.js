@@ -125,7 +125,7 @@ var pathToJQuery = path.join(__dirname, 'assets', 'jquery-1.8.3.min.js');
 var pathToCustomMatchers = path.join(__dirname, 'assets', 'custom_matchers.js');
 var pathToUnpolyfill = path.join(__dirname, 'assets', 'unpolyfill.js');
 var pathToSaneTopojsonDist = path.join(__dirname, '..', '..', 'node_modules', 'sane-topojson', 'dist');
-var pathToMathJax2 = path.join(__dirname, '..', '..', 'node_modules', 'mathjax-v2');
+var pathToMathJax2 = path.join(__dirname, '..', '..', 'node_modules', 'mathjax-v3');
 var pathToMathJax3 = path.join(__dirname, '..', '..', 'node_modules', 'mathjax-v3');
 var pathToVirtualWebgl = path.join(__dirname, '..', '..', 'node_modules', 'virtual-webgl', 'src', 'virtual-webgl.js');
 

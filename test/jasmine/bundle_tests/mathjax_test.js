@@ -10,9 +10,7 @@ var mathjaxVersion = __karma__.config.mathjaxVersion;
 
 describe('Test MathJax v' + mathjaxVersion + ':', function() {
     beforeAll(function(done) {
-        var src = mathjaxVersion === 3 ?
-            '/base/node_modules/mathjax-v3/es5/tex-svg.js' :
-            '/base/node_modules/mathjax-v2/MathJax.js?config=TeX-AMS-MML_SVG';
+        var src = '/base/node_modules/mathjax-v3/es5/tex-svg.js';
 
         // N.B. we have to load MathJax "dynamically" as Karma
         // does not undefined the MathJax's `?config=` parameter.
