@@ -8,7 +8,7 @@ module.exports = {
     scrollBarEnterAttrs: {rx: 20, ry: 3, width: 0, height: 0},
 
     // number of px between legend title and (left) side of legend (always in x direction and from inner border)
-    titlePad: 2,
+    titlePad: 1,
     // number of px between each legend item (x and/or y direction)
-    itemGap: 5
+    itemGap: 2
 };

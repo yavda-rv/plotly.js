@@ -336,9 +336,9 @@ module.exports = function style(s, gd, legend) {
         var markerLine = marker.line || {};
 
         // If bar has rounded corners, round corners of legend icon
-        var pathStr = marker.cornerradius ?
-            'M6,3a3,3,0,0,1-3,3H-3a3,3,0,0,1-3-3V-3a3,3,0,0,1,3-3H3a3,3,0,0,1,3,3Z' : // Square with rounded corners
-            'M6,6H-6V-6H6Z'; // Normal square
+        // var pathStr = marker.cornerradius ?
+        //     'M6,3a3,3,0,0,1-3,3H-3a3,3,0,0,1-3-3V-3a3,3,0,0,1,3-3H3a3,3,0,0,1,3,3Z' : // Square with rounded corners
+        //     'M6,6H-6V-6H6Z'; // Normal square
 
         var isVisible = (!desiredType) ? Registry.traceIs(trace, 'bar') :
             (trace.visible && trace.type === desiredType);
@@ -347,7 +347,7 @@ module.exports = function style(s, gd, legend) {
             .selectAll('path.legend' + desiredType)
             .data(isVisible ? [d] : []);
         barpath.enter().append('path').classed('legend' + desiredType, true)
-            .attr('d', pathStr)
+            .attr('d', "M 0 0 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0")
             .attr('transform', centerTransform);
         barpath.exit().remove();
 
