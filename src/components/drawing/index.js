@@ -771,7 +771,7 @@ drawing.singlePointStyle = function(d, sel, trace, fns, gd, pt) {
     var fillColor, lineColor, lineWidth;
 
     // 'so' is suspected outliers, for box plots
-    if(d.so) {
+    if(d.so || d.so1) {
         lineWidth = markerLine.outlierwidth;
         lineColor = markerLine.outliercolor;
         fillColor = marker.outliercolor;
