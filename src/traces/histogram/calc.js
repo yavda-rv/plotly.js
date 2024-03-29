@@ -343,7 +343,8 @@ function calcAllAutoBins(gd, trace, pa, mainData, _overlayEdgeCase) {
     }
 
     pos0 = trace['_' + mainData + 'pos0'];
-    delete trace['_' + mainData + 'pos0'];
+    // When first trace is legend only, it throws error if we uncomment next line.
+    // delete trace['_' + mainData + 'pos0'];
 
     // Each trace can specify its own start/end, or if omitted
     // we ensure they're beyond the bounds of this trace's data,
