@@ -6,8 +6,8 @@ module.exports = function eventData(out, pt) {
     // implements this custom eventData function.
     if (pt.hoverOnBox) {
         out.hoverOnBox = pt.hoverOnBox;
-        out.pointIndices = pt.cd[pt.index].pts.map(p=>p.i);
-        out.customdata = pt.cd[pt.index].trace.customdata[out.pointIndices[0]];
+        out.pointIndices = pt.cd[pt.index].pts.map(p => p.i);
+        out.customdata = pt.trace.customdata[out.pointIndices[0]];
         out.attr = pt.attr;
         out.attrVal = pt.yVal;
     }
