@@ -1110,25 +1110,29 @@ proto.updateHoverAndMainDrag = function(fullLayout) {
             y0 += cyy + offset[1];
         }
 
-        switch(dragModeNow) {
-            case 'zoom':
-                dragOpts.clickFn = zoomClick;
+        if(dragModeNow) {
+            switch(dragModeNow) {
+                case 'zoom':
+                    dragOpts.clickFn = zoomClick;
 
-                if(!isSmith) {
-                    if(vangles) {
-                        dragOpts.moveFn = zoomMoveForPolygons;
-                    } else {
-                        dragOpts.moveFn = zoomMove;
+                    if(!isSmith) {
+                        if(vangles) {
+                            dragOpts.moveFn = zoomMoveForPolygons;
+                        } else {
+                            dragOpts.moveFn = zoomMove;
+                        }
+
+                        dragOpts.doneFn = zoomDone;
+                        zoomPrep(evt, startX, startY);
                     }
-
-                    dragOpts.doneFn = zoomDone;
-                    zoomPrep(evt, startX, startY);
-                }
-                break;
-            case 'select':
-            case 'lasso':
-                prepSelect(evt, startX, startY, dragOpts, dragModeNow);
-                break;
+                    break;
+                case 'select':
+                case 'lasso':
+                    prepSelect(evt, startX, startY, dragOpts, dragModeNow);
+                    break;
+            }
+        } else {
+            dragOpts.clickFn = zoomClick;
         }
     };
 
