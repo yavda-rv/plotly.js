@@ -15,7 +15,7 @@ var pieCastOption = require('../../traces/pie/helpers').castOption;
 
 var constants = require('./constants');
 
-var CST_MARKER_SIZE = 12;
+var CST_MARKER_SIZE = 10;
 var CST_LINE_WIDTH = 1;
 var CST_MARKER_LINE_WIDTH = 2;
 var MAX_LINE_WIDTH = 10;
@@ -653,10 +653,10 @@ function getGradientDirection(reversescale, isRadial) {
 function getStyleGuide(d) {
     var trace = d[0].trace;
     var contours = trace.contours;
-    var showLine = subTypes.hasLines(trace);
+    var showLine = subTypes.hasLines(trace) && trace.type != "scatterpolar";
     var showMarker = subTypes.hasMarkers(trace);
 
-    var showFill = trace.visible && trace.fill && trace.fill !== 'none';
+    var showFill = trace.visible && trace.fill && trace.fill !== 'none' && trace.type != "scatterpolar";
     var showGradientLine = false;
     var showGradientFill = false;
 
