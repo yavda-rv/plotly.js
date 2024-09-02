@@ -725,6 +725,11 @@ proto.updateAngularAxis = function(fullLayout, polarLayout) {
         if(Lib.angleDelta(vangles[0], vangles[1]) < 0) {
             vangles = vangles.slice().reverse();
         }
+        
+        // when vangles is empty it fails to plot trace.
+        if(vangles.length == 0) {
+            vangles = null;
+        }
     } else {
         vangles = null;
     }
