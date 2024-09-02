@@ -189,7 +189,8 @@ module.exports = function style(s, gd, legend) {
         // use d0.trace to infer arrayOk attributes
 
         function boundVal(attrIn, arrayToValFn, bounds, cst) {
-            var valIn = Lib.nestedProperty(trace, attrIn).get();
+            var valIns = Array.isArray(attrIn) ? attrIn.map(attr=> Lib.nestedProperty(trace, attr).get()) : [Lib.nestedProperty(trace, attrIn).get()];
+            var valIn = valIns.filter(item=>item != null)[0];
             var valToBound = (Lib.isArrayOrTypedArray(valIn) && arrayToValFn) ?
                 arrayToValFn(valIn) :
                 valIn;
@@ -202,6 +203,11 @@ module.exports = function style(s, gd, legend) {
                 if(valToBound < bounds[0]) return bounds[0];
                 else if(valToBound > bounds[1]) return bounds[1];
             }
+
+            if(valToBound == null && cst != null) {
+                return cst;
+            }
+
             return valToBound;
         }
 
@@ -216,10 +222,10 @@ module.exports = function style(s, gd, legend) {
             var tEdit = {};
 
             if(showMarker) {
-                dEdit.mc = boundVal('marker.color', pickFirst);
-                dEdit.mx = boundVal('marker.symbol', pickFirst);
-                dEdit.mo = boundVal('marker.opacity', Lib.mean, [0.2, 1]);
-                dEdit.mlc = boundVal('marker.line.color', pickFirst);
+                dEdit.mc = boundVal(['marker.color', 'line.color'], pickFirst);
+                dEdit.mx = boundVal('marker.symbol', pickFirst, undefined, 0);
+                dEdit.mo = boundVal('marker.opacity', Lib.mean, [0.2, 1], undefined, 1);
+                dEdit.mlc = boundVal(['marker.line.color', 'line.color'], pickFirst);
                 dEdit.mlw = boundVal('marker.line.width', Lib.mean, [0, 5], CST_MARKER_LINE_WIDTH);
                 tEdit.marker = {
                     sizeref: 1,
@@ -654,7 +660,7 @@ function getStyleGuide(d) {
     var trace = d[0].trace;
     var contours = trace.contours;
     var showLine = subTypes.hasLines(trace) && trace.type != "scatterpolar";
-    var showMarker = subTypes.hasMarkers(trace);
+    var showMarker = subTypes.hasMarkers(trace) || trace.type == "scatterpolar";
 
     var showFill = trace.visible && trace.fill && trace.fill !== 'none' && trace.type != "scatterpolar";
     var showGradientLine = false;
