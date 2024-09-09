@@ -7,8 +7,10 @@
     "quartilemethod": "exclusive",
     "jitter": 0.2,
     "fence": {
-      "lower": "default",
-      "upper": "max"
+      "lower": "custom",
+      "upper": "custom",
+      "lowerquantile": 0.1,
+      "upperquantile": 0.95
     }
   }],
   "layout": {

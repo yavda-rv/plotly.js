@@ -133,7 +133,40 @@ module.exports = {
             'we compute the upper as the last sample point above 1.5 times the IQR.'
         ].join(' ')
     },
-
+    fence: {
+        lower: {
+            valType: 'enumerated',
+            values: ['default', 'min', 'custom'],
+            editType: 'calc',
+            dflt: 'default',
+            description: [
+            ].join(' ')
+        },
+        upper: {
+            valType: 'enumerated',
+            values: ['default', 'max', 'custom'],
+            editType: 'calc',
+            dflt: 'default',
+            description: [
+            ].join(' ')
+        },
+        lowerquantile: {
+            valType: 'number',
+            min: 0,
+            max: 0.15,
+            editType: 'calc',
+            description: [
+            ].join(' ')
+        },
+        upperquantile: {
+            valType: 'number',
+            min: 0.85,
+            max: 1,
+            editType: 'calc',
+            description: [
+            ].join(' ')
+        },
+    },
     notched: {
         valType: 'boolean',
         editType: 'calc',

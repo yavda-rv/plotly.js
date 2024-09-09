@@ -104,12 +104,12 @@ module.exports = function calc(gd, trace) {
                 var lf = d2c('lowerfence');
                 cdi.lf = (lf !== BADNUM && lf <= cdi.q1) ?
                     lf :
-                    computeLowerFence(cdi, boxVals, N);
+                    computeLowerFence(trace.fence, cdi, boxVals, N);
 
                 var uf = d2c('upperfence');
                 cdi.uf = (uf !== BADNUM && uf >= cdi.q3) ?
                     uf :
-                    computeUpperFence(cdi, boxVals, N);
+                    computeUpperFence(trace.fence, cdi, boxVals, N);
 
                 var mean = d2c('mean');
                 cdi.mean = (mean !== BADNUM) ?
@@ -246,8 +246,8 @@ module.exports = function calc(gd, trace) {
                 }
 
                 // lower and upper fences
-                cdi.lf = computeLowerFence(cdi, boxVals, N);
-                cdi.uf = computeUpperFence(cdi, boxVals, N);
+                cdi.lf = computeLowerFence(trace.fence, cdi, boxVals, N);
+                cdi.uf = computeUpperFence(trace.fence, cdi, boxVals, N);
 
                 // lower and upper outliers bounds
                 cdi.lo = computeLowerOutlierBound(cdi);
@@ -405,8 +405,15 @@ function sortByVal(a, b) { return a.v - b.v; }
 function extractVal(o) { return o.v; }
 
 // last point below 1.5 * IQR
-function computeLowerFence(cdi, boxVals, N) {
+function computeLowerFence(fence, cdi, boxVals, N) {
     if(N === 0) return cdi.q1;
+
+    if(fence.lower === 'min') {
+        return boxVals[0];
+    } else if(fence.lower === 'custom') {
+        return Lib.interp(boxVals, fence.lowerquantile);
+    }
+
     return Math.min(
         cdi.q1,
         boxVals[Math.min(
@@ -417,8 +424,15 @@ function computeLowerFence(cdi, boxVals, N) {
 }
 
 // last point above 1.5 * IQR
-function computeUpperFence(cdi, boxVals, N) {
+function computeUpperFence(fence, cdi, boxVals, N) {
     if(N === 0) return cdi.q3;
+
+    if(fence.upper === 'max') {
+        return boxVals[boxVals.length-1];
+    } else if(fence.upper === 'custom') {
+        return Lib.interp(boxVals, fence.upperquantile);
+    }
+
     return Math.max(
         cdi.q3,
         boxVals[Math.max(
