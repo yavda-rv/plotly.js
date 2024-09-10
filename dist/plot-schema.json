@@ -16244,6 +16244,45 @@
      "editType": "calc",
      "valType": "number"
     },
+    "fence": {
+     "lower": {
+      "description": "",
+      "dflt": "default",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "default",
+       "min",
+       "custom"
+      ]
+     },
+     "lowerquantile": {
+      "description": "",
+      "editType": "calc",
+      "max": 0.15,
+      "min": 0,
+      "valType": "number"
+     },
+     "role": "object",
+     "upper": {
+      "description": "",
+      "dflt": "default",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "default",
+       "max",
+       "custom"
+      ]
+     },
+     "upperquantile": {
+      "description": "",
+      "editType": "calc",
+      "max": 1,
+      "min": 0.85,
+      "valType": "number"
+     }
+    },
     "fillcolor": {
      "description": "Sets the fill color. Defaults to a half-transparent variant of the line color, marker color, or marker line color, whichever is available.",
      "editType": "style",

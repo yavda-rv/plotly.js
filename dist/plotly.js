@@ -13037,7 +13037,7 @@ var subTypes = __webpack_require__(83104);
 var stylePie = __webpack_require__(95628);
 var pieCastOption = (__webpack_require__(98572).castOption);
 var constants = __webpack_require__(55944);
-var CST_MARKER_SIZE = 12;
+var CST_MARKER_SIZE = 10;
 var CST_LINE_WIDTH = 1;
 var CST_MARKER_LINE_WIDTH = 2;
 var MAX_LINE_WIDTH = 10;
@@ -13169,13 +13169,21 @@ module.exports = function style(s, gd, legend) {
     // use d0.trace to infer arrayOk attributes
 
     function boundVal(attrIn, arrayToValFn, bounds, cst) {
-      var valIn = Lib.nestedProperty(trace, attrIn).get();
+      var valIns = Array.isArray(attrIn) ? attrIn.map(function (attr) {
+        return Lib.nestedProperty(trace, attr).get();
+      }) : [Lib.nestedProperty(trace, attrIn).get()];
+      var valIn = valIns.filter(function (item) {
+        return item !== null || item !== undefined;
+      })[0];
       var valToBound = Lib.isArrayOrTypedArray(valIn) && arrayToValFn ? arrayToValFn(valIn) : valIn;
       if (constantItemSizing && valToBound && cst !== undefined) {
         valToBound = cst;
       }
       if (bounds) {
         if (valToBound < bounds[0]) return bounds[0];else if (valToBound > bounds[1]) return bounds[1];
+      }
+      if (valToBound === null && cst !== null) {
+        return cst;
       }
       return valToBound;
     }
@@ -13189,10 +13197,10 @@ module.exports = function style(s, gd, legend) {
       var dEdit = {};
       var tEdit = {};
       if (showMarker) {
-        dEdit.mc = boundVal('marker.color', pickFirst);
-        dEdit.mx = boundVal('marker.symbol', pickFirst);
-        dEdit.mo = boundVal('marker.opacity', Lib.mean, [0.2, 1]);
-        dEdit.mlc = boundVal('marker.line.color', pickFirst);
+        dEdit.mc = boundVal(['marker.color', 'line.color'], pickFirst);
+        dEdit.mx = boundVal('marker.symbol', pickFirst, undefined, 0);
+        dEdit.mo = boundVal('marker.opacity', Lib.mean, [0.2, 1], undefined, 1);
+        dEdit.mlc = boundVal(['marker.line.color', 'line.color'], pickFirst);
         dEdit.mlw = boundVal('marker.line.width', Lib.mean, [0, 5], CST_MARKER_LINE_WIDTH);
         tEdit.marker = {
           sizeref: 1,
@@ -13500,9 +13508,9 @@ function getGradientDirection(reversescale, isRadial) {
 function getStyleGuide(d) {
   var trace = d[0].trace;
   var contours = trace.contours;
-  var showLine = subTypes.hasLines(trace);
-  var showMarker = subTypes.hasMarkers(trace);
-  var showFill = trace.visible && trace.fill && trace.fill !== 'none';
+  var showLine = subTypes.hasLines(trace) && trace.type !== 'scatterpolar';
+  var showMarker = subTypes.hasMarkers(trace) || trace.type === 'scatterpolar';
+  var showFill = trace.visible && trace.fill && trace.fill !== 'none' && trace.type !== 'scatterpolar';
   var showGradientLine = false;
   var showGradientFill = false;
   if (contours) {
@@ -60934,6 +60942,11 @@ proto.updateAngularAxis = function (fullLayout, polarLayout) {
     if (Lib.angleDelta(vangles[0], vangles[1]) < 0) {
       vangles = vangles.slice().reverse();
     }
+
+    // when vangles is empty it fails to plot trace.
+    if (vangles.length === 0) {
+      vangles = null;
+    }
   } else {
     vangles = null;
   }
@@ -61247,23 +61260,27 @@ proto.updateHoverAndMainDrag = function (fullLayout) {
       x0 += cxx + offset[0];
       y0 += cyy + offset[1];
     }
-    switch (dragModeNow) {
-      case 'zoom':
-        dragOpts.clickFn = zoomClick;
-        if (!isSmith) {
-          if (vangles) {
-            dragOpts.moveFn = zoomMoveForPolygons;
-          } else {
-            dragOpts.moveFn = zoomMove;
+    if (dragModeNow) {
+      switch (dragModeNow) {
+        case 'zoom':
+          dragOpts.clickFn = zoomClick;
+          if (!isSmith) {
+            if (vangles) {
+              dragOpts.moveFn = zoomMoveForPolygons;
+            } else {
+              dragOpts.moveFn = zoomMove;
+            }
+            dragOpts.doneFn = zoomDone;
+            zoomPrep(evt, startX, startY);
           }
-          dragOpts.doneFn = zoomDone;
-          zoomPrep(evt, startX, startY);
-        }
-        break;
-      case 'select':
-      case 'lasso':
-        prepSelect(evt, startX, startY, dragOpts, dragModeNow);
-        break;
+          break;
+        case 'select':
+        case 'lasso':
+          prepSelect(evt, startX, startY, dragOpts, dragModeNow);
+          break;
+      }
+    } else {
+      dragOpts.clickFn = zoomClick;
     }
   };
   dragElement.init(dragOpts);
@@ -67716,6 +67733,32 @@ module.exports = {
     valType: 'data_array',
     editType: 'calc'
   },
+  fence: {
+    lower: {
+      valType: 'enumerated',
+      values: ['default', 'min', 'custom'],
+      editType: 'calc',
+      dflt: 'default'
+    },
+    upper: {
+      valType: 'enumerated',
+      values: ['default', 'max', 'custom'],
+      editType: 'calc',
+      dflt: 'default'
+    },
+    lowerquantile: {
+      valType: 'number',
+      min: 0,
+      max: 0.15,
+      editType: 'calc'
+    },
+    upperquantile: {
+      valType: 'number',
+      min: 0.85,
+      max: 1,
+      editType: 'calc'
+    }
+  },
   notched: {
     valType: 'boolean',
     editType: 'calc'
@@ -67999,9 +68042,9 @@ module.exports = function calc(gd, trace) {
       N = boxVals.length;
       if (cdi.med !== BADNUM && cdi.q1 !== BADNUM && cdi.q3 !== BADNUM && cdi.med >= cdi.q1 && cdi.q3 >= cdi.med) {
         var lf = d2c('lowerfence');
-        cdi.lf = lf !== BADNUM && lf <= cdi.q1 ? lf : computeLowerFence(cdi, boxVals, N);
+        cdi.lf = lf !== BADNUM && lf <= cdi.q1 ? lf : computeLowerFence(trace.fence, cdi, boxVals, N);
         var uf = d2c('upperfence');
-        cdi.uf = uf !== BADNUM && uf >= cdi.q3 ? uf : computeUpperFence(cdi, boxVals, N);
+        cdi.uf = uf !== BADNUM && uf >= cdi.q3 ? uf : computeUpperFence(trace.fence, cdi, boxVals, N);
         var mean = d2c('mean');
         cdi.mean = mean !== BADNUM ? mean : N ? Lib.mean(boxVals, N) : (cdi.q1 + cdi.q3) / 2;
         var sd = d2c('sd');
@@ -68112,8 +68155,8 @@ module.exports = function calc(gd, trace) {
         }
 
         // lower and upper fences
-        cdi.lf = computeLowerFence(cdi, boxVals, N);
-        cdi.uf = computeUpperFence(cdi, boxVals, N);
+        cdi.lf = computeLowerFence(trace.fence, cdi, boxVals, N);
+        cdi.uf = computeUpperFence(trace.fence, cdi, boxVals, N);
 
         // lower and upper outliers bounds
         cdi.lo = computeLowerOutlierBound(cdi);
@@ -68246,14 +68289,24 @@ function extractVal(o) {
 }
 
 // last point below 1.5 * IQR
-function computeLowerFence(cdi, boxVals, N) {
+function computeLowerFence(fence, cdi, boxVals, N) {
   if (N === 0) return cdi.q1;
+  if (fence.lower === 'min') {
+    return boxVals[0];
+  } else if (fence.lower === 'custom') {
+    return Lib.interp(boxVals, fence.lowerquantile);
+  }
   return Math.min(cdi.q1, boxVals[Math.min(Lib.findBin(2.5 * cdi.q1 - 1.5 * cdi.q3, boxVals, true) + 1, N - 1)]);
 }
 
 // last point above 1.5 * IQR
-function computeUpperFence(cdi, boxVals, N) {
+function computeUpperFence(fence, cdi, boxVals, N) {
   if (N === 0) return cdi.q3;
+  if (fence.upper === 'max') {
+    return boxVals[boxVals.length - 1];
+  } else if (fence.upper === 'custom') {
+    return Lib.interp(boxVals, fence.upperquantile);
+  }
   return Math.max(cdi.q3, boxVals[Math.max(Lib.findBin(2.5 * cdi.q3 - 1.5 * cdi.q1, boxVals), 0)]);
 }
 
@@ -68512,6 +68565,10 @@ function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
     coerce('lowerfence');
     coerce('upperfence');
   }
+  coerce("fence.lower");
+  coerce("fence.upper");
+  coerce("fence.lowerquantile");
+  coerce("fence.upperquantile");
   coerce('line.color', (traceIn.marker || {}).color || defaultColor);
   coerce('line.width');
   coerce('fillcolor', Color.addOpacity(traceOut.line.color, 0.5));

@@ -12657,7 +12657,7 @@ var subTypes = __webpack_require__(3104);
 var stylePie = __webpack_require__(5628);
 var pieCastOption = (__webpack_require__(8572).castOption);
 var constants = __webpack_require__(5944);
-var CST_MARKER_SIZE = 12;
+var CST_MARKER_SIZE = 10;
 var CST_LINE_WIDTH = 1;
 var CST_MARKER_LINE_WIDTH = 2;
 var MAX_LINE_WIDTH = 10;
@@ -12789,13 +12789,21 @@ module.exports = function style(s, gd, legend) {
     // use d0.trace to infer arrayOk attributes
 
     function boundVal(attrIn, arrayToValFn, bounds, cst) {
-      var valIn = Lib.nestedProperty(trace, attrIn).get();
+      var valIns = Array.isArray(attrIn) ? attrIn.map(function (attr) {
+        return Lib.nestedProperty(trace, attr).get();
+      }) : [Lib.nestedProperty(trace, attrIn).get()];
+      var valIn = valIns.filter(function (item) {
+        return item !== null || item !== undefined;
+      })[0];
       var valToBound = Lib.isArrayOrTypedArray(valIn) && arrayToValFn ? arrayToValFn(valIn) : valIn;
       if (constantItemSizing && valToBound && cst !== undefined) {
         valToBound = cst;
       }
       if (bounds) {
         if (valToBound < bounds[0]) return bounds[0];else if (valToBound > bounds[1]) return bounds[1];
+      }
+      if (valToBound === null && cst !== null) {
+        return cst;
       }
       return valToBound;
     }
@@ -12809,10 +12817,10 @@ module.exports = function style(s, gd, legend) {
       var dEdit = {};
       var tEdit = {};
       if (showMarker) {
-        dEdit.mc = boundVal('marker.color', pickFirst);
-        dEdit.mx = boundVal('marker.symbol', pickFirst);
-        dEdit.mo = boundVal('marker.opacity', Lib.mean, [0.2, 1]);
-        dEdit.mlc = boundVal('marker.line.color', pickFirst);
+        dEdit.mc = boundVal(['marker.color', 'line.color'], pickFirst);
+        dEdit.mx = boundVal('marker.symbol', pickFirst, undefined, 0);
+        dEdit.mo = boundVal('marker.opacity', Lib.mean, [0.2, 1], undefined, 1);
+        dEdit.mlc = boundVal(['marker.line.color', 'line.color'], pickFirst);
         dEdit.mlw = boundVal('marker.line.width', Lib.mean, [0, 5], CST_MARKER_LINE_WIDTH);
         tEdit.marker = {
           sizeref: 1,
@@ -13120,9 +13128,9 @@ function getGradientDirection(reversescale, isRadial) {
 function getStyleGuide(d) {
   var trace = d[0].trace;
   var contours = trace.contours;
-  var showLine = subTypes.hasLines(trace);
-  var showMarker = subTypes.hasMarkers(trace);
-  var showFill = trace.visible && trace.fill && trace.fill !== 'none';
+  var showLine = subTypes.hasLines(trace) && trace.type !== 'scatterpolar';
+  var showMarker = subTypes.hasMarkers(trace) || trace.type === 'scatterpolar';
+  var showFill = trace.visible && trace.fill && trace.fill !== 'none' && trace.type !== 'scatterpolar';
   var showGradientLine = false;
   var showGradientFill = false;
   if (contours) {
@@ -55927,6 +55935,32 @@ module.exports = {
   upperfence: {
     valType: 'data_array',
     editType: 'calc'
+  },
+  fence: {
+    lower: {
+      valType: 'enumerated',
+      values: ['default', 'min', 'custom'],
+      editType: 'calc',
+      dflt: 'default'
+    },
+    upper: {
+      valType: 'enumerated',
+      values: ['default', 'max', 'custom'],
+      editType: 'calc',
+      dflt: 'default'
+    },
+    lowerquantile: {
+      valType: 'number',
+      min: 0,
+      max: 0.15,
+      editType: 'calc'
+    },
+    upperquantile: {
+      valType: 'number',
+      min: 0.85,
+      max: 1,
+      editType: 'calc'
+    }
   },
   notched: {
     valType: 'boolean',
