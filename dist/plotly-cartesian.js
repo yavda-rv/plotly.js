@@ -57540,7 +57540,7 @@ function computeLowerFence(fence, cdi, boxVals, N) {
   if (N === 0) return cdi.q1;
   if (fence.lower === 'min') {
     return boxVals[0];
-  } else if (fence.lower === 'custom') {
+  } else if (fence.lower === 'custom' && fence.lowerquantile !== BADNUM) {
     return Lib.interp(boxVals, fence.lowerquantile);
   }
   return Math.min(cdi.q1, boxVals[Math.min(Lib.findBin(2.5 * cdi.q1 - 1.5 * cdi.q3, boxVals, true) + 1, N - 1)]);
@@ -57551,7 +57551,7 @@ function computeUpperFence(fence, cdi, boxVals, N) {
   if (N === 0) return cdi.q3;
   if (fence.upper === 'max') {
     return boxVals[boxVals.length - 1];
-  } else if (fence.upper === 'custom') {
+  } else if (fence.upper === 'custom' && fence.upperquantile !== BADNUM) {
     return Lib.interp(boxVals, fence.upperquantile);
   }
   return Math.max(cdi.q3, boxVals[Math.max(Lib.findBin(2.5 * cdi.q3 - 1.5 * cdi.q1, boxVals), 0)]);
@@ -58560,7 +58560,7 @@ function plotBoxAndWhiskers(sel, axes, trace, t, isStatic) {
     // - box always has d.lf, but boxpoints can be anything
     // - violin has d.lf and should always use it (boxpoints is undefined)
     // - candlestick has only min/max
-    var useExtremes = d.lf === undefined || trace.boxpoints === false || sdmode;
+    var useExtremes = trace.type === 'box' ? d.lf === undefined : d.lf === undefined || trace.boxpoints === false || sdmode;
     var lf = valAxis.c2p(useExtremes ? d.min : d.lf, true);
     var uf = valAxis.c2p(useExtremes ? d.max : d.uf, true);
     var ln = valAxis.c2p(d.ln, true);

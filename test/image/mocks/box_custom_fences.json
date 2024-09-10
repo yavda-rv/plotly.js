@@ -1,21 +1,1354 @@
 {
   "data": [
-  {
-    "type": "box",
-    "x0": 3,
-    "y": [1, 1, 6, 13, 13, 14, 14, 14, 15, 15, 16, 18, 18, 18, 19, 35],
-    "quartilemethod": "exclusive",
-    "jitter": 0.2,
-    "fence": {
-      "lower": "custom",
-      "upper": "custom",
-      "lowerquantile": 0.1,
-      "upperquantile": 0.95
-    }
-  }],
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [43,80,99,68,62,68,71,47,46,68,73,100,97,50,83,61,47,64,74,81,71 ],
+          "x": ["Mango","Mango","Mango","Mango","Mango","Mango","Mango","Guava","Guava","Guava","Guava","Guava","Guava","Guava","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya"],
+          "offsetgroup": "0",
+          "name": "A",
+          "fillcolor": "#01B8AA3f",
+          "line": {
+              "color": "#01B8AA",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": ["Mango-A3","Mango-A10","Mango-A3","Mango-A7","Mango-A6","Mango-A10","Mango-A2","Guava-A7","Guava-A3","Guava-A10","Guava-A5","Guava-A10","Guava-A8","Guava-A3","Papaya-A7","Papaya-A5","Papaya-A10","Papaya-A9","Papaya-A1","Papaya-A2","Papaya-A3" ],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>"
+      },
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [98,75,84,49,68,97,54,41,67,96,75,99,95,60,58,52,81,84,78,43,63 ],
+          "x": ["Mango","Mango","Mango","Mango","Mango","Mango","Mango","Guava","Guava","Guava","Guava","Guava","Guava","Guava","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya" ],
+          "offsetgroup": "0",
+          "name": "A",
+          "fillcolor": "#01B8AA3f",
+          "line": {
+              "color": "#01B8AA",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": ["Mango-A3","Mango-A10","Mango-A3","Mango-A7","Mango-A6","Mango-A10","Mango-A2","Guava-A7","Guava-A3","Guava-A10","Guava-A5","Guava-A10","Guava-A8","Guava-A3","Papaya-A7","Papaya-A5","Papaya-A10","Papaya-A9","Papaya-A1","Papaya-A2","Papaya-A3" ],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>",
+          "xaxis": "x2",
+          "yaxis": "y"
+      },
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [86,58,98,58,43,51,90,58,96,83,78,53,44,60,97,56,40,59,79,42,70 ],
+          "x": ["Mango","Mango","Mango","Mango","Mango","Mango","Mango","Guava","Guava","Guava","Guava","Guava","Guava","Guava","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya" ],
+          "offsetgroup": "1",
+          "name": "B",
+          "fillcolor": "#3746493f",
+          "line": {
+              "color": "#374649",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": ["Mango-B10","Mango-B2","Mango-B8","Mango-B7","Mango-B2","Mango-B6","Mango-B8","Guava-B3","Guava-B9","Guava-B9","Guava-B8","Guava-B3","Guava-B2","Guava-B6","Papaya-B4","Papaya-B9","Papaya-B10","Papaya-B2","Papaya-B1","Papaya-B8","Papaya-B6"],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>"
+      },
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [74,96,94,51,58,73,71,59,41,83,96,80,95,83,64,93,53,79,82,45,53],
+          "x": ["Mango","Mango","Mango","Mango","Mango","Mango","Mango","Guava","Guava","Guava","Guava","Guava","Guava","Guava","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya"],
+          "offsetgroup": "1",
+          "name": "B",
+          "fillcolor": "#3746493f",
+          "line": {
+              "color": "#374649",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": ["Mango-B10","Mango-B2","Mango-B8","Mango-B7","Mango-B2","Mango-B6","Mango-B8","Guava-B3","Guava-B9","Guava-B9","Guava-B8","Guava-B3","Guava-B2","Guava-B6","Papaya-B4","Papaya-B9","Papaya-B10","Papaya-B2","Papaya-B1","Papaya-B8","Papaya-B6"],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>",
+          "xaxis": "x2",
+          "yaxis": "y"
+      },
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [53,41,60,74,40,56,89,79,76,52,47,92,74,53,42,76,47,75,100,81,63          ],
+          "x": ["Mango","Mango","Mango","Mango","Mango","Mango","Mango","Guava","Guava","Guava","Guava","Guava","Guava","Guava","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya","Papaya"          ],
+          "offsetgroup": "2",
+          "name": "C",
+          "fillcolor": "#FD625E3f",
+          "line": {
+              "color": "#FD625E",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": [
+              "Mango-C9",
+              "Mango-C1",
+              "Mango-C7",
+              "Mango-C4",
+              "Mango-C5",
+              "Mango-C4",
+              "Mango-C6",
+              "Guava-C2",
+              "Guava-C7",
+              "Guava-C4",
+              "Guava-C9",
+              "Guava-C8",
+              "Guava-C5",
+              "Guava-C7",
+              "Papaya-C4",
+              "Papaya-C4",
+              "Papaya-C3",
+              "Papaya-C5",
+              "Papaya-C10",
+              "Papaya-C7",
+              "Papaya-C4"
+          ],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>"
+      },
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "customdata": [
+              {
+                  "index": 98,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 67,
+                  "hoverText": "Mango-C9",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 99,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 64,
+                  "hoverText": "Mango-C1",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 100,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 53,
+                  "hoverText": "Mango-C7",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 101,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 44,
+                  "hoverText": "Mango-C4",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 102,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 51,
+                  "hoverText": "Mango-C5",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 103,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 89,
+                  "hoverText": "Mango-C4",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 104,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 71,
+                  "hoverText": "Mango-C6",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 126,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 55,
+                  "hoverText": "Guava-C2",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 127,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 81,
+                  "hoverText": "Guava-C7",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 128,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 60,
+                  "hoverText": "Guava-C4",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 129,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 84,
+                  "hoverText": "Guava-C9",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 130,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 95,
+                  "hoverText": "Guava-C8",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 131,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 66,
+                  "hoverText": "Guava-C5",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 132,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 57,
+                  "hoverText": "Guava-C7",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 154,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 91,
+                  "hoverText": "Papaya-C4",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 155,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 49,
+                  "hoverText": "Papaya-C4",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 156,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 41,
+                  "hoverText": "Papaya-C3",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 157,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 62,
+                  "hoverText": "Papaya-C5",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 158,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 52,
+                  "hoverText": "Papaya-C10",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 159,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 99,
+                  "hoverText": "Papaya-C7",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 160,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 99,
+                  "hoverText": "Papaya-C4",
+                  "legend": "C",
+                  "trellis": "Second Party"
+              }
+          ],
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [
+              67,
+              64,
+              53,
+              44,
+              51,
+              89,
+              71,
+              55,
+              81,
+              60,
+              84,
+              95,
+              66,
+              57,
+              91,
+              49,
+              41,
+              62,
+              52,
+              99,
+              99
+          ],
+          "x": [
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya"
+          ],
+          "offsetgroup": "2",
+          "name": "C",
+          "fillcolor": "#FD625E3f",
+          "line": {
+              "color": "#FD625E",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": [
+              "Mango-C9",
+              "Mango-C1",
+              "Mango-C7",
+              "Mango-C4",
+              "Mango-C5",
+              "Mango-C4",
+              "Mango-C6",
+              "Guava-C2",
+              "Guava-C7",
+              "Guava-C4",
+              "Guava-C9",
+              "Guava-C8",
+              "Guava-C5",
+              "Guava-C7",
+              "Papaya-C4",
+              "Papaya-C4",
+              "Papaya-C3",
+              "Papaya-C5",
+              "Papaya-C10",
+              "Papaya-C7",
+              "Papaya-C4"
+          ],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>",
+          "xaxis": "x2",
+          "yaxis": "y"
+      },
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "customdata": [
+              {
+                  "index": 21,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 82,
+                  "hoverText": "Mango-D4",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 22,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 63,
+                  "hoverText": "Mango-D3",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 23,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 55,
+                  "hoverText": "Mango-D7",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 24,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 75,
+                  "hoverText": "Mango-D5",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 25,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 72,
+                  "hoverText": "Mango-D9",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 26,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 58,
+                  "hoverText": "Mango-D7",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 27,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 45,
+                  "hoverText": "Mango-D2",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 49,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 52,
+                  "hoverText": "Guava-D10",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 50,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 56,
+                  "hoverText": "Guava-D10",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 51,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 88,
+                  "hoverText": "Guava-D4",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 52,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 96,
+                  "hoverText": "Guava-D1",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 53,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 95,
+                  "hoverText": "Guava-D4",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 54,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 73,
+                  "hoverText": "Guava-D9",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 55,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 54,
+                  "hoverText": "Guava-D1",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 77,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 72,
+                  "hoverText": "Papaya-D8",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 78,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 62,
+                  "hoverText": "Papaya-D4",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 79,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 98,
+                  "hoverText": "Papaya-D8",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 80,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 56,
+                  "hoverText": "Papaya-D7",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 81,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 55,
+                  "hoverText": "Papaya-D2",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 82,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 79,
+                  "hoverText": "Papaya-D4",
+                  "legend": "D",
+                  "trellis": "First Party"
+              },
+              {
+                  "index": 83,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 91,
+                  "hoverText": "Papaya-D1",
+                  "legend": "D",
+                  "trellis": "First Party"
+              }
+          ],
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [
+              82,
+              63,
+              55,
+              75,
+              72,
+              58,
+              45,
+              52,
+              56,
+              88,
+              96,
+              95,
+              73,
+              54,
+              72,
+              62,
+              98,
+              56,
+              55,
+              79,
+              91
+          ],
+          "x": [
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya"
+          ],
+          "offsetgroup": "3",
+          "name": "D",
+          "fillcolor": "#F2C80F3f",
+          "line": {
+              "color": "#F2C80F",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": [
+              "Mango-D4",
+              "Mango-D3",
+              "Mango-D7",
+              "Mango-D5",
+              "Mango-D9",
+              "Mango-D7",
+              "Mango-D2",
+              "Guava-D10",
+              "Guava-D10",
+              "Guava-D4",
+              "Guava-D1",
+              "Guava-D4",
+              "Guava-D9",
+              "Guava-D1",
+              "Papaya-D8",
+              "Papaya-D4",
+              "Papaya-D8",
+              "Papaya-D7",
+              "Papaya-D2",
+              "Papaya-D4",
+              "Papaya-D1"
+          ],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>"
+      },
+      {
+          "type": "box",
+          "opacity": 1,
+          "orientation": "v",
+          "customdata": [
+              {
+                  "index": 105,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 59,
+                  "hoverText": "Mango-D4",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 106,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 49,
+                  "hoverText": "Mango-D3",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 107,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 59,
+                  "hoverText": "Mango-D7",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 108,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 70,
+                  "hoverText": "Mango-D5",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 109,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 70,
+                  "hoverText": "Mango-D9",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 110,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 47,
+                  "hoverText": "Mango-D7",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 111,
+                  "plotId": "plot_0",
+                  "x": "Mango",
+                  "y": 89,
+                  "hoverText": "Mango-D2",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 133,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 49,
+                  "hoverText": "Guava-D10",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 134,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 42,
+                  "hoverText": "Guava-D10",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 135,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 79,
+                  "hoverText": "Guava-D4",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 136,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 69,
+                  "hoverText": "Guava-D1",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 137,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 68,
+                  "hoverText": "Guava-D4",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 138,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 41,
+                  "hoverText": "Guava-D9",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 139,
+                  "plotId": "plot_0",
+                  "x": "Guava",
+                  "y": 70,
+                  "hoverText": "Guava-D1",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 161,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 60,
+                  "hoverText": "Papaya-D8",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 162,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 48,
+                  "hoverText": "Papaya-D4",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 163,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 64,
+                  "hoverText": "Papaya-D8",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 164,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 78,
+                  "hoverText": "Papaya-D7",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 165,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 79,
+                  "hoverText": "Papaya-D2",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 166,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 56,
+                  "hoverText": "Papaya-D4",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              },
+              {
+                  "index": 167,
+                  "plotId": "plot_0",
+                  "x": "Papaya",
+                  "y": 76,
+                  "hoverText": "Papaya-D1",
+                  "legend": "D",
+                  "trellis": "Second Party"
+              }
+          ],
+          "boxmean": true,
+          "boxpoints": false,
+          "quartilemethod": "linear",
+          "unselected": {
+              "marker": {
+                  "opacity": 0.2
+              }
+          },
+          "meta": {
+              "caption": {
+                  "x": "Tree Type",
+                  "y": "Produce (Kg)",
+                  "hoverText": "Tooltip",
+                  "legend": "Orchard",
+                  "trellis": "Managed By"
+              }
+          },
+          "y": [
+              59,
+              49,
+              59,
+              70,
+              70,
+              47,
+              89,
+              49,
+              42,
+              79,
+              69,
+              68,
+              41,
+              70,
+              60,
+              48,
+              64,
+              78,
+              79,
+              56,
+              76
+          ],
+          "x": [
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Mango",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Guava",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya",
+              "Papaya"
+          ],
+          "offsetgroup": "3",
+          "name": "D",
+          "fillcolor": "#F2C80F3f",
+          "line": {
+              "color": "#F2C80F",
+              "width": 1
+          },
+          "whiskerwidth": 0.45,
+          "fence": {
+              "lower": "custom",
+              "upper": "custom",
+              "lowerquantile": 0.1,
+              "upperquantile": 0.9
+          },
+          "hovertext": [
+              "Mango-D4",
+              "Mango-D3",
+              "Mango-D7",
+              "Mango-D5",
+              "Mango-D9",
+              "Mango-D7",
+              "Mango-D2",
+              "Guava-D10",
+              "Guava-D10",
+              "Guava-D4",
+              "Guava-D1",
+              "Guava-D4",
+              "Guava-D9",
+              "Guava-D1",
+              "Papaya-D8",
+              "Papaya-D4",
+              "Papaya-D8",
+              "Papaya-D7",
+              "Papaya-D2",
+              "Papaya-D4",
+              "Papaya-D1"
+          ],
+          "hoveron": "boxes+points",
+          "hovertemplate": "<span style='opacity:0.8;font-family:monospace;'>   Tree Type</span>  %{customdata.x}<br><span style='opacity:0.8;font-family:monospace;'>Produce (Kg)</span>  %{customdata.y}<br><span style='opacity:0.8;font-family:monospace;'>     Tooltip</span>  %{customdata.hoverText}<br><span style='opacity:0.8;font-family:monospace;'>     Orchard</span>  %{customdata.legend}<br><extra></extra>",
+          "xaxis": "x2",
+          "yaxis": "y"
+      }
+  ],
   "layout": {
-    "title": {"text": "single-box groups!"},
-    "boxmode": "group",
-    "showlegend": false
+      "autosize": false,
+      "colorway": [
+          "#01B8AA",
+          "#374649",
+          "#FD625E",
+          "#F2C80F",
+          "#5F6B6D",
+          "#8AD4EB",
+          "#FE9666",
+          "#A66999"
+      ],
+      "boxmode": "group",
+      "hoverdistance": 5,
+      "margin": {
+          "l": 10,
+          "r": 10,
+          "b": 10,
+          "t": 10
+      },
+      "plot_bgcolor": "transparent",
+      "paper_bgcolor": "transparent",
+      "font": {
+          "size": 10
+      },
+      "hoverlabel": {
+          "align": "left",
+          "bgcolor": "rgb(22, 22, 22)",
+          "bordercolor": "rgb(22, 22, 22)",
+          "font": {
+              "color": "rgb(251, 251, 251)"
+          }
+      },
+      "showlegend": true,
+      "legend": {
+          "orientation": "h",
+          "xanchor": "left",
+          "yanchor": "bottom",
+          "x": -0.05,
+          "y": 1.02,
+          "itemsizing": "constant",
+          "font": {
+              "size": 10
+          }
+      },
+      "bargap": 0.19999999999999996,
+      "bargroupgap": 0,
+      "barmode": "group",
+      "barnorm": "",
+      "xaxis2": {
+          "automargin": true,
+          "visible": true,
+          "showdividers": false,
+          "type": "category",
+          "fixedrange": true,
+          "ticks": "",
+          "ticklen": 5,
+          "showticklabels": true,
+          "showline": false,
+          "showgrid": false,
+          "gridwidth": 1,
+          "griddash": "solid",
+          "domain": [
+              0.5,
+              1
+          ],
+          "zeroline": false,
+          "tickfont": {
+              "size": 10
+          },
+          "autorange": true,
+          "side": "bottom",
+          "rangeslider": {
+              "visible": false
+          },
+          "title": {
+              "standoff": 3,
+              "text": "Tree Type",
+              "font": {
+                  "size": 10
+              }
+          },
+          "anchor": "y",
+          "range": [
+              -0.5,
+              2.5
+          ]
+      },
+      "xaxis": {
+          "automargin": true,
+          "visible": true,
+          "showdividers": false,
+          "type": "category",
+          "fixedrange": true,
+          "ticks": "",
+          "ticklen": 5,
+          "showticklabels": true,
+          "showline": false,
+          "showgrid": false,
+          "gridwidth": 1,
+          "griddash": "solid",
+          "domain": [
+              0,
+              0.5
+          ],
+          "zeroline": false,
+          "tickfont": {
+              "size": 10
+          },
+          "autorange": true,
+          "side": "bottom",
+          "rangeslider": {
+              "visible": false,
+              "yaxis": {}
+          },
+          "title": {
+              "standoff": 3,
+              "text": "Tree Type",
+              "font": {
+                  "size": 10
+              }
+          },
+          "anchor": "y",
+          "matches": "x2",
+          "range": [
+              -0.5,
+              2.5
+          ]
+      },
+      "yaxis": {
+          "automargin": true,
+          "visible": true,
+          "showdividers": false,
+          "type": "linear",
+          "fixedrange": true,
+          "ticks": "",
+          "ticklen": 5,
+          "showticklabels": true,
+          "showline": false,
+          "showgrid": true,
+          "gridwidth": 1,
+          "griddash": "solid",
+          "domain": [
+              0,
+              1
+          ],
+          "zeroline": false,
+          "tickfont": {
+              "size": 10
+          },
+          "autorange": true,
+          "side": "left",
+          "rangeslider": {
+              "visible": false
+          },
+          "title": {
+              "standoff": 3,
+              "text": "Produce (Kg)",
+              "font": {
+                  "size": 10
+              }
+          },
+          "anchor": "x",
+          "range": [
+              36.666666666666664,
+              103.33333333333333
+          ]
+      },
+      "annotations": [
+          {
+              "showarrow": false,
+              "text": "First Party",
+              "xref": "paper",
+              "yref": "paper",
+              "standoff": 0,
+              "font": {
+                  "size": 10
+              },
+              "x": 0,
+              "xanchor": "left",
+              "xshift": 5,
+              "y": 1,
+              "yanchor": "top",
+              "yshift": 5
+          },
+          {
+              "showarrow": false,
+              "text": "Second Party",
+              "xref": "paper",
+              "yref": "paper",
+              "standoff": 0,
+              "font": {
+                  "size": 10
+              },
+              "x": 0.5,
+              "xanchor": "left",
+              "xshift": 5,
+              "y": 1,
+              "yanchor": "top",
+              "yshift": 5
+          }
+      ],
+      "width": 701,
+      "height": 444,
+      "shapes": [
+          {
+              "type": "line",
+              "xref": "paper",
+              "yref": "paper",
+              "line": {
+                  "color": "#cccccc",
+                  "width": 1
+              },
+              "layer": "above",
+              "y0": 0,
+              "y1": 1,
+              "x0": 0.5,
+              "x1": 0.5
+          }
+      ]
   }
 }

@@ -410,7 +410,7 @@ function computeLowerFence(fence, cdi, boxVals, N) {
 
     if(fence.lower === 'min') {
         return boxVals[0];
-    } else if(fence.lower === 'custom') {
+    } else if(fence.lower === 'custom' && fence.lowerquantile !== BADNUM) {
         return Lib.interp(boxVals, fence.lowerquantile);
     }
 
@@ -429,7 +429,7 @@ function computeUpperFence(fence, cdi, boxVals, N) {
 
     if(fence.upper === 'max') {
         return boxVals[boxVals.length - 1];
-    } else if(fence.upper === 'custom') {
+    } else if(fence.upper === 'custom' && fence.upperquantile !== BADNUM) {
         return Lib.interp(boxVals, fence.upperquantile);
     }
 

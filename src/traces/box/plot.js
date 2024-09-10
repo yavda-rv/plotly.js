@@ -113,7 +113,7 @@ function plotBoxAndWhiskers(sel, axes, trace, t, isStatic) {
         // - box always has d.lf, but boxpoints can be anything
         // - violin has d.lf and should always use it (boxpoints is undefined)
         // - candlestick has only min/max
-        var useExtremes = (d.lf === undefined) || (trace.boxpoints === false) || sdmode;
+        var useExtremes = trace.type === 'box' ? (d.lf === undefined) : ((d.lf === undefined) || (trace.boxpoints === false) || sdmode);
         var lf = valAxis.c2p(useExtremes ? d.min : d.lf, true);
         var uf = valAxis.c2p(useExtremes ? d.max : d.uf, true);
         var ln = valAxis.c2p(d.ln, true);
