@@ -428,7 +428,7 @@ function computeUpperFence(fence, cdi, boxVals, N) {
     if(N === 0) return cdi.q3;
 
     if(fence.upper === 'max') {
-        return boxVals[boxVals.length-1];
+        return boxVals[boxVals.length - 1];
     } else if(fence.upper === 'custom') {
         return Lib.interp(boxVals, fence.upperquantile);
     }

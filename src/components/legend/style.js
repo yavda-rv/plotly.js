@@ -189,8 +189,8 @@ module.exports = function style(s, gd, legend) {
         // use d0.trace to infer arrayOk attributes
 
         function boundVal(attrIn, arrayToValFn, bounds, cst) {
-            var valIns = Array.isArray(attrIn) ? attrIn.map(attr=> Lib.nestedProperty(trace, attr).get()) : [Lib.nestedProperty(trace, attrIn).get()];
-            var valIn = valIns.filter(item=>item != null)[0];
+            var valIns = Array.isArray(attrIn) ? attrIn.map(function(attr) {return Lib.nestedProperty(trace, attr).get();}) : [Lib.nestedProperty(trace, attrIn).get()];
+            var valIn = valIns.filter(function(item) {return item !== null || item !== undefined;})[0];
             var valToBound = (Lib.isArrayOrTypedArray(valIn) && arrayToValFn) ?
                 arrayToValFn(valIn) :
                 valIn;
@@ -204,7 +204,7 @@ module.exports = function style(s, gd, legend) {
                 else if(valToBound > bounds[1]) return bounds[1];
             }
 
-            if(valToBound == null && cst != null) {
+            if(valToBound === null && cst !== null) {
                 return cst;
             }
 
@@ -659,10 +659,10 @@ function getGradientDirection(reversescale, isRadial) {
 function getStyleGuide(d) {
     var trace = d[0].trace;
     var contours = trace.contours;
-    var showLine = subTypes.hasLines(trace) && trace.type != "scatterpolar";
-    var showMarker = subTypes.hasMarkers(trace) || trace.type == "scatterpolar";
+    var showLine = subTypes.hasLines(trace) && trace.type !== 'scatterpolar';
+    var showMarker = subTypes.hasMarkers(trace) || trace.type === 'scatterpolar';
 
-    var showFill = trace.visible && trace.fill && trace.fill !== 'none' && trace.type != "scatterpolar";
+    var showFill = trace.visible && trace.fill && trace.fill !== 'none' && trace.type !== 'scatterpolar';
     var showGradientLine = false;
     var showGradientFill = false;
 
