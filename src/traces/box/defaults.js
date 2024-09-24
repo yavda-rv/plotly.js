@@ -26,10 +26,10 @@ function supplyDefaults(traceIn, traceOut, defaultColor, layout) {
         coerce('lowerfence');
         coerce('upperfence');
     }
-    coerce("fence.lower");
-    coerce("fence.upper");
-    coerce("fence.lowerquantile");
-    coerce("fence.upperquantile");
+    coerce('fence.lower');
+    coerce('fence.upper');
+    coerce('fence.lowerquantile');
+    coerce('fence.upperquantile');
 
     coerce('line.color', (traceIn.marker || {}).color || defaultColor);
     coerce('line.width');
