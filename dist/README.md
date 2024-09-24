@@ -91,7 +91,7 @@ The `basic` partial bundle contains trace modules `bar`, `pie` and `scatter`.
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 2.6 MB | 986 kB | 330.2 kB |
+| 2.6 MB | 985.9 kB | 330.3 kB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-basic-2.30.1.js
@@ -114,7 +114,7 @@ The `cartesian` partial bundle contains trace modules `bar`, `box`, `contour`, `
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 3.3 MB | 1.2 MB | 417.8 kB |
+| 3.3 MB | 1.2 MB | 418.3 kB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-cartesian-2.30.1.js
@@ -137,7 +137,7 @@ The `geo` partial bundle contains trace modules `choropleth`, `scatter` and `sca
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 3.1 MB | 1.1 MB | 372.8 kB |
+| 3.1 MB | 1.1 MB | 373 kB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-geo-2.30.1.js
@@ -183,7 +183,7 @@ The `gl2d` partial bundle contains trace modules `heatmapgl`, `parcoords`, `poin
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 4.4 MB | 1.9 MB | 600.1 kB |
+| 4.4 MB | 1.9 MB | 600.6 kB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-gl2d-2.30.1.js
@@ -206,7 +206,7 @@ The `mapbox` partial bundle contains trace modules `choroplethmapbox`, `densitym
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 4.4 MB | 1.8 MB | 531.7 kB |
+| 4.4 MB | 1.8 MB | 531.9 kB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-mapbox-2.30.1.js
@@ -229,7 +229,7 @@ The `finance` partial bundle contains trace modules `bar`, `candlestick`, `funne
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 2.8 MB | 1.1 MB | 359.5 kB |
+| 2.8 MB | 1.1 MB | 359.6 kB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-finance-2.30.1.js
