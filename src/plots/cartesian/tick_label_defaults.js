@@ -66,6 +66,8 @@ module.exports = function handleTickLabelDefaults(containerIn, containerOut, coe
                 coerce('separatethousands');
             }
         }
+        coerce('tickformattype')
+        coerce('tickprecision')
     }
 };
 

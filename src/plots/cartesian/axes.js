@@ -1,5 +1,5 @@
 'use strict';
-
+var fu = require("powerbi-visuals-utils-formattingutils");
 var d3 = require('@plotly/d3');
 var isNumeric = require('fast-isnumeric');
 var Plots = require('../../plots/plots');
@@ -75,6 +75,7 @@ axes.getFromId = axisIds.getFromId;
 axes.getFromTrace = axisIds.getFromTrace;
 
 var autorange = require('./autorange');
+const { formatValue } = require("./format");
 axes.getAutoRange = autorange.getAutoRange;
 axes.findExtremes = autorange.findExtremes;
 
@@ -2000,6 +2001,10 @@ function beyondSI(exponent) {
 }
 
 function numFormat(v, ax, fmtoverride, hover) {
+    if(!hover && ax.tickformattype !== 'default') {
+        return formatValue(v, ax.tickformattype, ax.tickformat, ax.tickprecision);
+    }
+    
     var isNeg = v < 0;
     // max number of digits past decimal point to show
     var tickRound = ax._tickround;

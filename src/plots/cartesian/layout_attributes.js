@@ -900,11 +900,34 @@ module.exports = {
             'If "true", even 4-digit integers are separated'
         ].join(' ')
     },
+    tickformattype: {
+        valType: 'enumerated',
+        values: ['default', 'k', 'm', 'b', 't', 'custom'],
+        dflt: 'default',
+        editType: 'ticks',
+        description: [
+            'default - for default formatting of plotlyjs',
+            'k-thousand',
+            'm-million',
+            'b-billion',
+            't-trillion',
+            'custom - custom formatting supporting custom library',
+        ].join(' ')
+    },
     tickformat: {
         valType: 'string',
         dflt: '',
         editType: 'ticks',
         description: descriptionWithDates('tick label')
+    },
+    tickprecision: {
+        valType: 'number',
+        dflt: 2,
+        min: 0,
+        editType: 'ticks',
+        description: [
+            'precision when format type is th, m, b or t',
+        ].join(' ')
     },
     tickformatstops: templatedArray('tickformatstop', {
         enabled: {

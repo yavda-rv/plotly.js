@@ -7,11 +7,18 @@
         "monkeys"
       ],
       "y": [
-        20,
-        14,
-        23
+        20122,
+        1423,
+        23233
       ],
       "type": "bar"
     }
-  ]
+  ],
+  "layout": {
+    "yaxis": {
+      "tickformattype": "custom",
+      "tickformat": "$#,##0",
+      "tickprecision": 2
+    }
+  }
 }
