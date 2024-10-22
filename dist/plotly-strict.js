@@ -103294,8 +103294,10 @@ function hoverPoints(pointData, xval, yval, hovermode) {
 
   // hovering on fill case
   if (newPointData.index === undefined) {
-    return scatterPointData;
+    return;
+    //return scatterPointData;
   }
+
   var subplot = pointData.subplot;
   var cdi = newPointData.cd[newPointData.index];
   var trace = newPointData.trace;
