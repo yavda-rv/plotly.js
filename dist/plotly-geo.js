@@ -1,6 +1,6 @@
 /**
 * plotly.js (geo) v2.30.1
-* Copyright 2012-2024, Plotly, Inc.
+* Copyright 2012-2025, Plotly, Inc.
 * All rights reserved.
 * Licensed under the MIT license
 */
@@ -2312,7 +2312,6 @@ exports.defaults = ['#1f77b4',
 // curry yellow-green
 '#17becf' // blue-teal
 ];
-
 exports.defaultLine = '#444';
 exports.lightLine = '#eee';
 exports.background = '#fff';
@@ -2332,7 +2331,7 @@ exports.lightFraction = 100 * (0xe - 0x4) / (0xf - 0x4);
 "use strict";
 
 
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var isNumeric = __webpack_require__(2538);
 var isTypedArray = (__webpack_require__(221).isTypedArray);
 var color = module.exports = {};
@@ -2759,7 +2758,6 @@ module.exports = function colorbarDefaults(containerIn, containerOut, layout) {
   if (ticklabelposition.indexOf('inside') !== -1) {
     opts.bgColor = 'black'; // could we instead use the average of colors in the scale?
   }
-
   handlePrefixSuffixDefaults(colorbarIn, colorbarOut, coerce, 'linear', opts);
   handleTickLabelDefaults(colorbarIn, colorbarOut, coerce, 'linear', opts);
   handleTickMarkDefaults(colorbarIn, colorbarOut, coerce, 'linear', opts);
@@ -2782,7 +2780,7 @@ module.exports = function colorbarDefaults(containerIn, containerOut, layout) {
 
 
 var d3 = __webpack_require__(8197);
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var Plots = __webpack_require__(39);
 var Registry = __webpack_require__(2817);
 var Axes = __webpack_require__(1529);
@@ -3024,7 +3022,6 @@ function drawColorBar(g, opts, gd) {
     ax.titley = optsY + ypad / gs.h;
     ax.titlex = vFrac + xpad / gs.w; // right side
   }
-
   if (line.color && opts.tickmode === 'auto') {
     ax.tickmode = 'linear';
     ax.tick0 = levelsIn.start;
@@ -3573,7 +3570,6 @@ function mockColorBarAxis(gd, opts, zrange) {
     noInsideRange: true,
     calendar: fullLayout.calendar // not really necessary (yet?)
   };
-
   function coerce(attr, dflt) {
     return Lib.coerce(cbAxisIn, cbAxisOut, axisLayoutAttrs, attr, dflt);
   }
@@ -3950,7 +3946,7 @@ function npMaybe(parentCont, prefix) {
 module.exports = function colorScaleDefaults(parentContIn, parentContOut, layout, coerce, opts) {
   var prefix = opts.prefix;
   var cLetter = opts.cLetter;
-  var inTrace = ('_module' in parentContOut);
+  var inTrace = '_module' in parentContOut;
   var containerIn = npMaybe(parentContIn, prefix);
   var containerOut = npMaybe(parentContOut, prefix);
   var template = npMaybe(parentContOut._template || {}, prefix) || {};
@@ -4027,7 +4023,7 @@ module.exports = function colorScaleDefaults(parentContIn, parentContOut, layout
 
 
 var d3 = __webpack_require__(8197);
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var isNumeric = __webpack_require__(2538);
 var Lib = __webpack_require__(1372);
 var Color = __webpack_require__(605);
@@ -4346,7 +4342,7 @@ module.exports = function supplyLayoutDefaults(layoutIn, layoutOut) {
 "use strict";
 
 
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var scales = {
   Greys: [[0, 'rgb(0,0,0)'], [1, 'rgb(255,255,255)']],
   YlGnBu: [[0, 'rgb(8,29,88)'], [0.125, 'rgb(37,52,148)'], [0.25, 'rgb(34,94,168)'], [0.375, 'rgb(29,145,192)'], [0.5, 'rgb(65,182,196)'], [0.625, 'rgb(127,205,187)'], [0.75, 'rgb(199,233,180)'], [0.875, 'rgb(237,248,217)'], [1, 'rgb(255,255,217)']],
@@ -4849,7 +4845,7 @@ var d3 = __webpack_require__(8197);
 var Lib = __webpack_require__(1372);
 var numberFormat = Lib.numberFormat;
 var isNumeric = __webpack_require__(2538);
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var Registry = __webpack_require__(2817);
 var Color = __webpack_require__(605);
 var Colorscale = __webpack_require__(5321);
@@ -6257,7 +6253,6 @@ function getMarkerAngle(d, trace) {
       var lat = d.lonlat[1];
       var north = trace._geo.project([lon, lat + 1e-5 // epsilon
       ]);
-
       var east = trace._geo.project([lon + 1e-5,
       // epsilon
       lat]);
@@ -7891,7 +7886,7 @@ exports.isXYhover = function (hovermode) {
 
 var d3 = __webpack_require__(8197);
 var isNumeric = __webpack_require__(2538);
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var Lib = __webpack_require__(1372);
 var strTranslate = Lib.strTranslate;
 var strRotate = Lib.strRotate;
@@ -9762,7 +9757,6 @@ function hoverChanged() {
   // }
   // return false;
 }
-
 function spikesChanged(gd, oldspikepoints) {
   // don't relayout the plot because of new spikelines if spikelines points didn't change
   if (!oldspikepoints) return true;
@@ -12207,7 +12201,6 @@ module.exports = function getLegendData(calcdata, opts, hasMultipleLegends) {
     return a[0]._groupMinRank - b[0]._groupMinRank || a[0]._preGroupSort - b[0]._preGroupSort // fallback for old Chrome < 70 https://bugs.chromium.org/p/v8/issues/detail?id=90
     ;
   };
-
   var orderFn2 = function (a, b) {
     return a.trace.legendrank - b.trace.legendrank || a._preSort - b._preSort // fallback for old Chrome < 70 https://bugs.chromium.org/p/v8/issues/detail?id=90
     ;
@@ -12975,7 +12968,6 @@ module.exports = function style(s, gd, legend) {
         case 'heatmap':
           ptsData = [['M-15,-2V4H15V-2Z'] // similar to contour
           ];
-
           useGradient = true;
           break;
         case 'choropleth':
@@ -13041,7 +13033,6 @@ module.exports = function style(s, gd, legend) {
           colorscale[Math.floor((len - 1) / 2)][1]; // middle
         }
       }
-
       pt.attr('d', dd[0]);
       if (fillColor) {
         pt.call(Color.fill, fillColor);
@@ -13190,7 +13181,6 @@ modeBarButtons.toImage = {
     // legacy text
     _(gd, 'Download plot'); // generic non-PNG text
   },
-
   icon: Icons.camera,
   click: function (gd) {
     var toImageButtonOptions = gd._context.toImageButtonOptions;
@@ -16110,7 +16100,6 @@ function drawOne(gd, index) {
           editHelpers: editHelpers,
           isActiveSelection: true // i.e. to enable controllers
         };
-
         var polygons = readPaths(d, gd);
         // display polygons on the screen
         displayOutlines(polygons, path, dragOptions);
@@ -16515,7 +16504,6 @@ function prepSelect(evt, startX, startY, dragOptions, mode) {
   var fillC = isDrawMode && !isOpenMode ? newStyle.fillcolor : 'rgba(0,0,0,0)';
   var strokeC = newStyle.line.color || (isCartesian ? Color.contrast(gd._fullLayout.plot_bgcolor) : '#7f7f7f' // non-cartesian subplot
   );
-
   outlines.enter().append('path').attr('class', 'select-outline select-outline-' + plotinfo.id).style({
     opacity: isDrawMode ? newStyle.opacity / 2 : 1,
     'stroke-dasharray': dashStyle(newStyle.line.dash, newStyle.line.width),
@@ -17282,7 +17270,6 @@ function convertPoly(polygonsIn, isOpenMode) {
       ]);
     }
   }
-
   return polygonsOut;
 }
 function _doSelect(selectionTesters, searchTraces) {
@@ -18841,7 +18828,6 @@ function draw(gd) {
   // may need to resurrect this if we put text (LaTeX) in shapes
   // return Plots.previousPromises(gd);
 }
-
 function shouldSkipEdits(gd) {
   return !!gd._fullLayout._outlining;
 }
@@ -18921,7 +18907,6 @@ function drawOne(gd, index) {
         hasText: options.label.text || options.label.texttemplate,
         isActiveShape: true // i.e. to enable controllers
       };
-
       var polygons = readPaths(d, gd);
       // display polygons on the screen
       displayOutlines(polygons, path, dragOptions);
@@ -19003,7 +18988,6 @@ function setupDragElement(gd, shapePath, shapeOptions, index, shapeLayer, editHe
     var circleStyle = {
       'fill-opacity': '0' // ensure not visible
     };
-
     var circleRadius = Math.max(sensoryWidth / 2, minSensoryWidth);
     g.append('circle').attr({
       'data-line-point': 'start-point',
@@ -20271,7 +20255,6 @@ exports.getPathString = function (gd, options) {
       isValid = x0In != null && x1In != null; // eslint-disable-line eqeqeq
     }
   }
-
   if (options.ysizemode === 'pixel') {
     var yAnchorPos = y2p(options.yanchor);
     y0 = yAnchorPos - options.y0;
@@ -20285,7 +20268,6 @@ exports.getPathString = function (gd, options) {
       isValid = s != null && f != null; // eslint-disable-line eqeqeq
     }
   }
-
   if (!isValid) {
     return null;
   }
@@ -23448,7 +23430,6 @@ var typedArrays = {
              BigUint64Array,
   */
 };
-
 typedArrays.uint8c = typedArrays.u1c;
 typedArrays.uint8 = typedArrays.u1;
 typedArrays.int8 = typedArrays.i1;
@@ -23687,7 +23668,7 @@ module.exports = function clearResponsive(gd) {
 
 
 var isNumeric = __webpack_require__(2538);
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var baseTraceAttrs = __webpack_require__(718);
 var colorscales = __webpack_require__(98);
 var Color = __webpack_require__(605);
@@ -24565,7 +24546,6 @@ exports.incrementMonth = function (ms, dMonth, calendar) {
       // then keep going in gregorian even though the result will be 'Invalid'
     }
   }
-
   var y = new Date(ms + THREEDAYS);
   return y.setUTCMonth(y.getUTCMonth() + dMonth) + timeMs - THREEDAYS;
 };
@@ -24982,7 +24962,6 @@ function _extend(inputs, isDeep, keepAllKeys, noArrayCopies) {
       target.splice(0, target.length); // reset target and continue to next block
     }
   }
-
   for (var i = 1; i < length; i++) {
     input = inputs[i];
     for (key in input) {
@@ -25103,7 +25082,7 @@ function isCalcData(cont) {
 var d3 = __webpack_require__(8197);
 var countryRegex = __webpack_require__(2666);
 var turfArea = __webpack_require__(6717);
-var turfCentroid = __webpack_require__(1009);
+var turfCentroid = __webpack_require__(4051);
 var turfBbox = __webpack_require__(332);
 var identity = __webpack_require__(396);
 var loggers = __webpack_require__(5953);
@@ -30234,7 +30213,6 @@ exports.cleanLayout = function (layout) {
             z: 1
           } // we just ignore calculating camera z up in this case
         };
-
         delete scene.cameraposition;
       }
 
@@ -32119,7 +32097,6 @@ function restyle(gd, astr, val, _traces) {
       // otherwise we must go through addAxRangeSequence,
       // which in general must redraws 'all' axes
     }
-
     if (flags.style) seq.push(subroutines.doTraceStyle);
     if (flags.colorbars) seq.push(subroutines.doColorBars);
     seq.push(emitAfterPlot);
@@ -37397,7 +37374,6 @@ module.exports = {
     editType: 'calc+clearAxisTypes',
     _noTemplating: true // we handle this at a higher level
   },
-
   visible: {
     valType: 'enumerated',
     values: [true, false, 'legendonly'],
@@ -39126,7 +39102,6 @@ function positionPeriodTicks(tickVals, ax, definedDelta) {
       }
       if (inBetween && actualDelta > ONEWEEK) periodLength = actualDelta; // center monthly & longer periods
     }
-
     if (periodLength > 0 ||
     // not instant
     i === 0 // taking care first tick added
@@ -39368,7 +39343,6 @@ axes.calcTicks = function calcTicks(ax, opts) {
       // hover
       tickVals[i].simpleLabel // noSuffixPrefix
       );
-
       p = tickVals[i].periodX;
       if (p !== undefined) {
         t.periodX = p;
@@ -39535,7 +39509,6 @@ axes.autoTicks = function (ax, roughDTick, isMinor) {
         } else {
           ax.tick0 = Lib.dateTick0(ax.calendar, 1); // Sunday
         }
-
         if (isPeriod) ax._dowTick0 = ax.tick0;
       }
     } else if (roughX2 > ONEHOUR) {
@@ -41505,7 +41478,6 @@ axes.drawLabels = function (gd, ax, opts) {
         }
       } // TODO: hide mathjax?
     });
-
     for (var subplot in fullLayout._plots) {
       var plotinfo = fullLayout._plots[subplot];
       if (ax._id !== plotinfo.xaxis._id && ax._id !== plotinfo.yaxis._id) continue;
@@ -41634,7 +41606,6 @@ axes.drawLabels = function (gd, ax, opts) {
           }, autoTickAnglesRadians[0]);
         }
         var newAngle = angleRadians * (180 / Math.PI /* to degrees */);
-
         for (i = 0; i < lbbArray.length - 1; i++) {
           if (Lib.bBoxIntersect(lbbArray[i], lbbArray[i + 1], pad)) {
             autoangle = newAngle;
@@ -43548,7 +43519,7 @@ function updateDomain(ax, factor) {
 var d3 = __webpack_require__(8197);
 var Lib = __webpack_require__(1372);
 var numberFormat = Lib.numberFormat;
-var tinycolor = __webpack_require__(2062);
+var tinycolor = __webpack_require__(7218);
 var supportsPassive = __webpack_require__(4608);
 var Registry = __webpack_require__(2817);
 var strTranslate = Lib.strTranslate;
@@ -46493,7 +46464,7 @@ module.exports = function supplyLayoutDefaults(layoutIn, layoutOut, fullData) {
 "use strict";
 
 
-var colorMix = (__webpack_require__(2062).mix);
+var colorMix = (__webpack_require__(7218).mix);
 var colorAttrs = __webpack_require__(6784);
 var Lib = __webpack_require__(1372);
 
@@ -48621,7 +48592,6 @@ module.exports = function (opts) {
     // blank strings so compress_attributes can remove
     // TODO - that's uber hacky... better solution?
   };
-
   if (opts.autoSize) attrs.size.dflt = 'auto';
   if (opts.autoColor) attrs.color.dflt = 'auto';
   if (opts.arrayOk) {
@@ -54804,7 +54774,7 @@ var helpers = __webpack_require__(1984);
 */
 function fileSaver(url, name, format) {
   var saveLink = document.createElement('a');
-  var canUseSaveLink = ('download' in saveLink);
+  var canUseSaveLink = 'download' in saveLink;
   var promise = new Promise(function (resolve, reject) {
     var blob;
     var objectUrl;
@@ -55130,7 +55100,6 @@ function htmlEntityDecode(s) {
     }
     return hiddenDiv.html(d).text(); // everything else, let the browser decode it to unicode
   });
-
   hiddenDiv.remove();
   return replaced;
 }
@@ -56954,7 +56923,6 @@ module.exports = {
       editType: 'plot',
       anim: false // TODO: possibly set to true in future
     },
-
     angleref: {
       valType: 'enumerated',
       values: ['previous', 'up'],
@@ -58973,7 +58941,6 @@ function getPeriod0Dflt(period, calendar) {
   if (period % ONEWEEK === 0) {
     return dateTick0(calendar, 1); // Sunday
   }
-
   return dateTick0(calendar, 0);
 }
 module.exports = function handlePeriodDefaults(traceIn, traceOut, layout, coerce, opts) {
@@ -63331,207 +63298,207 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
     };
   }
   d3.functor = d3_functor;
-  d3.xhr = d3_xhrType(d3_identity);
-  function d3_xhrType(response) {
-    return function(url, mimeType, callback) {
-      if (arguments.length === 2 && typeof mimeType === "function") callback = mimeType, 
-      mimeType = null;
-      return d3_xhr(url, mimeType, response, callback);
-    };
-  }
-  function d3_xhr(url, mimeType, response, callback) {
-    var xhr = {}, dispatch = d3.dispatch("beforesend", "progress", "load", "error"), headers = {}, request = new XMLHttpRequest(), responseType = null;
-    if (self.XDomainRequest && !("withCredentials" in request) && /^(http(s)?:)?\/\//.test(url)) request = new XDomainRequest();
-    "onload" in request ? request.onload = request.onerror = respond : request.onreadystatechange = function() {
-      request.readyState > 3 && respond();
-    };
-    function respond() {
-      var status = request.status, result;
-      if (!status && d3_xhrHasResponse(request) || status >= 200 && status < 300 || status === 304) {
-        try {
-          result = response.call(xhr, request);
-        } catch (e) {
-          dispatch.error.call(xhr, e);
-          return;
-        }
-        dispatch.load.call(xhr, result);
-      } else {
-        dispatch.error.call(xhr, request);
-      }
-    }
-    request.onprogress = function(event) {
-      var o = d3.event;
-      d3.event = event;
-      try {
-        dispatch.progress.call(xhr, request);
-      } finally {
-        d3.event = o;
-      }
-    };
-    xhr.header = function(name, value) {
-      name = (name + "").toLowerCase();
-      if (arguments.length < 2) return headers[name];
-      if (value == null) delete headers[name]; else headers[name] = value + "";
-      return xhr;
-    };
-    xhr.mimeType = function(value) {
-      if (!arguments.length) return mimeType;
-      mimeType = value == null ? null : value + "";
-      return xhr;
-    };
-    xhr.responseType = function(value) {
-      if (!arguments.length) return responseType;
-      responseType = value;
-      return xhr;
-    };
-    xhr.response = function(value) {
-      response = value;
-      return xhr;
-    };
-    [ "get", "post" ].forEach(function(method) {
-      xhr[method] = function() {
-        return xhr.send.apply(xhr, [ method ].concat(d3_array(arguments)));
-      };
-    });
-    xhr.send = function(method, data, callback) {
-      if (arguments.length === 2 && typeof data === "function") callback = data, data = null;
-      request.open(method, url, true);
-      if (mimeType != null && !("accept" in headers)) headers["accept"] = mimeType + ",*/*";
-      if (request.setRequestHeader) for (var name in headers) request.setRequestHeader(name, headers[name]);
-      if (mimeType != null && request.overrideMimeType) request.overrideMimeType(mimeType);
-      if (responseType != null) request.responseType = responseType;
-      if (callback != null) xhr.on("error", callback).on("load", function(request) {
-        callback(null, request);
-      });
-      dispatch.beforesend.call(xhr, request);
-      request.send(data == null ? null : data);
-      return xhr;
-    };
-    xhr.abort = function() {
-      request.abort();
-      return xhr;
-    };
-    d3.rebind(xhr, dispatch, "on");
-    return callback == null ? xhr : xhr.get(d3_xhr_fixCallback(callback));
-  }
-  function d3_xhr_fixCallback(callback) {
-    return callback.length === 1 ? function(error, request) {
-      callback(error == null ? request : null);
-    } : callback;
-  }
-  function d3_xhrHasResponse(request) {
-    var type = request.responseType;
-    return type && type !== "text" ? request.response : request.responseText;
-  }
-  d3.dsv = function(delimiter, mimeType) {
-    var reFormat = new RegExp('["' + delimiter + "\n]"), delimiterCode = delimiter.charCodeAt(0);
-    function dsv(url, row, callback) {
-      if (arguments.length < 3) callback = row, row = null;
-      var xhr = d3_xhr(url, mimeType, row == null ? response : typedResponse(row), callback);
-      xhr.row = function(_) {
-        return arguments.length ? xhr.response((row = _) == null ? response : typedResponse(_)) : row;
-      };
-      return xhr;
-    }
-    function response(request) {
-      return dsv.parse(request.responseText);
-    }
-    function typedResponse(f) {
-      return function(request) {
-        return dsv.parse(request.responseText, f);
-      };
-    }
-    dsv.parse = function(text, f) {
-      var o;
-      return dsv.parseRows(text, function(row, i) {
-        if (o) return o(row, i - 1);
-        var a = function(d) {
-          var obj = {};
-          var len = row.length;
-          for (var k = 0; k < len; ++k) {
-            obj[row[k]] = d[k];
-          }
-          return obj;
-        };
-        o = f ? function(row, i) {
-          return f(a(row), i);
-        } : a;
-      });
-    };
-    dsv.parseRows = function(text, f) {
-      var EOL = {}, EOF = {}, rows = [], N = text.length, I = 0, n = 0, t, eol;
-      function token() {
-        if (I >= N) return EOF;
-        if (eol) return eol = false, EOL;
-        var j = I;
-        if (text.charCodeAt(j) === 34) {
-          var i = j;
-          while (i++ < N) {
-            if (text.charCodeAt(i) === 34) {
-              if (text.charCodeAt(i + 1) !== 34) break;
-              ++i;
-            }
-          }
-          I = i + 2;
-          var c = text.charCodeAt(i + 1);
-          if (c === 13) {
-            eol = true;
-            if (text.charCodeAt(i + 2) === 10) ++I;
-          } else if (c === 10) {
-            eol = true;
-          }
-          return text.slice(j + 1, i).replace(/""/g, '"');
-        }
-        while (I < N) {
-          var c = text.charCodeAt(I++), k = 1;
-          if (c === 10) eol = true; else if (c === 13) {
-            eol = true;
-            if (text.charCodeAt(I) === 10) ++I, ++k;
-          } else if (c !== delimiterCode) continue;
-          return text.slice(j, I - k);
-        }
-        return text.slice(j);
-      }
-      while ((t = token()) !== EOF) {
-        var a = [];
-        while (t !== EOL && t !== EOF) {
-          a.push(t);
-          t = token();
-        }
-        if (f && (a = f(a, n++)) == null) continue;
-        rows.push(a);
-      }
-      return rows;
-    };
-    dsv.format = function(rows) {
-      if (Array.isArray(rows[0])) return dsv.formatRows(rows);
-      var fieldSet = new d3_Set(), fields = [];
-      rows.forEach(function(row) {
-        for (var field in row) {
-          if (!fieldSet.has(field)) {
-            fields.push(fieldSet.add(field));
-          }
-        }
-      });
-      return [ fields.map(formatValue).join(delimiter) ].concat(rows.map(function(row) {
-        return fields.map(function(field) {
-          return formatValue(row[field]);
-        }).join(delimiter);
-      })).join("\n");
-    };
-    dsv.formatRows = function(rows) {
-      return rows.map(formatRow).join("\n");
-    };
-    function formatRow(row) {
-      return row.map(formatValue).join(delimiter);
-    }
-    function formatValue(text) {
-      return reFormat.test(text) ? '"' + text.replace(/\"/g, '""') + '"' : text;
-    }
-    return dsv;
-  };
-  d3.csv = d3.dsv(",", "text/csv");
-  d3.tsv = d3.dsv("	", "text/tab-separated-values");
+  // d3.xhr = d3_xhrType(d3_identity);
+  // function d3_xhrType(response) {
+  //   return function(url, mimeType, callback) {
+  //     if (arguments.length === 2 && typeof mimeType === "function") callback = mimeType, 
+  //     mimeType = null;
+  //     return d3_xhr(url, mimeType, response, callback);
+  //   };
+  // }
+  // function d3_xhr(url, mimeType, response, callback) {
+  //   var xhr = {}, dispatch = d3.dispatch("beforesend", "progress", "load", "error"), headers = {}, request = new XMLHttpRequest(), responseType = null;
+  //   if (self.XDomainRequest && !("withCredentials" in request) && /^(http(s)?:)?\/\//.test(url)) request = new XDomainRequest();
+  //   "onload" in request ? request.onload = request.onerror = respond : request.onreadystatechange = function() {
+  //     request.readyState > 3 && respond();
+  //   };
+  //   function respond() {
+  //     var status = request.status, result;
+  //     if (!status && d3_xhrHasResponse(request) || status >= 200 && status < 300 || status === 304) {
+  //       try {
+  //         result = response.call(xhr, request);
+  //       } catch (e) {
+  //         dispatch.error.call(xhr, e);
+  //         return;
+  //       }
+  //       dispatch.load.call(xhr, result);
+  //     } else {
+  //       dispatch.error.call(xhr, request);
+  //     }
+  //   }
+  //   request.onprogress = function(event) {
+  //     var o = d3.event;
+  //     d3.event = event;
+  //     try {
+  //       dispatch.progress.call(xhr, request);
+  //     } finally {
+  //       d3.event = o;
+  //     }
+  //   };
+  //   xhr.header = function(name, value) {
+  //     name = (name + "").toLowerCase();
+  //     if (arguments.length < 2) return headers[name];
+  //     if (value == null) delete headers[name]; else headers[name] = value + "";
+  //     return xhr;
+  //   };
+  //   xhr.mimeType = function(value) {
+  //     if (!arguments.length) return mimeType;
+  //     mimeType = value == null ? null : value + "";
+  //     return xhr;
+  //   };
+  //   xhr.responseType = function(value) {
+  //     if (!arguments.length) return responseType;
+  //     responseType = value;
+  //     return xhr;
+  //   };
+  //   xhr.response = function(value) {
+  //     response = value;
+  //     return xhr;
+  //   };
+  //   [ "get", "post" ].forEach(function(method) {
+  //     xhr[method] = function() {
+  //       return xhr.send.apply(xhr, [ method ].concat(d3_array(arguments)));
+  //     };
+  //   });
+  //   xhr.send = function(method, data, callback) {
+  //     if (arguments.length === 2 && typeof data === "function") callback = data, data = null;
+  //     request.open(method, url, true);
+  //     if (mimeType != null && !("accept" in headers)) headers["accept"] = mimeType + ",*/*";
+  //     if (request.setRequestHeader) for (var name in headers) request.setRequestHeader(name, headers[name]);
+  //     if (mimeType != null && request.overrideMimeType) request.overrideMimeType(mimeType);
+  //     if (responseType != null) request.responseType = responseType;
+  //     if (callback != null) xhr.on("error", callback).on("load", function(request) {
+  //       callback(null, request);
+  //     });
+  //     dispatch.beforesend.call(xhr, request);
+  //     request.send(data == null ? null : data);
+  //     return xhr;
+  //   };
+  //   xhr.abort = function() {
+  //     request.abort();
+  //     return xhr;
+  //   };
+  //   d3.rebind(xhr, dispatch, "on");
+  //   return callback == null ? xhr : xhr.get(d3_xhr_fixCallback(callback));
+  // }
+  // function d3_xhr_fixCallback(callback) {
+  //   return callback.length === 1 ? function(error, request) {
+  //     callback(error == null ? request : null);
+  //   } : callback;
+  // }
+  // function d3_xhrHasResponse(request) {
+  //   var type = request.responseType;
+  //   return type && type !== "text" ? request.response : request.responseText;
+  // }
+  // d3.dsv = function(delimiter, mimeType) {
+  //   var reFormat = new RegExp('["' + delimiter + "\n]"), delimiterCode = delimiter.charCodeAt(0);
+  //   function dsv(url, row, callback) {
+  //     if (arguments.length < 3) callback = row, row = null;
+  //     var xhr = d3_xhr(url, mimeType, row == null ? response : typedResponse(row), callback);
+  //     xhr.row = function(_) {
+  //       return arguments.length ? xhr.response((row = _) == null ? response : typedResponse(_)) : row;
+  //     };
+  //     return xhr;
+  //   }
+  //   function response(request) {
+  //     return dsv.parse(request.responseText);
+  //   }
+  //   function typedResponse(f) {
+  //     return function(request) {
+  //       return dsv.parse(request.responseText, f);
+  //     };
+  //   }
+  //   dsv.parse = function(text, f) {
+  //     var o;
+  //     return dsv.parseRows(text, function(row, i) {
+  //       if (o) return o(row, i - 1);
+  //       var a = function(d) {
+  //         var obj = {};
+  //         var len = row.length;
+  //         for (var k = 0; k < len; ++k) {
+  //           obj[row[k]] = d[k];
+  //         }
+  //         return obj;
+  //       };
+  //       o = f ? function(row, i) {
+  //         return f(a(row), i);
+  //       } : a;
+  //     });
+  //   };
+  //   dsv.parseRows = function(text, f) {
+  //     var EOL = {}, EOF = {}, rows = [], N = text.length, I = 0, n = 0, t, eol;
+  //     function token() {
+  //       if (I >= N) return EOF;
+  //       if (eol) return eol = false, EOL;
+  //       var j = I;
+  //       if (text.charCodeAt(j) === 34) {
+  //         var i = j;
+  //         while (i++ < N) {
+  //           if (text.charCodeAt(i) === 34) {
+  //             if (text.charCodeAt(i + 1) !== 34) break;
+  //             ++i;
+  //           }
+  //         }
+  //         I = i + 2;
+  //         var c = text.charCodeAt(i + 1);
+  //         if (c === 13) {
+  //           eol = true;
+  //           if (text.charCodeAt(i + 2) === 10) ++I;
+  //         } else if (c === 10) {
+  //           eol = true;
+  //         }
+  //         return text.slice(j + 1, i).replace(/""/g, '"');
+  //       }
+  //       while (I < N) {
+  //         var c = text.charCodeAt(I++), k = 1;
+  //         if (c === 10) eol = true; else if (c === 13) {
+  //           eol = true;
+  //           if (text.charCodeAt(I) === 10) ++I, ++k;
+  //         } else if (c !== delimiterCode) continue;
+  //         return text.slice(j, I - k);
+  //       }
+  //       return text.slice(j);
+  //     }
+  //     while ((t = token()) !== EOF) {
+  //       var a = [];
+  //       while (t !== EOL && t !== EOF) {
+  //         a.push(t);
+  //         t = token();
+  //       }
+  //       if (f && (a = f(a, n++)) == null) continue;
+  //       rows.push(a);
+  //     }
+  //     return rows;
+  //   };
+  //   dsv.format = function(rows) {
+  //     if (Array.isArray(rows[0])) return dsv.formatRows(rows);
+  //     var fieldSet = new d3_Set(), fields = [];
+  //     rows.forEach(function(row) {
+  //       for (var field in row) {
+  //         if (!fieldSet.has(field)) {
+  //           fields.push(fieldSet.add(field));
+  //         }
+  //       }
+  //     });
+  //     return [ fields.map(formatValue).join(delimiter) ].concat(rows.map(function(row) {
+  //       return fields.map(function(field) {
+  //         return formatValue(row[field]);
+  //       }).join(delimiter);
+  //     })).join("\n");
+  //   };
+  //   dsv.formatRows = function(rows) {
+  //     return rows.map(formatRow).join("\n");
+  //   };
+  //   function formatRow(row) {
+  //     return row.map(formatValue).join(delimiter);
+  //   }
+  //   function formatValue(text) {
+  //     return reFormat.test(text) ? '"' + text.replace(/\"/g, '""') + '"' : text;
+  //   }
+  //   return dsv;
+  // };
+  // d3.csv = d3.dsv(",", "text/csv");
+  // d3.tsv = d3.dsv("	", "text/tab-separated-values");
   var d3_timer_queueHead, d3_timer_queueTail, d3_timer_interval, d3_timer_timeout, d3_timer_frame = this[d3_vendorSymbol(this, "requestAnimationFrame")] || function(callback) {
     setTimeout(callback, 17);
   };
@@ -68211,26 +68178,26 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
     sw: "nesw-resize"
   };
   var d3_svg_brushResizes = [ [ "n", "e", "s", "w", "nw", "ne", "se", "sw" ], [ "e", "w" ], [ "n", "s" ], [] ];
-  d3.text = d3_xhrType(function(request) {
-    return request.responseText;
-  });
-  d3.json = function(url, callback) {
-    return d3_xhr(url, "application/json", d3_json, callback);
-  };
-  function d3_json(request) {
-    return JSON.parse(request.responseText);
-  }
-  d3.html = function(url, callback) {
-    return d3_xhr(url, "text/html", d3_html, callback);
-  };
-  function d3_html(request) {
-    var range = d3_document.createRange();
-    range.selectNode(d3_document.body);
-    return range.createContextualFragment(request.responseText);
-  }
-  d3.xml = d3_xhrType(function(request) {
-    return request.responseXML;
-  });
+  // d3.text = d3_xhrType(function(request) {
+  //   return request.responseText;
+  // });
+  // d3.json = function(url, callback) {
+  //   return d3_xhr(url, "application/json", d3_json, callback);
+  // };
+  // function d3_json(request) {
+  //   return JSON.parse(request.responseText);
+  // }
+  // d3.html = function(url, callback) {
+  //   return d3_xhr(url, "text/html", d3_html, callback);
+  // };
+  // function d3_html(request) {
+  //   var range = d3_document.createRange();
+  //   range.selectNode(d3_document.body);
+  //   return range.createContextualFragment(request.responseText);
+  // }
+  // d3.xml = d3_xhrType(function(request) {
+  //   return request.responseXML;
+  // });
   if (true) !(__WEBPACK_AMD_DEFINE_FACTORY__ = (d3),
 		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 		(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
@@ -68246,7 +68213,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var meta_1 = __webpack_require__(8536);
+var meta_1 = __webpack_require__(2946);
 // Note: change RADIUS => earthRadius
 var RADIUS = 6378137;
 /**
@@ -68365,2174 +68332,13 @@ function rad(num) {
 
 /***/ }),
 
-/***/ 5353:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * @module helpers
- */
-/**
- * Earth Radius used with the Harvesine formula and approximates using a spherical (non-ellipsoid) Earth.
- *
- * @memberof helpers
- * @type {number}
- */
-exports.earthRadius = 6371008.8;
-/**
- * Unit of measurement factors using a spherical (non-ellipsoid) earth radius.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.factors = {
-    centimeters: exports.earthRadius * 100,
-    centimetres: exports.earthRadius * 100,
-    degrees: exports.earthRadius / 111325,
-    feet: exports.earthRadius * 3.28084,
-    inches: exports.earthRadius * 39.37,
-    kilometers: exports.earthRadius / 1000,
-    kilometres: exports.earthRadius / 1000,
-    meters: exports.earthRadius,
-    metres: exports.earthRadius,
-    miles: exports.earthRadius / 1609.344,
-    millimeters: exports.earthRadius * 1000,
-    millimetres: exports.earthRadius * 1000,
-    nauticalmiles: exports.earthRadius / 1852,
-    radians: 1,
-    yards: exports.earthRadius * 1.0936,
-};
-/**
- * Units of measurement factors based on 1 meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.unitsFactors = {
-    centimeters: 100,
-    centimetres: 100,
-    degrees: 1 / 111325,
-    feet: 3.28084,
-    inches: 39.37,
-    kilometers: 1 / 1000,
-    kilometres: 1 / 1000,
-    meters: 1,
-    metres: 1,
-    miles: 1 / 1609.344,
-    millimeters: 1000,
-    millimetres: 1000,
-    nauticalmiles: 1 / 1852,
-    radians: 1 / exports.earthRadius,
-    yards: 1.0936133,
-};
-/**
- * Area of measurement factors based on 1 square meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.areaFactors = {
-    acres: 0.000247105,
-    centimeters: 10000,
-    centimetres: 10000,
-    feet: 10.763910417,
-    hectares: 0.0001,
-    inches: 1550.003100006,
-    kilometers: 0.000001,
-    kilometres: 0.000001,
-    meters: 1,
-    metres: 1,
-    miles: 3.86e-7,
-    millimeters: 1000000,
-    millimetres: 1000000,
-    yards: 1.195990046,
-};
-/**
- * Wraps a GeoJSON {@link Geometry} in a GeoJSON {@link Feature}.
- *
- * @name feature
- * @param {Geometry} geometry input geometry
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature} a GeoJSON Feature
- * @example
- * var geometry = {
- *   "type": "Point",
- *   "coordinates": [110, 50]
- * };
- *
- * var feature = turf.feature(geometry);
- *
- * //=feature
- */
-function feature(geom, properties, options) {
-    if (options === void 0) { options = {}; }
-    var feat = { type: "Feature" };
-    if (options.id === 0 || options.id) {
-        feat.id = options.id;
-    }
-    if (options.bbox) {
-        feat.bbox = options.bbox;
-    }
-    feat.properties = properties || {};
-    feat.geometry = geom;
-    return feat;
-}
-exports.feature = feature;
-/**
- * Creates a GeoJSON {@link Geometry} from a Geometry string type & coordinates.
- * For GeometryCollection type use `helpers.geometryCollection`
- *
- * @name geometry
- * @param {string} type Geometry Type
- * @param {Array<any>} coordinates Coordinates
- * @param {Object} [options={}] Optional Parameters
- * @returns {Geometry} a GeoJSON Geometry
- * @example
- * var type = "Point";
- * var coordinates = [110, 50];
- * var geometry = turf.geometry(type, coordinates);
- * // => geometry
- */
-function geometry(type, coordinates, _options) {
-    if (_options === void 0) { _options = {}; }
-    switch (type) {
-        case "Point":
-            return point(coordinates).geometry;
-        case "LineString":
-            return lineString(coordinates).geometry;
-        case "Polygon":
-            return polygon(coordinates).geometry;
-        case "MultiPoint":
-            return multiPoint(coordinates).geometry;
-        case "MultiLineString":
-            return multiLineString(coordinates).geometry;
-        case "MultiPolygon":
-            return multiPolygon(coordinates).geometry;
-        default:
-            throw new Error(type + " is invalid");
-    }
-}
-exports.geometry = geometry;
-/**
- * Creates a {@link Point} {@link Feature} from a Position.
- *
- * @name point
- * @param {Array<number>} coordinates longitude, latitude position (each in decimal degrees)
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Point>} a Point feature
- * @example
- * var point = turf.point([-75.343, 39.984]);
- *
- * //=point
- */
-function point(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    if (!coordinates) {
-        throw new Error("coordinates is required");
-    }
-    if (!Array.isArray(coordinates)) {
-        throw new Error("coordinates must be an Array");
-    }
-    if (coordinates.length < 2) {
-        throw new Error("coordinates must be at least 2 numbers long");
-    }
-    if (!isNumber(coordinates[0]) || !isNumber(coordinates[1])) {
-        throw new Error("coordinates must contain numbers");
-    }
-    var geom = {
-        type: "Point",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.point = point;
-/**
- * Creates a {@link Point} {@link FeatureCollection} from an Array of Point coordinates.
- *
- * @name points
- * @param {Array<Array<number>>} coordinates an array of Points
- * @param {Object} [properties={}] Translate these properties to each Feature
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Point>} Point Feature
- * @example
- * var points = turf.points([
- *   [-75, 39],
- *   [-80, 45],
- *   [-78, 50]
- * ]);
- *
- * //=points
- */
-function points(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return point(coords, properties);
-    }), options);
-}
-exports.points = points;
-/**
- * Creates a {@link Polygon} {@link Feature} from an Array of LinearRings.
- *
- * @name polygon
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Polygon>} Polygon Feature
- * @example
- * var polygon = turf.polygon([[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]], { name: 'poly1' });
- *
- * //=polygon
- */
-function polygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    for (var _i = 0, coordinates_1 = coordinates; _i < coordinates_1.length; _i++) {
-        var ring = coordinates_1[_i];
-        if (ring.length < 4) {
-            throw new Error("Each LinearRing of a Polygon must have 4 or more Positions.");
-        }
-        for (var j = 0; j < ring[ring.length - 1].length; j++) {
-            // Check if first point of Polygon contains two numbers
-            if (ring[ring.length - 1][j] !== ring[0][j]) {
-                throw new Error("First and last Position are not equivalent.");
-            }
-        }
-    }
-    var geom = {
-        type: "Polygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.polygon = polygon;
-/**
- * Creates a {@link Polygon} {@link FeatureCollection} from an Array of Polygon coordinates.
- *
- * @name polygons
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygon coordinates
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Polygon>} Polygon FeatureCollection
- * @example
- * var polygons = turf.polygons([
- *   [[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]],
- *   [[[-15, 42], [-14, 46], [-12, 41], [-17, 44], [-15, 42]]],
- * ]);
- *
- * //=polygons
- */
-function polygons(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return polygon(coords, properties);
-    }), options);
-}
-exports.polygons = polygons;
-/**
- * Creates a {@link LineString} {@link Feature} from an Array of Positions.
- *
- * @name lineString
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<LineString>} LineString Feature
- * @example
- * var linestring1 = turf.lineString([[-24, 63], [-23, 60], [-25, 65], [-20, 69]], {name: 'line 1'});
- * var linestring2 = turf.lineString([[-14, 43], [-13, 40], [-15, 45], [-10, 49]], {name: 'line 2'});
- *
- * //=linestring1
- * //=linestring2
- */
-function lineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    if (coordinates.length < 2) {
-        throw new Error("coordinates must be an array of two or more positions");
-    }
-    var geom = {
-        type: "LineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.lineString = lineString;
-/**
- * Creates a {@link LineString} {@link FeatureCollection} from an Array of LineString coordinates.
- *
- * @name lineStrings
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<LineString>} LineString FeatureCollection
- * @example
- * var linestrings = turf.lineStrings([
- *   [[-24, 63], [-23, 60], [-25, 65], [-20, 69]],
- *   [[-14, 43], [-13, 40], [-15, 45], [-10, 49]]
- * ]);
- *
- * //=linestrings
- */
-function lineStrings(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return lineString(coords, properties);
-    }), options);
-}
-exports.lineStrings = lineStrings;
-/**
- * Takes one or more {@link Feature|Features} and creates a {@link FeatureCollection}.
- *
- * @name featureCollection
- * @param {Feature[]} features input features
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {FeatureCollection} FeatureCollection of Features
- * @example
- * var locationA = turf.point([-75.343, 39.984], {name: 'Location A'});
- * var locationB = turf.point([-75.833, 39.284], {name: 'Location B'});
- * var locationC = turf.point([-75.534, 39.123], {name: 'Location C'});
- *
- * var collection = turf.featureCollection([
- *   locationA,
- *   locationB,
- *   locationC
- * ]);
- *
- * //=collection
- */
-function featureCollection(features, options) {
-    if (options === void 0) { options = {}; }
-    var fc = { type: "FeatureCollection" };
-    if (options.id) {
-        fc.id = options.id;
-    }
-    if (options.bbox) {
-        fc.bbox = options.bbox;
-    }
-    fc.features = features;
-    return fc;
-}
-exports.featureCollection = featureCollection;
-/**
- * Creates a {@link Feature<MultiLineString>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiLineString
- * @param {Array<Array<Array<number>>>} coordinates an array of LineStrings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiLineString>} a MultiLineString feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiLine = turf.multiLineString([[[0,0],[10,10]]]);
- *
- * //=multiLine
- */
-function multiLineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiLineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiLineString = multiLineString;
-/**
- * Creates a {@link Feature<MultiPoint>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPoint
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPoint>} a MultiPoint feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPt = turf.multiPoint([[0,0],[10,10]]);
- *
- * //=multiPt
- */
-function multiPoint(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPoint",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPoint = multiPoint;
-/**
- * Creates a {@link Feature<MultiPolygon>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPolygon
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygons
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPolygon>} a multipolygon feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPoly = turf.multiPolygon([[[[0,0],[0,10],[10,10],[10,0],[0,0]]]]);
- *
- * //=multiPoly
- *
- */
-function multiPolygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPolygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPolygon = multiPolygon;
-/**
- * Creates a {@link Feature<GeometryCollection>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name geometryCollection
- * @param {Array<Geometry>} geometries an array of GeoJSON Geometries
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<GeometryCollection>} a GeoJSON GeometryCollection Feature
- * @example
- * var pt = turf.geometry("Point", [100, 0]);
- * var line = turf.geometry("LineString", [[101, 0], [102, 1]]);
- * var collection = turf.geometryCollection([pt, line]);
- *
- * // => collection
- */
-function geometryCollection(geometries, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "GeometryCollection",
-        geometries: geometries,
-    };
-    return feature(geom, properties, options);
-}
-exports.geometryCollection = geometryCollection;
-/**
- * Round number to precision
- *
- * @param {number} num Number
- * @param {number} [precision=0] Precision
- * @returns {number} rounded number
- * @example
- * turf.round(120.4321)
- * //=120
- *
- * turf.round(120.4321, 2)
- * //=120.43
- */
-function round(num, precision) {
-    if (precision === void 0) { precision = 0; }
-    if (precision && !(precision >= 0)) {
-        throw new Error("precision must be a positive number");
-    }
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(num * multiplier) / multiplier;
-}
-exports.round = round;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from radians to a more friendly unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name radiansToLength
- * @param {number} radians in radians across the sphere
- * @param {string} [units="kilometers"] can be degrees, radians, miles, inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} distance
- */
-function radiansToLength(radians, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return radians * factor;
-}
-exports.radiansToLength = radiansToLength;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into radians
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name lengthToRadians
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} radians
- */
-function lengthToRadians(distance, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return distance / factor;
-}
-exports.lengthToRadians = lengthToRadians;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into degrees
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, centimeters, kilometres, feet
- *
- * @name lengthToDegrees
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} degrees
- */
-function lengthToDegrees(distance, units) {
-    return radiansToDegrees(lengthToRadians(distance, units));
-}
-exports.lengthToDegrees = lengthToDegrees;
-/**
- * Converts any bearing angle from the north line direction (positive clockwise)
- * and returns an angle between 0-360 degrees (positive clockwise), 0 being the north line
- *
- * @name bearingToAzimuth
- * @param {number} bearing angle, between -180 and +180 degrees
- * @returns {number} angle between 0 and 360 degrees
- */
-function bearingToAzimuth(bearing) {
-    var angle = bearing % 360;
-    if (angle < 0) {
-        angle += 360;
-    }
-    return angle;
-}
-exports.bearingToAzimuth = bearingToAzimuth;
-/**
- * Converts an angle in radians to degrees
- *
- * @name radiansToDegrees
- * @param {number} radians angle in radians
- * @returns {number} degrees between 0 and 360 degrees
- */
-function radiansToDegrees(radians) {
-    var degrees = radians % (2 * Math.PI);
-    return (degrees * 180) / Math.PI;
-}
-exports.radiansToDegrees = radiansToDegrees;
-/**
- * Converts an angle in degrees to radians
- *
- * @name degreesToRadians
- * @param {number} degrees angle between 0 and 360 degrees
- * @returns {number} angle in radians
- */
-function degreesToRadians(degrees) {
-    var radians = degrees % 360;
-    return (radians * Math.PI) / 180;
-}
-exports.degreesToRadians = degreesToRadians;
-/**
- * Converts a length to the requested unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @param {number} length to be converted
- * @param {Units} [originalUnit="kilometers"] of the length
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted length
- */
-function convertLength(length, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "kilometers"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(length >= 0)) {
-        throw new Error("length must be a positive number");
-    }
-    return radiansToLength(lengthToRadians(length, originalUnit), finalUnit);
-}
-exports.convertLength = convertLength;
-/**
- * Converts a area to the requested unit.
- * Valid units: kilometers, kilometres, meters, metres, centimetres, millimeters, acres, miles, yards, feet, inches, hectares
- * @param {number} area to be converted
- * @param {Units} [originalUnit="meters"] of the distance
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted area
- */
-function convertArea(area, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "meters"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(area >= 0)) {
-        throw new Error("area must be a positive number");
-    }
-    var startFactor = exports.areaFactors[originalUnit];
-    if (!startFactor) {
-        throw new Error("invalid original units");
-    }
-    var finalFactor = exports.areaFactors[finalUnit];
-    if (!finalFactor) {
-        throw new Error("invalid final units");
-    }
-    return (area / startFactor) * finalFactor;
-}
-exports.convertArea = convertArea;
-/**
- * isNumber
- *
- * @param {*} num Number to validate
- * @returns {boolean} true/false
- * @example
- * turf.isNumber(123)
- * //=true
- * turf.isNumber('foo')
- * //=false
- */
-function isNumber(num) {
-    return !isNaN(num) && num !== null && !Array.isArray(num);
-}
-exports.isNumber = isNumber;
-/**
- * isObject
- *
- * @param {*} input variable to validate
- * @returns {boolean} true/false
- * @example
- * turf.isObject({elevation: 10})
- * //=true
- * turf.isObject('foo')
- * //=false
- */
-function isObject(input) {
-    return !!input && input.constructor === Object;
-}
-exports.isObject = isObject;
-/**
- * Validate BBox
- *
- * @private
- * @param {Array<number>} bbox BBox to validate
- * @returns {void}
- * @throws Error if BBox is not valid
- * @example
- * validateBBox([-180, -40, 110, 50])
- * //=OK
- * validateBBox([-180, -40])
- * //=Error
- * validateBBox('Foo')
- * //=Error
- * validateBBox(5)
- * //=Error
- * validateBBox(null)
- * //=Error
- * validateBBox(undefined)
- * //=Error
- */
-function validateBBox(bbox) {
-    if (!bbox) {
-        throw new Error("bbox is required");
-    }
-    if (!Array.isArray(bbox)) {
-        throw new Error("bbox must be an Array");
-    }
-    if (bbox.length !== 4 && bbox.length !== 6) {
-        throw new Error("bbox must be an Array of 4 or 6 numbers");
-    }
-    bbox.forEach(function (num) {
-        if (!isNumber(num)) {
-            throw new Error("bbox must only contain numbers");
-        }
-    });
-}
-exports.validateBBox = validateBBox;
-/**
- * Validate Id
- *
- * @private
- * @param {string|number} id Id to validate
- * @returns {void}
- * @throws Error if Id is not valid
- * @example
- * validateId([-180, -40, 110, 50])
- * //=Error
- * validateId([-180, -40])
- * //=Error
- * validateId('Foo')
- * //=OK
- * validateId(5)
- * //=OK
- * validateId(null)
- * //=Error
- * validateId(undefined)
- * //=Error
- */
-function validateId(id) {
-    if (!id) {
-        throw new Error("id is required");
-    }
-    if (["string", "number"].indexOf(typeof id) === -1) {
-        throw new Error("id must be a number or a string");
-    }
-}
-exports.validateId = validateId;
-
-
-/***/ }),
-
-/***/ 8536:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-var helpers = __webpack_require__(5353);
-
-/**
- * Callback for coordEach
- *
- * @callback coordEachCallback
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Iterate over coordinates in any GeoJSON object, similar to Array.forEach()
- *
- * @name coordEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentCoord, coordIndex, featureIndex, multiFeatureIndex)
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordEach(features, function (currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function coordEach(geojson, callback, excludeWrapCoord) {
-  // Handles null Geometry -- Skips this GeoJSON
-  if (geojson === null) return;
-  var j,
-    k,
-    l,
-    geometry,
-    stopG,
-    coords,
-    geometryMaybeCollection,
-    wrapShrink = 0,
-    coordIndex = 0,
-    isGeometryCollection,
-    type = geojson.type,
-    isFeatureCollection = type === "FeatureCollection",
-    isFeature = type === "Feature",
-    stop = isFeatureCollection ? geojson.features.length : 1;
-
-  // This logic may look a little weird. The reason why it is that way
-  // is because it's trying to be fast. GeoJSON supports multiple kinds
-  // of objects at its root: FeatureCollection, Features, Geometries.
-  // This function has the responsibility of handling all of them, and that
-  // means that some of the `for` loops you see below actually just don't apply
-  // to certain inputs. For instance, if you give this just a
-  // Point geometry, then both loops are short-circuited and all we do
-  // is gradually rename the input until it's called 'geometry'.
-  //
-  // This also aims to allocate as few resources as possible: just a
-  // few numbers and booleans, rather than any temporary arrays as would
-  // be required with the normalization approach.
-  for (var featureIndex = 0; featureIndex < stop; featureIndex++) {
-    geometryMaybeCollection = isFeatureCollection
-      ? geojson.features[featureIndex].geometry
-      : isFeature
-      ? geojson.geometry
-      : geojson;
-    isGeometryCollection = geometryMaybeCollection
-      ? geometryMaybeCollection.type === "GeometryCollection"
-      : false;
-    stopG = isGeometryCollection
-      ? geometryMaybeCollection.geometries.length
-      : 1;
-
-    for (var geomIndex = 0; geomIndex < stopG; geomIndex++) {
-      var multiFeatureIndex = 0;
-      var geometryIndex = 0;
-      geometry = isGeometryCollection
-        ? geometryMaybeCollection.geometries[geomIndex]
-        : geometryMaybeCollection;
-
-      // Handles null Geometry -- Skips this geometry
-      if (geometry === null) continue;
-      coords = geometry.coordinates;
-      var geomType = geometry.type;
-
-      wrapShrink =
-        excludeWrapCoord &&
-        (geomType === "Polygon" || geomType === "MultiPolygon")
-          ? 1
-          : 0;
-
-      switch (geomType) {
-        case null:
-          break;
-        case "Point":
-          if (
-            callback(
-              coords,
-              coordIndex,
-              featureIndex,
-              multiFeatureIndex,
-              geometryIndex
-            ) === false
-          )
-            return false;
-          coordIndex++;
-          multiFeatureIndex++;
-          break;
-        case "LineString":
-        case "MultiPoint":
-          for (j = 0; j < coords.length; j++) {
-            if (
-              callback(
-                coords[j],
-                coordIndex,
-                featureIndex,
-                multiFeatureIndex,
-                geometryIndex
-              ) === false
-            )
-              return false;
-            coordIndex++;
-            if (geomType === "MultiPoint") multiFeatureIndex++;
-          }
-          if (geomType === "LineString") multiFeatureIndex++;
-          break;
-        case "Polygon":
-        case "MultiLineString":
-          for (j = 0; j < coords.length; j++) {
-            for (k = 0; k < coords[j].length - wrapShrink; k++) {
-              if (
-                callback(
-                  coords[j][k],
-                  coordIndex,
-                  featureIndex,
-                  multiFeatureIndex,
-                  geometryIndex
-                ) === false
-              )
-                return false;
-              coordIndex++;
-            }
-            if (geomType === "MultiLineString") multiFeatureIndex++;
-            if (geomType === "Polygon") geometryIndex++;
-          }
-          if (geomType === "Polygon") multiFeatureIndex++;
-          break;
-        case "MultiPolygon":
-          for (j = 0; j < coords.length; j++) {
-            geometryIndex = 0;
-            for (k = 0; k < coords[j].length; k++) {
-              for (l = 0; l < coords[j][k].length - wrapShrink; l++) {
-                if (
-                  callback(
-                    coords[j][k][l],
-                    coordIndex,
-                    featureIndex,
-                    multiFeatureIndex,
-                    geometryIndex
-                  ) === false
-                )
-                  return false;
-                coordIndex++;
-              }
-              geometryIndex++;
-            }
-            multiFeatureIndex++;
-          }
-          break;
-        case "GeometryCollection":
-          for (j = 0; j < geometry.geometries.length; j++)
-            if (
-              coordEach(geometry.geometries[j], callback, excludeWrapCoord) ===
-              false
-            )
-              return false;
-          break;
-        default:
-          throw new Error("Unknown Geometry Type");
-      }
-    }
-  }
-}
-
-/**
- * Callback for coordReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback coordReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * Starts at index 0, if an initialValue is provided, and at index 1 otherwise.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Reduce coordinates in any GeoJSON object, similar to Array.reduce()
- *
- * @name coordReduce
- * @param {FeatureCollection|Geometry|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentCoord, coordIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordReduce(features, function (previousValue, currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentCoord;
- * });
- */
-function coordReduce(geojson, callback, initialValue, excludeWrapCoord) {
-  var previousValue = initialValue;
-  coordEach(
-    geojson,
-    function (
-      currentCoord,
-      coordIndex,
-      featureIndex,
-      multiFeatureIndex,
-      geometryIndex
-    ) {
-      if (coordIndex === 0 && initialValue === undefined)
-        previousValue = currentCoord;
-      else
-        previousValue = callback(
-          previousValue,
-          currentCoord,
-          coordIndex,
-          featureIndex,
-          multiFeatureIndex,
-          geometryIndex
-        );
-    },
-    excludeWrapCoord
-  );
-  return previousValue;
-}
-
-/**
- * Callback for propEach
- *
- * @callback propEachCallback
- * @param {Object} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over properties in any GeoJSON object, similar to Array.forEach()
- *
- * @name propEach
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentProperties, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propEach(features, function (currentProperties, featureIndex) {
- *   //=currentProperties
- *   //=featureIndex
- * });
- */
-function propEach(geojson, callback) {
-  var i;
-  switch (geojson.type) {
-    case "FeatureCollection":
-      for (i = 0; i < geojson.features.length; i++) {
-        if (callback(geojson.features[i].properties, i) === false) break;
-      }
-      break;
-    case "Feature":
-      callback(geojson.properties, 0);
-      break;
-  }
-}
-
-/**
- * Callback for propReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback propReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {*} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce properties in any GeoJSON object into a single value,
- * similar to how Array.reduce works. However, in this case we lazily run
- * the reduction, so an array of all properties is unnecessary.
- *
- * @name propReduce
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentProperties, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propReduce(features, function (previousValue, currentProperties, featureIndex) {
- *   //=previousValue
- *   //=currentProperties
- *   //=featureIndex
- *   return currentProperties
- * });
- */
-function propReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  propEach(geojson, function (currentProperties, featureIndex) {
-    if (featureIndex === 0 && initialValue === undefined)
-      previousValue = currentProperties;
-    else
-      previousValue = callback(previousValue, currentProperties, featureIndex);
-  });
-  return previousValue;
-}
-
-/**
- * Callback for featureEach
- *
- * @callback featureEachCallback
- * @param {Feature<any>} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name featureEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.featureEach(features, function (currentFeature, featureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- * });
- */
-function featureEach(geojson, callback) {
-  if (geojson.type === "Feature") {
-    callback(geojson, 0);
-  } else if (geojson.type === "FeatureCollection") {
-    for (var i = 0; i < geojson.features.length; i++) {
-      if (callback(geojson.features[i], i) === false) break;
-    }
-  }
-}
-
-/**
- * Callback for featureReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback featureReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name featureReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.featureReduce(features, function (previousValue, currentFeature, featureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   return currentFeature
- * });
- */
-function featureReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  featureEach(geojson, function (currentFeature, featureIndex) {
-    if (featureIndex === 0 && initialValue === undefined)
-      previousValue = currentFeature;
-    else previousValue = callback(previousValue, currentFeature, featureIndex);
-  });
-  return previousValue;
-}
-
-/**
- * Get all coordinates from any GeoJSON object.
- *
- * @name coordAll
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @returns {Array<Array<number>>} coordinate position array
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * var coords = turf.coordAll(features);
- * //= [[26, 37], [36, 53]]
- */
-function coordAll(geojson) {
-  var coords = [];
-  coordEach(geojson, function (coord) {
-    coords.push(coord);
-  });
-  return coords;
-}
-
-/**
- * Callback for geomEach
- *
- * @callback geomEachCallback
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Iterate over each geometry in any GeoJSON object, similar to Array.forEach()
- *
- * @name geomEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomEach(features, function (currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- * });
- */
-function geomEach(geojson, callback) {
-  var i,
-    j,
-    g,
-    geometry,
-    stopG,
-    geometryMaybeCollection,
-    isGeometryCollection,
-    featureProperties,
-    featureBBox,
-    featureId,
-    featureIndex = 0,
-    isFeatureCollection = geojson.type === "FeatureCollection",
-    isFeature = geojson.type === "Feature",
-    stop = isFeatureCollection ? geojson.features.length : 1;
-
-  // This logic may look a little weird. The reason why it is that way
-  // is because it's trying to be fast. GeoJSON supports multiple kinds
-  // of objects at its root: FeatureCollection, Features, Geometries.
-  // This function has the responsibility of handling all of them, and that
-  // means that some of the `for` loops you see below actually just don't apply
-  // to certain inputs. For instance, if you give this just a
-  // Point geometry, then both loops are short-circuited and all we do
-  // is gradually rename the input until it's called 'geometry'.
-  //
-  // This also aims to allocate as few resources as possible: just a
-  // few numbers and booleans, rather than any temporary arrays as would
-  // be required with the normalization approach.
-  for (i = 0; i < stop; i++) {
-    geometryMaybeCollection = isFeatureCollection
-      ? geojson.features[i].geometry
-      : isFeature
-      ? geojson.geometry
-      : geojson;
-    featureProperties = isFeatureCollection
-      ? geojson.features[i].properties
-      : isFeature
-      ? geojson.properties
-      : {};
-    featureBBox = isFeatureCollection
-      ? geojson.features[i].bbox
-      : isFeature
-      ? geojson.bbox
-      : undefined;
-    featureId = isFeatureCollection
-      ? geojson.features[i].id
-      : isFeature
-      ? geojson.id
-      : undefined;
-    isGeometryCollection = geometryMaybeCollection
-      ? geometryMaybeCollection.type === "GeometryCollection"
-      : false;
-    stopG = isGeometryCollection
-      ? geometryMaybeCollection.geometries.length
-      : 1;
-
-    for (g = 0; g < stopG; g++) {
-      geometry = isGeometryCollection
-        ? geometryMaybeCollection.geometries[g]
-        : geometryMaybeCollection;
-
-      // Handle null Geometry
-      if (geometry === null) {
-        if (
-          callback(
-            null,
-            featureIndex,
-            featureProperties,
-            featureBBox,
-            featureId
-          ) === false
-        )
-          return false;
-        continue;
-      }
-      switch (geometry.type) {
-        case "Point":
-        case "LineString":
-        case "MultiPoint":
-        case "Polygon":
-        case "MultiLineString":
-        case "MultiPolygon": {
-          if (
-            callback(
-              geometry,
-              featureIndex,
-              featureProperties,
-              featureBBox,
-              featureId
-            ) === false
-          )
-            return false;
-          break;
-        }
-        case "GeometryCollection": {
-          for (j = 0; j < geometry.geometries.length; j++) {
-            if (
-              callback(
-                geometry.geometries[j],
-                featureIndex,
-                featureProperties,
-                featureBBox,
-                featureId
-              ) === false
-            )
-              return false;
-          }
-          break;
-        }
-        default:
-          throw new Error("Unknown Geometry Type");
-      }
-    }
-    // Only increase `featureIndex` per each feature
-    featureIndex++;
-  }
-}
-
-/**
- * Callback for geomReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback geomReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Reduce geometry in any GeoJSON object, similar to Array.reduce().
- *
- * @name geomReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomReduce(features, function (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=previousValue
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- *   return currentGeometry
- * });
- */
-function geomReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  geomEach(
-    geojson,
-    function (
-      currentGeometry,
-      featureIndex,
-      featureProperties,
-      featureBBox,
-      featureId
-    ) {
-      if (featureIndex === 0 && initialValue === undefined)
-        previousValue = currentGeometry;
-      else
-        previousValue = callback(
-          previousValue,
-          currentGeometry,
-          featureIndex,
-          featureProperties,
-          featureBBox,
-          featureId
-        );
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Callback for flattenEach
- *
- * @callback flattenEachCallback
- * @param {Feature} currentFeature The current flattened feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Iterate over flattened features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name flattenEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex, multiFeatureIndex)
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenEach(features, function (currentFeature, featureIndex, multiFeatureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- * });
- */
-function flattenEach(geojson, callback) {
-  geomEach(geojson, function (geometry, featureIndex, properties, bbox, id) {
-    // Callback for single geometry
-    var type = geometry === null ? null : geometry.type;
-    switch (type) {
-      case null:
-      case "Point":
-      case "LineString":
-      case "Polygon":
-        if (
-          callback(
-            helpers.feature(geometry, properties, { bbox: bbox, id: id }),
-            featureIndex,
-            0
-          ) === false
-        )
-          return false;
-        return;
-    }
-
-    var geomType;
-
-    // Callback for multi-geometry
-    switch (type) {
-      case "MultiPoint":
-        geomType = "Point";
-        break;
-      case "MultiLineString":
-        geomType = "LineString";
-        break;
-      case "MultiPolygon":
-        geomType = "Polygon";
-        break;
-    }
-
-    for (
-      var multiFeatureIndex = 0;
-      multiFeatureIndex < geometry.coordinates.length;
-      multiFeatureIndex++
-    ) {
-      var coordinate = geometry.coordinates[multiFeatureIndex];
-      var geom = {
-        type: geomType,
-        coordinates: coordinate,
-      };
-      if (
-        callback(helpers.feature(geom, properties), featureIndex, multiFeatureIndex) ===
-        false
-      )
-        return false;
-    }
-  });
-}
-
-/**
- * Callback for flattenReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback flattenReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Reduce flattened features in any GeoJSON object, similar to Array.reduce().
- *
- * @name flattenReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex, multiFeatureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenReduce(features, function (previousValue, currentFeature, featureIndex, multiFeatureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   return currentFeature
- * });
- */
-function flattenReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  flattenEach(
-    geojson,
-    function (currentFeature, featureIndex, multiFeatureIndex) {
-      if (
-        featureIndex === 0 &&
-        multiFeatureIndex === 0 &&
-        initialValue === undefined
-      )
-        previousValue = currentFeature;
-      else
-        previousValue = callback(
-          previousValue,
-          currentFeature,
-          featureIndex,
-          multiFeatureIndex
-        );
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Callback for segmentEach
- *
- * @callback segmentEachCallback
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- * @returns {void}
- */
-
-/**
- * Iterate over 2-vertex line segment in any GeoJSON object, similar to Array.forEach()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex)
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentEach(polygon, function (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //=currentSegment
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   //=segmentIndex
- * });
- *
- * // Calculate the total number of segments
- * var total = 0;
- * turf.segmentEach(polygon, function () {
- *     total++;
- * });
- */
-function segmentEach(geojson, callback) {
-  flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-    var segmentIndex = 0;
-
-    // Exclude null Geometries
-    if (!feature.geometry) return;
-    // (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
-    var type = feature.geometry.type;
-    if (type === "Point" || type === "MultiPoint") return;
-
-    // Generate 2-vertex line segments
-    var previousCoords;
-    var previousFeatureIndex = 0;
-    var previousMultiIndex = 0;
-    var prevGeomIndex = 0;
-    if (
-      coordEach(
-        feature,
-        function (
-          currentCoord,
-          coordIndex,
-          featureIndexCoord,
-          multiPartIndexCoord,
-          geometryIndex
-        ) {
-          // Simulating a meta.coordReduce() since `reduce` operations cannot be stopped by returning `false`
-          if (
-            previousCoords === undefined ||
-            featureIndex > previousFeatureIndex ||
-            multiPartIndexCoord > previousMultiIndex ||
-            geometryIndex > prevGeomIndex
-          ) {
-            previousCoords = currentCoord;
-            previousFeatureIndex = featureIndex;
-            previousMultiIndex = multiPartIndexCoord;
-            prevGeomIndex = geometryIndex;
-            segmentIndex = 0;
-            return;
-          }
-          var currentSegment = helpers.lineString(
-            [previousCoords, currentCoord],
-            feature.properties
-          );
-          if (
-            callback(
-              currentSegment,
-              featureIndex,
-              multiFeatureIndex,
-              geometryIndex,
-              segmentIndex
-            ) === false
-          )
-            return false;
-          segmentIndex++;
-          previousCoords = currentCoord;
-        }
-      ) === false
-    )
-      return false;
-  });
-}
-
-/**
- * Callback for segmentReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback segmentReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- */
-
-/**
- * Reduce 2-vertex line segment in any GeoJSON object, similar to Array.reduce()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (previousValue, currentSegment, currentIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentReduce(polygon, function (previousSegment, currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //= previousSegment
- *   //= currentSegment
- *   //= featureIndex
- *   //= multiFeatureIndex
- *   //= geometryIndex
- *   //= segmentIndex
- *   return currentSegment
- * });
- *
- * // Calculate the total number of segments
- * var initialValue = 0
- * var total = turf.segmentReduce(polygon, function (previousValue) {
- *     previousValue++;
- *     return previousValue;
- * }, initialValue);
- */
-function segmentReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  var started = false;
-  segmentEach(
-    geojson,
-    function (
-      currentSegment,
-      featureIndex,
-      multiFeatureIndex,
-      geometryIndex,
-      segmentIndex
-    ) {
-      if (started === false && initialValue === undefined)
-        previousValue = currentSegment;
-      else
-        previousValue = callback(
-          previousValue,
-          currentSegment,
-          featureIndex,
-          multiFeatureIndex,
-          geometryIndex,
-          segmentIndex
-        );
-      started = true;
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Callback for lineEach
- *
- * @callback lineEachCallback
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Iterate over line or ring coordinates in LineString, Polygon, MultiLineString, MultiPolygon Features or Geometries,
- * similar to Array.forEach.
- *
- * @name lineEach
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @example
- * var multiLine = turf.multiLineString([
- *   [[26, 37], [35, 45]],
- *   [[36, 53], [38, 50], [41, 55]]
- * ]);
- *
- * turf.lineEach(multiLine, function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function lineEach(geojson, callback) {
-  // validation
-  if (!geojson) throw new Error("geojson is required");
-
-  flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-    if (feature.geometry === null) return;
-    var type = feature.geometry.type;
-    var coords = feature.geometry.coordinates;
-    switch (type) {
-      case "LineString":
-        if (callback(feature, featureIndex, multiFeatureIndex, 0, 0) === false)
-          return false;
-        break;
-      case "Polygon":
-        for (
-          var geometryIndex = 0;
-          geometryIndex < coords.length;
-          geometryIndex++
-        ) {
-          if (
-            callback(
-              helpers.lineString(coords[geometryIndex], feature.properties),
-              featureIndex,
-              multiFeatureIndex,
-              geometryIndex
-            ) === false
-          )
-            return false;
-        }
-        break;
-    }
-  });
-}
-
-/**
- * Callback for lineReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback lineReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed.
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name lineReduce
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var multiPoly = turf.multiPolygon([
- *   turf.polygon([[[12,48],[2,41],[24,38],[12,48]], [[9,44],[13,41],[13,45],[9,44]]]),
- *   turf.polygon([[[5, 5], [0, 0], [2, 2], [4, 4], [5, 5]]])
- * ]);
- *
- * turf.lineReduce(multiPoly, function (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentLine
- * });
- */
-function lineReduce(geojson, callback, initialValue) {
-  var previousValue = initialValue;
-  lineEach(
-    geojson,
-    function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
-      if (featureIndex === 0 && initialValue === undefined)
-        previousValue = currentLine;
-      else
-        previousValue = callback(
-          previousValue,
-          currentLine,
-          featureIndex,
-          multiFeatureIndex,
-          geometryIndex
-        );
-    }
-  );
-  return previousValue;
-}
-
-/**
- * Finds a particular 2-vertex LineString Segment from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- * Point & MultiPoint will always return null.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.segmentIndex=0] Segment Index
- * @param {Object} [options.properties={}] Translate Properties to output LineString
- * @param {BBox} [options.bbox={}] Translate BBox to output LineString
- * @param {number|string} [options.id={}] Translate Id to output LineString
- * @returns {Feature<LineString>} 2-vertex GeoJSON Feature LineString
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findSegment(multiLine);
- * // => Feature<LineString<[[10, 10], [50, 30]]>>
- *
- * // First Segment of 2nd Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: 1});
- * // => Feature<LineString<[[-10, -10], [-50, -30]]>>
- *
- * // Last Segment of Last Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: -1, segmentIndex: -1});
- * // => Feature<LineString<[[-50, -30], [-30, -40]]>>
- */
-function findSegment(geojson, options) {
-  // Optional Parameters
-  options = options || {};
-  if (!helpers.isObject(options)) throw new Error("options is invalid");
-  var featureIndex = options.featureIndex || 0;
-  var multiFeatureIndex = options.multiFeatureIndex || 0;
-  var geometryIndex = options.geometryIndex || 0;
-  var segmentIndex = options.segmentIndex || 0;
-
-  // Find FeatureIndex
-  var properties = options.properties;
-  var geometry;
-
-  switch (geojson.type) {
-    case "FeatureCollection":
-      if (featureIndex < 0)
-        featureIndex = geojson.features.length + featureIndex;
-      properties = properties || geojson.features[featureIndex].properties;
-      geometry = geojson.features[featureIndex].geometry;
-      break;
-    case "Feature":
-      properties = properties || geojson.properties;
-      geometry = geojson.geometry;
-      break;
-    case "Point":
-    case "MultiPoint":
-      return null;
-    case "LineString":
-    case "Polygon":
-    case "MultiLineString":
-    case "MultiPolygon":
-      geometry = geojson;
-      break;
-    default:
-      throw new Error("geojson is invalid");
-  }
-
-  // Find SegmentIndex
-  if (geometry === null) return null;
-  var coords = geometry.coordinates;
-  switch (geometry.type) {
-    case "Point":
-    case "MultiPoint":
-      return null;
-    case "LineString":
-      if (segmentIndex < 0) segmentIndex = coords.length + segmentIndex - 1;
-      return helpers.lineString(
-        [coords[segmentIndex], coords[segmentIndex + 1]],
-        properties,
-        options
-      );
-    case "Polygon":
-      if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-      if (segmentIndex < 0)
-        segmentIndex = coords[geometryIndex].length + segmentIndex - 1;
-      return helpers.lineString(
-        [
-          coords[geometryIndex][segmentIndex],
-          coords[geometryIndex][segmentIndex + 1],
-        ],
-        properties,
-        options
-      );
-    case "MultiLineString":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (segmentIndex < 0)
-        segmentIndex = coords[multiFeatureIndex].length + segmentIndex - 1;
-      return helpers.lineString(
-        [
-          coords[multiFeatureIndex][segmentIndex],
-          coords[multiFeatureIndex][segmentIndex + 1],
-        ],
-        properties,
-        options
-      );
-    case "MultiPolygon":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (geometryIndex < 0)
-        geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-      if (segmentIndex < 0)
-        segmentIndex =
-          coords[multiFeatureIndex][geometryIndex].length - segmentIndex - 1;
-      return helpers.lineString(
-        [
-          coords[multiFeatureIndex][geometryIndex][segmentIndex],
-          coords[multiFeatureIndex][geometryIndex][segmentIndex + 1],
-        ],
-        properties,
-        options
-      );
-  }
-  throw new Error("geojson is invalid");
-}
-
-/**
- * Finds a particular Point from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.coordIndex=0] Coord Index
- * @param {Object} [options.properties={}] Translate Properties to output Point
- * @param {BBox} [options.bbox={}] Translate BBox to output Point
- * @param {number|string} [options.id={}] Translate Id to output Point
- * @returns {Feature<Point>} 2-vertex GeoJSON Feature Point
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findPoint(multiLine);
- * // => Feature<Point<[10, 10]>>
- *
- * // First Segment of the 2nd Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: 1});
- * // => Feature<Point<[-10, -10]>>
- *
- * // Last Segment of last Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: -1, coordIndex: -1});
- * // => Feature<Point<[-30, -40]>>
- */
-function findPoint(geojson, options) {
-  // Optional Parameters
-  options = options || {};
-  if (!helpers.isObject(options)) throw new Error("options is invalid");
-  var featureIndex = options.featureIndex || 0;
-  var multiFeatureIndex = options.multiFeatureIndex || 0;
-  var geometryIndex = options.geometryIndex || 0;
-  var coordIndex = options.coordIndex || 0;
-
-  // Find FeatureIndex
-  var properties = options.properties;
-  var geometry;
-
-  switch (geojson.type) {
-    case "FeatureCollection":
-      if (featureIndex < 0)
-        featureIndex = geojson.features.length + featureIndex;
-      properties = properties || geojson.features[featureIndex].properties;
-      geometry = geojson.features[featureIndex].geometry;
-      break;
-    case "Feature":
-      properties = properties || geojson.properties;
-      geometry = geojson.geometry;
-      break;
-    case "Point":
-    case "MultiPoint":
-      return null;
-    case "LineString":
-    case "Polygon":
-    case "MultiLineString":
-    case "MultiPolygon":
-      geometry = geojson;
-      break;
-    default:
-      throw new Error("geojson is invalid");
-  }
-
-  // Find Coord Index
-  if (geometry === null) return null;
-  var coords = geometry.coordinates;
-  switch (geometry.type) {
-    case "Point":
-      return helpers.point(coords, properties, options);
-    case "MultiPoint":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      return helpers.point(coords[multiFeatureIndex], properties, options);
-    case "LineString":
-      if (coordIndex < 0) coordIndex = coords.length + coordIndex;
-      return helpers.point(coords[coordIndex], properties, options);
-    case "Polygon":
-      if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-      if (coordIndex < 0)
-        coordIndex = coords[geometryIndex].length + coordIndex;
-      return helpers.point(coords[geometryIndex][coordIndex], properties, options);
-    case "MultiLineString":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (coordIndex < 0)
-        coordIndex = coords[multiFeatureIndex].length + coordIndex;
-      return helpers.point(coords[multiFeatureIndex][coordIndex], properties, options);
-    case "MultiPolygon":
-      if (multiFeatureIndex < 0)
-        multiFeatureIndex = coords.length + multiFeatureIndex;
-      if (geometryIndex < 0)
-        geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-      if (coordIndex < 0)
-        coordIndex =
-          coords[multiFeatureIndex][geometryIndex].length - coordIndex;
-      return helpers.point(
-        coords[multiFeatureIndex][geometryIndex][coordIndex],
-        properties,
-        options
-      );
-  }
-  throw new Error("geojson is invalid");
-}
-
-exports.coordEach = coordEach;
-exports.coordReduce = coordReduce;
-exports.propEach = propEach;
-exports.propReduce = propReduce;
-exports.featureEach = featureEach;
-exports.featureReduce = featureReduce;
-exports.coordAll = coordAll;
-exports.geomEach = geomEach;
-exports.geomReduce = geomReduce;
-exports.flattenEach = flattenEach;
-exports.flattenReduce = flattenReduce;
-exports.segmentEach = segmentEach;
-exports.segmentReduce = segmentReduce;
-exports.lineEach = lineEach;
-exports.lineReduce = lineReduce;
-exports.findSegment = findSegment;
-exports.findPoint = findPoint;
-
-
-/***/ }),
-
 /***/ 332:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var meta_1 = __webpack_require__(3541);
+var meta_1 = __webpack_require__(2946);
 /**
  * Takes a set of features, calculates the bbox of all input features, and returns a bounding box.
  *
@@ -70571,7 +68377,49 @@ exports["default"] = bbox;
 
 /***/ }),
 
-/***/ 4663:
+/***/ 4051:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var meta_1 = __webpack_require__(2946);
+var helpers_1 = __webpack_require__(7458);
+/**
+ * Takes one or more features and calculates the centroid using the mean of all vertices.
+ * This lessens the effect of small islands and artifacts when calculating the centroid of a set of polygons.
+ *
+ * @name centroid
+ * @param {GeoJSON} geojson GeoJSON to be centered
+ * @param {Object} [options={}] Optional Parameters
+ * @param {Object} [options.properties={}] an Object that is used as the {@link Feature}'s properties
+ * @returns {Feature<Point>} the centroid of the input features
+ * @example
+ * var polygon = turf.polygon([[[-81, 41], [-88, 36], [-84, 31], [-80, 33], [-77, 39], [-81, 41]]]);
+ *
+ * var centroid = turf.centroid(polygon);
+ *
+ * //addToMap
+ * var addToMap = [polygon, centroid]
+ */
+function centroid(geojson, options) {
+    if (options === void 0) { options = {}; }
+    var xSum = 0;
+    var ySum = 0;
+    var len = 0;
+    meta_1.coordEach(geojson, function (coord) {
+        xSum += coord[0];
+        ySum += coord[1];
+        len++;
+    }, true);
+    return helpers_1.point([xSum / len, ySum / len], options.properties);
+}
+exports["default"] = centroid;
+
+
+/***/ }),
+
+/***/ 7458:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -71303,7 +69151,7 @@ exports.validateId = validateId;
 
 /***/ }),
 
-/***/ 3541:
+/***/ 2946:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -71311,7 +69159,7 @@ exports.validateId = validateId;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 
-var helpers = __webpack_require__(4663);
+var helpers = __webpack_require__(7458);
 
 /**
  * Callback for coordEach
@@ -72711,1946 +70559,23 @@ function findPoint(geojson, options) {
   throw new Error("geojson is invalid");
 }
 
+exports.coordAll = coordAll;
 exports.coordEach = coordEach;
 exports.coordReduce = coordReduce;
-exports.propEach = propEach;
-exports.propReduce = propReduce;
 exports.featureEach = featureEach;
 exports.featureReduce = featureReduce;
-exports.coordAll = coordAll;
-exports.geomEach = geomEach;
-exports.geomReduce = geomReduce;
+exports.findPoint = findPoint;
+exports.findSegment = findSegment;
 exports.flattenEach = flattenEach;
 exports.flattenReduce = flattenReduce;
-exports.segmentEach = segmentEach;
-exports.segmentReduce = segmentReduce;
+exports.geomEach = geomEach;
+exports.geomReduce = geomReduce;
 exports.lineEach = lineEach;
 exports.lineReduce = lineReduce;
-exports.findSegment = findSegment;
-exports.findPoint = findPoint;
-
-
-/***/ }),
-
-/***/ 1009:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var meta_1 = __webpack_require__(3895);
-var helpers_1 = __webpack_require__(9111);
-/**
- * Takes one or more features and calculates the centroid using the mean of all vertices.
- * This lessens the effect of small islands and artifacts when calculating the centroid of a set of polygons.
- *
- * @name centroid
- * @param {GeoJSON} geojson GeoJSON to be centered
- * @param {Object} [options={}] Optional Parameters
- * @param {Object} [options.properties={}] an Object that is used as the {@link Feature}'s properties
- * @returns {Feature<Point>} the centroid of the input features
- * @example
- * var polygon = turf.polygon([[[-81, 41], [-88, 36], [-84, 31], [-80, 33], [-77, 39], [-81, 41]]]);
- *
- * var centroid = turf.centroid(polygon);
- *
- * //addToMap
- * var addToMap = [polygon, centroid]
- */
-function centroid(geojson, options) {
-    if (options === void 0) { options = {}; }
-    var xSum = 0;
-    var ySum = 0;
-    var len = 0;
-    meta_1.coordEach(geojson, function (coord) {
-        xSum += coord[0];
-        ySum += coord[1];
-        len++;
-    });
-    return helpers_1.point([xSum / len, ySum / len], options.properties);
-}
-exports["default"] = centroid;
-
-
-/***/ }),
-
-/***/ 9111:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * @module helpers
- */
-/**
- * Earth Radius used with the Harvesine formula and approximates using a spherical (non-ellipsoid) Earth.
- *
- * @memberof helpers
- * @type {number}
- */
-exports.earthRadius = 6371008.8;
-/**
- * Unit of measurement factors using a spherical (non-ellipsoid) earth radius.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.factors = {
-    centimeters: exports.earthRadius * 100,
-    centimetres: exports.earthRadius * 100,
-    degrees: exports.earthRadius / 111325,
-    feet: exports.earthRadius * 3.28084,
-    inches: exports.earthRadius * 39.370,
-    kilometers: exports.earthRadius / 1000,
-    kilometres: exports.earthRadius / 1000,
-    meters: exports.earthRadius,
-    metres: exports.earthRadius,
-    miles: exports.earthRadius / 1609.344,
-    millimeters: exports.earthRadius * 1000,
-    millimetres: exports.earthRadius * 1000,
-    nauticalmiles: exports.earthRadius / 1852,
-    radians: 1,
-    yards: exports.earthRadius / 1.0936,
-};
-/**
- * Units of measurement factors based on 1 meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.unitsFactors = {
-    centimeters: 100,
-    centimetres: 100,
-    degrees: 1 / 111325,
-    feet: 3.28084,
-    inches: 39.370,
-    kilometers: 1 / 1000,
-    kilometres: 1 / 1000,
-    meters: 1,
-    metres: 1,
-    miles: 1 / 1609.344,
-    millimeters: 1000,
-    millimetres: 1000,
-    nauticalmiles: 1 / 1852,
-    radians: 1 / exports.earthRadius,
-    yards: 1 / 1.0936,
-};
-/**
- * Area of measurement factors based on 1 square meter.
- *
- * @memberof helpers
- * @type {Object}
- */
-exports.areaFactors = {
-    acres: 0.000247105,
-    centimeters: 10000,
-    centimetres: 10000,
-    feet: 10.763910417,
-    inches: 1550.003100006,
-    kilometers: 0.000001,
-    kilometres: 0.000001,
-    meters: 1,
-    metres: 1,
-    miles: 3.86e-7,
-    millimeters: 1000000,
-    millimetres: 1000000,
-    yards: 1.195990046,
-};
-/**
- * Wraps a GeoJSON {@link Geometry} in a GeoJSON {@link Feature}.
- *
- * @name feature
- * @param {Geometry} geometry input geometry
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature} a GeoJSON Feature
- * @example
- * var geometry = {
- *   "type": "Point",
- *   "coordinates": [110, 50]
- * };
- *
- * var feature = turf.feature(geometry);
- *
- * //=feature
- */
-function feature(geom, properties, options) {
-    if (options === void 0) { options = {}; }
-    var feat = { type: "Feature" };
-    if (options.id === 0 || options.id) {
-        feat.id = options.id;
-    }
-    if (options.bbox) {
-        feat.bbox = options.bbox;
-    }
-    feat.properties = properties || {};
-    feat.geometry = geom;
-    return feat;
-}
-exports.feature = feature;
-/**
- * Creates a GeoJSON {@link Geometry} from a Geometry string type & coordinates.
- * For GeometryCollection type use `helpers.geometryCollection`
- *
- * @name geometry
- * @param {string} type Geometry Type
- * @param {Array<any>} coordinates Coordinates
- * @param {Object} [options={}] Optional Parameters
- * @returns {Geometry} a GeoJSON Geometry
- * @example
- * var type = "Point";
- * var coordinates = [110, 50];
- * var geometry = turf.geometry(type, coordinates);
- * // => geometry
- */
-function geometry(type, coordinates, options) {
-    if (options === void 0) { options = {}; }
-    switch (type) {
-        case "Point": return point(coordinates).geometry;
-        case "LineString": return lineString(coordinates).geometry;
-        case "Polygon": return polygon(coordinates).geometry;
-        case "MultiPoint": return multiPoint(coordinates).geometry;
-        case "MultiLineString": return multiLineString(coordinates).geometry;
-        case "MultiPolygon": return multiPolygon(coordinates).geometry;
-        default: throw new Error(type + " is invalid");
-    }
-}
-exports.geometry = geometry;
-/**
- * Creates a {@link Point} {@link Feature} from a Position.
- *
- * @name point
- * @param {Array<number>} coordinates longitude, latitude position (each in decimal degrees)
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Point>} a Point feature
- * @example
- * var point = turf.point([-75.343, 39.984]);
- *
- * //=point
- */
-function point(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "Point",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.point = point;
-/**
- * Creates a {@link Point} {@link FeatureCollection} from an Array of Point coordinates.
- *
- * @name points
- * @param {Array<Array<number>>} coordinates an array of Points
- * @param {Object} [properties={}] Translate these properties to each Feature
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Point>} Point Feature
- * @example
- * var points = turf.points([
- *   [-75, 39],
- *   [-80, 45],
- *   [-78, 50]
- * ]);
- *
- * //=points
- */
-function points(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return point(coords, properties);
-    }), options);
-}
-exports.points = points;
-/**
- * Creates a {@link Polygon} {@link Feature} from an Array of LinearRings.
- *
- * @name polygon
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<Polygon>} Polygon Feature
- * @example
- * var polygon = turf.polygon([[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]], { name: 'poly1' });
- *
- * //=polygon
- */
-function polygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    for (var _i = 0, coordinates_1 = coordinates; _i < coordinates_1.length; _i++) {
-        var ring = coordinates_1[_i];
-        if (ring.length < 4) {
-            throw new Error("Each LinearRing of a Polygon must have 4 or more Positions.");
-        }
-        for (var j = 0; j < ring[ring.length - 1].length; j++) {
-            // Check if first point of Polygon contains two numbers
-            if (ring[ring.length - 1][j] !== ring[0][j]) {
-                throw new Error("First and last Position are not equivalent.");
-            }
-        }
-    }
-    var geom = {
-        type: "Polygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.polygon = polygon;
-/**
- * Creates a {@link Polygon} {@link FeatureCollection} from an Array of Polygon coordinates.
- *
- * @name polygons
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygon coordinates
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<Polygon>} Polygon FeatureCollection
- * @example
- * var polygons = turf.polygons([
- *   [[[-5, 52], [-4, 56], [-2, 51], [-7, 54], [-5, 52]]],
- *   [[[-15, 42], [-14, 46], [-12, 41], [-17, 44], [-15, 42]]],
- * ]);
- *
- * //=polygons
- */
-function polygons(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return polygon(coords, properties);
-    }), options);
-}
-exports.polygons = polygons;
-/**
- * Creates a {@link LineString} {@link Feature} from an Array of Positions.
- *
- * @name lineString
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<LineString>} LineString Feature
- * @example
- * var linestring1 = turf.lineString([[-24, 63], [-23, 60], [-25, 65], [-20, 69]], {name: 'line 1'});
- * var linestring2 = turf.lineString([[-14, 43], [-13, 40], [-15, 45], [-10, 49]], {name: 'line 2'});
- *
- * //=linestring1
- * //=linestring2
- */
-function lineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    if (coordinates.length < 2) {
-        throw new Error("coordinates must be an array of two or more positions");
-    }
-    var geom = {
-        type: "LineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.lineString = lineString;
-/**
- * Creates a {@link LineString} {@link FeatureCollection} from an Array of LineString coordinates.
- *
- * @name lineStrings
- * @param {Array<Array<Array<number>>>} coordinates an array of LinearRings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north]
- * associated with the FeatureCollection
- * @param {string|number} [options.id] Identifier associated with the FeatureCollection
- * @returns {FeatureCollection<LineString>} LineString FeatureCollection
- * @example
- * var linestrings = turf.lineStrings([
- *   [[-24, 63], [-23, 60], [-25, 65], [-20, 69]],
- *   [[-14, 43], [-13, 40], [-15, 45], [-10, 49]]
- * ]);
- *
- * //=linestrings
- */
-function lineStrings(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    return featureCollection(coordinates.map(function (coords) {
-        return lineString(coords, properties);
-    }), options);
-}
-exports.lineStrings = lineStrings;
-/**
- * Takes one or more {@link Feature|Features} and creates a {@link FeatureCollection}.
- *
- * @name featureCollection
- * @param {Feature[]} features input features
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {FeatureCollection} FeatureCollection of Features
- * @example
- * var locationA = turf.point([-75.343, 39.984], {name: 'Location A'});
- * var locationB = turf.point([-75.833, 39.284], {name: 'Location B'});
- * var locationC = turf.point([-75.534, 39.123], {name: 'Location C'});
- *
- * var collection = turf.featureCollection([
- *   locationA,
- *   locationB,
- *   locationC
- * ]);
- *
- * //=collection
- */
-function featureCollection(features, options) {
-    if (options === void 0) { options = {}; }
-    var fc = { type: "FeatureCollection" };
-    if (options.id) {
-        fc.id = options.id;
-    }
-    if (options.bbox) {
-        fc.bbox = options.bbox;
-    }
-    fc.features = features;
-    return fc;
-}
-exports.featureCollection = featureCollection;
-/**
- * Creates a {@link Feature<MultiLineString>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiLineString
- * @param {Array<Array<Array<number>>>} coordinates an array of LineStrings
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiLineString>} a MultiLineString feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiLine = turf.multiLineString([[[0,0],[10,10]]]);
- *
- * //=multiLine
- */
-function multiLineString(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiLineString",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiLineString = multiLineString;
-/**
- * Creates a {@link Feature<MultiPoint>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPoint
- * @param {Array<Array<number>>} coordinates an array of Positions
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPoint>} a MultiPoint feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPt = turf.multiPoint([[0,0],[10,10]]);
- *
- * //=multiPt
- */
-function multiPoint(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPoint",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPoint = multiPoint;
-/**
- * Creates a {@link Feature<MultiPolygon>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name multiPolygon
- * @param {Array<Array<Array<Array<number>>>>} coordinates an array of Polygons
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<MultiPolygon>} a multipolygon feature
- * @throws {Error} if no coordinates are passed
- * @example
- * var multiPoly = turf.multiPolygon([[[[0,0],[0,10],[10,10],[10,0],[0,0]]]]);
- *
- * //=multiPoly
- *
- */
-function multiPolygon(coordinates, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "MultiPolygon",
-        coordinates: coordinates,
-    };
-    return feature(geom, properties, options);
-}
-exports.multiPolygon = multiPolygon;
-/**
- * Creates a {@link Feature<GeometryCollection>} based on a
- * coordinate array. Properties can be added optionally.
- *
- * @name geometryCollection
- * @param {Array<Geometry>} geometries an array of GeoJSON Geometries
- * @param {Object} [properties={}] an Object of key-value pairs to add as properties
- * @param {Object} [options={}] Optional Parameters
- * @param {Array<number>} [options.bbox] Bounding Box Array [west, south, east, north] associated with the Feature
- * @param {string|number} [options.id] Identifier associated with the Feature
- * @returns {Feature<GeometryCollection>} a GeoJSON GeometryCollection Feature
- * @example
- * var pt = turf.geometry("Point", [100, 0]);
- * var line = turf.geometry("LineString", [[101, 0], [102, 1]]);
- * var collection = turf.geometryCollection([pt, line]);
- *
- * // => collection
- */
-function geometryCollection(geometries, properties, options) {
-    if (options === void 0) { options = {}; }
-    var geom = {
-        type: "GeometryCollection",
-        geometries: geometries,
-    };
-    return feature(geom, properties, options);
-}
-exports.geometryCollection = geometryCollection;
-/**
- * Round number to precision
- *
- * @param {number} num Number
- * @param {number} [precision=0] Precision
- * @returns {number} rounded number
- * @example
- * turf.round(120.4321)
- * //=120
- *
- * turf.round(120.4321, 2)
- * //=120.43
- */
-function round(num, precision) {
-    if (precision === void 0) { precision = 0; }
-    if (precision && !(precision >= 0)) {
-        throw new Error("precision must be a positive number");
-    }
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(num * multiplier) / multiplier;
-}
-exports.round = round;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from radians to a more friendly unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name radiansToLength
- * @param {number} radians in radians across the sphere
- * @param {string} [units="kilometers"] can be degrees, radians, miles, or kilometers inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} distance
- */
-function radiansToLength(radians, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return radians * factor;
-}
-exports.radiansToLength = radiansToLength;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into radians
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @name lengthToRadians
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, or kilometers inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} radians
- */
-function lengthToRadians(distance, units) {
-    if (units === void 0) { units = "kilometers"; }
-    var factor = exports.factors[units];
-    if (!factor) {
-        throw new Error(units + " units is invalid");
-    }
-    return distance / factor;
-}
-exports.lengthToRadians = lengthToRadians;
-/**
- * Convert a distance measurement (assuming a spherical Earth) from a real-world unit into degrees
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, centimeters, kilometres, feet
- *
- * @name lengthToDegrees
- * @param {number} distance in real units
- * @param {string} [units="kilometers"] can be degrees, radians, miles, or kilometers inches, yards, metres,
- * meters, kilometres, kilometers.
- * @returns {number} degrees
- */
-function lengthToDegrees(distance, units) {
-    return radiansToDegrees(lengthToRadians(distance, units));
-}
-exports.lengthToDegrees = lengthToDegrees;
-/**
- * Converts any bearing angle from the north line direction (positive clockwise)
- * and returns an angle between 0-360 degrees (positive clockwise), 0 being the north line
- *
- * @name bearingToAzimuth
- * @param {number} bearing angle, between -180 and +180 degrees
- * @returns {number} angle between 0 and 360 degrees
- */
-function bearingToAzimuth(bearing) {
-    var angle = bearing % 360;
-    if (angle < 0) {
-        angle += 360;
-    }
-    return angle;
-}
-exports.bearingToAzimuth = bearingToAzimuth;
-/**
- * Converts an angle in radians to degrees
- *
- * @name radiansToDegrees
- * @param {number} radians angle in radians
- * @returns {number} degrees between 0 and 360 degrees
- */
-function radiansToDegrees(radians) {
-    var degrees = radians % (2 * Math.PI);
-    return degrees * 180 / Math.PI;
-}
-exports.radiansToDegrees = radiansToDegrees;
-/**
- * Converts an angle in degrees to radians
- *
- * @name degreesToRadians
- * @param {number} degrees angle between 0 and 360 degrees
- * @returns {number} angle in radians
- */
-function degreesToRadians(degrees) {
-    var radians = degrees % 360;
-    return radians * Math.PI / 180;
-}
-exports.degreesToRadians = degreesToRadians;
-/**
- * Converts a length to the requested unit.
- * Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, centimeters, feet
- *
- * @param {number} length to be converted
- * @param {Units} [originalUnit="kilometers"] of the length
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted length
- */
-function convertLength(length, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "kilometers"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(length >= 0)) {
-        throw new Error("length must be a positive number");
-    }
-    return radiansToLength(lengthToRadians(length, originalUnit), finalUnit);
-}
-exports.convertLength = convertLength;
-/**
- * Converts a area to the requested unit.
- * Valid units: kilometers, kilometres, meters, metres, centimetres, millimeters, acres, miles, yards, feet, inches
- * @param {number} area to be converted
- * @param {Units} [originalUnit="meters"] of the distance
- * @param {Units} [finalUnit="kilometers"] returned unit
- * @returns {number} the converted distance
- */
-function convertArea(area, originalUnit, finalUnit) {
-    if (originalUnit === void 0) { originalUnit = "meters"; }
-    if (finalUnit === void 0) { finalUnit = "kilometers"; }
-    if (!(area >= 0)) {
-        throw new Error("area must be a positive number");
-    }
-    var startFactor = exports.areaFactors[originalUnit];
-    if (!startFactor) {
-        throw new Error("invalid original units");
-    }
-    var finalFactor = exports.areaFactors[finalUnit];
-    if (!finalFactor) {
-        throw new Error("invalid final units");
-    }
-    return (area / startFactor) * finalFactor;
-}
-exports.convertArea = convertArea;
-/**
- * isNumber
- *
- * @param {*} num Number to validate
- * @returns {boolean} true/false
- * @example
- * turf.isNumber(123)
- * //=true
- * turf.isNumber('foo')
- * //=false
- */
-function isNumber(num) {
-    return !isNaN(num) && num !== null && !Array.isArray(num) && !/^\s*$/.test(num);
-}
-exports.isNumber = isNumber;
-/**
- * isObject
- *
- * @param {*} input variable to validate
- * @returns {boolean} true/false
- * @example
- * turf.isObject({elevation: 10})
- * //=true
- * turf.isObject('foo')
- * //=false
- */
-function isObject(input) {
-    return (!!input) && (input.constructor === Object);
-}
-exports.isObject = isObject;
-/**
- * Validate BBox
- *
- * @private
- * @param {Array<number>} bbox BBox to validate
- * @returns {void}
- * @throws Error if BBox is not valid
- * @example
- * validateBBox([-180, -40, 110, 50])
- * //=OK
- * validateBBox([-180, -40])
- * //=Error
- * validateBBox('Foo')
- * //=Error
- * validateBBox(5)
- * //=Error
- * validateBBox(null)
- * //=Error
- * validateBBox(undefined)
- * //=Error
- */
-function validateBBox(bbox) {
-    if (!bbox) {
-        throw new Error("bbox is required");
-    }
-    if (!Array.isArray(bbox)) {
-        throw new Error("bbox must be an Array");
-    }
-    if (bbox.length !== 4 && bbox.length !== 6) {
-        throw new Error("bbox must be an Array of 4 or 6 numbers");
-    }
-    bbox.forEach(function (num) {
-        if (!isNumber(num)) {
-            throw new Error("bbox must only contain numbers");
-        }
-    });
-}
-exports.validateBBox = validateBBox;
-/**
- * Validate Id
- *
- * @private
- * @param {string|number} id Id to validate
- * @returns {void}
- * @throws Error if Id is not valid
- * @example
- * validateId([-180, -40, 110, 50])
- * //=Error
- * validateId([-180, -40])
- * //=Error
- * validateId('Foo')
- * //=OK
- * validateId(5)
- * //=OK
- * validateId(null)
- * //=Error
- * validateId(undefined)
- * //=Error
- */
-function validateId(id) {
-    if (!id) {
-        throw new Error("id is required");
-    }
-    if (["string", "number"].indexOf(typeof id) === -1) {
-        throw new Error("id must be a number or a string");
-    }
-}
-exports.validateId = validateId;
-// Deprecated methods
-function radians2degrees() {
-    throw new Error("method has been renamed to `radiansToDegrees`");
-}
-exports.radians2degrees = radians2degrees;
-function degrees2radians() {
-    throw new Error("method has been renamed to `degreesToRadians`");
-}
-exports.degrees2radians = degrees2radians;
-function distanceToDegrees() {
-    throw new Error("method has been renamed to `lengthToDegrees`");
-}
-exports.distanceToDegrees = distanceToDegrees;
-function distanceToRadians() {
-    throw new Error("method has been renamed to `lengthToRadians`");
-}
-exports.distanceToRadians = distanceToRadians;
-function radiansToDistance() {
-    throw new Error("method has been renamed to `radiansToLength`");
-}
-exports.radiansToDistance = radiansToDistance;
-function bearingToAngle() {
-    throw new Error("method has been renamed to `bearingToAzimuth`");
-}
-exports.bearingToAngle = bearingToAngle;
-function convertDistance() {
-    throw new Error("method has been renamed to `convertLength`");
-}
-exports.convertDistance = convertDistance;
-
-
-/***/ }),
-
-/***/ 3895:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-var helpers = __webpack_require__(9111);
-
-/**
- * Callback for coordEach
- *
- * @callback coordEachCallback
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Iterate over coordinates in any GeoJSON object, similar to Array.forEach()
- *
- * @name coordEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentCoord, coordIndex, featureIndex, multiFeatureIndex)
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordEach(features, function (currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function coordEach(geojson, callback, excludeWrapCoord) {
-    // Handles null Geometry -- Skips this GeoJSON
-    if (geojson === null) return;
-    var j, k, l, geometry, stopG, coords,
-        geometryMaybeCollection,
-        wrapShrink = 0,
-        coordIndex = 0,
-        isGeometryCollection,
-        type = geojson.type,
-        isFeatureCollection = type === 'FeatureCollection',
-        isFeature = type === 'Feature',
-        stop = isFeatureCollection ? geojson.features.length : 1;
-
-    // This logic may look a little weird. The reason why it is that way
-    // is because it's trying to be fast. GeoJSON supports multiple kinds
-    // of objects at its root: FeatureCollection, Features, Geometries.
-    // This function has the responsibility of handling all of them, and that
-    // means that some of the `for` loops you see below actually just don't apply
-    // to certain inputs. For instance, if you give this just a
-    // Point geometry, then both loops are short-circuited and all we do
-    // is gradually rename the input until it's called 'geometry'.
-    //
-    // This also aims to allocate as few resources as possible: just a
-    // few numbers and booleans, rather than any temporary arrays as would
-    // be required with the normalization approach.
-    for (var featureIndex = 0; featureIndex < stop; featureIndex++) {
-        geometryMaybeCollection = (isFeatureCollection ? geojson.features[featureIndex].geometry :
-            (isFeature ? geojson.geometry : geojson));
-        isGeometryCollection = (geometryMaybeCollection) ? geometryMaybeCollection.type === 'GeometryCollection' : false;
-        stopG = isGeometryCollection ? geometryMaybeCollection.geometries.length : 1;
-
-        for (var geomIndex = 0; geomIndex < stopG; geomIndex++) {
-            var multiFeatureIndex = 0;
-            var geometryIndex = 0;
-            geometry = isGeometryCollection ?
-                geometryMaybeCollection.geometries[geomIndex] : geometryMaybeCollection;
-
-            // Handles null Geometry -- Skips this geometry
-            if (geometry === null) continue;
-            coords = geometry.coordinates;
-            var geomType = geometry.type;
-
-            wrapShrink = (excludeWrapCoord && (geomType === 'Polygon' || geomType === 'MultiPolygon')) ? 1 : 0;
-
-            switch (geomType) {
-            case null:
-                break;
-            case 'Point':
-                if (callback(coords, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                coordIndex++;
-                multiFeatureIndex++;
-                break;
-            case 'LineString':
-            case 'MultiPoint':
-                for (j = 0; j < coords.length; j++) {
-                    if (callback(coords[j], coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                    coordIndex++;
-                    if (geomType === 'MultiPoint') multiFeatureIndex++;
-                }
-                if (geomType === 'LineString') multiFeatureIndex++;
-                break;
-            case 'Polygon':
-            case 'MultiLineString':
-                for (j = 0; j < coords.length; j++) {
-                    for (k = 0; k < coords[j].length - wrapShrink; k++) {
-                        if (callback(coords[j][k], coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                        coordIndex++;
-                    }
-                    if (geomType === 'MultiLineString') multiFeatureIndex++;
-                    if (geomType === 'Polygon') geometryIndex++;
-                }
-                if (geomType === 'Polygon') multiFeatureIndex++;
-                break;
-            case 'MultiPolygon':
-                for (j = 0; j < coords.length; j++) {
-                    geometryIndex = 0;
-                    for (k = 0; k < coords[j].length; k++) {
-                        for (l = 0; l < coords[j][k].length - wrapShrink; l++) {
-                            if (callback(coords[j][k][l], coordIndex, featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-                            coordIndex++;
-                        }
-                        geometryIndex++;
-                    }
-                    multiFeatureIndex++;
-                }
-                break;
-            case 'GeometryCollection':
-                for (j = 0; j < geometry.geometries.length; j++)
-                    if (coordEach(geometry.geometries[j], callback, excludeWrapCoord) === false) return false;
-                break;
-            default:
-                throw new Error('Unknown Geometry Type');
-            }
-        }
-    }
-}
-
-/**
- * Callback for coordReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback coordReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Array<number>} currentCoord The current coordinate being processed.
- * @param {number} coordIndex The current index of the coordinate being processed.
- * Starts at index 0, if an initialValue is provided, and at index 1 otherwise.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- */
-
-/**
- * Reduce coordinates in any GeoJSON object, similar to Array.reduce()
- *
- * @name coordReduce
- * @param {FeatureCollection|Geometry|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentCoord, coordIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @param {boolean} [excludeWrapCoord=false] whether or not to include the final coordinate of LinearRings that wraps the ring in its iteration.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.coordReduce(features, function (previousValue, currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentCoord
- *   //=coordIndex
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentCoord;
- * });
- */
-function coordReduce(geojson, callback, initialValue, excludeWrapCoord) {
-    var previousValue = initialValue;
-    coordEach(geojson, function (currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
-        if (coordIndex === 0 && initialValue === undefined) previousValue = currentCoord;
-        else previousValue = callback(previousValue, currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex);
-    }, excludeWrapCoord);
-    return previousValue;
-}
-
-/**
- * Callback for propEach
- *
- * @callback propEachCallback
- * @param {Object} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over properties in any GeoJSON object, similar to Array.forEach()
- *
- * @name propEach
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentProperties, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propEach(features, function (currentProperties, featureIndex) {
- *   //=currentProperties
- *   //=featureIndex
- * });
- */
-function propEach(geojson, callback) {
-    var i;
-    switch (geojson.type) {
-    case 'FeatureCollection':
-        for (i = 0; i < geojson.features.length; i++) {
-            if (callback(geojson.features[i].properties, i) === false) break;
-        }
-        break;
-    case 'Feature':
-        callback(geojson.properties, 0);
-        break;
-    }
-}
-
-
-/**
- * Callback for propReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback propReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {*} currentProperties The current Properties being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce properties in any GeoJSON object into a single value,
- * similar to how Array.reduce works. However, in this case we lazily run
- * the reduction, so an array of all properties is unnecessary.
- *
- * @name propReduce
- * @param {FeatureCollection|Feature} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentProperties, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.propReduce(features, function (previousValue, currentProperties, featureIndex) {
- *   //=previousValue
- *   //=currentProperties
- *   //=featureIndex
- *   return currentProperties
- * });
- */
-function propReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    propEach(geojson, function (currentProperties, featureIndex) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentProperties;
-        else previousValue = callback(previousValue, currentProperties, featureIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Callback for featureEach
- *
- * @callback featureEachCallback
- * @param {Feature<any>} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Iterate over features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name featureEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.featureEach(features, function (currentFeature, featureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- * });
- */
-function featureEach(geojson, callback) {
-    if (geojson.type === 'Feature') {
-        callback(geojson, 0);
-    } else if (geojson.type === 'FeatureCollection') {
-        for (var i = 0; i < geojson.features.length; i++) {
-            if (callback(geojson.features[i], i) === false) break;
-        }
-    }
-}
-
-/**
- * Callback for featureReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback featureReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name featureReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {"foo": "bar"}),
- *   turf.point([36, 53], {"hello": "world"})
- * ]);
- *
- * turf.featureReduce(features, function (previousValue, currentFeature, featureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   return currentFeature
- * });
- */
-function featureReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    featureEach(geojson, function (currentFeature, featureIndex) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentFeature;
-        else previousValue = callback(previousValue, currentFeature, featureIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Get all coordinates from any GeoJSON object.
- *
- * @name coordAll
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @returns {Array<Array<number>>} coordinate position array
- * @example
- * var features = turf.featureCollection([
- *   turf.point([26, 37], {foo: 'bar'}),
- *   turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * var coords = turf.coordAll(features);
- * //= [[26, 37], [36, 53]]
- */
-function coordAll(geojson) {
-    var coords = [];
-    coordEach(geojson, function (coord) {
-        coords.push(coord);
-    });
-    return coords;
-}
-
-/**
- * Callback for geomEach
- *
- * @callback geomEachCallback
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Iterate over each geometry in any GeoJSON object, similar to Array.forEach()
- *
- * @name geomEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @returns {void}
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomEach(features, function (currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- * });
- */
-function geomEach(geojson, callback) {
-    var i, j, g, geometry, stopG,
-        geometryMaybeCollection,
-        isGeometryCollection,
-        featureProperties,
-        featureBBox,
-        featureId,
-        featureIndex = 0,
-        isFeatureCollection = geojson.type === 'FeatureCollection',
-        isFeature = geojson.type === 'Feature',
-        stop = isFeatureCollection ? geojson.features.length : 1;
-
-    // This logic may look a little weird. The reason why it is that way
-    // is because it's trying to be fast. GeoJSON supports multiple kinds
-    // of objects at its root: FeatureCollection, Features, Geometries.
-    // This function has the responsibility of handling all of them, and that
-    // means that some of the `for` loops you see below actually just don't apply
-    // to certain inputs. For instance, if you give this just a
-    // Point geometry, then both loops are short-circuited and all we do
-    // is gradually rename the input until it's called 'geometry'.
-    //
-    // This also aims to allocate as few resources as possible: just a
-    // few numbers and booleans, rather than any temporary arrays as would
-    // be required with the normalization approach.
-    for (i = 0; i < stop; i++) {
-
-        geometryMaybeCollection = (isFeatureCollection ? geojson.features[i].geometry :
-            (isFeature ? geojson.geometry : geojson));
-        featureProperties = (isFeatureCollection ? geojson.features[i].properties :
-            (isFeature ? geojson.properties : {}));
-        featureBBox = (isFeatureCollection ? geojson.features[i].bbox :
-            (isFeature ? geojson.bbox : undefined));
-        featureId = (isFeatureCollection ? geojson.features[i].id :
-            (isFeature ? geojson.id : undefined));
-        isGeometryCollection = (geometryMaybeCollection) ? geometryMaybeCollection.type === 'GeometryCollection' : false;
-        stopG = isGeometryCollection ? geometryMaybeCollection.geometries.length : 1;
-
-        for (g = 0; g < stopG; g++) {
-            geometry = isGeometryCollection ?
-                geometryMaybeCollection.geometries[g] : geometryMaybeCollection;
-
-            // Handle null Geometry
-            if (geometry === null) {
-                if (callback(null, featureIndex, featureProperties, featureBBox, featureId) === false) return false;
-                continue;
-            }
-            switch (geometry.type) {
-            case 'Point':
-            case 'LineString':
-            case 'MultiPoint':
-            case 'Polygon':
-            case 'MultiLineString':
-            case 'MultiPolygon': {
-                if (callback(geometry, featureIndex, featureProperties, featureBBox, featureId) === false) return false;
-                break;
-            }
-            case 'GeometryCollection': {
-                for (j = 0; j < geometry.geometries.length; j++) {
-                    if (callback(geometry.geometries[j], featureIndex, featureProperties, featureBBox, featureId) === false) return false;
-                }
-                break;
-            }
-            default:
-                throw new Error('Unknown Geometry Type');
-            }
-        }
-        // Only increase `featureIndex` per each feature
-        featureIndex++;
-    }
-}
-
-/**
- * Callback for geomReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback geomReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Geometry} currentGeometry The current Geometry being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {Object} featureProperties The current Feature Properties being processed.
- * @param {Array<number>} featureBBox The current Feature BBox being processed.
- * @param {number|string} featureId The current Feature Id being processed.
- */
-
-/**
- * Reduce geometry in any GeoJSON object, similar to Array.reduce().
- *
- * @name geomReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.point([36, 53], {hello: 'world'})
- * ]);
- *
- * turf.geomReduce(features, function (previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
- *   //=previousValue
- *   //=currentGeometry
- *   //=featureIndex
- *   //=featureProperties
- *   //=featureBBox
- *   //=featureId
- *   return currentGeometry
- * });
- */
-function geomReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    geomEach(geojson, function (currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentGeometry;
-        else previousValue = callback(previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId);
-    });
-    return previousValue;
-}
-
-/**
- * Callback for flattenEach
- *
- * @callback flattenEachCallback
- * @param {Feature} currentFeature The current flattened feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Iterate over flattened features in any GeoJSON object, similar to
- * Array.forEach.
- *
- * @name flattenEach
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (currentFeature, featureIndex, multiFeatureIndex)
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenEach(features, function (currentFeature, featureIndex, multiFeatureIndex) {
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- * });
- */
-function flattenEach(geojson, callback) {
-    geomEach(geojson, function (geometry, featureIndex, properties, bbox, id) {
-        // Callback for single geometry
-        var type = (geometry === null) ? null : geometry.type;
-        switch (type) {
-        case null:
-        case 'Point':
-        case 'LineString':
-        case 'Polygon':
-            if (callback(helpers.feature(geometry, properties, {bbox: bbox, id: id}), featureIndex, 0) === false) return false;
-            return;
-        }
-
-        var geomType;
-
-        // Callback for multi-geometry
-        switch (type) {
-        case 'MultiPoint':
-            geomType = 'Point';
-            break;
-        case 'MultiLineString':
-            geomType = 'LineString';
-            break;
-        case 'MultiPolygon':
-            geomType = 'Polygon';
-            break;
-        }
-
-        for (var multiFeatureIndex = 0; multiFeatureIndex < geometry.coordinates.length; multiFeatureIndex++) {
-            var coordinate = geometry.coordinates[multiFeatureIndex];
-            var geom = {
-                type: geomType,
-                coordinates: coordinate
-            };
-            if (callback(helpers.feature(geom, properties), featureIndex, multiFeatureIndex) === false) return false;
-        }
-    });
-}
-
-/**
- * Callback for flattenReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback flattenReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature} currentFeature The current Feature being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- */
-
-/**
- * Reduce flattened features in any GeoJSON object, similar to Array.reduce().
- *
- * @name flattenReduce
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON object
- * @param {Function} callback a method that takes (previousValue, currentFeature, featureIndex, multiFeatureIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var features = turf.featureCollection([
- *     turf.point([26, 37], {foo: 'bar'}),
- *     turf.multiPoint([[40, 30], [36, 53]], {hello: 'world'})
- * ]);
- *
- * turf.flattenReduce(features, function (previousValue, currentFeature, featureIndex, multiFeatureIndex) {
- *   //=previousValue
- *   //=currentFeature
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   return currentFeature
- * });
- */
-function flattenReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    flattenEach(geojson, function (currentFeature, featureIndex, multiFeatureIndex) {
-        if (featureIndex === 0 && multiFeatureIndex === 0 && initialValue === undefined) previousValue = currentFeature;
-        else previousValue = callback(previousValue, currentFeature, featureIndex, multiFeatureIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Callback for segmentEach
- *
- * @callback segmentEachCallback
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- * @returns {void}
- */
-
-/**
- * Iterate over 2-vertex line segment in any GeoJSON object, similar to Array.forEach()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex)
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentEach(polygon, function (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //=currentSegment
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   //=segmentIndex
- * });
- *
- * // Calculate the total number of segments
- * var total = 0;
- * turf.segmentEach(polygon, function () {
- *     total++;
- * });
- */
-function segmentEach(geojson, callback) {
-    flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-        var segmentIndex = 0;
-
-        // Exclude null Geometries
-        if (!feature.geometry) return;
-        // (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
-        var type = feature.geometry.type;
-        if (type === 'Point' || type === 'MultiPoint') return;
-
-        // Generate 2-vertex line segments
-        var previousCoords;
-        var previousFeatureIndex = 0;
-        var previousMultiIndex = 0;
-        var prevGeomIndex = 0;
-        if (coordEach(feature, function (currentCoord, coordIndex, featureIndexCoord, multiPartIndexCoord, geometryIndex) {
-            // Simulating a meta.coordReduce() since `reduce` operations cannot be stopped by returning `false`
-            if (previousCoords === undefined || featureIndex > previousFeatureIndex || multiPartIndexCoord > previousMultiIndex || geometryIndex > prevGeomIndex) {
-                previousCoords = currentCoord;
-                previousFeatureIndex = featureIndex;
-                previousMultiIndex = multiPartIndexCoord;
-                prevGeomIndex = geometryIndex;
-                segmentIndex = 0;
-                return;
-            }
-            var currentSegment = helpers.lineString([previousCoords, currentCoord], feature.properties);
-            if (callback(currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) === false) return false;
-            segmentIndex++;
-            previousCoords = currentCoord;
-        }) === false) return false;
-    });
-}
-
-/**
- * Callback for segmentReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback segmentReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentSegment The current Segment being processed.
- * @param {number} featureIndex The current index of the Feature being processed.
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed.
- * @param {number} geometryIndex The current index of the Geometry being processed.
- * @param {number} segmentIndex The current index of the Segment being processed.
- */
-
-/**
- * Reduce 2-vertex line segment in any GeoJSON object, similar to Array.reduce()
- * (Multi)Point geometries do not contain segments therefore they are ignored during this operation.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson any GeoJSON
- * @param {Function} callback a method that takes (previousValue, currentSegment, currentIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {void}
- * @example
- * var polygon = turf.polygon([[[-50, 5], [-40, -10], [-50, -10], [-40, 5], [-50, 5]]]);
- *
- * // Iterate over GeoJSON by 2-vertex segments
- * turf.segmentReduce(polygon, function (previousSegment, currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
- *   //= previousSegment
- *   //= currentSegment
- *   //= featureIndex
- *   //= multiFeatureIndex
- *   //= geometryIndex
- *   //= segmentInex
- *   return currentSegment
- * });
- *
- * // Calculate the total number of segments
- * var initialValue = 0
- * var total = turf.segmentReduce(polygon, function (previousValue) {
- *     previousValue++;
- *     return previousValue;
- * }, initialValue);
- */
-function segmentReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    var started = false;
-    segmentEach(geojson, function (currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
-        if (started === false && initialValue === undefined) previousValue = currentSegment;
-        else previousValue = callback(previousValue, currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex);
-        started = true;
-    });
-    return previousValue;
-}
-
-/**
- * Callback for lineEach
- *
- * @callback lineEachCallback
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Iterate over line or ring coordinates in LineString, Polygon, MultiLineString, MultiPolygon Features or Geometries,
- * similar to Array.forEach.
- *
- * @name lineEach
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @example
- * var multiLine = turf.multiLineString([
- *   [[26, 37], [35, 45]],
- *   [[36, 53], [38, 50], [41, 55]]
- * ]);
- *
- * turf.lineEach(multiLine, function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- * });
- */
-function lineEach(geojson, callback) {
-    // validation
-    if (!geojson) throw new Error('geojson is required');
-
-    flattenEach(geojson, function (feature, featureIndex, multiFeatureIndex) {
-        if (feature.geometry === null) return;
-        var type = feature.geometry.type;
-        var coords = feature.geometry.coordinates;
-        switch (type) {
-        case 'LineString':
-            if (callback(feature, featureIndex, multiFeatureIndex, 0, 0) === false) return false;
-            break;
-        case 'Polygon':
-            for (var geometryIndex = 0; geometryIndex < coords.length; geometryIndex++) {
-                if (callback(helpers.lineString(coords[geometryIndex], feature.properties), featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
-            }
-            break;
-        }
-    });
-}
-
-/**
- * Callback for lineReduce
- *
- * The first time the callback function is called, the values provided as arguments depend
- * on whether the reduce method has an initialValue argument.
- *
- * If an initialValue is provided to the reduce method:
- *  - The previousValue argument is initialValue.
- *  - The currentValue argument is the value of the first element present in the array.
- *
- * If an initialValue is not provided:
- *  - The previousValue argument is the value of the first element present in the array.
- *  - The currentValue argument is the value of the second element present in the array.
- *
- * @callback lineReduceCallback
- * @param {*} previousValue The accumulated value previously returned in the last invocation
- * of the callback, or initialValue, if supplied.
- * @param {Feature<LineString>} currentLine The current LineString|LinearRing being processed.
- * @param {number} featureIndex The current index of the Feature being processed
- * @param {number} multiFeatureIndex The current index of the Multi-Feature being processed
- * @param {number} geometryIndex The current index of the Geometry being processed
- */
-
-/**
- * Reduce features in any GeoJSON object, similar to Array.reduce().
- *
- * @name lineReduce
- * @param {Geometry|Feature<LineString|Polygon|MultiLineString|MultiPolygon>} geojson object
- * @param {Function} callback a method that takes (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex)
- * @param {*} [initialValue] Value to use as the first argument to the first call of the callback.
- * @returns {*} The value that results from the reduction.
- * @example
- * var multiPoly = turf.multiPolygon([
- *   turf.polygon([[[12,48],[2,41],[24,38],[12,48]], [[9,44],[13,41],[13,45],[9,44]]]),
- *   turf.polygon([[[5, 5], [0, 0], [2, 2], [4, 4], [5, 5]]])
- * ]);
- *
- * turf.lineReduce(multiPoly, function (previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
- *   //=previousValue
- *   //=currentLine
- *   //=featureIndex
- *   //=multiFeatureIndex
- *   //=geometryIndex
- *   return currentLine
- * });
- */
-function lineReduce(geojson, callback, initialValue) {
-    var previousValue = initialValue;
-    lineEach(geojson, function (currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
-        if (featureIndex === 0 && initialValue === undefined) previousValue = currentLine;
-        else previousValue = callback(previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex);
-    });
-    return previousValue;
-}
-
-/**
- * Finds a particular 2-vertex LineString Segment from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- * Point & MultiPoint will always return null.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.segmentIndex=0] Segment Index
- * @param {Object} [options.properties={}] Translate Properties to output LineString
- * @param {BBox} [options.bbox={}] Translate BBox to output LineString
- * @param {number|string} [options.id={}] Translate Id to output LineString
- * @returns {Feature<LineString>} 2-vertex GeoJSON Feature LineString
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findSegment(multiLine);
- * // => Feature<LineString<[[10, 10], [50, 30]]>>
- *
- * // First Segment of 2nd Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: 1});
- * // => Feature<LineString<[[-10, -10], [-50, -30]]>>
- *
- * // Last Segment of Last Multi Feature
- * turf.findSegment(multiLine, {multiFeatureIndex: -1, segmentIndex: -1});
- * // => Feature<LineString<[[-50, -30], [-30, -40]]>>
- */
-function findSegment(geojson, options) {
-    // Optional Parameters
-    options = options || {};
-    if (!helpers.isObject(options)) throw new Error('options is invalid');
-    var featureIndex = options.featureIndex || 0;
-    var multiFeatureIndex = options.multiFeatureIndex || 0;
-    var geometryIndex = options.geometryIndex || 0;
-    var segmentIndex = options.segmentIndex || 0;
-
-    // Find FeatureIndex
-    var properties = options.properties;
-    var geometry;
-
-    switch (geojson.type) {
-    case 'FeatureCollection':
-        if (featureIndex < 0) featureIndex = geojson.features.length + featureIndex;
-        properties = properties || geojson.features[featureIndex].properties;
-        geometry = geojson.features[featureIndex].geometry;
-        break;
-    case 'Feature':
-        properties = properties || geojson.properties;
-        geometry = geojson.geometry;
-        break;
-    case 'Point':
-    case 'MultiPoint':
-        return null;
-    case 'LineString':
-    case 'Polygon':
-    case 'MultiLineString':
-    case 'MultiPolygon':
-        geometry = geojson;
-        break;
-    default:
-        throw new Error('geojson is invalid');
-    }
-
-    // Find SegmentIndex
-    if (geometry === null) return null;
-    var coords = geometry.coordinates;
-    switch (geometry.type) {
-    case 'Point':
-    case 'MultiPoint':
-        return null;
-    case 'LineString':
-        if (segmentIndex < 0) segmentIndex = coords.length + segmentIndex - 1;
-        return helpers.lineString([coords[segmentIndex], coords[segmentIndex + 1]], properties, options);
-    case 'Polygon':
-        if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-        if (segmentIndex < 0) segmentIndex = coords[geometryIndex].length + segmentIndex - 1;
-        return helpers.lineString([coords[geometryIndex][segmentIndex], coords[geometryIndex][segmentIndex + 1]], properties, options);
-    case 'MultiLineString':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (segmentIndex < 0) segmentIndex = coords[multiFeatureIndex].length + segmentIndex - 1;
-        return helpers.lineString([coords[multiFeatureIndex][segmentIndex], coords[multiFeatureIndex][segmentIndex + 1]], properties, options);
-    case 'MultiPolygon':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (geometryIndex < 0) geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-        if (segmentIndex < 0) segmentIndex = coords[multiFeatureIndex][geometryIndex].length - segmentIndex - 1;
-        return helpers.lineString([coords[multiFeatureIndex][geometryIndex][segmentIndex], coords[multiFeatureIndex][geometryIndex][segmentIndex + 1]], properties, options);
-    }
-    throw new Error('geojson is invalid');
-}
-
-/**
- * Finds a particular Point from a GeoJSON using `@turf/meta` indexes.
- *
- * Negative indexes are permitted.
- *
- * @param {FeatureCollection|Feature|Geometry} geojson Any GeoJSON Feature or Geometry
- * @param {Object} [options={}] Optional parameters
- * @param {number} [options.featureIndex=0] Feature Index
- * @param {number} [options.multiFeatureIndex=0] Multi-Feature Index
- * @param {number} [options.geometryIndex=0] Geometry Index
- * @param {number} [options.coordIndex=0] Coord Index
- * @param {Object} [options.properties={}] Translate Properties to output Point
- * @param {BBox} [options.bbox={}] Translate BBox to output Point
- * @param {number|string} [options.id={}] Translate Id to output Point
- * @returns {Feature<Point>} 2-vertex GeoJSON Feature Point
- * @example
- * var multiLine = turf.multiLineString([
- *     [[10, 10], [50, 30], [30, 40]],
- *     [[-10, -10], [-50, -30], [-30, -40]]
- * ]);
- *
- * // First Segment (defaults are 0)
- * turf.findPoint(multiLine);
- * // => Feature<Point<[10, 10]>>
- *
- * // First Segment of the 2nd Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: 1});
- * // => Feature<Point<[-10, -10]>>
- *
- * // Last Segment of last Multi-Feature
- * turf.findPoint(multiLine, {multiFeatureIndex: -1, coordIndex: -1});
- * // => Feature<Point<[-30, -40]>>
- */
-function findPoint(geojson, options) {
-    // Optional Parameters
-    options = options || {};
-    if (!helpers.isObject(options)) throw new Error('options is invalid');
-    var featureIndex = options.featureIndex || 0;
-    var multiFeatureIndex = options.multiFeatureIndex || 0;
-    var geometryIndex = options.geometryIndex || 0;
-    var coordIndex = options.coordIndex || 0;
-
-    // Find FeatureIndex
-    var properties = options.properties;
-    var geometry;
-
-    switch (geojson.type) {
-    case 'FeatureCollection':
-        if (featureIndex < 0) featureIndex = geojson.features.length + featureIndex;
-        properties = properties || geojson.features[featureIndex].properties;
-        geometry = geojson.features[featureIndex].geometry;
-        break;
-    case 'Feature':
-        properties = properties || geojson.properties;
-        geometry = geojson.geometry;
-        break;
-    case 'Point':
-    case 'MultiPoint':
-        return null;
-    case 'LineString':
-    case 'Polygon':
-    case 'MultiLineString':
-    case 'MultiPolygon':
-        geometry = geojson;
-        break;
-    default:
-        throw new Error('geojson is invalid');
-    }
-
-    // Find Coord Index
-    if (geometry === null) return null;
-    var coords = geometry.coordinates;
-    switch (geometry.type) {
-    case 'Point':
-        return helpers.point(coords, properties, options);
-    case 'MultiPoint':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        return helpers.point(coords[multiFeatureIndex], properties, options);
-    case 'LineString':
-        if (coordIndex < 0) coordIndex = coords.length + coordIndex;
-        return helpers.point(coords[coordIndex], properties, options);
-    case 'Polygon':
-        if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
-        if (coordIndex < 0) coordIndex = coords[geometryIndex].length + coordIndex;
-        return helpers.point(coords[geometryIndex][coordIndex], properties, options);
-    case 'MultiLineString':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (coordIndex < 0) coordIndex = coords[multiFeatureIndex].length + coordIndex;
-        return helpers.point(coords[multiFeatureIndex][coordIndex], properties, options);
-    case 'MultiPolygon':
-        if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-        if (geometryIndex < 0) geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
-        if (coordIndex < 0) coordIndex = coords[multiFeatureIndex][geometryIndex].length - coordIndex;
-        return helpers.point(coords[multiFeatureIndex][geometryIndex][coordIndex], properties, options);
-    }
-    throw new Error('geojson is invalid');
-}
-
-exports.coordEach = coordEach;
-exports.coordReduce = coordReduce;
 exports.propEach = propEach;
 exports.propReduce = propReduce;
-exports.featureEach = featureEach;
-exports.featureReduce = featureReduce;
-exports.coordAll = coordAll;
-exports.geomEach = geomEach;
-exports.geomReduce = geomReduce;
-exports.flattenEach = flattenEach;
-exports.flattenReduce = flattenReduce;
 exports.segmentEach = segmentEach;
 exports.segmentReduce = segmentReduce;
-exports.lineEach = lineEach;
-exports.lineReduce = lineReduce;
-exports.findSegment = findSegment;
-exports.findPoint = findPoint;
 
 
 /***/ }),
@@ -74995,12 +70920,12 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: ascending, bisect, bisectLeft, bisectRight, bisector, cross, descending, deviation, extent, histogram, max, mean, median, min, pairs, permute, quantile, scan, shuffle, sum, thresholdFreedmanDiaconis, thresholdScott, thresholdSturges, tickIncrement, tickStep, ticks, transpose, variance, zip
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/ascending.js
+;// ./node_modules/d3-array/src/ascending.js
 /* harmony default export */ function src_ascending(a, b) {
   return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/bisector.js
+;// ./node_modules/d3-array/src/bisector.js
 
 
 /* harmony default export */ function bisector(compare) {
@@ -75035,7 +70960,7 @@ function ascendingComparator(f) {
   };
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/bisect.js
+;// ./node_modules/d3-array/src/bisect.js
 
 
 
@@ -75044,13 +70969,13 @@ var bisectRight = ascendingBisect.right;
 var bisectLeft = ascendingBisect.left;
 /* harmony default export */ var src_bisect = ((/* unused pure expression or super */ null && (bisectRight)));
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/array.js
+;// ./node_modules/d3-array/src/array.js
 var array = Array.prototype;
 
 var array_slice = array.slice;
 var array_map = array.map;
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/ticks.js
+;// ./node_modules/d3-array/src/ticks.js
 var e10 = Math.sqrt(50),
     e5 = Math.sqrt(10),
     e2 = Math.sqrt(2);
@@ -75103,7 +71028,7 @@ function ticks_tickStep(start, stop, count) {
   return stop < start ? -step1 : step1;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/histogram.js
+;// ./node_modules/d3-array/src/histogram.js
 
 
 
@@ -75180,7 +71105,7 @@ function ticks_tickStep(start, stop, count) {
   return histogram;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/threshold/freedmanDiaconis.js
+;// ./node_modules/d3-array/src/threshold/freedmanDiaconis.js
 
 
 
@@ -75191,7 +71116,7 @@ function ticks_tickStep(start, stop, count) {
   return Math.ceil((max - min) / (2 * (quantile(values, 0.75) - quantile(values, 0.25)) * Math.pow(values.length, -1 / 3)));
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/merge.js
+;// ./node_modules/d3-array/src/merge.js
 /* harmony default export */ function merge(arrays) {
   var n = arrays.length,
       m,
@@ -75214,7 +71139,7 @@ function ticks_tickStep(start, stop, count) {
   return merged;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/range.js
+;// ./node_modules/d3-array/src/range.js
 /* harmony default export */ function src_range(start, stop, step) {
   start = +start, stop = +stop, step = (n = arguments.length) < 2 ? (stop = start, start = 0, 1) : n < 3 ? 1 : +step;
 
@@ -75229,7 +71154,7 @@ function ticks_tickStep(start, stop, count) {
   return range;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-array/src/index.js
+;// ./node_modules/d3-array/src/index.js
 
 
 
@@ -75274,7 +71199,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: FormatSpecifier, formatDefaultLocale, formatPrefix, formatSpecifier, precisionFixed, precisionPrefix, precisionRound
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatDecimal.js
+;// ./node_modules/d3-format/src/formatDecimal.js
 /* harmony default export */ function formatDecimal(x) {
   return Math.abs(x = Math.round(x)) >= 1e21
       ? x.toLocaleString("en").replace(/,/g, "")
@@ -75296,14 +71221,14 @@ function formatDecimalParts(x, p) {
   ];
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/exponent.js
+;// ./node_modules/d3-format/src/exponent.js
 
 
 /* harmony default export */ function exponent(x) {
   return x = formatDecimalParts(Math.abs(x)), x ? x[1] : NaN;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatGroup.js
+;// ./node_modules/d3-format/src/formatGroup.js
 /* harmony default export */ function formatGroup(grouping, thousands) {
   return function(value, width) {
     var i = value.length,
@@ -75323,7 +71248,7 @@ function formatDecimalParts(x, p) {
   };
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatNumerals.js
+;// ./node_modules/d3-format/src/formatNumerals.js
 /* harmony default export */ function formatNumerals(numerals) {
   return function(value) {
     return value.replace(/[0-9]/g, function(i) {
@@ -75332,7 +71257,7 @@ function formatDecimalParts(x, p) {
   };
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatSpecifier.js
+;// ./node_modules/d3-format/src/formatSpecifier.js
 // [[fill]align][sign][symbol][0][width][,][.precision][~][type]
 var re = /^(?:(.)?([<>=^]))?([+\-( ])?([$#])?(0)?(\d+)?(,)?(\.\d+)?(~)?([a-z%])?$/i;
 
@@ -75381,7 +71306,7 @@ FormatSpecifier.prototype.toString = function() {
       + this.type;
 };
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatTrim.js
+;// ./node_modules/d3-format/src/formatTrim.js
 // Trims insignificant zeros, e.g., replaces 1.2000k with 1.2k.
 /* harmony default export */ function formatTrim(s) {
   out: for (var n = s.length, i = 1, i0 = -1, i1; i < n; ++i) {
@@ -75394,7 +71319,7 @@ FormatSpecifier.prototype.toString = function() {
   return i0 > 0 ? s.slice(0, i0) + s.slice(i1 + 1) : s;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatPrefixAuto.js
+;// ./node_modules/d3-format/src/formatPrefixAuto.js
 
 
 var prefixExponent;
@@ -75412,7 +71337,7 @@ var prefixExponent;
       : "0." + new Array(1 - i).join("0") + formatDecimalParts(x, Math.max(0, p + i - 1))[0]; // less than 1y!
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatRounded.js
+;// ./node_modules/d3-format/src/formatRounded.js
 
 
 /* harmony default export */ function formatRounded(x, p) {
@@ -75425,7 +71350,7 @@ var prefixExponent;
       : coefficient + new Array(exponent - coefficient.length + 2).join("0");
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/formatTypes.js
+;// ./node_modules/d3-format/src/formatTypes.js
 
 
 
@@ -75446,12 +71371,12 @@ var prefixExponent;
   "x": function(x) { return Math.round(x).toString(16); }
 });
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/identity.js
+;// ./node_modules/d3-format/src/identity.js
 /* harmony default export */ function identity(x) {
   return x;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/locale.js
+;// ./node_modules/d3-format/src/locale.js
 
 
 
@@ -75601,7 +71526,7 @@ var map = Array.prototype.map,
   };
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/defaultLocale.js
+;// ./node_modules/d3-format/src/defaultLocale.js
 
 
 var defaultLocale_locale;
@@ -75623,7 +71548,7 @@ function defaultLocale(definition) {
   return defaultLocale_locale;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-format/src/index.js
+;// ./node_modules/d3-format/src/index.js
 
 
 
@@ -75830,7 +71755,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/index.js + 1 modules
 var src_projection = __webpack_require__(4370);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/math.js
+;// ./node_modules/d3-geo-projection/src/math.js
 var abs = Math.abs;
 var atan = Math.atan;
 var atan2 = Math.atan2;
@@ -75896,7 +71821,7 @@ function arcosh(x) {
   return log(x + sqrt(x * x - 1));
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/airy.js
+;// ./node_modules/d3-geo-projection/src/airy.js
 
 
 
@@ -75947,7 +71872,7 @@ function airyRaw(beta) {
       .clipAngle(147);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/aitoff.js
+;// ./node_modules/d3-geo-projection/src/aitoff.js
 
 
 
@@ -75994,7 +71919,7 @@ aitoffRaw.invert = function(x, y) {
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/armadillo.js
+;// ./node_modules/d3-geo-projection/src/armadillo.js
 
 
 
@@ -76079,7 +72004,7 @@ function armadilloRaw(phi0) {
       .center([0, 28.0974]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/august.js
+;// ./node_modules/d3-geo-projection/src/august.js
 
 
 
@@ -76120,7 +72045,7 @@ augustRaw.invert = function(x, y) {
       .scale(66.1603);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/baker.js
+;// ./node_modules/d3-geo-projection/src/baker.js
 
 
 
@@ -76151,7 +72076,7 @@ bakerRaw.invert = function(x, y) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthalEquidistant.js
 var azimuthalEquidistant = __webpack_require__(4858);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/berghaus.js
+;// ./node_modules/d3-geo-projection/src/berghaus.js
 
 
 
@@ -76232,7 +72157,7 @@ function berghausRaw(lobes) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthalEqualArea.js
 var azimuthalEqualArea = __webpack_require__(4550);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/hammer.js
+;// ./node_modules/d3-geo-projection/src/hammer.js
 
 
 
@@ -76285,7 +72210,7 @@ hammerQuarticAuthalicRaw.invert = function(x, y) {
     .scale(169.529);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/newton.js
+;// ./node_modules/d3-geo-projection/src/newton.js
 
 
 // Approximate Newton-Raphson
@@ -76350,7 +72275,7 @@ function solve2d(f, MAX_ITERATIONS, eps) {
     return [a, b];
   };
 }
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/bertin.js
+;// ./node_modules/d3-geo-projection/src/bertin.js
 
 
 
@@ -76396,7 +72321,7 @@ function bertin1953Raw() {
     .center([7.93, 0.09]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/mollweide.js
+;// ./node_modules/d3-geo-projection/src/mollweide.js
 
 
 
@@ -76427,7 +72352,7 @@ var mollweideRaw = mollweideBromleyRaw(sqrt2 / halfPi, sqrt2, pi);
       .scale(169.529);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/boggs.js
+;// ./node_modules/d3-geo-projection/src/boggs.js
 
 
 
@@ -76455,7 +72380,7 @@ boggsRaw.invert = function(x, y) {
       .scale(160.857);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/parallel1.js
+;// ./node_modules/d3-geo-projection/src/parallel1.js
 
 
 
@@ -76471,7 +72396,7 @@ boggsRaw.invert = function(x, y) {
   return p;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/sinusoidal.js
+;// ./node_modules/d3-geo-projection/src/sinusoidal.js
 
 
 
@@ -76488,7 +72413,7 @@ sinusoidalRaw.invert = function(x, y) {
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/bonne.js
+;// ./node_modules/d3-geo-projection/src/bonne.js
 
 
 
@@ -76519,7 +72444,7 @@ function bonneRaw(phi0) {
       .parallel(45);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/bottomley.js
+;// ./node_modules/d3-geo-projection/src/bottomley.js
 
 
 
@@ -76555,7 +72480,7 @@ function bottomleyRaw(sinPsi) {
       .scale(158.837);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/bromley.js
+;// ./node_modules/d3-geo-projection/src/bromley.js
 
 
 
@@ -76571,7 +72496,7 @@ var bromleyRaw = mollweideBromleyRaw(1, 4 / pi, pi);
 var centroid = __webpack_require__(5308);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/rotation.js
 var rotation = __webpack_require__(5378);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/chamberlin.js
+;// ./node_modules/d3-geo-projection/src/chamberlin.js
 
 
 
@@ -76693,7 +72618,7 @@ function chamberlin(p0, p1, p2) { // TODO order matters!
       .clipAngle(90);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/collignon.js
+;// ./node_modules/d3-geo-projection/src/collignon.js
 
 
 
@@ -76713,7 +72638,7 @@ collignonRaw.invert = function(x, y) {
       .center([0, 30]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/craig.js
+;// ./node_modules/d3-geo-projection/src/craig.js
 
 
 
@@ -76741,7 +72666,7 @@ function craigRaw(phi0) {
       .clipAngle(90);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/craster.js
+;// ./node_modules/d3-geo-projection/src/craster.js
 
 
 
@@ -76761,7 +72686,7 @@ crasterRaw.invert = function(x, y) {
       .scale(156.19);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/cylindricalEqualArea.js
+;// ./node_modules/d3-geo-projection/src/cylindricalEqualArea.js
 
 
 
@@ -76785,7 +72710,7 @@ function cylindricalEqualAreaRaw(phi0) {
       .scale(195.044); // width / (sqrt(width / height / pi) * 2 * pi)
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/cylindricalStereographic.js
+;// ./node_modules/d3-geo-projection/src/cylindricalStereographic.js
 
 
 
@@ -76808,7 +72733,7 @@ function cylindricalStereographicRaw(phi0) {
       .scale(124.75);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/eckert1.js
+;// ./node_modules/d3-geo-projection/src/eckert1.js
 
 
 
@@ -76834,7 +72759,7 @@ eckert1Raw.invert = function(x, y) {
       .scale(165.664);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/eckert2.js
+;// ./node_modules/d3-geo-projection/src/eckert2.js
 
 
 
@@ -76859,7 +72784,7 @@ eckert2Raw.invert = function(x, y) {
       .scale(165.664);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/eckert3.js
+;// ./node_modules/d3-geo-projection/src/eckert3.js
 
 
 
@@ -76884,7 +72809,7 @@ eckert3Raw.invert = function(x, y) {
       .scale(180.739);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/eckert4.js
+;// ./node_modules/d3-geo-projection/src/eckert4.js
 
 
 
@@ -76916,7 +72841,7 @@ eckert4Raw.invert = function(x, y) {
       .scale(180.739);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/eckert5.js
+;// ./node_modules/d3-geo-projection/src/eckert5.js
 
 
 
@@ -76941,7 +72866,7 @@ eckert5Raw.invert = function(x, y) {
       .scale(173.044);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/eckert6.js
+;// ./node_modules/d3-geo-projection/src/eckert6.js
 
 
 
@@ -76971,7 +72896,7 @@ eckert6Raw.invert = function(x, y) {
       .scale(173.044);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/eisenlohr.js
+;// ./node_modules/d3-geo-projection/src/eisenlohr.js
 
 
 
@@ -77043,7 +72968,7 @@ eisenlohrRaw.invert = function(x, y) {
       .scale(62.5271);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/fahey.js
+;// ./node_modules/d3-geo-projection/src/fahey.js
 
 
 
@@ -77064,7 +72989,7 @@ faheyRaw.invert = function(x, y) {
       .scale(137.152);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/foucaut.js
+;// ./node_modules/d3-geo-projection/src/foucaut.js
 
 
 
@@ -77083,7 +73008,7 @@ foucautRaw.invert = function(x, y) {
       .scale(135.264);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/foucautSinusoidal.js
+;// ./node_modules/d3-geo-projection/src/foucautSinusoidal.js
 
 
 
@@ -77138,7 +73063,7 @@ function foucautSinusoidalRaw(alpha) {
 var orthographic = __webpack_require__(5782);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/equirectangular.js
 var projection_equirectangular = __webpack_require__(3538);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/gilbert.js
+;// ./node_modules/d3-geo-projection/src/gilbert.js
 
 
 
@@ -77204,7 +73129,7 @@ function gilbertInvert(point) {
       .scale(249.5);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/gingery.js
+;// ./node_modules/d3-geo-projection/src/gingery.js
 
 
 
@@ -77352,7 +73277,7 @@ function gingeryIntegrate(f, a, b) {
       .clipAngle(180 - 1e-3);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/ginzburgPolyconic.js
+;// ./node_modules/d3-geo-projection/src/ginzburgPolyconic.js
 
 
 /* harmony default export */ function ginzburgPolyconic(a, b, c, d, e, f, g, h) {
@@ -77410,7 +73335,7 @@ function gingeryIntegrate(f, a, b) {
   return forward;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/ginzburg4.js
+;// ./node_modules/d3-geo-projection/src/ginzburg4.js
 
 
 
@@ -77421,7 +73346,7 @@ var ginzburg4Raw = ginzburgPolyconic(2.8284, -1.6988, 0.75432, -0.18071, 1.76003
       .scale(149.995);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/ginzburg5.js
+;// ./node_modules/d3-geo-projection/src/ginzburg5.js
 
 
 
@@ -77432,7 +73357,7 @@ var ginzburg5Raw = ginzburgPolyconic(2.583819, -0.835827, 0.170354, -0.038094, 1
       .scale(153.93);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/ginzburg6.js
+;// ./node_modules/d3-geo-projection/src/ginzburg6.js
 
 
 
@@ -77444,7 +73369,7 @@ var ginzburg6Raw = ginzburgPolyconic(5 / 6 * pi, -0.62636, -0.0344, 0, 1.3493, -
       .scale(130.945);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/ginzburg8.js
+;// ./node_modules/d3-geo-projection/src/ginzburg8.js
 
 
 
@@ -77479,7 +73404,7 @@ ginzburg8Raw.invert = function(x, y) {
       .scale(131.747);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/ginzburg9.js
+;// ./node_modules/d3-geo-projection/src/ginzburg9.js
 
 
 
@@ -77490,7 +73415,7 @@ var ginzburg9Raw = ginzburgPolyconic(2.6516, -0.76534, 0.19123, -0.047094, 1.362
       .scale(131.087);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/square.js
+;// ./node_modules/d3-geo-projection/src/square.js
 
 
 /* harmony default export */ function square(project) {
@@ -77516,7 +73441,7 @@ var ginzburg9Raw = ginzburgPolyconic(2.6516, -0.76534, 0.19123, -0.047094, 1.362
   return projectSquare;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/gringorten.js
+;// ./node_modules/d3-geo-projection/src/gringorten.js
 
 
 
@@ -77665,7 +73590,7 @@ function gringortenHexadecantInvert(x, y) {
       .scale(239.75);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/elliptic.js
+;// ./node_modules/d3-geo-projection/src/elliptic.js
 
 
 // Returns [sn, cn, dn](u + iv|m).
@@ -77785,7 +73710,7 @@ function ellipticF(phi, m) {
   return phi / (pow(2, i) * a);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/guyou.js
+;// ./node_modules/d3-geo-projection/src/guyou.js
 
 
 
@@ -77842,7 +73767,7 @@ guyouRaw.invert = function(x, y) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/circle.js + 1 modules
 var src_circle = __webpack_require__(2504);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/hammerRetroazimuthal.js
+;// ./node_modules/d3-geo-projection/src/hammerRetroazimuthal.js
 
 
 
@@ -77957,7 +73882,7 @@ function hammerRetroazimuthalRotation(phi0) {
 var src = __webpack_require__(2423);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/stream.js
 var src_stream = __webpack_require__(6804);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/healpix.js
+;// ./node_modules/d3-geo-projection/src/healpix.js
 
 
 
@@ -78058,7 +73983,7 @@ function sphere(step) {
       .scale(239.75);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/hill.js
+;// ./node_modules/d3-geo-projection/src/hill.js
 
 
 
@@ -78126,7 +74051,7 @@ function hillRaw(K) {
       .center([0, 18.67]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/sinuMollweide.js
+;// ./node_modules/d3-geo-projection/src/sinuMollweide.js
 
 
 
@@ -78154,7 +74079,7 @@ sinuMollweideRaw.invert = function(x, y) {
       .center([0, -5.4036]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/homolosine.js
+;// ./node_modules/d3-geo-projection/src/homolosine.js
 
 
 
@@ -78178,7 +74103,7 @@ homolosineRaw.invert = function(x, y) {
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/hufnagel.js
+;// ./node_modules/d3-geo-projection/src/hufnagel.js
 
 
 
@@ -78271,7 +74196,7 @@ function hufnagelRaw(a, b, psiMax, ratio) {
   return projection.scale(180.739);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/integrate.js
+;// ./node_modules/d3-geo-projection/src/integrate.js
 // https://github.com/scijs/integrate-adaptive-simpson
 
 // This algorithm adapted from pseudocode in:
@@ -78363,7 +74288,7 @@ function integrate (f, a, b, tol, maxdepth) {
 
   return result;
 }
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/hyperelliptical.js
+;// ./node_modules/d3-geo-projection/src/hyperelliptical.js
 
 
 
@@ -78438,7 +74363,7 @@ function hyperellipticalRaw(alpha, k, gamma) {
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/index.js
+;// ./node_modules/d3-geo-projection/src/interrupted/index.js
 
 
 
@@ -78587,7 +74512,7 @@ function interpolateSphere(lobes) {
   return p;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/boggs.js
+;// ./node_modules/d3-geo-projection/src/interrupted/boggs.js
 
 
 
@@ -78606,7 +74531,7 @@ var lobes = [[ // northern hemisphere
       .scale(160.857);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/homolosine.js
+;// ./node_modules/d3-geo-projection/src/interrupted/homolosine.js
 
 
 
@@ -78625,7 +74550,7 @@ var homolosine_lobes = [[ // northern hemisphere
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/mollweide.js
+;// ./node_modules/d3-geo-projection/src/interrupted/mollweide.js
 
 
 
@@ -78644,7 +74569,7 @@ var mollweide_lobes = [[ // northern hemisphere
       .scale(169.529);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/mollweideHemispheres.js
+;// ./node_modules/d3-geo-projection/src/interrupted/mollweideHemispheres.js
 
 
 
@@ -78662,7 +74587,7 @@ var mollweideHemispheres_lobes = [[ // northern hemisphere
       .rotate([20, 0]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/sinuMollweide.js
+;// ./node_modules/d3-geo-projection/src/interrupted/sinuMollweide.js
 
 
 
@@ -78683,7 +74608,7 @@ var sinuMollweide_lobes = [[ // northern hemisphere
       .center([0, -5.4036]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/sinusoidal.js
+;// ./node_modules/d3-geo-projection/src/interrupted/sinusoidal.js
 
 
 
@@ -78703,7 +74628,7 @@ var sinusoidal_lobes = [[ // northern hemisphere
       .rotate([-20, 0]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/kavrayskiy7.js
+;// ./node_modules/d3-geo-projection/src/kavrayskiy7.js
 
 
 
@@ -78720,7 +74645,7 @@ kavrayskiy7Raw.invert = function(x, y) {
       .scale(158.837);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/lagrange.js
+;// ./node_modules/d3-geo-projection/src/lagrange.js
 
 
 
@@ -78769,7 +74694,7 @@ function lagrangeRaw(n) {
       .scale(124.75);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/larrivee.js
+;// ./node_modules/d3-geo-projection/src/larrivee.js
 
 
 
@@ -78817,7 +74742,7 @@ larriveeRaw.invert = function(x, y) {
       .scale(97.2672);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/laskowski.js
+;// ./node_modules/d3-geo-projection/src/laskowski.js
 
 
 
@@ -78856,7 +74781,7 @@ laskowskiRaw.invert = function(x, y) {
       .scale(139.98);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/littrow.js
+;// ./node_modules/d3-geo-projection/src/littrow.js
 
 
 
@@ -78887,7 +74812,7 @@ littrowRaw.invert = function(x, y) {
       .clipAngle(90 - 1e-3);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/loximuthal.js
+;// ./node_modules/d3-geo-projection/src/loximuthal.js
 
 
 
@@ -78923,7 +74848,7 @@ function loximuthalRaw(phi0) {
       .scale(158.837);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/miller.js
+;// ./node_modules/d3-geo-projection/src/miller.js
 
 
 
@@ -78940,7 +74865,7 @@ millerRaw.invert = function(x, y) {
       .scale(108.318);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/modifiedStereographic.js
+;// ./node_modules/d3-geo-projection/src/modifiedStereographic.js
 
 
 
@@ -79064,7 +74989,7 @@ function modifiedStereographic(coefficients, rotate) {
   return p;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/mtFlatPolarParabolic.js
+;// ./node_modules/d3-geo-projection/src/mtFlatPolarParabolic.js
 
 
 
@@ -79092,7 +75017,7 @@ mtFlatPolarParabolicRaw.invert = function(x, y) {
       .scale(164.859);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/mtFlatPolarQuartic.js
+;// ./node_modules/d3-geo-projection/src/mtFlatPolarQuartic.js
 
 
 
@@ -79123,7 +75048,7 @@ mtFlatPolarQuarticRaw.invert = function(x, y) {
       .scale(188.209);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/mtFlatPolarSinusoidal.js
+;// ./node_modules/d3-geo-projection/src/mtFlatPolarSinusoidal.js
 
 
 
@@ -79158,7 +75083,7 @@ mtFlatPolarSinusoidalRaw.invert = function(x, y) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/naturalEarth1.js
 var naturalEarth1 = __webpack_require__(5400);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/naturalEarth2.js
+;// ./node_modules/d3-geo-projection/src/naturalEarth2.js
 
 
 
@@ -79189,7 +75114,7 @@ naturalEarth2Raw.invert = function(x, y) {
       .scale(175.295);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/nellHammer.js
+;// ./node_modules/d3-geo-projection/src/nellHammer.js
 
 
 
@@ -79217,7 +75142,7 @@ nellHammerRaw.invert = function(x, y) {
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/interrupted/quarticAuthalic.js
+;// ./node_modules/d3-geo-projection/src/interrupted/quarticAuthalic.js
 
 
 
@@ -79235,7 +75160,7 @@ var quarticAuthalic_lobes = [[ // northern hemisphere
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/nicolosi.js
+;// ./node_modules/d3-geo-projection/src/nicolosi.js
 
 
 
@@ -79301,7 +75226,7 @@ nicolosiRaw.invert = function(x, y) {
     .scale(127.267);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/patterson.js
+;// ./node_modules/d3-geo-projection/src/patterson.js
 
 
 
@@ -79344,7 +75269,7 @@ pattersonRaw.invert = function(x, y) {
       .scale(139.319);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyconic.js
+;// ./node_modules/d3-geo-projection/src/polyconic.js
 
 
 
@@ -79385,7 +75310,7 @@ polyconicRaw.invert = function(x, y) {
 var bounds = __webpack_require__(9565);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/interpolate.js
 var interpolate = __webpack_require__(9829);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/matrix.js
+;// ./node_modules/d3-geo-projection/src/polyhedral/matrix.js
 
 
 // Note: 6-element arrays are used to denote the 3x3 affine transform matrix:
@@ -79451,7 +75376,7 @@ function matrix_angle(a, b) {
   return atan2(a[0] * b[1] - a[1] * b[0], a[0] * b[0] + a[1] * b[1]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/index.js
+;// ./node_modules/d3-geo-projection/src/polyhedral/index.js
 
 
 
@@ -79629,7 +75554,7 @@ function hasInverse(node) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/gnomonic.js
 var gnomonic = __webpack_require__(5912);
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/octahedron.js
+;// ./node_modules/d3-geo-projection/src/polyhedral/octahedron.js
 // TODO generate on-the-fly to avoid external modification.
 var octahedron = [
   [0, 90],
@@ -79652,7 +75577,7 @@ var octahedron = [
   });
 }));
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/butterfly.js
+;// ./node_modules/d3-geo-projection/src/polyhedral/butterfly.js
 
 
 
@@ -79685,7 +75610,7 @@ var octahedron = [
       .center([0, 45]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/collignon.js
+;// ./node_modules/d3-geo-projection/src/polyhedral/collignon.js
 
 
 
@@ -79730,7 +75655,7 @@ collignonK.invert = function(x,y) {
       .center([0, 48.5904]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/polyhedral/waterman.js
+;// ./node_modules/d3-geo-projection/src/polyhedral/waterman.js
 
 
 
@@ -79855,10 +75780,10 @@ function cartesian(coordinates) {
   ];
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/noop.js
+;// ./node_modules/d3-geo-projection/src/noop.js
 /* harmony default export */ function noop() {}
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/project/clockwise.js
+;// ./node_modules/d3-geo-projection/src/project/clockwise.js
 /* harmony default export */ function clockwise(ring) {
   if ((n = ring.length) < 4) return false;
   var i = 0,
@@ -79868,7 +75793,7 @@ function cartesian(coordinates) {
   return area <= 0;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/project/contains.js
+;// ./node_modules/d3-geo-projection/src/project/contains.js
 /* harmony default export */ function contains(ring, point) {
   var x = point[0],
       y = point[1],
@@ -79881,7 +75806,7 @@ function cartesian(coordinates) {
   return contains;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/project/index.js
+;// ./node_modules/d3-geo-projection/src/project/index.js
 
 
 
@@ -80019,7 +75944,7 @@ var sinkPolygon = {
   }
 };
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/quincuncial/index.js
+;// ./node_modules/d3-geo-projection/src/quincuncial/index.js
 
 
 
@@ -80061,7 +75986,7 @@ var sinkPolygon = {
       .clipAngle(180 - 1e-3);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/quincuncial/gringorten.js
+;// ./node_modules/d3-geo-projection/src/quincuncial/gringorten.js
 
 
 
@@ -80070,7 +75995,7 @@ var sinkPolygon = {
       .scale(176.423);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/quincuncial/peirce.js
+;// ./node_modules/d3-geo-projection/src/quincuncial/peirce.js
 
 
 
@@ -80079,7 +76004,7 @@ var sinkPolygon = {
       .scale(111.48);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/quantize.js
+;// ./node_modules/d3-geo-projection/src/quantize.js
 /* harmony default export */ function quantize(input, digits) {
   if (!(0 <= (digits = +digits) && digits <= 20)) throw new Error("invalid digits");
 
@@ -80151,7 +76076,7 @@ var sinkPolygon = {
   return input;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/rectangularPolyconic.js
+;// ./node_modules/d3-geo-projection/src/rectangularPolyconic.js
 
 
 
@@ -80197,7 +76122,7 @@ function rectangularPolyconicRaw(phi0) {
       .scale(131.215);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/robinson.js
+;// ./node_modules/d3-geo-projection/src/robinson.js
 
 
 
@@ -80288,7 +76213,7 @@ robinsonRaw.invert = function(x, y) {
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/satellite.js
+;// ./node_modules/d3-geo-projection/src/satellite.js
 
 
 
@@ -80361,7 +76286,7 @@ function satelliteRaw(P, omega) {
       .clipAngle(acos(1 / distance) * degrees - 1e-6);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/stitch.js
+;// ./node_modules/d3-geo-projection/src/stitch.js
 var stitch_epsilon = 1e-4,
     epsilonInverse = 1e4,
     x0 = -180, x0e = x0 + stitch_epsilon,
@@ -80578,7 +76503,7 @@ function stitchGeometry(input) {
   }
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/times.js
+;// ./node_modules/d3-geo-projection/src/times.js
 
 
 
@@ -80605,7 +76530,7 @@ timesRaw.invert = function(x, y) {
       .scale(146.153);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/twoPoint.js
+;// ./node_modules/d3-geo-projection/src/twoPoint.js
 
 
 
@@ -80633,7 +76558,7 @@ timesRaw.invert = function(x, y) {
       .clipAngle(90);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/twoPointAzimuthal.js
+;// ./node_modules/d3-geo-projection/src/twoPointAzimuthal.js
 
 
 
@@ -80664,7 +76589,7 @@ function twoPointAzimuthal(p0, p1) {
   return twoPoint(twoPointAzimuthalRaw, p0, p1);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/twoPointEquidistant.js
+;// ./node_modules/d3-geo-projection/src/twoPointEquidistant.js
 
 
 
@@ -80714,7 +76639,7 @@ function twoPointEquidistant(p0, p1) {
   return twoPoint(twoPointEquidistantRaw, p0, p1);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/vanDerGrinten.js
+;// ./node_modules/d3-geo-projection/src/vanDerGrinten.js
 
 
 
@@ -80763,7 +76688,7 @@ vanDerGrintenRaw.invert = function(x, y) {
       .scale(79.4183);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/vanDerGrinten2.js
+;// ./node_modules/d3-geo-projection/src/vanDerGrinten2.js
 
 
 
@@ -80799,7 +76724,7 @@ vanDerGrinten2Raw.invert = function(x, y) {
       .scale(79.4183);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/vanDerGrinten3.js
+;// ./node_modules/d3-geo-projection/src/vanDerGrinten3.js
 
 
 
@@ -80831,7 +76756,7 @@ vanDerGrinten3Raw.invert = function(x, y) {
         .scale(79.4183);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/vanDerGrinten4.js
+;// ./node_modules/d3-geo-projection/src/vanDerGrinten4.js
 
 
 
@@ -80894,7 +76819,7 @@ vanDerGrinten4Raw.invert = function(x, y) {
       .scale(127.16);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/wagner.js
+;// ./node_modules/d3-geo-projection/src/wagner.js
 
 
 
@@ -80994,7 +76919,7 @@ function wagner7() {
       .scale(172.633);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/wagner4.js
+;// ./node_modules/d3-geo-projection/src/wagner4.js
 
 
 
@@ -81009,7 +76934,7 @@ var wagner4Raw = mollweideBromleyRaw(B * sqrt(3) / pi, B, A / 6);
       .scale(176.84);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/wagner6.js
+;// ./node_modules/d3-geo-projection/src/wagner6.js
 
 
 
@@ -81026,7 +76951,7 @@ wagner6Raw.invert = function(x, y) {
       .scale(152.63);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/wiechel.js
+;// ./node_modules/d3-geo-projection/src/wiechel.js
 
 
 
@@ -81062,7 +76987,7 @@ wiechelRaw.invert = function(x, y) {
       .clipAngle(180 - 1e-3);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/winkel3.js
+;// ./node_modules/d3-geo-projection/src/winkel3.js
 
 
 
@@ -81109,7 +77034,7 @@ winkel3Raw.invert = function(x, y) {
       .scale(158.837);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo-projection/src/index.js
+;// ./node_modules/d3-geo-projection/src/index.js
 
 
 
@@ -81766,7 +77691,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/cartesian.js
 var cartesian = __webpack_require__(8696);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/constant.js
+;// ./node_modules/d3-geo/src/constant.js
 /* harmony default export */ function constant(x) {
   return function() {
     return x;
@@ -81777,7 +77702,7 @@ var cartesian = __webpack_require__(8696);
 var math = __webpack_require__(4650);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/rotation.js
 var rotation = __webpack_require__(5378);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/circle.js
+;// ./node_modules/d3-geo/src/circle.js
 
 
 
@@ -82346,7 +78271,7 @@ __webpack_require__.d(__webpack_exports__, {
 var math = __webpack_require__(4650);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/buffer.js
 var buffer = __webpack_require__(3819);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/clip/line.js
+;// ./node_modules/d3-geo/src/clip/line.js
 /* harmony default export */ function line(a, b, x0, y0, x1, y1) {
   var ax = a[0],
       ay = a[1],
@@ -82411,7 +78336,7 @@ var buffer = __webpack_require__(3819);
 var rejoin = __webpack_require__(5404);
 // EXTERNAL MODULE: ./node_modules/d3-array/src/index.js + 9 modules
 var src = __webpack_require__(2423);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/clip/rectangle.js
+;// ./node_modules/d3-geo/src/clip/rectangle.js
 
 
 
@@ -82811,7 +78736,7 @@ var antimeridian = __webpack_require__(3630);
 var clip_circle = __webpack_require__(3749);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/clip/rectangle.js + 1 modules
 var rectangle = __webpack_require__(9602);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/clip/extent.js
+;// ./node_modules/d3-geo/src/clip/extent.js
 
 
 /* harmony default export */ function extent() {
@@ -82843,7 +78768,7 @@ var math = __webpack_require__(4650);
 var noop = __webpack_require__(6608);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/stream.js
 var stream = __webpack_require__(6804);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/length.js
+;// ./node_modules/d3-geo/src/length.js
 
 
 
@@ -82898,7 +78823,7 @@ function lengthPoint(lambda, phi) {
   return +lengthSum;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/distance.js
+;// ./node_modules/d3-geo/src/distance.js
 
 
 var coordinates = [null, null],
@@ -82910,7 +78835,7 @@ var coordinates = [null, null],
   return src_length(object);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/contains.js
+;// ./node_modules/d3-geo/src/contains.js
 
 
 
@@ -83011,7 +78936,7 @@ function pointRadians(point) {
 
 // EXTERNAL MODULE: ./node_modules/d3-array/src/index.js + 9 modules
 var src = __webpack_require__(2423);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/graticule.js
+;// ./node_modules/d3-geo/src/graticule.js
 
 
 
@@ -83122,7 +79047,7 @@ function graticule10() {
 var interpolate = __webpack_require__(9829);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/identity.js
 var identity = __webpack_require__(2674);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/area.js
+;// ./node_modules/d3-geo/src/path/area.js
 
 
 
@@ -83176,7 +79101,7 @@ function areaRingEnd() {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/path/bounds.js
 var path_bounds = __webpack_require__(6927);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/centroid.js
+;// ./node_modules/d3-geo/src/path/centroid.js
 
 
 // TODO Enforce positive area for exterior, negative area for interior?
@@ -83278,7 +79203,7 @@ function centroidPointRing(x, y) {
 
 /* harmony default export */ var path_centroid = (centroidStream);
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/context.js
+;// ./node_modules/d3-geo/src/path/context.js
 
 
 
@@ -83325,7 +79250,7 @@ PathContext.prototype = {
   result: noop/* default */.A
 };
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/measure.js
+;// ./node_modules/d3-geo/src/path/measure.js
 
 
 
@@ -83372,7 +79297,7 @@ function measure_lengthPoint(x, y) {
 
 /* harmony default export */ var measure = (measure_lengthStream);
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/string.js
+;// ./node_modules/d3-geo/src/path/string.js
 function PathString() {
   this._string = [];
 }
@@ -83433,7 +79358,7 @@ function string_circle(radius) {
       + "z";
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/path/index.js
+;// ./node_modules/d3-geo/src/path/index.js
 
 
 
@@ -83498,7 +79423,7 @@ function string_circle(radius) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/index.js + 1 modules
 var projection = __webpack_require__(4370);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/conic.js
+;// ./node_modules/d3-geo/src/projection/conic.js
 
 
 
@@ -83515,7 +79440,7 @@ function conicProjection(projectAt) {
   return p;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/cylindricalEqualArea.js
+;// ./node_modules/d3-geo/src/projection/cylindricalEqualArea.js
 
 
 function cylindricalEqualAreaRaw(phi0) {
@@ -83532,7 +79457,7 @@ function cylindricalEqualAreaRaw(phi0) {
   return forward;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/conicEqualArea.js
+;// ./node_modules/d3-geo/src/projection/conicEqualArea.js
 
 
 
@@ -83567,7 +79492,7 @@ function conicEqualAreaRaw(y0, y1) {
       .center([0, 33.6442]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/albers.js
+;// ./node_modules/d3-geo/src/projection/albers.js
 
 
 /* harmony default export */ function albers() {
@@ -83581,7 +79506,7 @@ function conicEqualAreaRaw(y0, y1) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/fit.js
 var fit = __webpack_require__(5185);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/albersUsa.js
+;// ./node_modules/d3-geo/src/projection/albersUsa.js
 
 
 
@@ -83700,7 +79625,7 @@ var azimuthalEqualArea = __webpack_require__(4550);
 var azimuthalEquidistant = __webpack_require__(4858);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/rotation.js
 var rotation = __webpack_require__(5378);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/mercator.js
+;// ./node_modules/d3-geo/src/projection/mercator.js
 
 
 
@@ -83754,7 +79679,7 @@ function mercatorProjection(project) {
   return reclip();
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/conicConformal.js
+;// ./node_modules/d3-geo/src/projection/conicConformal.js
 
 
 
@@ -83796,7 +79721,7 @@ function conicConformalRaw(y0, y1) {
 
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/equirectangular.js
 var equirectangular = __webpack_require__(3538);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/conicEquidistant.js
+;// ./node_modules/d3-geo/src/projection/conicEquidistant.js
 
 
 
@@ -83830,7 +79755,7 @@ function conicEquidistantRaw(y0, y1) {
       .center([0, 13.9389]);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/equalEarth.js
+;// ./node_modules/d3-geo/src/projection/equalEarth.js
 
 
 
@@ -83872,7 +79797,7 @@ equalEarthRaw.invert = function(x, y) {
 var gnomonic = __webpack_require__(5912);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/transform.js
 var src_transform = __webpack_require__(7722);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/identity.js
+;// ./node_modules/d3-geo/src/projection/identity.js
 
 
 
@@ -83965,7 +79890,7 @@ var naturalEarth1 = __webpack_require__(5400);
 var orthographic = __webpack_require__(5782);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/projection/azimuthal.js
 var azimuthal = __webpack_require__(6603);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/stereographic.js
+;// ./node_modules/d3-geo/src/projection/stereographic.js
 
 
 
@@ -83985,7 +79910,7 @@ stereographicRaw.invert = (0,azimuthal/* azimuthalInvert */.I)(function(z) {
       .clipAngle(142);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/transverseMercator.js
+;// ./node_modules/d3-geo/src/projection/transverseMercator.js
 
 
 
@@ -84014,7 +79939,7 @@ transverseMercatorRaw.invert = function(x, y) {
       .scale(159.155);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/index.js
+;// ./node_modules/d3-geo/src/index.js
 
 
 
@@ -84582,7 +80507,7 @@ var transform = __webpack_require__(7722);
 var fit = __webpack_require__(5185);
 // EXTERNAL MODULE: ./node_modules/d3-geo/src/cartesian.js
 var cartesian = __webpack_require__(8696);
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/resample.js
+;// ./node_modules/d3-geo/src/projection/resample.js
 
 
 
@@ -84686,7 +80611,7 @@ function resample_resample(project, delta2) {
   };
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-geo/src/projection/index.js
+;// ./node_modules/d3-geo/src/projection/index.js
 
 
 
@@ -85173,7 +81098,7 @@ var src_day = __webpack_require__(9576);
 var year = __webpack_require__(9325);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcYear.js
 var utcYear = __webpack_require__(6077);
-;// CONCATENATED MODULE: ./node_modules/d3-time-format/src/locale.js
+;// ./node_modules/d3-time-format/src/locale.js
 
 
 function localDate(d) {
@@ -85228,6 +81153,8 @@ function formatLocale(locale) {
     "d": formatDayOfMonth,
     "e": formatDayOfMonth,
     "f": formatMicroseconds,
+    "g": formatYearISO,
+    "G": formatFullYearISO,
     "H": formatHour24,
     "I": formatHour12,
     "j": formatDayOfYear,
@@ -85261,6 +81188,8 @@ function formatLocale(locale) {
     "d": formatUTCDayOfMonth,
     "e": formatUTCDayOfMonth,
     "f": formatUTCMicroseconds,
+    "g": formatUTCYearISO,
+    "G": formatUTCFullYearISO,
     "H": formatUTCHour24,
     "I": formatUTCHour12,
     "j": formatUTCDayOfYear,
@@ -85294,6 +81223,8 @@ function formatLocale(locale) {
     "d": parseDayOfMonth,
     "e": parseDayOfMonth,
     "f": parseMicroseconds,
+    "g": parseYear,
+    "G": parseFullYear,
     "H": parseHour24,
     "I": parseHour24,
     "j": parseDayOfYear,
@@ -85715,9 +81646,13 @@ function formatWeekNumberSunday(d, p) {
   return pad(src_week/* sunday */.fz.count((0,year/* default */.A)(d) - 1, d), p, 2);
 }
 
-function formatWeekNumberISO(d, p) {
+function dISO(d) {
   var day = d.getDay();
-  d = (day >= 4 || day === 0) ? (0,src_week/* thursday */.dt)(d) : src_week/* thursday */.dt.ceil(d);
+  return (day >= 4 || day === 0) ? (0,src_week/* thursday */.dt)(d) : src_week/* thursday */.dt.ceil(d);
+}
+
+function formatWeekNumberISO(d, p) {
+  d = dISO(d);
   return pad(src_week/* thursday */.dt.count((0,year/* default */.A)(d), d) + ((0,year/* default */.A)(d).getDay() === 4), p, 2);
 }
 
@@ -85733,7 +81668,18 @@ function formatYear(d, p) {
   return pad(d.getFullYear() % 100, p, 2);
 }
 
+function formatYearISO(d, p) {
+  d = dISO(d);
+  return pad(d.getFullYear() % 100, p, 2);
+}
+
 function formatFullYear(d, p) {
+  return pad(d.getFullYear() % 10000, p, 4);
+}
+
+function formatFullYearISO(d, p) {
+  var day = d.getDay();
+  d = (day >= 4 || day === 0) ? (0,src_week/* thursday */.dt)(d) : src_week/* thursday */.dt.ceil(d);
   return pad(d.getFullYear() % 10000, p, 4);
 }
 
@@ -85789,9 +81735,13 @@ function formatUTCWeekNumberSunday(d, p) {
   return pad(utcWeek/* utcSunday */.Hl.count((0,utcYear/* default */.A)(d) - 1, d), p, 2);
 }
 
-function formatUTCWeekNumberISO(d, p) {
+function UTCdISO(d) {
   var day = d.getUTCDay();
-  d = (day >= 4 || day === 0) ? (0,utcWeek/* utcThursday */.pT)(d) : utcWeek/* utcThursday */.pT.ceil(d);
+  return (day >= 4 || day === 0) ? (0,utcWeek/* utcThursday */.pT)(d) : utcWeek/* utcThursday */.pT.ceil(d);
+}
+
+function formatUTCWeekNumberISO(d, p) {
+  d = UTCdISO(d);
   return pad(utcWeek/* utcThursday */.pT.count((0,utcYear/* default */.A)(d), d) + ((0,utcYear/* default */.A)(d).getUTCDay() === 4), p, 2);
 }
 
@@ -85807,7 +81757,18 @@ function formatUTCYear(d, p) {
   return pad(d.getUTCFullYear() % 100, p, 2);
 }
 
+function formatUTCYearISO(d, p) {
+  d = UTCdISO(d);
+  return pad(d.getUTCFullYear() % 100, p, 2);
+}
+
 function formatUTCFullYear(d, p) {
+  return pad(d.getUTCFullYear() % 10000, p, 4);
+}
+
+function formatUTCFullYearISO(d, p) {
+  var day = d.getUTCDay();
+  d = (day >= 4 || day === 0) ? (0,utcWeek/* utcThursday */.pT)(d) : utcWeek/* utcThursday */.pT.ceil(d);
   return pad(d.getUTCFullYear() % 10000, p, 4);
 }
 
@@ -85827,7 +81788,7 @@ function formatUnixTimestampSeconds(d) {
   return Math.floor(+d / 1000);
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-time-format/src/defaultLocale.js
+;// ./node_modules/d3-time-format/src/defaultLocale.js
 
 
 var locale;
@@ -85856,7 +81817,7 @@ function defaultLocale(definition) {
   return locale;
 }
 
-;// CONCATENATED MODULE: ./node_modules/d3-time-format/src/index.js
+;// ./node_modules/d3-time-format/src/index.js
 
 
 
@@ -85987,7 +81948,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/interval.js
 var interval = __webpack_require__(9257);
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/millisecond.js
+;// ./node_modules/d3-time/src/millisecond.js
 
 
 var millisecond = (0,interval/* default */.A)(function() {
@@ -86017,7 +81978,7 @@ var milliseconds = millisecond.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/duration.js
 var duration = __webpack_require__(6096);
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/second.js
+;// ./node_modules/d3-time/src/second.js
 
 
 
@@ -86034,7 +81995,7 @@ var second = (0,interval/* default */.A)(function(date) {
 /* harmony default export */ var src_second = (second);
 var seconds = second.range;
 
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/minute.js
+;// ./node_modules/d3-time/src/minute.js
 
 
 
@@ -86051,7 +82012,7 @@ var minute = (0,interval/* default */.A)(function(date) {
 /* harmony default export */ var src_minute = (minute);
 var minutes = minute.range;
 
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/hour.js
+;// ./node_modules/d3-time/src/hour.js
 
 
 
@@ -86072,7 +82033,7 @@ var hours = hour.range;
 var day = __webpack_require__(9576);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/week.js
 var week = __webpack_require__(4740);
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/month.js
+;// ./node_modules/d3-time/src/month.js
 
 
 var month = (0,interval/* default */.A)(function(date) {
@@ -86091,7 +82052,7 @@ var months = month.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/year.js
 var year = __webpack_require__(9325);
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/utcMinute.js
+;// ./node_modules/d3-time/src/utcMinute.js
 
 
 
@@ -86108,7 +82069,7 @@ var utcMinute = (0,interval/* default */.A)(function(date) {
 /* harmony default export */ var src_utcMinute = (utcMinute);
 var utcMinutes = utcMinute.range;
 
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/utcHour.js
+;// ./node_modules/d3-time/src/utcHour.js
 
 
 
@@ -86129,7 +82090,7 @@ var utcHours = utcHour.range;
 var utcDay = __webpack_require__(4840);
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcWeek.js
 var utcWeek = __webpack_require__(4420);
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/utcMonth.js
+;// ./node_modules/d3-time/src/utcMonth.js
 
 
 var utcMonth = (0,interval/* default */.A)(function(date) {
@@ -86148,7 +82109,7 @@ var utcMonths = utcMonth.range;
 
 // EXTERNAL MODULE: ./node_modules/d3-time/src/utcYear.js
 var utcYear = __webpack_require__(6077);
-;// CONCATENATED MODULE: ./node_modules/d3-time/src/index.js
+;// ./node_modules/d3-time/src/index.js
 
 
 
@@ -90748,1207 +86709,6 @@ module.exports = SegmentSelector;
 
 /***/ }),
 
-/***/ 2062:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;// TinyColor v1.4.2
-// https://github.com/bgrins/TinyColor
-// Brian Grinstead, MIT License
-
-(function(Math) {
-
-var trimLeft = /^\s+/,
-    trimRight = /\s+$/,
-    tinyCounter = 0,
-    mathRound = Math.round,
-    mathMin = Math.min,
-    mathMax = Math.max,
-    mathRandom = Math.random;
-
-function tinycolor (color, opts) {
-
-    color = (color) ? color : '';
-    opts = opts || { };
-
-    // If input is already a tinycolor, return itself
-    if (color instanceof tinycolor) {
-       return color;
-    }
-    // If we are called as a function, call using new instead
-    if (!(this instanceof tinycolor)) {
-        return new tinycolor(color, opts);
-    }
-
-    var rgb = inputToRGB(color);
-    this._originalInput = color,
-    this._r = rgb.r,
-    this._g = rgb.g,
-    this._b = rgb.b,
-    this._a = rgb.a,
-    this._roundA = mathRound(100*this._a) / 100,
-    this._format = opts.format || rgb.format;
-    this._gradientType = opts.gradientType;
-
-    // Don't let the range of [0,255] come back in [0,1].
-    // Potentially lose a little bit of precision here, but will fix issues where
-    // .5 gets interpreted as half of the total, instead of half of 1
-    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
-    if (this._r < 1) { this._r = mathRound(this._r); }
-    if (this._g < 1) { this._g = mathRound(this._g); }
-    if (this._b < 1) { this._b = mathRound(this._b); }
-
-    this._ok = rgb.ok;
-    this._tc_id = tinyCounter++;
-}
-
-tinycolor.prototype = {
-    isDark: function() {
-        return this.getBrightness() < 128;
-    },
-    isLight: function() {
-        return !this.isDark();
-    },
-    isValid: function() {
-        return this._ok;
-    },
-    getOriginalInput: function() {
-      return this._originalInput;
-    },
-    getFormat: function() {
-        return this._format;
-    },
-    getAlpha: function() {
-        return this._a;
-    },
-    getBrightness: function() {
-        //http://www.w3.org/TR/AERT#color-contrast
-        var rgb = this.toRgb();
-        return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
-    },
-    getLuminance: function() {
-        //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
-        var rgb = this.toRgb();
-        var RsRGB, GsRGB, BsRGB, R, G, B;
-        RsRGB = rgb.r/255;
-        GsRGB = rgb.g/255;
-        BsRGB = rgb.b/255;
-
-        if (RsRGB <= 0.03928) {R = RsRGB / 12.92;} else {R = Math.pow(((RsRGB + 0.055) / 1.055), 2.4);}
-        if (GsRGB <= 0.03928) {G = GsRGB / 12.92;} else {G = Math.pow(((GsRGB + 0.055) / 1.055), 2.4);}
-        if (BsRGB <= 0.03928) {B = BsRGB / 12.92;} else {B = Math.pow(((BsRGB + 0.055) / 1.055), 2.4);}
-        return (0.2126 * R) + (0.7152 * G) + (0.0722 * B);
-    },
-    setAlpha: function(value) {
-        this._a = boundAlpha(value);
-        this._roundA = mathRound(100*this._a) / 100;
-        return this;
-    },
-    toHsv: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
-    },
-    toHsvString: function() {
-        var hsv = rgbToHsv(this._r, this._g, this._b);
-        var h = mathRound(hsv.h * 360), s = mathRound(hsv.s * 100), v = mathRound(hsv.v * 100);
-        return (this._a == 1) ?
-          "hsv("  + h + ", " + s + "%, " + v + "%)" :
-          "hsva(" + h + ", " + s + "%, " + v + "%, "+ this._roundA + ")";
-    },
-    toHsl: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
-    },
-    toHslString: function() {
-        var hsl = rgbToHsl(this._r, this._g, this._b);
-        var h = mathRound(hsl.h * 360), s = mathRound(hsl.s * 100), l = mathRound(hsl.l * 100);
-        return (this._a == 1) ?
-          "hsl("  + h + ", " + s + "%, " + l + "%)" :
-          "hsla(" + h + ", " + s + "%, " + l + "%, "+ this._roundA + ")";
-    },
-    toHex: function(allow3Char) {
-        return rgbToHex(this._r, this._g, this._b, allow3Char);
-    },
-    toHexString: function(allow3Char) {
-        return '#' + this.toHex(allow3Char);
-    },
-    toHex8: function(allow4Char) {
-        return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
-    },
-    toHex8String: function(allow4Char) {
-        return '#' + this.toHex8(allow4Char);
-    },
-    toRgb: function() {
-        return { r: mathRound(this._r), g: mathRound(this._g), b: mathRound(this._b), a: this._a };
-    },
-    toRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ")" :
-          "rgba(" + mathRound(this._r) + ", " + mathRound(this._g) + ", " + mathRound(this._b) + ", " + this._roundA + ")";
-    },
-    toPercentageRgb: function() {
-        return { r: mathRound(bound01(this._r, 255) * 100) + "%", g: mathRound(bound01(this._g, 255) * 100) + "%", b: mathRound(bound01(this._b, 255) * 100) + "%", a: this._a };
-    },
-    toPercentageRgbString: function() {
-        return (this._a == 1) ?
-          "rgb("  + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%)" :
-          "rgba(" + mathRound(bound01(this._r, 255) * 100) + "%, " + mathRound(bound01(this._g, 255) * 100) + "%, " + mathRound(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
-    },
-    toName: function() {
-        if (this._a === 0) {
-            return "transparent";
-        }
-
-        if (this._a < 1) {
-            return false;
-        }
-
-        return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
-    },
-    toFilter: function(secondColor) {
-        var hex8String = '#' + rgbaToArgbHex(this._r, this._g, this._b, this._a);
-        var secondHex8String = hex8String;
-        var gradientType = this._gradientType ? "GradientType = 1, " : "";
-
-        if (secondColor) {
-            var s = tinycolor(secondColor);
-            secondHex8String = '#' + rgbaToArgbHex(s._r, s._g, s._b, s._a);
-        }
-
-        return "progid:DXImageTransform.Microsoft.gradient("+gradientType+"startColorstr="+hex8String+",endColorstr="+secondHex8String+")";
-    },
-    toString: function(format) {
-        var formatSet = !!format;
-        format = format || this._format;
-
-        var formattedString = false;
-        var hasAlpha = this._a < 1 && this._a >= 0;
-        var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
-
-        if (needsAlphaFormat) {
-            // Special case for "transparent", all other non-alpha formats
-            // will return rgba when there is transparency.
-            if (format === "name" && this._a === 0) {
-                return this.toName();
-            }
-            return this.toRgbString();
-        }
-        if (format === "rgb") {
-            formattedString = this.toRgbString();
-        }
-        if (format === "prgb") {
-            formattedString = this.toPercentageRgbString();
-        }
-        if (format === "hex" || format === "hex6") {
-            formattedString = this.toHexString();
-        }
-        if (format === "hex3") {
-            formattedString = this.toHexString(true);
-        }
-        if (format === "hex4") {
-            formattedString = this.toHex8String(true);
-        }
-        if (format === "hex8") {
-            formattedString = this.toHex8String();
-        }
-        if (format === "name") {
-            formattedString = this.toName();
-        }
-        if (format === "hsl") {
-            formattedString = this.toHslString();
-        }
-        if (format === "hsv") {
-            formattedString = this.toHsvString();
-        }
-
-        return formattedString || this.toHexString();
-    },
-    clone: function() {
-        return tinycolor(this.toString());
-    },
-
-    _applyModification: function(fn, args) {
-        var color = fn.apply(null, [this].concat([].slice.call(args)));
-        this._r = color._r;
-        this._g = color._g;
-        this._b = color._b;
-        this.setAlpha(color._a);
-        return this;
-    },
-    lighten: function() {
-        return this._applyModification(lighten, arguments);
-    },
-    brighten: function() {
-        return this._applyModification(brighten, arguments);
-    },
-    darken: function() {
-        return this._applyModification(darken, arguments);
-    },
-    desaturate: function() {
-        return this._applyModification(desaturate, arguments);
-    },
-    saturate: function() {
-        return this._applyModification(saturate, arguments);
-    },
-    greyscale: function() {
-        return this._applyModification(greyscale, arguments);
-    },
-    spin: function() {
-        return this._applyModification(spin, arguments);
-    },
-
-    _applyCombination: function(fn, args) {
-        return fn.apply(null, [this].concat([].slice.call(args)));
-    },
-    analogous: function() {
-        return this._applyCombination(analogous, arguments);
-    },
-    complement: function() {
-        return this._applyCombination(complement, arguments);
-    },
-    monochromatic: function() {
-        return this._applyCombination(monochromatic, arguments);
-    },
-    splitcomplement: function() {
-        return this._applyCombination(splitcomplement, arguments);
-    },
-    triad: function() {
-        return this._applyCombination(triad, arguments);
-    },
-    tetrad: function() {
-        return this._applyCombination(tetrad, arguments);
-    }
-};
-
-// If input is an object, force 1 into "1.0" to handle ratios properly
-// String input requires "1.0" as input, so 1 will be treated as 1
-tinycolor.fromRatio = function(color, opts) {
-    if (typeof color == "object") {
-        var newColor = {};
-        for (var i in color) {
-            if (color.hasOwnProperty(i)) {
-                if (i === "a") {
-                    newColor[i] = color[i];
-                }
-                else {
-                    newColor[i] = convertToPercentage(color[i]);
-                }
-            }
-        }
-        color = newColor;
-    }
-
-    return tinycolor(color, opts);
-};
-
-// Given a string or object, convert that input to RGB
-// Possible string inputs:
-//
-//     "red"
-//     "#f00" or "f00"
-//     "#ff0000" or "ff0000"
-//     "#ff000000" or "ff000000"
-//     "rgb 255 0 0" or "rgb (255, 0, 0)"
-//     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
-//     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
-//     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
-//     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
-//     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
-//     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
-//
-function inputToRGB(color) {
-
-    var rgb = { r: 0, g: 0, b: 0 };
-    var a = 1;
-    var s = null;
-    var v = null;
-    var l = null;
-    var ok = false;
-    var format = false;
-
-    if (typeof color == "string") {
-        color = stringInputToObject(color);
-    }
-
-    if (typeof color == "object") {
-        if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
-            rgb = rgbToRgb(color.r, color.g, color.b);
-            ok = true;
-            format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
-            s = convertToPercentage(color.s);
-            v = convertToPercentage(color.v);
-            rgb = hsvToRgb(color.h, s, v);
-            ok = true;
-            format = "hsv";
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
-            s = convertToPercentage(color.s);
-            l = convertToPercentage(color.l);
-            rgb = hslToRgb(color.h, s, l);
-            ok = true;
-            format = "hsl";
-        }
-
-        if (color.hasOwnProperty("a")) {
-            a = color.a;
-        }
-    }
-
-    a = boundAlpha(a);
-
-    return {
-        ok: ok,
-        format: color.format || format,
-        r: mathMin(255, mathMax(rgb.r, 0)),
-        g: mathMin(255, mathMax(rgb.g, 0)),
-        b: mathMin(255, mathMax(rgb.b, 0)),
-        a: a
-    };
-}
-
-
-// Conversion Functions
-// --------------------
-
-// `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
-// <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
-
-// `rgbToRgb`
-// Handle bounds / percentage checking to conform to CSS color spec
-// <http://www.w3.org/TR/css3-color/>
-// *Assumes:* r, g, b in [0, 255] or [0, 1]
-// *Returns:* { r, g, b } in [0, 255]
-function rgbToRgb(r, g, b){
-    return {
-        r: bound01(r, 255) * 255,
-        g: bound01(g, 255) * 255,
-        b: bound01(b, 255) * 255
-    };
-}
-
-// `rgbToHsl`
-// Converts an RGB color value to HSL.
-// *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
-// *Returns:* { h, s, l } in [0,1]
-function rgbToHsl(r, g, b) {
-
-    r = bound01(r, 255);
-    g = bound01(g, 255);
-    b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, l = (max + min) / 2;
-
-    if(max == min) {
-        h = s = 0; // achromatic
-    }
-    else {
-        var d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-
-        h /= 6;
-    }
-
-    return { h: h, s: s, l: l };
-}
-
-// `hslToRgb`
-// Converts an HSL color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
-function hslToRgb(h, s, l) {
-    var r, g, b;
-
-    h = bound01(h, 360);
-    s = bound01(s, 100);
-    l = bound01(l, 100);
-
-    function hue2rgb(p, q, t) {
-        if(t < 0) t += 1;
-        if(t > 1) t -= 1;
-        if(t < 1/6) return p + (q - p) * 6 * t;
-        if(t < 1/2) return q;
-        if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-        return p;
-    }
-
-    if(s === 0) {
-        r = g = b = l; // achromatic
-    }
-    else {
-        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        var p = 2 * l - q;
-        r = hue2rgb(p, q, h + 1/3);
-        g = hue2rgb(p, q, h);
-        b = hue2rgb(p, q, h - 1/3);
-    }
-
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHsv`
-// Converts an RGB color value to HSV
-// *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
-// *Returns:* { h, s, v } in [0,1]
-function rgbToHsv(r, g, b) {
-
-    r = bound01(r, 255);
-    g = bound01(g, 255);
-    b = bound01(b, 255);
-
-    var max = mathMax(r, g, b), min = mathMin(r, g, b);
-    var h, s, v = max;
-
-    var d = max - min;
-    s = max === 0 ? 0 : d / max;
-
-    if(max == min) {
-        h = 0; // achromatic
-    }
-    else {
-        switch(max) {
-            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-            case g: h = (b - r) / d + 2; break;
-            case b: h = (r - g) / d + 4; break;
-        }
-        h /= 6;
-    }
-    return { h: h, s: s, v: v };
-}
-
-// `hsvToRgb`
-// Converts an HSV color value to RGB.
-// *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
-// *Returns:* { r, g, b } in the set [0, 255]
- function hsvToRgb(h, s, v) {
-
-    h = bound01(h, 360) * 6;
-    s = bound01(s, 100);
-    v = bound01(v, 100);
-
-    var i = Math.floor(h),
-        f = h - i,
-        p = v * (1 - s),
-        q = v * (1 - f * s),
-        t = v * (1 - (1 - f) * s),
-        mod = i % 6,
-        r = [v, q, p, p, t, v][mod],
-        g = [t, v, v, q, p, p][mod],
-        b = [p, p, t, v, v, q][mod];
-
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-
-// `rgbToHex`
-// Converts an RGB color to hex
-// Assumes r, g, and b are contained in the set [0, 255]
-// Returns a 3 or 6 character hex
-function rgbToHex(r, g, b, allow3Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
-
-    // Return a 3 character hex if possible
-    if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
-    }
-
-    return hex.join("");
-}
-
-// `rgbaToHex`
-// Converts an RGBA color plus alpha transparency to hex
-// Assumes r, g, b are contained in the set [0, 255] and
-// a in [0, 1]. Returns a 4 or 8 character rgba hex
-function rgbaToHex(r, g, b, a, allow4Char) {
-
-    var hex = [
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16)),
-        pad2(convertDecimalToHex(a))
-    ];
-
-    // Return a 4 character hex if possible
-    if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
-    }
-
-    return hex.join("");
-}
-
-// `rgbaToArgbHex`
-// Converts an RGBA color to an ARGB Hex8 string
-// Rarely used, but required for "toFilter()"
-function rgbaToArgbHex(r, g, b, a) {
-
-    var hex = [
-        pad2(convertDecimalToHex(a)),
-        pad2(mathRound(r).toString(16)),
-        pad2(mathRound(g).toString(16)),
-        pad2(mathRound(b).toString(16))
-    ];
-
-    return hex.join("");
-}
-
-// `equals`
-// Can be called with any tinycolor input
-tinycolor.equals = function (color1, color2) {
-    if (!color1 || !color2) { return false; }
-    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
-};
-
-tinycolor.random = function() {
-    return tinycolor.fromRatio({
-        r: mathRandom(),
-        g: mathRandom(),
-        b: mathRandom()
-    });
-};
-
-
-// Modification Functions
-// ----------------------
-// Thanks to less.js for some of the basics here
-// <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
-
-function desaturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.s -= amount / 100;
-    hsl.s = clamp01(hsl.s);
-    return tinycolor(hsl);
-}
-
-function saturate(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.s += amount / 100;
-    hsl.s = clamp01(hsl.s);
-    return tinycolor(hsl);
-}
-
-function greyscale(color) {
-    return tinycolor(color).desaturate(100);
-}
-
-function lighten (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.l += amount / 100;
-    hsl.l = clamp01(hsl.l);
-    return tinycolor(hsl);
-}
-
-function brighten(color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var rgb = tinycolor(color).toRgb();
-    rgb.r = mathMax(0, mathMin(255, rgb.r - mathRound(255 * - (amount / 100))));
-    rgb.g = mathMax(0, mathMin(255, rgb.g - mathRound(255 * - (amount / 100))));
-    rgb.b = mathMax(0, mathMin(255, rgb.b - mathRound(255 * - (amount / 100))));
-    return tinycolor(rgb);
-}
-
-function darken (color, amount) {
-    amount = (amount === 0) ? 0 : (amount || 10);
-    var hsl = tinycolor(color).toHsl();
-    hsl.l -= amount / 100;
-    hsl.l = clamp01(hsl.l);
-    return tinycolor(hsl);
-}
-
-// Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
-// Values outside of this range will be wrapped into this range.
-function spin(color, amount) {
-    var hsl = tinycolor(color).toHsl();
-    var hue = (hsl.h + amount) % 360;
-    hsl.h = hue < 0 ? 360 + hue : hue;
-    return tinycolor(hsl);
-}
-
-// Combination Functions
-// ---------------------
-// Thanks to jQuery xColor for some of the ideas behind these
-// <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
-
-function complement(color) {
-    var hsl = tinycolor(color).toHsl();
-    hsl.h = (hsl.h + 180) % 360;
-    return tinycolor(hsl);
-}
-
-function triad(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 120) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 240) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function tetrad(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 90) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 180) % 360, s: hsl.s, l: hsl.l }),
-        tinycolor({ h: (h + 270) % 360, s: hsl.s, l: hsl.l })
-    ];
-}
-
-function splitcomplement(color) {
-    var hsl = tinycolor(color).toHsl();
-    var h = hsl.h;
-    return [
-        tinycolor(color),
-        tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l}),
-        tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l})
-    ];
-}
-
-function analogous(color, results, slices) {
-    results = results || 6;
-    slices = slices || 30;
-
-    var hsl = tinycolor(color).toHsl();
-    var part = 360 / slices;
-    var ret = [tinycolor(color)];
-
-    for (hsl.h = ((hsl.h - (part * results >> 1)) + 720) % 360; --results; ) {
-        hsl.h = (hsl.h + part) % 360;
-        ret.push(tinycolor(hsl));
-    }
-    return ret;
-}
-
-function monochromatic(color, results) {
-    results = results || 6;
-    var hsv = tinycolor(color).toHsv();
-    var h = hsv.h, s = hsv.s, v = hsv.v;
-    var ret = [];
-    var modification = 1 / results;
-
-    while (results--) {
-        ret.push(tinycolor({ h: h, s: s, v: v}));
-        v = (v + modification) % 1;
-    }
-
-    return ret;
-}
-
-// Utility Functions
-// ---------------------
-
-tinycolor.mix = function(color1, color2, amount) {
-    amount = (amount === 0) ? 0 : (amount || 50);
-
-    var rgb1 = tinycolor(color1).toRgb();
-    var rgb2 = tinycolor(color2).toRgb();
-
-    var p = amount / 100;
-
-    var rgba = {
-        r: ((rgb2.r - rgb1.r) * p) + rgb1.r,
-        g: ((rgb2.g - rgb1.g) * p) + rgb1.g,
-        b: ((rgb2.b - rgb1.b) * p) + rgb1.b,
-        a: ((rgb2.a - rgb1.a) * p) + rgb1.a
-    };
-
-    return tinycolor(rgba);
-};
-
-
-// Readability Functions
-// ---------------------
-// <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
-
-// `contrast`
-// Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
-tinycolor.readability = function(color1, color2) {
-    var c1 = tinycolor(color1);
-    var c2 = tinycolor(color2);
-    return (Math.max(c1.getLuminance(),c2.getLuminance())+0.05) / (Math.min(c1.getLuminance(),c2.getLuminance())+0.05);
-};
-
-// `isReadable`
-// Ensure that foreground and background color combinations meet WCAG2 guidelines.
-// The third argument is an optional Object.
-//      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
-//      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
-// If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
-
-// *Example*
-//    tinycolor.isReadable("#000", "#111") => false
-//    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
-tinycolor.isReadable = function(color1, color2, wcag2) {
-    var readability = tinycolor.readability(color1, color2);
-    var wcag2Parms, out;
-
-    out = false;
-
-    wcag2Parms = validateWCAG2Parms(wcag2);
-    switch (wcag2Parms.level + wcag2Parms.size) {
-        case "AAsmall":
-        case "AAAlarge":
-            out = readability >= 4.5;
-            break;
-        case "AAlarge":
-            out = readability >= 3;
-            break;
-        case "AAAsmall":
-            out = readability >= 7;
-            break;
-    }
-    return out;
-
-};
-
-// `mostReadable`
-// Given a base color and a list of possible foreground or background
-// colors for that base, returns the most readable color.
-// Optionally returns Black or White if the most readable color is unreadable.
-// *Example*
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
-//    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
-tinycolor.mostReadable = function(baseColor, colorList, args) {
-    var bestColor = null;
-    var bestScore = 0;
-    var readability;
-    var includeFallbackColors, level, size ;
-    args = args || {};
-    includeFallbackColors = args.includeFallbackColors ;
-    level = args.level;
-    size = args.size;
-
-    for (var i= 0; i < colorList.length ; i++) {
-        readability = tinycolor.readability(baseColor, colorList[i]);
-        if (readability > bestScore) {
-            bestScore = readability;
-            bestColor = tinycolor(colorList[i]);
-        }
-    }
-
-    if (tinycolor.isReadable(baseColor, bestColor, {"level":level,"size":size}) || !includeFallbackColors) {
-        return bestColor;
-    }
-    else {
-        args.includeFallbackColors=false;
-        return tinycolor.mostReadable(baseColor,["#fff", "#000"],args);
-    }
-};
-
-
-// Big List of Colors
-// ------------------
-// <http://www.w3.org/TR/css3-color/#svg-color>
-var names = tinycolor.names = {
-    aliceblue: "f0f8ff",
-    antiquewhite: "faebd7",
-    aqua: "0ff",
-    aquamarine: "7fffd4",
-    azure: "f0ffff",
-    beige: "f5f5dc",
-    bisque: "ffe4c4",
-    black: "000",
-    blanchedalmond: "ffebcd",
-    blue: "00f",
-    blueviolet: "8a2be2",
-    brown: "a52a2a",
-    burlywood: "deb887",
-    burntsienna: "ea7e5d",
-    cadetblue: "5f9ea0",
-    chartreuse: "7fff00",
-    chocolate: "d2691e",
-    coral: "ff7f50",
-    cornflowerblue: "6495ed",
-    cornsilk: "fff8dc",
-    crimson: "dc143c",
-    cyan: "0ff",
-    darkblue: "00008b",
-    darkcyan: "008b8b",
-    darkgoldenrod: "b8860b",
-    darkgray: "a9a9a9",
-    darkgreen: "006400",
-    darkgrey: "a9a9a9",
-    darkkhaki: "bdb76b",
-    darkmagenta: "8b008b",
-    darkolivegreen: "556b2f",
-    darkorange: "ff8c00",
-    darkorchid: "9932cc",
-    darkred: "8b0000",
-    darksalmon: "e9967a",
-    darkseagreen: "8fbc8f",
-    darkslateblue: "483d8b",
-    darkslategray: "2f4f4f",
-    darkslategrey: "2f4f4f",
-    darkturquoise: "00ced1",
-    darkviolet: "9400d3",
-    deeppink: "ff1493",
-    deepskyblue: "00bfff",
-    dimgray: "696969",
-    dimgrey: "696969",
-    dodgerblue: "1e90ff",
-    firebrick: "b22222",
-    floralwhite: "fffaf0",
-    forestgreen: "228b22",
-    fuchsia: "f0f",
-    gainsboro: "dcdcdc",
-    ghostwhite: "f8f8ff",
-    gold: "ffd700",
-    goldenrod: "daa520",
-    gray: "808080",
-    green: "008000",
-    greenyellow: "adff2f",
-    grey: "808080",
-    honeydew: "f0fff0",
-    hotpink: "ff69b4",
-    indianred: "cd5c5c",
-    indigo: "4b0082",
-    ivory: "fffff0",
-    khaki: "f0e68c",
-    lavender: "e6e6fa",
-    lavenderblush: "fff0f5",
-    lawngreen: "7cfc00",
-    lemonchiffon: "fffacd",
-    lightblue: "add8e6",
-    lightcoral: "f08080",
-    lightcyan: "e0ffff",
-    lightgoldenrodyellow: "fafad2",
-    lightgray: "d3d3d3",
-    lightgreen: "90ee90",
-    lightgrey: "d3d3d3",
-    lightpink: "ffb6c1",
-    lightsalmon: "ffa07a",
-    lightseagreen: "20b2aa",
-    lightskyblue: "87cefa",
-    lightslategray: "789",
-    lightslategrey: "789",
-    lightsteelblue: "b0c4de",
-    lightyellow: "ffffe0",
-    lime: "0f0",
-    limegreen: "32cd32",
-    linen: "faf0e6",
-    magenta: "f0f",
-    maroon: "800000",
-    mediumaquamarine: "66cdaa",
-    mediumblue: "0000cd",
-    mediumorchid: "ba55d3",
-    mediumpurple: "9370db",
-    mediumseagreen: "3cb371",
-    mediumslateblue: "7b68ee",
-    mediumspringgreen: "00fa9a",
-    mediumturquoise: "48d1cc",
-    mediumvioletred: "c71585",
-    midnightblue: "191970",
-    mintcream: "f5fffa",
-    mistyrose: "ffe4e1",
-    moccasin: "ffe4b5",
-    navajowhite: "ffdead",
-    navy: "000080",
-    oldlace: "fdf5e6",
-    olive: "808000",
-    olivedrab: "6b8e23",
-    orange: "ffa500",
-    orangered: "ff4500",
-    orchid: "da70d6",
-    palegoldenrod: "eee8aa",
-    palegreen: "98fb98",
-    paleturquoise: "afeeee",
-    palevioletred: "db7093",
-    papayawhip: "ffefd5",
-    peachpuff: "ffdab9",
-    peru: "cd853f",
-    pink: "ffc0cb",
-    plum: "dda0dd",
-    powderblue: "b0e0e6",
-    purple: "800080",
-    rebeccapurple: "663399",
-    red: "f00",
-    rosybrown: "bc8f8f",
-    royalblue: "4169e1",
-    saddlebrown: "8b4513",
-    salmon: "fa8072",
-    sandybrown: "f4a460",
-    seagreen: "2e8b57",
-    seashell: "fff5ee",
-    sienna: "a0522d",
-    silver: "c0c0c0",
-    skyblue: "87ceeb",
-    slateblue: "6a5acd",
-    slategray: "708090",
-    slategrey: "708090",
-    snow: "fffafa",
-    springgreen: "00ff7f",
-    steelblue: "4682b4",
-    tan: "d2b48c",
-    teal: "008080",
-    thistle: "d8bfd8",
-    tomato: "ff6347",
-    turquoise: "40e0d0",
-    violet: "ee82ee",
-    wheat: "f5deb3",
-    white: "fff",
-    whitesmoke: "f5f5f5",
-    yellow: "ff0",
-    yellowgreen: "9acd32"
-};
-
-// Make it easy to access colors via `hexNames[hex]`
-var hexNames = tinycolor.hexNames = flip(names);
-
-
-// Utilities
-// ---------
-
-// `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
-function flip(o) {
-    var flipped = { };
-    for (var i in o) {
-        if (o.hasOwnProperty(i)) {
-            flipped[o[i]] = i;
-        }
-    }
-    return flipped;
-}
-
-// Return a valid alpha value [0,1] with all invalid values being set to 1
-function boundAlpha(a) {
-    a = parseFloat(a);
-
-    if (isNaN(a) || a < 0 || a > 1) {
-        a = 1;
-    }
-
-    return a;
-}
-
-// Take input from [0, n] and return it as [0, 1]
-function bound01(n, max) {
-    if (isOnePointZero(n)) { n = "100%"; }
-
-    var processPercent = isPercentage(n);
-    n = mathMin(max, mathMax(0, parseFloat(n)));
-
-    // Automatically convert percentage into number
-    if (processPercent) {
-        n = parseInt(n * max, 10) / 100;
-    }
-
-    // Handle floating point rounding errors
-    if ((Math.abs(n - max) < 0.000001)) {
-        return 1;
-    }
-
-    // Convert into [0, 1] range if it isn't already
-    return (n % max) / parseFloat(max);
-}
-
-// Force a number between 0 and 1
-function clamp01(val) {
-    return mathMin(1, mathMax(0, val));
-}
-
-// Parse a base-16 hex value into a base-10 integer
-function parseIntFromHex(val) {
-    return parseInt(val, 16);
-}
-
-// Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
-// <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
-function isOnePointZero(n) {
-    return typeof n == "string" && n.indexOf('.') != -1 && parseFloat(n) === 1;
-}
-
-// Check to see if string passed in is a percentage
-function isPercentage(n) {
-    return typeof n === "string" && n.indexOf('%') != -1;
-}
-
-// Force a hex value to have 2 characters
-function pad2(c) {
-    return c.length == 1 ? '0' + c : '' + c;
-}
-
-// Replace a decimal with it's percentage value
-function convertToPercentage(n) {
-    if (n <= 1) {
-        n = (n * 100) + "%";
-    }
-
-    return n;
-}
-
-// Converts a decimal to a hex value
-function convertDecimalToHex(d) {
-    return Math.round(parseFloat(d) * 255).toString(16);
-}
-// Converts a hex value to a decimal
-function convertHexToDecimal(h) {
-    return (parseIntFromHex(h) / 255);
-}
-
-var matchers = (function() {
-
-    // <http://www.w3.org/TR/css3-values/#integers>
-    var CSS_INTEGER = "[-\\+]?\\d+%?";
-
-    // <http://www.w3.org/TR/css3-values/#number-value>
-    var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
-
-    // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
-    var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
-
-    // Actual matching.
-    // Parentheses and commas are optional, but not required.
-    // Whitespace can take the place of commas or opening paren
-    var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-    var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-
-    return {
-        CSS_UNIT: new RegExp(CSS_UNIT),
-        rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
-        rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
-        hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
-        hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
-        hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
-        hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
-        hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-        hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-        hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
-    };
-})();
-
-// `isValidCSSUnit`
-// Take in a single string / number and check to see if it looks like a CSS unit
-// (see `matchers` above for definition).
-function isValidCSSUnit(color) {
-    return !!matchers.CSS_UNIT.exec(color);
-}
-
-// `stringInputToObject`
-// Permissive string parsing.  Take in a number of formats, and output an object
-// based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
-function stringInputToObject(color) {
-
-    color = color.replace(trimLeft,'').replace(trimRight, '').toLowerCase();
-    var named = false;
-    if (names[color]) {
-        color = names[color];
-        named = true;
-    }
-    else if (color == 'transparent') {
-        return { r: 0, g: 0, b: 0, a: 0, format: "name" };
-    }
-
-    // Try to match string input using regular expressions.
-    // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
-    // Just return an object and let the conversion functions handle that.
-    // This way the result will be the same whether the tinycolor is initialized with string or object.
-    var match;
-    if ((match = matchers.rgb.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3] };
-    }
-    if ((match = matchers.rgba.exec(color))) {
-        return { r: match[1], g: match[2], b: match[3], a: match[4] };
-    }
-    if ((match = matchers.hsl.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3] };
-    }
-    if ((match = matchers.hsla.exec(color))) {
-        return { h: match[1], s: match[2], l: match[3], a: match[4] };
-    }
-    if ((match = matchers.hsv.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3] };
-    }
-    if ((match = matchers.hsva.exec(color))) {
-        return { h: match[1], s: match[2], v: match[3], a: match[4] };
-    }
-    if ((match = matchers.hex8.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            a: convertHexToDecimal(match[4]),
-            format: named ? "name" : "hex8"
-        };
-    }
-    if ((match = matchers.hex6.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            format: named ? "name" : "hex"
-        };
-    }
-    if ((match = matchers.hex4.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            a: convertHexToDecimal(match[4] + '' + match[4]),
-            format: named ? "name" : "hex8"
-        };
-    }
-    if ((match = matchers.hex3.exec(color))) {
-        return {
-            r: parseIntFromHex(match[1] + '' + match[1]),
-            g: parseIntFromHex(match[2] + '' + match[2]),
-            b: parseIntFromHex(match[3] + '' + match[3]),
-            format: named ? "name" : "hex"
-        };
-    }
-
-    return false;
-}
-
-function validateWCAG2Parms(parms) {
-    // return valid WCAG2 parms for isReadable.
-    // If input parms are invalid, return {"level":"AA", "size":"small"}
-    var level, size;
-    parms = parms || {"level":"AA", "size":"small"};
-    level = (parms.level || "AA").toUpperCase();
-    size = (parms.size || "small").toLowerCase();
-    if (level !== "AA" && level !== "AAA") {
-        level = "AA";
-    }
-    if (size !== "small" && size !== "large") {
-        size = "small";
-    }
-    return {"level":level, "size":size};
-}
-
-// Node: Export function
-if ( true && module.exports) {
-    module.exports = tinycolor;
-}
-// AMD/requirejs: Define the module
-else if (true) {
-    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {return tinycolor;}).call(exports, __webpack_require__, exports, module),
-		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-}
-// Browser: Expose to window
-else {}
-
-})(Math);
-
-
-/***/ }),
-
 /***/ 3914:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -91961,18 +86721,18 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: bbox, merge, mergeArcs, mesh, meshArcs, neighbors, quantize, transform, untransform
 
-;// CONCATENATED MODULE: ./node_modules/topojson-client/src/reverse.js
+;// ./node_modules/topojson-client/src/reverse.js
 /* harmony default export */ function reverse(array, n) {
   var t, j = array.length, i = j - n;
   while (i < --j) t = array[i], array[i++] = array[j], array[j] = t;
 }
 
-;// CONCATENATED MODULE: ./node_modules/topojson-client/src/identity.js
+;// ./node_modules/topojson-client/src/identity.js
 /* harmony default export */ function identity(x) {
   return x;
 }
 
-;// CONCATENATED MODULE: ./node_modules/topojson-client/src/transform.js
+;// ./node_modules/topojson-client/src/transform.js
 
 
 /* harmony default export */ function transform(transform) {
@@ -91993,7 +86753,7 @@ __webpack_require__.d(__webpack_exports__, {
   };
 }
 
-;// CONCATENATED MODULE: ./node_modules/topojson-client/src/feature.js
+;// ./node_modules/topojson-client/src/feature.js
 
 
 
@@ -92065,7 +86825,7 @@ function object(topology, o) {
   return geometry(o);
 }
 
-;// CONCATENATED MODULE: ./node_modules/topojson-client/src/index.js
+;// ./node_modules/topojson-client/src/index.js
 
 
 
@@ -97353,6 +92113,1200 @@ assign(main.baseCalendar.prototype, {
     }
 });
 
+
+
+/***/ }),
+
+/***/ 7218:
+/***/ (function(module) {
+
+// This file is autogenerated. It's used to publish CJS to npm.
+(function (global, factory) {
+   true ? module.exports = factory() :
+  0;
+})(this, (function () { 'use strict';
+
+  function _typeof(obj) {
+    "@babel/helpers - typeof";
+
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+      return typeof obj;
+    } : function (obj) {
+      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    }, _typeof(obj);
+  }
+
+  // https://github.com/bgrins/TinyColor
+  // Brian Grinstead, MIT License
+
+  var trimLeft = /^\s+/;
+  var trimRight = /\s+$/;
+  function tinycolor(color, opts) {
+    color = color ? color : "";
+    opts = opts || {};
+
+    // If input is already a tinycolor, return itself
+    if (color instanceof tinycolor) {
+      return color;
+    }
+    // If we are called as a function, call using new instead
+    if (!(this instanceof tinycolor)) {
+      return new tinycolor(color, opts);
+    }
+    var rgb = inputToRGB(color);
+    this._originalInput = color, this._r = rgb.r, this._g = rgb.g, this._b = rgb.b, this._a = rgb.a, this._roundA = Math.round(100 * this._a) / 100, this._format = opts.format || rgb.format;
+    this._gradientType = opts.gradientType;
+
+    // Don't let the range of [0,255] come back in [0,1].
+    // Potentially lose a little bit of precision here, but will fix issues where
+    // .5 gets interpreted as half of the total, instead of half of 1
+    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+    if (this._r < 1) this._r = Math.round(this._r);
+    if (this._g < 1) this._g = Math.round(this._g);
+    if (this._b < 1) this._b = Math.round(this._b);
+    this._ok = rgb.ok;
+  }
+  tinycolor.prototype = {
+    isDark: function isDark() {
+      return this.getBrightness() < 128;
+    },
+    isLight: function isLight() {
+      return !this.isDark();
+    },
+    isValid: function isValid() {
+      return this._ok;
+    },
+    getOriginalInput: function getOriginalInput() {
+      return this._originalInput;
+    },
+    getFormat: function getFormat() {
+      return this._format;
+    },
+    getAlpha: function getAlpha() {
+      return this._a;
+    },
+    getBrightness: function getBrightness() {
+      //http://www.w3.org/TR/AERT#color-contrast
+      var rgb = this.toRgb();
+      return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+    },
+    getLuminance: function getLuminance() {
+      //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+      var rgb = this.toRgb();
+      var RsRGB, GsRGB, BsRGB, R, G, B;
+      RsRGB = rgb.r / 255;
+      GsRGB = rgb.g / 255;
+      BsRGB = rgb.b / 255;
+      if (RsRGB <= 0.03928) R = RsRGB / 12.92;else R = Math.pow((RsRGB + 0.055) / 1.055, 2.4);
+      if (GsRGB <= 0.03928) G = GsRGB / 12.92;else G = Math.pow((GsRGB + 0.055) / 1.055, 2.4);
+      if (BsRGB <= 0.03928) B = BsRGB / 12.92;else B = Math.pow((BsRGB + 0.055) / 1.055, 2.4);
+      return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+    },
+    setAlpha: function setAlpha(value) {
+      this._a = boundAlpha(value);
+      this._roundA = Math.round(100 * this._a) / 100;
+      return this;
+    },
+    toHsv: function toHsv() {
+      var hsv = rgbToHsv(this._r, this._g, this._b);
+      return {
+        h: hsv.h * 360,
+        s: hsv.s,
+        v: hsv.v,
+        a: this._a
+      };
+    },
+    toHsvString: function toHsvString() {
+      var hsv = rgbToHsv(this._r, this._g, this._b);
+      var h = Math.round(hsv.h * 360),
+        s = Math.round(hsv.s * 100),
+        v = Math.round(hsv.v * 100);
+      return this._a == 1 ? "hsv(" + h + ", " + s + "%, " + v + "%)" : "hsva(" + h + ", " + s + "%, " + v + "%, " + this._roundA + ")";
+    },
+    toHsl: function toHsl() {
+      var hsl = rgbToHsl(this._r, this._g, this._b);
+      return {
+        h: hsl.h * 360,
+        s: hsl.s,
+        l: hsl.l,
+        a: this._a
+      };
+    },
+    toHslString: function toHslString() {
+      var hsl = rgbToHsl(this._r, this._g, this._b);
+      var h = Math.round(hsl.h * 360),
+        s = Math.round(hsl.s * 100),
+        l = Math.round(hsl.l * 100);
+      return this._a == 1 ? "hsl(" + h + ", " + s + "%, " + l + "%)" : "hsla(" + h + ", " + s + "%, " + l + "%, " + this._roundA + ")";
+    },
+    toHex: function toHex(allow3Char) {
+      return rgbToHex(this._r, this._g, this._b, allow3Char);
+    },
+    toHexString: function toHexString(allow3Char) {
+      return "#" + this.toHex(allow3Char);
+    },
+    toHex8: function toHex8(allow4Char) {
+      return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
+    },
+    toHex8String: function toHex8String(allow4Char) {
+      return "#" + this.toHex8(allow4Char);
+    },
+    toRgb: function toRgb() {
+      return {
+        r: Math.round(this._r),
+        g: Math.round(this._g),
+        b: Math.round(this._b),
+        a: this._a
+      };
+    },
+    toRgbString: function toRgbString() {
+      return this._a == 1 ? "rgb(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ")" : "rgba(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ", " + this._roundA + ")";
+    },
+    toPercentageRgb: function toPercentageRgb() {
+      return {
+        r: Math.round(bound01(this._r, 255) * 100) + "%",
+        g: Math.round(bound01(this._g, 255) * 100) + "%",
+        b: Math.round(bound01(this._b, 255) * 100) + "%",
+        a: this._a
+      };
+    },
+    toPercentageRgbString: function toPercentageRgbString() {
+      return this._a == 1 ? "rgb(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%)" : "rgba(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
+    },
+    toName: function toName() {
+      if (this._a === 0) {
+        return "transparent";
+      }
+      if (this._a < 1) {
+        return false;
+      }
+      return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+    },
+    toFilter: function toFilter(secondColor) {
+      var hex8String = "#" + rgbaToArgbHex(this._r, this._g, this._b, this._a);
+      var secondHex8String = hex8String;
+      var gradientType = this._gradientType ? "GradientType = 1, " : "";
+      if (secondColor) {
+        var s = tinycolor(secondColor);
+        secondHex8String = "#" + rgbaToArgbHex(s._r, s._g, s._b, s._a);
+      }
+      return "progid:DXImageTransform.Microsoft.gradient(" + gradientType + "startColorstr=" + hex8String + ",endColorstr=" + secondHex8String + ")";
+    },
+    toString: function toString(format) {
+      var formatSet = !!format;
+      format = format || this._format;
+      var formattedString = false;
+      var hasAlpha = this._a < 1 && this._a >= 0;
+      var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
+      if (needsAlphaFormat) {
+        // Special case for "transparent", all other non-alpha formats
+        // will return rgba when there is transparency.
+        if (format === "name" && this._a === 0) {
+          return this.toName();
+        }
+        return this.toRgbString();
+      }
+      if (format === "rgb") {
+        formattedString = this.toRgbString();
+      }
+      if (format === "prgb") {
+        formattedString = this.toPercentageRgbString();
+      }
+      if (format === "hex" || format === "hex6") {
+        formattedString = this.toHexString();
+      }
+      if (format === "hex3") {
+        formattedString = this.toHexString(true);
+      }
+      if (format === "hex4") {
+        formattedString = this.toHex8String(true);
+      }
+      if (format === "hex8") {
+        formattedString = this.toHex8String();
+      }
+      if (format === "name") {
+        formattedString = this.toName();
+      }
+      if (format === "hsl") {
+        formattedString = this.toHslString();
+      }
+      if (format === "hsv") {
+        formattedString = this.toHsvString();
+      }
+      return formattedString || this.toHexString();
+    },
+    clone: function clone() {
+      return tinycolor(this.toString());
+    },
+    _applyModification: function _applyModification(fn, args) {
+      var color = fn.apply(null, [this].concat([].slice.call(args)));
+      this._r = color._r;
+      this._g = color._g;
+      this._b = color._b;
+      this.setAlpha(color._a);
+      return this;
+    },
+    lighten: function lighten() {
+      return this._applyModification(_lighten, arguments);
+    },
+    brighten: function brighten() {
+      return this._applyModification(_brighten, arguments);
+    },
+    darken: function darken() {
+      return this._applyModification(_darken, arguments);
+    },
+    desaturate: function desaturate() {
+      return this._applyModification(_desaturate, arguments);
+    },
+    saturate: function saturate() {
+      return this._applyModification(_saturate, arguments);
+    },
+    greyscale: function greyscale() {
+      return this._applyModification(_greyscale, arguments);
+    },
+    spin: function spin() {
+      return this._applyModification(_spin, arguments);
+    },
+    _applyCombination: function _applyCombination(fn, args) {
+      return fn.apply(null, [this].concat([].slice.call(args)));
+    },
+    analogous: function analogous() {
+      return this._applyCombination(_analogous, arguments);
+    },
+    complement: function complement() {
+      return this._applyCombination(_complement, arguments);
+    },
+    monochromatic: function monochromatic() {
+      return this._applyCombination(_monochromatic, arguments);
+    },
+    splitcomplement: function splitcomplement() {
+      return this._applyCombination(_splitcomplement, arguments);
+    },
+    // Disabled until https://github.com/bgrins/TinyColor/issues/254
+    // polyad: function (number) {
+    //   return this._applyCombination(polyad, [number]);
+    // },
+    triad: function triad() {
+      return this._applyCombination(polyad, [3]);
+    },
+    tetrad: function tetrad() {
+      return this._applyCombination(polyad, [4]);
+    }
+  };
+
+  // If input is an object, force 1 into "1.0" to handle ratios properly
+  // String input requires "1.0" as input, so 1 will be treated as 1
+  tinycolor.fromRatio = function (color, opts) {
+    if (_typeof(color) == "object") {
+      var newColor = {};
+      for (var i in color) {
+        if (color.hasOwnProperty(i)) {
+          if (i === "a") {
+            newColor[i] = color[i];
+          } else {
+            newColor[i] = convertToPercentage(color[i]);
+          }
+        }
+      }
+      color = newColor;
+    }
+    return tinycolor(color, opts);
+  };
+
+  // Given a string or object, convert that input to RGB
+  // Possible string inputs:
+  //
+  //     "red"
+  //     "#f00" or "f00"
+  //     "#ff0000" or "ff0000"
+  //     "#ff000000" or "ff000000"
+  //     "rgb 255 0 0" or "rgb (255, 0, 0)"
+  //     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
+  //     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
+  //     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
+  //     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
+  //     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
+  //     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
+  //
+  function inputToRGB(color) {
+    var rgb = {
+      r: 0,
+      g: 0,
+      b: 0
+    };
+    var a = 1;
+    var s = null;
+    var v = null;
+    var l = null;
+    var ok = false;
+    var format = false;
+    if (typeof color == "string") {
+      color = stringInputToObject(color);
+    }
+    if (_typeof(color) == "object") {
+      if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
+        rgb = rgbToRgb(color.r, color.g, color.b);
+        ok = true;
+        format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
+      } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
+        s = convertToPercentage(color.s);
+        v = convertToPercentage(color.v);
+        rgb = hsvToRgb(color.h, s, v);
+        ok = true;
+        format = "hsv";
+      } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
+        s = convertToPercentage(color.s);
+        l = convertToPercentage(color.l);
+        rgb = hslToRgb(color.h, s, l);
+        ok = true;
+        format = "hsl";
+      }
+      if (color.hasOwnProperty("a")) {
+        a = color.a;
+      }
+    }
+    a = boundAlpha(a);
+    return {
+      ok: ok,
+      format: color.format || format,
+      r: Math.min(255, Math.max(rgb.r, 0)),
+      g: Math.min(255, Math.max(rgb.g, 0)),
+      b: Math.min(255, Math.max(rgb.b, 0)),
+      a: a
+    };
+  }
+
+  // Conversion Functions
+  // --------------------
+
+  // `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
+  // <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
+
+  // `rgbToRgb`
+  // Handle bounds / percentage checking to conform to CSS color spec
+  // <http://www.w3.org/TR/css3-color/>
+  // *Assumes:* r, g, b in [0, 255] or [0, 1]
+  // *Returns:* { r, g, b } in [0, 255]
+  function rgbToRgb(r, g, b) {
+    return {
+      r: bound01(r, 255) * 255,
+      g: bound01(g, 255) * 255,
+      b: bound01(b, 255) * 255
+    };
+  }
+
+  // `rgbToHsl`
+  // Converts an RGB color value to HSL.
+  // *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
+  // *Returns:* { h, s, l } in [0,1]
+  function rgbToHsl(r, g, b) {
+    r = bound01(r, 255);
+    g = bound01(g, 255);
+    b = bound01(b, 255);
+    var max = Math.max(r, g, b),
+      min = Math.min(r, g, b);
+    var h,
+      s,
+      l = (max + min) / 2;
+    if (max == min) {
+      h = s = 0; // achromatic
+    } else {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r:
+          h = (g - b) / d + (g < b ? 6 : 0);
+          break;
+        case g:
+          h = (b - r) / d + 2;
+          break;
+        case b:
+          h = (r - g) / d + 4;
+          break;
+      }
+      h /= 6;
+    }
+    return {
+      h: h,
+      s: s,
+      l: l
+    };
+  }
+
+  // `hslToRgb`
+  // Converts an HSL color value to RGB.
+  // *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
+  // *Returns:* { r, g, b } in the set [0, 255]
+  function hslToRgb(h, s, l) {
+    var r, g, b;
+    h = bound01(h, 360);
+    s = bound01(s, 100);
+    l = bound01(l, 100);
+    function hue2rgb(p, q, t) {
+      if (t < 0) t += 1;
+      if (t > 1) t -= 1;
+      if (t < 1 / 6) return p + (q - p) * 6 * t;
+      if (t < 1 / 2) return q;
+      if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+      return p;
+    }
+    if (s === 0) {
+      r = g = b = l; // achromatic
+    } else {
+      var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      var p = 2 * l - q;
+      r = hue2rgb(p, q, h + 1 / 3);
+      g = hue2rgb(p, q, h);
+      b = hue2rgb(p, q, h - 1 / 3);
+    }
+    return {
+      r: r * 255,
+      g: g * 255,
+      b: b * 255
+    };
+  }
+
+  // `rgbToHsv`
+  // Converts an RGB color value to HSV
+  // *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
+  // *Returns:* { h, s, v } in [0,1]
+  function rgbToHsv(r, g, b) {
+    r = bound01(r, 255);
+    g = bound01(g, 255);
+    b = bound01(b, 255);
+    var max = Math.max(r, g, b),
+      min = Math.min(r, g, b);
+    var h,
+      s,
+      v = max;
+    var d = max - min;
+    s = max === 0 ? 0 : d / max;
+    if (max == min) {
+      h = 0; // achromatic
+    } else {
+      switch (max) {
+        case r:
+          h = (g - b) / d + (g < b ? 6 : 0);
+          break;
+        case g:
+          h = (b - r) / d + 2;
+          break;
+        case b:
+          h = (r - g) / d + 4;
+          break;
+      }
+      h /= 6;
+    }
+    return {
+      h: h,
+      s: s,
+      v: v
+    };
+  }
+
+  // `hsvToRgb`
+  // Converts an HSV color value to RGB.
+  // *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
+  // *Returns:* { r, g, b } in the set [0, 255]
+  function hsvToRgb(h, s, v) {
+    h = bound01(h, 360) * 6;
+    s = bound01(s, 100);
+    v = bound01(v, 100);
+    var i = Math.floor(h),
+      f = h - i,
+      p = v * (1 - s),
+      q = v * (1 - f * s),
+      t = v * (1 - (1 - f) * s),
+      mod = i % 6,
+      r = [v, q, p, p, t, v][mod],
+      g = [t, v, v, q, p, p][mod],
+      b = [p, p, t, v, v, q][mod];
+    return {
+      r: r * 255,
+      g: g * 255,
+      b: b * 255
+    };
+  }
+
+  // `rgbToHex`
+  // Converts an RGB color to hex
+  // Assumes r, g, and b are contained in the set [0, 255]
+  // Returns a 3 or 6 character hex
+  function rgbToHex(r, g, b, allow3Char) {
+    var hex = [pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16))];
+
+    // Return a 3 character hex if possible
+    if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
+      return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
+    }
+    return hex.join("");
+  }
+
+  // `rgbaToHex`
+  // Converts an RGBA color plus alpha transparency to hex
+  // Assumes r, g, b are contained in the set [0, 255] and
+  // a in [0, 1]. Returns a 4 or 8 character rgba hex
+  function rgbaToHex(r, g, b, a, allow4Char) {
+    var hex = [pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16)), pad2(convertDecimalToHex(a))];
+
+    // Return a 4 character hex if possible
+    if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
+      return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
+    }
+    return hex.join("");
+  }
+
+  // `rgbaToArgbHex`
+  // Converts an RGBA color to an ARGB Hex8 string
+  // Rarely used, but required for "toFilter()"
+  function rgbaToArgbHex(r, g, b, a) {
+    var hex = [pad2(convertDecimalToHex(a)), pad2(Math.round(r).toString(16)), pad2(Math.round(g).toString(16)), pad2(Math.round(b).toString(16))];
+    return hex.join("");
+  }
+
+  // `equals`
+  // Can be called with any tinycolor input
+  tinycolor.equals = function (color1, color2) {
+    if (!color1 || !color2) return false;
+    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+  };
+  tinycolor.random = function () {
+    return tinycolor.fromRatio({
+      r: Math.random(),
+      g: Math.random(),
+      b: Math.random()
+    });
+  };
+
+  // Modification Functions
+  // ----------------------
+  // Thanks to less.js for some of the basics here
+  // <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
+
+  function _desaturate(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.s -= amount / 100;
+    hsl.s = clamp01(hsl.s);
+    return tinycolor(hsl);
+  }
+  function _saturate(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.s += amount / 100;
+    hsl.s = clamp01(hsl.s);
+    return tinycolor(hsl);
+  }
+  function _greyscale(color) {
+    return tinycolor(color).desaturate(100);
+  }
+  function _lighten(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.l += amount / 100;
+    hsl.l = clamp01(hsl.l);
+    return tinycolor(hsl);
+  }
+  function _brighten(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var rgb = tinycolor(color).toRgb();
+    rgb.r = Math.max(0, Math.min(255, rgb.r - Math.round(255 * -(amount / 100))));
+    rgb.g = Math.max(0, Math.min(255, rgb.g - Math.round(255 * -(amount / 100))));
+    rgb.b = Math.max(0, Math.min(255, rgb.b - Math.round(255 * -(amount / 100))));
+    return tinycolor(rgb);
+  }
+  function _darken(color, amount) {
+    amount = amount === 0 ? 0 : amount || 10;
+    var hsl = tinycolor(color).toHsl();
+    hsl.l -= amount / 100;
+    hsl.l = clamp01(hsl.l);
+    return tinycolor(hsl);
+  }
+
+  // Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
+  // Values outside of this range will be wrapped into this range.
+  function _spin(color, amount) {
+    var hsl = tinycolor(color).toHsl();
+    var hue = (hsl.h + amount) % 360;
+    hsl.h = hue < 0 ? 360 + hue : hue;
+    return tinycolor(hsl);
+  }
+
+  // Combination Functions
+  // ---------------------
+  // Thanks to jQuery xColor for some of the ideas behind these
+  // <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
+
+  function _complement(color) {
+    var hsl = tinycolor(color).toHsl();
+    hsl.h = (hsl.h + 180) % 360;
+    return tinycolor(hsl);
+  }
+  function polyad(color, number) {
+    if (isNaN(number) || number <= 0) {
+      throw new Error("Argument to polyad must be a positive number");
+    }
+    var hsl = tinycolor(color).toHsl();
+    var result = [tinycolor(color)];
+    var step = 360 / number;
+    for (var i = 1; i < number; i++) {
+      result.push(tinycolor({
+        h: (hsl.h + i * step) % 360,
+        s: hsl.s,
+        l: hsl.l
+      }));
+    }
+    return result;
+  }
+  function _splitcomplement(color) {
+    var hsl = tinycolor(color).toHsl();
+    var h = hsl.h;
+    return [tinycolor(color), tinycolor({
+      h: (h + 72) % 360,
+      s: hsl.s,
+      l: hsl.l
+    }), tinycolor({
+      h: (h + 216) % 360,
+      s: hsl.s,
+      l: hsl.l
+    })];
+  }
+  function _analogous(color, results, slices) {
+    results = results || 6;
+    slices = slices || 30;
+    var hsl = tinycolor(color).toHsl();
+    var part = 360 / slices;
+    var ret = [tinycolor(color)];
+    for (hsl.h = (hsl.h - (part * results >> 1) + 720) % 360; --results;) {
+      hsl.h = (hsl.h + part) % 360;
+      ret.push(tinycolor(hsl));
+    }
+    return ret;
+  }
+  function _monochromatic(color, results) {
+    results = results || 6;
+    var hsv = tinycolor(color).toHsv();
+    var h = hsv.h,
+      s = hsv.s,
+      v = hsv.v;
+    var ret = [];
+    var modification = 1 / results;
+    while (results--) {
+      ret.push(tinycolor({
+        h: h,
+        s: s,
+        v: v
+      }));
+      v = (v + modification) % 1;
+    }
+    return ret;
+  }
+
+  // Utility Functions
+  // ---------------------
+
+  tinycolor.mix = function (color1, color2, amount) {
+    amount = amount === 0 ? 0 : amount || 50;
+    var rgb1 = tinycolor(color1).toRgb();
+    var rgb2 = tinycolor(color2).toRgb();
+    var p = amount / 100;
+    var rgba = {
+      r: (rgb2.r - rgb1.r) * p + rgb1.r,
+      g: (rgb2.g - rgb1.g) * p + rgb1.g,
+      b: (rgb2.b - rgb1.b) * p + rgb1.b,
+      a: (rgb2.a - rgb1.a) * p + rgb1.a
+    };
+    return tinycolor(rgba);
+  };
+
+  // Readability Functions
+  // ---------------------
+  // <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
+
+  // `contrast`
+  // Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
+  tinycolor.readability = function (color1, color2) {
+    var c1 = tinycolor(color1);
+    var c2 = tinycolor(color2);
+    return (Math.max(c1.getLuminance(), c2.getLuminance()) + 0.05) / (Math.min(c1.getLuminance(), c2.getLuminance()) + 0.05);
+  };
+
+  // `isReadable`
+  // Ensure that foreground and background color combinations meet WCAG2 guidelines.
+  // The third argument is an optional Object.
+  //      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
+  //      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
+  // If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
+
+  // *Example*
+  //    tinycolor.isReadable("#000", "#111") => false
+  //    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
+  tinycolor.isReadable = function (color1, color2, wcag2) {
+    var readability = tinycolor.readability(color1, color2);
+    var wcag2Parms, out;
+    out = false;
+    wcag2Parms = validateWCAG2Parms(wcag2);
+    switch (wcag2Parms.level + wcag2Parms.size) {
+      case "AAsmall":
+      case "AAAlarge":
+        out = readability >= 4.5;
+        break;
+      case "AAlarge":
+        out = readability >= 3;
+        break;
+      case "AAAsmall":
+        out = readability >= 7;
+        break;
+    }
+    return out;
+  };
+
+  // `mostReadable`
+  // Given a base color and a list of possible foreground or background
+  // colors for that base, returns the most readable color.
+  // Optionally returns Black or White if the most readable color is unreadable.
+  // *Example*
+  //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
+  //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
+  //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
+  //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
+  tinycolor.mostReadable = function (baseColor, colorList, args) {
+    var bestColor = null;
+    var bestScore = 0;
+    var readability;
+    var includeFallbackColors, level, size;
+    args = args || {};
+    includeFallbackColors = args.includeFallbackColors;
+    level = args.level;
+    size = args.size;
+    for (var i = 0; i < colorList.length; i++) {
+      readability = tinycolor.readability(baseColor, colorList[i]);
+      if (readability > bestScore) {
+        bestScore = readability;
+        bestColor = tinycolor(colorList[i]);
+      }
+    }
+    if (tinycolor.isReadable(baseColor, bestColor, {
+      level: level,
+      size: size
+    }) || !includeFallbackColors) {
+      return bestColor;
+    } else {
+      args.includeFallbackColors = false;
+      return tinycolor.mostReadable(baseColor, ["#fff", "#000"], args);
+    }
+  };
+
+  // Big List of Colors
+  // ------------------
+  // <https://www.w3.org/TR/css-color-4/#named-colors>
+  var names = tinycolor.names = {
+    aliceblue: "f0f8ff",
+    antiquewhite: "faebd7",
+    aqua: "0ff",
+    aquamarine: "7fffd4",
+    azure: "f0ffff",
+    beige: "f5f5dc",
+    bisque: "ffe4c4",
+    black: "000",
+    blanchedalmond: "ffebcd",
+    blue: "00f",
+    blueviolet: "8a2be2",
+    brown: "a52a2a",
+    burlywood: "deb887",
+    burntsienna: "ea7e5d",
+    cadetblue: "5f9ea0",
+    chartreuse: "7fff00",
+    chocolate: "d2691e",
+    coral: "ff7f50",
+    cornflowerblue: "6495ed",
+    cornsilk: "fff8dc",
+    crimson: "dc143c",
+    cyan: "0ff",
+    darkblue: "00008b",
+    darkcyan: "008b8b",
+    darkgoldenrod: "b8860b",
+    darkgray: "a9a9a9",
+    darkgreen: "006400",
+    darkgrey: "a9a9a9",
+    darkkhaki: "bdb76b",
+    darkmagenta: "8b008b",
+    darkolivegreen: "556b2f",
+    darkorange: "ff8c00",
+    darkorchid: "9932cc",
+    darkred: "8b0000",
+    darksalmon: "e9967a",
+    darkseagreen: "8fbc8f",
+    darkslateblue: "483d8b",
+    darkslategray: "2f4f4f",
+    darkslategrey: "2f4f4f",
+    darkturquoise: "00ced1",
+    darkviolet: "9400d3",
+    deeppink: "ff1493",
+    deepskyblue: "00bfff",
+    dimgray: "696969",
+    dimgrey: "696969",
+    dodgerblue: "1e90ff",
+    firebrick: "b22222",
+    floralwhite: "fffaf0",
+    forestgreen: "228b22",
+    fuchsia: "f0f",
+    gainsboro: "dcdcdc",
+    ghostwhite: "f8f8ff",
+    gold: "ffd700",
+    goldenrod: "daa520",
+    gray: "808080",
+    green: "008000",
+    greenyellow: "adff2f",
+    grey: "808080",
+    honeydew: "f0fff0",
+    hotpink: "ff69b4",
+    indianred: "cd5c5c",
+    indigo: "4b0082",
+    ivory: "fffff0",
+    khaki: "f0e68c",
+    lavender: "e6e6fa",
+    lavenderblush: "fff0f5",
+    lawngreen: "7cfc00",
+    lemonchiffon: "fffacd",
+    lightblue: "add8e6",
+    lightcoral: "f08080",
+    lightcyan: "e0ffff",
+    lightgoldenrodyellow: "fafad2",
+    lightgray: "d3d3d3",
+    lightgreen: "90ee90",
+    lightgrey: "d3d3d3",
+    lightpink: "ffb6c1",
+    lightsalmon: "ffa07a",
+    lightseagreen: "20b2aa",
+    lightskyblue: "87cefa",
+    lightslategray: "789",
+    lightslategrey: "789",
+    lightsteelblue: "b0c4de",
+    lightyellow: "ffffe0",
+    lime: "0f0",
+    limegreen: "32cd32",
+    linen: "faf0e6",
+    magenta: "f0f",
+    maroon: "800000",
+    mediumaquamarine: "66cdaa",
+    mediumblue: "0000cd",
+    mediumorchid: "ba55d3",
+    mediumpurple: "9370db",
+    mediumseagreen: "3cb371",
+    mediumslateblue: "7b68ee",
+    mediumspringgreen: "00fa9a",
+    mediumturquoise: "48d1cc",
+    mediumvioletred: "c71585",
+    midnightblue: "191970",
+    mintcream: "f5fffa",
+    mistyrose: "ffe4e1",
+    moccasin: "ffe4b5",
+    navajowhite: "ffdead",
+    navy: "000080",
+    oldlace: "fdf5e6",
+    olive: "808000",
+    olivedrab: "6b8e23",
+    orange: "ffa500",
+    orangered: "ff4500",
+    orchid: "da70d6",
+    palegoldenrod: "eee8aa",
+    palegreen: "98fb98",
+    paleturquoise: "afeeee",
+    palevioletred: "db7093",
+    papayawhip: "ffefd5",
+    peachpuff: "ffdab9",
+    peru: "cd853f",
+    pink: "ffc0cb",
+    plum: "dda0dd",
+    powderblue: "b0e0e6",
+    purple: "800080",
+    rebeccapurple: "663399",
+    red: "f00",
+    rosybrown: "bc8f8f",
+    royalblue: "4169e1",
+    saddlebrown: "8b4513",
+    salmon: "fa8072",
+    sandybrown: "f4a460",
+    seagreen: "2e8b57",
+    seashell: "fff5ee",
+    sienna: "a0522d",
+    silver: "c0c0c0",
+    skyblue: "87ceeb",
+    slateblue: "6a5acd",
+    slategray: "708090",
+    slategrey: "708090",
+    snow: "fffafa",
+    springgreen: "00ff7f",
+    steelblue: "4682b4",
+    tan: "d2b48c",
+    teal: "008080",
+    thistle: "d8bfd8",
+    tomato: "ff6347",
+    turquoise: "40e0d0",
+    violet: "ee82ee",
+    wheat: "f5deb3",
+    white: "fff",
+    whitesmoke: "f5f5f5",
+    yellow: "ff0",
+    yellowgreen: "9acd32"
+  };
+
+  // Make it easy to access colors via `hexNames[hex]`
+  var hexNames = tinycolor.hexNames = flip(names);
+
+  // Utilities
+  // ---------
+
+  // `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
+  function flip(o) {
+    var flipped = {};
+    for (var i in o) {
+      if (o.hasOwnProperty(i)) {
+        flipped[o[i]] = i;
+      }
+    }
+    return flipped;
+  }
+
+  // Return a valid alpha value [0,1] with all invalid values being set to 1
+  function boundAlpha(a) {
+    a = parseFloat(a);
+    if (isNaN(a) || a < 0 || a > 1) {
+      a = 1;
+    }
+    return a;
+  }
+
+  // Take input from [0, n] and return it as [0, 1]
+  function bound01(n, max) {
+    if (isOnePointZero(n)) n = "100%";
+    var processPercent = isPercentage(n);
+    n = Math.min(max, Math.max(0, parseFloat(n)));
+
+    // Automatically convert percentage into number
+    if (processPercent) {
+      n = parseInt(n * max, 10) / 100;
+    }
+
+    // Handle floating point rounding errors
+    if (Math.abs(n - max) < 0.000001) {
+      return 1;
+    }
+
+    // Convert into [0, 1] range if it isn't already
+    return n % max / parseFloat(max);
+  }
+
+  // Force a number between 0 and 1
+  function clamp01(val) {
+    return Math.min(1, Math.max(0, val));
+  }
+
+  // Parse a base-16 hex value into a base-10 integer
+  function parseIntFromHex(val) {
+    return parseInt(val, 16);
+  }
+
+  // Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
+  // <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
+  function isOnePointZero(n) {
+    return typeof n == "string" && n.indexOf(".") != -1 && parseFloat(n) === 1;
+  }
+
+  // Check to see if string passed in is a percentage
+  function isPercentage(n) {
+    return typeof n === "string" && n.indexOf("%") != -1;
+  }
+
+  // Force a hex value to have 2 characters
+  function pad2(c) {
+    return c.length == 1 ? "0" + c : "" + c;
+  }
+
+  // Replace a decimal with it's percentage value
+  function convertToPercentage(n) {
+    if (n <= 1) {
+      n = n * 100 + "%";
+    }
+    return n;
+  }
+
+  // Converts a decimal to a hex value
+  function convertDecimalToHex(d) {
+    return Math.round(parseFloat(d) * 255).toString(16);
+  }
+  // Converts a hex value to a decimal
+  function convertHexToDecimal(h) {
+    return parseIntFromHex(h) / 255;
+  }
+  var matchers = function () {
+    // <http://www.w3.org/TR/css3-values/#integers>
+    var CSS_INTEGER = "[-\\+]?\\d+%?";
+
+    // <http://www.w3.org/TR/css3-values/#number-value>
+    var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
+
+    // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
+    var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
+
+    // Actual matching.
+    // Parentheses and commas are optional, but not required.
+    // Whitespace can take the place of commas or opening paren
+    var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+    var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+    return {
+      CSS_UNIT: new RegExp(CSS_UNIT),
+      rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
+      rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
+      hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
+      hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
+      hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
+      hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
+      hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+      hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+      hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+      hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+    };
+  }();
+
+  // `isValidCSSUnit`
+  // Take in a single string / number and check to see if it looks like a CSS unit
+  // (see `matchers` above for definition).
+  function isValidCSSUnit(color) {
+    return !!matchers.CSS_UNIT.exec(color);
+  }
+
+  // `stringInputToObject`
+  // Permissive string parsing.  Take in a number of formats, and output an object
+  // based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
+  function stringInputToObject(color) {
+    color = color.replace(trimLeft, "").replace(trimRight, "").toLowerCase();
+    var named = false;
+    if (names[color]) {
+      color = names[color];
+      named = true;
+    } else if (color == "transparent") {
+      return {
+        r: 0,
+        g: 0,
+        b: 0,
+        a: 0,
+        format: "name"
+      };
+    }
+
+    // Try to match string input using regular expressions.
+    // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
+    // Just return an object and let the conversion functions handle that.
+    // This way the result will be the same whether the tinycolor is initialized with string or object.
+    var match;
+    if (match = matchers.rgb.exec(color)) {
+      return {
+        r: match[1],
+        g: match[2],
+        b: match[3]
+      };
+    }
+    if (match = matchers.rgba.exec(color)) {
+      return {
+        r: match[1],
+        g: match[2],
+        b: match[3],
+        a: match[4]
+      };
+    }
+    if (match = matchers.hsl.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        l: match[3]
+      };
+    }
+    if (match = matchers.hsla.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        l: match[3],
+        a: match[4]
+      };
+    }
+    if (match = matchers.hsv.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        v: match[3]
+      };
+    }
+    if (match = matchers.hsva.exec(color)) {
+      return {
+        h: match[1],
+        s: match[2],
+        v: match[3],
+        a: match[4]
+      };
+    }
+    if (match = matchers.hex8.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1]),
+        g: parseIntFromHex(match[2]),
+        b: parseIntFromHex(match[3]),
+        a: convertHexToDecimal(match[4]),
+        format: named ? "name" : "hex8"
+      };
+    }
+    if (match = matchers.hex6.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1]),
+        g: parseIntFromHex(match[2]),
+        b: parseIntFromHex(match[3]),
+        format: named ? "name" : "hex"
+      };
+    }
+    if (match = matchers.hex4.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1] + "" + match[1]),
+        g: parseIntFromHex(match[2] + "" + match[2]),
+        b: parseIntFromHex(match[3] + "" + match[3]),
+        a: convertHexToDecimal(match[4] + "" + match[4]),
+        format: named ? "name" : "hex8"
+      };
+    }
+    if (match = matchers.hex3.exec(color)) {
+      return {
+        r: parseIntFromHex(match[1] + "" + match[1]),
+        g: parseIntFromHex(match[2] + "" + match[2]),
+        b: parseIntFromHex(match[3] + "" + match[3]),
+        format: named ? "name" : "hex"
+      };
+    }
+    return false;
+  }
+  function validateWCAG2Parms(parms) {
+    // return valid WCAG2 parms for isReadable.
+    // If input parms are invalid, return {"level":"AA", "size":"small"}
+    var level, size;
+    parms = parms || {
+      level: "AA",
+      size: "small"
+    };
+    level = (parms.level || "AA").toUpperCase();
+    size = (parms.size || "small").toLowerCase();
+    if (level !== "AA" && level !== "AAA") {
+      level = "AA";
+    }
+    if (size !== "small" && size !== "large") {
+      size = "small";
+    }
+    return {
+      level: level,
+      size: size
+    };
+  }
+
+  return tinycolor;
+
+}));
 
 
 /***/ })

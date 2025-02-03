@@ -1,6 +1,6 @@
 /**
 * plotly.js v2.30.1
-* Copyright 2012-2024, Plotly, Inc.
+* Copyright 2012-2025, Plotly, Inc.
 * All rights reserved.
 * Licensed under the MIT license
 */
@@ -195,7 +195,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"type":"Topology","objects":{"coastli
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 !function() {
 "use strict";
 var exports = __webpack_exports__;
