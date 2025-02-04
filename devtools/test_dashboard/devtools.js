@@ -56,25 +56,7 @@ var Tabs = {
 
     // Plot a mock by name (without .json) to the default or specified container
     plotMock: function(mockName, id) {
-        var mockURL = '/test/image/mocks/' + mockName + '.json';
-
-        console.warn('Plotting:', mockURL);
-
-        var request = new XMLHttpRequest();
-        request.open('GET', mockURL, true);
-        request.responseType = '';
-        request.send();
-
-        request.onreadystatechange = function() {
-            if(this.readyState === 4) {
-                if(this.status === 200) {
-                    var fig = JSON.parse(this.responseText);
-                    Plotly.newPlot(Tabs.fresh(id), fig);
-                } else {
-                    console.error(this.statusText);
-                }
-            }
-        };
+        console.log({mockName: mockName, id: id});
     },
 
     // Save a png snapshot and display it below the plot

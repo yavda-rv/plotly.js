@@ -121,7 +121,7 @@ if(isFullSuite) {
     testFileGlob = path.join(__dirname, 'tests', glob(merge(argv._).map(basename)));
 }
 
-var pathToJQuery = path.join(__dirname, 'assets', 'jquery-1.8.3.min.js');
+// var pathToJQuery = path.join(__dirname, 'assets', 'jquery-1.8.3.min.js');
 var pathToCustomMatchers = path.join(__dirname, 'assets', 'custom_matchers.js');
 var pathToUnpolyfill = path.join(__dirname, 'assets', 'unpolyfill.js');
 var pathToSaneTopojsonDist = path.join(__dirname, '..', '..', 'node_modules', 'sane-topojson', 'dist');
@@ -348,9 +348,9 @@ if(isBundleTest) {
             // no tasks/compress_attributes in this case
             break;
     }
-} else {
+} /* else {
     func.defaultConfig.files.push(pathToJQuery);
-}
+}*/
 
 if(argv.virtualWebgl) {
     // add virtual-webgl to the top
