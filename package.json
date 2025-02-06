@@ -71,7 +71,7 @@
     ]
   },
   "dependencies": {
-    "@plotly/d3": "yavda-rv/d3#branches_rv",
+    "@plotly/d3": "yavda-rv/d3#certification",
     "@plotly/d3-sankey": "0.7.2",
     "@plotly/d3-sankey-circular": "0.33.1",
     "@plotly/mapbox-gl": "v1.13.4",
