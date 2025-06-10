@@ -11,7 +11,7 @@ module.exports = function eventData(out, pt) {
             out.customdata = pt.trace.customdata[out.pointIndices[0]];
         }
         out.attr = pt.attr;
-        out.attrVal = pt.yVal;
+        out.attrVal = pt.trace.orientation == 'h' ? pt.xVal : pt.yVal;
     }
 
     if('xVal' in pt) out.x = pt.xVal;
