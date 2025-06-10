@@ -1760,8 +1760,8 @@ function getHoverLabelOffsets(hoverLabel, rotateLabels) {
     }
 
     return {
-        x: offsetX,
-        y: offsetY
+        x: offsetX || 0,
+        y: offsetY || 0
     };
 }
 
