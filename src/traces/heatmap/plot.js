@@ -339,7 +339,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
                     v = row[i];
                     spv = spRow ? spRow[i] : undefined;
                     c = setColor(v, (xb[1] - xb[0]) * (yb[1] - yb[0]));
-                    if(spv !== undefined && spv === 0) {
+                    if(v != null && v != undefined && spv !== undefined && spv === 0) {
                         c[3] = mo;
                     }
                     context.fillStyle = 'rgba(' + c.join(',') + ')';
