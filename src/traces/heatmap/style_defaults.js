@@ -8,5 +8,6 @@ module.exports = function handleStyleDefaults(traceIn, traceOut, coerce) {
         coerce('ygap');
     }
 
+    coerce('unselected.marker.opacity')
     coerce('zhoverformat');
 };

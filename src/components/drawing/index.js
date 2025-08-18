@@ -39,6 +39,18 @@ drawing.font = function(s, family, size, color) {
     if(color) s.call(Color.fill, color);
 };
 
+drawing.fontWithOpacity = function(s, family, size, color, opacity) {
+    // also allow the form font(s, {family, size, color})
+    if(Lib.isPlainObject(family)) {
+        color = family.color;
+        size = family.size;
+        family = family.family;
+    }
+    if(family) s.style('font-family', family);
+    if(size + 1) s.style('font-size', size + 'px');
+    if(color) s.call(Color.fillWithOpacity, color, opacity);
+};
+
 /*
  * Positioning helpers
  * Note: do not use `setPosition` with <text> nodes modified by

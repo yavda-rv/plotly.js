@@ -105,6 +105,14 @@ color.fill = function(s, c) {
     });
 };
 
+color.fillWithOpacity = function (s, c, o) {
+    var tc = tinycolor(c);
+    s.style({
+        fill: color.tinyRGB(tc),
+        'fill-opacity': o === undefined ? tc.getAlpha() : o
+    });
+}
+
 // search container for colors with the deprecated rgb(fractions) format
 // and convert them to rgb(0-255 values)
 color.clean = function(container) {

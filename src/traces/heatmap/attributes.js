@@ -30,6 +30,8 @@ module.exports = extendFlat({
     xperiodalignment: extendFlat({}, scatterAttrs.xperiodalignment, {impliedEdits: {xtype: 'scaled'}}),
     yperiodalignment: extendFlat({}, scatterAttrs.yperiodalignment, {impliedEdits: {ytype: 'scaled'}}),
 
+    selectedpoints: extendFlat({}, baseAttrs.selectedpoints, {dflt: null}),
+    
     text: {
         valType: 'data_array',
         editType: 'calc',
@@ -113,6 +115,22 @@ module.exports = extendFlat({
         editType: 'plot',
         description: 'Sets the vertical gap (in pixels) between bricks.'
     },
+     
+    unselected: {
+        marker: {
+            opacity: {
+                valType: 'number',
+                min: 0,
+                max: 1,
+                dflt: 0.4,
+                editType: 'style',
+                description: 'Sets the marker opacity of unselected points.'
+            },
+            editType: 'style'
+        },
+        editType: 'style'
+    },
+
     xhoverformat: axisHoverFormat('x'),
     yhoverformat: axisHoverFormat('y'),
     zhoverformat: axisHoverFormat('z', 1),

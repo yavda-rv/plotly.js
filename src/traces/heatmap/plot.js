@@ -47,6 +47,10 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
         var isContour = Registry.traceIs(trace, 'contour');
         var zsmooth = isContour ? 'best' : trace.zsmooth;
 
+        //selection
+        var sp = cd0.trace.selectedpoints;
+        var mo = trace.unselected ? trace.unselected.marker.opacity : 1;
+
         // get z dims
         var m = z.length;
         var n = Lib.maxRowLength(z);
@@ -200,7 +204,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
         var gcount = 0;
         var bcount = 0;
 
-        var xb, xi, v, row, c;
+        var xb, xi, v, row, c, spRow, spv;
 
         function setColor(v, pixsize) {
             if(v !== undefined) {
@@ -317,6 +321,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
 
             for(j = 0; j < m; j++) {
                 row = z[j];
+                spRow = sp ? sp[j] : undefined;
                 yb.reverse();
                 yb[ybi] = ypx(j + 1);
                 if(yb[0] === yb[1] || yb[0] === undefined || yb[1] === undefined) {
@@ -332,7 +337,11 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
                         continue;
                     }
                     v = row[i];
+                    spv = spRow ? spRow[i] : undefined;
                     c = setColor(v, (xb[1] - xb[0]) * (yb[1] - yb[0]));
+                    if(spv !== undefined && spv === 0) {
+                        c[3] = mo;
+                    }
                     context.fillStyle = 'rgba(' + c.join(',') + ')';
 
                     context.fillRect(xb[0] + xGapLeft, yb[0] + yGapTop,
@@ -445,6 +454,8 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
                     if(theText === undefined || theText === false) theText = '';
                     obj.text = theText;
 
+                    var selected = (sp && sp[i]) ?  (sp[i][j] === 1 ? 1 : 0) : 1;
+
                     var _t = Lib.texttemplateString(texttemplate, obj, gd._fullLayout._d3locale, obj, trace._meta || {});
                     if(!_t) continue;
 
@@ -461,7 +472,8 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
                         t: _t, // text
                         x: _x,
                         y: _y,
-                        z: zVal
+                        z: zVal,
+                        s: selected
                     });
                 }
             }
@@ -545,7 +557,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
                     thisLabel
                         .attr('data-notex', 1)
                         .call(svgTextUtils.positionText, xFn(d), yFn(d))
-                        .call(Drawing.font, fontFamily, fontSize, fontColor)
+                        .call(Drawing.fontWithOpacity, fontFamily, fontSize, fontColor, d.s === 0 ? mo: 1)
                         .text(d.t)
                         .call(svgTextUtils.convertToTspans, gd);
                 });

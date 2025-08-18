@@ -1,0 +1,479 @@
+{
+    "data": [
+        {
+            "x": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "y": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "z": [
+                [ 1, 0.8, 0.8, 0.5 ],
+                [ 0.8, 1, 0.3, 0.3 ],
+                [ 0.8, 0.3, 1, 0.7 ],
+                [ 0.5, 0.3, 0.7, 1 ]
+            ],
+            "type": "heatmap",
+            "opacity": 1,
+            "customdata": [
+                [
+                    {
+                        "selected": true,
+                        "x": "A",
+                        "y": "A",
+                        "hoverText": 1,
+                        "color": 1,
+                        "text": 1,
+                        "index": 0,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "B",
+                        "y": "A",
+                        "hoverText": 0.1,
+                        "color": 0.8,
+                        "text": 0.6,
+                        "index": 4,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "C",
+                        "y": "A",
+                        "hoverText": 1,
+                        "color": 0.8,
+                        "text": 0.6,
+                        "index": 8,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "D",
+                        "y": "A",
+                        "hoverText": 0.2,
+                        "color": 0.5,
+                        "text": 0.5,
+                        "index": 12,
+                        "plotId": "plot_0"
+                    }
+                ],
+                [
+                    {
+                        "selected": true,
+                        "x": "A",
+                        "y": "B",
+                        "hoverText": 0.1,
+                        "color": 0.8,
+                        "text": 0.6,
+                        "index": 1,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "B",
+                        "y": "B",
+                        "hoverText": 1,
+                        "color": 1,
+                        "text": 1,
+                        "index": 5,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "C",
+                        "y": "B",
+                        "hoverText": 0.8,
+                        "color": 0.3,
+                        "text": 0.5,
+                        "index": 9,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "D",
+                        "y": "B",
+                        "hoverText": 0.1,
+                        "color": 0.3,
+                        "text": 0.6,
+                        "index": 13,
+                        "plotId": "plot_0"
+                    }
+                ],
+                [
+                    {
+                        "selected": true,
+                        "x": "A",
+                        "y": "C",
+                        "hoverText": 1,
+                        "color": 0.8,
+                        "text": 0.6,
+                        "index": 2,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "B",
+                        "y": "C",
+                        "hoverText": 0.8,
+                        "color": 0.3,
+                        "text": 0.5,
+                        "index": 6,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "C",
+                        "y": "C",
+                        "hoverText": 1,
+                        "color": 1,
+                        "text": 1,
+                        "index": 10,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "D",
+                        "y": "C",
+                        "hoverText": 0.2,
+                        "color": 0.7,
+                        "text": 0.2,
+                        "index": 14,
+                        "plotId": "plot_0"
+                    }
+                ],
+                [
+                    {
+                        "selected": true,
+                        "x": "A",
+                        "y": "D",
+                        "hoverText": 0.2,
+                        "color": 0.5,
+                        "text": 0.5,
+                        "index": 3,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "B",
+                        "y": "D",
+                        "hoverText": 0.1,
+                        "color": 0.3,
+                        "text": 0.6,
+                        "index": 7,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "C",
+                        "y": "D",
+                        "hoverText": 0.2,
+                        "color": 0.7,
+                        "text": 0.2,
+                        "index": 11,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "D",
+                        "y": "D",
+                        "hoverText": 1,
+                        "color": 1,
+                        "text": 1,
+                        "index": 15,
+                        "plotId": "plot_0"
+                    }
+                ]
+            ],
+            "selectedpoints": [
+                [ 1, 0, 1, 0 ],
+                [ 0, 1, 0, 0 ],
+                [ 0, 0, 1, 0 ],
+                [ 0, 0, 0, 1 ]
+            ],
+            "unselected": {
+                "marker": {
+                    "opacity": 0.2
+                }
+            },
+            "xgap": 2,
+            "ygap": 2,
+            "showscale": true,
+            "connectgaps": false,
+            "zsmooth": false,
+            "coloraxis": "coloraxis",
+            "text": [
+                [
+                    1,
+                    0.6,
+                    0.6,
+                    0.5
+                ],
+                [
+                    0.6,
+                    1,
+                    0.5,
+                    0.6
+                ],
+                [
+                    0.6,
+                    0.5,
+                    1,
+                    0.2
+                ],
+                [
+                    0.5,
+                    0.6,
+                    0.2,
+                    1
+                ]
+            ],
+            "texttemplate": "%{text:0%}",
+            "textfont": {
+                "size": 17
+            },
+            "hovertext": [
+                [
+                    1,
+                    0.1,
+                    1,
+                    0.2
+                ],
+                [
+                    0.1,
+                    1,
+                    0.8,
+                    0.1
+                ],
+                [
+                    1,
+                    0.8,
+                    1,
+                    0.2
+                ],
+                [
+                    0.2,
+                    0.1,
+                    0.2,
+                    1
+                ]
+            ],
+            "hoverinfo": "none",
+            "hoverongaps": false,
+            "name": "plot_0",
+            "xaxis": "x",
+            "yaxis": "y"
+        }
+    ],
+    "layout": {
+        "xaxis": {
+            "automargin": true,
+            "visible": true,
+            "showdividers": false,
+            "type": "category",
+            "fixedrange": true,
+            "ticks": "",
+            "ticklen": 5,
+            "showticklabels": true,
+            "showline": false,
+            "showgrid": false,
+            "gridwidth": 1,
+            "griddash": "solid",
+            "domain": [
+                0,
+                1
+            ],
+            "zeroline": false,
+            "tickfont": {
+                "size": 10
+            },
+            "autorange": true,
+            "side": "top",
+            "dtick": 1,
+            "rangeslider": {
+                "visible": false,
+                "yaxis": {}
+            },
+            "anchor": "y",
+            "range": [
+                -0.5,
+                3.5
+            ]
+        },
+        "yaxis": {
+            "automargin": true,
+            "visible": true,
+            "showdividers": false,
+            "type": "category",
+            "fixedrange": true,
+            "ticks": "",
+            "ticklen": 5,
+            "showticklabels": true,
+            "showline": false,
+            "showgrid": true,
+            "gridwidth": 1,
+            "griddash": "solid",
+            "domain": [
+                0,
+                0.9
+            ],
+            "zeroline": false,
+            "tickfont": {
+                "size": 12
+            },
+            "autorange": true,
+            "rangeslider": {
+                "visible": false
+            },
+            "anchor": "x",
+            "range": [
+                3.5,
+                -0.5
+            ]
+        },
+        "autosize": true,
+        "colorway": [
+            "#118DFF",
+            "#12239E",
+            "#E66C37",
+            "#6B007B",
+            "#E044A7",
+            "#744EC2",
+            "#D9B300",
+            "#D64550",
+            "#197278",
+            "#1AAB40",
+            "#15C6F4",
+            "#4092FF",
+            "#FFA058",
+            "#BE5DC9",
+            "#F472D0",
+            "#B5A1FF",
+            "#C4A200",
+            "#FF8080",
+            "#00DBBC",
+            "#5BD667"
+        ],
+        "margin": {
+            "l": 10,
+            "r": 10,
+            "b": 10,
+            "t": 10
+        },
+        "plot_bgcolor": "rgba(0, 0, 0, 0)",
+        "paper_bgcolor": "rgba(0, 0, 0, 0)",
+        "font": {
+            "size": 10.666666666666666
+        },
+        "hoverlabel": {
+            "align": "left",
+            "bgcolor": "rgb(0, 0, 0)",
+            "bordercolor": "rgb(0, 0, 0)",
+            "font": {
+                "color": "#eee"
+            }
+        },
+        "title": {
+            "text": "",
+            "font": {
+                "color": "rgb(0, 0, 0)",
+                "size": 16
+            },
+            "x": 0.5,
+            "y": -0.05,
+            "pad": {
+                "l": 10,
+                "r": 10,
+                "b": 10,
+                "t": 10
+            }
+        },
+        "showlegend": true,
+        "legend": {
+            "orientation": "v",
+            "xanchor": "left",
+            "yanchor": "middle",
+            "x": 1,
+            "y": 0.5,
+            "itemsizing": "constant"
+        },
+        "coloraxis": {
+            "showscale": true,
+            "colorbar": {
+                "bgcolor": "transparent",
+                "len": 0.5,
+                "lenmode": "fraction",
+                "thickness": 0.03,
+                "thicknessmode": "fraction",
+                "outlinecolor": "#000000",
+                "outlinewidth": 1,
+                "orientation": "v",
+                "xref": "container",
+                "yref": "container",
+                "yanchor": "middle",
+                "y": 0.5,
+                "xanchor": "left",
+                "x": 1,
+                "ticks": "outside",
+                "ticklen": 6,
+                "showticklabels": true,
+                "tickfont": {
+                    "size": 15,
+                    "color": "#000000"
+                },
+                "tickformat": "0%",
+                "title": {
+                    "text": "Color",
+                    "font": {
+                        "size": 16,
+                        "color": "#000000"
+                    }
+                }
+            },
+            "colorscale": [
+                [
+                    0,
+                    "#ffffe5"
+                ],
+                [
+                    0.14285714285714285,
+                    "#f7fcb9"
+                ],
+                [
+                    0.2857142857142857,
+                    "#d9f0a3"
+                ],
+                [
+                    0.42857142857142855,
+                    "#addd8e"
+                ],
+                [
+                    0.5714285714285714,
+                    "#78c679"
+                ],
+                [
+                    0.7142857142857142,
+                    "#41ab5d"
+                ],
+                [
+                    0.8571428571428571,
+                    "#238443"
+                ],
+                [
+                    1,
+                    "#005a32"
+                ]
+            ],
+            "cmin": 0,
+            "cmax": 1,
+            "reversescale": false
+        },
+        "shapes": []
+    }
+}
