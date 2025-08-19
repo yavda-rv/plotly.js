@@ -11,7 +11,7 @@ function hoverPoints(pointData, xval, yval, hovermode) {
     // hovering on fill case
     if(newPointData.index === undefined) {
         return;
-        //return scatterPointData;
+        // return scatterPointData;
     }
 
     var subplot = pointData.subplot;
