@@ -17,7 +17,7 @@
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 52:
+/***/ 188:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -28,7 +28,7 @@ exports.version = '2.30.1';
 
 /***/ }),
 
-/***/ 728:
+/***/ 292:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 exports.world_110m = __webpack_require__(527)
@@ -195,14 +195,14 @@ module.exports = /*#__PURE__*/JSON.parse('{"type":"Topology","objects":{"coastli
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 !function() {
 "use strict";
 var exports = __webpack_exports__;
 
 
-var saneTopojson = __webpack_require__(728);
-exports.version = __webpack_require__(52).version;
+var saneTopojson = __webpack_require__(292);
+exports.version = __webpack_require__(188).version;
 exports.topojson = saneTopojson;
 }();
 /******/ 	return __webpack_exports__;
