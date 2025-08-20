@@ -1,0 +1,702 @@
+{
+    "data": [
+        {
+            "x": ["Wed","Thu","Fri","Sat","Sun","Mon","Tue"],
+            "y": ["1","2","3","4","5"],
+            "z": [
+                [49,26,28,14,null,null,null ],
+                [
+                    13,
+                    81,
+                    79,
+                    41,
+                    69,
+                    41,
+                    94
+                ],
+                [
+                    34,
+                    61,
+                    74,
+                    42,
+                    51,
+                    64,
+                    28
+                ],
+                [
+                    70,
+                    57,
+                    16,
+                    58,
+                    19,
+                    80,
+                    100
+                ],
+                [
+                    41,
+                    62,
+                    77,
+                    null,
+                    21,
+                    29,
+                    62
+                ]
+            ],
+            "type": "heatmap",
+            "opacity": 1,
+            "customdata": [
+                [
+                    {
+                        "selected": false,
+                        "x": "Wed",
+                        "y": 1,
+                        "hoverText": "2025-01-01T00:00:00.000",
+                        "color": 49,
+                        "trellis": "January",
+                        "index": 0,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Thu",
+                        "y": 1,
+                        "hoverText": "2025-01-02T00:00:00.000",
+                        "color": 26,
+                        "trellis": "January",
+                        "index": 1,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Fri",
+                        "y": 1,
+                        "hoverText": "2025-01-03T00:00:00.000",
+                        "color": 28,
+                        "trellis": "January",
+                        "index": 2,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Sat",
+                        "y": 1,
+                        "hoverText": "2025-01-04T00:00:00.000",
+                        "color": 14,
+                        "trellis": "January",
+                        "index": 3,
+                        "plotId": "plot_0"
+                    },
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": "Wed",
+                        "y": 2,
+                        "hoverText": "2025-01-08T00:00:00.000",
+                        "color": 13,
+                        "trellis": "January",
+                        "index": 7,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Thu",
+                        "y": 2,
+                        "hoverText": "2025-01-09T00:00:00.000",
+                        "color": 81,
+                        "trellis": "January",
+                        "index": 8,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Fri",
+                        "y": 2,
+                        "hoverText": "2025-01-10T00:00:00.000",
+                        "color": 79,
+                        "trellis": "January",
+                        "index": 9,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Sat",
+                        "y": 2,
+                        "hoverText": "2025-01-11T00:00:00.000",
+                        "color": 41,
+                        "trellis": "January",
+                        "index": 10,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Sun",
+                        "y": 2,
+                        "hoverText": "2025-01-05T00:00:00.000",
+                        "color": 69,
+                        "trellis": "January",
+                        "index": 4,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Mon",
+                        "y": 2,
+                        "hoverText": "2025-01-06T00:00:00.000",
+                        "color": 41,
+                        "trellis": "January",
+                        "index": 5,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Tue",
+                        "y": 2,
+                        "hoverText": "2025-01-07T00:00:00.000",
+                        "color": 94,
+                        "trellis": "January",
+                        "index": 6,
+                        "plotId": "plot_0"
+                    }
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": "Wed",
+                        "y": 3,
+                        "hoverText": "2025-01-15T00:00:00.000",
+                        "color": 34,
+                        "trellis": "January",
+                        "index": 14,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Thu",
+                        "y": 3,
+                        "hoverText": "2025-01-16T00:00:00.000",
+                        "color": 61,
+                        "trellis": "January",
+                        "index": 15,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Fri",
+                        "y": 3,
+                        "hoverText": "2025-01-17T00:00:00.000",
+                        "color": 74,
+                        "trellis": "January",
+                        "index": 16,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Sat",
+                        "y": 3,
+                        "hoverText": "2025-01-18T00:00:00.000",
+                        "color": 42,
+                        "trellis": "January",
+                        "index": 17,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Sun",
+                        "y": 3,
+                        "hoverText": "2025-01-12T00:00:00.000",
+                        "color": 51,
+                        "trellis": "January",
+                        "index": 11,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Mon",
+                        "y": 3,
+                        "hoverText": "2025-01-13T00:00:00.000",
+                        "color": 64,
+                        "trellis": "January",
+                        "index": 12,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Tue",
+                        "y": 3,
+                        "hoverText": "2025-01-14T00:00:00.000",
+                        "color": 28,
+                        "trellis": "January",
+                        "index": 13,
+                        "plotId": "plot_0"
+                    }
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": "Wed",
+                        "y": 4,
+                        "hoverText": "2025-01-22T00:00:00.000",
+                        "color": 70,
+                        "trellis": "January",
+                        "index": 21,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Thu",
+                        "y": 4,
+                        "hoverText": "2025-01-23T00:00:00.000",
+                        "color": 57,
+                        "trellis": "January",
+                        "index": 22,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Fri",
+                        "y": 4,
+                        "hoverText": "2025-01-24T00:00:00.000",
+                        "color": 16,
+                        "trellis": "January",
+                        "index": 23,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Sat",
+                        "y": 4,
+                        "hoverText": "2025-01-25T00:00:00.000",
+                        "color": 58,
+                        "trellis": "January",
+                        "index": 24,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Sun",
+                        "y": 4,
+                        "hoverText": "2025-01-19T00:00:00.000",
+                        "color": 19,
+                        "trellis": "January",
+                        "index": 18,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Mon",
+                        "y": 4,
+                        "hoverText": "2025-01-20T00:00:00.000",
+                        "color": 80,
+                        "trellis": "January",
+                        "index": 19,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Tue",
+                        "y": 4,
+                        "hoverText": "2025-01-21T00:00:00.000",
+                        "color": 100,
+                        "trellis": "January",
+                        "index": 20,
+                        "plotId": "plot_0"
+                    }
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": "Wed",
+                        "y": 5,
+                        "hoverText": "2025-01-29T00:00:00.000",
+                        "color": 41,
+                        "trellis": "January",
+                        "index": 28,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Thu",
+                        "y": 5,
+                        "hoverText": "2025-01-30T00:00:00.000",
+                        "color": 62,
+                        "trellis": "January",
+                        "index": 29,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Fri",
+                        "y": 5,
+                        "hoverText": "2025-01-31T00:00:00.000",
+                        "color": 77,
+                        "trellis": "January",
+                        "index": 30,
+                        "plotId": "plot_0"
+                    },
+                    null,
+                    {
+                        "selected": false,
+                        "x": "Sun",
+                        "y": 5,
+                        "hoverText": "2025-01-26T00:00:00.000",
+                        "color": 21,
+                        "trellis": "January",
+                        "index": 25,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Mon",
+                        "y": 5,
+                        "hoverText": "2025-01-27T00:00:00.000",
+                        "color": 29,
+                        "trellis": "January",
+                        "index": 26,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Tue",
+                        "y": 5,
+                        "hoverText": "2025-01-28T00:00:00.000",
+                        "color": 62,
+                        "trellis": "January",
+                        "index": 27,
+                        "plotId": "plot_0"
+                    }
+                ]
+            ],
+            "xgap": 2,
+            "ygap": 2,
+            "showscale": true,
+            "connectgaps": false,
+            "zsmooth": false,
+            "coloraxis": "coloraxis",
+            "text": [
+                [
+                    "49",
+                    "26",
+                    "28",
+                    "14",
+                    "",
+                    "",
+                    ""
+                ],
+                [
+                    "13",
+                    "81",
+                    "79",
+                    "41",
+                    "69",
+                    "41",
+                    "94"
+                ],
+                [
+                    "34",
+                    "61",
+                    "74",
+                    "42",
+                    "51",
+                    "64",
+                    "28"
+                ],
+                [
+                    "70",
+                    "57",
+                    "16",
+                    "58",
+                    "19",
+                    "80",
+                    "100"
+                ],
+                [
+                    "41",
+                    "62",
+                    "77",
+                    "",
+                    "21",
+                    "29",
+                    "62"
+                ]
+            ],
+            "texttemplate": "%{text}",
+            "textfont": {
+                "size": 9
+            },
+            "hovertext": [
+                [
+                    "2025-01-01T00:00:00.000",
+                    "2025-01-02T00:00:00.000",
+                    "2025-01-03T00:00:00.000",
+                    "2025-01-04T00:00:00.000",
+                    "",
+                    "",
+                    ""
+                ],
+                [
+                    "2025-01-08T00:00:00.000",
+                    "2025-01-09T00:00:00.000",
+                    "2025-01-10T00:00:00.000",
+                    "2025-01-11T00:00:00.000",
+                    "2025-01-05T00:00:00.000",
+                    "2025-01-06T00:00:00.000",
+                    "2025-01-07T00:00:00.000"
+                ],
+                [
+                    "2025-01-15T00:00:00.000",
+                    "2025-01-16T00:00:00.000",
+                    "2025-01-17T00:00:00.000",
+                    "2025-01-18T00:00:00.000",
+                    "2025-01-12T00:00:00.000",
+                    "2025-01-13T00:00:00.000",
+                    "2025-01-14T00:00:00.000"
+                ],
+                [
+                    "2025-01-22T00:00:00.000",
+                    "2025-01-23T00:00:00.000",
+                    "2025-01-24T00:00:00.000",
+                    "2025-01-25T00:00:00.000",
+                    "2025-01-19T00:00:00.000",
+                    "2025-01-20T00:00:00.000",
+                    "2025-01-21T00:00:00.000"
+                ],
+                [
+                    "2025-01-29T00:00:00.000",
+                    "2025-01-30T00:00:00.000",
+                    "2025-01-31T00:00:00.000",
+                    "",
+                    "2025-01-26T00:00:00.000",
+                    "2025-01-27T00:00:00.000",
+                    "2025-01-28T00:00:00.000"
+                ]
+            ],
+            "hoverinfo": "x+y+z+text+name",
+            "hoverongaps": false,
+            "name": "plot_0",
+            "xaxis": "x",
+            "yaxis": "y"
+        }
+    ],
+    "layout": {
+        "xaxis": {
+            "automargin": true,
+            "visible": true,
+            "showdividers": false,
+            "type": "category",
+            "fixedrange": true,
+            "ticks": "",
+            "ticklen": 5,
+            "showticklabels": true,
+            "showline": false,
+            "showgrid": false,
+            "gridwidth": 1,
+            "griddash": "solid",
+            "domain": [
+                0,
+                1
+            ],
+            "zeroline": false,
+            "tickfont": {
+                "size": 14
+            },
+            "autorange": true,
+            "side": "top",
+            "dtick": 1,
+            "rangeslider": {
+                "visible": false,
+                "yaxis": {}
+            },
+            "anchor": "y",
+            "categoryorder": "array",
+            "categoryarray": [
+                "Sun",
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat"
+            ],
+            "range": [
+                -0.5,
+                6.5
+            ]
+        },
+        "yaxis": {
+            "automargin": true,
+            "visible": false,
+            "showdividers": false,
+            "type": "linear",
+            "fixedrange": true,
+            "ticks": "",
+            "ticklen": 5,
+            "showticklabels": false,
+            "showline": false,
+            "showgrid": true,
+            "gridwidth": 1,
+            "griddash": "solid",
+            "domain": [
+                0,
+                0.85
+            ],
+            "zeroline": false,
+            "tickfont": {
+                "size": 12
+            },
+            "autorange": true,
+            "rangeslider": {
+                "visible": false
+            },
+            "anchor": "x",
+            "range": [
+                5.5,
+                0.5
+            ]
+        },
+        "autosize": false,
+        "colorway": [
+            "#118DFF",
+            "#12239E",
+            "#E66C37",
+            "#6B007B",
+            "#E044A7",
+            "#744EC2",
+            "#D9B300",
+            "#D64550",
+            "#197278",
+            "#1AAB40",
+            "#15C6F4",
+            "#4092FF",
+            "#FFA058",
+            "#BE5DC9",
+            "#F472D0",
+            "#B5A1FF",
+            "#C4A200",
+            "#FF8080",
+            "#00DBBC",
+            "#5BD667"
+        ],
+        "margin": {
+            "l": 10,
+            "r": 10,
+            "b": 10,
+            "t": 10
+        },
+        "plot_bgcolor": "rgba(0, 0, 0, 0)",
+        "paper_bgcolor": "rgba(0, 0, 0, 0)",
+        "font": {
+            "size": 10.666666666666666
+        },
+        "hoverlabel": {
+            "align": "left",
+            "bgcolor": "rgb(0, 0, 0)",
+            "bordercolor": "rgb(0, 0, 0)",
+            "font": {
+                "color": "#eee"
+            }
+        },
+        "title": {
+            "text": "",
+            "font": {
+                "color": "rgb(0, 0, 0)",
+                "size": 16
+            },
+            "x": 0.5,
+            "y": -0.05,
+            "pad": {
+                "l": 10,
+                "r": 10,
+                "b": 10,
+                "t": 10
+            }
+        },
+        "showlegend": true,
+        "legend": {
+            "orientation": "v",
+            "xanchor": "left",
+            "yanchor": "middle",
+            "x": 1,
+            "y": 0.5,
+            "itemsizing": "constant"
+        },
+        "coloraxis": {
+            "showscale": true,
+            "colorbar": {
+                "bgcolor": "transparent",
+                "len": 0.3,
+                "lenmode": "fraction",
+                "thickness": 0.02,
+                "thicknessmode": "fraction",
+                "outlinewidth": 0,
+                "orientation": "h",
+                "xref": "container",
+                "yref": "container",
+                "yanchor": "bottom",
+                "y": 0,
+                "xanchor": "right",
+                "x": 1,
+                "ticks": "outside",
+                "ticklen": 5,
+                "showticklabels": true,
+                "tickfont": {
+                    "size": 12
+                },
+                "title": {
+                    "text": "Commit Count",
+                    "font": {
+                        "size": 16,
+                        "color": "#000000"
+                    }
+                }
+            },
+            "colorscale": [
+                [
+                    0,
+                    "#ffffcc"
+                ],
+                [
+                    0.25,
+                    "#c2e699"
+                ],
+                [
+                    0.5,
+                    "#78c679"
+                ],
+                [
+                    0.75,
+                    "#31a354"
+                ],
+                [
+                    1,
+                    "#006837"
+                ]
+            ],
+            "reversescale": false
+        },
+        "annotations": [
+            {
+                "showarrow": false,
+                "text": "<span style=\"font-weight:bold\">January</span>",
+                "xref": "paper",
+                "yref": "paper",
+                "standoff": 0,
+                "font": {
+                    "size": 20,
+                    "color": "#333333"
+                },
+                "x": 0.5,
+                "xanchor": "center",
+                "y": 1,
+                "yanchor": "top",
+                "yshift": 5
+            }
+        ],
+        "width": 1254,
+        "height": 296,
+        "shapes": []
+    }
+}

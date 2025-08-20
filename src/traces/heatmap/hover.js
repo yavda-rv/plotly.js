@@ -103,6 +103,19 @@ module.exports = function hoverPoints(pointData, xval, yval, hovermode, opts) {
         text = cd0.text[ny][nx];
     }
 
+    var _text;
+    var _hovertext;
+    var _customdata;
+    if(isArrayOrTypedArray(cd0.__hovertext) && isArrayOrTypedArray(cd0.__hovertext[ny])) {
+        _hovertext = cd0.__hovertext[ny][nx];
+    }
+    if(isArrayOrTypedArray(cd0.__text) && isArrayOrTypedArray(cd0.__text[ny])) {
+        _text = cd0.__text[ny][nx];
+    }
+    if(isArrayOrTypedArray(cd0.__customdata) && isArrayOrTypedArray(cd0.__customdata[ny])) {
+        _customdata = cd0.__customdata[ny][nx];
+    }
+
     // dummy axis for formatting the z value
     var cOpts = extractOpts(trace);
     var dummyAx = {
@@ -115,6 +128,9 @@ module.exports = function hoverPoints(pointData, xval, yval, hovermode, opts) {
     var zLabel = Axes.tickText(dummyAx, zVal, 'hover').text;
 
     return [Lib.extendFlat(pointData, {
+        _hovertext: _hovertext,
+        _customdata: _customdata,
+        _text: _text,
         index: trace._after2before ? trace._after2before[ny][nx] : [ny, nx],
         // never let a 2D override 1D type as closest point
         distance: pointData.maxHoverDistance,

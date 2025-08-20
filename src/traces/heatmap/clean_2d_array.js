@@ -4,13 +4,13 @@ var isNumeric = require('fast-isnumeric');
 var Lib = require('../../lib');
 var BADNUM = require('../../constants/numerical').BADNUM;
 
-module.exports = function clean2dArray(zOld, trace, xa, ya) {
+module.exports = function clean2dArray(zOld, trace, xa, ya, cleanFn) {
     var rowlen, collen, getCollen, old2new, i, j;
 
-    function cleanZvalue(v) {
+    cleanFn = cleanFn || function cleanZvalue(v) {
         if(!isNumeric(v)) return undefined;
         return +v;
-    }
+    };
 
     if(trace && trace.transpose) {
         rowlen = 0;
@@ -60,7 +60,7 @@ module.exports = function clean2dArray(zOld, trace, xa, ya) {
             collen = getCollen(zOld, i);
         }
         zNew[i] = new Array(collen);
-        for(j = 0; j < collen; j++) zNew[i][j] = cleanZvalue(padOld2new(zOld, yMap(i), xMap(j)));
+        for(j = 0; j < collen; j++) zNew[i][j] = cleanFn(padOld2new(zOld, yMap(i), xMap(j)));
     }
 
     return zNew;
