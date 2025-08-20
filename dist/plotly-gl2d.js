@@ -55422,6 +55422,10 @@ var findEmpties = __webpack_require__(94539);
 var makeBoundArray = __webpack_require__(79589);
 var BADNUM = (__webpack_require__(38580).BADNUM);
 module.exports = function calc(gd, trace) {
+  function noClean(v) {
+    return v;
+  }
+
   // prepare the raw data
   // run makeCalcdata on x and y even for heatmaps, in case of category mappings
   var xa = Axes.getFromId(gd, trace.xaxis || 'x');
@@ -55433,6 +55437,7 @@ module.exports = function calc(gd, trace) {
   var x, x0, dx, origX;
   var y, y0, dy, origY;
   var z, i, binned;
+  var __customdata, __hovertext, __text;
 
   // cancel minimum tick spacings (only applies to bars and boxes)
   xa._minDtick = 0;
@@ -55468,6 +55473,11 @@ module.exports = function calc(gd, trace) {
     y0 = trace.y0;
     dy = trace.dy;
     z = clean2dArray(zIn, trace, xa, ya);
+    if (trace.type === 'heatmap') {
+      if (trace.customdata) __customdata = clean2dArray(trace.customdata, trace, xa, ya, noClean);
+      if (trace.text) __text = clean2dArray(trace.text, trace, xa, ya, noClean);
+      if (trace.hovertext) __hovertext = clean2dArray(trace.hovertext, trace, xa, ya, noClean);
+    }
   }
   if (xa.rangebreaks || ya.rangebreaks) {
     z = dropZonBreaks(x, y, z);
@@ -55560,6 +55570,11 @@ module.exports = function calc(gd, trace) {
     cd0.xfill = makeBoundArray(dummyTrace, xIn, x0, dx, xlen, xa);
     cd0.yfill = makeBoundArray(dummyTrace, yIn, y0, dy, z.length, ya);
   }
+  if (trace.type === 'heatmap') {
+    cd0.__customdata = __customdata;
+    cd0.__hovertext = __hovertext;
+    cd0.__text = __text;
+  }
   return [cd0];
 };
 function skipBreaks(a) {
@@ -55597,12 +55612,12 @@ function dropZonBreaks(x, y, z) {
 var isNumeric = __webpack_require__(32538);
 var Lib = __webpack_require__(81372);
 var BADNUM = (__webpack_require__(38580).BADNUM);
-module.exports = function clean2dArray(zOld, trace, xa, ya) {
+module.exports = function clean2dArray(zOld, trace, xa, ya, cleanFn) {
   var rowlen, collen, getCollen, old2new, i, j;
-  function cleanZvalue(v) {
+  cleanFn = cleanFn || function cleanZvalue(v) {
     if (!isNumeric(v)) return undefined;
     return +v;
-  }
+  };
   if (trace && trace.transpose) {
     rowlen = 0;
     for (i = 0; i < zOld.length; i++) rowlen = Math.max(rowlen, zOld[i].length);
@@ -55653,7 +55668,7 @@ module.exports = function clean2dArray(zOld, trace, xa, ya) {
       collen = getCollen(zOld, i);
     }
     zNew[i] = new Array(collen);
-    for (j = 0; j < collen; j++) zNew[i][j] = cleanZvalue(padOld2new(zOld, yMap(i), xMap(j)));
+    for (j = 0; j < collen; j++) zNew[i][j] = cleanFn(padOld2new(zOld, yMap(i), xMap(j)));
   }
   return zNew;
 };
