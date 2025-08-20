@@ -73464,6 +73464,21 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
 
 /***/ }),
 
+/***/ 38043:
+/***/ (function(module) {
+
+"use strict";
+
+
+module.exports = function eventData(out, pt) {
+  out.customdata = pt._customdata;
+  out.hovertext = pt._hovertext;
+  out.text = pt._text;
+  return out;
+};
+
+/***/ }),
+
 /***/ 94539:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
@@ -73705,6 +73720,7 @@ module.exports = {
   colorbar: __webpack_require__(26546),
   style: __webpack_require__(9045),
   hoverPoints: __webpack_require__(67298),
+  eventData: __webpack_require__(38043),
   moduleType: 'trace',
   name: 'heatmap',
   basePlotModule: __webpack_require__(45694),
