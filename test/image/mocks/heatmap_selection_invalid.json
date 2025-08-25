@@ -1,0 +1,567 @@
+{
+    "data": [
+        {
+            "x": [
+                "35",
+                "36",
+                "37"
+            ],
+            "y": [
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun",
+                "Mon"
+            ],
+            "z": [
+                [
+                    77,
+                    46,
+                    null
+                ],
+                [
+                    55,
+                    37,
+                    null
+                ],
+                [
+                    59,
+                    100,
+                    null
+                ],
+                [
+                    63,
+                    20,
+                    null
+                ],
+                [
+                    40,
+                    28,
+                    null
+                ],
+                [
+                    72,
+                    35,
+                    null
+                ],
+                [
+                    null,
+                    67,
+                    99
+                ]
+            ],
+            "type": "heatmap",
+            "opacity": 1,
+            "customdata": [
+                [
+                    {
+                        "selected": true,
+                        "x": 35,
+                        "y": "Tue",
+                        "hoverText": "2025-08-26T00:00:00.000",
+                        "color": 77,
+                        "trellis": 2025,
+                        "index": 0,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": 36,
+                        "y": "Tue",
+                        "hoverText": "2025-09-02T00:00:00.000",
+                        "color": 46,
+                        "trellis": 2025,
+                        "index": 7,
+                        "plotId": "plot_0"
+                    },
+                    null
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": 35,
+                        "y": "Wed",
+                        "hoverText": "2025-08-27T00:00:00.000",
+                        "color": 55,
+                        "trellis": 2025,
+                        "index": 1,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": 36,
+                        "y": "Wed",
+                        "hoverText": "2025-09-03T00:00:00.000",
+                        "color": 37,
+                        "trellis": 2025,
+                        "index": 8,
+                        "plotId": "plot_0"
+                    },
+                    null
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": 35,
+                        "y": "Thu",
+                        "hoverText": "2025-08-28T00:00:00.000",
+                        "color": 59,
+                        "trellis": 2025,
+                        "index": 2,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": 36,
+                        "y": "Thu",
+                        "hoverText": "2025-09-04T00:00:00.000",
+                        "color": 100,
+                        "trellis": 2025,
+                        "index": 9,
+                        "plotId": "plot_0"
+                    },
+                    null
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": 35,
+                        "y": "Fri",
+                        "hoverText": "2025-08-29T00:00:00.000",
+                        "color": 63,
+                        "trellis": 2025,
+                        "index": 3,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": 36,
+                        "y": "Fri",
+                        "hoverText": "2025-09-05T00:00:00.000",
+                        "color": 20,
+                        "trellis": 2025,
+                        "index": 10,
+                        "plotId": "plot_0"
+                    },
+                    null
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": 35,
+                        "y": "Sat",
+                        "hoverText": "2025-08-30T00:00:00.000",
+                        "color": 40,
+                        "trellis": 2025,
+                        "index": 4,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": 36,
+                        "y": "Sat",
+                        "hoverText": "2025-09-06T00:00:00.000",
+                        "color": 28,
+                        "trellis": 2025,
+                        "index": 11,
+                        "plotId": "plot_0"
+                    },
+                    null
+                ],
+                [
+                    {
+                        "selected": false,
+                        "x": 35,
+                        "y": "Sun",
+                        "hoverText": "2025-08-31T00:00:00.000",
+                        "color": 72,
+                        "trellis": 2025,
+                        "index": 5,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": 36,
+                        "y": "Sun",
+                        "hoverText": "2025-09-07T00:00:00.000",
+                        "color": 35,
+                        "trellis": 2025,
+                        "index": 12,
+                        "plotId": "plot_0"
+                    },
+                    null
+                ],
+                [
+                    null,
+                    {
+                        "selected": false,
+                        "x": 36,
+                        "y": "Mon",
+                        "hoverText": "2025-09-01T00:00:00.000",
+                        "color": 67,
+                        "trellis": 2025,
+                        "index": 6,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": 37,
+                        "y": "Mon",
+                        "hoverText": "2025-09-08T00:00:00.000",
+                        "color": 99,
+                        "trellis": 2025,
+                        "index": 13,
+                        "plotId": "plot_0"
+                    }
+                ]
+            ],
+            "xgap": 2,
+            "ygap": 2,
+            "showscale": true,
+            "connectgaps": false,
+            "zsmooth": false,
+            "coloraxis": "coloraxis",
+            "selectedpoints": [
+                [
+                    1,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            "unselected": {
+                "marker": {
+                    "opacity": 0.2
+                }
+            },
+            "text": [
+                [
+                    "77",
+                    "46",
+                    ""
+                ],
+                [
+                    "55",
+                    "37",
+                    ""
+                ],
+                [
+                    "59",
+                    "100",
+                    ""
+                ],
+                [
+                    "63",
+                    "20",
+                    ""
+                ],
+                [
+                    "40",
+                    "28",
+                    ""
+                ],
+                [
+                    "72",
+                    "35",
+                    ""
+                ],
+                [
+                    "",
+                    "67",
+                    "99"
+                ]
+            ],
+            "texttemplate": "%{text}",
+            "textfont": {
+                "size": 12
+            },
+            "hovertext": [
+                [
+                    "2025-08-26T00:00:00.000",
+                    "2025-09-02T00:00:00.000",
+                    ""
+                ],
+                [
+                    "2025-08-27T00:00:00.000",
+                    "2025-09-03T00:00:00.000",
+                    ""
+                ],
+                [
+                    "2025-08-28T00:00:00.000",
+                    "2025-09-04T00:00:00.000",
+                    ""
+                ],
+                [
+                    "2025-08-29T00:00:00.000",
+                    "2025-09-05T00:00:00.000",
+                    ""
+                ],
+                [
+                    "2025-08-30T00:00:00.000",
+                    "2025-09-06T00:00:00.000",
+                    ""
+                ],
+                [
+                    "2025-08-31T00:00:00.000",
+                    "2025-09-07T00:00:00.000",
+                    ""
+                ],
+                [
+                    "",
+                    "2025-09-01T00:00:00.000",
+                    "2025-09-08T00:00:00.000"
+                ]
+            ],
+            "hoverinfo": "none",
+            "hoverongaps": false,
+            "name": "plot_0",
+            "xaxis": "x",
+            "yaxis": "y"
+        }
+    ],
+    "layout": {
+        "xaxis": {
+            "automargin": true,
+            "visible": true,
+            "showdividers": false,
+            "type": "category",
+            "fixedrange": true,
+            "ticks": "",
+            "ticklen": 5,
+            "showticklabels": true,
+            "showline": false,
+            "showgrid": false,
+            "gridwidth": 1,
+            "griddash": "solid",
+            "domain": [
+                0,
+                1
+            ],
+            "zeroline": false,
+            "tickfont": {
+                "size": 10
+            },
+            "autorange": true,
+            "side": "bottom",
+            "tickprefix": "W-",
+            "showtickprefix": "all",
+            "dtick": 1,
+            "rangeslider": {
+                "visible": false,
+                "yaxis": {}
+            },
+            "anchor": "y",
+            "range": [
+                -0.5,
+                2.5
+            ]
+        },
+        "yaxis": {
+            "automargin": true,
+            "visible": true,
+            "showdividers": false,
+            "type": "category",
+            "fixedrange": true,
+            "ticks": "",
+            "ticklen": 5,
+            "showticklabels": true,
+            "showline": false,
+            "showgrid": true,
+            "gridwidth": 1,
+            "griddash": "solid",
+            "domain": [
+                0,
+                0.9
+            ],
+            "zeroline": false,
+            "tickfont": {
+                "size": 14
+            },
+            "autorange": true,
+            "side": "left",
+            "rangeslider": {
+                "visible": false
+            },
+            "anchor": "x",
+            "categoryorder": "array",
+            "categoryarray": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+            ],
+            "range": [
+                6.5,
+                -0.5
+            ]
+        },
+        "autosize": false,
+        "colorway": [
+            "#118DFF",
+            "#12239E",
+            "#E66C37",
+            "#6B007B",
+            "#E044A7",
+            "#744EC2",
+            "#D9B300",
+            "#D64550",
+            "#197278",
+            "#1AAB40",
+            "#15C6F4",
+            "#4092FF",
+            "#FFA058",
+            "#BE5DC9",
+            "#F472D0",
+            "#B5A1FF",
+            "#C4A200",
+            "#FF8080",
+            "#00DBBC",
+            "#5BD667"
+        ],
+        "margin": {
+            "l": 10,
+            "r": 10,
+            "b": 10,
+            "t": 10
+        },
+        "plot_bgcolor": "rgba(0, 0, 0, 0)",
+        "paper_bgcolor": "rgba(0, 0, 0, 0)",
+        "font": {
+            "size": 16
+        },
+        "hoverlabel": {
+            "align": "left",
+            "bgcolor": "rgb(0, 0, 0)",
+            "bordercolor": "rgb(0, 0, 0)",
+            "font": {
+                "color": "#eee"
+            }
+        },
+        "title": {
+            "text": "",
+            "font": {
+                "color": "rgb(0, 0, 0)",
+                "size": 16
+            },
+            "x": 0.5,
+            "y": -0.05,
+            "pad": {
+                "l": 10,
+                "r": 10,
+                "b": 10,
+                "t": 10
+            }
+        },
+        "showlegend": true,
+        "legend": {
+            "orientation": "v",
+            "xanchor": "left",
+            "yanchor": "middle",
+            "x": 1,
+            "y": 0.5,
+            "itemsizing": "constant"
+        },
+        "coloraxis": {
+            "showscale": true,
+            "colorbar": {
+                "bgcolor": "transparent",
+                "len": 1,
+                "lenmode": "fraction",
+                "thickness": 0.02,
+                "thicknessmode": "fraction",
+                "outlinewidth": 0,
+                "orientation": "h",
+                "xref": "container",
+                "yref": "container",
+                "yanchor": "top",
+                "y": 1,
+                "xanchor": "left",
+                "x": 0,
+                "ticks": "",
+                "ticklen": 5,
+                "showticklabels": true,
+                "tickfont": {
+                    "size": 12
+                },
+                "title": {
+                    "text": "Commits",
+                    "font": {
+                        "size": 16,
+                        "color": "#000000"
+                    }
+                }
+            },
+            "colorscale": [
+                [
+                    0,
+                    "#f7fcb9"
+                ],
+                [
+                    0.5,
+                    "#addd8e"
+                ],
+                [
+                    1,
+                    "#31a354"
+                ]
+            ],
+            "reversescale": false
+        },
+        "annotations": [
+            {
+                "showarrow": false,
+                "text": "<span style=\"font-weight:bold\">2025</span>",
+                "xref": "paper",
+                "yref": "paper",
+                "standoff": 0,
+                "font": {
+                    "size": 14,
+                    "color": "#333333"
+                },
+                "x": 0,
+                "xanchor": "left",
+                "xshift": 5,
+                "y": 1,
+                "yanchor": "top",
+                "yshift": 5
+            }
+        ],
+        "width": 1255,
+        "height": 365,
+        "shapes": []
+    }
+}

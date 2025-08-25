@@ -73056,7 +73056,7 @@ module.exports = function calc(gd, trace) {
   var x, x0, dx, origX;
   var y, y0, dy, origY;
   var z, i, binned;
-  var __customdata, __hovertext, __text;
+  var __customdata, __hovertext, __text, __selectedpoints;
 
   // cancel minimum tick spacings (only applies to bars and boxes)
   xa._minDtick = 0;
@@ -73096,6 +73096,7 @@ module.exports = function calc(gd, trace) {
       if (trace.customdata) __customdata = clean2dArray(trace.customdata, trace, xa, ya, noClean);
       if (trace.text) __text = clean2dArray(trace.text, trace, xa, ya, noClean);
       if (trace.hovertext) __hovertext = clean2dArray(trace.hovertext, trace, xa, ya, noClean);
+      if (trace.selectedpoints) __selectedpoints = clean2dArray(trace.selectedpoints, trace, xa, ya);
     }
   }
   if (xa.rangebreaks || ya.rangebreaks) {
@@ -73193,6 +73194,7 @@ module.exports = function calc(gd, trace) {
     cd0.__customdata = __customdata;
     cd0.__hovertext = __hovertext;
     cd0.__text = __text;
+    cd0.__selectedpoints = __selectedpoints;
   }
   return [cd0];
 };
@@ -73250,7 +73252,7 @@ module.exports = function clean2dArray(zOld, trace, xa, ya, cleanFn) {
   } else {
     rowlen = zOld.length;
     getCollen = function (zOld, i) {
-      return zOld[i].length;
+      return (zOld[i] || []).length;
     };
     old2new = function (zOld, i, j) {
       return (zOld[i] || [])[j];
@@ -73966,7 +73968,8 @@ module.exports = function (gd, plotinfo, cdheatmaps, heatmapLayer) {
     var zsmooth = isContour ? 'best' : trace.zsmooth;
 
     // selection
-    var sp = cd0.trace.selectedpoints;
+    var sp = cd0.__selectedpoints;
+    var sp2 = trace.selectedpoints;
     var mo = trace.unselected ? trace.unselected.marker.opacity : 1;
 
     // get z dims
@@ -74329,7 +74332,7 @@ module.exports = function (gd, plotinfo, cdheatmaps, heatmapLayer) {
           var theText = cd0.text && cd0.text[i] && cd0.text[i][j];
           if (theText === undefined || theText === false) theText = '';
           obj.text = theText;
-          var selected = sp && sp[i] ? sp[i][j] === 1 ? 1 : 0 : 1;
+          var selected = sp2 && sp2[i] ? sp2[i][j] === 1 ? 1 : 0 : 1;
           var _t = Lib.texttemplateString(texttemplate, obj, gd._fullLayout._d3locale, obj, trace._meta || {});
           if (!_t) continue;
           var lines = _t.split('<br>');
@@ -74352,6 +74355,7 @@ module.exports = function (gd, plotinfo, cdheatmaps, heatmapLayer) {
           });
         }
       }
+      console.log(textData);
       var font = trace.textfont;
       var fontFamily = font.family;
       var fontSize = font.size;

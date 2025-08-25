@@ -55437,7 +55437,7 @@ module.exports = function calc(gd, trace) {
   var x, x0, dx, origX;
   var y, y0, dy, origY;
   var z, i, binned;
-  var __customdata, __hovertext, __text;
+  var __customdata, __hovertext, __text, __selectedpoints;
 
   // cancel minimum tick spacings (only applies to bars and boxes)
   xa._minDtick = 0;
@@ -55477,6 +55477,7 @@ module.exports = function calc(gd, trace) {
       if (trace.customdata) __customdata = clean2dArray(trace.customdata, trace, xa, ya, noClean);
       if (trace.text) __text = clean2dArray(trace.text, trace, xa, ya, noClean);
       if (trace.hovertext) __hovertext = clean2dArray(trace.hovertext, trace, xa, ya, noClean);
+      if (trace.selectedpoints) __selectedpoints = clean2dArray(trace.selectedpoints, trace, xa, ya);
     }
   }
   if (xa.rangebreaks || ya.rangebreaks) {
@@ -55574,6 +55575,7 @@ module.exports = function calc(gd, trace) {
     cd0.__customdata = __customdata;
     cd0.__hovertext = __hovertext;
     cd0.__text = __text;
+    cd0.__selectedpoints = __selectedpoints;
   }
   return [cd0];
 };
@@ -55631,7 +55633,7 @@ module.exports = function clean2dArray(zOld, trace, xa, ya, cleanFn) {
   } else {
     rowlen = zOld.length;
     getCollen = function (zOld, i) {
-      return zOld[i].length;
+      return (zOld[i] || []).length;
     };
     old2new = function (zOld, i, j) {
       return (zOld[i] || [])[j];
