@@ -20,7 +20,7 @@ module.exports = function clean2dArray(zOld, trace, xa, ya, cleanFn) {
         old2new = function(zOld, i, j) { return (zOld[j] || [])[i]; };
     } else {
         rowlen = zOld.length;
-        getCollen = function(zOld, i) { return zOld[i].length; };
+        getCollen = function(zOld, i) { return (zOld[i] || []).length; };
         old2new = function(zOld, i, j) { return (zOld[i] || [])[j]; };
     }
 
