@@ -74956,6 +74956,7 @@ module.exports = function (gd, plotinfo, cdheatmaps, heatmapLayer) {
     // selection
     var sp = cd0.__selectedpoints;
     var sp2 = trace.selectedpoints;
+    var zin = trace.z;
     var mo = trace.unselected ? trace.unselected.marker.opacity : 1;
 
     // get z dims
@@ -75307,7 +75308,7 @@ module.exports = function (gd, plotinfo, cdheatmaps, heatmapLayer) {
           }, trace, gd._fullLayout);
           obj.x = xVal;
           obj.y = yVal;
-          var zVal = cd0.z[i][j];
+          var zVal = zin[i][j];
           if (zVal === undefined) {
             obj.z = '';
             obj.zLabel = '';
@@ -75341,7 +75342,6 @@ module.exports = function (gd, plotinfo, cdheatmaps, heatmapLayer) {
           });
         }
       }
-      console.log(textData);
       var font = trace.textfont;
       var fontFamily = font.family;
       var fontSize = font.size;
