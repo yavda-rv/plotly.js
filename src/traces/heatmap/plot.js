@@ -49,6 +49,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
 
         // selection
         var sp = cd0.__selectedpoints;
+        var sp2 = trace.selectedpoints;
         var mo = trace.unselected ? trace.unselected.marker.opacity : 1;
 
         // get z dims
@@ -454,7 +455,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
                     if(theText === undefined || theText === false) theText = '';
                     obj.text = theText;
 
-                    var selected = (sp && sp[i]) ? (sp[i][j] === 1 ? 1 : 0) : 1;
+                    var selected = (sp2 && sp2[i]) ? (sp2[i][j] === 1 ? 1 : 0) : 1;
 
                     var _t = Lib.texttemplateString(texttemplate, obj, gd._fullLayout._d3locale, obj, trace._meta || {});
                     if(!_t) continue;
