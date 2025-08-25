@@ -48,7 +48,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
         var zsmooth = isContour ? 'best' : trace.zsmooth;
 
         // selection
-        var sp = cd0.trace.selectedpoints;
+        var sp = cd0.__selectedpoints;
         var mo = trace.unselected ? trace.unselected.marker.opacity : 1;
 
         // get z dims
