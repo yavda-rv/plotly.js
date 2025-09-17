@@ -63,6 +63,13 @@ var attrs = module.exports = overrideAll({
         ].join(' ')
     },
 
+    sizeRatio: {
+        valType: 'number',
+        min: 0.1,
+        dflt: 1,
+        description: 'Default size that the sankey should take while creating the sankey'
+    },
+
     textfont: fontAttrs({
         description: 'Sets the font for node labels'
     }),

@@ -35,6 +35,7 @@ function sankeyModel(layout, d, traceIndex) {
     var horizontal = trace.orientation === 'h';
     var nodePad = trace.node.pad;
     var nodeThickness = trace.node.thickness;
+    var sizeRatio = trace.sizeRatio;
     var nodeAlign = {
         justify: d3Sankey.sankeyJustify,
         left: d3Sankey.sankeyLeft,
@@ -61,7 +62,7 @@ function sankeyModel(layout, d, traceIndex) {
 
     sankey
       .iterations(c.sankeyIterations)
-      .size(horizontal ? [width, height] : [height, width])
+      .size(horizontal ? [width , height * sizeRatio] : [height, width * sizeRatio])
       .nodeWidth(nodeThickness)
       .nodePadding(nodePad)
       .nodeId(function(d) {

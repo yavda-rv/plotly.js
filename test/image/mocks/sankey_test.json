@@ -1,0 +1,712 @@
+{
+    "data": [
+        {
+            "type": "sankey",
+            "arrangement": "freeform",
+            "showlegend": true,
+            "name": "",
+            "orientation": "h",
+            "sizeRatio": 0.2,
+            "textfont": {
+                "size": 19
+            },
+            "customdata": [
+                {
+                    "selected": false,
+                    "x": "Ad Revenue",
+                    "y": "Revenue",
+                    "z": 54.5,
+                    "index": 0,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Search Advertising",
+                    "y": "Ad Revenue",
+                    "z": 39.5,
+                    "index": 1,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Revenue",
+                    "y": "Gross Profit",
+                    "z": 37.9,
+                    "index": 2,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Revenue",
+                    "y": "Cost of Revenue",
+                    "z": 31.2,
+                    "index": 3,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Gross Profit",
+                    "y": "Operating Expenses",
+                    "z": 20.8,
+                    "index": 4,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Cost of Revenue",
+                    "y": "Other Expenses (1)",
+                    "z": 19.3,
+                    "index": 5,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Gross Profit",
+                    "y": "Operating Profit",
+                    "z": 17.1,
+                    "index": 6,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Operating Profit",
+                    "y": "Net Profit",
+                    "z": 13.9,
+                    "index": 7,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Cost of Revenue",
+                    "y": "TAC",
+                    "z": 11.8,
+                    "index": 8,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Operating Expenses",
+                    "y": "R&#38;D",
+                    "z": 10.3,
+                    "index": 9,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "AdMob",
+                    "y": "Ad Revenue",
+                    "z": 7.9,
+                    "index": 10,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "YouTube",
+                    "y": "Ad Revenue",
+                    "z": 7.15,
+                    "index": 11,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Google Cloud",
+                    "y": "Revenue",
+                    "z": 6.9,
+                    "index": 12,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Google Play",
+                    "y": "Revenue",
+                    "z": 6.9,
+                    "index": 13,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Operating Expenses",
+                    "y": "S&#38;M",
+                    "z": 6.9,
+                    "index": 14,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Operating Expenses",
+                    "y": "G&#38;A",
+                    "z": 3.6,
+                    "index": 15,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Operating Profit",
+                    "y": "Tax",
+                    "z": 2.3,
+                    "index": 16,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Operating Profit",
+                    "y": "Other Expenses (2)",
+                    "z": 0.9,
+                    "index": 17,
+                    "plotId": "plot_0"
+                },
+                {
+                    "selected": false,
+                    "x": "Other Revenue",
+                    "y": "Revenue",
+                    "z": 0.9,
+                    "index": 18,
+                    "plotId": "plot_0"
+                }
+            ],
+            "node": {
+                "label": [
+                    "Ad Revenue",
+                    "Search Advertising",
+                    "Revenue",
+                    "Gross Profit",
+                    "Cost of Revenue",
+                    "Operating Profit",
+                    "Operating Expenses",
+                    "AdMob",
+                    "YouTube",
+                    "Google Cloud",
+                    "Google Play",
+                    "Other Revenue",
+                    "Other Expenses (1)",
+                    "Net Profit",
+                    "TAC",
+                    "R&#38;D",
+                    "S&#38;M",
+                    "G&#38;A",
+                    "Tax",
+                    "Other Expenses (2)"
+                ],
+                "thickness": 20,
+                "color": [
+                    "#4092ff",
+                    "#118dff",
+                    "#118dff",
+                    "#1aab40",
+                    "#d64550",
+                    "#1aab40",
+                    "#d64550",
+                    "#4092ff",
+                    "#4092FF",
+                    "#d9b300",
+                    "#d9b300",
+                    "#d9b300",
+                    "#d64550",
+                    "#1aab40",
+                    "#d64550",
+                    "#d64550",
+                    "#d64550",
+                    "#d64550",
+                    "#d64550",
+                    "#d64550"
+                ],
+                "pad": 10,
+                "line": {
+                    "color": "#ffffff",
+                    "width": 2
+                },
+                "customdata": [
+                    {
+                        "selected": false,
+                        "x": "Ad Revenue",
+                        "y": "Revenue",
+                        "z": 54.5,
+                        "index": 0,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Search Advertising",
+                        "y": "Ad Revenue",
+                        "z": 39.5,
+                        "index": 1,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Revenue",
+                        "y": "Gross Profit",
+                        "z": 37.9,
+                        "index": 2,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Revenue",
+                        "y": "Cost of Revenue",
+                        "z": 31.2,
+                        "index": 3,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Gross Profit",
+                        "y": "Operating Expenses",
+                        "z": 20.8,
+                        "index": 4,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Cost of Revenue",
+                        "y": "Other Expenses (1)",
+                        "z": 19.3,
+                        "index": 5,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Gross Profit",
+                        "y": "Operating Profit",
+                        "z": 17.1,
+                        "index": 6,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Profit",
+                        "y": "Net Profit",
+                        "z": 13.9,
+                        "index": 7,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Cost of Revenue",
+                        "y": "TAC",
+                        "z": 11.8,
+                        "index": 8,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Expenses",
+                        "y": "R&#38;D",
+                        "z": 10.3,
+                        "index": 9,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "AdMob",
+                        "y": "Ad Revenue",
+                        "z": 7.9,
+                        "index": 10,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "YouTube",
+                        "y": "Ad Revenue",
+                        "z": 7.15,
+                        "index": 11,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Google Cloud",
+                        "y": "Revenue",
+                        "z": 6.9,
+                        "index": 12,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Google Play",
+                        "y": "Revenue",
+                        "z": 6.9,
+                        "index": 13,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Expenses",
+                        "y": "S&#38;M",
+                        "z": 6.9,
+                        "index": 14,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Expenses",
+                        "y": "G&#38;A",
+                        "z": 3.6,
+                        "index": 15,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Profit",
+                        "y": "Tax",
+                        "z": 2.3,
+                        "index": 16,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Profit",
+                        "y": "Other Expenses (2)",
+                        "z": 0.9,
+                        "index": 17,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Other Revenue",
+                        "y": "Revenue",
+                        "z": 0.9,
+                        "index": 18,
+                        "plotId": "plot_0"
+                    }
+                ],
+                "hoverinfo": "all"
+            },
+            "link": {
+                "label": [
+                    "Ad Revenue -> Revenue",
+                    "Search Advertising -> Ad Revenue",
+                    "Revenue -> Gross Profit",
+                    "Revenue -> Cost of Revenue",
+                    "Gross Profit -> Operating Expenses",
+                    "Cost of Revenue -> Other Expenses (1)",
+                    "Gross Profit -> Operating Profit",
+                    "Operating Profit -> Net Profit",
+                    "Cost of Revenue -> TAC",
+                    "Operating Expenses -> R&#38;D",
+                    "AdMob -> Ad Revenue",
+                    "YouTube -> Ad Revenue",
+                    "Google Cloud -> Revenue",
+                    "Google Play -> Revenue",
+                    "Operating Expenses -> S&#38;M",
+                    "Operating Expenses -> G&#38;A",
+                    "Operating Profit -> Tax",
+                    "Operating Profit -> Other Expenses (2)",
+                    "Other Revenue -> Revenue"
+                ],
+                "source": [
+                    0,
+                    1,
+                    2,
+                    2,
+                    3,
+                    4,
+                    3,
+                    5,
+                    4,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    6,
+                    6,
+                    5,
+                    5,
+                    11
+                ],
+                "target": [
+                    2,
+                    0,
+                    3,
+                    4,
+                    6,
+                    12,
+                    5,
+                    13,
+                    14,
+                    15,
+                    0,
+                    0,
+                    2,
+                    2,
+                    16,
+                    17,
+                    18,
+                    19,
+                    2
+                ],
+                "value": [
+                    54.5,
+                    39.5,
+                    37.9,
+                    31.2,
+                    20.8,
+                    19.3,
+                    17.1,
+                    13.9,
+                    11.8,
+                    10.3,
+                    7.9,
+                    7.15,
+                    6.9,
+                    6.9,
+                    6.9,
+                    3.6,
+                    2.3,
+                    0.9,
+                    0.9
+                ],
+                "arrowlen": 0,
+                "color": "#E6E6E6ff",
+                "line": {
+                    "width": 0
+                },
+                "customdata": [
+                    {
+                        "selected": false,
+                        "x": "Ad Revenue",
+                        "y": "Revenue",
+                        "z": 54.5,
+                        "index": 0,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Search Advertising",
+                        "y": "Ad Revenue",
+                        "z": 39.5,
+                        "index": 1,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Revenue",
+                        "y": "Gross Profit",
+                        "z": 37.9,
+                        "index": 2,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Revenue",
+                        "y": "Cost of Revenue",
+                        "z": 31.2,
+                        "index": 3,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Gross Profit",
+                        "y": "Operating Expenses",
+                        "z": 20.8,
+                        "index": 4,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Cost of Revenue",
+                        "y": "Other Expenses (1)",
+                        "z": 19.3,
+                        "index": 5,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Gross Profit",
+                        "y": "Operating Profit",
+                        "z": 17.1,
+                        "index": 6,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Profit",
+                        "y": "Net Profit",
+                        "z": 13.9,
+                        "index": 7,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Cost of Revenue",
+                        "y": "TAC",
+                        "z": 11.8,
+                        "index": 8,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Expenses",
+                        "y": "R&#38;D",
+                        "z": 10.3,
+                        "index": 9,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "AdMob",
+                        "y": "Ad Revenue",
+                        "z": 7.9,
+                        "index": 10,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "YouTube",
+                        "y": "Ad Revenue",
+                        "z": 7.15,
+                        "index": 11,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Google Cloud",
+                        "y": "Revenue",
+                        "z": 6.9,
+                        "index": 12,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Google Play",
+                        "y": "Revenue",
+                        "z": 6.9,
+                        "index": 13,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Expenses",
+                        "y": "S&#38;M",
+                        "z": 6.9,
+                        "index": 14,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Expenses",
+                        "y": "G&#38;A",
+                        "z": 3.6,
+                        "index": 15,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Profit",
+                        "y": "Tax",
+                        "z": 2.3,
+                        "index": 16,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Operating Profit",
+                        "y": "Other Expenses (2)",
+                        "z": 0.9,
+                        "index": 17,
+                        "plotId": "plot_0"
+                    },
+                    {
+                        "selected": false,
+                        "x": "Other Revenue",
+                        "y": "Revenue",
+                        "z": 0.9,
+                        "index": 18,
+                        "plotId": "plot_0"
+                    }
+                ],
+                "hoverinfo": "all"
+            },
+            "domain": {
+                "x": [
+                    0,
+                    1
+                ],
+                "y": [
+                    0,
+                    1
+                ]
+            }
+        }
+    ],
+    "layout": {
+        "xaxis": {
+            "visible": false
+        },
+        "yaxis": {
+            "visible": false
+        },
+        "autosize": false,
+        "colorway": [
+            "#118DFF",
+            "#12239E",
+            "#E66C37",
+            "#6B007B",
+            "#E044A7",
+            "#744EC2",
+            "#D9B300",
+            "#D64550",
+            "#197278",
+            "#1AAB40",
+            "#15C6F4",
+            "#4092FF",
+            "#FFA058",
+            "#BE5DC9",
+            "#F472D0",
+            "#B5A1FF",
+            "#C4A200",
+            "#FF8080",
+            "#00DBBC",
+            "#5BD667"
+        ],
+        "margin": {
+            "l": 10,
+            "r": 10,
+            "b": 10,
+            "t": 10
+        },
+        "plot_bgcolor": "rgba(0, 0, 0, 0)",
+        "paper_bgcolor": "rgba(0, 0, 0, 0)",
+        "font": {
+            "size": 10.666666666666666
+        },
+        "hoverlabel": {
+            "align": "left",
+            "bgcolor": "rgb(0, 0, 0)",
+            "bordercolor": "rgb(0, 0, 0)",
+            "font": {
+                "color": "#eee"
+            }
+        },
+        "title": {
+            "text": "",
+            "font": {
+                "color": "rgb(0, 0, 0)",
+                "size": 16
+            },
+            "x": 0.5,
+            "y": -0.05,
+            "pad": {
+                "l": 10,
+                "r": 10,
+                "b": 10,
+                "t": 10
+            }
+        },
+        "showlegend": true,
+        "legend": {
+            "orientation": "v",
+            "xanchor": "left",
+            "yanchor": "middle",
+            "x": 1,
+            "y": 0.5,
+            "itemsizing": "constant",
+            "font": {
+                "size": 10.666666666666666
+            }
+        },
+        "width": 934,
+        "height": 664,
+        "shapes": []
+    }
+}

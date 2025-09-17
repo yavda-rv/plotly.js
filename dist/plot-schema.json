@@ -40852,6 +40852,13 @@
      "editType": "calc",
      "valType": "any"
     },
+    "sizeRatio": {
+     "description": "Default size that the sankey should take while creating the sankey",
+     "dflt": 1,
+     "editType": "calc",
+     "min": 0.1,
+     "valType": "number"
+    },
     "stream": {
      "editType": "calc",
      "maxpoints": {

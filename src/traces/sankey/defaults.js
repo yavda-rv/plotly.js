@@ -105,6 +105,8 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
         dfltArrangement = 'freeform';
     }
     coerce('arrangement', dfltArrangement);
+    
+    coerce('sizeRatio');
 
     Lib.coerceFont(coerce, 'textfont', Lib.extendFlat({}, layout.font));
 

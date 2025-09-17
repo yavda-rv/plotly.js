@@ -89494,6 +89494,12 @@ var attrs = module.exports = overrideAll({
     dflt: 'snap',
     description: ['If value is `snap` (the default), the node arrangement is assisted by automatic snapping of elements to', 'preserve space between nodes specified via `nodepad`.', 'If value is `perpendicular`, the nodes can only move along a line perpendicular to the flow.', 'If value is `freeform`, the nodes can freely move on the plane.', 'If value is `fixed`, the nodes are stationary.'].join(' ')
   },
+  sizeRatio: {
+    valType: 'number',
+    min: 0.1,
+    dflt: 1,
+    description: 'Default size that the sankey should take while creating the sankey'
+  },
   textfont: fontAttrs({
     description: 'Sets the font for node labels'
   }),
@@ -90099,6 +90105,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
     dfltArrangement = 'freeform';
   }
   coerce('arrangement', dfltArrangement);
+  coerce('sizeRatio');
   Lib.coerceFont(coerce, 'textfont', Lib.extendFlat({}, layout.font));
 
   // disable 1D transforms - arrays here are 1D but their lengths/meanings
@@ -90508,6 +90515,7 @@ function sankeyModel(layout, d, traceIndex) {
   var horizontal = trace.orientation === 'h';
   var nodePad = trace.node.pad;
   var nodeThickness = trace.node.thickness;
+  var sizeRatio = trace.sizeRatio;
   var nodeAlign = {
     justify: d3Sankey.sankeyJustify,
     left: d3Sankey.sankeyLeft,
@@ -90527,7 +90535,7 @@ function sankeyModel(layout, d, traceIndex) {
   } else {
     sankey = d3Sankey.sankey();
   }
-  sankey.iterations(c.sankeyIterations).size(horizontal ? [width, height] : [height, width]).nodeWidth(nodeThickness).nodePadding(nodePad).nodeId(function (d) {
+  sankey.iterations(c.sankeyIterations).size(horizontal ? [width, height * sizeRatio] : [height, width * sizeRatio]).nodeWidth(nodeThickness).nodePadding(nodePad).nodeId(function (d) {
     return d.pointNumber;
   }).nodeAlign(nodeAlign).nodes(nodes).links(links);
   var graph = sankey();
