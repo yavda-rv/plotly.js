@@ -946,14 +946,14 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
         .attr('d', linkPath());
 
     sankeyLink
-        .style('opacity', function() { return (gd._context.staticPlot || firstRender || dragcover) ? 1 : 0;})
-        .transition()
-        .ease(c.ease).duration(c.duration)
+        //.style('opacity', function() { return (gd._context.staticPlot || firstRender || dragcover) ? 1 : 0;})
+        //.transition()
+        //.ease(c.ease).duration(c.duration)
         .style('opacity', 1);
 
     sankeyLink.exit()
-        .transition()
-        .ease(c.ease).duration(c.duration)
+        //.transition()
+        //.ease(c.ease).duration(c.duration)
         .style('opacity', 0)
         .remove();
 

@@ -89983,10 +89983,15 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
   }).style('stroke-width', function (d) {
     return salientEnough(d) ? d.linkLineWidth : 1;
   }).attr('d', linkPath());
-  sankeyLink.style('opacity', function () {
-    return gd._context.staticPlot || firstRender || dragcover ? 1 : 0;
-  }).transition().ease(c.ease).duration(c.duration).style('opacity', 1);
-  sankeyLink.exit().transition().ease(c.ease).duration(c.duration).style('opacity', 0).remove();
+  sankeyLink
+  //.style('opacity', function() { return (gd._context.staticPlot || firstRender || dragcover) ? 1 : 0;})
+  //.transition()
+  //.ease(c.ease).duration(c.duration)
+  .style('opacity', 1);
+  sankeyLink.exit()
+  //.transition()
+  //.ease(c.ease).duration(c.duration)
+  .style('opacity', 0).remove();
   var sankeyNodeSet = sankey.selectAll('.' + c.cn.sankeyNodeSet).data(repeat, keyFun);
   sankeyNodeSet.enter().append('g').classed(c.cn.sankeyNodeSet, true);
   sankeyNodeSet.style('cursor', function (d) {
