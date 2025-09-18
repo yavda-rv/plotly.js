@@ -813,6 +813,43 @@ function switchToSankeyFormat(nodes) {
     }
 }
 
+function getNodeText(d) {
+    var showlabels = d.node.trace.node.showlabels;
+    if(!showlabels)
+        return '';
+    var texttemplate = d.node.trace.node.texttemplate;
+    var styleStr = '';
+    var styles = [];
+    if (d.node.trace.textfontbold) {
+        styles.push("font-weight:bold");
+    }
+    if (d.node.trace.textfontunderline) {
+        styles.push("text-decoration:underline");
+    }
+    if (d.node.trace.textfontitalic) {
+        styles.push("font-style:italic");
+    }
+    if(styles.length != 0) {
+        styleStr = styles.join(";");
+    }
+
+    if(texttemplate == null || texttemplate == '') {
+        if(styleStr == '') {
+            return d.node.label;
+        }
+        else {
+            return `<span style="${styleStr}">${d.node.label}</span>`
+        }
+    }
+
+    if (styleStr != '') {
+        styleStr = styles.join(";");
+        texttemplate = `<span style="${styleStr}">${texttemplate}</span>`;
+    }
+
+    return Lib.texttemplateString(texttemplate, null, null, d.node);
+}
+
 // scene graph
 module.exports = function(gd, svg, calcData, layout, callbacks) {
     var isStatic = gd._context.staticPlot;
@@ -995,7 +1032,7 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
 
     nodeLabel
         .attr('data-notex', 1) // prohibit tex interpretation until we can handle tex and regular text together
-        .text(function(d) { return d.node.label; })
+        .text(getNodeText)
         .each(function(d) {
             var e = d3.select(this);
             Drawing.font(e, d.textFont);

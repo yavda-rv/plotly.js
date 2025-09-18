@@ -34,6 +34,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
     coerceNode('hoverinfo', traceIn.hoverinfo);
     handleHoverLabelDefaults(nodeIn, nodeOut, coerceNode, hoverlabelDefault);
     coerceNode('hovertemplate');
+    coerceNode('texttemplate');
     coerceNode('align');
 
     var colors = layout.colorway;
@@ -44,6 +45,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
         return Color.addOpacity(defaultNodePalette(i), 0.8);
     }));
     coerceNode('customdata');
+    coerceNode('showlabels');
 
     // link attributes
     var linkIn = traceIn.link || {};
@@ -109,6 +111,9 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
     coerce('sizeRatio');
 
     Lib.coerceFont(coerce, 'textfont', Lib.extendFlat({}, layout.font));
+    coerce('textfontbold');
+    coerce('textfontunderline');
+    coerce('textfontitalic');
 
     // disable 1D transforms - arrays here are 1D but their lengths/meanings
     // don't match, between nodes and links

@@ -6,9 +6,9 @@
             "showlegend": true,
             "name": "",
             "orientation": "h",
-            "sizeRatio": 0.2,
+            "sizeRatio": 0.5,
             "textfont": {
-                "size": 19
+                "size": 12
             },
             "customdata": [
                 {
@@ -165,6 +165,7 @@
                 }
             ],
             "node": {
+                "texttemplate": "%{label}<br><span style='color:%{color}'>%{value:0.1f}B</span>",
                 "label": [
                     "Ad Revenue",
                     "Search Advertising",

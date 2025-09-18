@@ -6,6 +6,7 @@ var colorAttrs = require('../../components/color/attributes');
 var fxAttrs = require('../../components/fx/attributes');
 var domainAttrs = require('../../plots/domain').attributes;
 var hovertemplateAttrs = require('../../plots/template_attributes').hovertemplateAttrs;
+var texttemplateAttrs = require('../../plots/template_attributes').texttemplateAttrs;
 var colorAttributes = require('../../components/colorscale/attributes');
 var templatedArray = require('../../plot_api/plot_template').templatedArray;
 var descriptionOnlyNumbers = require('../../plots/cartesian/axis_format_attributes').descriptionOnlyNumbers;
@@ -74,6 +75,24 @@ var attrs = module.exports = overrideAll({
         description: 'Sets the font for node labels'
     }),
 
+    textfontbold: {
+        valType: 'boolean',
+        dflt: false,
+        description: 'Determines the font for node labels is bold'
+    },
+
+    textfontunderline: {
+        valType: 'boolean',
+        dflt: false,
+        description: 'Determines the font for node labels is underlined'
+    },
+
+    textfontitalic: {
+        valType: 'boolean',
+        dflt: false,
+        description: 'Determines the font for node labels is italic'
+    },
+
     // Remove top-level customdata
     customdata: undefined,
 
@@ -82,6 +101,11 @@ var attrs = module.exports = overrideAll({
             valType: 'data_array',
             dflt: [],
             description: 'The shown name of the node.'
+        },
+        showlabels: {
+            valType: 'boolean',
+            dflt: true,
+            description: 'Determines whether or not the labels are drawn.'
         },
         groups: {
             valType: 'info_array',
@@ -170,6 +194,10 @@ var attrs = module.exports = overrideAll({
         hovertemplate: hovertemplateAttrs({}, {
             description: 'Variables `sourceLinks` and `targetLinks` are arrays of link objects.',
             keys: ['value', 'label']
+        }),
+        texttemplate: texttemplateAttrs({}, {
+            description: 'text template to display node text',
+            keys:['value', 'label', 'color']
         }),
         align: {
             valType: 'enumerated',

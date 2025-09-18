@@ -43,7 +43,7 @@ The main plotly.js bundles weight in at:
 
 | plotly.js | plotly.min.js | plotly.min.js + gzip | plotly-with-meta.js |
 |-----------|---------------|----------------------|---------------------|
-| 6 MB | 2.5 MB | 803.6 kB | 6.3 MB |
+| 6 MB | 2.5 MB | 803.8 kB | 6.3 MB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-2.30.1.js
@@ -252,7 +252,7 @@ The `strict` partial bundle contains trace modules `bar`, `barpolar`, `box`, `ca
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 6.4 MB | 2.8 MB | 890.9 kB |
+| 6.4 MB | 2.8 MB | 891.2 kB |
 
 #### CDN links
 > https://cdn.plot.ly/plotly-strict-2.30.1.js

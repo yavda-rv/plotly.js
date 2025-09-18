@@ -89456,6 +89456,7 @@ var colorAttrs = __webpack_require__(98132);
 var fxAttrs = __webpack_require__(63299);
 var domainAttrs = (__webpack_require__(26067)/* .attributes */ .u);
 var hovertemplateAttrs = (__webpack_require__(97661)/* .hovertemplateAttrs */ .rb);
+var texttemplateAttrs = (__webpack_require__(97661)/* .texttemplateAttrs */ .ay);
 var colorAttributes = __webpack_require__(3760);
 var templatedArray = (__webpack_require__(73767).templatedArray);
 var descriptionOnlyNumbers = (__webpack_require__(88007).descriptionOnlyNumbers);
@@ -89503,6 +89504,21 @@ var attrs = module.exports = overrideAll({
   textfont: fontAttrs({
     description: 'Sets the font for node labels'
   }),
+  textfontbold: {
+    valType: 'boolean',
+    dflt: false,
+    description: 'Determines the font for node labels is bold'
+  },
+  textfontunderline: {
+    valType: 'boolean',
+    dflt: false,
+    description: 'Determines the font for node labels is underlined'
+  },
+  textfontitalic: {
+    valType: 'boolean',
+    dflt: false,
+    description: 'Determines the font for node labels is italic'
+  },
   // Remove top-level customdata
   customdata: undefined,
   node: {
@@ -89510,6 +89526,11 @@ var attrs = module.exports = overrideAll({
       valType: 'data_array',
       dflt: [],
       description: 'The shown name of the node.'
+    },
+    showlabels: {
+      valType: 'boolean',
+      dflt: true,
+      description: 'Determines whether or not the labels are drawn.'
     },
     groups: {
       valType: 'info_array',
@@ -89586,6 +89607,10 @@ var attrs = module.exports = overrideAll({
     hovertemplate: hovertemplateAttrs({}, {
       description: 'Variables `sourceLinks` and `targetLinks` are arrays of link objects.',
       keys: ['value', 'label']
+    }),
+    texttemplate: texttemplateAttrs({}, {
+      description: 'text template to display node text',
+      keys: ['value', 'label', 'color']
     }),
     align: {
       valType: 'enumerated',
@@ -90047,6 +90072,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
   coerceNode('hoverinfo', traceIn.hoverinfo);
   handleHoverLabelDefaults(nodeIn, nodeOut, coerceNode, hoverlabelDefault);
   coerceNode('hovertemplate');
+  coerceNode('texttemplate');
   coerceNode('align');
   var colors = layout.colorway;
   var defaultNodePalette = function (i) {
@@ -90056,6 +90082,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
     return Color.addOpacity(defaultNodePalette(i), 0.8);
   }));
   coerceNode('customdata');
+  coerceNode('showlabels');
 
   // link attributes
   var linkIn = traceIn.link || {};
@@ -90107,6 +90134,9 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
   coerce('arrangement', dfltArrangement);
   coerce('sizeRatio');
   Lib.coerceFont(coerce, 'textfont', Lib.extendFlat({}, layout.font));
+  coerce('textfontbold');
+  coerce('textfontunderline');
+  coerce('textfontitalic');
 
   // disable 1D transforms - arrays here are 1D but their lengths/meanings
   // don't match, between nodes and links
@@ -91128,6 +91158,37 @@ function switchToSankeyFormat(nodes) {
     nodes[i].x1 = nodes[i].x0 + nodes[i].dx;
   }
 }
+function getNodeText(d) {
+  var showlabels = d.node.trace.node.showlabels;
+  if (!showlabels) return '';
+  var texttemplate = d.node.trace.node.texttemplate;
+  var styleStr = '';
+  var styles = [];
+  if (d.node.trace.textfontbold) {
+    styles.push("font-weight:bold");
+  }
+  if (d.node.trace.textfontunderline) {
+    styles.push("text-decoration:underline");
+  }
+  if (d.node.trace.textfontitalic) {
+    styles.push("font-style:italic");
+  }
+  if (styles.length != 0) {
+    styleStr = styles.join(";");
+  }
+  if (texttemplate == null || texttemplate == '') {
+    if (styleStr == '') {
+      return d.node.label;
+    } else {
+      return `<span style="${styleStr}">${d.node.label}</span>`;
+    }
+  }
+  if (styleStr != '') {
+    styleStr = styles.join(";");
+    texttemplate = `<span style="${styleStr}">${texttemplate}</span>`;
+  }
+  return Lib.texttemplateString(texttemplate, null, null, d.node);
+}
 
 // scene graph
 module.exports = function (gd, svg, calcData, layout, callbacks) {
@@ -91228,9 +91289,7 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
   var nodeLabel = sankeyNode.selectAll('.' + c.cn.nodeLabel).data(repeat);
   nodeLabel.enter().append('text').classed(c.cn.nodeLabel, true).style('cursor', 'default');
   nodeLabel.attr('data-notex', 1) // prohibit tex interpretation until we can handle tex and regular text together
-  .text(function (d) {
-    return d.node.label;
-  }).each(function (d) {
+  .text(getNodeText).each(function (d) {
     var e = d3.select(this);
     Drawing.font(e, d.textFont);
     svgTextUtils.convertToTspans(e, gd);

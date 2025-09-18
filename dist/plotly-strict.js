@@ -88241,6 +88241,7 @@ var colorAttrs = __webpack_require__(86784);
 var fxAttrs = __webpack_require__(29927);
 var domainAttrs = (__webpack_require__(72399)/* .attributes */ .u);
 var hovertemplateAttrs = (__webpack_require__(46689)/* .hovertemplateAttrs */ .rb);
+var texttemplateAttrs = (__webpack_require__(46689)/* .texttemplateAttrs */ .ay);
 var colorAttributes = __webpack_require__(52388);
 var templatedArray = (__webpack_require__(28251).templatedArray);
 var descriptionOnlyNumbers = (__webpack_require__(20299).descriptionOnlyNumbers);
@@ -88281,12 +88282,28 @@ var attrs = module.exports = overrideAll({
     dflt: 1
   },
   textfont: fontAttrs({}),
+  textfontbold: {
+    valType: 'boolean',
+    dflt: false
+  },
+  textfontunderline: {
+    valType: 'boolean',
+    dflt: false
+  },
+  textfontitalic: {
+    valType: 'boolean',
+    dflt: false
+  },
   // Remove top-level customdata
   customdata: undefined,
   node: {
     label: {
       valType: 'data_array',
       dflt: []
+    },
+    showlabels: {
+      valType: 'boolean',
+      dflt: true
     },
     groups: {
       valType: 'info_array',
@@ -88352,6 +88369,9 @@ var attrs = module.exports = overrideAll({
     // needs editType override,
     hovertemplate: hovertemplateAttrs({}, {
       keys: ['value', 'label']
+    }),
+    texttemplate: texttemplateAttrs({}, {
+      keys: ['value', 'label', 'color']
     }),
     align: {
       valType: 'enumerated',
@@ -88795,6 +88815,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
   coerceNode('hoverinfo', traceIn.hoverinfo);
   handleHoverLabelDefaults(nodeIn, nodeOut, coerceNode, hoverlabelDefault);
   coerceNode('hovertemplate');
+  coerceNode('texttemplate');
   coerceNode('align');
   var colors = layout.colorway;
   var defaultNodePalette = function (i) {
@@ -88804,6 +88825,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
     return Color.addOpacity(defaultNodePalette(i), 0.8);
   }));
   coerceNode('customdata');
+  coerceNode('showlabels');
 
   // link attributes
   var linkIn = traceIn.link || {};
@@ -88855,6 +88877,9 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
   coerce('arrangement', dfltArrangement);
   coerce('sizeRatio');
   Lib.coerceFont(coerce, 'textfont', Lib.extendFlat({}, layout.font));
+  coerce('textfontbold');
+  coerce('textfontunderline');
+  coerce('textfontitalic');
 
   // disable 1D transforms - arrays here are 1D but their lengths/meanings
   // don't match, between nodes and links
@@ -89874,6 +89899,37 @@ function switchToSankeyFormat(nodes) {
     nodes[i].x1 = nodes[i].x0 + nodes[i].dx;
   }
 }
+function getNodeText(d) {
+  var showlabels = d.node.trace.node.showlabels;
+  if (!showlabels) return '';
+  var texttemplate = d.node.trace.node.texttemplate;
+  var styleStr = '';
+  var styles = [];
+  if (d.node.trace.textfontbold) {
+    styles.push("font-weight:bold");
+  }
+  if (d.node.trace.textfontunderline) {
+    styles.push("text-decoration:underline");
+  }
+  if (d.node.trace.textfontitalic) {
+    styles.push("font-style:italic");
+  }
+  if (styles.length != 0) {
+    styleStr = styles.join(";");
+  }
+  if (texttemplate == null || texttemplate == '') {
+    if (styleStr == '') {
+      return d.node.label;
+    } else {
+      return `<span style="${styleStr}">${d.node.label}</span>`;
+    }
+  }
+  if (styleStr != '') {
+    styleStr = styles.join(";");
+    texttemplate = `<span style="${styleStr}">${texttemplate}</span>`;
+  }
+  return Lib.texttemplateString(texttemplate, null, null, d.node);
+}
 
 // scene graph
 module.exports = function (gd, svg, calcData, layout, callbacks) {
@@ -89974,9 +90030,7 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
   var nodeLabel = sankeyNode.selectAll('.' + c.cn.nodeLabel).data(repeat);
   nodeLabel.enter().append('text').classed(c.cn.nodeLabel, true).style('cursor', 'default');
   nodeLabel.attr('data-notex', 1) // prohibit tex interpretation until we can handle tex and regular text together
-  .text(function (d) {
-    return d.node.label;
-  }).each(function (d) {
+  .text(getNodeText).each(function (d) {
     var e = d3.select(this);
     Drawing.font(e, d.textFont);
     svgTextUtils.convertToTspans(e, gd);
