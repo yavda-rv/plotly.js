@@ -24,6 +24,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
         return Lib.coerce(nodeIn, nodeOut, attributes.node, attr, dflt);
     }
     coerceNode('label');
+    coerceNode('labelalias');
     coerceNode('groups');
     coerceNode('x');
     coerceNode('y');
@@ -107,7 +108,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
         dfltArrangement = 'freeform';
     }
     coerce('arrangement', dfltArrangement);
-    
+
     coerce('sizeRatio');
 
     Lib.coerceFont(coerce, 'textfont', Lib.extendFlat({}, layout.font));

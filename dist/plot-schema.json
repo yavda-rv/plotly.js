@@ -40763,6 +40763,12 @@
       "editType": "calc",
       "valType": "data_array"
      },
+     "labelalias": {
+      "description": "alias of the label.",
+      "dflt": false,
+      "editType": "calc",
+      "valType": "any"
+     },
      "labelsrc": {
       "description": "Sets the source reference on Chart Studio Cloud for `label`.",
       "editType": "none",

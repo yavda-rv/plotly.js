@@ -62,7 +62,7 @@ function sankeyModel(layout, d, traceIndex) {
 
     sankey
       .iterations(c.sankeyIterations)
-      .size(horizontal ? [width , height * sizeRatio] : [height, width * sizeRatio])
+      .size(horizontal ? [width, height * sizeRatio] : [height, width * sizeRatio])
       .nodeWidth(nodeThickness)
       .nodePadding(nodePad)
       .nodeId(function(d) {
@@ -814,40 +814,46 @@ function switchToSankeyFormat(nodes) {
 }
 
 function getNodeText(d) {
-    var showlabels = d.node.trace.node.showlabels;
-    if(!showlabels)
+    var trace = d.node.trace;
+    var showlabels = trace.node.showlabels;
+    if(!showlabels) {
         return '';
-    var texttemplate = d.node.trace.node.texttemplate;
+    }
+    var texttemplate = trace.node.texttemplate;
     var styleStr = '';
     var styles = [];
-    if (d.node.trace.textfontbold) {
-        styles.push("font-weight:bold");
+    if(trace.textfontbold) {
+        styles.push('font-weight:bold');
     }
-    if (d.node.trace.textfontunderline) {
-        styles.push("text-decoration:underline");
+    if(trace.textfontunderline) {
+        styles.push('text-decoration:underline');
     }
-    if (d.node.trace.textfontitalic) {
-        styles.push("font-style:italic");
+    if(trace.textfontitalic) {
+        styles.push('font-style:italic');
     }
-    if(styles.length != 0) {
-        styleStr = styles.join(";");
+    if(styles.length !== 0) {
+        styleStr = styles.join(';');
     }
 
-    if(texttemplate == null || texttemplate == '') {
-        if(styleStr == '') {
-            return d.node.label;
+    var label = d.node.label;
+    if(trace.node.labelalias && trace.node.labelalias[d.node.label] !== undefined) {
+        label = trace.node.labelalias[label];
+    }
+
+    if(texttemplate === undefined || texttemplate === null || texttemplate === '') {
+        if(styleStr === '') {
+            return label;
+        } else {
+            return '<span style="' + styleStr + '">${label}</span>';
         }
-        else {
-            return `<span style="${styleStr}">${d.node.label}</span>`
-        }
     }
 
-    if (styleStr != '') {
-        styleStr = styles.join(";");
-        texttemplate = `<span style="${styleStr}">${texttemplate}</span>`;
+    if(styleStr !== '') {
+        styleStr = styles.join(';');
+        texttemplate = '<span style="' + styleStr + '">${texttemplate}</span>';
     }
 
-    return Lib.texttemplateString(texttemplate, null, null, d.node);
+    return Lib.texttemplateString(texttemplate, null, null, {label: label, color: d.node.color, value: d.node.value});
 }
 
 // scene graph
@@ -861,7 +867,7 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
     });
 
     // To prevent animation on dragging
-    var dragcover = gd._fullLayout._dragCover;
+    // var dragcover = gd._fullLayout._dragCover;
 
     var styledData = calcData
             .filter(function(d) {return unwrap(d).trace.visible;})
@@ -946,14 +952,14 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
         .attr('d', linkPath());
 
     sankeyLink
-        //.style('opacity', function() { return (gd._context.staticPlot || firstRender || dragcover) ? 1 : 0;})
-        //.transition()
-        //.ease(c.ease).duration(c.duration)
+        // .style('opacity', function() { return (gd._context.staticPlot || firstRender || dragcover) ? 1 : 0;})
+        // .transition()
+        // .ease(c.ease).duration(c.duration)
         .style('opacity', 1);
 
     sankeyLink.exit()
-        //.transition()
-        //.ease(c.ease).duration(c.duration)
+        // .transition()
+        // .ease(c.ease).duration(c.duration)
         .style('opacity', 0)
         .remove();
 

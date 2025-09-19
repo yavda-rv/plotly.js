@@ -102,6 +102,11 @@ var attrs = module.exports = overrideAll({
             dflt: [],
             description: 'The shown name of the node.'
         },
+        labelalias: {
+            valType: 'any',
+            dflt: false,
+            description: 'alias of the label.'
+        },
         showlabels: {
             valType: 'boolean',
             dflt: true,
@@ -197,7 +202,7 @@ var attrs = module.exports = overrideAll({
         }),
         texttemplate: texttemplateAttrs({}, {
             description: 'text template to display node text',
-            keys:['value', 'label', 'color']
+            keys: ['value', 'label', 'color']
         }),
         align: {
             valType: 'enumerated',
