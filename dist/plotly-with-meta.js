@@ -89625,6 +89625,50 @@ var attrs = module.exports = overrideAll({
     },
     description: 'The nodes of the Sankey plot.'
   },
+  level: {
+    label: {
+      valType: 'data_array',
+      dflt: [],
+      description: 'The shown name of the level.'
+    },
+    showlabels: {
+      valType: 'boolean',
+      dflt: true,
+      description: 'Determines whether or not the labels are drawn.'
+    },
+    color: {
+      valType: 'color',
+      dflt: '#444',
+      description: 'Sets the `level` color'
+    },
+    fontsize: {
+      valType: 'number',
+      min: 1,
+      description: 'Sets the `level` fontsize'
+    },
+    bold: {
+      valType: 'boolean',
+      dflt: false,
+      description: 'Determines the font for node labels is bold'
+    },
+    italic: {
+      valType: 'boolean',
+      dflt: false,
+      description: 'Determines the font for node labels is underlined'
+    },
+    underline: {
+      valType: 'boolean',
+      dflt: false,
+      description: 'Determines the font for node labels is italic'
+    },
+    position: {
+      valType: 'enumerated',
+      values: ['top', 'bottom'],
+      dflt: 'top',
+      description: 'Labels should come to the top or bottom'
+    },
+    description: 'The nodes of the Sankey plot.'
+  },
   link: {
     arrowlen: {
       valType: 'number',
@@ -90089,6 +90133,21 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
   }));
   coerceNode('customdata');
   coerceNode('showlabels');
+
+  // level attributes
+  var levelIn = traceIn.level || {};
+  var levelOut = Template.newContainer(traceOut, 'level');
+  function coerceLevel(attr, dflt) {
+    return Lib.coerce(levelIn, levelOut, attributes.level, attr, dflt);
+  }
+  coerceLevel('label');
+  coerceLevel('showlabels');
+  coerceLevel('color');
+  coerceLevel('fontsize');
+  coerceLevel('bold');
+  coerceLevel('italic');
+  coerceLevel('underline');
+  coerceLevel('position');
 
   // link attributes
   var linkIn = traceIn.link || {};
@@ -90558,8 +90617,17 @@ function sankeyModel(layout, d, traceIndex) {
     right: d3Sankey.sankeyRight,
     center: d3Sankey.sankeyCenter
   }[trace.node.align];
-  var width = layout.width * (domain.x[1] - domain.x[0]);
-  var height = layout.height * (domain.y[1] - domain.y[0]);
+  var xPad = 0;
+  var yPad = 0;
+  if (trace.level.showlabels && trace.level.label.length > 0) {
+    if (horizontal) {
+      yPad = trace.level.fontsize + 4;
+    } else {
+      xPad = trace.level.fontsize + 4;
+    }
+  }
+  var width = layout.width * (domain.x[1] - domain.x[0]) - xPad;
+  var height = layout.height * (domain.y[1] - domain.y[0]) - yPad;
   var nodes = calcData._nodes;
   var links = calcData._links;
   var circular = calcData.circular;
@@ -90922,6 +90990,27 @@ function nodeModel(d, n) {
     uniqueNodeLabelPathId: [d.guid, d.key, key].join('_'),
     interactionState: d.interactionState,
     figure: d
+  };
+}
+function levelModel(d, l) {
+  return {
+    traceId: d.key,
+    trace: d.trace,
+    label: l,
+    showLabels: d.trace.level.showlabels,
+    color: d.trace.level.color,
+    fontSize: d.trace.level.fontsize,
+    bold: d.trace.level.bold,
+    italic: d.trace.level.italic,
+    underline: d.trace.level.underline,
+    position: d.trace.level.position,
+    count: d.trace.level.label.length,
+    sankey: d.sankey,
+    graph: d.graph,
+    figure: d,
+    width: d.width,
+    height: d.height,
+    horizontal: d.horizontal
   };
 }
 
@@ -91336,6 +91425,36 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
     return strTranslate(d.horizontal ? posX : posY, d.horizontal ? posY : posX) + flipText;
   });
   nodeLabel.transition().ease(c.ease).duration(c.duration);
+  var sankeyLevelSet = sankey.selectAll('.' + 'sankey-level-set').data(repeat);
+  sankeyLevelSet.enter().append('g').classed('sankey-level-set', true);
+  var sankeyLevel = sankeyLevelSet.selectAll('.' + 'sankey-level').data(function (d) {
+    if (d.trace.level.showlabels === false) {
+      return [];
+    }
+    return d.trace.level.label.map(levelModel.bind(null, d));
+  });
+  sankeyLevel.exit().remove();
+  sankeyLevel.enter().append('text').classed('sankey-level', true).text(function (d) {
+    return d.label;
+  }).attr('x', function (d, i) {
+    return (d.horizontal ? d.width : d.height) * i / (d.count - 1);
+  }).attr('y', function (d) {
+    return d.position === 'top' ? 2 : d.height + d.fontSize + 2;
+  }).attr('text-anchor', function (d, i) {
+    if (i === 0) return 'start';
+    if (i + 1 === d.count) return 'end';
+    return 'middle';
+  }).style('font-weight', function (d) {
+    return d.bold ? 'bold' : 'normal';
+  }).style('text-decoration', function (d) {
+    return d.underline ? 'underline' : 'normal';
+  }).style('font-style', function (d) {
+    return d.italic ? 'italic' : 'normal';
+  }).style('font-size', function (d) {
+    return d.fontSize;
+  }).style('fill', function (d) {
+    return d.color;
+  }).style('white-space', 'pre');
 };
 
 /***/ }),

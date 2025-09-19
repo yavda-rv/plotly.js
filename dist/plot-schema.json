@@ -40281,6 +40281,68 @@
      "min": 0,
      "valType": "number"
     },
+    "level": {
+     "bold": {
+      "description": "Determines the font for node labels is bold",
+      "dflt": false,
+      "editType": "calc",
+      "valType": "boolean"
+     },
+     "color": {
+      "description": "Sets the `level` color",
+      "dflt": "#444",
+      "editType": "calc",
+      "valType": "color"
+     },
+     "description": "The nodes of the Sankey plot.",
+     "editType": "calc",
+     "fontsize": {
+      "description": "Sets the `level` fontsize",
+      "editType": "calc",
+      "min": 1,
+      "valType": "number"
+     },
+     "italic": {
+      "description": "Determines the font for node labels is underlined",
+      "dflt": false,
+      "editType": "calc",
+      "valType": "boolean"
+     },
+     "label": {
+      "description": "The shown name of the level.",
+      "dflt": [],
+      "editType": "calc",
+      "valType": "data_array"
+     },
+     "labelsrc": {
+      "description": "Sets the source reference on Chart Studio Cloud for `label`.",
+      "editType": "none",
+      "valType": "string"
+     },
+     "position": {
+      "description": "Labels should come to the top or bottom",
+      "dflt": "top",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "top",
+       "bottom"
+      ]
+     },
+     "role": "object",
+     "showlabels": {
+      "description": "Determines whether or not the labels are drawn.",
+      "dflt": true,
+      "editType": "calc",
+      "valType": "boolean"
+     },
+     "underline": {
+      "description": "Determines the font for node labels is italic",
+      "dflt": false,
+      "editType": "calc",
+      "valType": "boolean"
+     }
+    },
     "link": {
      "arrowlen": {
       "description": "Sets the length (in px) of the links arrow, if 0 no arrow will be drawn.",

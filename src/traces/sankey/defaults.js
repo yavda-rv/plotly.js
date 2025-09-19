@@ -48,6 +48,22 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
     coerceNode('customdata');
     coerceNode('showlabels');
 
+    // level attributes
+    var levelIn = traceIn.level || {};
+    var levelOut = Template.newContainer(traceOut, 'level');
+
+    function coerceLevel(attr, dflt) {
+        return Lib.coerce(levelIn, levelOut, attributes.level, attr, dflt);
+    }
+    coerceLevel('label');
+    coerceLevel('showlabels');
+    coerceLevel('color');
+    coerceLevel('fontsize');
+    coerceLevel('bold');
+    coerceLevel('italic');
+    coerceLevel('underline');
+    coerceLevel('position');
+
     // link attributes
     var linkIn = traceIn.link || {};
     var linkOut = Template.newContainer(traceOut, 'link');

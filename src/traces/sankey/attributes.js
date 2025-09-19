@@ -213,6 +213,51 @@ var attrs = module.exports = overrideAll({
         description: 'The nodes of the Sankey plot.'
     },
 
+    level: {
+        label: {
+            valType: 'data_array',
+            dflt: [],
+            description: 'The shown name of the level.'
+        },
+        showlabels: {
+            valType: 'boolean',
+            dflt: true,
+            description: 'Determines whether or not the labels are drawn.'
+        },
+        color: {
+            valType: 'color',
+            dflt: '#444',
+            description: 'Sets the `level` color'
+        },
+        fontsize: {
+            valType: 'number',
+            min: 1,
+            description: 'Sets the `level` fontsize'
+        },
+        bold: {
+            valType: 'boolean',
+            dflt: false,
+            description: 'Determines the font for node labels is bold'
+        },
+        italic: {
+            valType: 'boolean',
+            dflt: false,
+            description: 'Determines the font for node labels is underlined'
+        },
+        underline: {
+            valType: 'boolean',
+            dflt: false,
+            description: 'Determines the font for node labels is italic'
+        },
+        position: {
+            valType: 'enumerated',
+            values: ['top', 'bottom'],
+            dflt: 'top',
+            description: 'Labels should come to the top or bottom'
+        },
+        description: 'The nodes of the Sankey plot.'
+    },
+
     link: {
         arrowlen: {
             valType: 'number',
