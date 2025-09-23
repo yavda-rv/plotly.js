@@ -40412,6 +40412,17 @@
       },
       "role": "object"
      },
+     "colorsource": {
+      "description": "sets link target",
+      "dflt": "direct",
+      "editType": "calc",
+      "valType": "enumerated",
+      "values": [
+       "direct",
+       "source",
+       "target"
+      ]
+     },
      "colorsrc": {
       "description": "Sets the source reference on Chart Studio Cloud for `color`.",
       "editType": "none",
@@ -40597,6 +40608,14 @@
        "editType": "none",
        "valType": "string"
       }
+     },
+     "opacity": {
+      "description": "Sets the default opacity of the link",
+      "dflt": 0.5,
+      "editType": "calc",
+      "max": 1,
+      "min": 0,
+      "valType": "number"
      },
      "role": "object",
      "source": {

@@ -88432,6 +88432,18 @@ var attrs = module.exports = overrideAll({
       valType: 'color',
       arrayOk: true
     },
+    colorsource: {
+      valType: 'enumerated',
+      values: ['direct', 'source', 'target'],
+      dflt: 'direct'
+    },
+    opacity: {
+      valType: 'number',
+      min: 0,
+      max: 1,
+      dflt: 0.5,
+      description: "Sets the default opacity of the link"
+    },
     hovercolor: {
       valType: 'color',
       arrayOk: true
@@ -88633,6 +88645,8 @@ var Colorscale = __webpack_require__(45321);
 function convertToD3Sankey(trace) {
   var nodeSpec = trace.node;
   var linkSpec = trace.link;
+  var hasNodeColorArray = isArrayOrTypedArray(nodeSpec.color);
+  var hasNodeCustomdataArray = isArrayOrTypedArray(nodeSpec.customdata);
   var links = [];
   var hasLinkColorArray = isArrayOrTypedArray(linkSpec.color);
   var hasLinkHoverColorArray = isArrayOrTypedArray(linkSpec.hovercolor);
@@ -88710,10 +88724,17 @@ function convertToD3Sankey(trace) {
     if (linkSpec.label && linkSpec.label[i]) label = linkSpec.label[i];
     var concentrationscale = null;
     if (label && components.hasOwnProperty(label)) concentrationscale = components[label];
+    var linkColor = hasLinkColorArray ? linkSpec.color[i] : linkSpec.color;
+    if (linkSpec.colorsource === 'source') {
+      linkColor = hasNodeColorArray ? nodeSpec.color[source] : nodeSpec.color;
+    } else if (linkSpec.colorsource === 'target') {
+      linkColor = hasNodeColorArray ? nodeSpec.color[target] : nodeSpec.color;
+    }
     links.push({
       pointNumber: i,
       label: label,
-      color: hasLinkColorArray ? linkSpec.color[i] : linkSpec.color,
+      color: linkColor,
+      opacity: linkSpec.opacity,
       hovercolor: hasLinkHoverColorArray ? linkSpec.hovercolor[i] : linkSpec.hovercolor,
       customdata: hasLinkCustomdataArray ? linkSpec.customdata[i] : linkSpec.customdata,
       concentrationscale: concentrationscale,
@@ -88727,8 +88748,6 @@ function convertToD3Sankey(trace) {
 
   // Process nodes
   var totalCount = nodeCount + groups.length;
-  var hasNodeColorArray = isArrayOrTypedArray(nodeSpec.color);
-  var hasNodeCustomdataArray = isArrayOrTypedArray(nodeSpec.customdata);
   var nodes = [];
   for (i = 0; i < totalCount; i++) {
     if (!linkedNodes[i]) continue;
@@ -88898,6 +88917,8 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
   coerceLink('hoverinfo', traceIn.hoverinfo);
   handleHoverLabelDefaults(linkIn, linkOut, coerceLink, hoverlabelDefault);
   coerceLink('hovertemplate');
+  coerceLink('colorsource');
+  coerceLink('opacity');
   var darkBG = tinycolor(layout.paper_bgcolor).getLuminance() < 0.333;
   var defaultLinkColor = darkBG ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.2)';
   var linkColor = coerceLink('color', defaultLinkColor);
@@ -89350,11 +89371,15 @@ function sankeyModel(layout, d, traceIndex) {
   }[trace.node.align];
   var xPad = 0;
   var yPad = 0;
+  var topPad = 0;
   if (trace.level.showlabels && trace.level.label.length > 0) {
     if (horizontal) {
       yPad = trace.level.fontsize + 4;
     } else {
       xPad = trace.level.fontsize + 4;
+    }
+    if (trace.level.position === 'top') {
+      topPad = yPad;
     }
   }
   var width = layout.width * (domain.x[1] - domain.x[0]) - xPad;
@@ -89564,6 +89589,7 @@ function sankeyModel(layout, d, traceIndex) {
     width: width,
     height: height,
     nodePad: trace.node.pad,
+    topPad: topPad,
     nodeLineColor: trace.node.line.color,
     nodeLineWidth: trace.node.line.width,
     linkLineColor: trace.link.line.color,
@@ -89588,7 +89614,6 @@ function sankeyModel(layout, d, traceIndex) {
 }
 function linkModel(d, l, i) {
   var tc = tinycolor(l.color);
-  var htc = tinycolor(l.hovercolor);
   var basicKey = l.source.label + '|' + l.target.label;
   var key = basicKey + '__' + i;
 
@@ -89602,9 +89627,9 @@ function linkModel(d, l, i) {
     pointNumber: l.pointNumber,
     link: l,
     tinyColorHue: Color.tinyRGB(tc),
-    tinyColorAlpha: tc.getAlpha(),
-    tinyColorHoverHue: Color.tinyRGB(htc),
-    tinyColorHoverAlpha: htc.getAlpha(),
+    tinyColorAlpha: 1 - +l.opacity,
+    tinyColorHoverHue: Color.tinyRGB(tc),
+    tinyColorHoverAlpha: Math.min(1, 1 - +l.opacity + 0.2),
     linkPath: linkPath,
     linkLineColor: d.linkLineColor,
     linkLineWidth: d.linkLineWidth,
@@ -90061,7 +90086,10 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
   });
   sankey.transition().ease(c.ease).duration(c.duration).attr('transform', sankeyTransform);
   var sankeyLinks = sankey.selectAll('.' + c.cn.sankeyLinks).data(repeat, keyFun);
-  sankeyLinks.enter().append('g').classed(c.cn.sankeyLinks, true).style('fill', 'none');
+  sankeyLinks.enter().append('g').classed(c.cn.sankeyLinks, true);
+  sankeyLinks.style('fill', 'none').attr('transform', function (d) {
+    return strTranslate(0, d.topPad);
+  });
   var sankeyLink = sankeyLinks.selectAll('.' + c.cn.sankeyLink).data(function (d) {
     var links = d.graph.links;
     return links.filter(function (l) {
@@ -90100,6 +90128,8 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
       default:
         return 'move';
     }
+  }).attr('transform', function (d) {
+    return strTranslate(0, d.topPad);
   });
   var sankeyNode = sankeyNodeSet.selectAll('.' + c.cn.sankeyNode).data(function (d) {
     var nodes = d.graph.nodes;
@@ -90156,36 +90186,34 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
     return strTranslate(d.horizontal ? posX : posY, d.horizontal ? posY : posX) + flipText;
   });
   nodeLabel.transition().ease(c.ease).duration(c.duration);
-  var sankeyLevelSet = sankey.selectAll('.' + 'sankey-level-set').data(repeat);
-  sankeyLevelSet.enter().append('g').classed('sankey-level-set', true);
-  var sankeyLevel = sankeyLevelSet.selectAll('.' + 'sankey-level').data(function (d) {
-    if (d.trace.level.showlabels === false) {
-      return [];
-    }
-    return d.trace.level.label.map(levelModel.bind(null, d));
+  sankey.selectAll('.' + 'sankey-level-set').remove();
+  var sankeyLevelSet = sankey.selectAll('.' + 'sankey-level-set').data(repeat).enter().append('g').classed('sankey-level-set', true);
+
+  // Now bind and create the sankey-level text nodes
+  sankeyLevelSet.each(function (d) {
+    if (d.trace.level.showlabels === false) return;
+    d3.select(this).selectAll('.sankey-level').data(d.trace.level.label.map(levelModel.bind(null, d))).enter().append('text').classed('sankey-level', true).text(function (d) {
+      return d.label;
+    }).attr('x', function (d, i) {
+      return (d.horizontal ? d.width : d.height) * i / (d.count - 1);
+    }).attr('y', function (d) {
+      return d.position === 'top' ? d.fontSize : d.height + d.fontSize + 2;
+    }).attr('text-anchor', function (d, i) {
+      if (i === 0) return 'start';
+      if (i + 1 === d.count) return 'end';
+      return 'middle';
+    }).style('font-weight', function (d) {
+      return d.bold ? 'bold' : 'normal';
+    }).style('text-decoration', function (d) {
+      return d.underline ? 'underline' : 'normal';
+    }).style('font-style', function (d) {
+      return d.italic ? 'italic' : 'normal';
+    }).style('font-size', function (d) {
+      return d.fontSize;
+    }).style('fill', function (d) {
+      return d.color;
+    }).style('white-space', 'pre');
   });
-  sankeyLevel.exit().remove();
-  sankeyLevel.enter().append('text').classed('sankey-level', true).text(function (d) {
-    return d.label;
-  }).attr('x', function (d, i) {
-    return (d.horizontal ? d.width : d.height) * i / (d.count - 1);
-  }).attr('y', function (d) {
-    return d.position === 'top' ? 2 : d.height + d.fontSize + 2;
-  }).attr('text-anchor', function (d, i) {
-    if (i === 0) return 'start';
-    if (i + 1 === d.count) return 'end';
-    return 'middle';
-  }).style('font-weight', function (d) {
-    return d.bold ? 'bold' : 'normal';
-  }).style('text-decoration', function (d) {
-    return d.underline ? 'underline' : 'normal';
-  }).style('font-style', function (d) {
-    return d.italic ? 'italic' : 'normal';
-  }).style('font-size', function (d) {
-    return d.fontSize;
-  }).style('fill', function (d) {
-    return d.color;
-  }).style('white-space', 'pre');
 };
 
 /***/ }),
