@@ -315,7 +315,6 @@ function sankeyModel(layout, d, traceIndex) {
 
 function linkModel(d, l, i) {
     var tc = tinycolor(l.color);
-    var htc = tinycolor(l.hovercolor);
     var basicKey = l.source.label + '|' + l.target.label;
     var key = basicKey + '__' + i;
 
@@ -330,9 +329,9 @@ function linkModel(d, l, i) {
         pointNumber: l.pointNumber,
         link: l,
         tinyColorHue: Color.tinyRGB(tc),
-        tinyColorAlpha: tc.getAlpha(),
-        tinyColorHoverHue: Color.tinyRGB(htc),
-        tinyColorHoverAlpha: htc.getAlpha(),
+        tinyColorAlpha: 1 - +l.opacity,
+        tinyColorHoverHue: Color.tinyRGB(tc),
+        tinyColorHoverAlpha: Math.min(1, 1 - +l.opacity + 0.2),
         linkPath: linkPath,
         linkLineColor: d.linkLineColor,
         linkLineWidth: d.linkLineWidth,

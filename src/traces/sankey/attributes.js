@@ -280,6 +280,19 @@ var attrs = module.exports = overrideAll({
                 'If `link.color` is omitted, then by default, a translucent grey link will be used.'
             ].join(' ')
         },
+        colorsource: {
+            valType: 'enumerated',
+            values: ['direct', 'source', 'target'],
+            dflt: 'direct',
+            description: 'sets link target'
+        },
+        opacity: {
+            valType: 'number',
+            min: 0,
+            max: 1,
+            dflt: 0.5,
+            description: "Sets the default opacity of the link"
+        },
         hovercolor: {
             valType: 'color',
             arrayOk: true,

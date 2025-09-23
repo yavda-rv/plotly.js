@@ -12,6 +12,9 @@ function convertToD3Sankey(trace) {
     var nodeSpec = trace.node;
     var linkSpec = trace.link;
 
+    var hasNodeColorArray = isArrayOrTypedArray(nodeSpec.color);
+    var hasNodeCustomdataArray = isArrayOrTypedArray(nodeSpec.customdata);
+
     var links = [];
     var hasLinkColorArray = isArrayOrTypedArray(linkSpec.color);
     var hasLinkHoverColorArray = isArrayOrTypedArray(linkSpec.hovercolor);
@@ -93,10 +96,18 @@ function convertToD3Sankey(trace) {
         var concentrationscale = null;
         if(label && components.hasOwnProperty(label)) concentrationscale = components[label];
 
+        var linkColor = hasLinkColorArray ? linkSpec.color[i] : linkSpec.color;
+        if(linkSpec.colorsource === 'source') {
+            linkColor = hasNodeColorArray ? nodeSpec.color[source] : nodeSpec.color;
+        } else if(linkSpec.colorsource === 'target') {
+            linkColor = hasNodeColorArray ? nodeSpec.color[target] : nodeSpec.color;
+        }
+
         links.push({
             pointNumber: i,
             label: label,
-            color: hasLinkColorArray ? linkSpec.color[i] : linkSpec.color,
+            color: linkColor,
+            opacity: linkSpec.opacity,
             hovercolor: hasLinkHoverColorArray ? linkSpec.hovercolor[i] : linkSpec.hovercolor,
             customdata: hasLinkCustomdataArray ? linkSpec.customdata[i] : linkSpec.customdata,
             concentrationscale: concentrationscale,
@@ -111,8 +122,6 @@ function convertToD3Sankey(trace) {
 
     // Process nodes
     var totalCount = nodeCount + groups.length;
-    var hasNodeColorArray = isArrayOrTypedArray(nodeSpec.color);
-    var hasNodeCustomdataArray = isArrayOrTypedArray(nodeSpec.customdata);
     var nodes = [];
     for(i = 0; i < totalCount; i++) {
         if(!linkedNodes[i]) continue;
