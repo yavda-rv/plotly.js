@@ -45,11 +45,15 @@ function sankeyModel(layout, d, traceIndex) {
 
     var xPad = 0;
     var yPad = 0;
+    var topPad = 0;
     if(trace.level.showlabels && trace.level.label.length > 0) {
         if(horizontal) {
             yPad = trace.level.fontsize + 4;
         } else {
             xPad = trace.level.fontsize + 4;
+        }
+        if(trace.level.position === 'top') {
+            topPad = yPad;
         }
     }
 
@@ -285,6 +289,7 @@ function sankeyModel(layout, d, traceIndex) {
         width: width,
         height: height,
         nodePad: trace.node.pad,
+        topPad: topPad,
         nodeLineColor: trace.node.line.color,
         nodeLineWidth: trace.node.line.width,
         linkLineColor: trace.link.line.color,
@@ -949,8 +954,11 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
 
     sankeyLinks.enter()
         .append('g')
-        .classed(c.cn.sankeyLinks, true)
-        .style('fill', 'none');
+        .classed(c.cn.sankeyLinks, true);
+
+    sankeyLinks
+        .style('fill', 'none')
+        .attr('transform', function(d) { return strTranslate(0, d.topPad); });
 
     var sankeyLink = sankeyLinks.selectAll('.' + c.cn.sankeyLink)
           .data(function(d) {
@@ -1009,7 +1017,8 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
                 case 'perpendicular': return 'ns-resize';
                 default: return 'move';
             }
-        });
+        })
+        .attr('transform', function(d) { return strTranslate(0, d.topPad); });
 
     var sankeyNode = sankeyNodeSet.selectAll('.' + c.cn.sankeyNode)
         .data(function(d) {
@@ -1112,38 +1121,39 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
         .transition()
         .ease(c.ease).duration(c.duration);
 
-    var sankeyLevelSet = sankey.selectAll('.' + 'sankey-level-set').data(repeat);
-
-    sankeyLevelSet.enter()
+    sankey.selectAll('.' + 'sankey-level-set').remove();
+    var sankeyLevelSet = sankey.selectAll('.' + 'sankey-level-set')
+        .data(repeat)
+        .enter()
         .append('g')
         .classed('sankey-level-set', true);
 
-    var sankeyLevel = sankeyLevelSet.selectAll('.' + 'sankey-level')
-        .data(function(d) {
-            if(d.trace.level.showlabels === false) {
-                return [];
-            }
-            return d.trace.level.label.map(levelModel.bind(null, d));
-        });
-    sankeyLevel.exit().remove();
+    // Now bind and create the sankey-level text nodes
+    sankeyLevelSet.each(function(d) {
+        if(d.trace.level.showlabels === false) return;
 
-    sankeyLevel.enter()
-        .append('text')
-        .classed('sankey-level', true)
-        .text(function(d) { return d.label;})
-        .attr('x', function(d, i) {
-            return (d.horizontal ? d.width : d.height) * i / (d.count - 1);
-        }).attr('y', function(d) {
-            return (d.position === 'top') ? 2 : d.height + d.fontSize + 2;
-        }).attr('text-anchor', function(d, i) {
-            if(i === 0) return 'start';
-            if(i + 1 === d.count) return 'end';
-            return 'middle';
-        })
-        .style('font-weight', function(d) { return d.bold ? 'bold' : 'normal'; })
-        .style('text-decoration', function(d) { return d.underline ? 'underline' : 'normal'; })
-        .style('font-style', function(d) { return d.italic ? 'italic' : 'normal'; })
-        .style('font-size', function(d) { return d.fontSize; })
-        .style('fill', function(d) { return d.color; })
-        .style('white-space', 'pre');
+        d3.select(this).selectAll('.sankey-level')
+            .data(d.trace.level.label.map(levelModel.bind(null, d)))
+            .enter()
+            .append('text')
+            .classed('sankey-level', true)
+            .text(function(d) { return d.label; })
+            .attr('x', function(d, i) {
+                return (d.horizontal ? d.width : d.height) * i / (d.count - 1);
+            })
+            .attr('y', function(d) {
+                return (d.position === 'top') ? d.fontSize : d.height + d.fontSize + 2;
+            })
+            .attr('text-anchor', function(d, i) {
+                if(i === 0) return 'start';
+                if(i + 1 === d.count) return 'end';
+                return 'middle';
+            })
+            .style('font-weight', function(d) { return d.bold ? 'bold' : 'normal'; })
+            .style('text-decoration', function(d) { return d.underline ? 'underline' : 'normal'; })
+            .style('font-style', function(d) { return d.italic ? 'italic' : 'normal'; })
+            .style('font-size', function(d) { return d.fontSize; })
+            .style('fill', function(d) { return d.color; })
+            .style('white-space', 'pre');
+    });
 };
