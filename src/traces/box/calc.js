@@ -187,6 +187,8 @@ module.exports = function calc(gd, trace) {
         var posBins = makeBins(posDistinct, dPos);
         var pLen = posDistinct.length;
         var ptsPerBin = initNestedArray(pLen);
+        var minLowerFence = Infinity;
+        var maxUpperFence = -Infinity;
 
         // bin pts info per position bins
         for(i = 0; i < trace._length; i++) {
@@ -249,6 +251,9 @@ module.exports = function calc(gd, trace) {
                 cdi.lf = computeLowerFence(trace.fence, cdi, boxVals, N);
                 cdi.uf = computeUpperFence(trace.fence, cdi, boxVals, N);
 
+                maxUpperFence = Math.max(cdi.uf, maxUpperFence);
+                minLowerFence = Math.min(cdi.lf, minLowerFence);
+
                 // lower and upper outliers bounds
                 cdi.lo = computeLowerOutlierBound(cdi);
                 cdi.uo = computeUpperOutlierBound(cdi);
@@ -266,9 +271,12 @@ module.exports = function calc(gd, trace) {
             }
         }
 
+        var extremeArray = [minLowerFence, maxUpperFence];
+        if(trace.notched) extremeArray = extremeArray.concat([minLowerNotch, maxUpperNotch]);
+
         if(trace.notched && Lib.isTypedArray(valArray)) valArray = Array.from(valArray);
         trace._extremes[valAxis._id] = Axes.findExtremes(valAxis,
-            trace.notched ? valArray.concat([minLowerNotch, maxUpperNotch]) : valArray,
+            !trace.boxpoints ? extremeArray : trace.notched ? valArray.concat([minLowerNotch, maxUpperNotch]) : valArray,
             {padded: true}
         );
     }
