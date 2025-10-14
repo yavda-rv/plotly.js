@@ -291,7 +291,7 @@ var attrs = module.exports = overrideAll({
             min: 0,
             max: 1,
             dflt: 0.5,
-            description: "Sets the default opacity of the link"
+            description: 'Sets the default opacity of the link'
         },
         hovercolor: {
             valType: 'color',
