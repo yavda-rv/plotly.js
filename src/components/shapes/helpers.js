@@ -237,7 +237,8 @@ exports.getPathString = function(gd, options) {
             isValid = s != null && f != null; // eslint-disable-line eqeqeq
         }
     }
-    if(!isValid) {
+
+    if(!isValid || !isFinite(x0) || !isFinite(x1) || !isFinite(y0) || !isFinite(y1)) {
         return null;
     }
 
