@@ -20711,7 +20711,7 @@ exports.getPathString = function (gd, options) {
     }
   }
 
-  if (!isValid) {
+  if (!isValid || !isFinite(x0) || !isFinite(x1) || !isFinite(y0) || !isFinite(y1)) {
     return null;
   }
   if (type === 'line') return 'M' + x0 + ',' + y0 + 'L' + x1 + ',' + y1;
@@ -74141,9 +74141,11 @@ module.exports = function (gd, plotinfo, cdheatmaps, heatmapLayer) {
 
     // setup image nodes
 
+    var invalidDimensions = isNaN(imageWidth) || isNaN(imageHeight) || imageWidth <= 0 || imageHeight <= 0;
+
     // if image is entirely off-screen, don't even draw it
     var isOffScreen = left >= xa._length || right <= 0 || top >= ya._length || bottom <= 0;
-    if (isOffScreen) {
+    if (isOffScreen || invalidDimensions) {
       var noImage = plotGroup.selectAll('image').data([]);
       noImage.exit().remove();
       removeLabels(plotGroup);

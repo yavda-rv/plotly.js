@@ -20340,7 +20340,7 @@ exports.getPathString = function (gd, options) {
     }
   }
 
-  if (!isValid) {
+  if (!isValid || !isFinite(x0) || !isFinite(x1) || !isFinite(y0) || !isFinite(y1)) {
     return null;
   }
   if (type === 'line') return 'M' + x0 + ',' + y0 + 'L' + x1 + ',' + y1;
