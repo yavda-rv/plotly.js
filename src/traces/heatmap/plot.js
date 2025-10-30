@@ -141,12 +141,16 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
 
         // setup image nodes
 
+        var invalidDimensions = (
+            isNaN(imageWidth) || isNaN(imageHeight) || imageWidth <= 0 || imageHeight <= 0
+        );
+
         // if image is entirely off-screen, don't even draw it
         var isOffScreen = (
             left >= xa._length || right <= 0 || top >= ya._length || bottom <= 0
         );
 
-        if(isOffScreen) {
+        if(isOffScreen || invalidDimensions) {
             var noImage = plotGroup.selectAll('image').data([]);
             noImage.exit().remove();
 
