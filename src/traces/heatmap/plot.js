@@ -447,7 +447,7 @@ module.exports = function(gd, plotinfo, cdheatmaps, heatmapLayer) {
                     obj.x = xVal;
                     obj.y = yVal;
 
-                    var zVal = zin[i][j];
+                    var zVal = zin[i] !== undefined && zin[i][j] !== undefined ? zin[i][j] : undefined;
                     if(zVal === undefined) {
                         obj.z = '';
                         obj.zLabel = '';
