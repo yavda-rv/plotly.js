@@ -62,33 +62,24 @@ function nodeNonHoveredStyle(sankeyNode, d, sankey) {
 }
 
 function linkHoveredStyle(d, sankey, visitNodes, sankeyLink) {
-    sankeyLink.style('fill', function(l) {
+    var label = sankeyLink.datum().link.label;
+
+    sankeyLink.style('fill-opacity', function(l) {
         if(!l.link.concentrationscale) {
-            return l.tinyColorHoverHue;
-        }
-    }).style('fill-opacity', function(l) {
-        if(!l.link.concentrationscale) {
-            return l.tinyColorHoverAlpha;
+            return 0.4;
         }
     });
 
-    sankeyLink.each(function(curLink) {
-        var label = curLink.link.label;
-        if(label !== '') {
-            ownTrace(sankey, d)
-                .selectAll('.' + cn.sankeyLink)
-                .filter(function(l) {return l.link.label === label;})
-                .style('fill', function(l) {
-                    if(!l.link.concentrationscale) {
-                        return l.tinyColorHoverHue;
-                    }
-                }).style('fill-opacity', function(l) {
-                    if(!l.link.concentrationscale) {
-                        return l.tinyColorHoverAlpha;
-                    }
-                });
-        }
-    });
+    if(label) {
+        ownTrace(sankey, d)
+            .selectAll('.' + cn.sankeyLink)
+            .filter(function(l) {return l.link.label === label;})
+            .style('fill-opacity', function(l) {
+                if(!l.link.concentrationscale) {
+                    return 0.4;
+                }
+            });
+    }
 
     if(visitNodes) {
         ownTrace(sankey, d)
@@ -99,22 +90,15 @@ function linkHoveredStyle(d, sankey, visitNodes, sankeyLink) {
 }
 
 function linkNonHoveredStyle(d, sankey, visitNodes, sankeyLink) {
-    sankeyLink.style('fill', function(l) {
-        return l.tinyColorHue;
-    }).style('fill-opacity', function(l) {
-        return l.tinyColorAlpha;
-    });
+    var label = sankeyLink.datum().link.label;
 
-    sankeyLink.each(function(curLink) {
-        var label = curLink.link.label;
-        if(label !== '') {
-            ownTrace(sankey, d)
-                .selectAll('.' + cn.sankeyLink)
-                .filter(function(l) {return l.link.label === label;})
-                .style('fill', function(l) {return l.tinyColorHue;})
-                .style('fill-opacity', function(l) {return l.tinyColorAlpha;});
-        }
-    });
+    sankeyLink.style('fill-opacity', function(d) {return d.tinyColorAlpha;});
+    if(label) {
+        ownTrace(sankey, d)
+            .selectAll('.' + cn.sankeyLink)
+            .filter(function(l) {return l.link.label === label;})
+            .style('fill-opacity', function(d) {return d.tinyColorAlpha;});
+    }
 
     if(visitNodes) {
         ownTrace(sankey, d)
