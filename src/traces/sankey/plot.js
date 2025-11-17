@@ -156,7 +156,7 @@ module.exports = function plot(gd, calcData) {
         var evt = d.link;
         evt.originalEvent = d3.event;
         gd._hoverdata = [evt];
-        Fx.click(gd, { target: true });
+        Fx.click(gd, { target: true, button: d3.event.button, clientX: d3.event.clientX, clientY: d3.event.clientY });
     };
 
     var linkHover = function(element, d, sankey) {
@@ -271,7 +271,7 @@ module.exports = function plot(gd, calcData) {
         evt.originalEvent = d3.event;
         gd._hoverdata = [evt];
         d3.select(element).call(nodeNonHoveredStyle, d, sankey);
-        Fx.click(gd, { target: true });
+        Fx.click(gd, { target: true, button: d3.event.button, clientX: d3.event.clientX, clientY: d3.event.clientY });
     };
 
     var nodeHover = function(element, d, sankey) {
