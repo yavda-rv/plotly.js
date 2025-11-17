@@ -37,6 +37,7 @@ module.exports = function supplyDefaults(traceIn, traceOut, defaultColor, layout
     coerceNode('hovertemplate');
     coerceNode('texttemplate');
     coerceNode('align');
+    coerceNode('opacity');
 
     var colors = layout.colorway;
 

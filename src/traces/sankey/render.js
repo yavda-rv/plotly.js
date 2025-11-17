@@ -547,7 +547,7 @@ function nodeModel(d, n) {
         horizontal: d.horizontal,
         darkBackground: tc.getBrightness() <= 128,
         tinyColorHue: Color.tinyRGB(tc),
-        tinyColorAlpha: tc.getAlpha(),
+        tinyColorAlpha: +n.opacity,
         valueFormat: d.valueFormat,
         valueSuffix: d.valueSuffix,
         sankey: d.sankey,

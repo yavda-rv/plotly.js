@@ -132,6 +132,7 @@ function convertToD3Sankey(trace) {
             childrenNodes: [],
             pointNumber: i,
             label: l,
+            opacity: nodeSpec.opacity,
             color: hasNodeColorArray ? nodeSpec.color[i] : nodeSpec.color,
             customdata: hasNodeCustomdataArray ? nodeSpec.customdata[i] : nodeSpec.customdata
         });

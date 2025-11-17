@@ -112,6 +112,13 @@ var attrs = module.exports = overrideAll({
             dflt: true,
             description: 'Determines whether or not the labels are drawn.'
         },
+        opacity: {
+            valType: 'number',
+            min: 0,
+            max: 1,
+            dflt: 1,
+            description: "Sets the default opacity of the node"
+        },
         groups: {
             valType: 'info_array',
             impliedEdits: {x: [], y: []},
