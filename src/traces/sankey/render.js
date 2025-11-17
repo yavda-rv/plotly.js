@@ -880,13 +880,13 @@ function getNodeText(d) {
         if(styleStr === '') {
             return label;
         } else {
-            return '<span style="' + styleStr + '">${label}</span>';
+            return '<span style="' + styleStr + '">' + label + '</span>';
         }
     }
 
     if(styleStr !== '') {
         styleStr = styles.join(';');
-        texttemplate = '<span style="' + styleStr + '">${texttemplate}</span>';
+        texttemplate = '<span style="' + styleStr + '">' + texttemplate + '</span>';
     }
 
     return Lib.texttemplateString(texttemplate, null, null, {label: label, color: d.node.color, value: d.node.value});
