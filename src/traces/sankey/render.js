@@ -643,6 +643,11 @@ function attachPointerEvents(selection, sankey, eventSet) {
             if(!d.interactionState.dragInProgress && !d.partOfGroup) {
                 eventSet.select(this, d, sankey);
             }
+        })
+        .on('contextmenu.basic', function(d) {
+            if(!d.interactionState.dragInProgress && !d.partOfGroup) {
+                eventSet.select(this, d, sankey);
+            }
         });
 }
 
