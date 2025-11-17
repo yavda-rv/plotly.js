@@ -40884,6 +40884,14 @@
        "valType": "string"
       }
      },
+     "opacity": {
+      "description": "Sets the default opacity of the node",
+      "dflt": 1,
+      "editType": "calc",
+      "max": 1,
+      "min": 0,
+      "valType": "number"
+     },
      "pad": {
       "arrayOk": false,
       "description": "Sets the padding (in px) between the `nodes`.",
