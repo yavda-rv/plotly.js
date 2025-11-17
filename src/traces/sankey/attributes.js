@@ -117,7 +117,7 @@ var attrs = module.exports = overrideAll({
             min: 0,
             max: 1,
             dflt: 1,
-            description: "Sets the default opacity of the node"
+            description: 'Sets the default opacity of the node'
         },
         groups: {
             valType: 'info_array',
