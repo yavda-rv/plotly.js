@@ -152,7 +152,7 @@ exports.initInteractions = function initInteractions(gd) {
 // should trigger a full initInteractions.
 exports.updateFx = function(gd) {
     var fullLayout = gd._fullLayout;
+    // var cursor = fullLayout.dragmode === 'pan' ? 'move' : 'crosshair';
     var cursor = fullLayout.dragmode === 'zoom' ? 'cross-hair' : 'default';
-    //var cursor = fullLayout.dragmode === 'pan' ? 'move' : 'crosshair';
     setCursor(fullLayout._draggers, cursor);
 };
