@@ -45165,7 +45165,8 @@ exports.initInteractions = function initInteractions(gd) {
 // should trigger a full initInteractions.
 exports.updateFx = function (gd) {
   var fullLayout = gd._fullLayout;
-  var cursor = fullLayout.dragmode === 'pan' ? 'move' : 'crosshair';
+  // var cursor = fullLayout.dragmode === 'pan' ? 'move' : 'crosshair';
+  var cursor = fullLayout.dragmode === 'zoom' ? 'cross-hair' : 'default';
   setCursor(fullLayout._draggers, cursor);
 };
 
@@ -89135,7 +89136,8 @@ module.exports = function plot(gd, calcData) {
       target: true,
       button: d3.event.button,
       clientX: d3.event.clientX,
-      clientY: d3.event.clientY
+      clientY: d3.event.clientY,
+      ctrlKey: d3.event.ctrlKey
     });
   };
   var linkHover = function (element, d, sankey) {
@@ -89240,7 +89242,8 @@ module.exports = function plot(gd, calcData) {
       target: true,
       button: d3.event.button,
       clientX: d3.event.clientX,
-      clientY: d3.event.clientY
+      clientY: d3.event.clientY,
+      ctrlKey: d3.event.ctrlKey
     });
   };
   var nodeHover = function (element, d, sankey) {
@@ -90137,7 +90140,7 @@ module.exports = function (gd, svg, calcData, layout, callbacks) {
   sankeyNodeSet.style('cursor', function (d) {
     switch (d.arrangement) {
       case 'fixed':
-        return 'default';
+        return 'pointer';
       case 'perpendicular':
         return 'ns-resize';
       default:
