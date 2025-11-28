@@ -1017,7 +1017,7 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
     sankeyNodeSet
         .style('cursor', function(d) {
             switch(d.arrangement) {
-                case 'fixed': return 'default';
+                case 'fixed': return 'pointer';
                 case 'perpendicular': return 'ns-resize';
                 default: return 'move';
             }
